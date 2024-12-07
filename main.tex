@@ -1,0 +1,200 @@
+\documentclass{article}
+\usepackage{graphicx} 
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{arydshln}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\usepackage{cancel}
+\usepackage{changepage}
+\usepackage{placeins}
+\usepackage{enumitem}
+
+
+\usepackage{tabularx}
+\usepackage{amsmath, amssymb, amscd, MnSymbol, mathrsfs}
+\usepackage{cellspace}
+\usepackage{tikz}
+\usetikzlibrary{calc, patterns, angles, quotes, decorations.markings, decorations.pathmorphing, hobby}
+
+\usepackage{chemfig}
+\usepackage{caption}
+\usepackage{tcolorbox}
+\usepackage{bm}
+\usepackage{pdfpages}
+\usepackage{empheq}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage[oldvoltagedirection]{circuitikz}
+\usepackage{microtype}
+\usepackage{tikz-3dplot}
+\usepackage{bibref}
+
+% Custom commands
+\newcommand{\vect}[1]{\boldsymbol{\mathbf{#1}}}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\usetikzlibrary{external}
+\tikzexternalize[prefix=figures/]
+
+
+\usepackage[margin=1in, left=0.8in, right=0.8in, includeheadfoot]{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{tabularray}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\fancyhead[L]{\includegraphics[height=1.2cm]{Kingston_University_London_logo_200-tablet.png}}
+\fancyhead[R]{EG4019 - ME - Engineering Mechanics and Materials}
+\fancyfoot[C]{Department of Mechanical Engineering}
+\fancyfoot[R]{\thepage}
+
+\geometry{top=0.5in,bottom=0.7in}
+
+
+\setlength{\headheight}{30pt}
+\setlength{\footskip}{20pt}
+
+
+\usepackage[export]{adjustbox}
+\usepackage{tocloft}
+\renewcommand{\cfttoctitlefont}{}
+\renewcommand{\contentsname}{}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+
+
+
+
+\begin{document}
+       
+    \large
+    \vspace*{\fill}
+    \begin{center}
+        \textbf{\Huge Laboratory Report: Tensile Test}
+    \end{center}
+    \vspace*{\fill}
+    
+    \begin{tabular}{@{}l l l@{}}
+        \textbf{Submitted by:} & Sakariye Abiikar (Group Leader) & K2371673 \\
+        & Sandeep Singh                  & K2314795 \\
+        & Aland Floyd Noronha            & K2423819 \\
+        & Alan Roy                       & K2314478 \\
+        & Judas Surname                  & K5671234 \\
+    \end{tabular}
+    
+    \vspace*{\fill}
+    
+    \begin{tabular}{@{}l l@{}}
+        \textbf{Key Dates:} & Date of practical: \\
+        & Deadline: \\
+        & Date of submission: \\
+    \end{tabular}
+    \vspace*{\fill}
+
+    \newpage\noindent\vspace{2em}
+    \begin{center}
+        \LARGE \textbf{Contribution Table}\\[3em]
+    \end{center}
+    
+
+    
+    \begin{tblr}{
+            colspec={Q[4cm]Q[4cm]Q[4cm]Q[3cm]},
+            hlines,vlines,
+            cells={valign=m,halign=c},
+            rows={ht=4\baselineskip},
+            row{1}={ht=1.5\baselineskip,font=\bfseries},
+        }
+        Student & Course & Contribution & Picture \\ 
+        Sakariye Abiikar & Mechanical Engineering & Results, Theory, Recommendations & \includegraphics[width=2cm,valign=c]{example-image} \\ 
+        Andrew Surname & Aviation & Introduction & \includegraphics[width=2cm,valign=c]{example-image} \\ 
+        Lucas Surname & Astro & Results & \includegraphics[width=2cm,valign=c]{example-image} \\ 
+        James Surname & Mechanical Engineering & Discussion, References & \includegraphics[width=2cm,valign=c]{example-image} \\ 
+        Judas Surname & Civil Engineering & No Contribution & \includegraphics[width=2cm,valign=c]{example-image} \\ 
+    \end{tblr}
+
+
+    \newpage\noindent\vspace{5em}
+    \begin{center}
+        \LARGE \textbf{Table of Contents}\\[3em]
+    \end{center}
+    \tableofcontents
+    \thispagestyle{fancy}
+
+
+    \newpage\vspace*{-5pt}
+    \section{Abstract}
+
+
+    \newpage\vspace*{-5pt}
+    \section{Introduction}
+
+
+    \newpage\vspace*{-5pt}
+    \section{Method and Experimental Procedures}
+
+
+    \newpage\vspace*{-5pt}
+    \section{Theory}
+
+    \newpage\vspace*{-5pt}
+    \section{Results}
+    
+        \renewcommand{\arraystretch}{1.4}
+    \begin{table}[H]
+        \centering
+        \begin{tabularx}{\textwidth}{|C|C|C|C|C|C|C|C|}
+            \hline
+            \textbf{Nr} & \textbf{Specimen ID} & \textbf{Date} & \textbf{Stress - Maximum Load (N)} & \textbf{Strain Extension at Break (mm)} & \textbf{Thickness (mm)} & \textbf{Width (mm)} & \textbf{CSA \((\text{mm}^2)\)} \\
+            \hline
+            1 & ST & 20/11/2024 & 8580 & 19.8 & 1 & 1 & 1.00 \\
+            \hline
+            2 & PH & 20/11/2024 & 23800 & 9.8 & 1 & 1 & 1.00 \\
+            \hline
+            3 & AR & 20/11/2024 & 24400 & 9.7 & 1 & 1 & 1.00 \\
+            \hline
+        \end{tabularx}
+        \caption{Specimen Data}
+        \label{tab:specimen_data}
+    \end{table}
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[scale=0.5]{graph.png}
+        \caption{Machine produced data}
+        \label{fig:stress_strain}
+    \end{figure}
+    
+    \newpage\vspace*{-5pt}
+    \section{Discussion}
+
+    \newpage\vspace*{-5pt}
+    \section{Conclusions}
+
+    \newpage\vspace*{-5pt}
+    \section{Recommendations}
+
+    \newpage\vspace*{-5pt}
+    \section{References}
+    
+    \newpage\vspace*{-5pt}
+    \section{Appendix}
+  
+   
+    \newpage
+    
+
+
+
+
+
+        
+    \end{document}
