@@ -30,7 +30,7 @@
 \usepackage{microtype}
 \usepackage{tikz-3dplot}
 \usepackage{bibref}
-
+\usepackage{textcomp}
 % Custom commands
 \newcommand{\vect}[1]{\boldsymbol{\mathbf{#1}}}
 \newcolumntype{C}{>{\centering\arraybackslash}X}
@@ -69,7 +69,10 @@
 \renewcommand{\cfttoctitlefont}{}
 \renewcommand{\contentsname}{}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage{xurl}
 
+\renewcommand{\theequation}{\text{Eq.}~\arabic{equation}}
+%Refer to the equation as \eqref{equation}.
 
 \begin{document}
        
@@ -129,13 +132,54 @@
 
 
     \newpage\vspace*{-5pt}
+
     \section{Abstract}
-
-
+   
+    This study investigated the effects of two thermal treatments on the mechanical properties of 
+    \begin{center}
+        \textbf{HE30/BS1476 aluminium alloy}
+    \end{center}
+    The alloy, initially characterized by \\
+    \vspace{-0.5em}
+    \begin{center}
+         \hspace{5em}
+         \begin{minipage}{0.6\textwidth}
+            \begin{itemize}[itemsep=-1mm]
+                \item \textbf{Hardness:} 120 HV5 (see Appendix A)
+                \item \textbf{Elastic Modulus:} 6 GPa
+                \item \textbf{Ultimate Tensile Strength:} 500 MPa
+            \end{itemize} 
+        \end{minipage}        
+    \end{center}
+    \vspace{0.5em}
+    First, it was heated for 90 minutes at 520$^\circ$C, followed by an additional 40 minutes at 184$^\circ$C in open air. These treatments resulted in the production of three different variants of the alloy:
+    \begin{enumerate}[itemsep=-1mm]
+        \item The base alloy (untreated)
+        \item The alloy treated for 90 minutes at 520$^\circ$C
+        \item The alloy treated for 90 minutes at 520$^\circ$C followed by 40 minutes at 184$^\circ$C
+    \end{enumerate}
+    The research aimed to quantify changes in hardness, modulus of elasticity, yield strength, ultimate tensile strength (UTS), and percentage elongation. Hardness was measured using a Zwick Roell ZHU hardness testing machine, while properties such as stress and strain were derived from data obtained using a Zwick Roell 2050 tensile testing machine.\\[8pt]
+    \textcolor{red}{One paragraph?, will ask if this is okay for now this info is relayed as one paragraph on the word doc}
+    \textcolor{red}{Also needs small info on results and reflection could be added at a later date}
+    
     \newpage\vspace*{-5pt}
     \section{Introduction}
 
-
+        In engineering, the selection and optimization of materials directly impact the performance of a design application, especially in aerospace, automotive, and construction industries. \\[8pt]
+        \noindent
+        Aluminum alloys have a good strength-to-weight ratio and corrosion resistance; therefore, they are very important in such sectors, though mostly in applications requiring specific mechanical improvements through controlled processes. \\[8pt]
+        \noindent
+        Research by metallurgists such as Sorby and Sauveur demonstrated that \textbf{heat treatment} significantly improves the properties of alloys. These thermal treatments alter the alloy's microstructure, leading to enhanced hardness, elasticity, and tensile strength. Different types of heat treatments, such as solution heat treatment and quenching, are tailored to achieve specific mechanical properties depending on the alloy’s application.\\[8pt]
+        \noindent
+        The \textbf{aging process} is a critical aspect of heat treatment, fundamental to precipitation hardening, as highlighted by metallurgists like William Hume-Rothery. It enhances the material's properties by promoting the formation of fine precipitates, which obstruct dislocation movement, thereby increasing the alloy's strength and hardness. Aging is carefully controlled in terms of temperature and time to optimize the distribution of these precipitates, ultimately maximizing the alloy’s performance.\\[8pt]
+        \noindent
+        For example, one study applying these strategies involved a solution heat treatment of Al6082 alloy for 8 hours, resulting in an increase in hardness from 65 BHN to 102 BHN (See Appendix B). Additionally, its tensile strength rose from 154 MPa to 280 MPa after 6 hours of ageing at 205\textdegree C and 495\textdegree C (Singh, R., Singh, P., \& Das, 2023).\\[8pt]
+        \noindent
+        These microstructural enhancements allow aluminum alloys such as HE30 to be used in very demanding applications in the aerospace and automotive industries.\\[8pt]
+        \noindent
+        This research work investigates the response of HE30 aluminum alloy to thermal treatments by quantifying the changes in mechanical properties and in turn contributing to the optimization of materials for critical applications where performance under stress is essential. 
+    
+            
     \newpage\vspace*{-5pt}
     \section{Method and Experimental Procedures}
 
@@ -181,17 +225,51 @@
 
     \newpage\vspace*{-5pt}
     \section{References}
+    \begin{enumerate}
+        \item Singh, P., Singh, R.K. \& Das, A.K., (2023) \textit{‘Optimization of Heat Treatment Cycle for Cast-Al6082 Alloy to Enhance the Mechanical Properties‘}. Research Square. Available at: 	\url{https://assets-eu.researchsquare.com/files/rs-3363991/v1/9cd60f8c-a164-4e04-8552-1933478eaded.pdf?c=1711467707} [Accessed 7 December 2024]. 
+    \end{enumerate}
     
     \newpage\vspace*{-5pt}
-    \section{Appendix}
-  
-   
-    \newpage
     
+   
+    
+\section{Appendix}
+\normalsize
+\renewcommand{\thesubsection}{\Alph{subsection}}
+\subsection{HV5 (Vickers Hardness - 5 kgf Load)}
+The Vickers hardness test is a method for determining the hardness of materials using a diamond pyramid indenter. The hardness is calculated by dividing the applied force by the surface area of the indentation.\\[1em]
+The general formula for calculating the Vickers Hardness Number (HV) is:
+\begin{equation}
+    HV = \frac{F}{A}
+\end{equation}
+Where:
+\begin{itemize}[itemsep=-1mm]
+    \item \( F \) : applied force in newtons (N),
+    \item \( A \) : surface area of the indentation in square millimeters (mm\(^2\)).
+\end{itemize}
+For the HV5 test, the applied load is fixed at 49.03 N. Therefore, the formula for HV5 becomes:
+\begin{equation}
+    HV_5 = \frac{49.03}{A}
+\end{equation}
+Where:
+\begin{itemize}[itemsep=-1mm]
+    \item \( 49.03 \) N is the fixed applied force for HV5,
+    \item \( A \) is the surface area of the indentation in mm\(^2\).
+\end{itemize}
+This formula quantifies the material's hardness by calculating the force applied per unit area of the indentation. The surface area \( A \) is determined based on the geometry of the diamond pyramid indenter used in the test.
+\subsection{BHN (Brinell Hardness Number)}
+The Brinell Hardness Number (BHN) measures a material's resistance to deformation, determined by the indentation left by a hard steel or carbide ball pressed into the material under a specified load. This test is commonly used for materials with a coarse or heterogeneous grain structure.\\[1em]
+The formula for calculating the Brinell Hardness Number is:
 
+\begin{equation}
+    BHN = \frac{2P}{\pi D (D - \sqrt{D^2 - d^2})}
+\end{equation}
+Where:
+\begin{itemize}[itemsep=-1mm]
+    \item \( P \) : applied load in kilogram-force (kgf),
+    \item \( D \) : diameter of the indenter (typically 10 mm),
+    \item \( d \) : diameter of the indentation (mm).
+\end{itemize}
+The BHN provides insight into a material's ability to resist wear and deformation, which is important for assessing the durability and suitability of metals in various engineering applications. BHN values are particularly useful for testing larger, rougher materials and are commonly applied to metals like steel and cast iron. The results help predict wear resistance and strength under load.
 
-
-
-
-        
-    \end{document}
+\end{document}
