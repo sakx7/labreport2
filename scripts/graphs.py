@@ -2,9 +2,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator
 
-data1 = pd.read_csv('data1.csv')
-data2 = pd.read_csv('data2.csv')
-data3 = pd.read_csv('data3.csv')
+data1 = pd.read_csv('data/data1.csv')
+data2 = pd.read_csv('data/data2.csv')
+data3 = pd.read_csv('data/data3.csv')
 
 strain1, stress1 = data1['Strain'], data1['Stress']
 strain2, stress2 = data2['Strain'], data2['Stress']
@@ -30,7 +30,7 @@ plt.grid(True, linestyle='--', alpha=0.7)
 
 plt.xlim(0, 20.5)
 plt.ylim(bottom=0)
-plt.savefig('graph.png',dpi=1000)
+plt.savefig('figures/graph.png',dpi=1000)
 
 plt.show()
 
