@@ -99,6 +99,15 @@
         \node at (\kt+1.35,10.2) {\large 11.98};
         \node at (\kt+1.96,9.6) {\large 6.38};
         \node at (\width*0.5,2*\gap+\width-1) {\Huge \textrm{\textbf{AR}}};        
+                \Large
+        \def\las{0.6}
+        \node at (\width*0.5,-2) {\textsf{\textbf{VICKERS}}};
+        \node at (\width*0.5,-2-\las) {\textsf{\textbf{HARDNESS}}};
+        \node at (\width*0.5,-2-2*\las) {\textsf{119, 123 \textbf{HV5}}};
+        \node at (\width*0.5,-2-3*\las) {\textsf{\textbf{AS RECEIVED}}};
+        
+        
+        
     \end{tikzpicture}\hspace{13em}
     \begin{tikzpicture}[use Hobby shortcut]
         \def\width{4}
@@ -153,8 +162,15 @@
         \node at (\width*0.5,1) {\Large \textsf{\textbf{520 DEGREES}}};
         
         \draw[line width=0.2mm] (\width-0.1,1) -- (\width+0.2,1) node[right] {\Large \textsf{FOR 90 MINS}};
-    \end{tikzpicture}\hspace{9em}
-        \begin{tikzpicture}[use Hobby shortcut]
+        \Large
+        \def\las{0.6}
+        \node at (\width*0.5,-2) {\textsf{\textbf{VICKERS}}};
+        \node at (\width*0.5,-2-\las) {\textsf{\textbf{HARDNESS}}};
+        \node at (\width*0.5,-2-2*\las) {\textsf{36, 36.8 \textbf{HV5}}};
+        \node at (\width*0.5,-2-3*\las) {\textsf{\textbf{SOLUTION TREATED}}};
+        \node at (\width*0.5,-2-4*\las) {\textsf{\textbf{SOFT CONDITION}}};
+    \end{tikzpicture}\hspace{2em}
+    \begin{tikzpicture}[use Hobby shortcut]
         \def\width{4}
         \def\gap{8}
         \def\main{6}
@@ -208,6 +224,15 @@
         \node at (\width*0.5,0.35) {\Large \textsf{\textbf{+184 DEGREES}}};
         \draw[line width=0.2mm] (\width-0.1,1) -- (\width+0.2,1) node[right] {\Large \textsf{FOR 90 MINS = ST}};
         \draw[line width=0.2mm] (\width-0.1,0.35) -- (\width+0.2,0.35) node[right] {\Large \textsf{FOR 40 MINS = PH}};
+        
+        \Large
+        \def\las{0.6}
+        \node at (\width*0.5,-2) {\textsf{\textbf{VICKERS}}};
+        \node at (\width*0.5,-2-\las) {\textsf{\textbf{HARDNESS}}};
+        \node at (\width*0.5,-2-2*\las) {\textsf{\st{102.8}, 131, 126 \textbf{HV5}}};
+        \node at (\width*0.5,-2-3*\las) {\textsf{\textbf{SOLUTION TREATED AT 520 DEGREES}}};
+        \node at (\width*0.5,-2-4*\las) {\textsf{\textbf{PRECIPITATION HARDENED AT 184 DEGREES.}}};
+        
     \end{tikzpicture}
     
 \end{document}
