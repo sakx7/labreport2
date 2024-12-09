@@ -58,7 +58,7 @@
 \fancyfoot[R]{\thepage}
 
 \geometry{top=0.5in,bottom=0.7in}
-
+\usepackage{scalerel}
 
 \setlength{\headheight}{30pt}
 \setlength{\footskip}{20pt}
@@ -142,7 +142,7 @@
 
     \section{Abstract}
     \vspace*{1em}
-    This study investigated the effects of two thermal treatments on the mechanical properties of HE30/BS1476 aluminium alloy, initially characterized by a hardness of 120 HV5, an elastic modulus of 6 GPa, and an ultimate tensile strength of 500 MPa. The alloy underwent two heat treatments: first, heating for 90 minutes at 520\textdegree C, followed by an additional 40 minutes at 184\textdegree C in open air. These treatments resulted in three different variants of the alloy: (1) the base alloy (untreated), (2) the alloy treated for 90 minutes at 520\textdegree C, and (3) the alloy treated for 90 minutes at 520\textdegree  C followed by 40 minutes at 184\textdegree C. The aim of the research was to quantify changes in hardness, modulus of elasticity, yield strength, ultimate tensile strength (UTS), and percentage elongation. Hardness was measured using a Zwick Roell ZHU hardness testing machine (HV5), and properties such as stress and strain were derived from data obtained using a Zwick Roell 2050 tensile testing machine.\\[1em]
+    This study investigated the effects of two thermal treatments on the mechanical properties of HE30/BS1476 aluminium alloy, initially characterized by a hardness of 120 HV5, an elastic modulus of 6 GPa, and an ultimate tensile strength of 500 MPa. The alloy underwent two heat treatments: first, heating for 90 minutes at 520\textdegree C, followed by an additional 40 minutes at 184\textdegree C in open air. Three distinct alloy variations were produced as a result of these treatments. The aim of the research was to quantify changes in hardness, modulus of elasticity, yield strength, ultimate tensile strength (UTS), and percentage elongation. Hardness was measured using a Zwick Roell ZHU hardness testing machine with a 5 kg load (HV5) (See Appendix A), and properties such as stress and strain were derived from data obtained using a Zwick Roell 2050 tensile testing machine.\\[1em]
     \textcolor{red}{Needs small info on results and reflection/conclusion (to be added at a later date)}
    
     
@@ -189,7 +189,13 @@ This comprehensive and interconnected approach underscores the efficiency of our
 \textcolor{red}{experimental procedures describe the precise, step-by-step actions required to carry out an experiment—such as specific instructions like "do this" or "do that"—ensuring repeatability and accuracy in obtaining results. These procedures are intended to allow any individual to physically replicate the experiment.\\
 SAMPLES: Description of the alloy, composition, CSA (mention dimensions are measured by a calliper), nomenclature, heat treatments, picture before testing, etc
 HARDNESS: Testing machine (pics), Procedure (pics)
-TENSILE TEST: Machine (pics), Procedure (pics)}\\
+TENSILE TEST: Machine (pics), Procedure (pics)}\\[8pt]
+    
+\begin{figure}[H]
+    {\includegraphics[width=\textwidth]{images/alloys.png}}
+    \caption{alloys}
+    \label{fig:alloys}
+\end{figure}
 
 
 \subsection{Equipment List}
@@ -200,24 +206,25 @@ The following equipment was used during the experiments:
     \item \textbf{Zwick Roell 2050 Tensile Testing Machine}
     \item \textbf{Personal Protective Equipment (PPE)}
     \item \textbf{Camera/Smartphone}
+    \item \textbf{Miscellaneous Equipment}
 \end{itemize}
 \subsection{Risk Assessment}
 The experimental procedures involved several potential hazards. The identified risks, their levels, and mitigation strategies are outlined below:
 \begin{table}[h!]
     \centering
-    \begin{tabular}{|p{4cm}|p{4cm}|p{3cm}|p{4cm}|}
-        \hline
-        \textbf{Hazard} & \textbf{Risk} & \textbf{Level of Risk} & \textbf{Control Measures} \\
-        \hline
+    \begin{tblr}{
+            width=\linewidth,
+            colspec={Q[4cm]Q[4cm]Q[2cm,c,m]Q[5cm]},
+            row{1} = {font=\bfseries,c,m},
+            rows,columns = {valign=m},
+            hlines, vlines
+        }
+        Hazard & Risk & Level of Risk & Control Measures \\
         Sharp edges of dogbone samples & Cuts or injuries while handling samples & Medium & Handle with care; use gloves when measuring and mounting samples. \\
-        \hline
         Tensile testing machine & Pinching or crushing injuries from moving parts & High & Keep hands and body away from moving components during operation; follow machine's safety protocols. \\
-        \hline
         Vickers hardness testing machine & Injury from improper handling or sample misplacement & Medium & Ensure proper training before operation; position samples correctly and keep fingers clear. \\
-        \hline
-        General laboratory environment & Slips, trips, and falls due to clutter or spills & Low & Maintain a tidy workspace; clean spills immediately; wear appropriate footwear. \\ 
-        \hline
-    \end{tabular}
+        General laboratory environment & Slips, trips, and falls due to clutter or spills & Low & Maintain a tidy workspace; clean spills immediately; wear appropriate footwear. \\
+    \end{tblr}
     \caption{Identified hazards, associated risks, levels, and control measures.}
     \label{tab:risk-assessment}
 \end{table}
@@ -228,29 +235,30 @@ The experimental procedures involved several potential hazards. The identified r
     \newpage\vspace*{-5pt}
     \section{Theory}
 
-    \newpage\vspace*{-5pt}
-    \section{Results}
+    \newpage\vspace*{-20pt}
     
+    \section{Results}
         \renewcommand{\arraystretch}{1.4}
-    \begin{table}[H]
+        \begin{table}[H]
+            \centering
+            \begin{tblr}{
+                    width=\textwidth,
+                    colspec={X[0.4,c]X[1,c]X[1.1,c]X[1.9,c]X[1.9,c]X[1.1,c]X[0.8,c]X[0.7,c]},
+                    hlines,vlines,
+                    cells={valign=m,halign=c}
+                }
+                \textbf{Nr} & \textbf{Specimen ID} & \textbf{Date} & \textbf{Stress - Maximum Load (N)} & \textbf{Strain Extension at Break (mm)} & \textbf{Thickness (mm)} & \textbf{Width (mm)} & \textbf{CSA \((\text{mm}^2)\)} \\
+                1 & ST & 20/11/2024 & 8580 & 19.8 & 1 & 1 & 1.00 \\
+                2 & PH & 20/11/2024 & 23800 & 9.8 & 1 & 1 & 1.00 \\
+                3 & AR & 20/11/2024 & 24400 & 9.7 & 1 & 1 & 1.00 \\
+                \end{tblr}
+            \caption{Specimen Data}
+            \label{tab:specimen_data}
+        \end{table}
+
+    \begin{figure}[H]
         \centering
-        \begin{tabularx}{\textwidth}{|C|C|C|C|C|C|C|C|}
-            \hline
-            \textbf{Nr} & \textbf{Specimen ID} & \textbf{Date} & \textbf{Stress - Maximum Load (N)} & \textbf{Strain Extension at Break (mm)} & \textbf{Thickness (mm)} & \textbf{Width (mm)} & \textbf{CSA \((\text{mm}^2)\)} \\
-            \hline
-            1 & ST & 20/11/2024 & 8580 & 19.8 & 1 & 1 & 1.00 \\
-            \hline
-            2 & PH & 20/11/2024 & 23800 & 9.8 & 1 & 1 & 1.00 \\
-            \hline
-            3 & AR & 20/11/2024 & 24400 & 9.7 & 1 & 1 & 1.00 \\
-            \hline
-        \end{tabularx}
-        \caption{Specimen Data}
-        \label{tab:specimen_data}
-    \end{table}
-    \begin{figure}[ht]
-        \centering
-        \includegraphics[scale=0.5]{figures/graph.png}
+        \includegraphics[scale=0.56]{figures/graph.png}
         \caption{Machine produced data}
         \label{fig:stress_strain}
     \end{figure}

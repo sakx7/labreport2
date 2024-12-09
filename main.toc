@@ -3,14 +3,14 @@
 \contentsline {section}{\numberline {3}Method and Experimental Procedures}{6}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Method}{6}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Experimental procedures}{7}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Equipment List}{7}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Risk Assessment}{7}{subsection.3.4}%
-\contentsline {section}{\numberline {4}Theory}{8}{section.4}%
-\contentsline {section}{\numberline {5}Results}{9}{section.5}%
-\contentsline {section}{\numberline {6}Discussion}{10}{section.6}%
-\contentsline {section}{\numberline {7}Conclusions}{11}{section.7}%
-\contentsline {section}{\numberline {8}Recommendations}{12}{section.8}%
-\contentsline {section}{\numberline {9}References}{13}{section.9}%
-\contentsline {section}{\numberline {10}Appendix}{14}{section.10}%
-\contentsline {subsection}{\numberline {A}HV5 (Vickers Hardness - 5 kgf Load)}{14}{subsection.10.1}%
-\contentsline {subsection}{\numberline {B}BHN (Brinell Hardness Number)}{14}{subsection.10.2}%
+\contentsline {subsection}{\numberline {3.3}Equipment List}{8}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Risk Assessment}{8}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Theory}{9}{section.4}%
+\contentsline {section}{\numberline {5}Results}{10}{section.5}%
+\contentsline {section}{\numberline {6}Discussion}{11}{section.6}%
+\contentsline {section}{\numberline {7}Conclusions}{12}{section.7}%
+\contentsline {section}{\numberline {8}Recommendations}{13}{section.8}%
+\contentsline {section}{\numberline {9}References}{14}{section.9}%
+\contentsline {section}{\numberline {10}Appendix}{15}{section.10}%
+\contentsline {subsection}{\numberline {A}HV5 (Vickers Hardness - 5 kgf Load)}{15}{subsection.10.1}%
+\contentsline {subsection}{\numberline {B}BHN (Brinell Hardness Number)}{15}{subsection.10.2}%
