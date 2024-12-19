@@ -42,6 +42,8 @@
 \usepackage{soul}
 \usepackage[normalem]{ulem} % [normalem] prevents the package from changing the default behavior of `\emph` to underline.
 
+\def\las{0.74}
+
 \begin{document}
         
     \begin{tikzpicture}[use Hobby shortcut]
@@ -96,14 +98,17 @@
         \draw[-] (\width,2*\main+\gap) -- (\width,\main+\gap);
         \node at (\kt,10.2) {\textsf{\textbf{W\kern-0.07em I\kern-0.07em D\kern-0.07em T\kern-0.07em H =}}};
         \node at (\kt+0.35,9.6) {\textsf{\textbf{T\kern-0.07em H\kern-0.07em I\kern-0.07em C\kern-0.07em K\kern-0.07em N\kern-0.07em E\kern-0.07em S\kern-0.07em S =}}};
-        \node at (\kt+1.35,10.2) {\large 11.98};
-        \node at (\kt+1.96,9.6) {\large 6.38};
+        \draw [line width=2.1pt, line cap=round, dash pattern=on 0pt off 1.7\pgflinewidth] (\kt+1,10.05) -- (\kt+2.9,10.05);
+        \draw [line width=2.1pt, line cap=round, dash pattern=on 0pt off 1.7\pgflinewidth] (\kt+1.7,9.46) -- (\kt+2.9,9.46);
+
         \node at (\width*0.5,2*\gap+\width-1) {\Huge \textrm{\textbf{AR}}};        
                 \Large
-        \def\las{0.6}
+
         \node at (\width*0.5,-2) {\textsf{\textbf{VICKERS}}};
         \node at (\width*0.5,-2-\las) {\textsf{\textbf{HARDNESS}}};
-        \node at (\width*0.5,-2-2*\las) {\textsf{119, 123 \textbf{HV5}}};
+
+        \node at (\width*0.5,-2-2*\las) {\textsf{\phantom{36, 36.8} \textbf{HV5}}};        
+        \draw [line width=2.1pt, line cap=round, dash pattern=on 0pt off 1.7\pgflinewidth] (\width*0.5-1.5,-2.2-2*\las) -- (\width*0.5+0.4,-2.2-2*\las);        
         \node at (\width*0.5,-2-3*\las) {\textsf{\textbf{AS RECEIVED}}};
         \node at (\width*0.5,-2-4*\las) {\phantom{{{PRECIPITATION HARDENED AT 184 DEGREES.}}}};
         
@@ -152,22 +157,24 @@
         \draw[-] (\width,2*\main+\gap) -- (\width,\main+\gap);
         \node at (\kt,10.2) {\textsf{\textbf{W\kern-0.07em I\kern-0.07em D\kern-0.07em T\kern-0.07em H =}}};
         \node at (\kt+0.35,9.6) {\textsf{\textbf{T\kern-0.07em H\kern-0.07em I\kern-0.07em C\kern-0.07em K\kern-0.07em N\kern-0.07em E\kern-0.07em S\kern-0.07em S =}}};
-        \node at (\kt+1.15,10.2) {\large 12};
-        \node at (\kt+1.96,9.6) {\large 6.18};
+        \draw [line width=2.1pt, line cap=round, dash pattern=on 0pt off 1.7\pgflinewidth] (\kt+1,10.05) -- (\kt+2.9,10.05);
+        \draw [line width=2.1pt, line cap=round, dash pattern=on 0pt off 1.7\pgflinewidth] (\kt+1.7,9.46) -- (\kt+2.9,9.46);
         \node at (\width*0.5,2*\gap+\width-1) {\Huge \textrm{\textbf{ST}}};
         
         \node at (\width*0.5,3) {\Large \textsf{\textbf{1 X HEAT}}};
         \node at (\width*0.5,2.4) {\Large \textsf{\textbf{TREATMENT}}};
         \node at (\width*0.5,1) {\Large \textsf{\textbf{520 DEGREES}}};
         
-        \draw[line width=0.2mm] (\width-0.1,1) -- (\width+0.2,1) node[right] {\Large \textsf{FOR 90 MINS}};
+        \draw[line width=0.5mm] (\width,1) -- (\width+0.2,1) node[right] {\Large \textsf{FOR 90 MINS}};
         \Large
-        \def\las{0.6}
         \node at (\width*0.5,-2) {\textsf{\textbf{VICKERS}}};
         \node at (\width*0.5,-2-\las) {\textsf{\textbf{HARDNESS}}};
-        \node at (\width*0.5,-2-2*\las) {\textsf{36, 36.8 \textbf{HV5}}};
+        \node at (\width*0.5,-2-2*\las) {\textsf{\phantom{36, 36.8} \textbf{HV5}}};        
+        \draw [line width=2.1pt, line cap=round, dash pattern=on 0pt off 1.7\pgflinewidth] (\width*0.5-1.5,-2.2-2*\las) -- (\width*0.5+0.4,-2.2-2*\las);
         \node at (\width*0.5,-2-3*\las) {\textsf{\textbf{SOLUTION TREATED}}};
         \node at (\width*0.5,-2-4*\las) {\textsf{\textbf{SOFT CONDITION}}};
+
+        
     \end{tikzpicture}\hspace{2em}
     \begin{tikzpicture}[use Hobby shortcut]
         \def\width{4}
@@ -213,22 +220,24 @@
         \draw[-] (\width,2*\main+\gap) -- (\width,\main+\gap);
         \node at (\kt,10.2) {\textsf{\textbf{W\kern-0.07em I\kern-0.07em D\kern-0.07em T\kern-0.07em H =}}};
         \node at (\kt+0.35,9.6) {\textsf{\textbf{T\kern-0.07em H\kern-0.07em I\kern-0.07em C\kern-0.07em K\kern-0.07em N\kern-0.07em E\kern-0.07em S\kern-0.07em S =}}};
-        \node at (\kt+1.4,10.2) {\large 11.97};
-        \node at (\kt+1.96,9.6) {\large 6.08};
+
+        \draw [line width=2.1pt, line cap=round, dash pattern=on 0pt off 1.7\pgflinewidth] (\kt+1,10.05) -- (\kt+2.9,10.05);
+        \draw [line width=2.1pt, line cap=round, dash pattern=on 0pt off 1.7\pgflinewidth] (\kt+1.7,9.46) -- (\kt+2.9,9.46);
+
         \node at (\width*0.5,2*\gap+\width-1) {\Huge \textrm{\textbf{PH}}};
         
         \node at (\width*0.5,3) {\Large \textsf{\textbf{2 X HEAT}}};
         \node at (\width*0.5,2.4) {\Large \textsf{\textbf{TREATMENT}}};
         \node at (\width*0.5,1) {\Large \textsf{\textbf{520 DEGREES}}};
         \node at (\width*0.5,0.35) {\Large \textsf{\textbf{+184 DEGREES}}};
-        \draw[line width=0.2mm] (\width-0.1,1) -- (\width+0.2,1) node[right] {\Large \textsf{FOR 90 MINS = ST}};
-        \draw[line width=0.2mm] (\width-0.1,0.35) -- (\width+0.2,0.35) node[right] {\Large \textsf{FOR 40 MINS = PH}};
+        \draw[line width=0.5mm] (\width,1) -- (\width+0.2,1) node[right] {\Large \textsf{FOR 90 MINS = ST}};
+        \draw[line width=0.5mm] (\width,0.35) -- (\width+0.2,0.35) node[right] {\Large \textsf{FOR 40 MINS = PH}};
         
         \Large
-        \def\las{0.6}
         \node at (\width*0.5,-2) {\textsf{\textbf{VICKERS}}};
         \node at (\width*0.5,-2-\las) {\textsf{\textbf{HARDNESS}}};
-        \node at (\width*0.5,-2-2*\las) {\textsf{\st{102.8}, 131, 126 \textbf{HV5}}};
+        \node at (\width*0.5,-2-2*\las) {\textsf{\phantom{36, 36.8} \textbf{HV5}}};        
+        \draw [line width=2.1pt, line cap=round, dash pattern=on 0pt off 1.7\pgflinewidth] (\width*0.5-1.5,-2.2-2*\las) -- (\width*0.5+0.4,-2.2-2*\las);
         \node at (\width*0.5,-2-3*\las) {\textsf{\textbf{SOLUTION TREATED AT 520 DEGREES}}};
         \node at (\width*0.5,-2-4*\las) {\textsf{\textbf{PRECIPITATION HARDENED AT 184 DEGREES.}}};
         

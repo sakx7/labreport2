@@ -95,6 +95,8 @@
 \usepackage{fancyhdr}
 \usepackage{graphicx}
 \usepackage{tabularray}
+\usepackage{varwidth} 
+
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -335,43 +337,81 @@ These treatments were applied to assess how they influence the alloy's mechanica
 % TENSILE TEST: 
 % Machine (pics), Procedure (pics)
 
-%\begin{figure}[H]
-%    {\includegraphics[width=\textwidth]{images/alloys.png}}
-%    \caption{alloys}
-%    \label{fig:alloys}
-%\end{figure}
+
+\def\imas{2.7cm}
 \subsection{Equipment List}
-The following equipment was used during the experiments:
-\begin{itemize}
-    \item \textbf{Digital Caliper}
-    \item \textbf{Vickers Hardness Testing Machine}
-    \item \textbf{Zwick Roell 2050 Tensile Testing Machine}
-    \item \textbf{Personal Protective Equipment (PPE)}
-    \item \textbf{Camera/Smartphone}
-    \item \textbf{Miscellaneous Equipment}
-\end{itemize}
+\begin{table}[H]
+    \centering
+    \begin{tblr}{
+            colspec = {Q[4cm] Q[4cm] Q[8cm]},
+            hlines, vlines,
+            rows={ht=4\baselineskip},
+            cell{1-4,6}{1} = {font=\bfseries},
+            cells = {valign=m,halign=c},
+            column{3} = {valign=h,halign=l},
+            row{1} = {ht=2\baselineskip,font=\bfseries,c,m},
+        }
+        \textbf{Equipment} & \textbf{Image} & \textbf{Reasoning} \\ 
+        Digital Caliper & \includegraphics[width=\imas,valign=c]{images/digital_vernier_caliper.jpg} & Enables precise and accurate measurement of small dimensions, such as the diameter, thickness, and depth of samples, crucial for ensuring consistency in experimental setup and results. \\
+        Vickers Hardness Testing Machine & \includegraphics[width=\imas,valign=c]{images/hardness.png} & Used to assess the hardness of materials by applying a standardized force to create an indentation, which is then measured to determine the material's resistance to deformation. \\
+        Zwick Roell 2050 Tensile Testing Machine & \includegraphics[width=\imas,valign=c]{images/tensilemachine.png} & Evaluates the tensile strength and mechanical properties of materials under uniaxial tension, providing data essential for material performance analysis and comparison. \\
+        \textbf{Personal Protective Equipment (PPE):} Safety glasses, closed-toe shoes, lab coat & \includegraphics[width=\imas,valign=c]{images/ppe.jpg} & Protects against potential hazards in tensile testing, such as flying debris from specimen fracture, pinch points in the testing machine, and general laboratory risks further shown in Table \ref{tab:risk-assessment}.\\
+        Camera/Smartphone and Stationery & \includegraphics[width=\imas,valign=c]{images/stationary.png} & Essential for documenting experimental setups and procedures, capturing visual evidence of results, and recording detailed observations, calculations, and procedural notes for accurate reporting. \\
+    \end{tblr}
+    \caption{Overview of Equipment Used in the Experiment}
+    \label{tab:equipment_overview}
+\end{table}
+
+    
+
+\newcommand{\mr}[2]{%
+    \begin{varwidth}{#2}%
+        #1%
+    \end{varwidth}%
+}
+
+
 \subsection{Risk Assessment}
 The experimental procedures involved several potential hazards. The identified risks, their levels, and mitigation strategies are outlined below:
 \begin{table}[h!]
     \centering
     \begin{tblr}{
             width=\linewidth,
-            colspec={Q[4cm]Q[4cm]Q[2cm,c,m]Q[5cm]},
-            row{1} = {font=\bfseries,c,m},
+            colspec={Q[4cm]Q[5cm]Q[2cm,c,m]Q[5cm]},
+            rows = {ht=4\baselineskip},
+            row{1} = {font=\bfseries,c,m,ht=1.5\baselineskip},            
             rows,columns = {valign=m},
             hlines, vlines
         }
         Hazard & Risk & Level of Risk & Control Measures \\
-        Sharp edges of dogbone samples & Cuts or injuries while handling samples & Medium & Handle with care; use gloves when measuring and mounting samples. \\
-        Tensile testing machine & Pinching or crushing injuries from moving parts & High & Keep hands and body away from moving components during operation; follow machine's safety protocols. \\
-        Vickers hardness testing machine & Injury from improper handling or sample misplacement & Medium & Ensure proper training before operation; position samples correctly and keep fingers clear. \\
-        General laboratory environment & Slips, trips, and falls due to clutter or spills & Low & Maintain a tidy workspace; clean spills immediately; wear appropriate footwear. \\
+        \mr{Sharp edges of dogbone samples}{4cm} & \mr{Cuts or injuries while handling samples}{5cm} & Medium & \mr{Handle with care; use gloves when measuring and mounting samples.}{5cm} \\
+        Tensile testing machine & \mr{Pinching or crushing injuries from moving parts}{5cm} & High & Keep hands and body away from moving components during operation; follow machine's safety protocols. \\
+        \mr{Vickers hardness testing machine}{4cm} & Injury from improper handling or sample misplacement & Medium & Ensure proper training before operation; position samples correctly and keep fingers clear. \\
+        \mr{General laboratory environment}{4cm} & Slips, trips, and falls due to clutter or spills & Low & Maintain a tidy workspace; clean spills immediately; wear appropriate footwear. \\
     \end{tblr}
     \caption{Identified hazards, associated risks, levels, and control measures.}
     \label{tab:risk-assessment}
 \end{table}
 
- 
+\subsection{Conducting the Experiment}
+For the experiment, we were provided with three samples, which are visually represented in the image below:
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.4\textwidth]{example-image} 
+    \caption{Visual representation of the three samples} 
+    \label{fig:samples} 
+\end{figure}
+
+Additionally, we were given an A4 sheet with a form to complete, which looked as shown below:
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=\textwidth]{figures/alloys_base.jpg} 
+    \caption{Form for recording sample measurements} 
+    \label{fig:alloys} 
+\end{figure}
+
+On this form, we were required to fill out the values for the width, length, and hardness (measured using the HV5 scale) for each of the three alloys.
 
 
     \newpage\vspace*{-5pt}
