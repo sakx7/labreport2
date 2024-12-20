@@ -11,6 +11,7 @@
 \usepackage{placeins}
 \usepackage{enumitem}
 
+%\usepackage{times}
 
 \usepackage{tabularx}
 \usepackage{amsmath, amssymb, amscd, MnSymbol, mathrsfs}
@@ -73,7 +74,7 @@
         \vspace{2pt}%
         \ifx\formalsource\empty % Check if the source is empty
         \else
-        \hfill{\footnotesize\textit{Source: \formalsource}}% Align source to the bottom-right
+        \hfill{\footnotesize{\formalsource}}% Align source to the bottom-right
         \fi
     \end{adjustwidth}\endMakeFramed%
 }
@@ -143,7 +144,7 @@
 
     \Large    
     \begin{tabular}{@{}l l l@{}}
-        \textbf{Submitted by:} & Sakariye Abiikar (Group Leader) & K2371673 \\
+        \textbf{Submitted by:} & Sakariye Abiikar (Group Leader)\phantom{ssssss} & K2371673 \\
         & Sandeep Singh & K2314795 \\
         & Aland Floyd Noronha & K2423819 \\
         & Alan Roy & K2314478 \\
@@ -179,7 +180,7 @@
         Andrew Surname & Aviation & Introduction & \includegraphics[width=2cm,valign=c]{images/profile.jpg} \\ 
         Lucas Surname & Astro & Results & \includegraphics[width=2cm,valign=c]{images/profile.jpg} \\ 
         James Surname & Mechanical Engineering & Discussion, References & \includegraphics[width=2cm,valign=c]{images/profile.jpg} \\ 
-        Judas Surname & Civil Engineering & No Contribution & \includegraphics[width=2cm,valign=c]{images/profile.jpg} \\ 
+        Judas Surname & Civil Engineering &  & \includegraphics[width=2cm,valign=c]{images/profile.jpg} \\ 
     \end{tblr}
     
     \normalsize
@@ -200,23 +201,19 @@
    
     
     \newpage\vspace*{-20pt}
-    \section{Introduction}
+\section{Introduction}
 
-    In engineering, the selection and optimization of materials directly impact the performance of a design application, especially in aerospace, automotive, and construction industries.\\[8pt] 
-    Aluminium alloys have a good strength-to-weight ratio and corrosion resistance; therefore, they are very important in such sectors, though mostly in applications requiring specific mechanical improvements through controlled processes. \\[8pt] 
-    Research by metallurgists such as Sorby and Sauveur demonstrated that \textbf{heat treatment} significantly improves the properties of alloys. By changing the alloy's microstructure, these heat treatments improve its tensile strength, hardness, and elasticity. Various heat treatment techniques, including quenching and solution heat treatment, are designed to accomplish particular mechanical qualities based on the alloy's intended use.\\[8pt] 
-    The \textbf{aging process} is a critical aspect of heat treatment, fundamental to precipitation hardening, as highlighted by metallurgists like William Hume-Rothery.It enhances the material's properties by promoting the formation of fine precipitates, which obstruct dislocation movement, thereby increasing the alloy's strength and hardness, it is thoroughly regulated in terms of temperature and time in order to maximise the distribution of these precipitates.\\[8pt] 
-    For example, one study applying these strategies involved a solution heat treatment of Al 6082 alloy for 8 hours, resulting in an increase in hardness from 65 BHN to 102 BHN. Additionally, its tensile strength rose from 154 MPa to 280 MPa after 6 hours of aging at 205°C and 495°C (Singh, R., Singh, P., \& Das, 2023). \\[8pt] 
-    These microstructural enhancements allow aluminium alloys such as HE30 to be used in very demanding applications in the aerospace and automotive industries.\\[8pt] 
-    This research work investigates the response of HE30 aluminium alloy to thermal treatments by observing the changes in mechanical properties.  
-            
-    \newpage\vspace*{-20pt}
+In engineering, the selection and optimization of materials significantly influence the performance of designs, particularly in the aerospace, automotive, and construction industries. Aluminium alloys are highly valued in these sectors due to their excellent strength-to-weight ratio and corrosion resistance, especially in applications requiring mechanical improvements through controlled processes (thyssenkrupp, 2023).\\[8pt]
+Research by metallurgists such as Sorby and Sauveur has demonstrated that \textbf{heat treatment} can significantly enhance the properties of alloys. By altering the microstructure, heat treatments improve tensile strength, hardness, and elasticity. Techniques such as quenching and solution heat treatment are tailored to achieve specific mechanical properties based on the alloy’s intended application (Eurotherm, 2024).\\[8pt] 
+\textbf{Aging} is a heat treatment process used to enhance the mechanical properties of aluminum alloys. It involves two main stages: first, the alloy is heated to dissolve alloying elements and then rapidly cooled, creating a supersaturated solid solution. Following this, the alloy undergoes artificial aging, where it is reheated to a lower temperature for a set period. This allows for the formation of fine particles that strengthen the material by impeding dislocation movement, thereby improving its hardness and tensile strength. Aging is crucial for optimizing the performance of aluminum alloys used in various applications (Rajaa et al., 2018).\\[8pt]
+The significance of heat treatments is further supported by research. In one study, for example, the hardness of Al 6082 alloy increased from 65 BHN to 102 BHN after 8 hours of solution heat treatment. Furthermore, the alloy's tensile strength increased from 154 MPa to 280 MPa after being aged for 6 hours at 205\textdegree C and 495\textdegree C (Singh et al., 2023). Aluminium alloys like HE30 are ideal for demanding applications in the automotive and aerospace industries because of these microstructural improvements.\\[8pt]
+This research investigates the response of HE30 aluminium alloy to thermal treatments, focusing on changes in its mechanical properties.
+
+\newpage\vspace*{-20pt}
 \section{Method}
-This laboratory research primarily focused on the evaluation of the mechanical properties of our alloy samples, specifically key metrics such as yield strength, ultimate tensile strength (UTS), modulus of elasticity, hardness, and percentage elongation. These properties are essential for understanding the material's behavior under stress and are typically used to assess the material’s suitability for different engineering applications.\\[8pt]
-The methodology applied in this research was designed around an \textbf{integrated testing strategy}—an approach that aims to maximize the amount of data obtained from each step while ensuring the highest level of accuracy and efficiency. This is often referred to as \textbf{data-driven experimentation} or \textbf{multivariate analysis}, where multiple factors are measured simultaneously to extract a fuller picture of material properties with minimal effort.\\[8pt]
-The \textbf{goal-oriented design} of the methodology is based on the principle of reducing experimental redundancy while maximizing the information gathered. For example, a single tensile test can yield data on multiple properties (e.g., UTS, yield strength, modulus of elasticity) with the help of carefully selected test parameters and data analysis methods.\\[8pt]
-This principle is at the heart of experimental optimization, often involving methods like \textbf{response surface methodology (RSM)} or \textbf{factorial design}, which help streamline the testing process by systematically varying and analyzing input parameters to identify the most efficient experimental conditions.\\[8pt]
-By focusing on a minimal set of tests that can provide insights into multiple properties, this methodology ensures that each procedure is maximally informative, thus minimizing resource usage and reducing the chances of error.\\[8pt]
+This laboratory research primarily focused on evaluating the mechanical properties of our alloy samples, including key metrics such as yield strength, ultimate tensile strength (UTS), modulus of elasticity, hardness, and percentage elongation. These properties are essential for understanding the material's behavior under stress and assessing its suitability for various engineering applications.\\[8pt]
+The methodologies employed in this study were designed to optimize the data obtained from individual experiments on the alloys' mechanical properties. By utilizing advanced data analysis techniques such as \textbf{Response Surface Methodology (RSM) and Fraction Factorial Design (FFD)} (See Appendix C), we uncovered correlations and dependencies that might otherwise remain hidden. For instance, tensile testing, beyond yielding basic parameters like UTS and modulus of elasticity, provided insights into failure mechanisms and material behavior under specific conditions. This approach reduces the need for extensive experimental operations while deepening our understanding of the alloys' properties and enabling predictive modeling. By focusing on a minimal set of tests that deliver insights into multiple material properties, the methodology ensures each procedure is maximally informative, minimizing resource usage and reducing the likelihood of error.\\[8pt]
+Building on this optimized experimental design, the research approach utilized in this study incorporates an \textbf{Integrated Testing Strategy (ITS)}. ITS combines collected data to provide a comprehensive and precise assessment of the alloy's mechanical properties. It reduces redundancy and streamlines the evaluation process by avoiding reliance on a single test or series of tests. As an example of broader interdisciplinary efforts, the ITS developed in this study enhances experimental efficiency while minimizing costs and resource consumption (Rovida et al., 2015; Alan Turing Institute, 2024).\\[8pt]
 Our approach was characterized by the following key components:
 \begin{enumerate}[itemsep=-0.5mm]
     \item {Dimensional Analysis}
@@ -224,25 +221,27 @@ Our approach was characterized by the following key components:
     \item {Tensile Testing} 
     \item {Data analysis}
 \end{enumerate}
-Note that \textbf{Sample Preparation} is distinct from the testing process and is not considered part of the testing itself.\\[1em]
-This comprehensive and interconnected approach underscores the efficiency of our laboratory testing methodology. By designing experiments that yield multiple insights from each procedure, we were able to conduct a thorough analysis of the alloy's mechanical properties while minimizing resource usage and potential sources of error. This method not only ensures the accuracy and reliability of our results but also provides a rich dataset for in-depth analysis and interpretation of the alloy's performance characteristics.
+Note that \textbf{Sample Preparation} is distinct from the testing process and is not considered part of the testing itself.\\[8pt]
+By designing experiments that yield multiple insights from each procedure, we were able to conduct a thorough analysis of the alloy's mechanical properties while minimizing resource usage and potential sources of error. This method not only ensures the accuracy and reliability of our results but also provides a rich dataset for in-depth analysis and interpretation of the alloy's performance characteristics.
 \newpage
 
 \section{Experimental Procedures}
-The alloys used in this study are based on the HE30 (BS 1476) aluminium alloy. BS 1476, officially titled \textit{"BS 1476:1955 - Wrought Aluminium and Aluminium Alloys for General Engineering Purposes. Bars, Rods, and Sections,"} was introduced on December 22, 1955, and underwent several revisions reflecting advancements in materials science and engineering practices. The standard’s last revision occurred in 1987, and it remained active—with amendments—until its withdrawal on June 21, 2022.\\[1em]
-While it is known that BS 1476 is no longer an operational standard, there is no publicly available evidence that it was directly replaced by a specific successor, such as those often published under European Norms (EN).\\[1em] 
-Although the exact BS 1476 standards for HE30 are hard to come by, the composition and properties of the \textbf{6082 aluminium} alloy are often used as a contemporary substitute for HE30 in engineering processes.
+The alloys used in this study are based on the HE30/BS1476 aluminium alloy. "HE30" is a temper designation within the BS 1476 standard, referring to the specific heat treatment and aging process applied to achieve desired mechanical properties in aluminium alloys. The "BS1476" refers to the British Standard \textit{"BS 1476:1955 - Wrought Aluminium and Aluminium Alloys for General Engineering Purposes. Bars, Rods, and Sections,"} introduced on December 22, 1955. This standard outlined the requirements for various aluminium alloys used in engineering applications and underwent several revisions to reflect advancements in materials science and engineering practices, with its last revision occurring in 1987. The standard remained active—with amendments—until its withdrawal on June 21, 2022.\\[8pt]
+While it is known that BS 1476 is no longer an operational standard, there is no publicly available evidence that it was directly replaced by a specific successor, such as those often published under European Norms (EN).\\[8pt] 
+Despite the fact that precise BS 1476 standards for HE30 are difficult to find, the composition and characteristics of the \textbf{6082 aluminium} alloy is a popular modern alternative to HE30 in engineering operations.
+
 \subsection{Description}
 Key details are as follows:
-\begin{formal}[Truventor, 27/03/2019]
+\begin{formal}[Truventor, 2019]
 Aluminium HE 30 alloy a.k.a AL 6082 is a medium strength alloy with excellent corrosion resistance. It
 has the highest strength of 6000 (6XXX) series alloys. It is also known as a structural alloy. In block,
-plate, or bar form, AL HE 30 alloy is most commonly used in machining.\\[1em]
+plate, or bar form, AL HE 30 alloy is most commonly used in machining.\\[8pt]
 Although it is a relatively new alloy, due to its higher strength, AL HE 30 has replaced AL 6061 in many
 applications. The addition of a large amount of manganese controls the grain structure which in turn
-results in a stronger alloy.\\[1em]
-\textbf{Characteristics:}
-\begin{itemize}
+results in a stronger alloy.\\[8pt]
+\begin{minipage}[t]{0.57\textwidth}
+    \textbf{Characteristics:}
+    \begin{itemize}[itemsep=-1mm]
     \item High strength-to-weight ratio makes it ideal for lightweight structures.
     \item Most versatile and highest strength alloy in the 6000 series Aluminum.
     \item Good machinability compared to metals like Stainless Steel (SS) and Mild Steel (MS).
@@ -250,15 +249,19 @@ results in a stronger alloy.\\[1em]
     \item Alternative to plastics in high-stress applications.
     \item Lower fatigue strength and elastic strength compared to steels.
 \end{itemize}
+\end{minipage}\hspace{2.4em}
+\begin{minipage}[t]{0.45\textwidth}
 \textbf{Applications:}
-\begin{itemize}
+\begin{itemize}[itemsep=-1mm]
     \item Automotive components.
     \item Electronic applications.
     \item Aerospace components.
     \item Trusses, frames, and beams.
 \end{itemize}
-\vspace{-8pt}
-\end{formal}\noindent
+\end{minipage}\\
+\vspace{1pt}
+\end{formal}
+\newpage\noindent
 While it is common practice to treat HE30 as equivalent to Aluminium Alloy 6082, minor differences in composition and performance may exist between HE30 under BS 1476 and 6082. For more precise specifications of HE30 under BS 1476, consulting the British Standards Institution (BSI) may provide further clarity, especially since the standard was withdrawn in 2022.\\[1em]
 For the purposes of this work, HE30 will be treated as equivalent to 6082, which serves as the basis for further analysis of its properties and related topics, i hope you can understand.
 \subsection{Composition}
@@ -301,13 +304,13 @@ For the purposes of this work, HE30 will be treated as equivalent to 6082, which
 \end{minipage}
 \hfill
 \begin{minipage}{0.55\textwidth}
-    The composition of HE30 (also known as 6082) generally follows the typical values for 6082 aluminium alloy, as shown in Table \ref{tab:composition_6082}.\\[1em]
+    The composition of HE30 (a.k.a 6082) generally follows the typical values for 6082 aluminium alloy, as shown in Table \ref{tab:composition_6082}.\\[1em]
     Once again, I stress that there may be minor differences in the composition of HE30, especially in accordance with the BS 1476 specifications.\\[1em] 
     The values listed here are provided for reference, but the exact composition of the HE30 alloy should be verified for accurate work in our lab, as it may not align with typical web standards.
     \vspace{1em}\hrule\vspace{1em}
     Although I do have actual information regarding the "Aluminium alloy HE30 BS1476" from Dr. Santiago shown in Table \ref{tab:composition_he30}, it is important to note that this source lacks proper documentation, and its credibility remains uncertain.\\[1em]
-    This information contradicts much of the current research surrounding the HE30 BS1476, as i iterated that the standard has been withdrawn and has not been explicitly updated or replaced; it is still mainly unreferenced and not widely recognised in the contemporary literature, as such is why i adopted the 6082.\\[1em]
-    Although there are slight differences between the two sources in terms of composition, I have chosen to adopt Dr. Santiago's version for the purpose of this work. This decision is based on the fact that the table he provided reflects the information he, as my instructor, has shared with me. While I acknowledge the discrepancies and the lack of clear sourcing in his data, I consider it appropriate to proceed with his version for expediency, particularly as it aligns with the guidance he has given in our coursework.
+    The HE30 BS1476 has been withdrawn and has not been explicitly updated or replaced, as I stated. It is still largely unreferenced and not widely recognised in the contemporary literature, which is why I adopted the 6082. This data source contradicts to much of what is being currently pertaining to the standard.\\[1em]
+    Although there are significant differences between the two sources in terms of composition, I have chosen to adopt Dr. Santiago's version for the purpose of this work. This decision is based on the fact that the table he provided reflects the information he, as my instructor, has shared with me. While I acknowledge the discrepancies and the lack of clear sourcing in his data, I consider it appropriate to proceed with his version for expediency, particularly as it aligns with the guidance he has given in our coursework.
 \end{minipage}\\
 
 \raggedright
@@ -397,11 +400,11 @@ The experimental procedures involved several potential hazards. The identified r
 For the experiment, we were provided with three samples, which are visually represented in the image below:
 \begin{figure}[H] 
     \centering 
-    \includegraphics[width=0.4\textwidth]{example-image} 
+    \includegraphics[width=0.6\textwidth,height=0.3\textheight]{example-image} 
     \caption{Visual representation of the three samples} 
     \label{fig:samples} 
 \end{figure}
-
+\newpage\noindent
 Additionally, we were given an A4 sheet with a form to complete, which looked as shown below:
 
 \begin{figure}[H] 
@@ -411,10 +414,10 @@ Additionally, we were given an A4 sheet with a form to complete, which looked as
     \label{fig:alloys} 
 \end{figure}
 
-On this form, we were required to fill out the values for the width, length, and hardness (measured using the HV5 scale) for each of the three alloys.
+On this form, we recorded the width, length (both in millimeters), and hardness (measured using the HV5 scale) for each of the three alloy samples. These tasks were performed simultaneously, as they are relatively quick and do not require sequential completion. For instance, while the first sample was undergoing hardness testing, we measured the dimensions of the other samples.\\[8pt]
+I will now demonstrate how we used digital calipers to measure the alloy samples in millimeters, along with the results obtained from these measurements:
 
-
-    \newpage\vspace*{-5pt}
+\newpage\vspace*{-5pt}
     \section{Theory}
 
     \newpage\vspace*{-20pt}
@@ -457,11 +460,22 @@ On this form, we were required to fill out the values for the width, length, and
     \newpage\vspace*{-5pt}
     \section{References}
     \begin{enumerate}
-        \item Singh, P., Singh, R.K. \& Das, A.K., (2023) \textit{‘Optimization of Heat Treatment Cycle for Cast-Al6082 Alloy to Enhance the Mechanical Properties‘}. Research Square. Available at: 	\url{https://assets-eu.researchsquare.com/files/rs-3363991/v1/9cd60f8c-a164-4e04-8552-1933478eaded.pdf?c=1711467707} [Accessed 7 December 2024]. 
+        \item Eurotherm (2024) \textit{An Introduction to the Heat Treatment of Metallic Alloys}. Available at: \url{https://www.eurotherm.com/sv/heat-treatment-articles-sv/an-introduction-to-the-heat-treatment-of-metallic-alloys/} [Accessed 19 December 2024].
         
-        \item https://truventor.ai/assets/pdf/datasheets/Aluminium%206082.pdf    
+        \item Rajaa, S. M., Abdulhadi, H. A., Jabur, K. S., and Mohammed, G. R. (2018). Aging Time Effects on the Mechanical Properties of Al 6061-T6 Alloy. Available at: \url{https://pdfs.semanticscholar.org/a99b/8b7e771be0fecaaeb970074c7a2871a77032.pdf} [Accessed 19 December 2024].        
+
+        \item Singh, P., Singh, R.K. \& Das, A.K. (2023) \textit{‘Optimization of Heat Treatment Cycle for Cast-Al6082 Alloy to Enhance the Mechanical Properties’}. Research Square. Available at: \url{https://assets-eu.researchsquare.com/files/rs-3363991/v1/9cd60f8c-a164-4e04-8552-1933478eaded.pdf?c=1711467707} [Accessed 7 December 2024].
+        
+        \item Thyssenkrupp Materials (2023) \textit{Aerospace Grade Aluminium}. Available at: \url{https://www.thyssenkrupp-materials.co.uk/aerospace-grade-aluminum} [Accessed 19 December 2024].
+        
+        \item Truventor (2019) \textit{Aluminium 6082 Data Sheet}. Available at: \url{https://truventor.ai/assets/pdf/datasheets/Aluminium%206082.pdf} [Accessed 19 December 2024].
+        
+        \item Rovida, C., Alépée, N., Api, A.M., Basketter, D.A., Bois, F.Y., Caloni, F., Corsini, E., Daneshian, M., Eskes, C., Ezendam, J., Fuchs, H., Hayden, P., Hegele-Hartung, C., Hoffmann, S., Hubesch, B., Jacobs, M.N., Jaworska, J., Kleensang, A., Kleinstreuer, N., Lalko, J., Landsiedel, R., Lebreux, F., Luechtefeld, T., Locatelli, M., Mehling, A., Natsch, A., Pitchford, J.W., Prater, D., Prieto, P., Schepky, A., Schüürmann, G., Smirnova, L., Toole, C., van Vliet, E., Weisensee, D. and Hartung, T. (2015) \textit{Integrated Testing Strategies (ITS) for Safety Assessment}. Available at: \url{https://www.researchgate.net/publication/6538912_The_Principles_of_Weight_of_Evidence_Validation_of_Test_Methods_and_Testing_Strategies_The_Report_and_Recommendations_of_ECVAM_Workshop_58} [Accessed 20 December 2024].
+        
+        \item Alan Turing Institute (2024) \textit{Data-Driven Experiment Design}. Available at: \url{https://www.turing.ac.uk/research/research-projects/data-driven-experiment-design} [Accessed 20 December 2024].
         
     \end{enumerate}
+
     
     
     %https://nasruldesign.weebly.com/ndt---brief-overview.html
@@ -477,7 +491,7 @@ On this form, we were required to fill out the values for the width, length, and
 \normalsize
 \renewcommand{\thesubsection}{\Alph{subsection}}
 \subsection{HV (Vickers Hardness)}  
-    The Vickers hardness (HV) test is a precise and versatile method for evaluating material hardness. It employs a diamond-shaped indenter with a square base and an included angle of 136° between opposing faces. 
+    The Vickers hardness (HV) test is a precise and versatile method for evaluating material hardness. It employs a diamond-shaped indenter with a square base and an included angle of 136\textdegree between opposing faces. 
     The indenter is pressed into the material under a specific load, typically ranging from 1 to 100 kgf, applied for 10 to 15 seconds.
     \begin{figure}[H]
         \centering
@@ -500,7 +514,7 @@ On this form, we were required to fill out the values for the width, length, and
             The formula for $A$ incorporates the geometry of the diamond pyramid indenter, 
             Such that surface area \(A\) can be expressed as:
             \begin{equation}
-                A = \frac{d^2}{2\sin\left(\frac{136^\circ}{2}\right)}
+                A = \frac{d^2}{2\sin\left(\frac{136^\circ}{2}\right)} \approx \frac{d^2}{1.854} 
             \end{equation}
             Where:  
             \begin{itemize}[itemsep=-1mm]
@@ -509,16 +523,20 @@ On this form, we were required to fill out the values for the width, length, and
             \end{itemize}
             in so that it is equivalent to:
             \begin{equation}
-                    A= \frac{\left(\frac{d_1+d_2}{2}\right)^2}{2\sin\left(\frac{136^\circ}{2}\right)} \approx 0.1382\left(d_1 + d_2\right)^2
+                    A= \frac{\left(\frac{d_1+d_2}{2}\right)^2}{2\sin\left(\frac{136^\circ}{2}\right)} \approx \frac{\left(d_1 + d_2\right)^2}{7.236}
             \end{equation}
         \end{minipage}\\
     \end{figure}
     \vspace{-0.1em}\noindent
+    Thus the derived formula is commonly shown as
+    \begin{equation}
+        \boxed{HV = \frac{F}{A} \approx \, \frac{1.854 \times F}{d^2} \approx \, \frac{7.236\times F}{\left(d_1 + d_2\right)^2}}    
+    \end{equation} 
     The HV5 test, for instance, applies a fixed load of 5 kgf (49.03 N), and the hardness is calculated as:  
     \begin{equation}
-        HV5 = \frac{49.03}{A} \approx \frac{354.78}{\left(d_1 + d_2\right)^2}
+        HV5 = \frac{49.03}{A} \approx \, \frac{90.902}{d^2} \approx \, \frac{354.781}{\left(d_1 + d_2\right)^2}
     \end{equation}
-The test procedure involves measuring the two diagonals of the indentation under a microscope and squaring their sum. The resulting hardness value is expressed as a dimensionless number, such as \(HV30\), which denotes the hardness under a 30 kgf load.  
+    The test procedure involves measuring the two diagonals of the indentation under a microscope and squaring their sum. The resulting hardness value is expressed as a dimensionless number, such as \(HV30\), which denotes the hardness under a 30 kgf load.  
 
 \subsubsection*{Importance and Applications}  
 
@@ -539,5 +557,14 @@ Where:
 \end{itemize}
 \textbf{Note}: The Brinell test may use either $P$ or $F$ for the load, depending on the source.\\ 
 The BHN provides insight into a material's ability to resist wear and deformation, which is important for assessing the durability and suitability of metals in various engineering applications. BHN values are particularly useful for testing larger, rougher materials and are commonly applied to metals like steel and cast iron. The results help predict wear resistance and strength under load.
+
+
+\subsection{RSM and FFS}
+\textbf{Response Surface Methodology (RSM)} is a type of adaptive or sequential design. Sequential designs involve multiple rounds of experimentation, with the choice of treatments in each later round being dependent on the data accumulated from completed rounds. RSM is usually used to identify some sort of optimum, often for industrial production. Sequential designs also exist outside of the RSM framework, however, such as Bayesian Adaptive Experimental Design.\\[8pt]
+\textbf{Fractional Factorial Designs (FFDs)} are a specific group of experimental designs. They allow useful information to be extracted from relatively tiny experiments, especially in situations with a large number of predictors. The central (quite reasonable) assumption is that higher-order interactions are less important than lower-order ones and main effects, which is called the "sparsity-of-effects principle". Experimental designs can therefore be scaled down by neglecting the higher-order interactions. This scaling down involves intentionally confounding (‘aliasing’) combinations of factors relative to the full factorial experiment, with the consequence that one cannot estimate each separate main effect and interaction term. We can still learn a great deal of useful information from the data despite this limitation, though.\\[8pt]
+\textbf{How RSM and FFDs interact:}\\[8pt]
+FFDs are most often used as a component of RSM. But they can in principle be used independently, either as part of a one-shot experiment, or as part of a sequential design approach that does not involve RSM. They seem unlikely to be very useful when used in a one-shot experiment, which is probably why they are so tightly connected to RSM.\\[8pt]
+Additionally, RSM can take as its input experimental designs that are not FFDs. Central Composite Designs and Box-Behnken designs are two other commonly-used designs.\\[8pt]
+My thanks to kjetil b halvorsen and Gregg H for their input and the suggested resources. I was not able to lay my hands on the Montgomery book but found the Box, Hunter \& Hunter book very useful.
 
 \end{document}
