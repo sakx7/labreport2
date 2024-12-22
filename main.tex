@@ -11,6 +11,7 @@
 \usepackage{placeins}
 \usepackage{enumitem}
 
+%\usepackage{showframe}
 %\usepackage{times}
 
 \usepackage{tabularx}
@@ -111,7 +112,7 @@
 \fancyfoot[C]{Department of Mechanical Engineering}
 \fancyfoot[R]{\thepage}
 
-\geometry{top=0.5in,bottom=0.7in}
+\geometry{top=0.5in,bottom=0.69in}
 \usepackage{scalerel}
 
 \setlength{\headheight}{30pt}
@@ -132,6 +133,41 @@
 \renewcommand{\theequation}{\text{Eq.}~\arabic{equation}}
 %Refer to the equation as \eqref{equation}.
 \usepackage{caption}  % This package allows captioning outside of a float
+
+
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{patterns.meta}
+
+\pgfdeclarepattern{
+    name=hatch,
+    parameters={\hatchsize,\hatchangle,\hatchlinewidth},
+    bottom left={\pgfpoint{-.1pt}{-.1pt}},
+    top right={\pgfpoint{\hatchsize+.1pt}{\hatchsize+.1pt}},
+    tile size={\pgfpoint{\hatchsize}{\hatchsize}},
+    tile transformation={\pgftransformrotate{\hatchangle}},
+    code={
+        \pgfsetlinewidth{\hatchlinewidth}
+        \pgfpathmoveto{\pgfpoint{-.1pt}{-.1pt}}
+        \pgfpathlineto{\pgfpoint{\hatchsize+.1pt}{\hatchsize+.1pt}}
+        \pgfpathmoveto{\pgfpoint{-.1pt}{\hatchsize+.1pt}}
+        \pgfpathlineto{\pgfpoint{\hatchsize+.1pt}{-.1pt}}
+        \pgfusepath{stroke}
+    }
+}
+
+\tikzset{
+    hatch size/.store in=\hatchsize,
+    hatch angle/.store in=\hatchangle,
+    hatch line width/.store in=\hatchlinewidth,
+    hatch size=5pt,           % Smaller hatch size for fewer lines
+    hatch angle=45pt,         % More angle to spread lines
+    hatch line width=.5pt,    % Thin lines
+}
+
+
+
+
 \begin{document}
         
 
@@ -226,9 +262,17 @@ By designing experiments that yield multiple insights from each procedure, we we
 \newpage
 
 \section{Experimental Procedures}
-The alloys used in this study are based on the HE30/BS1476 aluminium alloy. "HE30" is a temper designation within the BS 1476 standard, referring to the specific heat treatment and aging process applied to achieve desired mechanical properties in aluminium alloys. The "BS1476" refers to the British Standard \textit{"BS 1476:1955 - Wrought Aluminium and Aluminium Alloys for General Engineering Purposes. Bars, Rods, and Sections,"} introduced on December 22, 1955. This standard outlined the requirements for various aluminium alloys used in engineering applications and underwent several revisions to reflect advancements in materials science and engineering practices, with its last revision occurring in 1987. The standard remained active—with amendments—until its withdrawal on June 21, 2022.\\[8pt]
-While it is known that BS 1476 is no longer an operational standard, there is no publicly available evidence that it was directly replaced by a specific successor, such as those often published under European Norms (EN).\\[8pt] 
-Despite the fact that precise BS 1476 standards for HE30 are difficult to find, the composition and characteristics of the \textbf{6082 aluminium} alloy is a popular modern alternative to HE30 in engineering operations.
+The alloys used in this study are derived from \textbf{HE30/BS1476}. The term \textbf{HE30} refers to a temper designation within the now-withdrawn \textbf{BS 1476} standard, which outlined heat treatment and aging processes for aluminium alloys. \textbf{BS 1476}, introduced in 1955 and revised until 1987, was officially withdrawn on June 21, 2022.\\[8pt]  
+Though \textbf{BS 1476} is no longer active, its parameters for \textbf{HE30} remain linked to the aluminium alloy \textbf{6082}, a widely used material in engineering. While exact details from \textbf{BS 1476} are unavailable, \textbf{HE30} is consistently associated with 6082.  
+\begin{itemize}[itemsep=-1mm]
+    \item \textbf{T6} - Solution heat-treated and artificially aged.
+    \item \textbf{O} - Soft.
+    \item \textbf{T4} - Solution heat-treated and naturally aged.
+    \item \textbf{T651} - Solution heat-treated, stress-relieved, and artificially aged.
+\end{itemize}  
+The absence of \textbf{BS 1476} does not impede the characterization of \textbf{HE30}. The chemical composition of \textbf{6082} is standardized under \textbf{EN 573-3}, aligning with widely recognized descriptions of the alloy.
+
+
 
 \subsection{Description}
 Key details are as follows:
@@ -262,54 +306,57 @@ results in a stronger alloy.\\[8pt]
 \vspace{1pt}
 \end{formal}
 \newpage\noindent
-While it is common practice to treat HE30 as equivalent to Aluminium Alloy 6082, minor differences in composition and performance may exist between HE30 under BS 1476 and 6082. For more precise specifications of HE30 under BS 1476, consulting the British Standards Institution (BSI) may provide further clarity, especially since the standard was withdrawn in 2022.\\[1em]
-For the purposes of this work, HE30 will be treated as equivalent to 6082, which serves as the basis for further analysis of its properties and related topics, i hope you can understand.
+While there may be minor differences in composition and performance between HE30, as defined by BS 1476, and the 6082 alloy, obtaining precise specifications for HE30 in the context of BS 1476 would necessitate consultation with the British Standards Institution (BSI), especially since the standard was officially withdrawn in 2022. For the purposes of this study, HE30 shall be considered equivalent to the 6082 alloy. Although not an exact equivalent, this assumption will serve as the foundation for analysing its qualities and aiding further talks.
 \subsection{Composition}
 \centering
-\begin{minipage}{0.4\textwidth}
+\begin{minipage}{0.44\textwidth}
     \centering
     \renewcommand{\arraystretch}{1.4}
-    \begin{tabular}{|>{\normalsize\bfseries}l|>{\normalsize}c|}
-        \hline
-        \large\textbf{Chemical Element} & \large\textbf{\% Present} \\ \hline
-        Aluminium (Al)            & Remainder           \\ \hline
-        Silicon (Si)              & 0.7-1.3\%           \\ \hline
-        Magnesium (Mg)            & 0.6-1.2\%           \\ \hline
-        Manganese (Mn)            & 0.4-1.0\%           \\ \hline
-        Iron (Fe)                 & 0.5\% max           \\ \hline
-        Copper (Cu)               & 0.1\% max           \\ \hline
-        Zinc (Zn)                 & 0.2\% max           \\ \hline
-        Chromium (Cr)             & 0.25\% max          \\ \hline
-        Titanium (Ti)             & 0.1\% max           \\ \hline
-        Residuals                 & 0.15\% max          \\ \hline
-    \end{tabular}
-    \captionof{table}{Chemical Composition of 6082 (HE-30) Alloy (Truventor, 2019)}
-    \label{tab:composition_6082}
+
+        \begin{tabular}{|>{\normalsize\bfseries}l|>{\normalsize}c|}
+            \hline
+            \large \textbf{Chemical Element} & \textbf{\% Present} \\ \hline
+            Aluminium (Al)            & Balance             \\ \hline
+            Copper (Cu)               & 0.1 max        \\ \hline
+            Magnesium (Mg)            & 0.6 - 1.2         \\ \hline
+            Silicon (Si)              & 0.7 - 1.3         \\ \hline
+            Iron (Fe)                 & 0.5 max         \\ \hline
+            Manganese (Mn)            & 0.4 - 1         \\ \hline
+            Zinc (Zn)                 & 0.2 max        \\ \hline
+            Chromium (Cr)             & 0.25 max        \\ \hline
+            Titanium (Ti)             & 0.1 max        \\ \hline
+            Other (Each)              & 0.05 max        \\ \hline
+            Others (Total)            & 0.15 max        \\ \hline
+        \end{tabular}
+        \captionof{table}{Chemical Composition of Alloy 6082 (BS EN 573-3:2009)}
+        \label{tab:composition_6082}
+
+        
     \vspace{1em}
     \begin{tabular}{|>{\normalsize\bfseries}l|>{\normalsize}c|}
         \hline
         \large\textbf{Chemical Element} & \large\textbf{\% Present} \\ \hline
-        Aluminium (Al)            & Remainder           \\ \hline
-        Copper (Cu)               & 0.1\% max           \\ \hline
-        Magnesium (Mg)            & 0.4 - 1.5\%         \\ \hline
-        Silicon (Si)              & 0.6 - 1.3\%         \\ \hline
-        Iron (Fe)                 & 0.6\% max           \\ \hline
-        Manganese (Mn)            & 0.4 - 1.0\%         \\ \hline
-        Zinc (Zn)                 & 0.1\% max           \\ \hline
-        Chromium (Cr)             & 0.5\% max           \\ \hline
-        Titanium (Ti)             & 0.2\% max           \\ \hline
+        Aluminium (Al)            & Remainder         \\ \hline
+        Copper (Cu)               & 0.1 max           \\ \hline
+        Magnesium (Mg)            & 0.4 - 1.5         \\ \hline
+        Silicon (Si)              & 0.6 - 1.3         \\ \hline
+        Iron (Fe)                 & 0.6 max           \\ \hline
+        Manganese (Mn)            & 0.4 - 1         \\ \hline
+        Zinc (Zn)                 & 0.1 max           \\ \hline
+        Chromium (Cr)             & 0.5 max           \\ \hline
+        Titanium (Ti)             & 0.2 max           \\ \hline
     \end{tabular}
-    \captionof{table}{Chemical Composition of HE30 according to Dr. Santiago's Data}
+    \captionof{table}{Chemical Composition of HE30/BS1476 according to Dr. Santiago's Data}
     \label{tab:composition_he30}
 \end{minipage}
 \hfill
-\begin{minipage}{0.55\textwidth}
-    The composition of HE30 (a.k.a 6082) generally follows the typical values for 6082 aluminium alloy, as shown in Table \ref{tab:composition_6082}.\\[1em]
+\begin{minipage}{0.53\textwidth}
+    The composition of 6082 generally follows the typical values for 6082 aluminium alloy, as shown in Table \ref{tab:composition_6082}.\\[1em]
     Once again, I stress that there may be minor differences in the composition of HE30, especially in accordance with the BS 1476 specifications.\\[1em] 
     The values listed here are provided for reference, but the exact composition of the HE30 alloy should be verified for accurate work in our lab, as it may not align with typical web standards.
     \vspace{1em}\hrule\vspace{1em}
     Although I do have actual information regarding the "Aluminium alloy HE30 BS1476" from Dr. Santiago shown in Table \ref{tab:composition_he30}, it is important to note that this source lacks proper documentation, and its credibility remains uncertain.\\[1em]
-    The HE30 BS1476 has been withdrawn and has not been explicitly updated or replaced, as I stated. It is still largely unreferenced and not widely recognised in the contemporary literature, which is why I adopted the 6082. This data source contradicts to much of what is being currently pertaining to the standard.\\[1em]
+    The BS1476 has been withdrawn and has not been explicitly updated or replaced, as I stated. It is still largely unreferenced and not widely recognised in the contemporary literature. However this data source contradicts to much of what is being currently pertaining to the standard.\\[1em]
     Although there are significant differences between the two sources in terms of composition, I have chosen to adopt Dr. Santiago's version for the purpose of this work. This decision is based on the fact that the table he provided reflects the information he, as my instructor, has shared with me. While I acknowledge the discrepancies and the lack of clear sourcing in his data, I consider it appropriate to proceed with his version for expediency, particularly as it aligns with the guidance he has given in our coursework.
 \end{minipage}\\
 
@@ -341,7 +388,7 @@ These treatments were applied to assess how they influence the alloy's mechanica
 % Machine (pics), Procedure (pics)
 
 
-\def\imas{2.7cm}
+\def\imas{2.4cm}
 \subsection{Equipment List}
 \begin{table}[H]
     \centering
@@ -414,9 +461,869 @@ Additionally, we were given an A4 sheet with a form to complete, which looked as
     \label{fig:alloys} 
 \end{figure}
 
-On this form, we recorded the width, length (both in millimeters), and hardness (measured using the HV5 scale) for each of the three alloy samples. These tasks were performed simultaneously, as they are relatively quick and do not require sequential completion. For instance, while the first sample was undergoing hardness testing, we measured the dimensions of the other samples.\\[8pt]
+On this form, we recorded the width, length (both in millimeters), and hardness (measured using the HV5 scale) for each of the three alloy samples as the initial phase of the experimental lab. These tasks were performed simultaneously, as they are relatively quick and do not require sequential completion. For instance, while the first sample was undergoing hardness testing, we measured the dimensions of the other samples.\\[8pt]
 I will now demonstrate how we used digital calipers to measure the alloy samples in millimeters, along with the results obtained from these measurements:
 
+\begin{minipage}{0.32\textwidth}
+\begin{tikzpicture}[rotate around y=225, use Hobby shortcut,scale=0.35, every node/.style={scale=0.35}]
+    \LARGE
+    \def\width{4}
+    \def\gap{10}
+    \def\main{8}
+    \def\curvy{1.9}
+    \def\depth{3}
+    
+    \def\n{3.3}
+    \def\z{1/\n}
+    \pgfmathsetmacro{\s}{1-\z}
+    
+    \coordinate (A) at (0,\main,0);
+    \coordinate (B) at (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,0);
+    \coordinate (C) at (\width*\z,\main+\curvy,0);
+    
+    \coordinate (A2) at (\width,\main,0);
+    \coordinate (B2) at (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,0);
+    \coordinate (C2) at (\width*\s,\main+\curvy,0);
+    
+    \coordinate (A3) at (0,\main+\gap,0);
+    \coordinate (B3) at (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,0);
+    \coordinate (C3) at (\width*\z,\main+\gap-\curvy,0);
+    
+    \coordinate (A4) at (\width,\main+\gap,0);
+    \coordinate (B4) at (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,0);
+    \coordinate (C4) at (\width*\s,\main+\gap-\curvy,0);
+    
+    % Back variation with \depth (subtracting \depth from the z-coordinate)
+    \coordinate (A') at (0,\main,\depth);
+    \coordinate (B') at (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth);
+    \coordinate (C') at (\width*\z,\main+\curvy,\depth);
+    
+    \coordinate (A2') at (\width,\main,\depth);
+    \coordinate (B2') at (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth);
+    \coordinate (C2') at (\width*\s,\main+\curvy,\depth);
+    
+    \coordinate (A3') at (0,\main+\gap,\depth);
+    \coordinate (B3') at (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth);
+    \coordinate (C3') at (\width*\z,\main+\gap-\curvy,\depth);
+    
+    \coordinate (A4') at (\width,\main+\gap,\depth);
+    \coordinate (B4') at (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth);
+    \coordinate (C4') at (\width*\s,\main+\gap-\curvy,\depth);
+    
+    
+    % Back face fill
+    \fill[black!40] 
+    (0,0,\depth) -- (\width,0,\depth) -- (\width,\main,\depth) 
+    to[hobby,tension=3] (\width,\main,\depth) .. (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth) .. (\width*\s,\main+\curvy,\depth) -- 
+    (\width*\s,\main+\gap-\curvy,\depth) 
+    to[hobby,tension=3] (\width*\s,\main+\gap-\curvy,\depth)  .. (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth) .. (\width,\main+\gap,\depth) --
+    (\width,2*\main+\gap,\depth) -- (0,2*\main+\gap,\depth) -- 
+    (0,\main+\gap,\depth) to[hobby,tension=3] (0,\main+\gap,\depth) .. (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth) .. (\width*\z,\main+\gap-\curvy,\depth) --
+    (\width*\z,\main+\curvy,\depth) to[hobby,tension=3] (\width*\z,\main+\curvy,\depth) .. (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth) .. (0,\main,\depth) --
+    cycle;
+    
+    % Curves fills with refined fades
+    \fill[left color=gray!80, middle color=gray!50, right color=gray!20, opacity=0.8] 
+    (A) to[hobby,tension=3] (A) .. (B) .. (C) -- (C3) to[hobby,tension=3] (C3) .. (B3) .. (A3) -- 
+    (A3') to[hobby,tension=3] (A3') .. (B3') .. (C3') --
+    (C') to[hobby,tension=3] (C') .. (B') .. (A') -- cycle;
+    
+    \fill[left color=gray!80, middle color=gray!50, right color=gray!20, opacity=0.8] 
+    (A2) to[hobby,tension=3] (A2) .. (B2) .. (C2) -- (C4) to[hobby,tension=3] (C4) .. (B4) .. (A4) -- 
+    (A4') to[hobby,tension=3] (A4') .. (B4') .. (C4') --
+    (C2') to[hobby,tension=3] (C2') .. (B2') .. (A2') -- cycle;
+    
+    
+    \draw[-,hobby,tension=3] (A2') .. (B2') .. (C2');
+    \draw[-,hobby,tension=3] (A4') .. (B4') .. (C4');
+    
+    % Fill for bottom rectangle section
+    \fill[black!33] 
+    (0,0,0) -- (\width,0,0) -- (\width,0,\depth) -- (0,0,\depth) -- cycle;
+    \fill[black!33] 
+    (0,0,0) -- (0,\main,0) -- (0,\main,\depth) -- (0,0,\depth) -- cycle;
+    \fill[black!40] 
+    (\width,0,0) -- (\width,\main,0) -- (\width,\main,\depth) -- (\width,0,\depth) -- cycle;
+    
+    % Fill for top rectangle section
+    \fill[black!30] 
+    (0,2*\main+\gap,0) -- (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth) -- (0,2*\main+\gap,\depth) -- cycle;
+    \fill[black!30] 
+    (0,\main+\gap,0) -- (0,2*\main+\gap,0) -- (0,2*\main+\gap,\depth) -- (0,\main+\gap,\depth) -- cycle;
+    \fill[black!33] 
+    (\width,\main+\gap,0) -- (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth) -- (\width,\main+\gap,\depth) -- cycle;
+    
+    
+    
+    % Front face fill
+    \fill[black!36] 
+    (0,0,0) -- (\width,0,0) -- (\width,\main,0) 
+    to[hobby,tension=3] (A2) .. (B2) .. (C2) -- 
+    (\width*\s,\main+\gap-\curvy,0) 
+    to[hobby,tension=3] (C4) .. (B4) .. (A4) --
+    (\width,2*\main+\gap,0) -- (0,2*\main+\gap,0) -- 
+    (0,\main+\gap,0) to[hobby,tension=3] (A3) .. (B3) .. (C3) --
+    (\width*\z,\main+\curvy,0) to[hobby,tension=3] (C) .. (B) .. (A) --
+    cycle;
+    \draw[hobby,tension=3] (A) .. (B) .. (C);
+    \draw[hobby,tension=3] (A2) .. (B2) .. (C2);
+    \draw[hobby,tension=3] (A3) .. (B3) .. (C3);
+    \draw[hobby,tension=3] (A4) .. (B4) .. (C4);
+    \draw[dashed, opacity=0.3,hobby,tension=3] (A3') .. (B3') .. (C3');
+    \draw[dashed, opacity=0.3,hobby,tension=3] (A') .. (B') .. (C');
+    % Front face outline
+    
+    \draw[-] (0,0,0) -- (\width,0,0);
+    \draw[-] (0,0,0) -- (0,\main,0);
+    \draw[-] (\width*\z,\main+\curvy,0) -- (\width*\z,\main+\gap-\curvy,0);
+    \draw[-] (0,\main+\gap,0) -- (0,2*\main+\gap,0);
+    \draw[-] (0,2*\main+\gap,0) -- (\width,2*\main+\gap,0);
+    \draw[-] (\width,2*\main+\gap,0) -- (\width,\main+\gap,0);
+    \draw[-] (\width*\s,\main+\curvy,0) -- (\width*\s,\main+\gap-\curvy,0);    
+    \draw[-] (\width,0,0) -- (\width,\main,0);
+    
+    
+    
+    
+    
+    % Back face outline
+    
+    
+    \draw[dashed, opacity=0.3] (\width*\z,\main+\curvy,\depth) -- (\width*\z,\main+\gap-\curvy,\depth);
+    \draw[-] (\width*\s,\main+\curvy,\depth) -- (\width*\s,\main+\gap-\curvy,\depth);
+    \draw[dashed, opacity=0.3] (0,0,\depth) -- (\width,0,\depth);
+    \draw[dashed, opacity=0.3] (0,0,\depth) -- (0,\main,\depth);
+    \draw[-] (\width,0,\depth) -- (\width,\main,\depth);
+    \draw[dashed, opacity=0.3] (0,\main+\gap,\depth) -- (0,2*\main+\gap,\depth);
+    \draw[-] (0,2*\main+\gap,\depth) -- (\width,2*\main+\gap,\depth);
+    \draw[-] (\width,2*\main+\gap,\depth) -- (\width,\main+\gap,\depth);
+    
+    
+    
+    % Connect front and back faces
+    %botom
+    \draw[-] (\width,\main,0) -- (\width,\main,\depth);
+    \draw[-] (\width,0,0) -- (\width,0,\depth);
+    \draw[dashed, opacity=0.3] (0,0,0) -- (0,0,\depth);
+    \draw[-] (0,\main,0) -- (0,\main,\depth);
+    %top
+    \draw[-] (\width,\main+\gap,0) -- (\width,\main+\gap,\depth);
+    \draw[-] (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth);
+    \draw[-] (0,2*\main+\gap,0) -- (0,2*\main+\gap,\depth);
+    \draw[dashed, opacity=0.3] (0,\main+\gap,0) -- (0,\main+\gap,\depth);
+    
+    
+    
+    %curves
+    
+    \draw[{Latex[length=1.93mm,width=1.93mm]}-{Latex[length=1.93mm,width=1.93mm]},line width=0.5mm] (C) -- (C2) node[below=-3,right=45] {\Huge \textbf{Width}};
+    \draw[dashed, opacity=0.3] (C3) -- (C4);
+    \draw[dashed, opacity=0.3] (C') -- (C2');
+    \draw[dashed, opacity=0.3] (C3') -- (C4');
+    \draw[dashed, opacity=0.3] (C) -- (C');
+    \draw[{Latex[length=1.93mm,width=1.93mm]}-{Latex[length=1.93mm,width=1.93mm]},line width=0.5mm] (C2) -- (C2') node[below=-2,left] {\Huge \textbf{Thickness}};
+    \draw[dashed, opacity=0.3] (C3) -- (C3');
+    \draw[dashed, opacity=0.3] (C4) -- (C4');
+    
+    \draw[latex-latex, line width=0.5mm] 
+    ($ (C) - (0.4,0,0) $) 
+    -- ($ (C3) - (0.4,0,0) $) 
+    node[right=5, midway] {\Huge \textbf{Length}};
+    
+\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}{0.65\textwidth}
+\vspace{-1.5em}
+\subsection{Measurements}
+\vspace{0.5em}
+\begin{center}
+    \begin{tblr}{
+        width=\textwidth,
+        colspec={X[2,c]X[1,c]X[1,c]X[1,c]},
+        hlines,vlines,
+        rows={ht=1\baselineskip},
+        row{1} = {ht=1\baselineskip,font=\bfseries,c,m},
+        cells={valign=m,halign=c}
+    }
+    Property (mm) & AR & ST & PH \\
+    Width   & 11.98 & 12.00 & 11.97 \\
+    Thickness & 6.00  & 6.38  & 6.18  \\
+    Length & 50.00 & 50.00 & 50.00 \\
+\end{tblr}
+\end{center}
+\captionof{table}{Dimensions of AR, ST, and PH}
+\label{tab:dimensions}
+\vspace{1em}
+\noindent
+We measured the dimensions of each alloy using a digital calliper and recorded the results on an A4 sheet (See Figure \ref{fig:alloys}). We were informed that the gauge length was 50 mm, but we did not measure it ourselves. Although checking measurements is good practice, this analysis does not require it because the gauge length has no bearing on the cross-sectional area (CSA) computations further explained below.
+\end{minipage}\\
+\vspace{1em}
+\hspace{-2em}
+\begin{minipage}{0.4\textwidth}
+\hspace{1em}\begin{minipage}{0.3\textwidth} 
+\centering
+\begin{tikzpicture}[rotate around y=225, use Hobby shortcut, scale=0.25, every node/.style={scale=0.25}]
+    \large
+    \def\width{4}
+    \def\gap{10}
+    \def\main{8}
+    \def\curvy{1.9}
+    \def\depth{3}
+    
+    \def\n{3.3}
+    \def\z{1/\n}
+    \pgfmathsetmacro{\s}{1-\z}
+    
+    \coordinate (A) at (0,\main,0);
+    \coordinate (B) at (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,0);
+    \coordinate (C) at (\width*\z,\main+\curvy,0);
+    
+    \coordinate (A2) at (\width,\main,0);
+    \coordinate (B2) at (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,0);
+    \coordinate (C2) at (\width*\s,\main+\curvy,0);
+    
+    \coordinate (A3) at (0,\main+\gap,0);
+    \coordinate (B3) at (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,0);
+    \coordinate (C3) at (\width*\z,\main+\gap-\curvy,0);
+    
+    \coordinate (A4) at (\width,\main+\gap,0);
+    \coordinate (B4) at (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,0);
+    \coordinate (C4) at (\width*\s,\main+\gap-\curvy,0);
+    
+    % Back variation with \depth (subtracting \depth from the z-coordinate)
+    \coordinate (A') at (0,\main,\depth);
+    \coordinate (B') at (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth);
+    \coordinate (C') at (\width*\z,\main+\curvy,\depth);
+    
+    \coordinate (A2') at (\width,\main,\depth);
+    \coordinate (B2') at (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth);
+    \coordinate (C2') at (\width*\s,\main+\curvy,\depth);
+    
+    \coordinate (A3') at (0,\main+\gap,\depth);
+    \coordinate (B3') at (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth);
+    \coordinate (C3') at (\width*\z,\main+\gap-\curvy,\depth);
+    
+    \coordinate (A4') at (\width,\main+\gap,\depth);
+    \coordinate (B4') at (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth);
+    \coordinate (C4') at (\width*\s,\main+\gap-\curvy,\depth);
+    
+    
+    % Back face fill
+    \fill[black!40] 
+    (0,0,\depth) -- (\width,0,\depth) -- (\width,\main,\depth) 
+    to[hobby,tension=3] (\width,\main,\depth) .. (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth) .. (\width*\s,\main+\curvy,\depth) -- 
+    (\width*\s,\main+\gap-\curvy,\depth) 
+    to[hobby,tension=3] (\width*\s,\main+\gap-\curvy,\depth)  .. (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth) .. (\width,\main+\gap,\depth) --
+    (\width,2*\main+\gap,\depth) -- (0,2*\main+\gap,\depth) -- 
+    (0,\main+\gap,\depth) to[hobby,tension=3] (0,\main+\gap,\depth) .. (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth) .. (\width*\z,\main+\gap-\curvy,\depth) --
+    (\width*\z,\main+\curvy,\depth) to[hobby,tension=3] (\width*\z,\main+\curvy,\depth) .. (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth) .. (0,\main,\depth) --
+    cycle;
+    
+    % Curves fills with refined fades
+    \fill[left color=gray!80, middle color=gray!50, right color=gray!20, opacity=0.8] 
+    (A) to[hobby,tension=3] (A) .. (B) .. (C) -- (C3) to[hobby,tension=3] (C3) .. (B3) .. (A3) -- 
+    (A3') to[hobby,tension=3] (A3') .. (B3') .. (C3') --
+    (C') to[hobby,tension=3] (C') .. (B') .. (A') -- cycle;
+    
+    \fill[left color=gray!80, middle color=gray!50, right color=gray!20, opacity=0.8] 
+    (A2) to[hobby,tension=3] (A2) .. (B2) .. (C2) -- (C4) to[hobby,tension=3] (C4) .. (B4) .. (A4) -- 
+    (A4') to[hobby,tension=3] (A4') .. (B4') .. (C4') --
+    (C2') to[hobby,tension=3] (C2') .. (B2') .. (A2') -- cycle;
+    
+    
+    \draw[-,hobby,tension=3] (A2') .. (B2') .. (C2');
+    \draw[-,hobby,tension=3] (A4') .. (B4') .. (C4');
+    
+    % Fill for bottom rectangle section
+    \fill[black!33] 
+    (0,0,0) -- (\width,0,0) -- (\width,0,\depth) -- (0,0,\depth) -- cycle;
+    \fill[black!33] 
+    (0,0,0) -- (0,\main,0) -- (0,\main,\depth) -- (0,0,\depth) -- cycle;
+    \fill[black!40] 
+    (\width,0,0) -- (\width,\main,0) -- (\width,\main,\depth) -- (\width,0,\depth) -- cycle;
+    
+    % Fill for top rectangle section
+    \fill[black!30] 
+    (0,2*\main+\gap,0) -- (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth) -- (0,2*\main+\gap,\depth) -- cycle;
+    \fill[black!30] 
+    (0,\main+\gap,0) -- (0,2*\main+\gap,0) -- (0,2*\main+\gap,\depth) -- (0,\main+\gap,\depth) -- cycle;
+    \fill[black!33] 
+    (\width,\main+\gap,0) -- (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth) -- (\width,\main+\gap,\depth) -- cycle;
+    
+    
+    
+    % Front face fill
+    \fill[black!36] 
+    (0,0,0) -- (\width,0,0) -- (\width,\main,0) 
+    to[hobby,tension=3] (A2) .. (B2) .. (C2) -- 
+    (\width*\s,\main+\gap-\curvy,0) 
+    to[hobby,tension=3] (C4) .. (B4) .. (A4) --
+    (\width,2*\main+\gap,0) -- (0,2*\main+\gap,0) -- 
+    (0,\main+\gap,0) to[hobby,tension=3] (A3) .. (B3) .. (C3) --
+    (\width*\z,\main+\curvy,0) to[hobby,tension=3] (C) .. (B) .. (A) --
+    cycle;
+    \draw[hobby,tension=3] (A) .. (B) .. (C);
+    \draw[hobby,tension=3] (A2) .. (B2) .. (C2);
+    \draw[hobby,tension=3] (A3) .. (B3) .. (C3);
+    \draw[hobby,tension=3] (A4) .. (B4) .. (C4);
+    \draw[dashed, opacity=0.3,hobby,tension=3] (A3') .. (B3') .. (C3');
+    \draw[dashed, opacity=0.3,hobby,tension=3] (A') .. (B') .. (C');
+    % Front face outline
+    
+    \draw[-] (0,0,0) -- (\width,0,0);
+    \draw[-] (0,0,0) -- (0,\main,0);
+    \draw[-] (\width*\z,\main+\curvy,0) -- (\width*\z,\main+\gap-\curvy,0);
+    \draw[-] (0,\main+\gap,0) -- (0,2*\main+\gap,0);
+    \draw[-] (0,2*\main+\gap,0) -- (\width,2*\main+\gap,0);
+    \draw[-] (\width,2*\main+\gap,0) -- (\width,\main+\gap,0);
+    \draw[-] (\width*\s,\main+\curvy,0) -- (\width*\s,\main+\gap-\curvy,0);    
+    \draw[-] (\width,0,0) -- (\width,\main,0);
+    
+    
+    
+    
+    
+    % Back face outline
+    
+    
+    \draw[dashed, opacity=0.3] (\width*\z,\main+\curvy,\depth) -- (\width*\z,\main+\gap-\curvy,\depth);
+    \draw[-] (\width*\s,\main+\curvy,\depth) -- (\width*\s,\main+\gap-\curvy,\depth);
+    \draw[dashed, opacity=0.3] (0,0,\depth) -- (\width,0,\depth);
+    \draw[dashed, opacity=0.3] (0,0,\depth) -- (0,\main,\depth);
+    \draw[-] (\width,0,\depth) -- (\width,\main,\depth);
+    \draw[dashed, opacity=0.3] (0,\main+\gap,\depth) -- (0,2*\main+\gap,\depth);
+    \draw[-] (0,2*\main+\gap,\depth) -- (\width,2*\main+\gap,\depth);
+    \draw[-] (\width,2*\main+\gap,\depth) -- (\width,\main+\gap,\depth);
+    
+    
+    
+    % Connect front and back faces
+    %botom
+    \draw[-] (\width,\main,0) -- (\width,\main,\depth);
+    \draw[-] (\width,0,0) -- (\width,0,\depth);
+    \draw[dashed, opacity=0.3] (0,0,0) -- (0,0,\depth);
+    \draw[-] (0,\main,0) -- (0,\main,\depth);
+    %top
+    \draw[-] (\width,\main+\gap,0) -- (\width,\main+\gap,\depth);
+    \draw[-] (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth);
+    \draw[-] (0,2*\main+\gap,0) -- (0,2*\main+\gap,\depth);
+    \draw[dashed, opacity=0.3] (0,\main+\gap,0) -- (0,\main+\gap,\depth);
+    
+    
+    
+    %curves
+    \draw[dashed, opacity=0.3] (C) -- (C2);
+    \draw[dashed, opacity=0.3] (C3) -- (C4);
+    \draw[dashed, opacity=0.3] (C') -- (C2');
+    \draw[dashed, opacity=0.3] (C3') -- (C4');
+    \draw[dashed, opacity=0.3] (C) -- (C');
+    \draw[dashed, opacity=0.3] (C2) -- (C2');
+    \draw[dashed, opacity=0.3] (C3) -- (C3');
+    \draw[dashed, opacity=0.3] (C4) -- (C4');
+    
+    
+    \fill[opacity=0.6,pattern={Lines[
+        distance=1mm,
+        angle=45,
+        line width=0.4mm
+        ]},
+    pattern color=blue
+    ] (C2) -- (C) -- (C3) -- (C4) -- cycle;
+
+\end{tikzpicture}
+\color{blue} \textbf{\textsf{CSA 1}}
+\end{minipage}\hspace{-1em}
+\begin{minipage}{0.3\textwidth}
+    \centering
+    \begin{tikzpicture}[rotate around y=225, use Hobby shortcut, scale=0.25, every node/.style={scale=0.25}]
+        \large
+        \def\width{4}
+        \def\gap{10}
+        \def\main{8}
+        \def\curvy{1.9}
+        \def\depth{3}
+        
+        \def\n{3.3}
+        \def\z{1/\n}
+        \pgfmathsetmacro{\s}{1-\z}
+        
+        \coordinate (A) at (0,\main,0);
+        \coordinate (B) at (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,0);
+        \coordinate (C) at (\width*\z,\main+\curvy,0);
+        
+        \coordinate (A2) at (\width,\main,0);
+        \coordinate (B2) at (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,0);
+        \coordinate (C2) at (\width*\s,\main+\curvy,0);
+        
+        \coordinate (A3) at (0,\main+\gap,0);
+        \coordinate (B3) at (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,0);
+        \coordinate (C3) at (\width*\z,\main+\gap-\curvy,0);
+        
+        \coordinate (A4) at (\width,\main+\gap,0);
+        \coordinate (B4) at (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,0);
+        \coordinate (C4) at (\width*\s,\main+\gap-\curvy,0);
+        
+        % Back variation with \depth (subtracting \depth from the z-coordinate)
+        \coordinate (A') at (0,\main,\depth);
+        \coordinate (B') at (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth);
+        \coordinate (C') at (\width*\z,\main+\curvy,\depth);
+        
+        \coordinate (A2') at (\width,\main,\depth);
+        \coordinate (B2') at (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth);
+        \coordinate (C2') at (\width*\s,\main+\curvy,\depth);
+        
+        \coordinate (A3') at (0,\main+\gap,\depth);
+        \coordinate (B3') at (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth);
+        \coordinate (C3') at (\width*\z,\main+\gap-\curvy,\depth);
+        
+        \coordinate (A4') at (\width,\main+\gap,\depth);
+        \coordinate (B4') at (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth);
+        \coordinate (C4') at (\width*\s,\main+\gap-\curvy,\depth);
+        
+        
+        % Back face fill
+        \fill[black!40] 
+        (0,0,\depth) -- (\width,0,\depth) -- (\width,\main,\depth) 
+        to[hobby,tension=3] (\width,\main,\depth) .. (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth) .. (\width*\s,\main+\curvy,\depth) -- 
+        (\width*\s,\main+\gap-\curvy,\depth) 
+        to[hobby,tension=3] (\width*\s,\main+\gap-\curvy,\depth)  .. (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth) .. (\width,\main+\gap,\depth) --
+        (\width,2*\main+\gap,\depth) -- (0,2*\main+\gap,\depth) -- 
+        (0,\main+\gap,\depth) to[hobby,tension=3] (0,\main+\gap,\depth) .. (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth) .. (\width*\z,\main+\gap-\curvy,\depth) --
+        (\width*\z,\main+\curvy,\depth) to[hobby,tension=3] (\width*\z,\main+\curvy,\depth) .. (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth) .. (0,\main,\depth) --
+        cycle;
+        
+        % Curves fills with refined fades
+        \fill[left color=gray!80, middle color=gray!50, right color=gray!20, opacity=0.8] 
+        (A) to[hobby,tension=3] (A) .. (B) .. (C) -- (C3) to[hobby,tension=3] (C3) .. (B3) .. (A3) -- 
+        (A3') to[hobby,tension=3] (A3') .. (B3') .. (C3') --
+        (C') to[hobby,tension=3] (C') .. (B') .. (A') -- cycle;
+        
+        \fill[left color=gray!80, middle color=gray!50, right color=gray!20, opacity=0.8] 
+        (A2) to[hobby,tension=3] (A2) .. (B2) .. (C2) -- (C4) to[hobby,tension=3] (C4) .. (B4) .. (A4) -- 
+        (A4') to[hobby,tension=3] (A4') .. (B4') .. (C4') --
+        (C2') to[hobby,tension=3] (C2') .. (B2') .. (A2') -- cycle;
+        
+        
+        \draw[-,hobby,tension=3] (A2') .. (B2') .. (C2');
+        \draw[-,hobby,tension=3] (A4') .. (B4') .. (C4');
+        
+        % Fill for bottom rectangle section
+        \fill[black!33] 
+        (0,0,0) -- (\width,0,0) -- (\width,0,\depth) -- (0,0,\depth) -- cycle;
+        \fill[black!33] 
+        (0,0,0) -- (0,\main,0) -- (0,\main,\depth) -- (0,0,\depth) -- cycle;
+        \fill[black!40] 
+        (\width,0,0) -- (\width,\main,0) -- (\width,\main,\depth) -- (\width,0,\depth) -- cycle;
+        
+        % Fill for top rectangle section
+        \fill[black!30] 
+        (0,2*\main+\gap,0) -- (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth) -- (0,2*\main+\gap,\depth) -- cycle;
+        \fill[black!30] 
+        (0,\main+\gap,0) -- (0,2*\main+\gap,0) -- (0,2*\main+\gap,\depth) -- (0,\main+\gap,\depth) -- cycle;
+        \fill[black!33] 
+        (\width,\main+\gap,0) -- (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth) -- (\width,\main+\gap,\depth) -- cycle;
+        
+        
+        
+        % Front face fill
+        \fill[black!36] 
+        (0,0,0) -- (\width,0,0) -- (\width,\main,0) 
+        to[hobby,tension=3] (A2) .. (B2) .. (C2) -- 
+        (\width*\s,\main+\gap-\curvy,0) 
+        to[hobby,tension=3] (C4) .. (B4) .. (A4) --
+        (\width,2*\main+\gap,0) -- (0,2*\main+\gap,0) -- 
+        (0,\main+\gap,0) to[hobby,tension=3] (A3) .. (B3) .. (C3) --
+        (\width*\z,\main+\curvy,0) to[hobby,tension=3] (C) .. (B) .. (A) --
+        cycle;
+        \draw[hobby,tension=3] (A) .. (B) .. (C);
+        \draw[hobby,tension=3] (A2) .. (B2) .. (C2);
+        \draw[hobby,tension=3] (A3) .. (B3) .. (C3);
+        \draw[hobby,tension=3] (A4) .. (B4) .. (C4);
+        \draw[dashed, opacity=0.3,hobby,tension=3] (A3') .. (B3') .. (C3');
+        \draw[dashed, opacity=0.3,hobby,tension=3] (A') .. (B') .. (C');
+        % Front face outline
+        
+        \draw[-] (0,0,0) -- (\width,0,0);
+        \draw[-] (0,0,0) -- (0,\main,0);
+        \draw[-] (\width*\z,\main+\curvy,0) -- (\width*\z,\main+\gap-\curvy,0);
+        \draw[-] (0,\main+\gap,0) -- (0,2*\main+\gap,0);
+        \draw[-] (0,2*\main+\gap,0) -- (\width,2*\main+\gap,0);
+        \draw[-] (\width,2*\main+\gap,0) -- (\width,\main+\gap,0);
+        \draw[-] (\width*\s,\main+\curvy,0) -- (\width*\s,\main+\gap-\curvy,0);    
+        \draw[-] (\width,0,0) -- (\width,\main,0);
+        
+        
+        
+        
+        
+        % Back face outline
+        
+        
+        \draw[dashed, opacity=0.3] (\width*\z,\main+\curvy,\depth) -- (\width*\z,\main+\gap-\curvy,\depth);
+        \draw[-] (\width*\s,\main+\curvy,\depth) -- (\width*\s,\main+\gap-\curvy,\depth);
+        \draw[dashed, opacity=0.3] (0,0,\depth) -- (\width,0,\depth);
+        \draw[dashed, opacity=0.3] (0,0,\depth) -- (0,\main,\depth);
+        \draw[-] (\width,0,\depth) -- (\width,\main,\depth);
+        \draw[dashed, opacity=0.3] (0,\main+\gap,\depth) -- (0,2*\main+\gap,\depth);
+        \draw[-] (0,2*\main+\gap,\depth) -- (\width,2*\main+\gap,\depth);
+        \draw[-] (\width,2*\main+\gap,\depth) -- (\width,\main+\gap,\depth);
+        
+        
+        
+        % Connect front and back faces
+        %botom
+        \draw[-] (\width,\main,0) -- (\width,\main,\depth);
+        \draw[-] (\width,0,0) -- (\width,0,\depth);
+        \draw[dashed, opacity=0.3] (0,0,0) -- (0,0,\depth);
+        \draw[-] (0,\main,0) -- (0,\main,\depth);
+        %top
+        \draw[-] (\width,\main+\gap,0) -- (\width,\main+\gap,\depth);
+        \draw[-] (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth);
+        \draw[-] (0,2*\main+\gap,0) -- (0,2*\main+\gap,\depth);
+        \draw[dashed, opacity=0.3] (0,\main+\gap,0) -- (0,\main+\gap,\depth);
+        
+        
+        
+        %curves
+        \draw[dashed, opacity=0.3] (C) -- (C2);
+        \draw[dashed, opacity=0.3] (C3) -- (C4);
+        \draw[dashed, opacity=0.3] (C') -- (C2');
+        \draw[dashed, opacity=0.3] (C3') -- (C4');
+        \draw[dashed, opacity=0.3] (C) -- (C');
+        \draw[dashed, opacity=0.3] (C2) -- (C2');
+        \draw[dashed, opacity=0.3] (C3) -- (C3');
+        \draw[dashed, opacity=0.3] (C4) -- (C4');
+        
+        
+        \fill[opacity=0.6,pattern={Lines[
+            distance=1mm,
+            angle=45,
+            line width=0.4mm
+            ]},
+        pattern color=green!70!black
+        ] (C2) -- (C4) -- (C4') -- (C2') -- cycle;
+    \end{tikzpicture}    
+    \color{green!50!black} \textbf{\textsf{CSA 2}}
+\end{minipage}\hspace{-1em}
+\begin{minipage}{0.3\textwidth}
+    \centering
+    \begin{tikzpicture}[rotate around y=225, use Hobby shortcut, scale=0.25, every node/.style={scale=0.25}]
+    \large
+    \def\width{4}
+    \def\gap{10}
+    \def\main{8}
+    \def\curvy{1.9}
+    \def\depth{3}
+    
+    \def\n{3.3}
+    \def\z{1/\n}
+    \pgfmathsetmacro{\s}{1-\z}
+    
+    \coordinate (A) at (0,\main,0);
+    \coordinate (B) at (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,0);
+    \coordinate (C) at (\width*\z,\main+\curvy,0);
+    
+    \coordinate (A2) at (\width,\main,0);
+    \coordinate (B2) at (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,0);
+    \coordinate (C2) at (\width*\s,\main+\curvy,0);
+    
+    \coordinate (A3) at (0,\main+\gap,0);
+    \coordinate (B3) at (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,0);
+    \coordinate (C3) at (\width*\z,\main+\gap-\curvy,0);
+    
+    \coordinate (A4) at (\width,\main+\gap,0);
+    \coordinate (B4) at (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,0);
+    \coordinate (C4) at (\width*\s,\main+\gap-\curvy,0);
+    
+    % Back variation with \depth (subtracting \depth from the z-coordinate)
+    \coordinate (A') at (0,\main,\depth);
+    \coordinate (B') at (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth);
+    \coordinate (C') at (\width*\z,\main+\curvy,\depth);
+    
+    \coordinate (A2') at (\width,\main,\depth);
+    \coordinate (B2') at (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth);
+    \coordinate (C2') at (\width*\s,\main+\curvy,\depth);
+    
+    \coordinate (A3') at (0,\main+\gap,\depth);
+    \coordinate (B3') at (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth);
+    \coordinate (C3') at (\width*\z,\main+\gap-\curvy,\depth);
+    
+    \coordinate (A4') at (\width,\main+\gap,\depth);
+    \coordinate (B4') at (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth);
+    \coordinate (C4') at (\width*\s,\main+\gap-\curvy,\depth);
+    
+    
+    % Back face fill
+    \fill[black!40] 
+    (0,0,\depth) -- (\width,0,\depth) -- (\width,\main,\depth) 
+    to[hobby,tension=3] (\width,\main,\depth) .. (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth) .. (\width*\s,\main+\curvy,\depth) -- 
+    (\width*\s,\main+\gap-\curvy,\depth) 
+    to[hobby,tension=3] (\width*\s,\main+\gap-\curvy,\depth)  .. (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth) .. (\width,\main+\gap,\depth) --
+    (\width,2*\main+\gap,\depth) -- (0,2*\main+\gap,\depth) -- 
+    (0,\main+\gap,\depth) to[hobby,tension=3] (0,\main+\gap,\depth) .. (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth) .. (\width*\z,\main+\gap-\curvy,\depth) --
+    (\width*\z,\main+\curvy,\depth) to[hobby,tension=3] (\width*\z,\main+\curvy,\depth) .. (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth) .. (0,\main,\depth) --
+    cycle;
+    
+    % Curves fills with refined fades
+    \fill[left color=gray!80, middle color=gray!50, right color=gray!20, opacity=0.8] 
+    (A) to[hobby,tension=3] (A) .. (B) .. (C) -- (C3) to[hobby,tension=3] (C3) .. (B3) .. (A3) -- 
+    (A3') to[hobby,tension=3] (A3') .. (B3') .. (C3') --
+    (C') to[hobby,tension=3] (C') .. (B') .. (A') -- cycle;
+    
+    \fill[left color=gray!80, middle color=gray!50, right color=gray!20, opacity=0.8] 
+    (A2) to[hobby,tension=3] (A2) .. (B2) .. (C2) -- (C4) to[hobby,tension=3] (C4) .. (B4) .. (A4) -- 
+    (A4') to[hobby,tension=3] (A4') .. (B4') .. (C4') --
+    (C2') to[hobby,tension=3] (C2') .. (B2') .. (A2') -- cycle;
+    
+    
+    \draw[-,hobby,tension=3] (A2') .. (B2') .. (C2');
+    \draw[-,hobby,tension=3] (A4') .. (B4') .. (C4');
+    
+    % Fill for bottom rectangle section
+    \fill[black!33] 
+    (0,0,0) -- (\width,0,0) -- (\width,0,\depth) -- (0,0,\depth) -- cycle;
+    \fill[black!33] 
+    (0,0,0) -- (0,\main,0) -- (0,\main,\depth) -- (0,0,\depth) -- cycle;
+    \fill[black!40] 
+    (\width,0,0) -- (\width,\main,0) -- (\width,\main,\depth) -- (\width,0,\depth) -- cycle;
+    
+    % Fill for top rectangle section
+    \fill[black!30] 
+    (0,2*\main+\gap,0) -- (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth) -- (0,2*\main+\gap,\depth) -- cycle;
+    \fill[black!30] 
+    (0,\main+\gap,0) -- (0,2*\main+\gap,0) -- (0,2*\main+\gap,\depth) -- (0,\main+\gap,\depth) -- cycle;
+    \fill[black!33] 
+    (\width,\main+\gap,0) -- (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth) -- (\width,\main+\gap,\depth) -- cycle;
+    
+    
+    
+    % Front face fill
+    \fill[black!36] 
+    (0,0,0) -- (\width,0,0) -- (\width,\main,0) 
+    to[hobby,tension=3] (A2) .. (B2) .. (C2) -- 
+    (\width*\s,\main+\gap-\curvy,0) 
+    to[hobby,tension=3] (C4) .. (B4) .. (A4) --
+    (\width,2*\main+\gap,0) -- (0,2*\main+\gap,0) -- 
+    (0,\main+\gap,0) to[hobby,tension=3] (A3) .. (B3) .. (C3) --
+    (\width*\z,\main+\curvy,0) to[hobby,tension=3] (C) .. (B) .. (A) --
+    cycle;
+    \draw[hobby,tension=3] (A) .. (B) .. (C);
+    \draw[hobby,tension=3] (A2) .. (B2) .. (C2);
+    \draw[hobby,tension=3] (A3) .. (B3) .. (C3);
+    \draw[hobby,tension=3] (A4) .. (B4) .. (C4);
+    \draw[dashed, opacity=0.3,hobby,tension=3] (A3') .. (B3') .. (C3');
+    \draw[dashed, opacity=0.3,hobby,tension=3] (A') .. (B') .. (C');
+    % Front face outline
+    
+    \draw[-] (0,0,0) -- (\width,0,0);
+    \draw[-] (0,0,0) -- (0,\main,0);
+    \draw[-] (\width*\z,\main+\curvy,0) -- (\width*\z,\main+\gap-\curvy,0);
+    \draw[-] (0,\main+\gap,0) -- (0,2*\main+\gap,0);
+    \draw[-] (0,2*\main+\gap,0) -- (\width,2*\main+\gap,0);
+    \draw[-] (\width,2*\main+\gap,0) -- (\width,\main+\gap,0);
+    \draw[-] (\width*\s,\main+\curvy,0) -- (\width*\s,\main+\gap-\curvy,0);    
+    \draw[-] (\width,0,0) -- (\width,\main,0);
+    
+    
+    
+    
+    
+    % Back face outline
+    
+    
+    \draw[dashed, opacity=0.3] (\width*\z,\main+\curvy,\depth) -- (\width*\z,\main+\gap-\curvy,\depth);
+    \draw[-] (\width*\s,\main+\curvy,\depth) -- (\width*\s,\main+\gap-\curvy,\depth);
+    \draw[dashed, opacity=0.3] (0,0,\depth) -- (\width,0,\depth);
+    \draw[dashed, opacity=0.3] (0,0,\depth) -- (0,\main,\depth);
+    \draw[-] (\width,0,\depth) -- (\width,\main,\depth);
+    \draw[dashed, opacity=0.3] (0,\main+\gap,\depth) -- (0,2*\main+\gap,\depth);
+    \draw[-] (0,2*\main+\gap,\depth) -- (\width,2*\main+\gap,\depth);
+    \draw[-] (\width,2*\main+\gap,\depth) -- (\width,\main+\gap,\depth);
+    
+    
+    
+    % Connect front and back faces
+    %botom
+    \draw[-] (\width,\main,0) -- (\width,\main,\depth);
+    \draw[-] (\width,0,0) -- (\width,0,\depth);
+    \draw[dashed, opacity=0.3] (0,0,0) -- (0,0,\depth);
+    \draw[-] (0,\main,0) -- (0,\main,\depth);
+    %top
+    \draw[-] (\width,\main+\gap,0) -- (\width,\main+\gap,\depth);
+    \draw[-] (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth);
+    \draw[-] (0,2*\main+\gap,0) -- (0,2*\main+\gap,\depth);
+    \draw[dashed, opacity=0.3] (0,\main+\gap,0) -- (0,\main+\gap,\depth);
+    
+    
+    
+    %curves
+    \draw[dashed, opacity=0.3] (C) -- (C2);
+    \draw[dashed, opacity=0.3] (C3) -- (C4);
+    \draw[dashed, opacity=0.3] (C') -- (C2');
+    \draw[dashed, opacity=0.3] (C3') -- (C4');
+    \draw[dashed, opacity=0.3] (C) -- (C');
+    \draw[dashed, opacity=0.3] (C2) -- (C2');
+    \draw[dashed, opacity=0.3] (C3) -- (C3');
+    \draw[dashed, opacity=0.3] (C4) -- (C4');
+    
+    \pgfmathsetmacro{\halfgap}{0.5*\gap}
+    
+    \coordinate (C3m) at (\width*\z,\main+\halfgap,0);
+    \coordinate (C4m) at (\width*\s,\main+\halfgap,0);
+    \coordinate (C3'm) at (\width*\z,\main+\halfgap,\depth);
+    \coordinate (C4'm) at (\width*\s,\main+\halfgap,\depth);
+    
+    \fill[pattern={Lines[
+        distance=1mm,
+        angle=45,
+        line width=0.4mm
+        ]},
+    pattern color=red,
+    opacity=0.6] (C3m) -- (C3'm) -- (C4'm) -- (C4m) -- cycle;
+\end{tikzpicture}
+    \color{red} \textbf{\textsf{CSA 3}}
+\end{minipage}
+\end{minipage}
+\begin{minipage}{0.63\textwidth}
+    \vspace{-2em}
+    \subsection{Cross-Sectional Areas (CSA)}
+    \begin{center}
+        \begin{tblr}{
+                width=\textwidth,
+                colspec={X[2.9,c]X[1.5,c]X[1.5,c]X[1.6,c]},
+                hlines,vlines,
+                rows={ht=1.5\baselineskip},
+                row{1} = {ht=1\baselineskip,font=\bfseries,c,m},
+                cells={valign=m,halign=c}
+            }
+            Property ($\bm{\text{mm}^2}$) & AR & ST & PH\\
+            {\color{blue} \textbf{\textsf{CSA 1}} \\ Width \(\times\) Length} 
+            & {\(11.98 \times 50\) \\ \(= 599\)} 
+            & {\(12 \times 50\) \\ \(= 600\)} 
+            & {\(11.97 \times 50\) \\ \(= 598.5\)} \\
+            {\color{green!50!black} \textbf{\textsf{CSA 2}} \\ Thickness \(\times\) Length} 
+            & {\(6 \times 50\) \\ \(= 300\)} 
+            & {\(6.38 \times 50\) \\ \(= 319\)} 
+            & {\(6.18 \times 50\) \\ \(= 309\)} \\
+            {\color{red} \textbf{\textsf{CSA 3}} \\ Width \(\times\) Thickness} 
+            & {\(11.98 \times 6\) \\ \(= 71.88\)} 
+            & {\(12 \times 6.38\) \\ \(= 76.56\)} 
+            & {\(11.97 \times 6.18\) \\ \(= 73.96\)} \\
+        \end{tblr}
+    \end{center}
+    \captionof{table}{Calculated Cross-Sectional Areas (CSA) for AR, ST, and PH}
+    \label{tab:csa}
+    \vspace{1em}\noindent
+    In a tensile test, force is applied from the top and bottom of the alloy, stretching it along its length. Stress is calculated as the force divided by the area perpendicular to the applied force. Thus, the appropriate cross-sectional area for stress calculation is the one that is perpendicular to this force.
+\end{minipage}\\
+\begin{itemize}[itemsep=-1mm]
+    \item \textbf{\textcolor{blue}{\textsf{CSA 1}}:} This represents the front and back faces of the alloy, where the width and length are multiplied. However, this CSA is parallel to the applied force, and hence is not the correct area for stress calculations.
+    \item \textbf{\textcolor{green!50!black}{\textsf{CSA 2}}:} This represents the left and right faces of the alloy. Similar to CSA 1, it is parallel to the applied force and is not used for calculating stress.
+    \item \textbf{\textcolor{red}{\textsf{CSA 3}}:} This represents the internal face, which is perpendicular to the front/back faces. Since this CSA is perpendicular to the applied force, it is the correct one to use for stress calculations.
+\end{itemize}
+Thus, for stress calculations, we use \textbf{CSA 3}, as it is the area perpendicular to the applied force. The table below shows the calculated CSA values for which is to be used.\vspace{1em}
+\begin{center}
+    \begin{tblr}{
+            width=\textwidth,
+            colspec={X[3,c]X[1.5,c]X[1.5,c]X[1.6,c]},
+            hlines,vlines,
+            rows={ht=1.3\baselineskip},
+            row{1} = {ht=0.9\baselineskip,font=\bfseries,c,m},
+            cells={valign=m,halign=c}
+        }
+        Property (\(\bm{\text{mm}^2}\)) & AR & ST & PH\\
+        {\textbf{\textsf{CSA 3}}} & 71.88 & 76.56& 73.96 \\
+    \end{tblr}
+\end{center}
+\captionof{table}{Cross-Sectional Area (CSA) to be used for stress}
+\label{tab:csa3}
+\vspace{1em}\noindent
+As noted, \textbf{CSA 3} is the appropriate measurement for stress calculations, as it is perpendicular to the applied force. This data will be utilized in subsequent calculations related to stress and other relevant analyses.
+
+\subsection{Hardness Test}
+To test the hardness of our alloys, we decided to use the Vickers hardness (HV) test, a precise and versatile method for evaluating material hardness. This method employs a diamond-shaped indenter with a square base and an included angle of 136\textdegree between opposing faces.\\
+\vspace{3pt}
+\begin{minipage}{0.55\textwidth}
+    The indenter is pressed into the material under a specific load, typically ranging from 1 to 100 kgf, applied for 10 to 15 seconds. In our case, we applied a load of 5 N for a duration of around 1-5 seconds.\\[8pt]
+    The process began by pressing the indenter down onto the surface of the alloy, creating an indent. Once the indentation was made, we repositioned the specimen on the testing machine. Using a wheel or cog, we adjusted the specimen to align the indentation with two parallel lines, ensuring that the indent was positioned accurately between them, as shown in the Figure \ref{fig:vickers}.\\[8pt]
+    After repositioning the sample, we measured the two diagonals of the indentation, \(d_1\) and \(d_2\). 
+\end{minipage}\hspace{1em}
+\begin{minipage}{0.4\textwidth}\centering
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/1024px-Vicker_Hardness_-_Diamond_Indentation.jpg}
+    \caption{Illustration showing the diamond-shaped indenter and the parallel lines used for measuring the indentation. (Wikipedia)}
+    \label{fig:vickers}
+\end{figure}
+\end{minipage}\\
+\vspace{5pt}
+To ensure accuracy and consistency, the indentation was measured twice for the alloy. This procedure was repeated for all three alloys, and the resulting hardness values were recorded on an A4 sheet (see Figure \ref{fig:alloys}) for later analysis.\\[8pt]
+Although the machine automatically calculates the hardness, it is important to understand the underlying process. The diagonals of the indentation $d_1$ and $d_2$ are used to calculate the Vickers hardness by determining the surface area of the indent. This area depends on the average of the two diagonal measurements, $d_1$ and $d_2$, as well as the geometry of the indentation. Together, these provide the necessary data to compute the material's hardness.\\[8pt]
+Here, I demonstrate and derive the pertinent equation and calculation for the HV5 test:
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}\centering
+        \vspace{1em}\includegraphics[width=0.8\textwidth]{figures/3537580_orig-0000.jpg}
+        \caption{Diagram showing the diamond-shaped indenter with the 136° angle and diagonals \(d_1\) and \(d_2\).}
+        \label{fig:vickers-diagram}
+    \end{minipage}\hfill
+    \begin{minipage}{0.51\textwidth}
+        The Vickers hardness (HV) is calculated using the applied force (\(F\)) and the surface area (\(A\)) of the indentation. 
+        \begin{equation}
+            \text{HV} = \frac{F}{A}
+        \end{equation}
+        \begin{itemize}[itemsep=-1mm]
+            \item HV: Vickers hardness (dimensionless)
+            \item \(F\): Applied force (kgf or N)
+            \item \(A\): Surface area of the indentation (mm\(^2\))
+            
+        \end{itemize}
+        The formula for $A$ incorporates the geometry of the diamond pyramid indenter, 
+        Such that surface area \(A\) can be expressed as:
+        \begin{equation}
+            A = \frac{d^2}{2\sin\left(\frac{136^\circ}{2}\right)} \approx \frac{d^2}{1.854} 
+        \end{equation}
+        Where:  
+        \begin{itemize}[itemsep=-1mm]
+            \item \(A\): Surface area of the indentation (mm\(^2\))
+            \item \(d\): Arithmetic mean of the diagonals \(d_1\) and \(d_2\) (mm)
+        \end{itemize}
+        in so that it can be rewritten in terms of the diagonals as so:
+        \begin{equation}
+            A= \frac{\left(\frac{d_1+d_2}{2}\right)^2}{2\sin\left(\frac{136^\circ}{2}\right)} \approx \frac{\left(d_1 + d_2\right)^2}{7.236}
+        \end{equation}
+    \end{minipage}\\
+\end{figure}
+\vspace{-0.1em}\noindent
+Thus the derived formula is commonly shown as
+\begin{equation}
+    {\text{HV} = \frac{F}{A} \approx \, \frac{1.854 \times F}{d^2} \approx \, \frac{7.236\times F}{\left(d_1 + d_2\right)^2}}    
+\end{equation} 
+The HV5 test we conducted applied a fixed load of 5 kgf (49.03 N), and the hardness was calculated via the machine as:  
+\begin{equation}
+    \text{HV5} = \frac{49.03}{A} \approx \, \frac{90.902}{d^2} \approx \, \frac{354.781}{\left(d_1 + d_2\right)^2}
+\end{equation}
+Were values for \(d_1\) and \(d_2\) were determined using the dial on the machine, and the corresponding hardness values are automatically calculated by the machine upon completion. It is important to note that the resulting hardness value is expressed as a dimensionless number.\\The recorded results were documented on the A4 sheet (see Figure \ref{fig:alloys}) and were as follows:
+\begin{center}
+    \begin{tblr}{
+            width=\textwidth,
+            colspec={X[3,c]X[0.75,c]X[0.75,c]X[0.75,c]X[0.75,c]X[0.75,c]X[0.75,c]X[0.8,c]X[0.8,c]X[0.8,c]},
+            hlines,vlines,
+            rows={ht=1\baselineskip},
+            row{1} = {ht=1\baselineskip,font=\bfseries,c,m},
+            cells={valign=m,halign=c}
+        }
+        Property (\(\bm{\text{unitless}}\)) & \SetCell[c=2]{c} AR & & \SetCell[c=2]{c} ST & & \SetCell[c=3]{c} PH & & \\
+        HV5 (Individual) & 119 & 123 & 36 & 36.8 & 102.8 & 131 & 126 \\
+        HV5 (Average) & \SetCell[c=2]{c} 121 & & \SetCell[c=2]{c} 36.4 & & \SetCell[c=3]{c} 118 & & \\
+    \end{tblr}
+    \caption{HV5 Data}
+    \label{tab:hv5}
+\end{center}
+Here Table \ref{tab:hv5} presents both the individual and average Vickers hardness (HV5) values for each alloy. The individual measurements were recorded, and the averages were calculated using the standard formula \(\frac{\sum x_i}{n}\) to provide representative values.\\[8pt]
+A detailed analysis of these results will be provided in the results section, where trends and implications will be thoroughly examined.
+
+\subsection{Tensile Test}
 \newpage\vspace*{-5pt}
     \section{Theory}
 
@@ -490,59 +1397,7 @@ I will now demonstrate how we used digital calipers to measure the alloy samples
 \section{Appendix}
 \normalsize
 \renewcommand{\thesubsection}{\Alph{subsection}}
-\subsection{HV (Vickers Hardness)}  
-    The Vickers hardness (HV) test is a precise and versatile method for evaluating material hardness. It employs a diamond-shaped indenter with a square base and an included angle of 136\textdegree between opposing faces. 
-    The indenter is pressed into the material under a specific load, typically ranging from 1 to 100 kgf, applied for 10 to 15 seconds.
-    \begin{figure}[H]
-        \centering
-        \begin{minipage}{0.45\textwidth}\centering
-            \vspace{1em}\includegraphics[width=0.8\textwidth]{figures/3537580_orig-0000.jpg}
-            \caption{Diagram showing the diamond-shaped indenter with the 136° angle and diagonals \(d_1\) and \(d_2\).}
-            \label{fig:vickers-diagram}
-        \end{minipage}\hfill
-        \begin{minipage}{0.51\textwidth}
-            The Vickers hardness (\(HV\)) is calculated using the applied force (\(F\)) and the surface area (\(A\)) of the indentation. 
-            \begin{equation}
-                    HV = \frac{F}{A}
-            \end{equation}
-            \begin{itemize}[itemsep=-1mm]
-                \item \(HV\): Vickers hardness (dimensionless)
-                \item \(F\): Applied force (kgf or N)
-                \item \(A\): Surface area of the indentation (mm\(^2\))
-                
-            \end{itemize}
-            The formula for $A$ incorporates the geometry of the diamond pyramid indenter, 
-            Such that surface area \(A\) can be expressed as:
-            \begin{equation}
-                A = \frac{d^2}{2\sin\left(\frac{136^\circ}{2}\right)} \approx \frac{d^2}{1.854} 
-            \end{equation}
-            Where:  
-            \begin{itemize}[itemsep=-1mm]
-                \item \(A\): Surface area of the indentation (mm\(^2\))
-                \item \(d\): Arithmetic mean of the diagonals \(d_1\) and \(d_2\) (mm)
-            \end{itemize}
-            in so that it is equivalent to:
-            \begin{equation}
-                    A= \frac{\left(\frac{d_1+d_2}{2}\right)^2}{2\sin\left(\frac{136^\circ}{2}\right)} \approx \frac{\left(d_1 + d_2\right)^2}{7.236}
-            \end{equation}
-        \end{minipage}\\
-    \end{figure}
-    \vspace{-0.1em}\noindent
-    Thus the derived formula is commonly shown as
-    \begin{equation}
-        \boxed{HV = \frac{F}{A} \approx \, \frac{1.854 \times F}{d^2} \approx \, \frac{7.236\times F}{\left(d_1 + d_2\right)^2}}    
-    \end{equation} 
-    The HV5 test, for instance, applies a fixed load of 5 kgf (49.03 N), and the hardness is calculated as:  
-    \begin{equation}
-        HV5 = \frac{49.03}{A} \approx \, \frac{90.902}{d^2} \approx \, \frac{354.781}{\left(d_1 + d_2\right)^2}
-    \end{equation}
-    The test procedure involves measuring the two diagonals of the indentation under a microscope and squaring their sum. The resulting hardness value is expressed as a dimensionless number, such as \(HV30\), which denotes the hardness under a 30 kgf load.  
 
-\subsubsection*{Importance and Applications}  
-
-The Vickers hardness test is particularly useful for evaluating materials with fine microstructures or thin coatings, as it can accurately measure small indentations. The test’s precision and ability to quantify hardness provide critical information about a material’s resistance to deformation, making it invaluable for quality control and research in metallurgy, engineering, and materials science.  
-
-\newpage
 \subsection{BHN (Brinell Hardness Number)}
 The Brinell Hardness Number (BHN) measures a material's resistance to deformation, determined by the indentation left by a hard steel or carbide ball pressed into the material under a specified load. This test is commonly used for materials with a coarse or heterogeneous grain structure.\\[1em]
 The formula for calculating the Brinell Hardness Number is:
