@@ -8,18 +8,32 @@
 \contentsline {subsection}{\numberline {4.4}Equipment List}{9}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Risk Assessment}{10}{subsection.4.5}%
 \contentsline {section}{\numberline {5}Conducting the Experiment}{10}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Measurements}{13}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}Cross-Sectional Areas (CSA)}{13}{subsubsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.2}Hardness Test}{14}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Tensile Test}{15}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Theory}{16}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Vickers Hardness Calculation}{17}{subsection.6.1}%
-\contentsline {section}{\numberline {7}Data and Result Calculations}{18}{section.7}%
-\contentsline {section}{\numberline {8}Discussion}{20}{section.8}%
-\contentsline {section}{\numberline {9}Conclusions}{21}{section.9}%
-\contentsline {section}{\numberline {10}Recommendations}{22}{section.10}%
-\contentsline {section}{\numberline {11}References}{23}{section.11}%
-\contentsline {section}{\numberline {12}Appendix}{24}{section.12}%
-\contentsline {subsection}{\numberline {A}BHN (Brinell Hardness Number)}{24}{subsection.12.1}%
-\contentsline {subsection}{\numberline {B}RSM and FFS}{24}{subsection.12.2}%
-\contentsline {subsection}{\numberline {C}Mean/Average}{25}{subsection.12.3}%
+\contentsline {subsection}{\numberline {5.1}Measurements}{12}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Cross-Sectional Areas (CSA)}{12}{subsubsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.2}Hardness Test}{13}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Tensile Test}{14}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Theory}{17}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Hardness}{18}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Vickers Hardness Calculation}{18}{subsubsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.2}Tensile Testing}{20}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Stress}{20}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Strain}{21}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Young's Modulus}{21}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Ultimate Tensile Strength (UTS)}{21}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}Yield Strength and Elongation at Break}{21}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8}Hooke's Law}{21}{subsection.6.8}%
+\contentsline {subsection}{\numberline {6.9}Poisson's Ratio}{21}{subsection.6.9}%
+\contentsline {subsection}{\numberline {6.10}Modulus of Resilience and Toughness}{21}{subsection.6.10}%
+\contentsline {subsection}{\numberline {6.11}Modulus of Toughness}{21}{subsection.6.11}%
+\contentsline {subsection}{\numberline {6.12}Slimness Ratio}{21}{subsection.6.12}%
+\contentsline {section}{\numberline {7}Data and Result Calculations}{22}{section.7}%
+\contentsline {subsection}{\numberline {7.1}hardness data}{23}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Force vs Displacement}{24}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Stress vs Strain}{25}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Discussion}{26}{section.8}%
+\contentsline {section}{\numberline {9}Conclusions}{27}{section.9}%
+\contentsline {section}{\numberline {10}Recommendations}{28}{section.10}%
+\contentsline {section}{\numberline {11}References}{29}{section.11}%
+\contentsline {section}{\numberline {12}Appendix}{30}{section.12}%
+\contentsline {subsection}{\numberline {A}Indentation hardness types}{30}{subsection.12.1}%
+\contentsline {subsection}{\numberline {B}RSM and FFS}{30}{subsection.12.2}%

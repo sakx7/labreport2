@@ -72,7 +72,7 @@
         \vspace{2pt}%
     }%
     {%
-        \vspace{2pt}%
+        \vspace{4pt}%
         \ifx\formalsource\empty % Check if the source is empty
         \else
         \hfill{\footnotesize{\formalsource}}% Align source to the bottom-right
@@ -460,7 +460,7 @@ Additionally, we were given an A4 sheet with a form to complete, which looked as
 \textbf{General Overview:}
 The experiment was conducted in two phases: measuring the dimensions and hardness of alloy samples, followed by testing their tensile properties with the Zwick Roell 2050 Tensile Testing Machine. \\[8pt]
 In the first phase, the width and length of each sample were recorded using digital calipers (in millimeters), while hardness was measured with a Vickers Hardness test machine using the HV5 scale. These tasks were conducted simultaneously, as both are quick and independent processes.\\[8pt]
-After documenting the dimensions and hardness on the data sheet (See Figure \ref{fig:alloys}), we proceeded to the second phase of the experiment. Each sample was subjected to a controlled tensile force until fracture using the Zwick Roell 2050 Tensile Testing Machine. The data, including force applied and change in length, was recorded and summarized in a shared graph and table for all three alloys. This data was printed on an A4 sheet (See Figure \ref{fig:tensile_results}) and provided for further analysis outside the lab. Key parameters such as stress, strain, ultimate tensile strength, yield strength, and elongation these parameters were calculated after the experiment and are presented as a key part of the analysis in this report.\\[8pt]
+After documenting the dimensions and hardness on the data sheet (See Figure \ref{fig:alloys}), we proceeded to the second phase of the experiment, were each sample was subjected to a controlled tensile force until fracture using the Zwick Roell 2050 Tensile Testing Machine. The data, including force applied and change in length, was recorded and summarized in a shared graph for all three alloys. This information was printed on an A4 sheet and given for additional examination outside of the lab (see Figure \ref{fig:tensile_results}). Important parameters, including yield strength, uts, stress, strain, and others, werecalculated after the experiment and are presented as a key part of analysis in this report.\\[8pt]
 The following subsections detail the use of the equipment, outlining each step of the procedure and the results obtained at each stage.\\
 \newpage
 \begin{minipage}{0.32\textwidth}
@@ -634,7 +634,7 @@ The following subsections detail the use of the equipment, outlining each step o
 \end{minipage}\hfill
 \begin{minipage}{0.65\textwidth}
 \vspace{-1.5em}
-\subsection{Measurements}
+\subsection{Measurements}\label{Measurements}
 \vspace{0.5em}
 \begin{center}
     \begin{tblr}{
@@ -1215,7 +1215,7 @@ We measured the dimensions of each alloys gauge region using a digital calliper 
     \label{tab:csa}
     \vspace{1em}\noindent
     In a tensile test, force is applied from the top and bottom of the alloy, stretching it along its length. Stress is calculated as the force divided by the area \textbf{perpendicular} to the applied force. Thus, the appropriate cross-sectional area for stress calculation is the one that is perpendicular to this force.\footnotemark
-\end{minipage}\\ \footnotetext{Please note that the calculations for the cross-sectional area (CSA) are conducted externally, not as part of the laboratory procedure, which is important for later context.}
+\end{minipage}\\ \footnotetext{The calculations for the cross-sectional area (CSA) are conducted externally, not as part of the laboratory procedure, which is important for later context.}
 \begin{itemize}[itemsep=-0.3mm]
     \item \textbf{\textcolor{blue}{\textsf{CSA 1}}:} This CSA parameterizes the thickness dimension of the alloy and remains coplanar with the applied force vector, rendering it unsuitable for stress calculations.
     \item \textbf{\textcolor{green!50!black}{\textsf{CSA 2}}:} This CSA parameterizes the width dimension and also remains coplanar with the applied force vector, thus it is not utilized for stress calculations.
@@ -1240,12 +1240,13 @@ Thus, for stress calculations, we use \textbf{CSA 3}, as it is the area perpendi
 \label{tab:csa3}
 \vspace{1em}\noindent
 This data will be used in subsequent calculations for stress and other related analyses.
-
 \subsection{Hardness Test}
-To test the hardness of our alloys, we chose the Vickers hardness (HV) test, a precise and versatile method for evaluating material hardness, among others (see Appendix A). This method employs a diamond-shaped indenter with a square base and an included angle of 136\textdegree \ between opposing faces (See Figure \ref{fig:vickers-diagram}).\\
+To evaluate the hardness of our alloys, we employed the Vickers Hardness (HV) test, among others methods (See Section \ref{hardnesstypes}).\\[8pt]
+The Vickers Hardness (HV) test is known as a precise and versatile method for measuring material hardness through indentation. It employs a diamond-shaped indenter with a square base at an included angle of 136\textdegree \ between opposing faces (See Figure \ref{fig:vickers-diagram}) (Ultramag, 2024; ZwickRoell, 2024).\\
+
 \vspace{7pt}
 \begin{minipage}{0.55\textwidth}
-    The indenter is pressed into the material under a specific load, typically ranging from 1 to 100 kgf, applied for 10 to 15 seconds. In our case, we applied a load of 5N for a duration of around 1-5 seconds.\\[8pt]
+    The indenter is pressed into the material under a specific load, typically ranging from 1 to 100 kgf, applied for 10 to 15 seconds (Ultramag, 2024). In our case, we applied a load of 5N approximately 0.51 kgf for a duration of around 1-5 seconds presumably.\\[8pt]
     The process began by pressing the indenter onto the alloy surface, creating an indent. Afterward, using a dial, we adjusted the two parallel lines to align with the indent, measuring the first distance, \(d_1\), ensuring the indent was accurately positioned between the two sides (See Figure \ref{fig:vickers}). \\[8pt]  
     Once the first measurement was confirmed, we repositioned the sample and took the second distance measurement, \(d_2\), for the indent.\\[8pt]
     Finally, once both distances were recorded by the machine, we pressed a button to calculate the hardness.
@@ -1260,7 +1261,7 @@ To test the hardness of our alloys, we chose the Vickers hardness (HV) test, a p
 \end{minipage}\\
 \vspace{10pt}
 To ensure accuracy and consistency, this process was done at least 2-3 times for each given alloy and the resulting hardness values were recorded on the data sheet (See Figure \ref{fig:alloys}) for later analysis.\\[8pt]
-Although the machine automatically calculates the hardness, it is important to understand the underlying process. The diagonals of the indentation $d_1$ and $d_2$ are used to calculate the Vickers hardness by determining the surface area of the indent. This area depends on the average of the two diagonal measurements, $d_1$ and $d_2$, as well as the geometry of the indentation. Together, these provide the necessary data to compute the material's hardness, i demonstrate and derive the pertinent equation and calculation for the HV5 test within theory section (See Subsection \ref{VHC}).
+Although the machine automatically calculates the hardness, it is important to understand the underlying process. The diagonals of the indentation $d_1$ and $d_2$ are used to calculate the Vickers hardness by determining the surface area of the indent. This area depends on the average of the two diagonal measurements, $d_1$ and $d_2$, as well as the geometry of the indentation. Together, these provide the necessary data to compute the material's hardness (ZwickRoell, 2024), i demonstrate and derive the pertinent equation and calculation for the HV5 test within theory section (See Section \ref{VHC}).
 \newpage
 The recorded results were documented on the data sheet (See Figure \ref{fig:alloys}) and were as follows:\\
 \vspace{0.3em}
@@ -1275,92 +1276,333 @@ The recorded results were documented on the data sheet (See Figure \ref{fig:allo
         }
         Property (\(\bm{\text{unitless}}\)) & \SetCell[c=2]{c} AR & & \SetCell[c=2]{c} ST & & \SetCell[c=3]{c} PH & & \\
         HV5 (Individual) & 119 & 123 & 36 & 36.8 & 102.8 & 131 & 126 \\
-        HV5 (Average) & \SetCell[c=2]{c} 121 & & \SetCell[c=2]{c} 36.4 & & \SetCell[c=3]{c} 118 & & \\
     \end{tblr}
     \caption{HV5 Data}
     \label{tab:hv5}
 \end{center}
 \vspace{0.3em}
-Here Table \ref{tab:hv5} presents the individual and average Vickers hardness (HV5) values for each alloy. Averages were calculated using the mean formula (See Appendix C). A detailed analysis of these results will be provided in the results section, where trends and implications will be thoroughly examined.
-\subsection{Tensile Test}
-
-
-\begin{minipage}[t]{0.4\textwidth}
+Table \ref{tab:hv5} shows the individual Vickers hardness (HV5) values for each alloy, with averages to be calculated using the mean formula (see Appendix C). A detailed analysis, including trends and implications, will follow in the Results section.\\[8pt]
+\begin{minipage}{0.4\textwidth}
     \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{images/tensile_machine.jpg}
-    \caption{Zwick 50 kN tensile testing machine}
+    \includegraphics[width=0.8\textwidth]{images/tensile_machine.jpg}
+    \caption{A Zwick tensile 50 kN testing similar to the used}
     \label{fig:tensile_machine}
     \end{figure}
 \end{minipage}\hfill
-\begin{minipage}[t]{0.555\textwidth}
-This phase of the experiment focused on evaluating the alloy's mechanical properties through tensile testing. A tensile testing machine similar to the one depicted in Figure \ref{fig:tensile_machine} was employed.\\[8pt]
-An axial load was applied to the standardised dog-bone-shaped alloy as part of the destructive test procedure. The alloy, which had a precisely sized gauge area, was held firmly at both ends and extended at a regulated pace until it broke.\\[8pt]
-The tensile tester used in this lab was a Zwick machine, with a maximum load capacity of 50 kN and an adjustable pulling rate. For analysis, a plot of force (N) versus elongation (mm) was generated in real-time during the experiment. This process was automated using the software provided by the manufacturer. It is worth noting that the machine did not account for the thickness or width of the sample, as these dimensions were not directly relevant to the data collected.
+\begin{minipage}{0.555\textwidth}
+\subsection{Tensile Test}
+This phase of the experiment focused tensile testing to assess the alloy's mechanical characteristics, particularly its tensile strength and elongation. The tensile tester used in this lab was a {Zwick machine}, with a maximum load capacity of 50 kN and an adjustable pulling rate (See Figure \ref{fig:tensile_machine}).\\[8pt]
+An axial load was applied to the standardised dog-bone-shaped alloy as part of the destructive test procedure. The alloy, which had a precisely sized gauge length, was held firmly at both ends and extended at a regulated pace until it broke.\\[8pt]
+For analysis, a real-time plot of force (N) versus change in length (mm) was generated during the experiment.
 \end{minipage}\\[8pt]
- Technically, the initial length of the specimen is also not required, since the plot records the change in length starting from zero. Consequently, it is necessary for us to establish the relationship between the generated data and the initial measurements (e.g., cross-sectional area and original gauge length). While it may seem that providing the machine with the cross-sectional area and initial gauge length could have directly yielded a stress-strain curve, it is likely that this approach was deliberately avoided to encourage independent analysis and a deeper understanding of the process.\\[8pt]
+Once the test was completed, i.e., after the specimen broke, the system also provided a table outlining details such as \textbf{Maximum Load (N)} \& \textbf{Extension at Break (mm)} \footnote{Table title terminology has been reworded for clarity. The original table titles are phrased strangely and incorrectly in a sense. A more detailed explanation and possible justification is provided in a later section.}. This process was automated using the manufacturer's software. The machine did not account for the sample's thickness or width, or simply by observation it was not given, making the data for these parameters invalid.\\[8pt]
+Consequently, it is necessary for us to establish the relationship between the generated data and the initial measurements (e.g., cross-sectional area and original gauge length) (See Section \ref{Measurements}). While it may seem that providing the machine with the cross-sectional area and initial gauge length could have directly yielded a stress-strain curve, and correct data in the table, it is likely that this approach was deliberately avoided to encourage independent analysis and a deeper understanding of the process. There will be more discussion on this later on.
+
+\newpage
+\begin{figure}[H]
+    \centering    
+    \includegraphics[width=0.7\textwidth]{images/simwiki-stress-strain-shape-evolution.png}
+    \captionof{figure}{The shape of a ductile specimen changes during tensile testing (ADMET, 2017)}
+    \label{fig:alloys_next_graph}
+\end{figure}
+This stress-strain graph, though not produced during our lab, illustrates key regions corresponding to visual changes in the alloy. While our real-time force vs. displacement graph isn't a true stress-strain curve, it represents similar principles due to proportional relationships. Thus, observed deformations can be linked to these stages. (For Further explanations see Section \ref{discuss}).\\[8pt]
 The procedure followed during the tensile test was as follows: 
-\begin{itemize} 
-    \item We ensured all safety precautions, including wearing safety glasses and maintaining a safe distance (approximately 1.5 meters) from the equipment while the test was running. \\
-    \item Upon initiating the test by clicking the "Start" button, the upper and lower grips moved in opposite directions according to the set pulling rate. We carefully observed the experiment from a safe distance, noting the failure mode when the specimen failed. \\
-\end{itemize}
-The first noticeable event was necking, where the material started to undergo localized plastic deformation. This was clearly visible in the force-elongation plot, as the elongation increased significantly without a corresponding rise in force, indicating that the material was weakening at the necked region. Following necking, the specimen exhibited different behaviors depending on its material properties: in some cases, necking continued to propagate slowly, and the specimen was able to elongate further before breaking; in other cases, the necking intensified rapidly, leading to a quicker failure. The rate of necking progression can vary significantly—some materials may exhibit slow, stable necking before ultimate fracture, while others can experience rapid fracture soon after necking begins, especially in brittle or less ductile alloys. The force-elongation plot captures these differences, showing a sharp drop in force once the material reaches its breaking point, which is evident in See Figure \ref{fig:force_elong}.
+\begin{enumerate}
+    \item We ensured all safety precautions, including wearing safety glasses and maintaining a safe distance (approximately 1.5 meters) from the equipment before starting the test.
+    \item Upon initiating the test by clicking the "Start" button, the upper and lower grips moved in opposite directions according to the set pulling rate.
+    \item The initial \textbf{elastic deformation region}, where the material experienced reversible stretching, was not noticeably perceptible in the alloys if not closely observant, due to the small change in length during this phase.\footnote{This region also corresponds to the Lüders region, where some materials undergo localized yielding before uniform plastic deformation. Whether this occurred in our alloy is uncertain, as I do not observe it in the graph produced by the machine (see Figure \ref{fig:tensile_results}). Regardless, no visible change in the material's shape or bands is seen during this phase.}
+    \item Following the elastic region, the material enters the \textbf{uniform plastic deformation region}, where the material elongates uniformly across the specimen, and the elongation becomes more noticeable, with no localized necking occurring as of yet.
+    \item The first noticeable event was \textbf{necking}, which visually manifests as a localized narrowing of the material at the gauge length region, indicating the onset of plastic deformation. This region is where the material started to stretch disproportionately at a certain point.
+\end{enumerate}
+\newpage
+\begin{enumerate}
+    \item[6.] Following necking, \textbf{non-uniform plastic deformation region}, the graph exhibited different behaviors (See Figure \ref{fig:stress_strain}) depending on the alloy being tested:
+    \begin{itemize}
+        \item For the solution-treated (ST) alloy, necking continued to propagate slowly, allowing further elongation before breaking, with the neck widening visibly before final failure.
+        \item For the as-received (AR) and precipitation-hardened (PH) alloys, necking intensified rapidly, resulting in a more pronounced narrowing of the specimen and leading to quicker fracture.
+    \end{itemize}
+    The plot produced captured these differences, showing a sharp drop in force once the material reached its breaking point (See Figure \ref{fig:force_elong}).
+\end{enumerate}
+Once all three alloys broke, we were left with a shared force vs. displacement data and a table of results from the machine for all three alloys, this was to be printed all on an A4 sheet by ZwickRoell.\\ 
+\vspace{3em}
+\begin{center}
+    \begin{minipage}{0.45\textwidth}
+    \centering    
+    \includegraphics[width=\textwidth]{images/image(6).jpeg}
+    \captionof{figure}{The three broken alloys, showing the final stage of deformation after tensile testing.}
+    \label{fig:broken_alloys}
+\end{minipage}%
+\hfil
+\begin{minipage}{0.45\textwidth}
+    \centering    
+    \includegraphics[width=\textwidth]{example-image}
+    \captionof{figure}{A4 machine data, including shared table and graph of alloys.}
+    \label{fig:tensile_results}
+     \footnotemark 
+\end{minipage}
+\end{center}
+    \footnotetext{This is better represented in the Data and Result section}
+
+   \newpage
+
+    \section{Theory}
+    
+    In this section, I will outline the theoretical foundations underlying the methods and analyses used in this experiment. This includes the conceptual frameworks, mathematical models, and principles that explain the phenomena under investigation.\\[8pt]
+    By detailing the reasoning behind the techniques and approaches employed, I aim to establish a solid foundation for the experimental procedures and data analysis, ensuring that the conclusions drawn are based on sound scientific principles.\\[8pt]
+    Important theoretical ideas pertaining to our lab's work will be covered in this part, namely:
+    \begin{itemize}
+        \item \textbf{Hardness}
+        \item \textbf{Tensile Testing}
+        \begin{itemize}
+            \item \textbf{Stress and Strain}
+            \item \textbf{Young's Modulus} (also known as \textit{Modulus of Elasticity})
+            \item \textbf{Ultimate Tensile Strength (UTS)}
+            \item \textbf{Yield Strength and Elongation at Break}
+            \item \textbf{Hooke's Law}
+            \item \textbf{Poisson's Ratio}
+            \item \textbf{Modulus of Resilience and Toughness}
+            \item \textbf{Modulus of Toughness}
+            \item \textbf{Slimness Ratio}
+        \end{itemize}
+    \end{itemize}
+    Understanding all these properties will enable us to fully characterize the mechanical performance of the material under stress, allowing us to calculate them from the data collected during the experiment and fully assess our alloy.
+    \newpage
+       \subsection{Hardness}\label{hardnesstypes}
+    Hardness is a material property that measures its resistance to deformation, scratching, or penetration by external forces. It is a critical factor in evaluating the durability and wear resistance of materials, often used in material science and engineering to determine suitability for specific applications.\\[8pt]
+    The concept of hardness is multifaceted, encompassing several types:
+    \begin{itemize}
+        \item \textbf{Scratch Hardness}: The resistance of a material to scratching, often assessed using the Mohs scale, which ranks materials based on their ability to scratch one another.
+        \item \textbf{Indentation Hardness}: This measures resistance to permanent deformation under localized pressure, typically using methods like the Brinell, Vickers, Rockwell or Knoop hardness tests.\footnote{Relevant equations and descriptions are shown at Appendix A}
+        \item \textbf{Rebound Hardness}: The ability of a material to resist impact, evaluated through methods such as the Shore scleroscope test.
+    \end{itemize}
+    These approaches rely on different theoretical principles. For instance, indentation hardness tests use mathematical models to relate the force applied and the resulting deformation, often involving elastic and plastic deformation mechanics. The Mohs scale, on the other hand, is more qualitative and based on empirical observations.\\[8pt]
+    Understanding hardness is essential in applications ranging from manufacturing to material selection, where wear resistance, strength, and surface durability are critical considerations.
+    \subsubsection{Vickers Hardness Calculation}\label{VHC}
+    \begin{figure}[H]
+        \centering
+        \begin{minipage}{0.45\textwidth}\centering
+            \vspace{1em}\includegraphics[width=0.8\textwidth]{figures/3537580_orig-0000.jpg}
+            \caption{Diagram showing the diamond-shaped indenter with the 136° angle and diagonals \(d_1\) and \(d_2\).}
+            \label{fig:vickers-diagram}
+        \end{minipage}\hfill
+        \begin{minipage}{0.51\textwidth}
+            The Vickers hardness (HV) is calculated using the applied force (\(F\)) and the surface area (\(A\)) of the indentation. 
+            \begin{equation}
+                \text{HV} = \frac{F}{A}
+            \end{equation}
+            \begin{itemize}[itemsep=-1mm]
+                \item HV: Vickers hardness (dimensionless)
+                \item \(F\): Applied force (kgf or N)
+                \item \(A\): Surface area of the indentation (mm\(^2\))
+                
+            \end{itemize}
+            The formula for $A$ incorporates the geometry of the diamond pyramid indenter, 
+            Such that surface area \(A\) can be expressed as:
+            \begin{equation}
+                A = \frac{d^2}{2\sin\left(\frac{136^\circ}{2}\right)} \approx \frac{d^2}{1.854} 
+            \end{equation}
+            Where:  
+            \begin{itemize}[itemsep=-1mm]
+                \item \(A\): Surface area of the indentation (mm\(^2\))
+                \item \(d\): Arithmetic mean of the diagonals \(d_1\) and \(d_2\) (mm)
+            \end{itemize}
+            in so that it can be rewritten in terms of the diagonals as so:
+            \begin{equation}
+                A= \frac{\left(\frac{d_1+d_2}{2}\right)^2}{2\sin\left(\frac{136^\circ}{2}\right)} \approx \frac{\left(d_1 + d_2\right)^2}{7.236}
+            \end{equation}
+        \end{minipage}\\
+    \end{figure}
+    \vspace{-1em}\noindent
+    Thus the derived formula is commonly shown as
+    \begin{equation}
+        {\text{HV} = \frac{F}{A} \approx \, \frac{1.854 \times F}{d^2} \approx \, \frac{7.236\times F}{\left(d_1 + d_2\right)^2}}    
+    \end{equation} 
+    The HV5 test we conducted applied a fixed load of 5 kgf (49.03 N), and the hardness was calculated via the machine as:  
+    \begin{equation}
+        \text{HV5} = \frac{49.03}{A} \approx \, \frac{90.902}{d^2} \approx \, \frac{354.781}{\left(d_1 + d_2\right)^2}
+    \end{equation}
+    Values for \(d_1\) and \(d_2\) were determined using the machine dial, and the corresponding hardness values were calculated based on them.\footnote{It is important to note that the resulting hardness value is expressed as a dimensionless number.}\\[8pt]
+    \newpage
+
+    \subsection{Tensile Testing}
+    
+    \begin{formal}[iqytechnicalcollege, 2012]
+        Tensile testing is used to establish operational load limits for metals and alloys. A sample of the material is prepared so that a force can be applied along its axis. A central portion of the sample is reduced in width so that it will experience the highest stresses.\\[8pt]
+        The tensile test measures the ability of a material to support a stress (force per unit area). The response of a tensile sample to the application of an increasing stress can be described in terms of elastic and plastic behavior. Initially, the sample undergoes elastic elongation as it is pulled. As increasing stress is applied, the sample undergoes permanent deformation; that is, plastic strain.\\[8pt]
+        A stress-strain curve is used to determine the point at which the reversible elastic strain is exceeded and permanent or plastic deformation occurs. The yield strength is the stress necessary to cause significant plastic deformation (usually defined as 0.2\% strain).\\[8pt]
+        Young’s modulus, or the modulus of elasticity, states the relationship between stress and strain represented by the straight-line portion of the stress-strain curve. It reflects the tendency of a material to deflect under a given applied stress.\\[8pt]
+        Once yielding has begun, there is significant motion of dislocations within the metal grains. Grain boundaries, phase boundaries, and other dislocations hinder their movement. As more obstacles are encountered, the stress necessary to cause continued dislocation movement becomes greater. The maximum stress that the material can withstand before breaking is the ultimate tensile strength.\\[8pt]
+        Reduction of area and percent elongation can be calculated from the broken sample. They are both indicators of a material’s ductility.\\
+        \vspace{0.4pt}
+    \end{formal}
+
+     Stress and strain are fundamental concepts in tensile testing:\\[8pt]
+     \subsection{Stress}
+     \textbf{Stress} ($\sigma$) is the force divided by the cross-sectional area where that force is applied perpendicular to the material. In a tensile test, the area is constant (initial area $A_0$), while the applied force ($F$) changes, Mathematically, it is expressed as:\\[8pt]
+            \begin{minipage}{0.48\textwidth}
+            \begin{equation}
+                \sigma = \frac{F}{A_9}
+            \end{equation}
+            where:
+            \begin{itemize}[left=0pt,itemsep=-1mm]
+                \item \( \sigma \): Stress, Pascals (Pa) or Newtons per meter squared (\(\text{N/m}^2\)),
+                \item \( F \): Applied force, Newtons (N),
+                \item \( A_0 \): Initial cross-sectional area, Meters squared (\(\text{m}^2\)).
+            \end{itemize}
+        \end{minipage}\hfill
+        \begin{minipage}{0.48\textwidth}
+            The original cross-sectional area is calculated as:
+            \begin{equation}
+                A_0 = w \times d
+            \end{equation}
+            where:
+            \begin{itemize}[left=0pt,itemsep=-1mm]
+                \item \( A_0 \): Initial cross-sectional area, Meters squared (\(\text{m}^2\)),
+                \item \( w \): Width, Millimeters (mm),
+                \item \( d \): Depth or thickness, Millimeters (mm).
+            \end{itemize}
+        \end{minipage}
+
+        \subsection{Strain}
+        \textbf{Strain} ($\varepsilon$) is a measure of the deformation of a material when it is subjected to stress. It is defined as the ratio of the change in length ($\Delta L$) to the original length ($L_0$) of the material. Unlike stress, strain is a dimensionless quantity, as it represents a relative change in length. Strain can be either elastic (reversible) or plastic (permanent), depending on the material's behavior during the application of the force, in terms of our tensile test the lengths here our related to alloys gauge, Mathematically, it is expressed as:\\[8pt]        
+        \begin{minipage}{0.48\textwidth}
+            \begin{equation}
+                \varepsilon = \frac{\Delta L}{L_0}
+            \end{equation}
+            Where:
+            \begin{itemize}[left=0pt,itemsep=-1mm]
+                \item \( \varepsilon \): Strain, a dimensionless quantity (no units).
+                \item \( \Delta L \): Change in length, meters (m).
+                \item \( L_0 \): Original length, meters (m).
+            \end{itemize}
+        \end{minipage}\hfill
+        \begin{minipage}{0.48\textwidth}
+            The change in length (\( \Delta L \)) is calculated as:
+            \begin{equation}
+                \Delta L = \left| L - L_0 \right|
+            \end{equation}
+            where:
+            \begin{itemize}[left=0pt,itemsep=-1mm]
+                \item \( \Delta L \): Change in length, meters (m),
+                \item \( L \): Current length, meters (m),
+                \item \( L_0 \): Original length, meters (m).
+            \end{itemize}
+        \end{minipage}
+        
+
+        
+    \subsection{Young's Modulus}
+    \textbf{Young's Modulus} (\(E\)) also known as \textit{Modulus of Elasticity} is a material constant that quantifies the stiffness of a material in the elastic region. Mathematically, it is expressed as:\\[8pt]
+    \begin{equation}
+        E = \frac{\sigma}{\varepsilon}
+    \end{equation}
+    Where:
+    \begin{itemize}
+        \item \( E \): Young's modulus, Pascals (Pa) or Newtons per meter squared (\(\text{N/m}^2\)).
+        \item \( \sigma \): Stress Pascals (Pa) or Newtons per meter squared (\(\text{N/m}^2\)).
+        \item \( \varepsilon \): Strain, a dimensionless quantity (no units).
+    \end{itemize}
+        
+    \subsection{Ultimate Tensile Strength (UTS)}
+    % Add content here
+    
+    \subsection{Yield Strength and Elongation at Break}
+    % Add content here
+    
+    \subsection{Hooke's Law}
+    % Add content here
+    
+    \subsection{Poisson's Ratio}
+    % Add content here
+    
+    \subsection{Modulus of Resilience and Toughness}
+    % Add content here
+    
+    \subsection{Modulus of Toughness}
+    % Add content here
+    
+    \subsection{Slimness Ratio}
+    % Add content here
 
 
-   \section{Theory}
-    In this section, i aim to provide the theoretical foundations that underpin the methods and analyses conducted in this experiment. "Theory" refers to the conceptual framework and principles that guide our understanding of the phenomena we are investigating. It includes the mathematical models, formulas, and relationships that form the basis for our experimental approach, as well as the reasoning behind the techniques used.\\[8pt]
-    This section will cover key concepts related to the Vickers hardness test, including the definition of hardness, the mechanism behind the indentation process, and the equations used to calculate Vickers hardness. Additionally, it will include essential topics related to the tensile test, such as the calculation of stress and strain, the construction of stress-strain curves, and the analysis of material behavior under tensile loading.\\[8pt]
-    By understanding these fundamental principles, we can effectively interpret our experimental results and perform accurate calculations. This section will also address other relevant concepts, such as the Young's modulus, yield strength, and the significance of failure modes in materials.\\[8pt]
-    This theory section serves as the foundation for the subsequent experimental procedures and data analysis, ensuring that our conclusions are based on a sound understanding of the relevant scientific principles. 
-   \subsection{Vickers Hardness Calculation}\label{VHC}
-   \begin{figure}[H]
-       \centering
-       \begin{minipage}{0.45\textwidth}\centering
-           \vspace{1em}\includegraphics[width=0.8\textwidth]{figures/3537580_orig-0000.jpg}
-           \caption{Diagram showing the diamond-shaped indenter with the 136° angle and diagonals \(d_1\) and \(d_2\).}
-           \label{fig:vickers-diagram}
-       \end{minipage}\hfill
-       \begin{minipage}{0.51\textwidth}
-           The Vickers hardness (HV) is calculated using the applied force (\(F\)) and the surface area (\(A\)) of the indentation. 
-           \begin{equation}
-               \text{HV} = \frac{F}{A}
-           \end{equation}
-           \begin{itemize}[itemsep=-1mm]
-               \item HV: Vickers hardness (dimensionless)
-               \item \(F\): Applied force (kgf or N)
-               \item \(A\): Surface area of the indentation (mm\(^2\))
-               
-           \end{itemize}
-           The formula for $A$ incorporates the geometry of the diamond pyramid indenter, 
-           Such that surface area \(A\) can be expressed as:
-           \begin{equation}
-               A = \frac{d^2}{2\sin\left(\frac{136^\circ}{2}\right)} \approx \frac{d^2}{1.854} 
-           \end{equation}
-           Where:  
-           \begin{itemize}[itemsep=-1mm]
-               \item \(A\): Surface area of the indentation (mm\(^2\))
-               \item \(d\): Arithmetic mean of the diagonals \(d_1\) and \(d_2\) (mm)
-           \end{itemize}
-           in so that it can be rewritten in terms of the diagonals as so:
-           \begin{equation}
-               A= \frac{\left(\frac{d_1+d_2}{2}\right)^2}{2\sin\left(\frac{136^\circ}{2}\right)} \approx \frac{\left(d_1 + d_2\right)^2}{7.236}
-           \end{equation}
-       \end{minipage}\\
-   \end{figure}
-   \vspace{-1em}\noindent
-   Thus the derived formula is commonly shown as
-   \begin{equation}
-       {\text{HV} = \frac{F}{A} \approx \, \frac{1.854 \times F}{d^2} \approx \, \frac{7.236\times F}{\left(d_1 + d_2\right)^2}}    
-   \end{equation} 
-   The HV5 test we conducted applied a fixed load of 5 kgf (49.03 N), and the hardness was calculated via the machine as:  
-   \begin{equation}
-       \text{HV5} = \frac{49.03}{A} \approx \, \frac{90.902}{d^2} \approx \, \frac{354.781}{\left(d_1 + d_2\right)^2}
-   \end{equation}
-   Values for \(d_1\) and \(d_2\) were determined using the machine dial, and the corresponding hardness values were calculated based on them.\footnote{It is important to note that the resulting hardness value is expressed as a dimensionless number.}\\[8pt]
 
+
+    
+    
     \newpage\vspace*{-20pt}
     
     \section{Data and Result Calculations}
+    
+    Now that we have the following data:
+    \begin{itemize}
+        \item Gauge dimensions
+        \item Hardness (v5)
+        \item Force vs. elongation graph
+    \end{itemize}
+    We can now derive several mechanical properties:
+    
+    These derived properties will help us fully characterize the mechanical performance of the material under stress.
+    \newpage
+    \subsection{hardness data}
+    \begin{center}
+        \begin{tblr}{
+                width=\textwidth,
+                colspec={X[3,c]X[0.75,c]X[0.75,c]X[0.75,c]X[0.75,c]X[0.75,c]X[0.75,c]X[0.8,c]X[0.8,c]X[0.8,c]},
+                hlines,vlines,
+                rows={ht=1\baselineskip},
+                row{1} = {ht=1\baselineskip,font=\bfseries,c,m},
+                cells={valign=m,halign=c}
+            }
+            Property (\(\bm{\text{unitless}}\)) & \SetCell[c=2]{c} AR & & \SetCell[c=2]{c} ST & & \SetCell[c=3]{c} PH & & \\
+            HV5 (Individual) & 119 & 123 & 36 & 36.8 & 102.8 & 131 & 126 \\
+        \end{tblr}
+    \end{center}
+    To calculate the mean (or average) for each set of values, 
+    sum all individual values and divide by the total number of values, as shown by the formula:
+    \begin{equation}
+        \text{Mean} = \frac{\sum x_i}{n}
+    \end{equation}
+    Where:
+    \begin{itemize}[itemsep=-1mm]
+        \item \textbf{Mean}: The arithmetic average, representing the central tendency of the dataset.
+        \item \( x_i \): Each individual value in the dataset.
+        \item \( n \): The total number of values in the dataset.
+        \item \( \sum x_i \): The sum of all individual values.
+    \end{itemize}
+    Before calculating the mean, it is important to identify and remove outliers. 
+    During the lab, it was determined that the value 102.8 from PH was an outlier. 
+    With this adjustment, the results can now proceed as follows:\\
+    \begin{center}
+        \textbf{AR:}
+        \[\sum x_i = 119 + 123 = 242\]
+        \[n = 2 \quad \Rightarrow \quad \text{Mean} = \frac{242}{2} = 121\]
+        \textbf{ST:}
+        \[\sum x_i = 36 + 36.8 = 72.8\]
+        \[n = 2 \quad \Rightarrow \quad \text{Mean} = \frac{72.8}{2} = 36.4\]
+        \textbf{PH:}
+        \[\sum x_i = 131 + 126 = 257\]
+        \[n = 2 \quad \Rightarrow \quad \text{Mean} = \frac{257}{2} = 128.5\]
+    \end{center}    
+Thus, the means for each group are as follows:
+    \begin{center}
+        \begin{tblr}{
+                width=\textwidth,
+                colspec={X[3,c]X[0.75,c]X[0.75,c]X[0.75,c]X[0.75,c]X[0.75,c]X[0.75,c]X[0.8,c]X[0.8,c]X[0.8,c]},
+                hlines,vlines,
+                rows={ht=1\baselineskip},
+                row{1} = {ht=1\baselineskip,font=\bfseries,c,m},
+                cells={valign=m,halign=c}
+            }
+            Property (\(\bm{\text{unitless}}\)) & \SetCell[c=2]{c} AR & & \SetCell[c=2]{c} ST & & \SetCell[c=3]{c} PH & & \\
+            HV5 (Individual) & 119 & 123 & 36 & 36.8 & \(\cancel{102.8}\) & 131 & 126 \\
+            HV5 (Average) & \SetCell[c=2]{c} 121 & & \SetCell[c=2]{c} 36.4 & & \SetCell[c=3]{c} 128.5 & & \\
+        \end{tblr}
+        \caption{HV5 individual and mean data}
+        \label{tab:hv5mean}
+    \end{center}
+    \subsection{Force vs Displacement}
+    
         \renewcommand{\arraystretch}{1.4}
         \begin{table}[H]
             \centering
@@ -1381,23 +1623,22 @@ The first noticeable event was necking, where the material started to undergo lo
 
     \begin{figure}[H]
         \centering
-        \includegraphics[scale=0.56]{figures/force_vs_elongation.png}
-        \caption{Machine produced data for Force vs Elongation}
+\includegraphics[width=0.7\textwidth]{figures/force_vs_elongation.png}       
+\caption{Machine produced data for Force vs Elongation}
         \label{fig:force_elong}
     \end{figure}
-
+    \subsection{Stress vs Strain}
     \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.56]{figures/stress_vs_strain.png}
+    \includegraphics[width=0.7\textwidth]{figures/stress_vs_strain.png}
     \caption{Calculated produced data for Stress vs Strain}
     \label{fig:stress_strain}
-\end{figure}
-    
-    The similarity between the Force vs Elongation graph and the Stress vs Strain graph arises from the underlying relationship between force, elongation, stress, and strain. In the Force vs Elongation graph, force (in Newtons) is plotted against the change in length (elongation, in millimeters), showing the direct relationship between the applied load and the resulting deformation. However, in the Stress vs Strain graph, both force and elongation are scaled down by constants: force is divided by the cross-sectional area of the specimen, and elongation is divided by the original gauge length of the specimen. This scaling reduces the magnitude of the values in the Stress vs Strain graph, which is why the graph appears smaller, even though the overall shape and behavior are similar. Specifically, stress represents force per unit area, and strain represents the relative change in length, both of which are dimensionless or have smaller units compared to force and elongation. Therefore, the difference in graph scales is simply due to this division by constants, which doesn't affect the overall shape of the curve but rather scales the values down, making the Stress vs Strain graph appear "smaller" than the Force vs Elongation graph.
+\end{figure}    
+
         
     \newpage\vspace*{-5pt}
-    \section{Discussion}
-
+    \section{Discussion}\label{discuss}
+    The similarity between the Force vs Elongation graph and the Stress vs Strain graph arises from the underlying relationship between force, elongation, stress, and strain. In the Force vs Elongation graph, force (in Newtons) is plotted against the change in length (elongation, in millimeters), showing the direct relationship between the applied load and the resulting deformation. However, in the Stress vs Strain graph, both force and elongation are scaled down by constants: force is divided by the cross-sectional area of the specimen, and elongation is divided by the original gauge length of the specimen. This scaling reduces the magnitude of the values in the Stress vs Strain graph, which is why the graph appears smaller, even though the overall shape and behavior are similar. Specifically, stress represents force per unit area, and strain represents the relative change in length, both of which are dimensionless or have smaller units compared to force and elongation. Therefore, the difference in graph scales is simply due to this division by constants, which doesn't affect the overall shape of the curve but rather scales the values down, making the Stress vs Strain graph appear "smaller" than the Force vs Elongation graph.
     \newpage\vspace*{-5pt}
     \section{Conclusions}
 
@@ -1420,6 +1661,14 @@ The first noticeable event was necking, where the material started to undergo lo
         \item Rovida, C., Alépée, N., Api, A.M., Basketter, D.A., Bois, F.Y., Caloni, F., Corsini, E., Daneshian, M., Eskes, C., Ezendam, J., Fuchs, H., Hayden, P., Hegele-Hartung, C., Hoffmann, S., Hubesch, B., Jacobs, M.N., Jaworska, J., Kleensang, A., Kleinstreuer, N., Lalko, J., Landsiedel, R., Lebreux, F., Luechtefeld, T., Locatelli, M., Mehling, A., Natsch, A., Pitchford, J.W., Prater, D., Prieto, P., Schepky, A., Schüürmann, G., Smirnova, L., Toole, C., van Vliet, E., Weisensee, D. and Hartung, T. (2015) \textit{Integrated Testing Strategies (ITS) for Safety Assessment}. Available at: \url{https://www.researchgate.net/publication/6538912_The_Principles_of_Weight_of_Evidence_Validation_of_Test_Methods_and_Testing_Strategies_The_Report_and_Recommendations_of_ECVAM_Workshop_58} [Accessed 20 December 2024].
         
         \item Alan Turing Institute (2024) \textit{Data-Driven Experiment Design}. Available at: \url{https://www.turing.ac.uk/research/research-projects/data-driven-experiment-design} [Accessed 20 December 2024].
+        
+        
+       % alloy image
+        % https://www.admet.com/blog/effect-specimen-geometry-tensile-testing-results/
+        
+       % vickesrs hardness
+        %https://www.ultramag.co.uk/ndt-inspection/hardness-testing/
+        %https://www.zwickroell.com/industries/metals/metals-standards/vickers-test-iso-6507/
         
         % confirmation clari
         % https://www.actonbrightsteel.co.uk/6082-t6-acton-bright-steel.html
@@ -1444,7 +1693,7 @@ The first noticeable event was necking, where the material started to undergo lo
 \normalsize
 \renewcommand{\thesubsection}{\Alph{subsection}}
 
-\subsection{BHN (Brinell Hardness Number)}
+\subsection{Indentation hardness types}
 The Brinell Hardness Number (BHN) measures a material's resistance to deformation, determined by the indentation left by a hard steel or carbide ball pressed into the material under a specified load. This test is commonly used for materials with a coarse or heterogeneous grain structure.\\[1em]
 The formula for calculating the Brinell Hardness Number is:
 \begin{equation}
@@ -1468,19 +1717,5 @@ FFDs are most often used as a component of RSM. But they can in principle be use
 Additionally, RSM can take as its input experimental designs that are not FFDs. Central Composite Designs and Box-Behnken designs are two other commonly-used designs.\\[8pt]
 My thanks to kjetil b halvorsen and Gregg H for their input and the suggested resources. I was not able to lay my hands on the Montgomery book but found the Box, Hunter \& Hunter book very useful.
 
-\subsection{Mean/Average}
-
-The mean, or average, of a set of values is calculated by summing all individual values and dividing by the total number of values, as shown by the formula:
-
-\begin{equation}
-    \text{Mean} = \frac{\sum x_i}{n}
-\end{equation}
-Were:
-\begin{itemize}[itemsep=-1mm]
-    \item \textbf{Mean} : The arithmetic average of a dataset, representing the central tendency of the values.
-    \item \( x_i \) : Each individual value in the dataset.
-    \item \( n \) : The total number of values in the dataset.
-    \item \( \sum x_i \) : The sum of all the individual values.
-\end{itemize}
-
+    
 \end{document}
