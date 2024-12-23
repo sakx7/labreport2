@@ -133,6 +133,7 @@
 \renewcommand{\theequation}{\text{Eq.}~\arabic{equation}}
 %Refer to the equation as \eqref{equation}.
 \usepackage{caption}  % This package allows captioning outside of a float
+\usepackage[export]{adjustbox}
 
 
 \usetikzlibrary{patterns}
@@ -165,6 +166,7 @@
     hatch line width=.5pt,    % Thin lines
 }
 
+\usepackage[para]{footmisc} % Example of making footnotes run together in a paragraph
 
 
 
@@ -248,41 +250,35 @@ This research investigates the response of HE30 aluminium alloy to thermal treat
 \newpage\vspace*{-20pt}
 \section{Method}
 This laboratory research primarily focused on evaluating the mechanical properties of our alloy samples, including key metrics such as yield strength, ultimate tensile strength (UTS), modulus of elasticity, hardness, and percentage elongation. These properties are essential for understanding the material's behavior under stress and assessing its suitability for various engineering applications.\\[8pt]
-The methodologies employed in this study were designed to optimize the data obtained from individual experiments on the alloys' mechanical properties. By utilizing advanced data analysis techniques such as \textbf{Response Surface Methodology (RSM) and Fraction Factorial Design (FFD)} (See Appendix C), we uncovered correlations and dependencies that might otherwise remain hidden. For instance, tensile testing, beyond yielding basic parameters like UTS and modulus of elasticity, provided insights into failure mechanisms and material behavior under specific conditions. This approach reduces the need for extensive experimental operations while deepening our understanding of the alloys' properties and enabling predictive modeling. By focusing on a minimal set of tests that deliver insights into multiple material properties, the methodology ensures each procedure is maximally informative, minimizing resource usage and reducing the likelihood of error.\\[8pt]
-Building on this optimized experimental design, the research approach utilized in this study incorporates an \textbf{Integrated Testing Strategy (ITS)}. ITS combines collected data to provide a comprehensive and precise assessment of the alloy's mechanical properties. It reduces redundancy and streamlines the evaluation process by avoiding reliance on a single test or series of tests. As an example of broader interdisciplinary efforts, the ITS developed in this study enhances experimental efficiency while minimizing costs and resource consumption (Rovida et al., 2015; Alan Turing Institute, 2024).\\[8pt]
-Our approach was characterized by the following key components:
+The methodologies employed in this study were designed to optimize the data obtained from individual experiments on the alloys. By utilizing advanced data analysis techniques such as \textbf{Response Surface Methodology (RSM) and Fraction Factorial Design (FFD)} (See Appendix C), we uncovered correlations and dependencies that might otherwise remain hidden. For instance, tensile testing, beyond yielding basic parameters like UTS and modulus of elasticity, provided insights into failure mechanisms and material behavior under specific conditions. This approach reduces the need for extensive experimental operations while deepening our understanding of the alloys' properties and enabling predictive modeling. By focusing on a minimal set of tests that deliver insights into multiple material properties, the methodology ensures each procedure is maximally informative, minimizing resource usage and reducing the likelihood of error.\\[8pt]
+Building on this optimized experimental design, the research approach utilized in this study incorporates an \textbf{Integrated Testing Strategy (ITS)}. ITS combines collected data to provide a comprehensive and precise assessment of the alloy's mechanical properties. It reduces redundancy and streamlines the evaluation process by avoiding reliance on a single test or series of tests. As an example of broader interdisciplinary efforts, the ITS developed in this study was designed to reduce operational costs, minimize resource consumption, and shorten the time required to carry out processes (Rovida et al., 2015; Alan Turing Institute, 2024)\\[8pt]
+Our approach was characterized by the following key procedures:
 \begin{enumerate}[itemsep=-0.5mm]
-    \item {Dimensional Analysis}
-    \item {Hardness Testing}
-    \item {Tensile Testing} 
-    \item {Data analysis}
+    \item Dimensional Analysis
+    \item Hardness Testing
+    \item Tensile Testing 
+    \item Data Analysis
 \end{enumerate}
-Note that \textbf{Sample Preparation} is distinct from the testing process and is not considered part of the testing itself.\\[8pt]
-By designing experiments that yield multiple insights from each procedure, we were able to conduct a thorough analysis of the alloy's mechanical properties while minimizing resource usage and potential sources of error. This method not only ensures the accuracy and reliability of our results but also provides a rich dataset for in-depth analysis and interpretation of the alloy's performance characteristics.
+\footnote{Note that \textbf{Sample Preparation} is separate from the testing process and is not included as part of the testing itself; therefore, it is not considered a part of the list of procedures in the experiment we conducted.} By designing the experiment with this set of procedures, each offering multiple insights through its respective process, we were able to perform a comprehensive evaluation of the alloy's mechanical properties. This approach minimized time, resource consumption and potential errors, ensuring the accuracy and reliability of the results while providing a robust dataset for detailed analysis and interpretation of the alloy's performance characteristics.
+
 \newpage
 
 \section{Experimental Procedures}
-The alloys used in this study are derived from \textbf{HE30/BS1476}. The term \textbf{HE30} refers to a temper designation within the now-withdrawn \textbf{BS 1476} standard, which outlined heat treatment and aging processes for aluminium alloys. \textbf{BS 1476}, introduced in 1955 and revised until 1987, was officially withdrawn on June 21, 2022.\\[8pt]  
-Though \textbf{BS 1476} is no longer active, its parameters for \textbf{HE30} remain linked to the aluminium alloy \textbf{6082}, a widely used material in engineering. While exact details from \textbf{BS 1476} are unavailable, \textbf{HE30} is consistently associated with 6082.  
-\begin{itemize}[itemsep=-1mm]
-    \item \textbf{T6} - Solution heat-treated and artificially aged.
-    \item \textbf{O} - Soft.
-    \item \textbf{T4} - Solution heat-treated and naturally aged.
-    \item \textbf{T651} - Solution heat-treated, stress-relieved, and artificially aged.
-\end{itemize}  
-The absence of \textbf{BS 1476} does not impede the characterization of \textbf{HE30}. The chemical composition of \textbf{6082} is standardized under \textbf{EN 573-3}, aligning with widely recognized descriptions of the alloy.
-
-
+The alloys employed in this study originate from HE30/BS1476. The designation HE30 pertains to a temper classification established under the now-defunct BS 1476 standard, which detailed the heat treatment and aging protocols for aluminium alloys. Introduced in 1955 and revised until 1987, BS 1476 was formally withdrawn on June 21, 2022.\\[8pt]
+Despite the withdrawal of BS 1476, the temper designation HE30 remains intrinsically linked to the aluminium alloy 6082, a material extensively utilized in engineering applications. Although the precise parameters defined by BS 1476 are no longer accessible, HE30 is consistently correlated with 6082 and its well-documented temper conditions:
+\begin{itemize}[itemsep=1pt]
+    \item \textbf{T6}: Solution heat-treated and artificially aged.
+    \item \textbf{O}: Fully annealed (softened state).
+    \item \textbf{T4}: Solution heat-treated and naturally aged.
+    \item \textbf{T651}: Solution heat-treated, stress-relieved, and artificially aged.
+\end{itemize}
+The absence of BS 1476 does not hinder the characterization of HE30, as the chemical composition of 6082 is standardized under EN 573-3, which aligns with internationally recognized specifications for this alloy. While BS 1476 specifies HE30, BS EN 573-3 defines 6082-T6, ensuring continuity in the alloy's description and application (Acton Bright Steel, 2024).
 
 \subsection{Description}
 Key details are as follows:
 \begin{formal}[Truventor, 2019]
-Aluminium HE 30 alloy a.k.a AL 6082 is a medium strength alloy with excellent corrosion resistance. It
-has the highest strength of 6000 (6XXX) series alloys. It is also known as a structural alloy. In block,
-plate, or bar form, AL HE 30 alloy is most commonly used in machining.\\[8pt]
-Although it is a relatively new alloy, due to its higher strength, AL HE 30 has replaced AL 6061 in many
-applications. The addition of a large amount of manganese controls the grain structure which in turn
-results in a stronger alloy.\\[8pt]
+Aluminium HE 30 alloy a.k.a AL 6082 is a medium strength alloy with excellent corrosion resistance. It has the highest strength of 6000 (6XXX) series alloys. It is also known as a structural alloy. In block, plate, or bar form, AL HE 30 alloy is most commonly used in machining.\\[8pt]
+Although it is a relatively new alloy, due to its higher strength, AL HE 30 has replaced AL 6061 in many applications. The addition of a large amount of manganese controls the grain structure which in turn results in a stronger alloy.\\[8pt]
 \begin{minipage}[t]{0.57\textwidth}
     \textbf{Characteristics:}
     \begin{itemize}[itemsep=-1mm]
@@ -306,7 +302,7 @@ results in a stronger alloy.\\[8pt]
 \vspace{1pt}
 \end{formal}
 \newpage\noindent
-While there may be minor differences in composition and performance between HE30, as defined by BS 1476, and the 6082 alloy, obtaining precise specifications for HE30 in the context of BS 1476 would necessitate consultation with the British Standards Institution (BSI), especially since the standard was officially withdrawn in 2022. For the purposes of this study, HE30 shall be considered equivalent to the 6082 alloy. Although not an exact equivalent, this assumption will serve as the foundation for analysing its qualities and aiding further talks.
+Aluminium alloy 6082 and HE30 are corresponding designations, though not precisely equivalent, with minor differences in composition and performance (aalco, 2019). As BS 1476, which defines HE30, was withdrawn in 2022, obtaining its exact specifications would require consulting the British Standards Institution (BSI). For this study, we will treat HE30 as equivalent to 6082, simplifying the analysis of the alloy's properties and subsequent discussions, while acknowledging potential slight differences.
 \subsection{Composition}
 \centering
 \begin{minipage}{0.44\textwidth}
@@ -328,7 +324,7 @@ While there may be minor differences in composition and performance between HE30
             Other (Each)              & 0.05 max        \\ \hline
             Others (Total)            & 0.15 max        \\ \hline
         \end{tabular}
-        \captionof{table}{Chemical Composition of Alloy 6082 (BS EN 573-3:2009)}
+        \captionof{table}{Chemical Composition of Alloy 6082 (BS EN 573-3:2009) (aalco, 2019)}
         \label{tab:composition_6082}
 
         
@@ -351,12 +347,12 @@ While there may be minor differences in composition and performance between HE30
 \end{minipage}
 \hfill
 \begin{minipage}{0.53\textwidth}
-    The composition of 6082 generally follows the typical values for 6082 aluminium alloy, as shown in Table \ref{tab:composition_6082}.\\[1em]
-    Once again, I stress that there may be minor differences in the composition of HE30, especially in accordance with the BS 1476 specifications.\\[1em] 
-    The values listed here are provided for reference, but the exact composition of the HE30 alloy should be verified for accurate work in our lab, as it may not align with typical web standards.
+    The composition of 6082 conforms to the standard specifications for this aluminium alloy at the BS EN 573-3:2009, as detailed in Table \ref{tab:composition_6082}. These values are consistent with industry standards for 6082, providing a foundation for further analysis.\\[8pt]
+    Once again, I stress that there may be minor differences in the composition of HE30, especially in accordance with the BS 1476 specifications.\\[8pt] 
+    The values listed here are provided for reference, but the exact composition of the specifci HE30 alloy we used should be verified for accurate work in our lab, as it may not align with typical web standards.
     \vspace{1em}\hrule\vspace{1em}
-    Although I do have actual information regarding the "Aluminium alloy HE30 BS1476" from Dr. Santiago shown in Table \ref{tab:composition_he30}, it is important to note that this source lacks proper documentation, and its credibility remains uncertain.\\[1em]
-    The BS1476 has been withdrawn and has not been explicitly updated or replaced, as I stated. It is still largely unreferenced and not widely recognised in the contemporary literature. However this data source contradicts to much of what is being currently pertaining to the standard.\\[1em]
+    Although I do have actual information regarding the "Aluminium alloy to the HE30 BS1476 specification" from Dr. Santiago shown in Table \ref{tab:composition_he30}, it is important to note that this source lacks proper documentation, and its credibility remains uncertain.\\[8pt]
+    The BS1476 has been withdrawn and has not been explicitly updated or replaced, as I stated. It is still largely unreferenced and not widely recognised in the contemporary literature. So this data provided contradicts to much of what is being currently pertaining to the standard.\\[8pt]
     Although there are significant differences between the two sources in terms of composition, I have chosen to adopt Dr. Santiago's version for the purpose of this work. This decision is based on the fact that the table he provided reflects the information he, as my instructor, has shared with me. While I acknowledge the discrepancies and the lack of clear sourcing in his data, I consider it appropriate to proceed with his version for expediency, particularly as it aligns with the guidance he has given in our coursework.
 \end{minipage}\\
 
@@ -403,10 +399,10 @@ These treatments were applied to assess how they influence the alloy's mechanica
         }
         \textbf{Equipment} & \textbf{Image} & \textbf{Reasoning} \\ 
         Digital Caliper & \includegraphics[width=\imas,valign=c]{images/digital_vernier_caliper.jpg} & Enables precise and accurate measurement of small dimensions, such as the diameter, thickness, and depth of samples, crucial for ensuring consistency in experimental setup and results. \\
-        Vickers Hardness Testing Machine & \includegraphics[width=\imas,valign=c]{images/hardness.png} & Used to assess the hardness of materials by applying a standardized force to create an indentation, which is then measured to determine the material's resistance to deformation. \\
+        Vickers Hardness Testing Machine & \includegraphics[width=2.1cm,height=2.4cm,valign=c]{images/hardness.png} & Used to assess the hardness of materials by applying a standardized force to create an indentation, which is then measured to determine the material's resistance to deformation. \\
         Zwick Roell 2050 Tensile Testing Machine & \includegraphics[width=\imas,valign=c]{images/tensilemachine.png} & Evaluates the tensile strength and mechanical properties of materials under uniaxial tension, providing data essential for material performance analysis and comparison. \\
         \textbf{Personal Protective Equipment (PPE):} Safety glasses, closed-toe shoes, lab coat & \includegraphics[width=\imas,valign=c]{images/ppe.jpg} & Protects against potential hazards in tensile testing, such as flying debris from specimen fracture, pinch points in the testing machine, and general laboratory risks further shown in Table \ref{tab:risk-assessment}.\\
-        Camera/Smartphone and Stationery & \includegraphics[width=\imas,valign=c]{images/stationary.png} & Essential for documenting experimental setups and procedures, capturing visual evidence of results, and recording detailed observations, calculations, and procedural notes for accurate reporting. \\
+        Camera/Smartphone and Stationery & \includegraphics[width=\imas,valign=c]{images/stationary.png} & For documenting experimental setups and procedures, capturing visual evidence of results, and recording detailed observations, calculations, and procedural notes for accurate reporting. \\
     \end{tblr}
     \caption{Overview of Equipment Used in the Experiment}
     \label{tab:equipment_overview}
@@ -434,8 +430,8 @@ The experimental procedures involved several potential hazards. The identified r
             hlines, vlines
         }
         Hazard & Risk & Level of Risk & Control Measures \\
-        \mr{Sharp edges of dogbone samples}{4cm} & \mr{Cuts or injuries while handling samples}{5cm} & Medium & \mr{Handle with care; use gloves when measuring and mounting samples.}{5cm} \\
         Tensile testing machine & \mr{Pinching or crushing injuries from moving parts}{5cm} & High & Keep hands and body away from moving components during operation; follow machine's safety protocols. \\
+        \mr{Sharp edges of dogbone samples}{4cm} & \mr{Cuts or injuries while handling samples}{5cm} & Medium & \mr{Handle with care; use gloves when measuring and mounting samples.}{5cm} \\
         \mr{Vickers hardness testing machine}{4cm} & Injury from improper handling or sample misplacement & Medium & Ensure proper training before operation; position samples correctly and keep fingers clear. \\
         \mr{General laboratory environment}{4cm} & Slips, trips, and falls due to clutter or spills & Low & Maintain a tidy workspace; clean spills immediately; wear appropriate footwear. \\
     \end{tblr}
@@ -443,7 +439,7 @@ The experimental procedures involved several potential hazards. The identified r
     \label{tab:risk-assessment}
 \end{table}
 
-\subsection{Conducting the Experiment}
+\section{Conducting the Experiment}
 For the experiment, we were provided with three samples, which are visually represented in the image below:
 \begin{figure}[H] 
     \centering 
@@ -456,15 +452,19 @@ Additionally, we were given an A4 sheet with a form to complete, which looked as
 
 \begin{figure}[H] 
     \centering 
-    \includegraphics[width=\textwidth]{figures/alloys_base.jpg} 
+    \includegraphics[width=0.98\textwidth,cfbox=gray!22 1pt]{figures/alloys_base.jpg} % LoL this shit would have been like 1k plus line at the least
     \caption{Form for recording sample measurements} 
     \label{fig:alloys} 
 \end{figure}
 
-On this form, we recorded the width, length (both in millimeters), and hardness (measured using the HV5 scale) for each of the three alloy samples as the initial phase of the experimental lab. These tasks were performed simultaneously, as they are relatively quick and do not require sequential completion. For instance, while the first sample was undergoing hardness testing, we measured the dimensions of the other samples.\\[8pt]
-I will now demonstrate how we used digital calipers to measure the alloy samples in millimeters, along with the results obtained from these measurements:
-
+\textbf{General Overview:}
+The experiment was conducted in two phases: measuring the dimensions and hardness of alloy samples, followed by testing their tensile properties with the Zwick Roell 2050 Tensile Testing Machine. \\[8pt]
+In the first phase, the width and length of each sample were recorded using digital calipers (in millimeters), while hardness was measured with a Vickers Hardness test machine using the HV5 scale. These tasks were conducted simultaneously, as both are quick and independent processes.\\[8pt]
+After documenting the dimensions and hardness on the data sheet (See Figure \ref{fig:alloys}), we proceeded to the second phase of the experiment. Each sample was subjected to a controlled tensile force until fracture using the Zwick Roell 2050 Tensile Testing Machine. The data, including force applied and change in length, was recorded and summarized in a shared graph and table for all three alloys. This data was printed on an A4 sheet (See Figure \ref{fig:tensile_results}) and provided for further analysis outside the lab. Key parameters such as stress, strain, ultimate tensile strength, yield strength, and elongation these parameters were calculated after the experiment and are presented as a key part of the analysis in this report.\\[8pt]
+The following subsections detail the use of the equipment, outlining each step of the procedure and the results obtained at each stage.\\
+\newpage
 \begin{minipage}{0.32\textwidth}
+\hspace{2em}
 \begin{tikzpicture}[rotate around y=225, use Hobby shortcut,scale=0.35, every node/.style={scale=0.35}]
     \LARGE
     \def\width{4}
@@ -655,12 +655,12 @@ I will now demonstrate how we used digital calipers to measure the alloy samples
 \label{tab:dimensions}
 \vspace{1em}
 \noindent
-We measured the dimensions of each alloy using a digital calliper and recorded the results on an A4 sheet (See Figure \ref{fig:alloys}). We were informed that the gauge length was 50 mm, but we did not measure it ourselves. Although checking measurements is good practice, this analysis does not require it because the gauge length has no bearing on the cross-sectional area (CSA) computations further explained below.
+We measured the dimensions of each alloys gauge region using a digital calliper and recorded the results on the data sheet ( \ref{fig:alloys}). We were informed that the gauge length was 50 mm, but we did not measure it ourselves. Although checking measurements is good practice, this analysis does not require it because the gauge length has no bearing on the cross-sectional area (CSA), further explained below.
 \end{minipage}\\
 \vspace{1em}
 \hspace{-2em}
 \begin{minipage}{0.4\textwidth}
-\hspace{1em}\begin{minipage}{0.3\textwidth} 
+\hspace{2em}\begin{minipage}{0.3\textwidth} 
 \centering
 \begin{tikzpicture}[rotate around y=225, use Hobby shortcut, scale=0.25, every node/.style={scale=0.25}]
     \large
@@ -1186,7 +1186,7 @@ We measured the dimensions of each alloy using a digital calliper and recorded t
 \end{minipage}
 \begin{minipage}{0.63\textwidth}
     \vspace{-2em}
-    \subsection{Cross-Sectional Areas (CSA)}
+    \subsubsection{Cross-Sectional Areas (CSA)}
     \begin{center}
         \begin{tblr}{
                 width=\textwidth,
@@ -1214,14 +1214,15 @@ We measured the dimensions of each alloy using a digital calliper and recorded t
     \captionof{table}{Calculated Cross-Sectional Areas (CSA) for AR, ST, and PH}
     \label{tab:csa}
     \vspace{1em}\noindent
-    In a tensile test, force is applied from the top and bottom of the alloy, stretching it along its length. Stress is calculated as the force divided by the area perpendicular to the applied force. Thus, the appropriate cross-sectional area for stress calculation is the one that is perpendicular to this force.
-\end{minipage}\\
-\begin{itemize}[itemsep=-1mm]
-    \item \textbf{\textcolor{blue}{\textsf{CSA 1}}:} This represents the front and back faces of the alloy, where the width and length are multiplied. However, this CSA is parallel to the applied force, and hence is not the correct area for stress calculations.
-    \item \textbf{\textcolor{green!50!black}{\textsf{CSA 2}}:} This represents the left and right faces of the alloy. Similar to CSA 1, it is parallel to the applied force and is not used for calculating stress.
-    \item \textbf{\textcolor{red}{\textsf{CSA 3}}:} This represents the internal face, which is perpendicular to the front/back faces. Since this CSA is perpendicular to the applied force, it is the correct one to use for stress calculations.
+    In a tensile test, force is applied from the top and bottom of the alloy, stretching it along its length. Stress is calculated as the force divided by the area \textbf{perpendicular} to the applied force. Thus, the appropriate cross-sectional area for stress calculation is the one that is perpendicular to this force.\footnotemark
+\end{minipage}\\ \footnotetext{Please note that the calculations for the cross-sectional area (CSA) are conducted externally, not as part of the laboratory procedure, which is important for later context.}
+\begin{itemize}[itemsep=-0.3mm]
+    \item \textbf{\textcolor{blue}{\textsf{CSA 1}}:} This CSA parameterizes the thickness dimension of the alloy and remains coplanar with the applied force vector, rendering it unsuitable for stress calculations.
+    \item \textbf{\textcolor{green!50!black}{\textsf{CSA 2}}:} This CSA parameterizes the width dimension and also remains coplanar with the applied force vector, thus it is not utilized for stress calculations.
+    \item \textbf{\textcolor{red}{\textsf{CSA 3}}:} This CSA parameterizes the longitudinal dimension of the material and maintains orthogonality to the applied force vector, making it the appropriate choice for stress calculations.
 \end{itemize}
-Thus, for stress calculations, we use \textbf{CSA 3}, as it is the area perpendicular to the applied force. The table below shows the calculated CSA values for which is to be used.\vspace{1em}
+\newpage
+Thus, for stress calculations, we use \textbf{CSA 3}, as it is the area perpendicular to the applied force. The table below shows the calculated cross section area values for which is to be used.\vspace{1em}
 \begin{center}
     \begin{tblr}{
             width=\textwidth,
@@ -1232,78 +1233,37 @@ Thus, for stress calculations, we use \textbf{CSA 3}, as it is the area perpendi
             cells={valign=m,halign=c}
         }
         Property (\(\bm{\text{mm}^2}\)) & AR & ST & PH\\
-        {\textbf{\textsf{CSA 3}}} & 71.88 & 76.56& 73.96 \\
+        {\textbf{{Cross-Sectional Area}}} & 71.88 & 76.56& 73.96 \\
     \end{tblr}
 \end{center}
 \captionof{table}{Cross-Sectional Area (CSA) to be used for stress}
 \label{tab:csa3}
 \vspace{1em}\noindent
-As noted, \textbf{CSA 3} is the appropriate measurement for stress calculations, as it is perpendicular to the applied force. This data will be utilized in subsequent calculations related to stress and other relevant analyses.
+This data will be used in subsequent calculations for stress and other related analyses.
 
 \subsection{Hardness Test}
-To test the hardness of our alloys, we decided to use the Vickers hardness (HV) test, a precise and versatile method for evaluating material hardness. This method employs a diamond-shaped indenter with a square base and an included angle of 136\textdegree between opposing faces.\\
-\vspace{3pt}
+To test the hardness of our alloys, we chose the Vickers hardness (HV) test, a precise and versatile method for evaluating material hardness, among others (see Appendix A). This method employs a diamond-shaped indenter with a square base and an included angle of 136\textdegree \ between opposing faces (See Figure \ref{fig:vickers-diagram}).\\
+\vspace{7pt}
 \begin{minipage}{0.55\textwidth}
-    The indenter is pressed into the material under a specific load, typically ranging from 1 to 100 kgf, applied for 10 to 15 seconds. In our case, we applied a load of 5 N for a duration of around 1-5 seconds.\\[8pt]
-    The process began by pressing the indenter down onto the surface of the alloy, creating an indent. Once the indentation was made, we repositioned the specimen on the testing machine. Using a wheel or cog, we adjusted the specimen to align the indentation with two parallel lines, ensuring that the indent was positioned accurately between them, as shown in the Figure \ref{fig:vickers}.\\[8pt]
-    After repositioning the sample, we measured the two diagonals of the indentation, \(d_1\) and \(d_2\). 
+    The indenter is pressed into the material under a specific load, typically ranging from 1 to 100 kgf, applied for 10 to 15 seconds. In our case, we applied a load of 5N for a duration of around 1-5 seconds.\\[8pt]
+    The process began by pressing the indenter onto the alloy surface, creating an indent. Afterward, using a dial, we adjusted the two parallel lines to align with the indent, measuring the first distance, \(d_1\), ensuring the indent was accurately positioned between the two sides (See Figure \ref{fig:vickers}). \\[8pt]  
+    Once the first measurement was confirmed, we repositioned the sample and took the second distance measurement, \(d_2\), for the indent.\\[8pt]
+    Finally, once both distances were recorded by the machine, we pressed a button to calculate the hardness.
 \end{minipage}\hspace{1em}
 \begin{minipage}{0.4\textwidth}\centering
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{images/1024px-Vicker_Hardness_-_Diamond_Indentation.jpg}
-    \caption{Illustration showing the diamond-shaped indenter and the parallel lines used for measuring the indentation. (Wikipedia)}
+    \caption{Illustration showing the indent and the parallel lines used for measuring the indentation. (Wikipedia)}
     \label{fig:vickers}
 \end{figure}
 \end{minipage}\\
-\vspace{5pt}
-To ensure accuracy and consistency, the indentation was measured twice for the alloy. This procedure was repeated for all three alloys, and the resulting hardness values were recorded on an A4 sheet (see Figure \ref{fig:alloys}) for later analysis.\\[8pt]
-Although the machine automatically calculates the hardness, it is important to understand the underlying process. The diagonals of the indentation $d_1$ and $d_2$ are used to calculate the Vickers hardness by determining the surface area of the indent. This area depends on the average of the two diagonal measurements, $d_1$ and $d_2$, as well as the geometry of the indentation. Together, these provide the necessary data to compute the material's hardness.\\[8pt]
-Here, I demonstrate and derive the pertinent equation and calculation for the HV5 test:
-\begin{figure}[H]
-    \centering
-    \begin{minipage}{0.45\textwidth}\centering
-        \vspace{1em}\includegraphics[width=0.8\textwidth]{figures/3537580_orig-0000.jpg}
-        \caption{Diagram showing the diamond-shaped indenter with the 136° angle and diagonals \(d_1\) and \(d_2\).}
-        \label{fig:vickers-diagram}
-    \end{minipage}\hfill
-    \begin{minipage}{0.51\textwidth}
-        The Vickers hardness (HV) is calculated using the applied force (\(F\)) and the surface area (\(A\)) of the indentation. 
-        \begin{equation}
-            \text{HV} = \frac{F}{A}
-        \end{equation}
-        \begin{itemize}[itemsep=-1mm]
-            \item HV: Vickers hardness (dimensionless)
-            \item \(F\): Applied force (kgf or N)
-            \item \(A\): Surface area of the indentation (mm\(^2\))
-            
-        \end{itemize}
-        The formula for $A$ incorporates the geometry of the diamond pyramid indenter, 
-        Such that surface area \(A\) can be expressed as:
-        \begin{equation}
-            A = \frac{d^2}{2\sin\left(\frac{136^\circ}{2}\right)} \approx \frac{d^2}{1.854} 
-        \end{equation}
-        Where:  
-        \begin{itemize}[itemsep=-1mm]
-            \item \(A\): Surface area of the indentation (mm\(^2\))
-            \item \(d\): Arithmetic mean of the diagonals \(d_1\) and \(d_2\) (mm)
-        \end{itemize}
-        in so that it can be rewritten in terms of the diagonals as so:
-        \begin{equation}
-            A= \frac{\left(\frac{d_1+d_2}{2}\right)^2}{2\sin\left(\frac{136^\circ}{2}\right)} \approx \frac{\left(d_1 + d_2\right)^2}{7.236}
-        \end{equation}
-    \end{minipage}\\
-\end{figure}
-\vspace{-0.1em}\noindent
-Thus the derived formula is commonly shown as
-\begin{equation}
-    {\text{HV} = \frac{F}{A} \approx \, \frac{1.854 \times F}{d^2} \approx \, \frac{7.236\times F}{\left(d_1 + d_2\right)^2}}    
-\end{equation} 
-The HV5 test we conducted applied a fixed load of 5 kgf (49.03 N), and the hardness was calculated via the machine as:  
-\begin{equation}
-    \text{HV5} = \frac{49.03}{A} \approx \, \frac{90.902}{d^2} \approx \, \frac{354.781}{\left(d_1 + d_2\right)^2}
-\end{equation}
-Were values for \(d_1\) and \(d_2\) were determined using the dial on the machine, and the corresponding hardness values are automatically calculated by the machine upon completion. It is important to note that the resulting hardness value is expressed as a dimensionless number.\\The recorded results were documented on the A4 sheet (see Figure \ref{fig:alloys}) and were as follows:
+\vspace{10pt}
+To ensure accuracy and consistency, this process was done at least 2-3 times for each given alloy and the resulting hardness values were recorded on the data sheet (See Figure \ref{fig:alloys}) for later analysis.\\[8pt]
+Although the machine automatically calculates the hardness, it is important to understand the underlying process. The diagonals of the indentation $d_1$ and $d_2$ are used to calculate the Vickers hardness by determining the surface area of the indent. This area depends on the average of the two diagonal measurements, $d_1$ and $d_2$, as well as the geometry of the indentation. Together, these provide the necessary data to compute the material's hardness, i demonstrate and derive the pertinent equation and calculation for the HV5 test within theory section (See Subsection \ref{VHC}).
+\newpage
+The recorded results were documented on the data sheet (See Figure \ref{fig:alloys}) and were as follows:\\
+\vspace{0.3em}
 \begin{center}
     \begin{tblr}{
             width=\textwidth,
@@ -1320,16 +1280,87 @@ Were values for \(d_1\) and \(d_2\) were determined using the dial on the machin
     \caption{HV5 Data}
     \label{tab:hv5}
 \end{center}
-Here Table \ref{tab:hv5} presents both the individual and average Vickers hardness (HV5) values for each alloy. The individual measurements were recorded, and the averages were calculated using the standard formula \(\frac{\sum x_i}{n}\) to provide representative values.\\[8pt]
-A detailed analysis of these results will be provided in the results section, where trends and implications will be thoroughly examined.
-
+\vspace{0.3em}
+Here Table \ref{tab:hv5} presents the individual and average Vickers hardness (HV5) values for each alloy. Averages were calculated using the mean formula (See Appendix C). A detailed analysis of these results will be provided in the results section, where trends and implications will be thoroughly examined.
 \subsection{Tensile Test}
-\newpage\vspace*{-5pt}
-    \section{Theory}
+
+
+\begin{minipage}[t]{0.4\textwidth}
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/tensile_machine.jpg}
+    \caption{Zwick 50 kN tensile testing machine}
+    \label{fig:tensile_machine}
+    \end{figure}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.555\textwidth}
+This phase of the experiment focused on evaluating the alloy's mechanical properties through tensile testing. A tensile testing machine similar to the one depicted in Figure \ref{fig:tensile_machine} was employed.\\[8pt]
+An axial load was applied to the standardised dog-bone-shaped alloy as part of the destructive test procedure. The alloy, which had a precisely sized gauge area, was held firmly at both ends and extended at a regulated pace until it broke.\\[8pt]
+The tensile tester used in this lab was a Zwick machine, with a maximum load capacity of 50 kN and an adjustable pulling rate. For analysis, a plot of force (N) versus elongation (mm) was generated in real-time during the experiment. This process was automated using the software provided by the manufacturer. It is worth noting that the machine did not account for the thickness or width of the sample, as these dimensions were not directly relevant to the data collected.
+\end{minipage}\\[8pt]
+ Technically, the initial length of the specimen is also not required, since the plot records the change in length starting from zero. Consequently, it is necessary for us to establish the relationship between the generated data and the initial measurements (e.g., cross-sectional area and original gauge length). While it may seem that providing the machine with the cross-sectional area and initial gauge length could have directly yielded a stress-strain curve, it is likely that this approach was deliberately avoided to encourage independent analysis and a deeper understanding of the process.\\[8pt]
+The procedure followed during the tensile test was as follows: 
+\begin{itemize} 
+    \item We ensured all safety precautions, including wearing safety glasses and maintaining a safe distance (approximately 1.5 meters) from the equipment while the test was running. \\
+    \item Upon initiating the test by clicking the "Start" button, the upper and lower grips moved in opposite directions according to the set pulling rate. We carefully observed the experiment from a safe distance, noting the failure mode when the specimen failed. \\
+\end{itemize}
+The first noticeable event was necking, where the material started to undergo localized plastic deformation. This was clearly visible in the force-elongation plot, as the elongation increased significantly without a corresponding rise in force, indicating that the material was weakening at the necked region. Following necking, the specimen exhibited different behaviors depending on its material properties: in some cases, necking continued to propagate slowly, and the specimen was able to elongate further before breaking; in other cases, the necking intensified rapidly, leading to a quicker failure. The rate of necking progression can vary significantly—some materials may exhibit slow, stable necking before ultimate fracture, while others can experience rapid fracture soon after necking begins, especially in brittle or less ductile alloys. The force-elongation plot captures these differences, showing a sharp drop in force once the material reaches its breaking point, which is evident in See Figure \ref{fig:force_elong}.
+
+
+   \section{Theory}
+    In this section, i aim to provide the theoretical foundations that underpin the methods and analyses conducted in this experiment. "Theory" refers to the conceptual framework and principles that guide our understanding of the phenomena we are investigating. It includes the mathematical models, formulas, and relationships that form the basis for our experimental approach, as well as the reasoning behind the techniques used.\\[8pt]
+    This section will cover key concepts related to the Vickers hardness test, including the definition of hardness, the mechanism behind the indentation process, and the equations used to calculate Vickers hardness. Additionally, it will include essential topics related to the tensile test, such as the calculation of stress and strain, the construction of stress-strain curves, and the analysis of material behavior under tensile loading.\\[8pt]
+    By understanding these fundamental principles, we can effectively interpret our experimental results and perform accurate calculations. This section will also address other relevant concepts, such as the Young's modulus, yield strength, and the significance of failure modes in materials.\\[8pt]
+    This theory section serves as the foundation for the subsequent experimental procedures and data analysis, ensuring that our conclusions are based on a sound understanding of the relevant scientific principles. 
+   \subsection{Vickers Hardness Calculation}\label{VHC}
+   \begin{figure}[H]
+       \centering
+       \begin{minipage}{0.45\textwidth}\centering
+           \vspace{1em}\includegraphics[width=0.8\textwidth]{figures/3537580_orig-0000.jpg}
+           \caption{Diagram showing the diamond-shaped indenter with the 136° angle and diagonals \(d_1\) and \(d_2\).}
+           \label{fig:vickers-diagram}
+       \end{minipage}\hfill
+       \begin{minipage}{0.51\textwidth}
+           The Vickers hardness (HV) is calculated using the applied force (\(F\)) and the surface area (\(A\)) of the indentation. 
+           \begin{equation}
+               \text{HV} = \frac{F}{A}
+           \end{equation}
+           \begin{itemize}[itemsep=-1mm]
+               \item HV: Vickers hardness (dimensionless)
+               \item \(F\): Applied force (kgf or N)
+               \item \(A\): Surface area of the indentation (mm\(^2\))
+               
+           \end{itemize}
+           The formula for $A$ incorporates the geometry of the diamond pyramid indenter, 
+           Such that surface area \(A\) can be expressed as:
+           \begin{equation}
+               A = \frac{d^2}{2\sin\left(\frac{136^\circ}{2}\right)} \approx \frac{d^2}{1.854} 
+           \end{equation}
+           Where:  
+           \begin{itemize}[itemsep=-1mm]
+               \item \(A\): Surface area of the indentation (mm\(^2\))
+               \item \(d\): Arithmetic mean of the diagonals \(d_1\) and \(d_2\) (mm)
+           \end{itemize}
+           in so that it can be rewritten in terms of the diagonals as so:
+           \begin{equation}
+               A= \frac{\left(\frac{d_1+d_2}{2}\right)^2}{2\sin\left(\frac{136^\circ}{2}\right)} \approx \frac{\left(d_1 + d_2\right)^2}{7.236}
+           \end{equation}
+       \end{minipage}\\
+   \end{figure}
+   \vspace{-1em}\noindent
+   Thus the derived formula is commonly shown as
+   \begin{equation}
+       {\text{HV} = \frac{F}{A} \approx \, \frac{1.854 \times F}{d^2} \approx \, \frac{7.236\times F}{\left(d_1 + d_2\right)^2}}    
+   \end{equation} 
+   The HV5 test we conducted applied a fixed load of 5 kgf (49.03 N), and the hardness was calculated via the machine as:  
+   \begin{equation}
+       \text{HV5} = \frac{49.03}{A} \approx \, \frac{90.902}{d^2} \approx \, \frac{354.781}{\left(d_1 + d_2\right)^2}
+   \end{equation}
+   Values for \(d_1\) and \(d_2\) were determined using the machine dial, and the corresponding hardness values were calculated based on them.\footnote{It is important to note that the resulting hardness value is expressed as a dimensionless number.}\\[8pt]
 
     \newpage\vspace*{-20pt}
     
-    \section{Results}
+    \section{Data and Result Calculations}
         \renewcommand{\arraystretch}{1.4}
         \begin{table}[H]
             \centering
@@ -1350,11 +1381,20 @@ A detailed analysis of these results will be provided in the results section, wh
 
     \begin{figure}[H]
         \centering
-        \includegraphics[scale=0.56]{figures/graph.png}
-        \caption{Machine produced data}
-        \label{fig:stress_strain}
+        \includegraphics[scale=0.56]{figures/force_vs_elongation.png}
+        \caption{Machine produced data for Force vs Elongation}
+        \label{fig:force_elong}
     \end{figure}
+
+    \begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.56]{figures/stress_vs_strain.png}
+    \caption{Calculated produced data for Stress vs Strain}
+    \label{fig:stress_strain}
+\end{figure}
     
+    The similarity between the Force vs Elongation graph and the Stress vs Strain graph arises from the underlying relationship between force, elongation, stress, and strain. In the Force vs Elongation graph, force (in Newtons) is plotted against the change in length (elongation, in millimeters), showing the direct relationship between the applied load and the resulting deformation. However, in the Stress vs Strain graph, both force and elongation are scaled down by constants: force is divided by the cross-sectional area of the specimen, and elongation is divided by the original gauge length of the specimen. This scaling reduces the magnitude of the values in the Stress vs Strain graph, which is why the graph appears smaller, even though the overall shape and behavior are similar. Specifically, stress represents force per unit area, and strain represents the relative change in length, both of which are dimensionless or have smaller units compared to force and elongation. Therefore, the difference in graph scales is simply due to this division by constants, which doesn't affect the overall shape of the curve but rather scales the values down, making the Stress vs Strain graph appear "smaller" than the Force vs Elongation graph.
+        
     \newpage\vspace*{-5pt}
     \section{Discussion}
 
@@ -1381,6 +1421,12 @@ A detailed analysis of these results will be provided in the results section, wh
         
         \item Alan Turing Institute (2024) \textit{Data-Driven Experiment Design}. Available at: \url{https://www.turing.ac.uk/research/research-projects/data-driven-experiment-design} [Accessed 20 December 2024].
         
+        % confirmation clari
+        % https://www.actonbrightsteel.co.uk/6082-t6-acton-bright-steel.html
+        
+        % compisition
+        % file:///home/sak/Downloads/Aalco-Metals-Ltd_Aluminium-Alloy-6082-T6T651-Plate_148.pdf
+        % https://www.aalco.co.uk/datasheets/Aluminium-Alloy_6082-T6~T651_148.ashx
     \end{enumerate}
 
     
@@ -1421,5 +1467,20 @@ The BHN provides insight into a material's ability to resist wear and deformatio
 FFDs are most often used as a component of RSM. But they can in principle be used independently, either as part of a one-shot experiment, or as part of a sequential design approach that does not involve RSM. They seem unlikely to be very useful when used in a one-shot experiment, which is probably why they are so tightly connected to RSM.\\[8pt]
 Additionally, RSM can take as its input experimental designs that are not FFDs. Central Composite Designs and Box-Behnken designs are two other commonly-used designs.\\[8pt]
 My thanks to kjetil b halvorsen and Gregg H for their input and the suggested resources. I was not able to lay my hands on the Montgomery book but found the Box, Hunter \& Hunter book very useful.
+
+\subsection{Mean/Average}
+
+The mean, or average, of a set of values is calculated by summing all individual values and dividing by the total number of values, as shown by the formula:
+
+\begin{equation}
+    \text{Mean} = \frac{\sum x_i}{n}
+\end{equation}
+Were:
+\begin{itemize}[itemsep=-1mm]
+    \item \textbf{Mean} : The arithmetic average of a dataset, representing the central tendency of the values.
+    \item \( x_i \) : Each individual value in the dataset.
+    \item \( n \) : The total number of values in the dataset.
+    \item \( \sum x_i \) : The sum of all the individual values.
+\end{itemize}
 
 \end{document}

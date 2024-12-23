@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.22)  21 DEC 2024 19:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.22)  22 DEC 2024 14:30
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1403,45 +1403,69 @@ Package: xurl 2022/01/09 v 0.10 modify URL breaks
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarypatterns.meta.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.met
-a.code.tex))
+a.code.tex)) (/usr/share/texlive/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2023/07/05 v6.0f a miscellany of footnote facilities
+\FN@temptoken=\toks62
+\footnotemargin=\dimen456
+\@outputbox@depth=\dimen457
+\FN@tempboxb=\box128
+\FN@tempboxc=\box129
+\footglue=\skip111
+\footnotebaselineskip=\dimen458
+Package footmisc Info: Declaring symbol style bringhurst on input line 696.
+Package footmisc Info: Declaring symbol style chicago on input line 704.
+Package footmisc Info: Declaring symbol style wiley on input line 713.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 724.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 744.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 765
+.
+)
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 171.
+h' as default language. on input line 172.
 No file figures/main-figure0.aux.
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 171.
-LaTeX Font Info:    ... okay on input line 171.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count416
-\scratchdimen=\dimen456
-\scratchbox=\box128
+\scratchdimen=\dimen459
+\scratchbox=\box130
 \nofMPsegments=\count417
 \nofMParguments=\count418
-\everyMPshowfont=\toks62
+\everyMPshowfont=\toks63
 \MPscratchCnt=\count419
-\MPscratchDim=\dimen457
+\MPscratchDim=\dimen460
 \MPnumerator=\count420
 \makeMPintoPDFobject=\count421
-\everyMPtoPDFconversion=\toks63
+\everyMPtoPDFconversion=\toks64
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+(/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
@@ -1457,9 +1481,9 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 171.
+or `english'. on input line 172.
 \providecommand\hyper@newdestlabel[2]{}
-Package hyperref Info: Link coloring OFF on input line 171.
+Package hyperref Info: Link coloring OFF on input line 172.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 (/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
@@ -1475,19 +1499,19 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-LaTeX Info: Redefining \microtypecontext on input line 171.
-Package microtype Info: Applying patch `item' on input line 171.
-Package microtype Info: Applying patch `toc' on input line 171.
-Package microtype Info: Applying patch `eqnum' on input line 171.
-Package microtype Info: Applying patch `footnote' on input line 171.
-Package microtype Info: Applying patch `verbatim' on input line 171.
+LaTeX Info: Redefining \microtypecontext on input line 172.
+Package microtype Info: Applying patch `item' on input line 172.
+Package microtype Info: Applying patch `toc' on input line 172.
+Package microtype Info: Applying patch `eqnum' on input line 172.
+Package microtype Info: Applying patch `footnote' on input line 172.
+Package microtype Info: Applying patch `verbatim' on input line 172.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 171.
+LaTeX Info: Redefining \showhyphens on input line 172.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1504,11 +1528,11 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
 * h-part:(L,W,R)=(57.81621pt, 498.66258pt, 57.81621pt)
-* v-part:(T,H,B)=(36.135pt, 708.24622pt, 50.58878pt)
+* v-part:(T,H,B)=(36.135pt, 708.96852pt, 49.86647pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
 * \textwidth=498.66258pt
-* \textheight=641.24622pt
+* \textheight=641.96852pt
 * \oddsidemargin=-14.45378pt
 * \evensidemargin=-14.45378pt
 * \topmargin=-36.135pt
@@ -1534,21 +1558,21 @@ Package: ninecolors 2022-02-13 v2022D Select colors with proper color contrast
 )
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/14
 .4'
-(microtype)             (new value: 14.4pt) on input line 182.
+(microtype)             (new value: 14.4pt) on input line 183.
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/10
 '
-(microtype)             (new value: 10.0pt) on input line 182.
+(microtype)             (new value: 10.0pt) on input line 183.
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/7'
 
-(microtype)             (new value: 7.0pt) on input line 182.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 182
+(microtype)             (new value: 7.0pt) on input line 183.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 183
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 182
+LaTeX Font Info:    Trying to load font information for U+msb on input line 183
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1557,46 +1581,46 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/14.4
 '
-(microtype)             (new value: 14.4pt) on input line 182.
+(microtype)             (new value: 14.4pt) on input line 183.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/10'
-(microtype)             (new value: 10.0pt) on input line 182.
+(microtype)             (new value: 10.0pt) on input line 183.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/7'
-(microtype)             (new value: 7.0pt) on input line 182.
+(microtype)             (new value: 7.0pt) on input line 183.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/14.4
 '
-(microtype)             (new value: 14.4pt) on input line 182.
+(microtype)             (new value: 14.4pt) on input line 183.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/10'
-(microtype)             (new value: 10.0pt) on input line 182.
+(microtype)             (new value: 10.0pt) on input line 183.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/7'
-(microtype)             (new value: 7.0pt) on input line 182.
+(microtype)             (new value: 7.0pt) on input line 183.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/14.4
 '
-(microtype)             (new value: 14.4pt) on input line 182.
+(microtype)             (new value: 14.4pt) on input line 183.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/10'
-(microtype)             (new value: 10.0pt) on input line 182.
+(microtype)             (new value: 10.0pt) on input line 183.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/7'
-(microtype)             (new value: 7.0pt) on input line 182.
+(microtype)             (new value: 7.0pt) on input line 183.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/14.4
 '
-(microtype)             (new value: 14.4pt) on input line 182.
+(microtype)             (new value: 14.4pt) on input line 183.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/10'
-(microtype)             (new value: 10.0pt) on input line 182.
+(microtype)             (new value: 10.0pt) on input line 183.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/7'
-(microtype)             (new value: 7.0pt) on input line 182.
+(microtype)             (new value: 7.0pt) on input line 183.
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 18
-2.
+3.
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/14
 .4'
-(microtype)             (new value: 14.4pt) on input line 182.
+(microtype)             (new value: 14.4pt) on input line 183.
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/10
 '
-(microtype)             (new value: 10.0pt) on input line 182.
+(microtype)             (new value: 10.0pt) on input line 183.
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/7'
 
-(microtype)             (new value: 7.0pt) on input line 182.
+(microtype)             (new value: 7.0pt) on input line 183.
 The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
 logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
 se' to disable this.
@@ -1630,46 +1654,46 @@ The command '\includegraphics [width=2cm,valign=c]{images/profile.jpg}' has bee
 n optimized away. Use '/tikz/external/optimize=false' to disable this.
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/12
 '
-(microtype)             (new value: 12.0pt) on input line 220.
+(microtype)             (new value: 12.0pt) on input line 221.
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/8'
 
-(microtype)             (new value: 8.0pt) on input line 220.
+(microtype)             (new value: 8.0pt) on input line 221.
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/6'
 
-(microtype)             (new value: 6.0pt) on input line 220.
+(microtype)             (new value: 6.0pt) on input line 221.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/12'
-(microtype)             (new value: 12.0pt) on input line 220.
+(microtype)             (new value: 12.0pt) on input line 221.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/8'
-(microtype)             (new value: 8.0pt) on input line 220.
+(microtype)             (new value: 8.0pt) on input line 221.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/6'
-(microtype)             (new value: 6.0pt) on input line 220.
+(microtype)             (new value: 6.0pt) on input line 221.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/12'
-(microtype)             (new value: 12.0pt) on input line 220.
+(microtype)             (new value: 12.0pt) on input line 221.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/8'
-(microtype)             (new value: 8.0pt) on input line 220.
+(microtype)             (new value: 8.0pt) on input line 221.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/6'
-(microtype)             (new value: 6.0pt) on input line 220.
+(microtype)             (new value: 6.0pt) on input line 221.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/12'
-(microtype)             (new value: 12.0pt) on input line 220.
+(microtype)             (new value: 12.0pt) on input line 221.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/8'
-(microtype)             (new value: 8.0pt) on input line 220.
+(microtype)             (new value: 8.0pt) on input line 221.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/6'
-(microtype)             (new value: 6.0pt) on input line 220.
+(microtype)             (new value: 6.0pt) on input line 221.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/12'
-(microtype)             (new value: 12.0pt) on input line 220.
+(microtype)             (new value: 12.0pt) on input line 221.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/8'
-(microtype)             (new value: 8.0pt) on input line 220.
+(microtype)             (new value: 8.0pt) on input line 221.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/6'
-(microtype)             (new value: 6.0pt) on input line 220.
+(microtype)             (new value: 6.0pt) on input line 221.
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/12
 '
-(microtype)             (new value: 12.0pt) on input line 220.
+(microtype)             (new value: 12.0pt) on input line 221.
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/8'
 
-(microtype)             (new value: 8.0pt) on input line 220.
+(microtype)             (new value: 8.0pt) on input line 221.
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/6'
 
-(microtype)             (new value: 6.0pt) on input line 220.
+(microtype)             (new value: 6.0pt) on input line 221.
 The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
 logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
 se' to disable this.
@@ -1686,11 +1710,25 @@ se' to disable this.
 The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
 logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
 se' to disable this.
+Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/5'
+
+(microtype)             (new value: 5.0pt) on input line 261.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/5'
+(microtype)             (new value: 5.0pt) on input line 261.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/5'
+(microtype)             (new value: 5.0pt) on input line 261.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/5'
+(microtype)             (new value: 5.0pt) on input line 261.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/5'
+(microtype)             (new value: 5.0pt) on input line 261.
+Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/5'
+
+(microtype)             (new value: 5.0pt) on input line 261.
 The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
 logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
 se' to disable this.
 
-Overfull \hbox (47.52603pt too wide) in paragraph at lines 272--299
+Overfull \hbox (47.52603pt too wide) in paragraph at lines 279--302
 []  [] 
  []
 
@@ -1699,21 +1737,21 @@ logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
 se' to disable this.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 322.
+(caption)                particular \caption on input line 326.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 338.
+(caption)                particular \caption on input line 344.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `tab:composition_6082' on page 9 undefined on input li
-ne 343.
+ne 349.
 
 
 LaTeX Warning: Reference `tab:composition_he30' on page 9 undefined on input li
-ne 347.
+ne 353.
 
 The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
 logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
@@ -1728,8 +1766,9 @@ se' to disable this.
 The command '\includegraphics [width=\imas ,valign=c]{images/digital_vernier_ca
 liper.jpg}' has been optimized away. Use '/tikz/external/optimize=false' to dis
 able this.
-The command '\includegraphics [width=\imas ,valign=c]{images/hardness.png}' has
- been optimized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=2.1cm,height=2.4cm,valign=c]{images/hardne
+ss.png}' has been optimized away. Use '/tikz/external/optimize=false' to disabl
+e this.
 The command '\includegraphics [width=\imas ,valign=c]{images/tensilemachine.png
 }' has been optimized away. Use '/tikz/external/optimize=false' to disable this
 .
@@ -1737,7 +1776,7 @@ The command '\includegraphics [width=\imas ,valign=c]{images/ppe.jpg}' has been
  optimized away. Use '/tikz/external/optimize=false' to disable this.
 
 LaTeX Warning: Reference `tab:risk-assessment' on page 10 undefined on input li
-ne 399.
+ne 405.
 
 The command '\includegraphics [width=\imas ,valign=c]{images/stationary.png}' h
 as been optimized away. Use '/tikz/external/optimize=false' to disable this.
@@ -1745,8 +1784,9 @@ as been optimized away. Use '/tikz/external/optimize=false' to disable this.
 The command '\includegraphics [width=\imas ,valign=c]{images/digital_vernier_ca
 liper.jpg}' has been optimized away. Use '/tikz/external/optimize=false' to dis
 able this.
-The command '\includegraphics [width=\imas ,valign=c]{images/hardness.png}' has
- been optimized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=2.1cm,height=2.4cm,valign=c]{images/hardne
+ss.png}' has been optimized away. Use '/tikz/external/optimize=false' to disabl
+e this.
 The command '\includegraphics [width=\imas ,valign=c]{images/tensilemachine.png
 }' has been optimized away. Use '/tikz/external/optimize=false' to disable this
 .
@@ -1754,24 +1794,10 @@ The command '\includegraphics [width=\imas ,valign=c]{images/ppe.jpg}' has been
  optimized away. Use '/tikz/external/optimize=false' to disable this.
 
 LaTeX Warning: Reference `tab:risk-assessment' on page 10 undefined on input li
-ne 399.
+ne 405.
 
 The command '\includegraphics [width=\imas ,valign=c]{images/stationary.png}' h
 as been optimized away. Use '/tikz/external/optimize=false' to disable this.
-Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/5'
-
-(microtype)             (new value: 5.0pt) on input line 399.
-Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/5'
-(microtype)             (new value: 5.0pt) on input line 399.
-Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/5'
-(microtype)             (new value: 5.0pt) on input line 399.
-Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/5'
-(microtype)             (new value: 5.0pt) on input line 399.
-Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/5'
-(microtype)             (new value: 5.0pt) on input line 399.
-Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/5'
-
-(microtype)             (new value: 5.0pt) on input line 399.
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -1780,7 +1806,7 @@ Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/5'
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-Underfull \hbox (badness 2213) in paragraph at lines 430--430
+Underfull \hbox (badness 2213) in paragraph at lines 436--436
 []\OT1/cmr/m/n/10 (+20) Pinching or crush-ing in-juries
  []
 
@@ -1789,12 +1815,12 @@ Package tabularray Warning: Table width is too small, need 6.58147pt more!
 
 > Step: build the whole table.
 
-Underfull \hbox (badness 2213) in paragraph at lines 430--430
+Underfull \hbox (badness 2213) in paragraph at lines 436--436
 []\OT1/cmr/m/n/10 (+20) Pinching or crush-ing in-juries
  []
 
 
-Overfull \hbox (6.58147pt too wide) in paragraph at lines 430--431
+Overfull \hbox (6.58147pt too wide) in paragraph at lines 436--437
  [][] 
  []
 
@@ -1807,8 +1833,9 @@ sable this.
 The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
 logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
 se' to disable this.
-The command '\includegraphics [width=\textwidth ]{figures/alloys_base.jpg}' has
- been optimized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=\textwidth ,frame,framecolor=gray!40]{figu
+res/alloys_base.jpg}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
 \openout5 = `figures/main-figure0.dpth'.
 
 [12
@@ -1825,8 +1852,11 @@ The command '\includegraphics [width=\textwidth ]{figures/alloys_base.jpg}' has
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 642.
+(caption)                particular \caption on input line 649.
 See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:alloys' on page 12 undefined on input line 653.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
@@ -1846,33 +1876,33 @@ isable this.
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/b/n/12'
-(microtype)             (new value: 12.0pt) on input line 1200.
+(microtype)             (new value: 12.0pt) on input line 1207.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/b/n/8'
-(microtype)             (new value: 8.0pt) on input line 1200.
+(microtype)             (new value: 8.0pt) on input line 1207.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/b/n/6'
-(microtype)             (new value: 6.0pt) on input line 1200.
+(microtype)             (new value: 6.0pt) on input line 1207.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/b/n/12'
-(microtype)             (new value: 12.0pt) on input line 1200.
+(microtype)             (new value: 12.0pt) on input line 1207.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/b/n/8'
-(microtype)             (new value: 8.0pt) on input line 1200.
+(microtype)             (new value: 8.0pt) on input line 1207.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/b/n/6'
-(microtype)             (new value: 6.0pt) on input line 1200.
+(microtype)             (new value: 6.0pt) on input line 1207.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/b/n/12'
-(microtype)             (new value: 12.0pt) on input line 1200.
+(microtype)             (new value: 12.0pt) on input line 1207.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/b/n/8'
-(microtype)             (new value: 8.0pt) on input line 1200.
+(microtype)             (new value: 8.0pt) on input line 1207.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/b/n/6'
-(microtype)             (new value: 6.0pt) on input line 1200.
+(microtype)             (new value: 6.0pt) on input line 1207.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/b/n/12'
-(microtype)             (new value: 12.0pt) on input line 1200.
+(microtype)             (new value: 12.0pt) on input line 1207.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/b/n/8'
-(microtype)             (new value: 8.0pt) on input line 1200.
+(microtype)             (new value: 8.0pt) on input line 1207.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/b/n/6'
-(microtype)             (new value: 6.0pt) on input line 1200.
+(microtype)             (new value: 6.0pt) on input line 1207.
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1202.
+(caption)                particular \caption on input line 1209.
 See the caption package documentation for explanation.
 
 The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
@@ -1888,14 +1918,52 @@ se' to disable this.
 > Step: build the whole table.
 
 Package caption Warning: \setcaptiontype
-(caption)                outside box or environment on input line 1227.
+(caption)                outside box or environment on input line 1233.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1227.
+(caption)                particular \caption on input line 1233.
 See the caption package documentation for explanation.
 
+
+LaTeX Warning: Reference `fig:vickers' on page 13 undefined on input line 1243.
+
+
+The command '\includegraphics [width=0.8\textwidth ]{images/1024px-Vicker_Hardn
+ess_-_Diamond_Indentation.jpg}' has been optimized away. Use '/tikz/external/op
+timize=false' to disable this.
+
+LaTeX Warning: Reference `fig:alloys' on page 13 undefined on input line 1255.
+
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
+The command '\includegraphics [width=0.8\textwidth ]{figures/3537580_orig-0000.
+jpg}' has been optimized away. Use '/tikz/external/optimize=false' to disable t
+his.
+
+LaTeX Warning: Reference `fig:alloys' on page 14 undefined on input line 1301.
+
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+> Step: build the whole table.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1315.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `tab:hv5' on page 14 undefined on input line 1318.
+
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
 The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
 logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
 se' to disable this.
@@ -1910,23 +1978,23 @@ se' to disable this.
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-Overfull \hbox (2.12595pt too wide) in paragraph at lines 1251--1251
+Overfull \hbox (2.12595pt too wide) in paragraph at lines 1341--1341
  []\OT1/cmr/bx/n/10 (-20) Specimen 
  []
 
 
-Overfull \hbox (1.1526pt too wide) in paragraph at lines 1251--1251
+Overfull \hbox (1.1526pt too wide) in paragraph at lines 1341--1341
  \OMX/MnSymbolE/m/n/10 à[][]ç$ 
  []
 
 > Step: build the whole table.
 
-Overfull \hbox (2.12595pt too wide) in paragraph at lines 1251--1251
+Overfull \hbox (2.12595pt too wide) in paragraph at lines 1341--1341
  []\OT1/cmr/bx/n/10 (-20) Specimen 
  []
 
 
-Overfull \hbox (1.1526pt too wide) in paragraph at lines 1251--1251
+Overfull \hbox (1.1526pt too wide) in paragraph at lines 1341--1341
  \OMX/MnSymbolE/m/n/10 à[][]ç$ 
  []
 
@@ -1951,12 +2019,6 @@ Package microtype Info: Loading generic protrusion settings for font family
 The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
 logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
 se' to disable this.
-The command '\includegraphics [width=0.8\textwidth ]{figures/3537580_orig-0000.
-jpg}' has been optimized away. Use '/tikz/external/optimize=false' to disable t
-his.
-The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
-logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
-se' to disable this.
 The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
 logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
 se' to disable this.
@@ -1969,17 +2031,17 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 69199 strings out of 476106
- 1713085 string characters out of 5793932
- 2442879 words of memory out of 5000000
- 90118 multiletter control sequences out of 15000+600000
- 607281 words of font info for 278 fonts, out of 8000000 for 9000
+ 69397 strings out of 476106
+ 1716977 string characters out of 5793932
+ 2450773 words of memory out of 5000000
+ 90306 multiletter control sequences out of 15000+600000
+ 608633 words of font info for 282 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 88i,16n,120p,1040b,1107s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,16n,120p,1035b,1110s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-Output written on figures/main-figure0.pdf (1 page, 14398 bytes).
+Output written on figures/main-figure0.pdf (1 page, 14399 bytes).
 PDF statistics:
- 30 PDF objects out of 1000 (max. 8388607)
+ 31 PDF objects out of 1000 (max. 8388607)
  16 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
  49683 words of extra memory for PDF output out of 51595 (max. 10000000)

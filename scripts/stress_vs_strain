@@ -1,0 +1,61 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+from matplotlib.ticker import MultipleLocator
+
+# Load the data
+AR = pd.read_csv('data/data1.csv')
+PH = pd.read_csv('data/data2.csv')
+ST = pd.read_csv('data/data3.csv')
+
+# Define the original gauge length and the cross-sectional areas
+original_gauge_length = 50  # mm
+cross_section_area_AR = 71.88  # mm^2
+cross_section_area_PH = 73.96  # mm^2
+cross_section_area_ST = 76.56  # mm^2
+
+# Assign the correct variables for Force and Elongation
+elongation1, force1 = AR['Elongation'], AR['Force']
+elongation2, force2 = PH['Elongation'], PH['Force']
+elongation3, force3 = ST['Elongation'], ST['Force']
+
+# Calculate Stress and Strain for each specimen
+stress1 = force1 / cross_section_area_AR  # Stress = Force / Area
+stress2 = force2 / cross_section_area_PH
+stress3 = force3 / cross_section_area_ST
+
+strain1 = elongation1 / original_gauge_length  # Strain = Change in length / Original length
+strain2 = elongation2 / original_gauge_length
+strain3 = elongation3 / original_gauge_length
+
+# Create the plot for Stress vs Strain
+plt.figure(figsize=(10, 10))
+
+# Plot the data for each specimen
+plt.plot(strain1, stress1, label='AR', color='red')
+plt.plot(strain2, stress2, label='PH', color='blue')
+plt.plot(strain3, stress3, label='ST', color='green')
+
+# Set the axis labels
+plt.xlabel('Strain (dimensionless)')
+plt.ylabel('Stress (N/mm²)')
+plt.title('Stress vs Strain for Different Specimens')
+
+# Add a legend
+plt.legend()
+
+# Enable the grid with custom styling
+plt.grid(True, linestyle='--', alpha=0.7)
+
+# Set the limits for the axes
+x_max = max(max(strain1), max(strain2), max(strain3))
+y_max = max(max(stress1), max(stress2), max(stress3))
+
+# Add 5% padding to both the x and y axes
+plt.xlim(0, x_max * 1.05)  # Padding on the x-axis
+plt.ylim(bottom=0, top=y_max * 1.05)  # Padding on the y-axis
+
+# Save the figure
+plt.savefig('figures/stress_vs_strain.png', dpi=1000)
+
+# Display the plot
+plt.show()
