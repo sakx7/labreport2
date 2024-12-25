@@ -20,22 +20,21 @@
 \contentsline {subsection}{\numberline {6.4}Strain}{21}{subsection.6.4}%
 \contentsline {subsection}{\numberline {6.5}Young's Modulus}{21}{subsection.6.5}%
 \contentsline {subsection}{\numberline {6.6}Hooke's Law}{23}{subsection.6.6}%
-\contentsline {subsection}{\numberline {6.7}Yield Strength}{25}{subsection.6.7}%
-\contentsline {subsection}{\numberline {6.8}Modulus of Resilience}{25}{subsection.6.8}%
-\contentsline {subsection}{\numberline {6.9}Ultimate Tensile Strength (UTS)}{25}{subsection.6.9}%
-\contentsline {subsection}{\numberline {6.10}Elongation at Break}{25}{subsection.6.10}%
-\contentsline {subsubsection}{\numberline {6.10.1}Percentage Elongation}{25}{subsubsection.6.10.1}%
-\contentsline {subsection}{\numberline {6.11}Toughness}{25}{subsection.6.11}%
-\contentsline {subsubsection}{\numberline {6.11.1}Modulus of Toughness}{25}{subsubsection.6.11.1}%
-\contentsline {subsection}{\numberline {6.12}Slimness Ratio}{25}{subsection.6.12}%
-\contentsline {section}{\numberline {7}Data and Result Calculations}{27}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Hardness Data}{28}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Force vs Displacement}{29}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Stress vs Strain}{30}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Discussion}{31}{section.8}%
-\contentsline {section}{\numberline {9}Conclusions}{32}{section.9}%
-\contentsline {section}{\numberline {10}Recommendations}{33}{section.10}%
-\contentsline {section}{\numberline {11}References}{34}{section.11}%
-\contentsline {section}{\numberline {12}Appendix}{35}{section.12}%
-\contentsline {subsection}{\numberline {A}Indentation hardness types}{35}{subsection.12.1}%
-\contentsline {subsection}{\numberline {B}RSM and FFS}{35}{subsection.12.2}%
+\contentsline {subsection}{\numberline {6.7}Yield Point and Yield Strength}{25}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8}Resilience and Modulus of Resilience}{26}{subsection.6.8}%
+\contentsline {subsection}{\numberline {6.9}Ultimate Tensile Strength (UTS)}{28}{subsection.6.9}%
+\contentsline {subsection}{\numberline {6.10}Elongation at Break}{29}{subsection.6.10}%
+\contentsline {subsubsection}{\numberline {6.10.1}Percentage Elongation}{29}{subsubsection.6.10.1}%
+\contentsline {subsection}{\numberline {6.11}Toughness and Modulus of Toughness}{30}{subsection.6.11}%
+\contentsline {subsection}{\numberline {6.12}Ratios}{31}{subsection.6.12}%
+\contentsline {section}{\numberline {7}Data and Result Calculations}{32}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Hardness Data}{33}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Force vs Displacement}{34}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Stress vs Strain}{35}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Discussion}{36}{section.8}%
+\contentsline {section}{\numberline {9}Conclusions}{37}{section.9}%
+\contentsline {section}{\numberline {10}Recommendations}{38}{section.10}%
+\contentsline {section}{\numberline {11}References}{39}{section.11}%
+\contentsline {section}{\numberline {12}Appendix}{40}{section.12}%
+\contentsline {subsection}{\numberline {A}Indentation hardness types}{40}{subsection.12.1}%
+\contentsline {subsection}{\numberline {B}RSM and FFS}{40}{subsection.12.2}%

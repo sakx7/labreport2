@@ -112,7 +112,7 @@
 
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
-
+\usepackage{mathtools}
 \fancyhead[L]{\includegraphics[height=1.2cm]{images/Kingston_University_London_logo_200-tablet.png}}
 \fancyhead[R]{EG4019 - ME - Engineering Mechanics and Materials}
 \fancyfoot[C]{Department of Mechanical Engineering}
@@ -1366,15 +1366,15 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
         \item \textbf{Hardness}
         \item \textbf{Tensile Testing}
         \begin{itemize}
-            \item \textbf{Stress and Strain}
+            \item \textbf{Stress \& Strain}
             \item \textbf{Young's Modulus} (also known as \textit{Modulus of Elasticity})
             \item \textbf{Hooke's Law}
-            \item \textbf{Yield Strength and Elongation at Break}
+            \item \textbf{Yield Strength}
+            \item \textbf{Modulus of Resilience}
             \item \textbf{Ultimate Tensile Strength (UTS)}
-            \item \textbf{Poisson's Ratio}
-            \item \textbf{Modulus of Resilience and Toughness}
-            \item \textbf{Modulus of Toughness}
-            \item \textbf{Slimness Ratio}
+            \item \textbf{Toughness \& Modulus of Toughness}
+            \item \textbf{Elongation at Break \& Percentage elongation}
+            \item \textbf{Ratios}
         \end{itemize}
     \end{itemize}
     Understanding all these properties will enable us to fully characterize the mechanical performance of the material under stress, allowing us to calculate them from the data collected during the experiment and fully assess our alloy.
@@ -1417,7 +1417,6 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
                 A = \frac{d^2}{2\sin\left(\frac{136^\circ}{2}\right)} \approx \frac{d^2}{1.854} 
             \end{equation}
             \begin{itemize}[itemsep=-1mm]
-                \wm{\item \(A\): Surface area of the indentation (millimetres \\squared, \(\text{mm}^2\))}
                 \item \( d \): Arithmetic mean of the diagonals \( d_1 \) and \( d_2 \) (millimetres, \(\text{mm}\))
             \end{itemize}
             so that it can be expressed in terms of the diagonals as follows:
@@ -1437,7 +1436,7 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
     \end{equation}
     Values for \(d_1\) and \(d_2\) were obtained from the machine dial, and the corresponding hardness values were calculated accordingly. It is worth noting, if not already disclosed, that the resulting HV and HV5 values are expressed as dimensionless numbers. \\[1em]
     \hrule\vspace{1em}
-    Going into detail about each type of hardness, along with their specific equations and characteristics, seems excessive for this context. I concentrated on Vickers hardness because it directly relates to the test we performed. Although i aim for this theory section to cover a broad theoretical background, my goal is to include only the information that is specifically relevant to this report. If you're interested, relevant equations and descriptions for \textbf{indentation types} can be found in Appendix A.
+    Going into detail about each type of hardness, along with their specific equations and characteristics, seems excessive for this context. I concentrated on Vickers hardness because it directly relates to the test we performed. Although I aim for this theory section to cover a broad theoretical background, my goal is to include only the information that is specifically relevant to this report. As Anton Chekhov famously said, \begin{formal}[Anton Chekhov]{“If in the first act you have hung a pistol on the wall, then in the following one it should be fired. Otherwise, don't put it there.”}\end{formal} This principle means that every detail should serve a purpose. In this report, only relevant information is included to support the main points. If you're interested, relevant equations and descriptions for \textbf{indentation types} can be found in Appendix A.
     
     \newpage
 
@@ -1464,16 +1463,16 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
             \begin{itemize}[left=0pt,itemsep=-1mm]
             \wm{\item \(\sigma\): Stress (Pascals, Pa) or (Newtons per metre, \(\text{N/m}^2\))}
             \wm{\item \(F\): Applied force (Newtons, N)}
-            \wm{\item \(A\) or \(A_0\): Cross-sectional area (metres squared, \(\text{m}^2\))}
+            \wm{\item \(A\): Initial cross-sectional area (metres squared, \(\text{m}^2\))}
             \end{itemize}
         \end{minipage}\hfill
         \begin{minipage}{0.47\textwidth}
             \begin{equation}
-                A_0 = w \times d
+                A = w \times d
                 \label{eq:csa}
             \end{equation}
             \begin{itemize}[left=0pt,itemsep=-1mm]
-                \wm{\item \(A_0\): Initial cross-sectional area (meters squared, \(\text{m}^2\))}
+                \wm{\item \(A\): Initial cross-sectional area (meters squared, \(\text{m}^2\))}
                 \wm{\item \(w\): Width (meters, \(\text{m}\))}
                 \wm{\item \(d\): Depth or thickness (meters, \(\text{m}\))}            
             \end{itemize}
@@ -1505,14 +1504,14 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
             \end{equation}
             \begin{itemize}[left=0pt,itemsep=-1mm]
                 \item \( \Delta L \): Change in length (meters, \(\text{m}\))
-                \item \( L \): Current length (meters, \(\text{m}\))
+                \item \( L \): Current length (meters, \(\text{m}\))\footnotemark
                 \item \( L_0 \): Original length (meters, \(\text{m}\))
             \end{itemize}
         \end{minipage}\\[8pt]
         Unit conversions should ensure that $\Delta L$ and $L_0$ are in the same units, with the final strain ($\varepsilon$) being unitless.\\[8pt]
         Strain ($\varepsilon$) measures how much a material deforms when a force is applied. It reflects the change in length relative to the material's original length.\\[8pt]
         Grasping the concept of strain is essential for understanding how materials behave under load, especially regarding their elasticity. It shows whether a material can return to its original shape after the load is removed (elastic deformation) or if it will undergo permanent deformation (plastic deformation). Because it helps determine the point at which a material may fail or become permanently deformed.
-        
+        \footnotetext{In practice, tensile testing machines usually determine displacement by counting incremental encoder pulses instead of measuring absolute position. The overall displacement is computed by adding these incremental changes starting from the initial reference point.}
     \subsection{Young's Modulus}
     \textbf{Young's Modulus} (\(E\)) (also known as \textit{Modulus of Elasticity}) defines the relationship between stress (\(\sigma\)) and strain (\(\varepsilon\)) as a linear fraction. It represents the rate at which stress leads to strain in a material and is determined from the tensile test within the elastic region. Mathematically, it is expressed as:
     \begin{equation}
@@ -1525,23 +1524,34 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
         \item \( \varepsilon \): Strain (no units).
     \end{itemize}    
     \newpage
-    
-    The formulas for stress (\ref{eq:stress}) and strain (\ref{eq:strain}) can be used to expand the equation, and if needed, \ref{eq:deltaL} and \ref{eq:csa} can be incorporated for further elaboration. This can also be written as follows\footnote{Relevant units and variables are from the equations named, so i will not do an itemize for this}:
+    The relationship can also be expressed as:
+    \begin{equation}
+        \begin{aligned}
+            \sigma &= E \varepsilon\\
+            \sigma &\propto \varepsilon 
+        \end{aligned}
+    \end{equation}
+    Given the relation \( \sigma = E \varepsilon \), stress (\( \sigma \)) is directly proportional to strain (\( \varepsilon \)) were the proportionality constant is Young's modulus (\(E\)). This concept is further expanded in the Hooke's Law section.\\[8pt]
+    The formulas for stress (\( \sigma \)) (\ref{eq:stress}) and strain (\( \varepsilon \))(\ref{eq:strain}) can be used to expand the equation, and if needed, \ref{eq:deltaL} and \ref{eq:csa} can be incorporated for further elaboration. This can also be written as follows\footnote{Relevant units and variables are from the equations named, so i will not do an itemize for this}:
     \begin{equation}
         E = \frac{F \times L_0}{A\times\Delta L} = \frac{F \times L_0}{\left(w\times d\right)\left(|L-L_0|\right)}
     \end{equation}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.7\textwidth]{images/stress-strain-youngs-modulus2.jpg}
-\caption{Stress and Strain graph showing Young's Modulus in the elastic region.}
-\label{fig:young}
-\end{figure}
-
-    {Young's Modulus} ($E$) is a fundamental material property that describes the relationship between stress ($\sigma$) and strain ($\varepsilon$) in the elastic region of a material's deformation. It represents the stiffness of a material, indicating how much strain will occur in response to a given stress.\\[8pt] 
+{\begin{minipage}{0.5\textwidth}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\textwidth]{images/stress-strain-youngs-modulus2.jpg}
+        \caption{Stress and Strain graph showing Young's Modulus in the elastic region.}
+        \label{fig:young}
+    \end{figure}
+\end{minipage}}\hspace{1em}
+{\begin{minipage}{\dimexpr\textwidth-0.55\textwidth\relax}
+    {Young's Modulus} ($E$) is a fundamental material property that describes the relationship between stress ($\sigma$) and strain ($\varepsilon$) in the elastic region of a material's deformation.\\[8pt]
+    It represents the stiffness of a material, indicating how much strain will occur in response to a given stress.\\
     
-    In the context of the tensile test, Young's Modulus is determined from the linear portion of the stress-strain curve, known as the elastic region, where the material deforms proportionally to the applied load, as shown above (See Figure \ref{fig:young}). Within this region, the material will return to its original shape once the load is removed, and the relationship between stress and strain is linear.\\[8pt] 
-
+    In the context of the tensile test, Young's Modulus is determined from the linear portion of the stress-strain curve,
+\end{minipage}}\\[4pt]
+    known as the elastic region, where the material deforms proportionally to the applied load, as shown above (See Figure \ref{fig:young}).\\[8pt]
+    Within this region, the material will return to its original shape once the load is removed, and the relationship between stress and strain is linear.\\[8pt]
     Young's Modulus is important because it measures how stiff a material is, which is essential for choosing the right materials in engineering and construction.
     \begin{itemize}[itemsep=-0.5mm]
         \item \textbf{High }\(\bm{E}\): A higher Young's Modulus indicates that the material is stiffer, allowing it to resist deformation more effectively when stress is applied.\\[3pt] 
@@ -1552,7 +1562,7 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
     \newpage
 
     \subsection{Hooke's Law}
-    One might see Hooke's law and be confused since this relates to springs, but here i show how the stress-strain, Young's modulus relationship interlinks with it. Hooke's Law is a fundamental principle in mechanics that describes the relationship between applied force and deformation in elastic materials.\\[8pt]
+    One might see Hooke's law and be confused since this relates to springs, but here i show how the stress-strain, Young's modulus relationship interlinks with it. Hooke's law is an empirical law which states that the force needed to extend or compress a spring by some distance scales linearly with respect to that distance (Wikipedia).\\[8pt]
     In its simplest form, Hooke's Law states that:
     \begin{equation}
         F = kx
@@ -1564,7 +1574,7 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
         \item $x$ Displacement (metres, m)
     \end{itemize}
     Note displacement is from equilibrium position\\[8pt] 
-    This principle applies not only to springs but also to any elastic material. Here i prove such a thing, we begin with the stress-strain relationship, Young's Modulus (\(E\)) \ref{eq:ym} in tensile testing \footnote{Most equations presented here are meant only for derivation purposes (to prove my point). They consist of straightforward rearrangements and are not meant to be individually referenced at any particular moment; hence, they are not numbered.}:    
+    This principle applies not only to springs but also to any elastic material. Here i prove such a thing, we begin with the stress-strain relationship, Young's Modulus (\(E\)) \ref{eq:ym} in tensile testing \footnote{Most equations presented here are meant only for derivation purposes (to prove my point). They consist of straightforward rearrangements and are not meant to be individually referenced at any particular point; hence, they are not numbered.}:    
     \[E = \frac{\sigma}{\varepsilon}\]
     \begin{center}
     Rearranging this equation to solve for stress (Multiply both sides by \(\varepsilon\)), we get:
@@ -1587,7 +1597,7 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
 
 
 
-\begin{minipage}{0.5\textwidth}
+\begin{minipage}{0.52\textwidth}
 This essentially proves that the extension (\(\Delta L\)) of the elongated body is proportional to the applied force (\(F\)), provided the limit of proportionality is not exceeded. 
 \begin{equation}
     \Delta L \propto F
@@ -1601,67 +1611,146 @@ However, it's crucial to understand the limitations and broader applications of 
 \begin{minipage}{0.45\textwidth}
     \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{images/hook(1).png}
+    \includegraphics[width=0.87\textwidth]{images/hook(1).png}
     \caption{Illustration of the Stress-Strain Relationship Under Hooke’s Law}
     \label{fig:hook}
 \end{figure}
 \end{minipage}
-\begin{itemize}[itemsep=3mm]
+\begin{itemize}
     \item In so, Hooke's Law is valid only within the elastic limit of a material, where deformation is reversible. Beyond this limit, permanent deformation occurs, and the stress-strain relationship becomes non-linear.
     \item Temperature significantly affects material properties, including Young's Modulus, altering material stiffness.
 \end{itemize}
-The linear behavior up to the elastic limit is due to the proportional stretching of atomic bonds relative to the applied force. This allows for reversible deformation. Beyond the elastic limit, atomic bonds begin to permanently deform, leading to plastic deformation and deviation from linearity.\\[8pt]
-Several misconceptions surround Hooke's Law, one of which is: \\[8pt]
-\textbf{Instantaneous Response:} It is often mistakenly assumed that materials respond immediately to applied loads, disregarding time-dependent behaviors such as \textbf{creep} or \textbf{stress relaxation}. While I acknowledge this misconception, it will not be covered here. \\[8pt]
+The linear behavior up to the elastic limit is due to the proportional stretching of atomic bonds relative to the applied force. This allows for reversible deformation. Beyond the elastic limit, atomic bonds begin to permanently deform, leading to plastic deformation and deviation from linearity. \\[8pt]
+
+Several misconceptions surround Hooke's Law, one of which is that materials react instantly to applied loads, adhering to Hooke's Law right away. In truth, many materials display time-dependent behaviors like \textbf{creep} (gradual deformation under constant stress) or \textbf{stress relaxation} (a decrease in stress under constant strain). These behaviors indicate that the straightforward, linear relationship outlined by Hooke's Law may not always represent the initial or only response of a material to applied forces. Grasping these time-dependent behaviors is essential for accurately forecasting material performance, particularly in long-term or dynamic loading scenarios. While I acknowledge this misconception, it will not be covered in depth in this report. \\[8pt]
 As analysed Hooke's Law extends beyond simple spring systems. When subjected to dynamic loading conditions, materials can behave differently than they do in static situations. Complex shapes with uneven stress distributions often necessitate advanced methods, such as finite element analysis, to accurately forecast their responses. Furthermore, composite materials exhibit complex stress-strain relationships that differ from the straightforward nature of homogeneous materials.\\[8pt]
-This principle is essential in areas like energy storage and structural design, where materials need to withstand applied stresses without undergoing permanent deformation. A thorough understanding of Hooke's Law, its limitations, and its relationship with Young's Modulus is vital for effectively modeling and engineering material behavior across various applications.
+A thorough understanding of Hooke's Law, its limitations, and its relationship with Young's Modulus is vital for effectively modeling and engineering material behavior across various applications.
 
     
     
     \newpage
-    \subsection{Yield Strength}
-%    Yield strength is the maximum stress a material can withstand before it permanently changes shape. It's a crucial property for engineers to understand when designing components, as it helps determine the maximum load a material can safely support. Yield strength is typically determined from a stress-strain curve, where it marks the transition from elastic deformation to plastic deformation. Materials with high yield strength are preferred in structural applications to avoid permanent deformation under load.  
+\subsection{Yield Point and Yield Strength}
+
+ The \textbf{yield point} on a stress-strain curve marks the transition from elastic to plastic behavior. Below this point, the material deforms elastically and returns to its original shape when the stress is removed. Beyond this point, plastic deformation occurs, and some deformation becomes permanent.\\[8pt]
+ The \textbf{yield strength} (\( \sigma_y \)) is the stress at the yield point and the corresponding strain called \textbf{yield strain} (\( \varepsilon_y \)). Mathematically, we can represent this point on the stress-strain curve as \( (\sigma_y,\ \varepsilon_y) \). To perform further calculations related to this point, such as the modulus of resilience (See Section \ref{mor}).\\[8pt]
+This point marks the onset of plastic deformation. For materials like aluminum and cold-worked steel, which do not exhibit a distinct yield point due to a gradual transition to plastic deformation, the \textbf{offset yield point} (proof stress) is used. It is typically defined as 0.2\% of the strain within the proportionality limit (elastic region), with the offset being from zero.\\[8pt] 
+Yielding can be defined in several ways:\\
+\begin{minipage}{0.4\textwidth}
+     \begin{figure}[H]
+     \centering
+     \includegraphics[width=1\textwidth]{images/Metal_yield.png}
+     \caption{Stress–strain curve showing typical yield behavior for nonferrous alloys (stress (\(\sigma\)), shown as a function of strain (\(\epsilon\))) (Wikipedia, 2024)}
+     \label{fig:str}
+ \end{figure} 
+ \end{minipage}\hfil
+\begin{minipage}{0.6\textwidth}
+ \begin{enumerate}
+     \item \textbf{True elastic limit:} The lowest stress at which dislocations move. This definition is rarely used since dislocations move at very low stresses, and detecting such movement is very difficult.
+     \item \textbf{Proportionality Limit:} The point where stress is proportional to strain, corresponding to Hooke's law.
+     \item \textbf{Elastic Limit (Yield Strength)}: The lowest stress at which permanent deformation occurs \((\sigma_y,\ \varepsilon_y)\).
+     \item \textbf{Offset Yield Point (Proof Stress):} Used when no distinct yield point is observed, typically defined at 0.2\% plastic strain.
+ \end{enumerate}
+  \end{minipage}\\[8pt]
+\textbf{Upper and Lower Yield Points:} For materials like mild steel, an upper yield point is followed by a drop to a lower yield point. The lower yield point is used for conservative design.\\[8pt]
+The \textbf{Elastic Limit (Yield Strength)} is important in determining the maximum allowable load a material can bear without permanent deformation. It is distinct from the \textit{ultimate tensile strength} (UTS), which is the maximum load a material can withstand before failure. For ductile materials, the ratio of yield strength to UTS is often used in applications like pipelines and is proportional to the strain hardening exponent shown in the ratio section.
+
+
     
-    \subsection{Modulus of Resilience}
-    The modulus of resilience is a mechanical property that measures how much energy a material can absorb and store without permanently deforming. This property is essential for applications where materials are subjected to sudden loads or shocks, such as in springs, fasteners, and crash-resistant structures.\\[8pt]  
-    The modulus of resilience is calculated by integrating the stress-strain curve up to the elastic limit. The formula for the modulus of resilience is:  
-    \[\frac{1}{2}\sigma_y\varepsilon_y\]  
-    $\sigma_y$: The yield stress of the material\\  
-    $\varepsilon_y$: The strain at the elastic limit\\[8pt]  
-    The units of the modulus of resilience are the same as the units of strain energy density, which are Joules per cubic meter (J/m\(^{3}\)) in the SI system.  
+    \newpage    
     
-    \subsection{Ultimate Tensile Strength (UTS)}
-%    Ultimate Tensile Strength (UTS) represents the maximum stress a material can withstand while being stretched before it breaks. It is one of the most important properties for assessing a material's ability to resist failure under tensile loads. UTS is determined from a stress-strain curve as the peak stress value before fracture. This property is critical for ensuring safety in applications like cables, bridges, and load-bearing components.  
+    \subsection{Resilience and Modulus of Resilience}\label{mor}
     
-    \subsection{Elongation at Break}
-%    Elongation at break measures the extent to which a material can stretch before it fractures. It reflects the ductility of the material, which is its ability to deform plastically without breaking. High elongation values indicate that the material is highly ductile, making it suitable for forming and shaping processes. Conversely, low elongation values suggest brittleness.  
+The \textbf{modulus of resilience} is defined as the \textbf{maximum energy} absorbed \textbf{per unit volume} of a material due to straining up to the elastic limit. It represents the energy stored in the material when it deforms elastically, following Hooke's Law, without any permanent deformation. It is typically denoted as \( U_r \). Mathematically, the modulus of resilience is given by:
+
+\begin{equation}
+    U_r = \frac{\text{Proof Resilience}}{\text{Volume of the object}}
+\end{equation}
+
+Where proof resilience refers to the area under the stress-strain curve up to the elastic limit. To understand the modulus of resilience, it is important to first define \textbf{resilience} and \textbf{proof resilience}.
+
+\begin{center}
+\begin{minipage}[t]{0.46\textwidth}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.87\textwidth]{images/resilience-1.png}
+    \caption{resilience (mechcontent,2024)}
+    \label{fig:resilience}
+\end{figure}
+\textbf{Resilience} is the \textbf{energy stored} in an object or specimen when it is strained below the elastic limit. More specifically, it is the strain energy stored in the object up to the elastic limit. It can also be described as the area under the stress-strain curve up to the elastic limit.
+\end{minipage}\hfil
+\begin{minipage}[t]{0.46\textwidth}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.87\textwidth]{images/proof-resilience-1.png}
+    \caption{proof-resilience, (mechcontent,2024)}
+    \label{fig:proof-resilience}
+\end{figure}
+\textbf{Proof resilience} is the \textbf{maximum value} of resilience, or the maximum amount of strain energy absorbed by the object up to the elastic limit. This energy does not cause permanent deformation. Proof resilience is also represented by the area under the stress-strain curve up to the elastic limit.
+\end{minipage}
+
+\end{center}
+
+The \textbf{modulus of resilience} ($U_r$) quantifies the strain energy stored in a material up to its elastic limit. It is expressed as:
+\begin{equation}
+    U_r = \int_0^{\varepsilon_y} \sigma \, d\varepsilon
+\end{equation}
+In this equation, $\sigma$ represents the stress at a given strain $\varepsilon$, and $d\varepsilon$ is the infinitesimal change in strain. The integral sums the infinitesimal energy contributions $\sigma d\varepsilon$ from zero to the yield strain $\varepsilon_y$, which corresponds to the yield stress $\sigma_y$.\\[8pt]
+\textbf{For materials exhibiting linear elastic behavior up to the yield point, the relationship between stress and strain is linear, and the integral can be simplified.} In this case, the area under the stress-strain curve up to the yield point (which is a triangle) gives the modulus of resilience:
+\begin{equation}
+    U_r = \frac{1}{2} \sigma_y \varepsilon_y
+\end{equation}
+\begin{itemize}[itemsep=-1mm]
+    \item \(U_r\): Modulus of resilience (Joules per cubic meter, \( \text{J/m}^3 \)).
+    \item \( \sigma_y \): {Yield stress} (Pascals, Pa) or (Newtons per meter squared, \( \text{N/m}^2 \))
+    \item \( \varepsilon_y \): {Yield strain} (no units)
+\end{itemize}
+This represents the area of a triangle under the stress-strain curve, where \( \sigma_y \) is the yield stress and \( \varepsilon_y \) is the yield strain.\\[8pt]
+Alternatively, using Young's modulus (\( E \)), the modulus of resilience can be written as:
+\begin{equation}
+    U_r = \frac{\sigma_y^2}{2E}
+\end{equation}
+Where:
+\begin{itemize}[itemsep=-1mm]
+    \item \( E \): {Young's modulus} (Pascals, Pa) or (Newtons per meter squared, \( \text{N/m}^2 \))
+\end{itemize}
+The formula represents the modulus of resilience, which is the maximum strain energy per unit volume that the material can store in the elastic region (up to the yield point) without permanent deformation. Volume does not explicitly appear because the modulus of resilience (\(U_r\)) is defined as energy per unit volume. Stress (\(\sigma\)) and strain (\(\varepsilon\)) are normalized measures that inherently account for material dimensions, so their product directly yields energy density without needing to include volume in the formula.\\[8pt]
+Off course for non-linear elastic materials, the area under the stress-strain curve up to the yield point must be calculated directly, as the simplified formulas may not apply.\\[1em]
+\hrule\vspace{1em}
+This approach is acceptable when the proportionality ends clearly, as the yield strength (elastic limit) is often well-defined as a triangle. However, I believe engineers either assume or are hesitant to acknowledge the non-linearity that can occur between the proportional limit (\(k\)) and the yield point (\(y\)). It’s crucial to recognize that yield strength can also include offsets if they are not clearly defined. Many definitions tend to overlook or ignore this nuance, describing resilience as “the energy up to the elastic limit” and representing it as a linear triangular integral. This representation doesn’t fully capture reality, as that region isn’t always entirely linear. I suspect that engineers often overlook this small, roughly 0.2\% offset that disrupts linearity because its effect is minimal. The focus is on consistency and practicality. Components are typically designed to operate well below either point, and the precise energy in this small non-linear region rarely influences decisions. When references mention “energy up to the elastic limit” and simplify it as a triangular integration, they are making a practical assumption that is justified by the minimal impact on real-world engineering outcomes. Again, this is all my own assumption; it does not necessarily have any concrete evidence to back it up as fact.
+\newpage    
+
+\subsection{Ultimate Tensile Strength (UTS)}
+Ultimate Tensile Strength (UTS) is quite straightforward in its theoretical background is not quite as extensive as others, it represents the maximum stress a material can withstand while being stretched before it breaks.\\
+
+The maximum stress applied in tension to a material before rupture is defined:
+\begin{equation}
+    P_{max} = \text{Ultimate Tensile Strength (UTS)} \times A
+\end{equation}
+%where, P_max = Maximum Tensile Force
+%A = Original cross sectional area of specimen
+
+Ultimate Tensile Strength is commonly reported in units of pounds per square inch (psi) or in Newtons per square mm (MPa, Mega Pascals).
+
+It is one of the most important properties for assessing a material's ability to resist failure under tensile loads. UTS is determined from a stress-strain curve as the \textbf{peak stress value} before fracture. This property is critical for ensuring safety in applications like cables, bridges, and load-bearing components.  
+
+\newpage
+
+\subsection{Elongation at Break}
+Elongation at break measures the extent to which a material can stretch before it fractures. It reflects the ductility of the material, which is its ability to deform plastically without breaking. High elongation values indicate that the material is highly ductile, making it suitable for forming and shaping processes. Conversely, low elongation values suggest brittleness.  
     
     \subsubsection{Percentage Elongation}
     Percentage elongation is a specific measure of elongation at break expressed as a percentage of the original length of the material. It is calculated using the formula:  
     \[\text{Percentage Elongation} = \left(\frac{L_f - L_0}{L_0}\right) \times 100\]  
     Where \(L_f\) is the final length at fracture, and \(L_0\) is the original length. This metric is often used in tensile testing to compare the ductility of different materials.  
-    
-    \subsection{Toughness}
+    \newpage
+    \subsection{Toughness and Modulus of Toughness}
 %    Toughness represents a material's ability to absorb energy up to the point of fracture. It is the combination of both strength and ductility, which determines how well a material can withstand stress before failure. Toughness is an essential property for applications where impact resistance and the ability to withstand sudden loading or deformation are critical, such as in automotive, aerospace, and construction industries. The toughness of a material is determined by measuring the area under the entire stress-strain curve, which includes both the elastic and plastic deformation regions.  
     
-    \subsubsection{Modulus of Toughness}
-%    The modulus of toughness is a related but distinct concept. It quantifies the total energy per unit volume that a material can absorb before fracturing, considering the area under the entire stress-strain curve. This measure gives insight into the material's capacity to withstand large amounts of energy before failure, typically used in applications where materials experience extreme stress or sudden impacts. While toughness indicates overall energy absorption, the modulus of toughness provides a normalized measure, considering energy per unit volume.
     
-    \subsection{Slimness Ratio}
-    The slimness ratio, also known as the slenderness ratio, is a dimensionless parameter that measures the propensity of a structural element to buckle under axial loads. It is crucial in evaluating the stability of columns and similar structural members. A higher slimness ratio indicates a greater tendency to buckle, making it a critical consideration in structural design and stability analysis.\\[8pt]    
-    The slimness ratio is defined as:  
-    \[\lambda = \frac{L_{\text{eff}}}{r}\]  
-    Where:\\  
-    - \(\lambda\) is the slenderness ratio.\\  
-    - \(L_{\text{eff}}\) is the effective length of the member (length between points of zero moment).\\ 
-    - \(r\) is the radius of gyration, given by \(r = \sqrt{\frac{I}{A}}\), where \(I\) is the moment of inertia and \(A\) is the cross-sectional area.\\[8pt]   
-    Alternatively, for practical applications, the slimness ratio can also be approximated as:  
-    \[\lambda = \frac{L_g}{\sqrt{A}}\]  
-    Where: \\ 
-    - \(L_g\) is the gauge length.\\  
-    - \(A\) is the cross-sectional area.\\[8pt]     
-    Understanding and calculating the slimness ratio ensures that structural components are designed with appropriate stability margins to prevent buckling under load.
-
+%    The modulus of toughness is a related but distinct concept. It quantifies the total energy per unit volume that a material can absorb before fracturing, considering the area under the entire stress-strain curve. This measure gives insight into the material's capacity to withstand large amounts of energy before failure, typically used in applications where materials experience extreme stress or sudden impacts. While toughness indicates overall energy absorption, the modulus of toughness provides a normalized measure, considering energy per unit volume.
+    \newpage
+    \subsection{Ratios}
+%    The slimness ratio
 %    \subsection{Poisson's Ratio}
 
 
@@ -1672,19 +1761,17 @@ This principle is essential in areas like energy storage and structural design, 
     
     \section{Data and Result Calculations}
     
-    Now that we have the following data:
+    Now that we have collected the following data:
     \begin{itemize}
-        \item Gauge dimensions
-        \item Hardness (v5)
-        \item Force vs. elongation graph
+        \item HV5
+        \item \(w\), \(d\), \(L_0\)
+        \item \(F\) vs \(\Delta L\)
     \end{itemize}
-    We can now derive several mechanical properties:
-    
-    These derived properties will help us fully characterize the mechanical performance of the material under stress.
+    We can now derive several mechanical properties, these derived properties will help us fully characterize the mechanical performance of the material under stress.
     \newpage
     \subsection{Hardness Data}\label{meanhard}
     While we've gone over the important equations for the Vickers hardness test, in this prior theory section (See Section \ref{VHC}) there's no need to actually do the calculations by hand since the machine has already provided the results. I hope this much is clear by now.\\[8pt] 
-    The data recorded in Table \ref{tab:hv5} is outlined as such:
+    The data recorded in Table \ref{tab:hv5} is outlined as such:\vspace{1em}
     \begin{center}
         \begin{tblr}{
                 width=\textwidth,
@@ -1697,7 +1784,7 @@ This principle is essential in areas like energy storage and structural design, 
             Property (\(\bm{\text{unitless}}\)) & \SetCell[c=2]{c} AR & & \SetCell[c=2]{c} ST & & \SetCell[c=3]{c} PH & & \\
             HV5 (Individual) & 119 & 123 & 36 & 36.8 & 102.8 & 131 & 126 \\
         \end{tblr}
-    \end{center}
+    \end{center}\vspace{1em}
     To calculate the mean (or average) for each set of values, 
     sum all individual values and divide by the total number of values, as shown by the formula:
     \begin{equation}
@@ -1729,7 +1816,7 @@ This principle is essential in areas like energy storage and structural design, 
         \[n = 2 \; \Rightarrow \; \text{Mean} = \frac{257}{2} = 128.5\]
     \end{minipage}
     \end{center}    
-    Thus, the means for each group are as follows:
+    Thus, the means for each group are as follows:\vspace{1em}
     \begin{center}
         \begin{tblr}{
                 width=\textwidth,
@@ -1745,7 +1832,7 @@ This principle is essential in areas like energy storage and structural design, 
         \end{tblr}
         \caption{HV5 individual and mean data}
         \label{tab:hv5mean}
-    \end{center}
+    \end{center}\vspace{1em}
     Honestly this is pretty much it for the hardness test we got our individual and averages there not much else we can do with this.
     \newpage
     \subsection{Force vs Displacement}
@@ -1755,16 +1842,16 @@ This principle is essential in areas like energy storage and structural design, 
             \centering
             \begin{tblr}{
                     width=\textwidth,
-                    colspec={X[0.4,c]X[1,c]X[1.1,c]X[1.9,c]X[1.9,c]X[1.1,c]X[0.8,c]X[0.7,c]},
+                    colspec={X[2,c]X[2,c]X[2,c]},
                     hlines,vlines,
                     cells={valign=m,halign=c}
                 }
-                \textbf{Nr} & \textbf{Specimen ID} & \textbf{Date} & \textbf{Stress - Maximum Load (N)} & \textbf{Strain Extension at Break (mm)} & \textbf{Thickness (mm)} & \textbf{Width (mm)} & \textbf{CSA \((\text{mm}^2)\)} \\
-                1 & ST & 20/11/2024 & 8580 & 19.8 & 1 & 1 & 1.00 \\
-                2 & PH & 20/11/2024 & 23800 & 9.8 & 1 & 1 & 1.00 \\
-                3 & AR & 20/11/2024 & 24400 & 9.7 & 1 & 1 & 1.00 \\
+                \textbf{Specimen ID} & \textbf{Maximum Load (N)} & \textbf{Extension at Break (mm)} \\
+                ST & 8580 & 19.8 \\
+                PH & 23800 & 9.8 \\
+                AR & 24400 & 9.7 \\
                 \end{tblr}
-            \caption{Specimen Data}
+            \caption{Relevant extracted data machine table (See Figure \ref{fig:tensile_results})}
             \label{tab:specimen_data}
         \end{table}
         
@@ -1810,6 +1897,16 @@ This principle is essential in areas like energy storage and structural design, 
         \item Rovida, C., Alépée, N., Api, A.M., Basketter, D.A., Bois, F.Y., Caloni, F., Corsini, E., Daneshian, M., Eskes, C., Ezendam, J., Fuchs, H., Hayden, P., Hegele-Hartung, C., Hoffmann, S., Hubesch, B., Jacobs, M.N., Jaworska, J., Kleensang, A., Kleinstreuer, N., Lalko, J., Landsiedel, R., Lebreux, F., Luechtefeld, T., Locatelli, M., Mehling, A., Natsch, A., Pitchford, J.W., Prater, D., Prieto, P., Schepky, A., Schüürmann, G., Smirnova, L., Toole, C., van Vliet, E., Weisensee, D. and Hartung, T. (2015) \textit{Integrated Testing Strategies (ITS) for Safety Assessment}. Available at: \url{https://www.researchgate.net/publication/6538912_The_Principles_of_Weight_of_Evidence_Validation_of_Test_Methods_and_Testing_Strategies_The_Report_and_Recommendations_of_ECVAM_Workshop_58} [Accessed 20 December 2024].
         
         \item Alan Turing Institute (2024) \textit{Data-Driven Experiment Design}. Available at: \url{https://www.turing.ac.uk/research/research-projects/data-driven-experiment-design} [Accessed 20 December 2024].
+
+
+
+        % resilence
+        %https://testbook.com/civil-engineering/modulus-of-resilience
+        % umages 
+%        https://mechcontent.com/modulus-of-resilience/
+        
+        % yield strength        
+        % https://en.wikipedia.org/wiki/Yield_%28engineering%29
         
         % webassign.net hook law image
         % https://demo.webassign.net/ebooks/cj6demo/xlinks/c10-fig-0034.htm
