@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator
 
 # Load the data
-AR = pd.read_csv('data/data1.csv')
-PH = pd.read_csv('data/data2.csv')
-ST = pd.read_csv('data/data3.csv')
+AR = pd.read_csv('data/AR_Force_Elongation.csv')
+PH = pd.read_csv('data/PH_Force_Elongation.csv')
+ST = pd.read_csv('data/ST_Force_Elongation.csv')
 
 # Define the original gauge length and the cross-sectional areas
 original_gauge_length = 50  # mm
@@ -27,21 +27,32 @@ strain1 = elongation1 / original_gauge_length  # Strain = Change in length / Ori
 strain2 = elongation2 / original_gauge_length
 strain3 = elongation3 / original_gauge_length
 
+# Store the Stress and Strain data into new data files
+AR_stress_strain = pd.DataFrame({'Strain': strain1, 'Stress': stress1})
+PH_stress_strain = pd.DataFrame({'Strain': strain2, 'Stress': stress2})
+ST_stress_strain = pd.DataFrame({'Strain': strain3, 'Stress': stress3})
+
+AR_stress_strain.to_csv('data/AR_stress_strain.csv', index=False)
+PH_stress_strain.to_csv('data/PH_stress_strain.csv', index=False)
+ST_stress_strain.to_csv('data/ST_stress_strain.csv', index=False)
+
 # Create the plot for Stress vs Strain
 plt.figure(figsize=(10, 10))
 
 # Plot the data for each specimen
-plt.plot(strain1, stress1, label='AR', color='red')
-plt.plot(strain2, stress2, label='PH', color='blue')
-plt.plot(strain3, stress3, label='ST', color='green')
+plt.plot(strain1, stress1, label='AR', color='blue')
+plt.plot(strain2, stress2, label='PH', color='green')
+plt.plot(strain3, stress3, label='ST', color='red')
 
 # Set the axis labels
-plt.xlabel('Strain (dimensionless)')
-plt.ylabel('Stress (N/mm²)')
-plt.title('Stress vs Strain for Different Specimens')
+plt.rcParams['text.usetex'] = True
+
+plt.xlabel(r'Strain $(\sigma)$ [dimensionless]',fontsize=14)
+plt.ylabel(r'Stress $(\varepsilon)$ $[\text{N/}\text{mm}^2]$',fontsize=14)
+plt.title('Stress vs Strain for Different Specimens',fontsize=16)
 
 # Add a legend
-plt.legend()
+plt.legend(fontsize=16)  # Adjust the fontsize as needed
 
 # Enable the grid with custom styling
 plt.grid(True, linestyle='--', alpha=0.7)
@@ -55,7 +66,9 @@ plt.xlim(0, x_max * 1.05)  # Padding on the x-axis
 plt.ylim(bottom=0, top=y_max * 1.05)  # Padding on the y-axis
 
 # Save the figure
-plt.savefig('figures/stress_vs_strain.png', dpi=1000)
+plt.tight_layout()
+
+plt.savefig('figures/stress_vs_strain.png', dpi=1000,bbox_inches='tight')
 
 # Display the plot
 plt.show()

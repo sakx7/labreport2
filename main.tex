@@ -1223,7 +1223,7 @@ We measured the dimensions of each alloys gauge region using a digital calliper 
     \label{tab:csa}
     \vspace{1em}\noindent
     In a tensile test, force is applied from the top and bottom of the alloy, stretching it along its length. Stress is calculated as the force divided by the area \textbf{perpendicular} to the applied force. Thus, the appropriate cross-sectional area for stress calculation is the one that is orthogonal to this force.\footnotemark
-\end{minipage}\\ \footnotetext{The calculations for the cross-sectional area (CSA) are conducted externally, not as part of the laboratory procedure, although this section should only focus on that, i add this here merely for the convenience of information flow. please don't be too hard on me it can moved to the data and results section if need be.}
+\end{minipage}\\ \footnotetext{The calculations for the cross-sectional area (CSA) are conducted externally, not as part of the laboratory procedure, although this section should only focus on that, i add this here merely for the convenience of information flow. please don't be too hard on me, it can moved to the data and results section if need be.}
 \begin{itemize}[left=0pt,itemsep=-0.3mm]
     \item \textbf{\textcolor{blue}{\textsf{CSA 1}}:} This CSA parameterizes the thickness dimension of the alloy and remains coplanar with the applied force vector, rendering it unsuitable for stress calculations.
     \item \textbf{\textcolor{green!50!black}{\textsf{CSA 2}}:} This CSA parameterizes the width dimension and also remains coplanar with the applied force vector, thus it is not utilized for stress calculations.
@@ -1308,7 +1308,7 @@ An axial load was applied to the standardised dog-bone-shaped alloy as part of t
 For analysis, a real-time plot of force (N) versus change in length (mm) was generated during the experiment.
 \end{minipage}\\[8pt]
 Once the test was completed, i.e., after the specimen broke, the system also provided a table outlining details such as \textbf{Maximum Load (N)} \& \textbf{Extension at Break (mm)} \footnote{Table title terminology has been reworded for clarity. The original table titles are phrased strangely and incorrectly in a sense. A more detailed explanation and possible justification is provided in a later section.}. This process was automated using the manufacturer's software. The machine did not account for the sample's thickness or width, or simply by observation it was not given, making the data for these parameters invalid.\\[8pt]
-Consequently, it is necessary for us to establish the relationship between the generated data and the initial measurements (e.g., cross-sectional area and original gauge length) (See Section \ref{Measurements}). While it may seem that providing the machine with the cross-sectional area and initial gauge length could have directly yielded a stress-strain curve, and correct data in the table, it is likely that this approach was deliberately avoided to encourage independent analysis and a deeper understanding of the process. There will be more discussion on this later on.
+Consequently, it is necessary for us to establish the relationship between the generated data and the initial measurements (e.g., cross-sectional area and original gauge length) (See Section \ref{Measurements}) to produce more insights. While it may seem that providing the machine with the cross-sectional area and initial gauge length could have directly yielded correct data in the table and directly also a stress-strain curve with its several insights, it is likely that this approach was deliberately avoided to encourage independent analysis and a deeper understanding of the process.
 
 \newpage
 \begin{figure}[H]
@@ -1367,13 +1367,13 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
         \item \textbf{Tensile Testing}
         \begin{itemize}
             \item \textbf{Stress \& Strain}
-            \item \textbf{Young's Modulus} (also known as \textit{Modulus of Elasticity})
+            \item \textbf{Young's Modulus}
             \item \textbf{Hooke's Law}
             \item \textbf{Yield Strength}
             \item \textbf{Modulus of Resilience}
             \item \textbf{Ultimate Tensile Strength (UTS)}
             \item \textbf{Toughness \& Modulus of Toughness}
-            \item \textbf{Elongation at Break \& Percentage elongation}
+            \item \textbf{Ductility}
             \item \textbf{Ratios}
         \end{itemize}
     \end{itemize}
@@ -1448,13 +1448,12 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
         A stress-strain curve is used to determine the point at which the reversible elastic strain is exceeded and permanent or plastic deformation occurs. The yield strength is the stress necessary to cause significant plastic deformation (usually defined as 0.2\% strain).\\[8pt]
         Young’s modulus, or the modulus of elasticity, states the relationship between stress and strain represented by the straight-line portion of the stress-strain curve. It reflects the tendency of a material to deflect under a given applied stress.\\[8pt]
         Once yielding has begun, there is significant motion of dislocations within the metal grains. Grain boundaries, phase boundaries, and other dislocations hinder their movement. As more obstacles are encountered, the stress necessary to cause continued dislocation movement becomes greater. The maximum stress that the material can withstand before breaking is the ultimate tensile strength.\\[8pt]
-        Reduction of area and percent elongation can be calculated from the broken sample. They are both indicators of a material’s ductility.\\
-        \vspace{0.4pt}
-    \end{formal}
+        Reduction of area and percent elongation can be calculated from the broken sample. They are both indicators of a material’s ductility.
+        \end{formal}
 
      Stress and strain are fundamental concepts in tensile testing:\\[8pt]
      \subsection{Stress}
-     \textbf{Stress} ($\sigma$) is the force divided by the cross-sectional area where that force is applied perpendicular to the material. In a tensile test, the area is constant (initial area $A_0$), while the applied force ($F$) changes, Mathematically, it is expressed as:\\[8pt]
+     \textbf{Stress} ($\sigma$) is the force divided by the cross-sectional area where that force is applied perpendicular to the material. In a tensile test, specifically the \textit{engineering stress}, the area is constant (initial area $A_0$), while the applied force ($F$) changes, Mathematically, it is expressed as:\\[8pt]
     \begin{minipage}{0.46\textwidth}
             \begin{equation}
                 \sigma = \frac{F}{A}
@@ -1463,7 +1462,7 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
             \begin{itemize}[left=0pt,itemsep=-1mm]
             \wm{\item \(\sigma\): Stress (Pascals, Pa) or (Newtons per metre, \(\text{N/m}^2\))}
             \wm{\item \(F\): Applied force (Newtons, N)}
-            \wm{\item \(A\): Initial cross-sectional area (metres squared, \(\text{m}^2\))}
+            \wm{\item \(A\): Cross-sectional area (metres squared, \(\text{m}^2\))}
             \end{itemize}
         \end{minipage}\hfill
         \begin{minipage}{0.47\textwidth}
@@ -1472,7 +1471,7 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
                 \label{eq:csa}
             \end{equation}
             \begin{itemize}[left=0pt,itemsep=-1mm]
-                \wm{\item \(A\): Initial cross-sectional area (meters squared, \(\text{m}^2\))}
+                \wm{\item \(A\): Cross-sectional area (meters squared, \(\text{m}^2\))}
                 \wm{\item \(w\): Width (meters, \(\text{m}\))}
                 \wm{\item \(d\): Depth or thickness (meters, \(\text{m}\))}            
             \end{itemize}
@@ -1512,6 +1511,32 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
         Strain ($\varepsilon$) measures how much a material deforms when a force is applied. It reflects the change in length relative to the material's original length.\\[8pt]
         Grasping the concept of strain is essential for understanding how materials behave under load, especially regarding their elasticity. It shows whether a material can return to its original shape after the load is removed (elastic deformation) or if it will undergo permanent deformation (plastic deformation). Because it helps determine the point at which a material may fail or become permanently deformed.
         \footnotetext{In practice, tensile testing machines usually determine displacement by counting incremental encoder pulses instead of measuring absolute position. The overall displacement is computed by adding these incremental changes starting from the initial reference point.}
+
+    \subsection{True Stress and Strain}
+    Engineers typically work with \textbf{engineering stress}, which is the force divided by the original area of the specimen before loading (See \ref{eq:stress}).\\[8pt] However, as a material is loaded, the area decreases. The \textbf{true stress}, $(\tilde{\sigma})$, considers the actual area of the specimen. Because the area decreases as a material is loaded, true stress is higher than engineering stress.\\[8pt]
+    The figure below shows an engineering stress-strain curve as compared to a true stress-strain curve. Because the engineering stress is calculated as force divided by the original area (which is constant), the engineering stress-strain curve has the same shape as the load-deflection curve. The engineering stress-strain curve drops after the ultimate strength is reached because the force that can be supported by the material drops as it begins to neck down. However, the stress value in the true stress-strain curve always increases as the strain increases. This is because the instantaneous value of area is used when calculating true stress. Even when the force supported by the material drops, the reduction in the specimen area outweighs the reduction in force, and the stress continues to increase. (mechanicalc, 2024)    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{images/true-stress-strain-diagram-01.png}
+        \caption{True and engineering Stress and Strain curves (mechanicalc, 2024)}
+        \label{fig:tvn}
+    \end{figure}
+    It should be noted that the engineering stress and the true stress are essentially the same in the linear-elastic region of the stress-strain curve. Because engineers typically operate within this linear-elastic region (it is uncommon to design a structure that is intended to operate beyond the elastic limit), it is valid to work with engineering stress as opposed to true stress.\\[8pt]
+    \textbf{Engineering strain} is the change in length divided by the original length (See \ref{eq:stress}) Instead of just calculating a single value of $\Delta L$, consider that the change in length is divided among many small increments, $\Delta L_j$. The strain is also calculated in small increments:
+    \begin{equation}
+        \varepsilon_j = \frac{\Delta L_j}{L_j},
+    \end{equation}
+    where $\Delta L_j$ is the change in length for an increment, and $L_j$ is the length at the start of the increment. As these increments become infinitesimally small, the summation of the strains approaches the \textbf{true strain} ($\tilde{\varepsilon}$):
+    \begin{equation}
+        \tilde{\varepsilon} = \int_{L_0}^{L} \frac{dL}{L}=\ln\left(\frac{L}{L_0}\right)=\ln(1+\varepsilon)
+    \end{equation}
+    If it is assumed that the volume is constant throughout the deflection, then true stress and strain can be calculated as:
+    \begin{align}
+        \text{True Stress:} & \quad \tilde{\sigma} = \sigma \left( 1 + \varepsilon \right) \\
+        \text{True Strain:} & \quad \tilde{\varepsilon} = \ln \left(\frac{A_0}{A}\right)
+    \end{align}
+    where $\tilde{\sigma}$ and $\tilde{\varepsilon}$ are the true stress and strain, and $\sigma$ and $\varepsilon$ are the engineering stress and strain.
+    \newpage
     \subsection{Young's Modulus}
     \textbf{Young's Modulus} (\(E\)) (also known as \textit{Modulus of Elasticity}) defines the relationship between stress (\(\sigma\)) and strain (\(\varepsilon\)) as a linear fraction. It represents the rate at which stress leads to strain in a material and is determined from the tensile test within the elastic region. Mathematically, it is expressed as:
     \begin{equation}
@@ -1523,15 +1548,6 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
         \item \( \sigma \): Stress Pascals (Pascals, Pa) or (Newtons per metre, \(\text{N/m}^2\))
         \item \( \varepsilon \): Strain (no units).
     \end{itemize}    
-    \newpage
-    The relationship can also be expressed as:
-    \begin{equation}
-        \begin{aligned}
-            \sigma &= E \varepsilon\\
-            \sigma &\propto \varepsilon 
-        \end{aligned}
-    \end{equation}
-    Given the relation \( \sigma = E \varepsilon \), stress (\( \sigma \)) is directly proportional to strain (\( \varepsilon \)) were the proportionality constant is Young's modulus (\(E\)). This concept is further expanded in the Hooke's Law section.\\[8pt]
     The formulas for stress (\( \sigma \)) (\ref{eq:stress}) and strain (\( \varepsilon \))(\ref{eq:strain}) can be used to expand the equation, and if needed, \ref{eq:deltaL} and \ref{eq:csa} can be incorporated for further elaboration. This can also be written as follows\footnote{Relevant units and variables are from the equations named, so i will not do an itemize for this}:
     \begin{equation}
         E = \frac{F \times L_0}{A\times\Delta L} = \frac{F \times L_0}{\left(w\times d\right)\left(|L-L_0|\right)}
@@ -1633,7 +1649,7 @@ A thorough understanding of Hooke's Law, its limitations, and its relationship w
 
  The \textbf{yield point} on a stress-strain curve marks the transition from elastic to plastic behavior. Below this point, the material deforms elastically and returns to its original shape when the stress is removed. Beyond this point, plastic deformation occurs, and some deformation becomes permanent.\\[8pt]
  The \textbf{yield strength} (\( \sigma_y \)) is the stress at the yield point and the corresponding strain called \textbf{yield strain} (\( \varepsilon_y \)). Mathematically, we can represent this point on the stress-strain curve as \( (\sigma_y,\ \varepsilon_y) \). To perform further calculations related to this point, such as the modulus of resilience (See Section \ref{mor}).\\[8pt]
-This point marks the onset of plastic deformation. For materials like aluminum and cold-worked steel, which do not exhibit a distinct yield point due to a gradual transition to plastic deformation, the \textbf{offset yield point} (proof stress) is used. It is typically defined as 0.2\% of the strain within the proportionality limit (elastic region), with the offset being from zero.\\[8pt] 
+This point marks the onset of plastic deformation. For materials like aluminum and cold-worked steel, which do not exhibit a distinct yield point due to a gradual transition to plastic deformation, the \textbf{offset yield point} (proof stress) is used. It is typically defined as 0.2\% of the strain within the proportionality limit, with the offset being from zero.\\[8pt] 
 Yielding can be defined in several ways:\\
 \begin{minipage}{0.4\textwidth}
      \begin{figure}[H]
@@ -1652,9 +1668,7 @@ Yielding can be defined in several ways:\\
  \end{enumerate}
   \end{minipage}\\[8pt]
 \textbf{Upper and Lower Yield Points:} For materials like mild steel, an upper yield point is followed by a drop to a lower yield point. The lower yield point is used for conservative design.\\[8pt]
-The \textbf{Elastic Limit (Yield Strength)} is important in determining the maximum allowable load a material can bear without permanent deformation. It is distinct from the \textit{ultimate tensile strength} (UTS), which is the maximum load a material can withstand before failure. For ductile materials, the ratio of yield strength to UTS is often used in applications like pipelines and is proportional to the strain hardening exponent shown in the ratio section.
-
-
+The \textbf{Elastic Limit (Yield Strength)} is important in determining the maximum allowable load a material can bear without permanent deformation. It is distinct from the \textit{ultimate tensile strength} (UTS), which is the maximum load a material can withstand before failure. For ductile materials, the ratio of yield strength to UTS is often used in applications like pipelines and is proportional to the strain hardening exponent shown in the ratio section (See Section \ref{}).
     
     \newpage    
     
@@ -1720,54 +1734,233 @@ This approach is acceptable when the proportionality ends clearly, as the yield 
 \newpage    
 
 \subsection{Ultimate Tensile Strength (UTS)}
-Ultimate Tensile Strength (UTS) is quite straightforward in its theoretical background is not quite as extensive as others, it represents the maximum stress a material can withstand while being stretched before it breaks.\\
-
-The maximum stress applied in tension to a material before rupture is defined:
+Ultimate Tensile Strength (UTS) represents the maximum stress ($\sigma_{u}$) a material can withstand while being stretched before it breaks. It is determined from a stress-strain curve as the \textbf{peak stress value} prior to fracture and is crucial for ensuring safety in applications such as cables, bridges, and other load-bearing components. Its theoretical background is relatively straightforward compared to other material properties.\\[8pt]
+It corresponds to the maximum force ($F_{\text{max}}$) applied relative to the original cross-sectional area ($A$) of the material. The equation for UTS is:
 \begin{equation}
-    P_{max} = \text{Ultimate Tensile Strength (UTS)} \times A
+    \sigma_{u} = \frac{F_{\text{max}}}{A}
 \end{equation}
-%where, P_max = Maximum Tensile Force
-%A = Original cross sectional area of specimen
+\begin{itemize}[itemsep=-1mm]
+    \item $\sigma_{u}$: Ultimate Tensile Strength (Mega Pascals, MPa)
+    \item $F_{\text{max}}$: Maximum applied force (Newtons, N)
+    \item $A$: Original cross-sectional area (metres squared, $\text{m}^2$)
+\end{itemize}
+In practical terms, UTS measures the maximum force per unit area a material can handle before failure. The value of UTS ($\sigma_{u}$) is observed directly from experimental data as the highest stress on a stress-strain curve. However, \textbf{this equation is not necessarily a useful analytical tool because UTS is an observational property rather than a predictive one.}
+\begin{center}
+    \begin{minipage}{0.47\textwidth}\centering
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.9\textwidth]{images/ultimate-tensile-strength.png}
+            \caption{Ultimate Tensile Strength (where point D is $\sigma_{u}$) (admet, 2024).}
+            \label{fig:uts}
+        \end{figure}
+    \end{minipage}\hfil
+    \begin{minipage}{0.45\textwidth}
+        The UTS marks the transition where the material reaches its maximum load-bearing capacity before necking begins.\\[8pt] 
+        After UTS, the material experiences localized deformation and ultimately fractures.\\[8pt]
+        Ultimate Tensile Strength is commonly reported in units such as pounds per square inch (psi) or Newtons per square millimeter (MPa, Mega Pascals). These units are used because UTS values are typically large, making these units practical for communicating and comparing material performance.    
+    \end{minipage}
+\end{center}
+Understanding the plastic behavior beyond UTS is essential for applications requiring high ductility and toughness, such as forming and shaping processes.
 
-Ultimate Tensile Strength is commonly reported in units of pounds per square inch (psi) or in Newtons per square mm (MPa, Mega Pascals).
-
-It is one of the most important properties for assessing a material's ability to resist failure under tensile loads. UTS is determined from a stress-strain curve as the \textbf{peak stress value} before fracture. This property is critical for ensuring safety in applications like cables, bridges, and load-bearing components.  
 
 \newpage
 
-\subsection{Elongation at Break}
-Elongation at break measures the extent to which a material can stretch before it fractures. It reflects the ductility of the material, which is its ability to deform plastically without breaking. High elongation values indicate that the material is highly ductile, making it suitable for forming and shaping processes. Conversely, low elongation values suggest brittleness.  
-    
-    \subsubsection{Percentage Elongation}
-    Percentage elongation is a specific measure of elongation at break expressed as a percentage of the original length of the material. It is calculated using the formula:  
-    \[\text{Percentage Elongation} = \left(\frac{L_f - L_0}{L_0}\right) \times 100\]  
-    Where \(L_f\) is the final length at fracture, and \(L_0\) is the original length. This metric is often used in tensile testing to compare the ductility of different materials.  
+\subsection{Ductility}
+Ductility is an indication of how much plastic strain a material can withstand before it breaks. A ductile material can sustain large strains even after it has begun to yield. Common measures of ductility include percent elongation and reduction in area, as discussed in this section.
+After a specimen breaks during a tensile test, the final length of the specimen is measured, and the \textbf{plastic strain at failure} $(\varepsilon_f)$, is calculated:
+\begin{equation}
+    \varepsilon_f = \frac{L_f - L_0}{L_0}
+\end{equation}
+\begin{itemize}[itemsep=-1mm]
+    \item $\varepsilon_f$: Plastic strain at failure (no units)
+    \item $L_0$: Original length (metres, m)
+    \item $L_f$: Final length (metres, m)
+\end{itemize}
+It is important to note that after the specimen breaks, the elastic strain that existed while the specimen was under load is recovered. Therefore, the measured difference between the final and initial lengths gives the plastic strain at failure. This is illustrated in the figure below:\\[8pt]
+\begin{minipage}{0.45\textwidth}\centering
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\textwidth]{images/elastic-plastic-strain-at-break-01.png}
+    \caption{Elastic and Plastic Strain at Break.}
+    \label{fig:strain-break}
+\end{figure}
+\end{minipage}\hfill
+\begin{minipage}{0.51\textwidth}
+In the figure, it can be seen that the plastic strain at failure, is the strain remaining in the material after the elastic strain has been recovered.\\[8pt]
+The \textbf{percent elongation} \((eL)\) is calculated from the plastic strain at failure by:
+\begin{equation}
+    eL = \varepsilon_f \times 100\% = \frac{L_f - L_0}{L_0} \times 100\%
+\end{equation}
+\begin{itemize}[itemsep=-1mm]
+    \item $eL$: Percent elongation (Percent, \%)
+\end{itemize}
+The percent elongation is a commonly provided material property, so the plastic strain at failure is typically calculated from the percent elongation:
+\begin{equation}
+    \varepsilon_f = \frac{eL}{100\%}
+\end{equation}
+\end{minipage}\\[8pt]
+The \textbf{ultimate strain} $(\varepsilon_u)$ accounts for both plastic and elastic strain at failure, representing the total strain at failure as the sum of the plastic strain and the elastic strain:
+\begin{equation}
+    \varepsilon_u = \varepsilon_f + \frac{\sigma_{u}}{E}
+\end{equation}
+\begin{itemize}[itemsep=-1mm]
+    \item $\varepsilon_u$: Ultimate strain (No units)
+    \item $\sigma_{u}$: Ultimate stress (Pascals, Pa) or (Newtons per metre, \(\text{N/m}^2\))
+    \item $E$: Young's modulus (Pascals, Pa) or (Newtons per metre, \(\text{N/m}^2\))
+\end{itemize}
+\newpage
+Another important material property that can be measured during a tensile test is the reduction in area, which is calculated by:
+\begin{equation}
+    \text{Reduction in Area} = \frac{A_0 - A_f}{A_0} \times 100\%
+\end{equation}
+\begin{itemize}[itemsep=-1mm]
+    \item $A_0$ Original cross-sectional area
+    \item $A_f$ Cross-sectional area after fracture
+\end{itemize}
+The actual units are only relevant in ensuring consistency throughout the calculation. This consistency guarantees that the Reduction in Area percentage is dimensionless or properly represented as a percentage.\\ It is also important to remember that percent elongation and reduction in area account for the plastic components of the axial strain and the lateral strain, respectively.\\
+
+
+
     \newpage
-    \subsection{Toughness and Modulus of Toughness}
-%    Toughness represents a material's ability to absorb energy up to the point of fracture. It is the combination of both strength and ductility, which determines how well a material can withstand stress before failure. Toughness is an essential property for applications where impact resistance and the ability to withstand sudden loading or deformation are critical, such as in automotive, aerospace, and construction industries. The toughness of a material is determined by measuring the area under the entire stress-strain curve, which includes both the elastic and plastic deformation regions.  
-    
-    
-%    The modulus of toughness is a related but distinct concept. It quantifies the total energy per unit volume that a material can absorb before fracturing, considering the area under the entire stress-strain curve. This measure gives insight into the material's capacity to withstand large amounts of energy before failure, typically used in applications where materials experience extreme stress or sudden impacts. While toughness indicates overall energy absorption, the modulus of toughness provides a normalized measure, considering energy per unit volume.
-    \newpage
-    \subsection{Ratios}
-%    The slimness ratio
-%    \subsection{Poisson's Ratio}
+
+\subsection{Toughness and Modulus of Toughness}
+
+\textbf{Toughness} is a material's ability to absorb energy up to the point of fracture, combining strength and ductility. It is essential for applications where impact resistance and the ability to withstand sudden loading or deformation are critical, such as in automotive, aerospace, and construction industries. Toughness is determined by the area under the entire stress-strain curve, which includes both elastic and plastic deformation regions.\\[8pt]
+The \textbf{modulus of toughness} represents the strain energy per unit volume (strain energy density) a material can absorb just before it fractures. It is calculated as the area under the stress-strain curve up to fracture. A rough approximation of this modulus can be made by dividing the stress-strain curve into a triangular section and a rectangular section, with the height of these sections being the average of the yield strength and ultimate strength. The modulus of toughness is approximated as:
+\begin{center}
+    \begin{minipage}{0.5\textwidth}\centering
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=1\textwidth]{images/modulus-of-toughness-approx-01(1).jpg}
+            \caption{modulus-of-toughness-approx}
+            \label{fig:mot}
+        \end{figure}
+    \end{minipage}\hfil
+    \begin{minipage}{0.45\textwidth}
+        \begin{equation}
+            \begin{aligned}
+                U_t &\approx \left(\frac{\sigma_{y} + \sigma_{u}}{2}\right)\times\left(\varepsilon_u - \frac{\varepsilon_y}{2}\right)\\
+                &\approx \varepsilon_u\left(\frac{\sigma_{y} + \sigma_{u}}{2}\right) -\frac{1}{2E}\left(\frac{\sigma_{y} + \sigma_{u}}{2}\right)^2
+            \end{aligned}
+        \end{equation}
+        Where:
+        \begin{itemize}[left=0pt, itemsep=-1mm]
+            \item \( U_t \): Modulus of toughness (Pa\(\cdot\)m or psi\(\cdot\)in\(^2\))
+            \item $\sigma_y$: Tensile yield strength (Pa or psi)
+            \item $\sigma_u$: Tensile ultimate strength (Pa or psi)
+            \item $\varepsilon_y$: Strain at yield (no units)
+            \item $\varepsilon_u$: Ultimate strain (no units)
+            \item $E$: Elastic modulus (Pa or psi)
+        \end{itemize}
+    \end{minipage}
+\end{center}
+For a more accurate calculation, the \textbf{Ramberg-Osgood equation} can be used to approximate the stress-strain curve, followed by integration to find the area under the curve.\\[8pt]
+The plastic region (rectangular portion) of the stress-strain curve significantly contributes to toughness. Ductile materials can withstand more plastic strain than brittle ones, so they exhibit a higher modulus of toughness, even with the same yield strength. While structures are designed to keep stresses within the elastic region, ductile materials with a higher modulus of toughness are better suited for applications involving accidental overloads.\\[8pt]
+Note that the units of the modulus of toughness are the same as those of strain energy density: psi in US Customary units and Pa in SI units.
+
+\newpage
+
+    \subsection{Material Property Ratios}
 
 
+\begin{itemize}
 
-    
-    
+\item \textbf{Slimness Ratio}:\\[8pt]
+\begin{minipage}{0.3\textwidth}
+    \begin{equation}
+        \frac{L_0}{\sqrt{A_0}}
+    \end{equation}
+\end{minipage}\hfill
+\begin{minipage}{0.6\textwidth}
+    This ratio characterizes the geometry of a tensile test specimen by relating the original gauge length (\(L_0\)) to the cross-sectional area (\(A_0\)). It is essential for standardizing tensile tests and affects the measured ductility of the material.
+\end{minipage}
+
+\item \textbf{Tensile Strength to Yield Strength Ratio}:\\[8pt]
+\begin{minipage}{0.3\textwidth}
+    \begin{equation}
+        \frac{\sigma_u}{\sigma_y}
+    \end{equation}
+\end{minipage}\hfill
+\begin{minipage}{0.6\textwidth}
+    This ratio compares the ultimate tensile strength (\(\sigma_u\)) to the yield strength (\(\sigma_y\)), providing an idea of how much additional strain a material can take beyond the yield point before failure.
+\end{minipage}
+
+\item \textbf{Tensile Strength to Fracture Strength Ratio}:\\[8pt]
+\begin{minipage}{0.3\textwidth}
+    \begin{equation}
+        \frac{\sigma_u}{\sigma_f}
+    \end{equation}
+\end{minipage}\hfill
+\begin{minipage}{0.6\textwidth}
+    This ratio compares the ultimate tensile strength to the fracture strength (\(\sigma_f\)), indicating how much higher the material's ultimate strength is before it breaks.
+\end{minipage}
+
+\item \textbf{Young’s Modulus to Yield Strength Ratio}:\\[8pt]
+\begin{minipage}{0.3\textwidth}
+    \begin{equation}
+        \frac{E}{\sigma_y}
+    \end{equation}
+\end{minipage}\hfill
+\begin{minipage}{0.6\textwidth}
+    This ratio indicates the material's ability to resist elastic deformation relative to its yield strength.
+\end{minipage}
+
+\item \textbf{Ductility Ratio}:\\[8pt]
+\begin{minipage}{0.3\textwidth}
+    \begin{equation}
+        \frac{\varepsilon_u}{\varepsilon_y}
+    \end{equation}
+\end{minipage}\hfill
+\begin{minipage}{0.6\textwidth}
+    This ratio compares the ultimate strain (\(\varepsilon_u\)) to the strain at yield (\(\varepsilon_y\)), reflecting how much plastic deformation a material can undergo compared to its initial elastic deformation.
+\end{minipage}
+
+\item \textbf{Modulus of Resilience to Modulus of Toughness Ratio}:\\[8pt]
+\begin{minipage}{0.3\textwidth}
+    \begin{equation}
+        \frac{U_r}{U_t}
+    \end{equation}
+\end{minipage}\hfill
+\begin{minipage}{0.6\textwidth}
+    This ratio compares the modulus of resilience (energy absorbed without permanent deformation) to the modulus of toughness (total energy absorbed before fracture).
+\end{minipage}
+
+\item \textbf{Poisson's Ratio}:\\[8pt]
+Poisson's ratio, which measures the lateral strain resulting from axial stress, cannot be accurately determined in this test due to the lack of precise lateral strain measurements in the current experimental setup.
+
+\end{itemize}
+
+        
     \newpage\vspace*{-20pt}
     
     \section{Data and Result Calculations}
     
+    While the tensile test provides valuable information about a material's strength and ductility, there are certain parameters that cannot be directly derived or accurately measured in this specific test setup. These limitations include:
+    \begin{itemize}[left=0pt, itemsep=-1mm]
+        \item \textbf{Reduction in Area:} The reduction in area, which measures the change in cross-sectional area at the point of fracture, cannot be directly determined in this test setup as the fracture point and necking behavior are not fully captured.
+        \item \textbf{True Stress and True Strain:} The calculation of true stress and true strain requires continuous measurement of the specimen's dimensions during deformation. In this case, only engineering stress and strain are measured, which are based on the original dimensions of the specimen and do not account for changes in geometry during deformation.
+    \end{itemize}
+    As a result, certain material properties that rely on these parameters are not directly available from the current tensile test data. Regardless we move\\
+    \vspace{1em}
+    \hrule
+    \vspace{1em}
     Now that we have collected the following data:
     \begin{itemize}
-        \item HV5
-        \item \(w\), \(d\), \(L_0\)
-        \item \(F\) vs \(\Delta L\)
+        \item Hardness (HV5)
+        \item Gauge Width (\(w\)), Thickness (\(d\)), Length (\(L_0\))
+         \item Corresponding set of values for Force \((F)\) that relate to a specific Change in Length \((\Delta L)\).    
     \end{itemize}
-    We can now derive several mechanical properties, these derived properties will help us fully characterize the mechanical performance of the material under stress.
+    We can derive several mechanical properties from the test data. The properties outlined in the theory section include:
+    \begin{itemize}
+        \item Stress ($\sigma$) and Strain ($\varepsilon$)
+        \item Stiffness ($k$) and Young's Modulus ($E$)
+        \item Resilience ($U_r$) and Toughness ($U_t$)
+        \item Yield Strength ($\sigma_y$) and Yield Strain ($\varepsilon_y$)
+        \item Ultimate Strength ($\sigma_u$) and Ultimate Strain ($\varepsilon_u$)
+        \item Percent Elongation ($eL$) and Plastic Strain at Failure ($\varepsilon_f$)    
+    \end{itemize}
+    These derived properties help us fully characterize the mechanical performance of the material under stress.
+
     \newpage
     \subsection{Hardness Data}\label{meanhard}
     While we've gone over the important equations for the Vickers hardness test, in this prior theory section (See Section \ref{VHC}) there's no need to actually do the calculations by hand since the machine has already provided the results. I hope this much is clear by now.\\[8pt] 
@@ -1836,42 +2029,136 @@ Elongation at break measures the extent to which a material can stretch before i
     Honestly this is pretty much it for the hardness test we got our individual and averages there not much else we can do with this.
     \newpage
     \subsection{Force vs Displacement}
-    
+        This data from the A4 from the machine (See Figure \ref{fig:tensile_results}) has been revised for clarity, removing any unnecessary details. The table and graph axis and title has been reformatted to enhance readability.
         \renewcommand{\arraystretch}{1.4}
         \begin{table}[H]
             \centering
             \begin{tblr}{
-                    width=\textwidth,
-                    colspec={X[2,c]X[2,c]X[2,c]},
+                    colspec={X[1,c]X[1,c]X[1,c]},
                     hlines,vlines,
                     cells={valign=m,halign=c}
                 }
                 \textbf{Specimen ID} & \textbf{Maximum Load (N)} & \textbf{Extension at Break (mm)} \\
-                ST & 8580 & 19.8 \\
-                PH & 23800 & 9.8 \\
-                AR & 24400 & 9.7 \\
+                \textcolor{red}{ST} & 8580 & 19.8 \\
+                \textcolor{green!50!black}{PH} & 23800 & 9.8 \\
+                \textcolor{blue}{AR} & 24400 & 9.7 \\
                 \end{tblr}
-            \caption{Relevant extracted data machine table (See Figure \ref{fig:tensile_results})}
+            \caption{Relevant extracted data from the table (See Figure \ref{fig:tensile_results})}
             \label{tab:specimen_data}
         \end{table}
-        
-
-
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.7\textwidth]{figures/force_vs_elongation.png}       
-        \caption{Machine produced data for Force vs Elongation}
+        \includegraphics[width=0.8\textwidth]{figures/force_vs_elongation.png}        \caption{Machine produced data for Force vs Elongation}
         \label{fig:force_elong}
     \end{figure}
-    \subsection{Stress vs Strain}
-    \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{figures/stress_vs_strain.png}
-    \caption{Calculated produced data for Stress vs Strain}
-    \label{fig:stress_strain}
-\end{figure}    
+   The data was reconstructed into CSV files using automeris.io, as the original data file was not available. The graph was subsequently plotted using Matplotlib.
+ \subsection{Stress vs. Strain}
+ 
+ The transition from Force vs. Elongation to Stress vs. Strain is a critical step in analyzing the mechanical properties of materials. This section explains the process and the utilization of code to perform this transformation.\\[8pt]
+ The Force vs. Elongation graph (Figure \ref{fig:force_elong}) shows the direct relationship between the applied load and the change in length of the specimen. This raw data is essential but lacks the normalization required for comparative analysis. To gain a deeper understanding of the material's behavior, the raw data must be transformed into stress and strain. This normalization process involves the following steps:
+ \begin{enumerate}
+     \item \textbf{Calculating Stress}: Stress is defined as the force per unit area (See Eq. \ref{eq:stress}). This normalizes the force data, making it independent of the specimen's size.
+     \item \textbf{Calculating Strain}: Strain is the change in length relative to the original length (See Eq. \ref{eq:strain}). This normalizes the elongation data, providing a dimensionless measure of deformation.
+ \end{enumerate}
+ The transformation from Force vs. Elongation to Stress vs. Strain was achieved using a Python script. The script performs the following key steps:
+ \begin{enumerate}
+     \item \textbf{Loading Data}: The raw data for each specimen is loaded from CSV\footnotemark files.
+     \item \textbf{Defining Constants}: The original gauge length and cross-sectional areas for each specimen are defined.
+     \item \textbf{Calculating Stress and Strain}: The script calculates stress and strain for each data point using the formulas mentioned above.
+     \item \textbf{Storing the Stress and Strain}: We then store the stress and strain for each data point into new CSV files.
+     \item \textbf{Plotting the Data}: The transformed data is plotted to visualize the Stress vs. Strain relationship.
+ \end{enumerate}
+ The resulting Stress vs. Strain graph (Figure \ref{fig:stress_strain}) provides a standardized and comparable representation of the material's behavior under tensile loading.\\\noindent\footnotetext{"A CSV (comma-separated values) file is a plain text file that stores data in a table-structured format, with commas separating values and newlines separating records. CSV files are commonly used to transfer large amounts of data between programs with little to no user reformatting"}    \newpage
+ \begin{figure}[H]
+     \centering
+     \includegraphics[width=0.8\textwidth]{figures/stress_vs_strain.png}
+     \caption{Calculated produced data for Stress vs. Strain}
+     \label{fig:stress_strain}
+ \end{figure} 
+ The transition from Force vs. Elongation to Stress vs. Strain is essential for understanding and comparing the mechanical properties of materials. By normalizing the raw data, we obtain a more universal and meaningful representation of material behavior. The utilization of code streamlines this transformation process, ensuring accuracy and efficiency in data analysis.
+    we now have our baseline.\\
+    lets move on with defining the properties.
+   \newpage
+\subsection{Young's Modulus}
 
-        
+Young's Modulus, also known as the modulus of elasticity, is a measure of the stiffness of a material. It is defined as the slope of the stress-strain curve in the linear elastic region. In this section, i describe the methodology used to calculate Young's Modulus for each specimen and present the results.
+
+\subsubsection{Methodology}
+
+To calculate Young's Modulus, i performed linear regression on a specified strain range within the stress-strain data. The strain range was chosen to ensure that the material behavior is linear and elastic. The following steps were taken:
+
+\begin{enumerate}
+    \item \textbf{Loading Data}: The stress and strain data for each specimen were loaded from previously created CSV files.
+    \item \textbf{Defining Strain Range}: A specific strain range was defined for each specimen to ensure linear elastic behavior.
+    \item \textbf{Linear Regression}\footnotemark: Linear regression was performed on the data points within the specified strain range to calculate the slope, which represents Young's Modulus.
+    \item \textbf{Plotting}: The stress vs. strain data and the fitted line for Young's Modulus were plotted for each specimen.
+\end{enumerate}
+\footnotetext{In statistics, linear regression is a model that estimates the linear relationship between a scalar response and one or more explanatory variables. A model with exactly one explanatory variable is a simple linear regression; a model with two or more explanatory variables is a multiple linear regression. (Wikipedia,2024)}
+\newpage
+\subsubsection{Specimen AR}
+
+For specimen AR, the strain range used for calculating Young's Modulus was from 10\% to 40\% of the total strain data. This range was chosen to ensure that the material behavior is linear and elastic.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/stress_vs_strain_with_fit_AR.png}
+    \caption{Stress vs. Strain for Specimen AR with Young's Modulus}
+    \label{fig:stress_strain_AR}
+\end{figure}
+
+The calculated Young's Modulus for specimen AR is \textbf{5522.83 N/mm\textsuperscript{2}}.
+\newpage
+\subsubsection{Specimen PH}
+
+For specimen PH, the strain range used for calculating Young's Modulus was from 10\% to 40\% of the total strain data. This range was chosen to ensure that the material behavior is linear and elastic.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/stress_vs_strain_with_fit_PH.png}
+    \caption{Stress vs. Strain for Specimen PH with Young's Modulus}
+    \label{fig:stress_strain_PH}
+\end{figure}
+
+The calculated Young's Modulus for specimen PH is \textbf{5154.74 N/mm\textsuperscript{2}}.
+\newpage
+\subsubsection{Specimen ST}
+
+For specimen ST, the strain range used for calculating Young's Modulus was from 0\% to 10\% of the total strain data. This range was chosen to ensure that the material behavior is linear and elastic.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/stress_vs_strain_with_fit_ST.png}
+    \caption{Stress vs. Strain for Specimen ST with Young's Modulus}
+    \label{fig:stress_strain_ST}
+\end{figure}
+
+The calculated Young's Modulus for specimen ST is \textbf{1850.18 N/mm\textsuperscript{2}}.
+
+\newpage
+
+The calculated Young's Modulus for each specimen is presented in the table below:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/stress_vs_strain_with_fits.png}
+    \caption{Stress vs. Strain for All Specimens with Young's Modulus}
+    \label{fig:stress_strain_all}
+\end{figure}    
+\begin{table}[H]
+    \centering
+    \begin{tblr}{
+            colspec={X[1,c]X[1,c]X[1,c]X[1,c]},
+            hlines,vlines,
+            cells={valign=m,halign=c}
+        }\Large
+        & AR & ST & PH \\
+        Young's Modulus  (\(E\)) (N/mm\textsuperscript{2}) & 5522.83 & 1850.18 & 5154.74 \\
+    \end{tblr}
+    \caption{Young's Modulus for Each Specimen}
+    \label{tab:youngs_modulus}
+\end{table}
+Conclusion to be made further on    
+\subsection{Stiffness}
+
     \newpage\vspace*{-5pt}
     \section{Discussion}\label{discuss}
     The similarity between the Force vs Elongation graph and the Stress vs Strain graph arises from the underlying relationship between force, elongation, stress, and strain. In the Force vs Elongation graph, force (in Newtons) is plotted against the change in length (elongation, in millimeters), showing the direct relationship between the applied load and the resulting deformation. However, in the Stress vs Strain graph, both force and elongation are scaled down by constants: force is divided by the cross-sectional area of the specimen, and elongation is divided by the original gauge length of the specimen. This scaling reduces the magnitude of the values in the Stress vs Strain graph, which is why the graph appears smaller, even though the overall shape and behavior are similar. Specifically, stress represents force per unit area, and strain represents the relative change in length, both of which are dimensionless or have smaller units compared to force and elongation. Therefore, the difference in graph scales is simply due to this division by constants, which doesn't affect the overall shape of the curve but rather scales the values down, making the Stress vs Strain graph appear "smaller" than the Force vs Elongation graph.
@@ -1898,12 +2185,14 @@ Elongation at break measures the extent to which a material can stretch before i
         
         \item Alan Turing Institute (2024) \textit{Data-Driven Experiment Design}. Available at: \url{https://www.turing.ac.uk/research/research-projects/data-driven-experiment-design} [Accessed 20 December 2024].
 
-
+        % true stress and strain
+        % https://mechanicalc.com/reference/mechanical-properties-of-materials
 
         % resilence
         %https://testbook.com/civil-engineering/modulus-of-resilience
+        % https://mechcontent.com/modulus-of-resilience/
         % umages 
-%        https://mechcontent.com/modulus-of-resilience/
+        % https://mechcontent.com/modulus-of-resilience/
         
         % yield strength        
         % https://en.wikipedia.org/wiki/Yield_%28engineering%29

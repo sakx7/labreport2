@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.22)  25 DEC 2024 23:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.22)  26 DEC 2024 22:03
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1750,7 +1750,7 @@ Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/10
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/7'
 
 (microtype)             (new value: 7.0pt) on input line 190.
-<images/Kingston_University_London_logo_200-tablet.png, id=167, 200.75pt x 200.
+<images/Kingston_University_London_logo_200-tablet.png, id=191, 200.75pt x 200.
 75pt>
 File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
 png)
@@ -1819,7 +1819,7 @@ Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/8'
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/6'
 
 (microtype)             (new value: 6.0pt) on input line 229.
-<images/profile.jpg, id=176, 903.375pt x 831.105pt>
+<images/profile.jpg, id=200, 903.375pt x 831.105pt>
 File: images/profile.jpg Graphic file (type jpg)
 <use images/profile.jpg>
 Package pdftex.def Info: images/profile.jpg  used on input line 229.
@@ -1891,7 +1891,7 @@ Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/5'
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/5'
 
 (microtype)             (new value: 5.0pt) on input line 1.
-)
+ [3])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
@@ -1910,7 +1910,7 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[3]
+[4]
 File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
@@ -1926,7 +1926,7 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[4{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+[5{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
@@ -1942,7 +1942,7 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[5]
+[6]
 File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
@@ -1958,7 +1958,7 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[6]
+[7]
 Overfull \hbox (47.52603pt too wide) in paragraph at lines 287--310
 []  [] 
  []
@@ -1977,7 +1977,7 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[7]
+[8]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 334.
@@ -2002,7 +2002,7 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[8]
+[9]
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -2010,28 +2010,28 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 > Step: parse table inner spec.
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
-<images/digital_vernier_caliper.jpg, id=262, 771.63281pt x 712.91344pt>
+<images/digital_vernier_caliper.jpg, id=296, 771.63281pt x 712.91344pt>
 File: images/digital_vernier_caliper.jpg Graphic file (type jpg)
 <use images/digital_vernier_caliper.jpg>
 Package pdftex.def Info: images/digital_vernier_caliper.jpg  used on input line
  413.
 (pdftex.def)             Requested size: 68.28644pt x 63.08249pt.
-<images/hardness.png, id=263, 803.0pt x 803.0pt>
+<images/hardness.png, id=297, 803.0pt x 803.0pt>
 File: images/hardness.png Graphic file (type png)
 <use images/hardness.png>
 Package pdftex.def Info: images/hardness.png  used on input line 413.
 (pdftex.def)             Requested size: 59.74454pt x 68.28473pt.
-<images/tensilemachine.png, id=264, 246.6816pt x 196.3335pt>
+<images/tensilemachine.png, id=298, 246.6816pt x 196.3335pt>
 File: images/tensilemachine.png Graphic file (type png)
 <use images/tensilemachine.png>
 Package pdftex.def Info: images/tensilemachine.png  used on input line 413.
 (pdftex.def)             Requested size: 68.28644pt x 54.34688pt.
-<images/ppe.jpg, id=266, 1201.48875pt x 961.5925pt>
+<images/ppe.jpg, id=300, 1201.48875pt x 961.5925pt>
 File: images/ppe.jpg Graphic file (type jpg)
 <use images/ppe.jpg>
 Package pdftex.def Info: images/ppe.jpg  used on input line 413.
 (pdftex.def)             Requested size: 68.28644pt x 54.64113pt.
-<images/stationary.png, id=268, 702.625pt x 702.625pt>
+<images/stationary.png, id=302, 702.625pt x 702.625pt>
 File: images/stationary.png Graphic file (type png)
 <use images/stationary.png>
 Package pdftex.def Info: images/stationary.png  used on input line 413.
@@ -2098,9 +2098,9 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[9 <./images/digital_vernier_caliper.jpg> <./images/hardness.png> <./images/ten
-silemachine.png> <./images/ppe.jpg> <./images/stationary.png>]
-<example-image.pdf, id=278, 321.2pt x 240.9pt>
+[10 <./images/digital_vernier_caliper.jpg> <./images/hardness.png> <./images/te
+nsilemachine.png> <./images/ppe.jpg> <./images/stationary.png>]
+<example-image.pdf, id=312, 321.2pt x 240.9pt>
 File: example-image.pdf Graphic file (type pdf)
 <use example-image.pdf>
 Package pdftex.def Info: example-image.pdf  used on input line 453.
@@ -2120,8 +2120,8 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[10 </usr/share/texlive/texmf-dist/tex/latex/mwe/example-image.pdf>]
-<figures/alloys_base.jpg, id=290, 1279.4199pt x 900.2433pt>
+[11 </usr/share/texlive/texmf-dist/tex/latex/mwe/example-image.pdf>]
+<figures/alloys_base.jpg, id=325, 1279.4199pt x 900.2433pt>
 File: figures/alloys_base.jpg Graphic file (type jpg)
 <use figures/alloys_base.jpg>
 Package pdftex.def Info: figures/alloys_base.jpg  used on input line 462.
@@ -2141,7 +2141,7 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[11 <./figures/alloys_base.jpg>]
+[12 <./figures/alloys_base.jpg>]
 ===== Image 'figures/main-figure0' is up-to-date. ======
 > Step: init table outer spec.
 > Step: parse table options.
@@ -2214,7 +2214,7 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[12{/usr/share/texlive/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/usr/
+[13{/usr/share/texlive/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/usr/
 share/texlive/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc} <./figures/mai
 n-figure0.pdf> <./figures/main-figure1.pdf> <./figures/main-figure2.pdf> <./fig
 ures/main-figure3.pdf>]
@@ -2237,7 +2237,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1247.
 See the caption package documentation for explanation.
 
-<images/1024px-Vicker_Hardness_-_Diamond_Indentation.jpg, id=342, 1027.84pt x 1
+<images/1024px-Vicker_Hardness_-_Diamond_Indentation.jpg, id=377, 1027.84pt x 1
 026.83624pt>
 File: images/1024px-Vicker_Hardness_-_Diamond_Indentation.jpg Graphic file (typ
 e jpg)
@@ -2259,7 +2259,7 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[13 <./images/1024px-Vicker_Hardness_-_Diamond_Indentation.jpg>]
+[14 <./images/1024px-Vicker_Hardness_-_Diamond_Indentation.jpg>]
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -2274,7 +2274,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1290.
 See the caption package documentation for explanation.
 
-<images/tensile_machine.jpg, id=357, 691.58376pt x 879.285pt>
+<images/tensile_machine.jpg, id=391, 691.58376pt x 879.285pt>
 File: images/tensile_machine.jpg Graphic file (type jpg)
 <use images/tensile_machine.jpg>
 Package pdftex.def Info: images/tensile_machine.jpg  used on input line 1299.
@@ -2293,8 +2293,8 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[14 <./images/tensile_machine.jpg>]
-<images/simwiki-stress-strain-shape-evolution.png, id=368, 1027.84pt x 770.88pt
+[15 <./images/tensile_machine.jpg>]
+<images/simwiki-stress-strain-shape-evolution.png, id=402, 1027.84pt x 770.88pt
 >
 File: images/simwiki-stress-strain-shape-evolution.png Graphic file (type png)
 <use images/simwiki-stress-strain-shape-evolution.png>
@@ -2316,8 +2316,8 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[15 <./images/simwiki-stress-strain-shape-evolution.png>]
-<images/image(6).jpeg, id=385, 2089.8075pt x 2786.41pt>
+[16 <./images/simwiki-stress-strain-shape-evolution.png>]
+<images/image(6).jpeg, id=419, 2089.8075pt x 2786.41pt>
 File: images/image(6).jpeg Graphic file (type jpg)
 <use images/image(6).jpeg>
 Package pdftex.def Info: images/image(6).jpeg  used on input line 1343.
@@ -2351,7 +2351,7 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[16 <./images/Image(6).jpeg>]
+[17 <./images/Image(6).jpeg>]
 File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
@@ -2367,8 +2367,8 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[17]
-<figures/3537580_orig-0000.jpg, id=400, 477.785pt x 592.2125pt>
+[18]
+<figures/3537580_orig-0000.jpg, id=433, 477.785pt x 592.2125pt>
 File: figures/3537580_orig-0000.jpg Graphic file (type jpg)
 <use figures/3537580_orig-0000.jpg>
 Package pdftex.def Info: figures/3537580_orig-0000.jpg  used on input line 1400
@@ -2393,7 +2393,7 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[18{/usr/share/texlive/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc} <./fi
+[19{/usr/share/texlive/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc} <./fi
 gures/3537580_orig-0000.jpg>]
 File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
 png)
@@ -2410,58 +2410,42 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[19]
-Overfull \hbox (10.87357pt too wide) in paragraph at lines 1464--1467
-[]$[]$
- []
-
-
-Overfull \hbox (10.87357pt too wide) in paragraph at lines 1464--1467
-[]$
- []
-
-
-Overfull \hbox (10.87357pt too wide) in paragraph at lines 1464--1467
-[]$ 
- []
-
-
-Overfull \hbox (10.87357pt too wide) in paragraph at lines 1475--1478
-[]$[]$
- []
-
-
-Overfull \hbox (10.87357pt too wide) in paragraph at lines 1475--1478
-[]$
- []
-
-
-Overfull \hbox (10.87357pt too wide) in paragraph at lines 1475--1478
-[]$ 
- []
-
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1481.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
-
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
-
 [20]
+Overfull \hbox (10.87357pt too wide) in paragraph at lines 1463--1466
+[]$[]$
+ []
+
+
+Overfull \hbox (10.87357pt too wide) in paragraph at lines 1463--1466
+[]$
+ []
+
+
+Overfull \hbox (10.87357pt too wide) in paragraph at lines 1463--1466
+[]$ 
+ []
+
+
+Overfull \hbox (10.87357pt too wide) in paragraph at lines 1474--1477
+[]$[]$
+ []
+
+
+Overfull \hbox (10.87357pt too wide) in paragraph at lines 1474--1477
+[]$
+ []
+
+
+Overfull \hbox (10.87357pt too wide) in paragraph at lines 1474--1477
+[]$ 
+ []
+
 File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1526.
+ used on input line 1480.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
-
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
 (fancyhdr)                Make it at least 37.74326pt, for example:
@@ -2471,14 +2455,53 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
 [21]
-<images/stress-strain-youngs-modulus2.jpg, id=446, 702.625pt x 403.5075pt>
+<images/true-stress-strain-diagram-01.png, id=468, 420.57124pt x 288.07625pt>
+File: images/true-stress-strain-diagram-01.png Graphic file (type png)
+<use images/true-stress-strain-diagram-01.png>
+Package pdftex.def Info: images/true-stress-strain-diagram-01.png  used on inpu
+t line 1520.
+(pdftex.def)             Requested size: 299.20059pt x 204.94435pt.
+File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
+png)
+<use images/Kingston_University_London_logo_200-tablet.png>
+Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
+ used on input line 1523.
+(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
+
+
+Package fancyhdr Warning: \headheight is too small (30.0pt): 
+(fancyhdr)                Make it at least 37.74326pt, for example:
+(fancyhdr)                \setlength{\headheight}{37.74326pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
+
+[22]
+File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
+png)
+<use images/Kingston_University_London_logo_200-tablet.png>
+Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
+ used on input line 1539.
+(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
+
+
+Package fancyhdr Warning: \headheight is too small (30.0pt): 
+(fancyhdr)                Make it at least 37.74326pt, for example:
+(fancyhdr)                \setlength{\headheight}{37.74326pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
+
+[23{/usr/share/texlive/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolF.enc} <./im
+ages/true-stress-strain-diagram-01.png>]
+<images/stress-strain-youngs-modulus2.jpg, id=494, 702.625pt x 403.5075pt>
 File: images/stress-strain-youngs-modulus2.jpg Graphic file (type jpg)
 <use images/stress-strain-youngs-modulus2.jpg>
 Package pdftex.def Info: images/stress-strain-youngs-modulus2.jpg  used on inpu
-t line 1542.
+t line 1558.
 (pdftex.def)             Requested size: 249.33128pt x 143.18767pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1548--1550
+Underfull \hbox (badness 10000) in paragraph at lines 1564--1566
 
  []
 
@@ -2486,7 +2509,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1562.
+ used on input line 1578.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2496,12 +2519,12 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[22 <./images/stress-strain-youngs-modulus2.jpg>]
+[24 <./images/stress-strain-youngs-modulus2.jpg>]
 File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1596.
+ used on input line 1612.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 
@@ -2512,17 +2535,17 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[23]
-<images/hook(1).png, id=468, 487.8225pt x 411.5375pt>
+[25]
+<images/hook(1).png, id=516, 487.8225pt x 411.5375pt>
 File: images/hook(1).png Graphic file (type png)
 <use images/hook(1).png>
-Package pdftex.def Info: images/hook(1).png  used on input line 1614.
+Package pdftex.def Info: images/hook(1).png  used on input line 1630.
 (pdftex.def)             Requested size: 195.22397pt x 164.69371pt.
 File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1631.
+ used on input line 1647.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 
@@ -2533,19 +2556,22 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[24 <./images/hook(1).png>]
-<images/Metal_yield.png, id=476, 1284.8pt x 964.60374pt>
+[26 <./images/hook(1).png>]
+<images/Metal_yield.png, id=524, 1284.8pt x 964.60374pt>
 File: images/Metal_yield.png Graphic file (type png)
 <use images/Metal_yield.png>
-Package pdftex.def Info: images/Metal_yield.png  used on input line 1641.
+Package pdftex.def Info: images/Metal_yield.png  used on input line 1657.
 (pdftex.def)             Requested size: 199.46198pt x 149.74753pt.
+
+
+LaTeX Warning: Reference `' on page 27 undefined on input line 1671.
+
 File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1659.
+ used on input line 1673.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
-
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
 (fancyhdr)                Make it at least 37.74326pt, for example:
@@ -2554,23 +2580,23 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[25 <./images/Metal_yield.png>]
-<images/resilience-1.png, id=488, 506.89375pt x 376.40625pt>
+[27 <./images/Metal_yield.png>]
+<images/resilience-1.png, id=535, 506.89375pt x 376.40625pt>
 File: images/resilience-1.png Graphic file (type png)
 <use images/resilience-1.png>
-Package pdftex.def Info: images/resilience-1.png  used on input line 1675.
+Package pdftex.def Info: images/resilience-1.png  used on input line 1689.
 (pdftex.def)             Requested size: 199.56654pt x 148.19351pt.
-<images/proof-resilience-1.png, id=489, 523.9575pt x 397.485pt>
+<images/proof-resilience-1.png, id=536, 523.9575pt x 397.485pt>
 File: images/proof-resilience-1.png Graphic file (type png)
 <use images/proof-resilience-1.png>
-Package pdftex.def Info: images/proof-resilience-1.png  used on input line 1684
+Package pdftex.def Info: images/proof-resilience-1.png  used on input line 1698
 .
 (pdftex.def)             Requested size: 199.56654pt x 151.39157pt.
 File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1701.
+ used on input line 1715.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 
@@ -2581,45 +2607,12 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[26{/usr/share/texlive/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolF.enc} <./im
-ages/resilience-1.png> <./images/proof-resilience-1.png>]
+[28 <./images/resilience-1.png> <./images/proof-resilience-1.png>]
 File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1720.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
-
-
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
-
-[27]
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1736.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
-
-
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
-
-[28]
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1745.
+ used on input line 1734.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 
@@ -2631,11 +2624,17 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
 [29]
+<images/ultimate-tensile-strength.png, id=554, 724.7075pt x 561.09625pt>
+File: images/ultimate-tensile-strength.png Graphic file (type png)
+<use images/ultimate-tensile-strength.png>
+Package pdftex.def Info: images/ultimate-tensile-strength.png  used on input li
+ne 1752.
+(pdftex.def)             Requested size: 210.93336pt x 163.31305pt.
 File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1751.
+ used on input line 1766.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 
@@ -2646,14 +2645,25 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[30]
+[30 <./images/ultimate-tensile-strength.png>]
+<images/elastic-plastic-strain-at-break-01.png, id=562, 386.44376pt x 331.2375p
+t>
+File: images/elastic-plastic-strain-at-break-01.png Graphic file (type png)
+<use images/elastic-plastic-strain-at-break-01.png>
+Package pdftex.def Info: images/elastic-plastic-strain-at-break-01.png  used on
+ input line 1783.
+(pdftex.def)             Requested size: 246.83766pt x 211.57681pt.
+
+Overfull \hbox (22.44102pt too wide) in paragraph at lines 1783--1784
+ [][] 
+ []
+
 File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1760.
+ used on input line 1811.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
-
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
 (fancyhdr)                Make it at least 37.74326pt, for example:
@@ -2662,12 +2672,12 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[31]
+[31 <./images/elastic-plastic-strain-at-break-01.png>]
 File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1771.
+ used on input line 1824.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 
@@ -2679,6 +2689,60 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
 [32]
+<images/modulus-of-toughness-approx-01(1).jpg, id=579, 879.285pt x 586.19pt>
+File: images/modulus-of-toughness-approx-01(1).jpg Graphic file (type jpg)
+<use images/modulus-of-toughness-approx-01(1).jpg>
+Package pdftex.def Info: images/modulus-of-toughness-approx-01(1).jpg  used on 
+input line 1834.
+(pdftex.def)             Requested size: 249.33128pt x 166.21616pt.
+File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
+png)
+<use images/Kingston_University_London_logo_200-tablet.png>
+Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
+ used on input line 1861.
+(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
+
+
+Package fancyhdr Warning: \headheight is too small (30.0pt): 
+(fancyhdr)                Make it at least 37.74326pt, for example:
+(fancyhdr)                \setlength{\headheight}{37.74326pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
+
+[33 <./images/modulus-of-toughness-approx-01(1).jpg>]
+File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
+png)
+<use images/Kingston_University_London_logo_200-tablet.png>
+Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
+ used on input line 1934.
+(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
+
+
+Package fancyhdr Warning: \headheight is too small (30.0pt): 
+(fancyhdr)                Make it at least 37.74326pt, for example:
+(fancyhdr)                \setlength{\headheight}{37.74326pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
+
+[34]
+File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
+png)
+<use images/Kingston_University_London_logo_200-tablet.png>
+Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
+ used on input line 1964.
+(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
+
+
+Package fancyhdr Warning: \headheight is too small (30.0pt): 
+(fancyhdr)                Make it at least 37.74326pt, for example:
+(fancyhdr)                \setlength{\headheight}{37.74326pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
+
+[35]
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -2698,14 +2762,14 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1833.
+(caption)                particular \caption on input line 2026.
 See the caption package documentation for explanation.
 
 File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1837.
+ used on input line 2030.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2715,7 +2779,7 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[33{/usr/share/texlive/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}]
+[36{/usr/share/texlive/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}]
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -2724,23 +2788,17 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
-<figures/force_vs_elongation.png, id=542, 722.7pt x 722.7pt>
+<figures/force_vs_elongation.png, id=614, 714.09987pt x 712.94354pt>
 File: figures/force_vs_elongation.png Graphic file (type png)
 <use figures/force_vs_elongation.png>
-Package pdftex.def Info: figures/force_vs_elongation.png  used on input line 18
-62.
-(pdftex.def)             Requested size: 349.06227pt x 349.06447pt.
-<figures/stress_vs_strain.png, id=543, 722.7pt x 722.7pt>
-File: figures/stress_vs_strain.png Graphic file (type png)
-<use figures/stress_vs_strain.png>
-Package pdftex.def Info: figures/stress_vs_strain.png  used on input line 1869.
-
-(pdftex.def)             Requested size: 349.06227pt x 349.06447pt.
+Package pdftex.def Info: figures/force_vs_elongation.png  used on input line 20
+51.
+(pdftex.def)             Requested size: 398.93158pt x 398.27745pt.
 File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1873.
+ used on input line 2057.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 
@@ -2751,60 +2809,12 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[34 <./figures/force_vs_elongation.png>]
+[37 <./figures/force_vs_elongation.png>]
 File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1875.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
-
-
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
-
-[35 <./figures/stress_vs_strain.png>]
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1878.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
-
-
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
-
-[36]
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1881.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
-
-
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
-
-[37]
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1884.
+ used on input line 2071.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 
@@ -2816,6 +2826,188 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
 [38]
+<figures/stress_vs_strain.png, id=639, 713.08809pt x 714.09987pt>
+File: figures/stress_vs_strain.png Graphic file (type png)
+<use figures/stress_vs_strain.png>
+Package pdftex.def Info: figures/stress_vs_strain.png  used on input line 2074.
+
+(pdftex.def)             Requested size: 398.93158pt x 399.50093pt.
+File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
+png)
+<use images/Kingston_University_London_logo_200-tablet.png>
+Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
+ used on input line 2081.
+(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
+
+
+Package fancyhdr Warning: \headheight is too small (30.0pt): 
+(fancyhdr)                Make it at least 37.74326pt, for example:
+(fancyhdr)                \setlength{\headheight}{37.74326pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
+
+[39 <./figures/stress_vs_strain.png>]
+File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
+png)
+<use images/Kingston_University_London_logo_200-tablet.png>
+Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
+ used on input line 2097.
+(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
+
+
+Package fancyhdr Warning: \headheight is too small (30.0pt): 
+(fancyhdr)                Make it at least 37.74326pt, for example:
+(fancyhdr)                \setlength{\headheight}{37.74326pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
+
+[40]
+<figures/stress_vs_strain_with_fit_AR.png, id=655, 711.8595pt x 714.09987pt>
+File: figures/stress_vs_strain_with_fit_AR.png Graphic file (type png)
+<use figures/stress_vs_strain_with_fit_AR.png>
+Package pdftex.def Info: figures/stress_vs_strain_with_fit_AR.png  used on inpu
+t line 2104.
+(pdftex.def)             Requested size: 398.93158pt x 400.1874pt.
+File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
+png)
+<use images/Kingston_University_London_logo_200-tablet.png>
+Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
+ used on input line 2110.
+(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
+
+
+Package fancyhdr Warning: \headheight is too small (30.0pt): 
+(fancyhdr)                Make it at least 37.74326pt, for example:
+(fancyhdr)                \setlength{\headheight}{37.74326pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
+
+[41 <./figures/stress_vs_strain_with_fit_AR.png>]
+<figures/stress_vs_strain_with_fit_PH.png, id=662, 713.08809pt x 714.09987pt>
+File: figures/stress_vs_strain_with_fit_PH.png Graphic file (type png)
+<use figures/stress_vs_strain_with_fit_PH.png>
+Package pdftex.def Info: figures/stress_vs_strain_with_fit_PH.png  used on inpu
+t line 2117.
+(pdftex.def)             Requested size: 398.93158pt x 399.50093pt.
+File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
+png)
+<use images/Kingston_University_London_logo_200-tablet.png>
+Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
+ used on input line 2123.
+(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
+
+
+Package fancyhdr Warning: \headheight is too small (30.0pt): 
+(fancyhdr)                Make it at least 37.74326pt, for example:
+(fancyhdr)                \setlength{\headheight}{37.74326pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
+
+[42 <./figures/stress_vs_strain_with_fit_PH.png>]
+<figures/stress_vs_strain_with_fit_ST.png, id=669, 713.08809pt x 714.09987pt>
+File: figures/stress_vs_strain_with_fit_ST.png Graphic file (type png)
+<use figures/stress_vs_strain_with_fit_ST.png>
+Package pdftex.def Info: figures/stress_vs_strain_with_fit_ST.png  used on inpu
+t line 2130.
+(pdftex.def)             Requested size: 398.93158pt x 399.50093pt.
+File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
+png)
+<use images/Kingston_University_London_logo_200-tablet.png>
+Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
+ used on input line 2137.
+(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
+
+
+Package fancyhdr Warning: \headheight is too small (30.0pt): 
+(fancyhdr)                Make it at least 37.74326pt, for example:
+(fancyhdr)                \setlength{\headheight}{37.74326pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
+
+[43 <./figures/stress_vs_strain_with_fit_ST.png>]
+<figures/stress_vs_strain_with_fits.png, id=677, 713.08809pt x 714.09987pt>
+File: figures/stress_vs_strain_with_fits.png Graphic file (type png)
+<use figures/stress_vs_strain_with_fits.png>
+Package pdftex.def Info: figures/stress_vs_strain_with_fits.png  used on input 
+line 2142.
+(pdftex.def)             Requested size: 349.06227pt x 349.56332pt.
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+> Step: build the whole table.
+File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
+png)
+<use images/Kingston_University_London_logo_200-tablet.png>
+Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
+ used on input line 2162.
+(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
+
+
+Package fancyhdr Warning: \headheight is too small (30.0pt): 
+(fancyhdr)                Make it at least 37.74326pt, for example:
+(fancyhdr)                \setlength{\headheight}{37.74326pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
+
+[44 <./figures/stress_vs_strain_with_fits.png>]
+File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
+png)
+<use images/Kingston_University_London_logo_200-tablet.png>
+Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
+ used on input line 2165.
+(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
+
+
+Package fancyhdr Warning: \headheight is too small (30.0pt): 
+(fancyhdr)                Make it at least 37.74326pt, for example:
+(fancyhdr)                \setlength{\headheight}{37.74326pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
+
+[45]
+File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
+png)
+<use images/Kingston_University_London_logo_200-tablet.png>
+Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
+ used on input line 2168.
+(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
+
+
+Package fancyhdr Warning: \headheight is too small (30.0pt): 
+(fancyhdr)                Make it at least 37.74326pt, for example:
+(fancyhdr)                \setlength{\headheight}{37.74326pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
+
+[46]
+File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
+png)
+<use images/Kingston_University_London_logo_200-tablet.png>
+Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
+ used on input line 2171.
+(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
+
+
+Package fancyhdr Warning: \headheight is too small (30.0pt): 
+(fancyhdr)                Make it at least 37.74326pt, for example:
+(fancyhdr)                \setlength{\headheight}{37.74326pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
+
+[47]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
@@ -2824,7 +3016,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1936.
+ used on input line 2225.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 
@@ -2835,12 +3027,12 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[39]
+[48]
 File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1969.
+ used on input line 2258.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 
@@ -2851,51 +3043,65 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[40] (./main.aux)
+[49] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C08849FBA61FB8BB89A7EFFCD4908308;5671.
+
+
+LaTeX Warning: There were undefined references.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 0BB51C8B241E822CF5A38A5523831EE4;6471
+(rerunfilecheck)             After:  7959E50727F16D96CB9BD94A053E07B5;6456.
  ) 
 Here is how much of TeX's memory you used:
- 69445 strings out of 476106
- 1718155 string characters out of 5793932
- 2455852 words of memory out of 5000000
- 90155 multiletter control sequences out of 15000+600000
- 610378 words of font info for 297 fonts, out of 8000000 for 9000
+ 69591 strings out of 476106
+ 1721958 string characters out of 5793932
+ 2456595 words of memory out of 5000000
+ 90232 multiletter control sequences out of 15000+600000
+ 611842 words of font info for 308 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  84i,18n,117p,1392b,1127s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol12.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol5.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol6.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/mnsymbol/MnSymbol7.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfon
-t/line10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/tex
-mf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/publi
-c/cm-super/sfrm1200.pfb>
-Output written on main.pdf (40 pages, 6277385 bytes).
+
+pdfTeX warning (dest): name{subsubsection.7.4.5} has been referenced but does n
+ot exist, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol5.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol6.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/mnsymbol/MnSymbol7.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/
+line10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf
+/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/
+cm-super/sfrm1200.pfb>
+Output written on main.pdf (49 pages, 11325553 bytes).
 PDF statistics:
- 763 PDF objects out of 1000 (max. 8388607)
- 613 compressed objects within 7 object streams
- 157 named destinations out of 1000 (max. 500000)
- 43978 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 903 PDF objects out of 1000 (max. 8388607)
+ 728 compressed objects within 8 object streams
+ 210 named destinations out of 1000 (max. 500000)
+ 44066 words of extra memory for PDF output out of 51595 (max. 10000000)
 
