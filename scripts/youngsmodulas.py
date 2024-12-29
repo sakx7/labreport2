@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import linregress
 
+plt.rcParams['font.size'] = 25  # Replace 12 with your desired font size
+
 # Load the data
 AR = pd.read_csv('data/AR_stress_strain.csv')
 PH = pd.read_csv('data/PH_stress_strain.csv')
@@ -52,7 +54,7 @@ def plot_stress_strain_with_fit(strain, stress, E, label, color, skip_fraction):
         # For AR and PH: Fit line starts from a shifted strain value
         stress_fit = E * (strain_fit - strain[start_index]) + stress[start_index]
 
-    plt.plot(strain_fit, stress_fit, color=color, linestyle='--', label=f'{label} Fit: E={E:.2f} N/mm²')
+    plt.plot(strain_fit, stress_fit, color=color, linestyle='--', label=f'{label} Fit')
 
 # Create separate plots for each specimen
 specimens = [
@@ -66,12 +68,12 @@ for strain, stress, E, label, color, skip_fraction in specimens:
     plot_stress_strain_with_fit(strain, stress, E, label, color, skip_fraction)
 
     # Set the axis labels and title
-    plt.xlabel(r'Strain $(\varepsilon)$ [dimensionless]', fontsize=14)
-    plt.ylabel(r'Stress $(\sigma)$ $[\text{N/}\text{mm}^2]$', fontsize=14)
-    plt.title(f'Stress vs Strain for {label} with Young\'s Modulus', fontsize=16)
+    plt.xlabel(r'Strain $(\varepsilon)$ [dimensionless]', fontsize=30)
+    plt.ylabel(r'Stress $(\sigma)$ $[\text{N/}\text{mm}^2]$', fontsize=30)
+    plt.title(f'Stress vs Strain for {label} with Young\'s Modulus', fontsize=25)
 
     print(f"Young's Modulus for {label}: {E} N/mm^2")
-    
+
     # Add a legend and grid
     plt.legend(fontsize=16)
     plt.grid(True)

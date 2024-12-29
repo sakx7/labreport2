@@ -62,9 +62,9 @@
     \renewcommand{\formalsource}{#1}% Store the optional argument
     \def\FrameCommand{%
         \hspace{1pt}%
-        {\color{darkblue}\vrule width 2pt}%
-        {\color{formalshade}\vrule width 4pt}%
-        \colorbox{formalshade}%
+        {\color{gray}\vrule width 2pt}%
+        {\color{white}\vrule width 4pt}%
+        \colorbox{white}%
     }%
     \MakeFramed{\advance\hsize-\width\FrameRestore}%
     \noindent\hspace{-4.55pt}% Disable indenting the first paragraph
@@ -173,7 +173,7 @@
 }
 
 \usepackage[para]{footmisc} % Example of making footnotes run together in a paragraph
-
+\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}  % Darker green
 
 
 \begin{document}
@@ -229,7 +229,8 @@
     \end{tblr}
     
     \normalsize
-    \newpage\noindent\vspace{-1em}
+    \newpage
+    \noindent\vspace{-3em}
     \begin{center}
         \LARGE \textbf{Table of Contents}\\[-0.5em]
     \end{center}
@@ -470,7 +471,7 @@ In the first phase, the width and length of each sample were recorded using digi
 After documenting the dimensions and hardness on the data sheet (See Figure \ref{fig:alloys}), we proceeded to the second phase of the experiment, were each sample was subjected to a controlled tensile force until fracture using the Zwick Roell 2050 Tensile Testing Machine. The data, including force applied vs change in length was recorded on a shared graph for all three alloys, this along with a table outlining key metrics for the respective graphs.\\[8pt] 
 This information was printed on an A4 sheet and given for additional examination outside of the lab (see Figure \ref{fig:tensile_results}). Important parameters, including stress, strain, yield strength, uts, and others are to be calculated after the experiment and are presented as a key part of analysis in this report.\\[8pt]
 The following subsections detail the use of the equipment, outlining each step of the procedure.\\
-\newpage
+\newpage\newgeometry{margin=1in,right=0.8in,left=0.8in,bottom=0.65in}
 \begin{minipage}{0.32\textwidth}
 \hspace{2em}
 \begin{tikzpicture}[rotate around y=225, use Hobby shortcut,scale=0.35, every node/.style={scale=0.35}]
@@ -641,7 +642,6 @@ The following subsections detail the use of the equipment, outlining each step o
 \end{tikzpicture}
 \end{minipage}\hfill
 \begin{minipage}{0.65\textwidth}
-\vspace{-1.5em}
 \subsection{Measurements}\label{Measurements}
 \vspace{0.5em}
 \begin{center}
@@ -663,602 +663,17 @@ The following subsections detail the use of the equipment, outlining each step o
 \label{tab:dimensions}
 \vspace{1em}
 \noindent
-We measured the dimensions of each alloys gauge region using a digital calliper and recorded the results on the data sheet (See Figure \ref{fig:alloys}). We were informed that the gauge length was 50 mm, but we did not measure it ourselves. Although checking measurements is good practice, it was determined the cross-sectional area (CSA) analysis does not require it, as shown below, however it is needed for further analysis in the data section.
-\end{minipage}\\
-\vspace{1em}
-\hspace{-2em}
-\begin{minipage}{0.4\textwidth}
-\hspace{2em}\begin{minipage}{0.3\textwidth} 
-\centering
-\begin{tikzpicture}[rotate around y=225, use Hobby shortcut, scale=0.25, every node/.style={scale=0.25}]
-    \large
-    \def\width{4}
-    \def\gap{10}
-    \def\main{8}
-    \def\curvy{1.9}
-    \def\depth{3}
-    
-    \def\n{3.3}
-    \def\z{1/\n}
-    \pgfmathsetmacro{\s}{1-\z}
-    
-    \coordinate (A) at (0,\main,0);
-    \coordinate (B) at (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,0);
-    \coordinate (C) at (\width*\z,\main+\curvy,0);
-    
-    \coordinate (A2) at (\width,\main,0);
-    \coordinate (B2) at (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,0);
-    \coordinate (C2) at (\width*\s,\main+\curvy,0);
-    
-    \coordinate (A3) at (0,\main+\gap,0);
-    \coordinate (B3) at (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,0);
-    \coordinate (C3) at (\width*\z,\main+\gap-\curvy,0);
-    
-    \coordinate (A4) at (\width,\main+\gap,0);
-    \coordinate (B4) at (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,0);
-    \coordinate (C4) at (\width*\s,\main+\gap-\curvy,0);
-    
-    % Back variation with \depth (subtracting \depth from the z-coordinate)
-    \coordinate (A') at (0,\main,\depth);
-    \coordinate (B') at (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth);
-    \coordinate (C') at (\width*\z,\main+\curvy,\depth);
-    
-    \coordinate (A2') at (\width,\main,\depth);
-    \coordinate (B2') at (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth);
-    \coordinate (C2') at (\width*\s,\main+\curvy,\depth);
-    
-    \coordinate (A3') at (0,\main+\gap,\depth);
-    \coordinate (B3') at (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth);
-    \coordinate (C3') at (\width*\z,\main+\gap-\curvy,\depth);
-    
-    \coordinate (A4') at (\width,\main+\gap,\depth);
-    \coordinate (B4') at (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth);
-    \coordinate (C4') at (\width*\s,\main+\gap-\curvy,\depth);
-    
-    
-    % Back face fill
-    \fill[black!40] 
-    (0,0,\depth) -- (\width,0,\depth) -- (\width,\main,\depth) 
-    to[hobby,tension=3] (\width,\main,\depth) .. (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth) .. (\width*\s,\main+\curvy,\depth) -- 
-    (\width*\s,\main+\gap-\curvy,\depth) 
-    to[hobby,tension=3] (\width*\s,\main+\gap-\curvy,\depth)  .. (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth) .. (\width,\main+\gap,\depth) --
-    (\width,2*\main+\gap,\depth) -- (0,2*\main+\gap,\depth) -- 
-    (0,\main+\gap,\depth) to[hobby,tension=3] (0,\main+\gap,\depth) .. (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth) .. (\width*\z,\main+\gap-\curvy,\depth) --
-    (\width*\z,\main+\curvy,\depth) to[hobby,tension=3] (\width*\z,\main+\curvy,\depth) .. (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth) .. (0,\main,\depth) --
-    cycle;
-    
-    % Curves fills with refined fades
-    \fill[left color=gray!80, middle color=gray!50, right color=gray!20, opacity=0.8] 
-    (A) to[hobby,tension=3] (A) .. (B) .. (C) -- (C3) to[hobby,tension=3] (C3) .. (B3) .. (A3) -- 
-    (A3') to[hobby,tension=3] (A3') .. (B3') .. (C3') --
-    (C') to[hobby,tension=3] (C') .. (B') .. (A') -- cycle;
-    
-    \fill[left color=gray!80, middle color=gray!50, right color=gray!20, opacity=0.8] 
-    (A2) to[hobby,tension=3] (A2) .. (B2) .. (C2) -- (C4) to[hobby,tension=3] (C4) .. (B4) .. (A4) -- 
-    (A4') to[hobby,tension=3] (A4') .. (B4') .. (C4') --
-    (C2') to[hobby,tension=3] (C2') .. (B2') .. (A2') -- cycle;
-    
-    
-    \draw[-,hobby,tension=3] (A2') .. (B2') .. (C2');
-    \draw[-,hobby,tension=3] (A4') .. (B4') .. (C4');
-    
-    % Fill for bottom rectangle section
-    \fill[black!33] 
-    (0,0,0) -- (\width,0,0) -- (\width,0,\depth) -- (0,0,\depth) -- cycle;
-    \fill[black!33] 
-    (0,0,0) -- (0,\main,0) -- (0,\main,\depth) -- (0,0,\depth) -- cycle;
-    \fill[black!40] 
-    (\width,0,0) -- (\width,\main,0) -- (\width,\main,\depth) -- (\width,0,\depth) -- cycle;
-    
-    % Fill for top rectangle section
-    \fill[black!30] 
-    (0,2*\main+\gap,0) -- (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth) -- (0,2*\main+\gap,\depth) -- cycle;
-    \fill[black!30] 
-    (0,\main+\gap,0) -- (0,2*\main+\gap,0) -- (0,2*\main+\gap,\depth) -- (0,\main+\gap,\depth) -- cycle;
-    \fill[black!33] 
-    (\width,\main+\gap,0) -- (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth) -- (\width,\main+\gap,\depth) -- cycle;
-    
-    
-    
-    % Front face fill
-    \fill[black!36] 
-    (0,0,0) -- (\width,0,0) -- (\width,\main,0) 
-    to[hobby,tension=3] (A2) .. (B2) .. (C2) -- 
-    (\width*\s,\main+\gap-\curvy,0) 
-    to[hobby,tension=3] (C4) .. (B4) .. (A4) --
-    (\width,2*\main+\gap,0) -- (0,2*\main+\gap,0) -- 
-    (0,\main+\gap,0) to[hobby,tension=3] (A3) .. (B3) .. (C3) --
-    (\width*\z,\main+\curvy,0) to[hobby,tension=3] (C) .. (B) .. (A) --
-    cycle;
-    \draw[hobby,tension=3] (A) .. (B) .. (C);
-    \draw[hobby,tension=3] (A2) .. (B2) .. (C2);
-    \draw[hobby,tension=3] (A3) .. (B3) .. (C3);
-    \draw[hobby,tension=3] (A4) .. (B4) .. (C4);
-    \draw[dashed, opacity=0.3,hobby,tension=3] (A3') .. (B3') .. (C3');
-    \draw[dashed, opacity=0.3,hobby,tension=3] (A') .. (B') .. (C');
-    % Front face outline
-    
-    \draw[-] (0,0,0) -- (\width,0,0);
-    \draw[-] (0,0,0) -- (0,\main,0);
-    \draw[-] (\width*\z,\main+\curvy,0) -- (\width*\z,\main+\gap-\curvy,0);
-    \draw[-] (0,\main+\gap,0) -- (0,2*\main+\gap,0);
-    \draw[-] (0,2*\main+\gap,0) -- (\width,2*\main+\gap,0);
-    \draw[-] (\width,2*\main+\gap,0) -- (\width,\main+\gap,0);
-    \draw[-] (\width*\s,\main+\curvy,0) -- (\width*\s,\main+\gap-\curvy,0);    
-    \draw[-] (\width,0,0) -- (\width,\main,0);
-    
-    
-    
-    
-    
-    % Back face outline
-    
-    
-    \draw[dashed, opacity=0.3] (\width*\z,\main+\curvy,\depth) -- (\width*\z,\main+\gap-\curvy,\depth);
-    \draw[-] (\width*\s,\main+\curvy,\depth) -- (\width*\s,\main+\gap-\curvy,\depth);
-    \draw[dashed, opacity=0.3] (0,0,\depth) -- (\width,0,\depth);
-    \draw[dashed, opacity=0.3] (0,0,\depth) -- (0,\main,\depth);
-    \draw[-] (\width,0,\depth) -- (\width,\main,\depth);
-    \draw[dashed, opacity=0.3] (0,\main+\gap,\depth) -- (0,2*\main+\gap,\depth);
-    \draw[-] (0,2*\main+\gap,\depth) -- (\width,2*\main+\gap,\depth);
-    \draw[-] (\width,2*\main+\gap,\depth) -- (\width,\main+\gap,\depth);
-    
-    
-    
-    % Connect front and back faces
-    %botom
-    \draw[-] (\width,\main,0) -- (\width,\main,\depth);
-    \draw[-] (\width,0,0) -- (\width,0,\depth);
-    \draw[dashed, opacity=0.3] (0,0,0) -- (0,0,\depth);
-    \draw[-] (0,\main,0) -- (0,\main,\depth);
-    %top
-    \draw[-] (\width,\main+\gap,0) -- (\width,\main+\gap,\depth);
-    \draw[-] (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth);
-    \draw[-] (0,2*\main+\gap,0) -- (0,2*\main+\gap,\depth);
-    \draw[dashed, opacity=0.3] (0,\main+\gap,0) -- (0,\main+\gap,\depth);
-    
-    
-    
-    %curves
-    \draw[dashed, opacity=0.3] (C) -- (C2);
-    \draw[dashed, opacity=0.3] (C3) -- (C4);
-    \draw[dashed, opacity=0.3] (C') -- (C2');
-    \draw[dashed, opacity=0.3] (C3') -- (C4');
-    \draw[dashed, opacity=0.3] (C) -- (C');
-    \draw[dashed, opacity=0.3] (C2) -- (C2');
-    \draw[dashed, opacity=0.3] (C3) -- (C3');
-    \draw[dashed, opacity=0.3] (C4) -- (C4');
-    
-    
-    \fill[opacity=0.6,pattern={Lines[
-        distance=1mm,
-        angle=45,
-        line width=0.4mm
-        ]},
-    pattern color=blue
-    ] (C2) -- (C) -- (C3) -- (C4) -- cycle;
-
-\end{tikzpicture}
-\color{blue} \textbf{\textsf{CSA 1}}
-\end{minipage}\hspace{-1em}
-\begin{minipage}{0.3\textwidth}
-    \centering
-    \begin{tikzpicture}[rotate around y=225, use Hobby shortcut, scale=0.25, every node/.style={scale=0.25}]
-        \large
-        \def\width{4}
-        \def\gap{10}
-        \def\main{8}
-        \def\curvy{1.9}
-        \def\depth{3}
-        
-        \def\n{3.3}
-        \def\z{1/\n}
-        \pgfmathsetmacro{\s}{1-\z}
-        
-        \coordinate (A) at (0,\main,0);
-        \coordinate (B) at (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,0);
-        \coordinate (C) at (\width*\z,\main+\curvy,0);
-        
-        \coordinate (A2) at (\width,\main,0);
-        \coordinate (B2) at (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,0);
-        \coordinate (C2) at (\width*\s,\main+\curvy,0);
-        
-        \coordinate (A3) at (0,\main+\gap,0);
-        \coordinate (B3) at (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,0);
-        \coordinate (C3) at (\width*\z,\main+\gap-\curvy,0);
-        
-        \coordinate (A4) at (\width,\main+\gap,0);
-        \coordinate (B4) at (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,0);
-        \coordinate (C4) at (\width*\s,\main+\gap-\curvy,0);
-        
-        % Back variation with \depth (subtracting \depth from the z-coordinate)
-        \coordinate (A') at (0,\main,\depth);
-        \coordinate (B') at (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth);
-        \coordinate (C') at (\width*\z,\main+\curvy,\depth);
-        
-        \coordinate (A2') at (\width,\main,\depth);
-        \coordinate (B2') at (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth);
-        \coordinate (C2') at (\width*\s,\main+\curvy,\depth);
-        
-        \coordinate (A3') at (0,\main+\gap,\depth);
-        \coordinate (B3') at (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth);
-        \coordinate (C3') at (\width*\z,\main+\gap-\curvy,\depth);
-        
-        \coordinate (A4') at (\width,\main+\gap,\depth);
-        \coordinate (B4') at (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth);
-        \coordinate (C4') at (\width*\s,\main+\gap-\curvy,\depth);
-        
-        
-        % Back face fill
-        \fill[black!40] 
-        (0,0,\depth) -- (\width,0,\depth) -- (\width,\main,\depth) 
-        to[hobby,tension=3] (\width,\main,\depth) .. (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth) .. (\width*\s,\main+\curvy,\depth) -- 
-        (\width*\s,\main+\gap-\curvy,\depth) 
-        to[hobby,tension=3] (\width*\s,\main+\gap-\curvy,\depth)  .. (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth) .. (\width,\main+\gap,\depth) --
-        (\width,2*\main+\gap,\depth) -- (0,2*\main+\gap,\depth) -- 
-        (0,\main+\gap,\depth) to[hobby,tension=3] (0,\main+\gap,\depth) .. (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth) .. (\width*\z,\main+\gap-\curvy,\depth) --
-        (\width*\z,\main+\curvy,\depth) to[hobby,tension=3] (\width*\z,\main+\curvy,\depth) .. (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth) .. (0,\main,\depth) --
-        cycle;
-        
-        % Curves fills with refined fades
-        \fill[left color=gray!80, middle color=gray!50, right color=gray!20, opacity=0.8] 
-        (A) to[hobby,tension=3] (A) .. (B) .. (C) -- (C3) to[hobby,tension=3] (C3) .. (B3) .. (A3) -- 
-        (A3') to[hobby,tension=3] (A3') .. (B3') .. (C3') --
-        (C') to[hobby,tension=3] (C') .. (B') .. (A') -- cycle;
-        
-        \fill[left color=gray!80, middle color=gray!50, right color=gray!20, opacity=0.8] 
-        (A2) to[hobby,tension=3] (A2) .. (B2) .. (C2) -- (C4) to[hobby,tension=3] (C4) .. (B4) .. (A4) -- 
-        (A4') to[hobby,tension=3] (A4') .. (B4') .. (C4') --
-        (C2') to[hobby,tension=3] (C2') .. (B2') .. (A2') -- cycle;
-        
-        
-        \draw[-,hobby,tension=3] (A2') .. (B2') .. (C2');
-        \draw[-,hobby,tension=3] (A4') .. (B4') .. (C4');
-        
-        % Fill for bottom rectangle section
-        \fill[black!33] 
-        (0,0,0) -- (\width,0,0) -- (\width,0,\depth) -- (0,0,\depth) -- cycle;
-        \fill[black!33] 
-        (0,0,0) -- (0,\main,0) -- (0,\main,\depth) -- (0,0,\depth) -- cycle;
-        \fill[black!40] 
-        (\width,0,0) -- (\width,\main,0) -- (\width,\main,\depth) -- (\width,0,\depth) -- cycle;
-        
-        % Fill for top rectangle section
-        \fill[black!30] 
-        (0,2*\main+\gap,0) -- (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth) -- (0,2*\main+\gap,\depth) -- cycle;
-        \fill[black!30] 
-        (0,\main+\gap,0) -- (0,2*\main+\gap,0) -- (0,2*\main+\gap,\depth) -- (0,\main+\gap,\depth) -- cycle;
-        \fill[black!33] 
-        (\width,\main+\gap,0) -- (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth) -- (\width,\main+\gap,\depth) -- cycle;
-        
-        
-        
-        % Front face fill
-        \fill[black!36] 
-        (0,0,0) -- (\width,0,0) -- (\width,\main,0) 
-        to[hobby,tension=3] (A2) .. (B2) .. (C2) -- 
-        (\width*\s,\main+\gap-\curvy,0) 
-        to[hobby,tension=3] (C4) .. (B4) .. (A4) --
-        (\width,2*\main+\gap,0) -- (0,2*\main+\gap,0) -- 
-        (0,\main+\gap,0) to[hobby,tension=3] (A3) .. (B3) .. (C3) --
-        (\width*\z,\main+\curvy,0) to[hobby,tension=3] (C) .. (B) .. (A) --
-        cycle;
-        \draw[hobby,tension=3] (A) .. (B) .. (C);
-        \draw[hobby,tension=3] (A2) .. (B2) .. (C2);
-        \draw[hobby,tension=3] (A3) .. (B3) .. (C3);
-        \draw[hobby,tension=3] (A4) .. (B4) .. (C4);
-        \draw[dashed, opacity=0.3,hobby,tension=3] (A3') .. (B3') .. (C3');
-        \draw[dashed, opacity=0.3,hobby,tension=3] (A') .. (B') .. (C');
-        % Front face outline
-        
-        \draw[-] (0,0,0) -- (\width,0,0);
-        \draw[-] (0,0,0) -- (0,\main,0);
-        \draw[-] (\width*\z,\main+\curvy,0) -- (\width*\z,\main+\gap-\curvy,0);
-        \draw[-] (0,\main+\gap,0) -- (0,2*\main+\gap,0);
-        \draw[-] (0,2*\main+\gap,0) -- (\width,2*\main+\gap,0);
-        \draw[-] (\width,2*\main+\gap,0) -- (\width,\main+\gap,0);
-        \draw[-] (\width*\s,\main+\curvy,0) -- (\width*\s,\main+\gap-\curvy,0);    
-        \draw[-] (\width,0,0) -- (\width,\main,0);
-        
-        
-        
-        
-        
-        % Back face outline
-        
-        
-        \draw[dashed, opacity=0.3] (\width*\z,\main+\curvy,\depth) -- (\width*\z,\main+\gap-\curvy,\depth);
-        \draw[-] (\width*\s,\main+\curvy,\depth) -- (\width*\s,\main+\gap-\curvy,\depth);
-        \draw[dashed, opacity=0.3] (0,0,\depth) -- (\width,0,\depth);
-        \draw[dashed, opacity=0.3] (0,0,\depth) -- (0,\main,\depth);
-        \draw[-] (\width,0,\depth) -- (\width,\main,\depth);
-        \draw[dashed, opacity=0.3] (0,\main+\gap,\depth) -- (0,2*\main+\gap,\depth);
-        \draw[-] (0,2*\main+\gap,\depth) -- (\width,2*\main+\gap,\depth);
-        \draw[-] (\width,2*\main+\gap,\depth) -- (\width,\main+\gap,\depth);
-        
-        
-        
-        % Connect front and back faces
-        %botom
-        \draw[-] (\width,\main,0) -- (\width,\main,\depth);
-        \draw[-] (\width,0,0) -- (\width,0,\depth);
-        \draw[dashed, opacity=0.3] (0,0,0) -- (0,0,\depth);
-        \draw[-] (0,\main,0) -- (0,\main,\depth);
-        %top
-        \draw[-] (\width,\main+\gap,0) -- (\width,\main+\gap,\depth);
-        \draw[-] (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth);
-        \draw[-] (0,2*\main+\gap,0) -- (0,2*\main+\gap,\depth);
-        \draw[dashed, opacity=0.3] (0,\main+\gap,0) -- (0,\main+\gap,\depth);
-        
-        
-        
-        %curves
-        \draw[dashed, opacity=0.3] (C) -- (C2);
-        \draw[dashed, opacity=0.3] (C3) -- (C4);
-        \draw[dashed, opacity=0.3] (C') -- (C2');
-        \draw[dashed, opacity=0.3] (C3') -- (C4');
-        \draw[dashed, opacity=0.3] (C) -- (C');
-        \draw[dashed, opacity=0.3] (C2) -- (C2');
-        \draw[dashed, opacity=0.3] (C3) -- (C3');
-        \draw[dashed, opacity=0.3] (C4) -- (C4');
-        
-        
-        \fill[opacity=0.6,pattern={Lines[
-            distance=1mm,
-            angle=45,
-            line width=0.4mm
-            ]},
-        pattern color=green!70!black
-        ] (C2) -- (C4) -- (C4') -- (C2') -- cycle;
-    \end{tikzpicture}    
-    \color{green!50!black} \textbf{\textsf{CSA 2}}
-\end{minipage}\hspace{-1em}
-\begin{minipage}{0.3\textwidth}
-    \centering
-    \begin{tikzpicture}[rotate around y=225, use Hobby shortcut, scale=0.25, every node/.style={scale=0.25}]
-    \large
-    \def\width{4}
-    \def\gap{10}
-    \def\main{8}
-    \def\curvy{1.9}
-    \def\depth{3}
-    
-    \def\n{3.3}
-    \def\z{1/\n}
-    \pgfmathsetmacro{\s}{1-\z}
-    
-    \coordinate (A) at (0,\main,0);
-    \coordinate (B) at (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,0);
-    \coordinate (C) at (\width*\z,\main+\curvy,0);
-    
-    \coordinate (A2) at (\width,\main,0);
-    \coordinate (B2) at (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,0);
-    \coordinate (C2) at (\width*\s,\main+\curvy,0);
-    
-    \coordinate (A3) at (0,\main+\gap,0);
-    \coordinate (B3) at (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,0);
-    \coordinate (C3) at (\width*\z,\main+\gap-\curvy,0);
-    
-    \coordinate (A4) at (\width,\main+\gap,0);
-    \coordinate (B4) at (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,0);
-    \coordinate (C4) at (\width*\s,\main+\gap-\curvy,0);
-    
-    % Back variation with \depth (subtracting \depth from the z-coordinate)
-    \coordinate (A') at (0,\main,\depth);
-    \coordinate (B') at (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth);
-    \coordinate (C') at (\width*\z,\main+\curvy,\depth);
-    
-    \coordinate (A2') at (\width,\main,\depth);
-    \coordinate (B2') at (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth);
-    \coordinate (C2') at (\width*\s,\main+\curvy,\depth);
-    
-    \coordinate (A3') at (0,\main+\gap,\depth);
-    \coordinate (B3') at (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth);
-    \coordinate (C3') at (\width*\z,\main+\gap-\curvy,\depth);
-    
-    \coordinate (A4') at (\width,\main+\gap,\depth);
-    \coordinate (B4') at (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth);
-    \coordinate (C4') at (\width*\s,\main+\gap-\curvy,\depth);
-    
-    
-    % Back face fill
-    \fill[black!40] 
-    (0,0,\depth) -- (\width,0,\depth) -- (\width,\main,\depth) 
-    to[hobby,tension=3] (\width,\main,\depth) .. (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth) .. (\width*\s,\main+\curvy,\depth) -- 
-    (\width*\s,\main+\gap-\curvy,\depth) 
-    to[hobby,tension=3] (\width*\s,\main+\gap-\curvy,\depth)  .. (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth) .. (\width,\main+\gap,\depth) --
-    (\width,2*\main+\gap,\depth) -- (0,2*\main+\gap,\depth) -- 
-    (0,\main+\gap,\depth) to[hobby,tension=3] (0,\main+\gap,\depth) .. (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth) .. (\width*\z,\main+\gap-\curvy,\depth) --
-    (\width*\z,\main+\curvy,\depth) to[hobby,tension=3] (\width*\z,\main+\curvy,\depth) .. (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth) .. (0,\main,\depth) --
-    cycle;
-    
-    % Curves fills with refined fades
-    \fill[left color=gray!80, middle color=gray!50, right color=gray!20, opacity=0.8] 
-    (A) to[hobby,tension=3] (A) .. (B) .. (C) -- (C3) to[hobby,tension=3] (C3) .. (B3) .. (A3) -- 
-    (A3') to[hobby,tension=3] (A3') .. (B3') .. (C3') --
-    (C') to[hobby,tension=3] (C') .. (B') .. (A') -- cycle;
-    
-    \fill[left color=gray!80, middle color=gray!50, right color=gray!20, opacity=0.8] 
-    (A2) to[hobby,tension=3] (A2) .. (B2) .. (C2) -- (C4) to[hobby,tension=3] (C4) .. (B4) .. (A4) -- 
-    (A4') to[hobby,tension=3] (A4') .. (B4') .. (C4') --
-    (C2') to[hobby,tension=3] (C2') .. (B2') .. (A2') -- cycle;
-    
-    
-    \draw[-,hobby,tension=3] (A2') .. (B2') .. (C2');
-    \draw[-,hobby,tension=3] (A4') .. (B4') .. (C4');
-    
-    % Fill for bottom rectangle section
-    \fill[black!33] 
-    (0,0,0) -- (\width,0,0) -- (\width,0,\depth) -- (0,0,\depth) -- cycle;
-    \fill[black!33] 
-    (0,0,0) -- (0,\main,0) -- (0,\main,\depth) -- (0,0,\depth) -- cycle;
-    \fill[black!40] 
-    (\width,0,0) -- (\width,\main,0) -- (\width,\main,\depth) -- (\width,0,\depth) -- cycle;
-    
-    % Fill for top rectangle section
-    \fill[black!30] 
-    (0,2*\main+\gap,0) -- (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth) -- (0,2*\main+\gap,\depth) -- cycle;
-    \fill[black!30] 
-    (0,\main+\gap,0) -- (0,2*\main+\gap,0) -- (0,2*\main+\gap,\depth) -- (0,\main+\gap,\depth) -- cycle;
-    \fill[black!33] 
-    (\width,\main+\gap,0) -- (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth) -- (\width,\main+\gap,\depth) -- cycle;
-    
-    
-    
-    % Front face fill
-    \fill[black!36] 
-    (0,0,0) -- (\width,0,0) -- (\width,\main,0) 
-    to[hobby,tension=3] (A2) .. (B2) .. (C2) -- 
-    (\width*\s,\main+\gap-\curvy,0) 
-    to[hobby,tension=3] (C4) .. (B4) .. (A4) --
-    (\width,2*\main+\gap,0) -- (0,2*\main+\gap,0) -- 
-    (0,\main+\gap,0) to[hobby,tension=3] (A3) .. (B3) .. (C3) --
-    (\width*\z,\main+\curvy,0) to[hobby,tension=3] (C) .. (B) .. (A) --
-    cycle;
-    \draw[hobby,tension=3] (A) .. (B) .. (C);
-    \draw[hobby,tension=3] (A2) .. (B2) .. (C2);
-    \draw[hobby,tension=3] (A3) .. (B3) .. (C3);
-    \draw[hobby,tension=3] (A4) .. (B4) .. (C4);
-    \draw[dashed, opacity=0.3,hobby,tension=3] (A3') .. (B3') .. (C3');
-    \draw[dashed, opacity=0.3,hobby,tension=3] (A') .. (B') .. (C');
-    % Front face outline
-    
-    \draw[-] (0,0,0) -- (\width,0,0);
-    \draw[-] (0,0,0) -- (0,\main,0);
-    \draw[-] (\width*\z,\main+\curvy,0) -- (\width*\z,\main+\gap-\curvy,0);
-    \draw[-] (0,\main+\gap,0) -- (0,2*\main+\gap,0);
-    \draw[-] (0,2*\main+\gap,0) -- (\width,2*\main+\gap,0);
-    \draw[-] (\width,2*\main+\gap,0) -- (\width,\main+\gap,0);
-    \draw[-] (\width*\s,\main+\curvy,0) -- (\width*\s,\main+\gap-\curvy,0);    
-    \draw[-] (\width,0,0) -- (\width,\main,0);
-    
-    
-    
-    
-    
-    % Back face outline
-    
-    
-    \draw[dashed, opacity=0.3] (\width*\z,\main+\curvy,\depth) -- (\width*\z,\main+\gap-\curvy,\depth);
-    \draw[-] (\width*\s,\main+\curvy,\depth) -- (\width*\s,\main+\gap-\curvy,\depth);
-    \draw[dashed, opacity=0.3] (0,0,\depth) -- (\width,0,\depth);
-    \draw[dashed, opacity=0.3] (0,0,\depth) -- (0,\main,\depth);
-    \draw[-] (\width,0,\depth) -- (\width,\main,\depth);
-    \draw[dashed, opacity=0.3] (0,\main+\gap,\depth) -- (0,2*\main+\gap,\depth);
-    \draw[-] (0,2*\main+\gap,\depth) -- (\width,2*\main+\gap,\depth);
-    \draw[-] (\width,2*\main+\gap,\depth) -- (\width,\main+\gap,\depth);
-    
-    
-    
-    % Connect front and back faces
-    %botom
-    \draw[-] (\width,\main,0) -- (\width,\main,\depth);
-    \draw[-] (\width,0,0) -- (\width,0,\depth);
-    \draw[dashed, opacity=0.3] (0,0,0) -- (0,0,\depth);
-    \draw[-] (0,\main,0) -- (0,\main,\depth);
-    %top
-    \draw[-] (\width,\main+\gap,0) -- (\width,\main+\gap,\depth);
-    \draw[-] (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth);
-    \draw[-] (0,2*\main+\gap,0) -- (0,2*\main+\gap,\depth);
-    \draw[dashed, opacity=0.3] (0,\main+\gap,0) -- (0,\main+\gap,\depth);
-    
-    
-    
-    %curves
-    \draw[dashed, opacity=0.3] (C) -- (C2);
-    \draw[dashed, opacity=0.3] (C3) -- (C4);
-    \draw[dashed, opacity=0.3] (C') -- (C2');
-    \draw[dashed, opacity=0.3] (C3') -- (C4');
-    \draw[dashed, opacity=0.3] (C) -- (C');
-    \draw[dashed, opacity=0.3] (C2) -- (C2');
-    \draw[dashed, opacity=0.3] (C3) -- (C3');
-    \draw[dashed, opacity=0.3] (C4) -- (C4');
-    
-    \pgfmathsetmacro{\halfgap}{0.5*\gap}
-    
-    \coordinate (C3m) at (\width*\z,\main+\halfgap,0);
-    \coordinate (C4m) at (\width*\s,\main+\halfgap,0);
-    \coordinate (C3'm) at (\width*\z,\main+\halfgap,\depth);
-    \coordinate (C4'm) at (\width*\s,\main+\halfgap,\depth);
-    
-    \fill[pattern={Lines[
-        distance=1mm,
-        angle=45,
-        line width=0.4mm
-        ]},
-    pattern color=red,
-    opacity=0.6] (C3m) -- (C3'm) -- (C4'm) -- (C4m) -- cycle;
-\end{tikzpicture}
-    \color{red} \textbf{\textsf{CSA 3}}
+We measured the dimensions of each alloys gauge region using a digital calliper and recorded the results on the data sheet (See Figure \ref{fig:alloys}). We were informed that the gauge length was 50 mm, but we did not measure it ourselves.\\[8pt] 
+Although checking measurements is good practice, it was determined the cross-sectional area (CSA) analysis does not require it, \textbf{however} it is needed for further analysis for several other parameters in the data section.
 \end{minipage}
-\end{minipage}
-\begin{minipage}{0.63\textwidth}
-    \vspace{-2em}
-    \subsubsection{Cross-Sectional Areas (CSA)}
-    \begin{center}
-        \begin{tblr}{
-                width=\textwidth,
-                colspec={X[2.9,c]X[1.5,c]X[1.5,c]X[1.6,c]},
-                hlines,vlines,
-                rows={ht=1.5\baselineskip},
-                row{1} = {ht=1\baselineskip,font=\bfseries,c,m},
-                cells={valign=m,halign=c}
-            }
-            Property ($\bm{\text{mm}^2}$) & AR & ST & PH\\
-            {\color{blue} \textbf{\textsf{CSA 1}} \\ Width \(\times\) Length} 
-            & {\(11.98 \times 50\) \\ \(= 599\)} 
-            & {\(12 \times 50\) \\ \(= 600\)} 
-            & {\(11.97 \times 50\) \\ \(= 598.5\)} \\
-            {\color{green!50!black} \textbf{\textsf{CSA 2}} \\ Thickness \(\times\) Length} 
-            & {\(6 \times 50\) \\ \(= 300\)} 
-            & {\(6.38 \times 50\) \\ \(= 319\)} 
-            & {\(6.18 \times 50\) \\ \(= 309\)} \\
-            {\color{red} \textbf{\textsf{CSA 3}} \\ Width \(\times\) Thickness} 
-            & {\(11.98 \times 6\) \\ \(= 71.88\)} 
-            & {\(12 \times 6.38\) \\ \(= 76.56\)} 
-            & {\(11.97 \times 6.18\) \\ \(= 73.96\)} \\
-        \end{tblr}
-    \end{center}
-    \captionof{table}{Calculated Cross-Sectional Areas (CSA) for AR, ST, and PH}
-    \label{tab:csa}
-    \vspace{1em}\noindent
-    In a tensile test, force is applied from the top and bottom of the alloy, stretching it along its length. Stress is calculated as the force divided by the area \textbf{perpendicular} to the applied force. Thus, the appropriate cross-sectional area for stress calculation is the one that is orthogonal to this force.\footnotemark
-\end{minipage}\\ \footnotetext{The calculations for the cross-sectional area (CSA) are conducted externally, not as part of the laboratory procedure, although this section should only focus on that, i add this here merely for the convenience of information flow. please don't be too hard on me, it can moved to the data and results section if need be.}
-\begin{itemize}[left=0pt,itemsep=-0.3mm]
-    \item \textbf{\textcolor{blue}{\textsf{CSA 1}}:} This CSA parameterizes the thickness dimension of the alloy and remains coplanar with the applied force vector, rendering it unsuitable for stress calculations.
-    \item \textbf{\textcolor{green!50!black}{\textsf{CSA 2}}:} This CSA parameterizes the width dimension and also remains coplanar with the applied force vector, thus it is not utilized for stress calculations.
-    \item \textbf{\textcolor{red}{\textsf{CSA 3}}:} This CSA parameterizes the longitudinal dimension of the material and maintains orthogonality to the applied force vector, making it the appropriate choice for stress calculations.
-\end{itemize}
-\newpage
-Thus, for stress calculations, we use \textbf{CSA 3}, as it is the area perpendicular to the applied force. The table below shows the calculated cross section area values for which is to be used.\vspace{0.6em}
-\begin{center}
-    \begin{tblr}{
-            width=\textwidth,
-            colspec={X[3,c]X[1.5,c]X[1.5,c]X[1.6,c]},
-            hlines,vlines,
-            rows={ht=1.3\baselineskip},
-            row{1} = {ht=0.9\baselineskip,font=\bfseries,c,m},
-            cells={valign=m,halign=c}
-        }
-        Property (\(\bm{\text{mm}^2}\)) & AR & ST & PH\\
-        {\textbf{{Cross-Sectional Area}}} & 71.88 & 76.56& 73.96 \\
-    \end{tblr}
-\end{center}
-\captionof{table}{Cross-Sectional Area (CSA) to be used for stress}
-\label{tab:csa3}
-\vspace{1em}\noindent
-This data will be used in subsequent calculations for stress and other related analyses.
-\vspace{-0.5em}
 \subsection{Hardness Test}
 To evaluate the hardness of our alloys, we employed the Vickers Hardness (HV) test, among others methods (See Section \ref{hardnesstypes}).\\[8pt]
-The Vickers Hardness (HV) test is known as a precise and versatile method for measuring material hardness through indentation. It employs a diamond-shaped indenter with a square base at an included angle of 136\textdegree \ between opposing faces (See Figure \ref{fig:vickers-diagram}) (Ultramag, 2024; ZwickRoell, 2024).\\
-
-\vspace{7pt}
+The Vickers Hardness (HV) test is known as a precise and versatile method for measuring material hardness through indentation. It employs a diamond-shaped indenter with a square base at an included angle of 136\textdegree \ between opposing faces (See Figure \ref{fig:vickers-diagram}) (Ultramag, 2024; ZwickRoell, 2024).\\[8pt]
 \begin{minipage}{0.55\textwidth}
     The indenter is pressed into the material under a specific load, typically ranging from 1 to 100 kgf\footnotemark, applied for 10 to 15 seconds (Ultramag, 2024). In our case, a load of 5 kgf (approximately \SI{49.03}{\newton}) was applied for a duration of approximately 1–5 seconds. This test is referred to as HV5.\\[8pt]
-    The process began by pressing the indenter onto the alloy surface, creating an indent. Afterward, using a dial, we adjusted the two parallel lines to align with the indent, measuring the first distance, \(d_1\), ensuring the indent was accurately positioned between the two sides (See Figure \ref{fig:vickers}). \\[8pt]  
-    Once the first measurement was confirmed, we repositioned the sample and took the second distance measurement, \(d_2\), for the indent.\\[8pt]
-    Finally, once both distances were recorded by the machine, we pressed a button to calculate the hardness.
+    The process began by pressing the indenter onto the alloy surface, creating an indent.\\[8pt] 
+    Afterward, using a dial, we adjusted the two parallel lines to align with the indent, measuring the first distance, \(d_1\), ensuring the indent was accurately positioned between the two sides (See Figure \ref{fig:vickers}).\\[8pt]
+    Once the first measurement was confirmed, we repositioned the sample and took the second distance measurement, \(d_2\), for the indent.
 \end{minipage}\hspace{1em}
 \begin{minipage}{0.4\textwidth}\centering
 \begin{figure}[H]
@@ -1267,12 +682,10 @@ The Vickers Hardness (HV) test is known as a precise and versatile method for me
     \caption{Illustration showing the indent and the parallel lines used for measuring the indentation. (Wikipedia)}
     \label{fig:vickers}
 \end{figure}
-\end{minipage}\\
-\vspace{10pt}
-\footnotetext{{1 kilogram-force (kgf) is the force exerted by one kilogram of mass under standard gravity (\SI{9.81}{\meter\per\second\squared}), approximately equal to \SI{9.81}{\newton}.}}
+\end{minipage}\\[8pt]\footnotetext{{1 kilogram-force (kgf) is the force exerted by one kilogram of mass under standard gravity (\SI{9.81}{\meter\per\second\squared}), approximately equal to \SI{9.81}{\newton}.}}Finally, once both distances were recorded by the machine, we pressed a button to calculate the hardness.
+\newpage\newgeometry{left=0.8in,right=0.8in,bottom=0.9in}
 To ensure accuracy and consistency, this process was done at least 2-3 times for each given alloy and the resulting hardness values were recorded on the data sheet (See Figure \ref{fig:alloys}) for later analysis.\\[8pt]
-Although the machine automatically calculates the hardness, it is important to understand the underlying process. The Vickers hardness is determined by a fixed force and the indentation area, which is calculated using the average of the diagonals $d_1$ and $d_2$, along with the indentation geometry (ZwickRoell, 2024). I demonstrate and derive the pertinent equation and calculation for the HV5 test within theory section (See Section \ref{meanhard}).
-\newpage
+Although the machine automatically calculates the hardness, it is important to understand the underlying process. The Vickers hardness is determined by a fixed force and the indentation area, which is calculated using the average of the diagonals $d_1$ and $d_2$, along with the indentation geometry (ZwickRoell, 2024). I demonstrate and derive the pertinent equation and calculation for the HV5 test within theory section (See Section \ref{meanhard}).\\[8pt]
 The recorded results were documented on the data sheet as follows:\\
 \vspace{0.3em}
 \begin{center}
@@ -1287,7 +700,7 @@ The recorded results were documented on the data sheet as follows:\\
         Property (\(\bm{\text{unitless}}\)) & \SetCell[c=2]{c} AR & & \SetCell[c=2]{c} ST & & \SetCell[c=3]{c} PH & & \\
         HV5 (Individual) & 119 & 123 & 36 & 36.8 & 102.8 & 131 & 126 \\
     \end{tblr}
-    \caption{HV5 Data}
+    \captionof{table}{HV5 Data}
     \label{tab:hv5}
 \end{center}
 \vspace{0.3em}
@@ -1308,9 +721,8 @@ An axial load was applied to the standardised dog-bone-shaped alloy as part of t
 For analysis, a real-time plot of force (N) versus change in length (mm) was generated during the experiment.
 \end{minipage}\\[8pt]
 Once the test was completed, i.e., after the specimen broke, the system also provided a table outlining details such as \textbf{Maximum Load (N)} \& \textbf{Extension at Break (mm)} \footnote{Table title terminology has been reworded for clarity. The original table titles are phrased strangely and incorrectly in a sense. A more detailed explanation and possible justification is provided in a later section.}. This process was automated using the manufacturer's software. The machine did not account for the sample's thickness or width, or simply by observation it was not given, making the data for these parameters invalid.\\[8pt]
-Consequently, it is necessary for us to establish the relationship between the generated data and the initial measurements (e.g., cross-sectional area and original gauge length) (See Section \ref{Measurements}) to produce more insights. While it may seem that providing the machine with the cross-sectional area and initial gauge length could have directly yielded correct data in the table and directly also a stress-strain curve with its several insights, it is likely that this approach was deliberately avoided to encourage independent analysis and a deeper understanding of the process.
+To gain further insights, we must relate the generated data to the initial measurements (e.g., cross-sectional area and gauge length (see Section \ref{Measurements})). Although inputting these values directly into the machine could have provided more prevalent tables and stress-strain curves, this was likely avoided to promote independent analysis and a deeper understanding of the process.
 
-\newpage
 \begin{figure}[H]
     \centering    
     \includegraphics[width=0.7\textwidth]{images/simwiki-stress-strain-shape-evolution.png}
@@ -1436,7 +848,7 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
     \end{equation}
     Values for \(d_1\) and \(d_2\) were obtained from the machine dial, and the corresponding hardness values were calculated accordingly. It is worth noting, if not already disclosed, that the resulting HV and HV5 values are expressed as dimensionless numbers. \\[1em]
     \hrule\vspace{1em}
-    Going into detail about each type of hardness, along with their specific equations and characteristics, seems excessive for this context. I concentrated on Vickers hardness because it directly relates to the test we performed. Although I aim for this theory section to cover a broad theoretical background, my goal is to include only the information that is specifically relevant to this report. As Anton Chekhov famously said, \begin{formal}[Anton Chekhov]{“If in the first act you have hung a pistol on the wall, then in the following one it should be fired. Otherwise, don't put it there.”}\end{formal} This principle means that every detail should serve a purpose. In this report, only relevant information is included to support the main points. If you're interested, relevant equations and descriptions for \textbf{indentation types} can be found in Appendix A.
+    Going into detail about each type of hardness, along with their specific equations and characteristics, seems excessive for this context. I concentrated on Vickers hardness because it directly relates to the test we performed. Although I aim for this theory section to cover a broad theoretical background, my goal is to include only the information that is specifically relevant to this report. As Anton Chekhov famously said, \begin{formal}[Anton Chekhov]{If in the first act you have hung a pistol on the wall, then in the following one it should be fired. Otherwise, don't put it there.}\end{formal} This principle means that every detail should serve a purpose. In this report, only relevant information is included to support the main points. If you're interested, relevant equations and descriptions for \textbf{indentation types} can be found in Appendix A.
     
     \newpage
 
@@ -1457,7 +869,7 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
     \begin{minipage}{0.46\textwidth}
             \begin{equation}
                 \sigma = \frac{F}{A}
-                \label{eq:strain}
+                \label{eq:stress}
             \end{equation}
             \begin{itemize}[left=0pt,itemsep=-1mm]
             \wm{\item \(\sigma\): Stress (Pascals, Pa) or (Newtons per metre, \(\text{N/m}^2\))}
@@ -1488,7 +900,7 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
         \begin{minipage}{0.48\textwidth}
             \begin{equation}
                 \varepsilon = \frac{\Delta L}{L_0}
-                \label{eq:stress}
+                \label{eq:strain}
             \end{equation}
             \begin{itemize}[left=0pt,itemsep=-1mm]
                 \item \( \varepsilon \): Strain (no units)
@@ -1514,7 +926,8 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
 
     \subsection{True Stress and Strain}
     Engineers typically work with \textbf{engineering stress}, which is the force divided by the original area of the specimen before loading (See \ref{eq:stress}).\\[8pt] However, as a material is loaded, the area decreases. The \textbf{true stress}, $(\tilde{\sigma})$, considers the actual area of the specimen. Because the area decreases as a material is loaded, true stress is higher than engineering stress.\\[8pt]
-    The figure below shows an engineering stress-strain curve as compared to a true stress-strain curve. Because the engineering stress is calculated as force divided by the original area (which is constant), the engineering stress-strain curve has the same shape as the load-deflection curve. The engineering stress-strain curve drops after the ultimate strength is reached because the force that can be supported by the material drops as it begins to neck down. However, the stress value in the true stress-strain curve always increases as the strain increases. This is because the instantaneous value of area is used when calculating true stress. Even when the force supported by the material drops, the reduction in the specimen area outweighs the reduction in force, and the stress continues to increase. (mechanicalc, 2024)    
+    The figure below shows an engineering stress-strain curve as compared to a true stress-strain curve. Because the engineering stress is calculated as force divided by the original area (which is constant), the engineering stress-strain curve has the same shape as the load-deflection curve. The engineering stress-strain curve drops after the ultimate strength is reached because the force that can be supported by the material drops as it begins to neck down. However, the stress value in the true stress-strain curve always increases as the strain increases. This is because the instantaneous value of area is used when calculating true stress. Even when the force supported by the material \newpage 
+    drops, the reduction in the specimen area outweighs the reduction in force, and the stress continues to increase. (mechanicalc, 2024)    
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.6\textwidth]{images/true-stress-strain-diagram-01.png}
@@ -1569,7 +982,7 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
     known as the elastic region, where the material deforms proportionally to the applied load, as shown above (See Figure \ref{fig:young}).\\[8pt]
     Within this region, the material will return to its original shape once the load is removed, and the relationship between stress and strain is linear.\\[8pt]
     Young's Modulus is important because it measures how stiff a material is, which is essential for choosing the right materials in engineering and construction.
-    \begin{itemize}[itemsep=-0.5mm]
+    \begin{itemize}
         \item \textbf{High }\(\bm{E}\): A higher Young's Modulus indicates that the material is stiffer, allowing it to resist deformation more effectively when stress is applied.\\[3pt] 
         This property is particularly advantageous in scenarios where minimal elastic deformation is crucial, such as in the design of structural components or precision instruments.
         \item \textbf{Low }\(\bm{E}\): Conversely, materials with a lower Young's Modulus are more flexible and may be more appropriate for applications that require compliance or the ability to absorb energy.
@@ -1709,7 +1122,9 @@ The \textbf{modulus of resilience} ($U_r$) quantifies the strain energy stored i
     U_r = \int_0^{\varepsilon_y} \sigma \, d\varepsilon
 \end{equation}
 In this equation, $\sigma$ represents the stress at a given strain $\varepsilon$, and $d\varepsilon$ is the infinitesimal change in strain. The integral sums the infinitesimal energy contributions $\sigma d\varepsilon$ from zero to the yield strain $\varepsilon_y$, which corresponds to the yield stress $\sigma_y$.\\[8pt]
-\textbf{For materials exhibiting linear elastic behavior up to the yield point, the relationship between stress and strain is linear, and the integral can be simplified.} In this case, the area under the stress-strain curve up to the yield point (which is a triangle) gives the modulus of resilience:
+\textbf{For materials exhibiting linear elastic behavior up to the yield point, the relationship between stress and strain is linear, and the integral can be simplified.} 
+\newpage
+In this case, the area under the stress-strain curve up to the yield point (which is a triangle) gives the modulus of resilience:
 \begin{equation}
     U_r = \frac{1}{2} \sigma_y \varepsilon_y
 \end{equation}
@@ -1744,7 +1159,7 @@ It corresponds to the maximum force ($F_{\text{max}}$) applied relative to the o
     \item $F_{\text{max}}$: Maximum applied force (Newtons, N)
     \item $A$: Original cross-sectional area (metres squared, $\text{m}^2$)
 \end{itemize}
-In practical terms, UTS measures the maximum force per unit area a material can handle before failure. The value of UTS ($\sigma_{u}$) is observed directly from experimental data as the highest stress on a stress-strain curve. However, \textbf{this equation is not necessarily a useful analytical tool because UTS is an observational property rather than a predictive one.}
+In practical terms, UTS measures the maximum force per unit area a material can handle before failure. The value of UTS ($\sigma_{u}$) is observed directly from experimental data as the highest stress on a stress-strain curve. However, this equation is not always a useful analytical tool, as UTS is an observational property rather than a predictive one, especially since we typically use stress-strain relationships as the foundation for analysis.
 \begin{center}
     \begin{minipage}{0.47\textwidth}\centering
         \begin{figure}[H]
@@ -1765,11 +1180,12 @@ Understanding the plastic behavior beyond UTS is essential for applications requ
 
 \newpage
 
-\subsection{Ductility}
+\subsection{Ductility}\label{Ductility}
 Ductility is an indication of how much plastic strain a material can withstand before it breaks. A ductile material can sustain large strains even after it has begun to yield. Common measures of ductility include percent elongation and reduction in area, as discussed in this section.
 After a specimen breaks during a tensile test, the final length of the specimen is measured, and the \textbf{plastic strain at failure} $(\varepsilon_f)$, is calculated:
 \begin{equation}
     \varepsilon_f = \frac{L_f - L_0}{L_0}
+    \label{duc}
 \end{equation}
 \begin{itemize}[itemsep=-1mm]
     \item $\varepsilon_f$: Plastic strain at failure (no units)
@@ -1790,6 +1206,7 @@ In the figure, it can be seen that the plastic strain at failure, is the strain 
 The \textbf{percent elongation} \((eL)\) is calculated from the plastic strain at failure by:
 \begin{equation}
     eL = \varepsilon_f \times 100\% = \frac{L_f - L_0}{L_0} \times 100\%
+    \label{el}
 \end{equation}
 \begin{itemize}[itemsep=-1mm]
     \item $eL$: Percent elongation (Percent, \%)
@@ -1807,8 +1224,10 @@ The \textbf{ultimate strain} $(\varepsilon_u)$ accounts for both plastic and ela
     \item $\varepsilon_u$: Ultimate strain (No units)
     \item $\sigma_{u}$: Ultimate stress (Pascals, Pa) or (Newtons per metre, \(\text{N/m}^2\))
     \item $E$: Young's modulus (Pascals, Pa) or (Newtons per metre, \(\text{N/m}^2\))
-\end{itemize}
+\end{itemize} 
+While the formula provides a theoretical relationship between ultimate strain, plastic strain at failure, ultimate stress, and Young's modulus, its practical utility is limited because ultimate strain is typically measured directly from experimental data rather than calculated, and material behavior is often too complex to be accurately captured by this simple linear addition.
 \newpage
+The stress at the ultimate strain is known as the \textbf{Fracture Stress} \((\sigma_f)\) represents the stress at the point where the material breaks. It is typically less than the Ultimate Tensile Strength (UTS) for ductile materials because the material continues to deform plastically after reaching UTS but before fracturing.\\[8pt]
 Another important material property that can be measured during a tensile test is the reduction in area, which is calculated by:
 \begin{equation}
     \text{Reduction in Area} = \frac{A_0 - A_f}{A_0} \times 100\%
@@ -1825,8 +1244,8 @@ The actual units are only relevant in ensuring consistency throughout the calcul
 
 \subsection{Toughness and Modulus of Toughness}
 
-\textbf{Toughness} is a material's ability to absorb energy up to the point of fracture, combining strength and ductility. It is essential for applications where impact resistance and the ability to withstand sudden loading or deformation are critical, such as in automotive, aerospace, and construction industries. Toughness is determined by the area under the entire stress-strain curve, which includes both elastic and plastic deformation regions.\\[8pt]
-The \textbf{modulus of toughness} represents the strain energy per unit volume (strain energy density) a material can absorb just before it fractures. It is calculated as the area under the stress-strain curve up to fracture. A rough approximation of this modulus can be made by dividing the stress-strain curve into a triangular section and a rectangular section, with the height of these sections being the average of the yield strength and ultimate strength. The modulus of toughness is approximated as:
+\textbf{Toughness} is a material's ability to absorb energy up to the point of fracture, combining strength and ductility. In material science, toughness is typically determined as the area under the {stress-strain curve}, which represents the energy absorbed per unit volume of the material. This normalization removes dependence on sample size and geometry, reflecting intrinsic material properties.\\[8pt]
+The \textbf{modulus of toughness} quantifies the strain energy density a material can absorb just before fracturing, calculated from the total area under the stress-strain curve up to the point of fracture. It can be approximated by dividing the stress-strain curve into triangular and rectangular sections, with the height being the average of the yield and ultimate strengths.
 \begin{center}
     \begin{minipage}{0.5\textwidth}\centering
         \begin{figure}[H]
@@ -1860,80 +1279,58 @@ Note that the units of the modulus of toughness are the same as those of strain 
 
 \newpage
 
-    \subsection{Material Property Ratios}
-
-
-\begin{itemize}
-
-\item \textbf{Slimness Ratio}:\\[8pt]
-\begin{minipage}{0.3\textwidth}
-    \begin{equation}
-        \frac{L_0}{\sqrt{A_0}}
-    \end{equation}
-\end{minipage}\hfill
-\begin{minipage}{0.6\textwidth}
-    This ratio characterizes the geometry of a tensile test specimen by relating the original gauge length (\(L_0\)) to the cross-sectional area (\(A_0\)). It is essential for standardizing tensile tests and affects the measured ductility of the material.
-\end{minipage}
-
-\item \textbf{Tensile Strength to Yield Strength Ratio}:\\[8pt]
-\begin{minipage}{0.3\textwidth}
-    \begin{equation}
-        \frac{\sigma_u}{\sigma_y}
-    \end{equation}
-\end{minipage}\hfill
-\begin{minipage}{0.6\textwidth}
-    This ratio compares the ultimate tensile strength (\(\sigma_u\)) to the yield strength (\(\sigma_y\)), providing an idea of how much additional strain a material can take beyond the yield point before failure.
-\end{minipage}
-
-\item \textbf{Tensile Strength to Fracture Strength Ratio}:\\[8pt]
-\begin{minipage}{0.3\textwidth}
-    \begin{equation}
-        \frac{\sigma_u}{\sigma_f}
-    \end{equation}
-\end{minipage}\hfill
-\begin{minipage}{0.6\textwidth}
-    This ratio compares the ultimate tensile strength to the fracture strength (\(\sigma_f\)), indicating how much higher the material's ultimate strength is before it breaks.
-\end{minipage}
-
-\item \textbf{Young’s Modulus to Yield Strength Ratio}:\\[8pt]
-\begin{minipage}{0.3\textwidth}
-    \begin{equation}
-        \frac{E}{\sigma_y}
-    \end{equation}
-\end{minipage}\hfill
-\begin{minipage}{0.6\textwidth}
-    This ratio indicates the material's ability to resist elastic deformation relative to its yield strength.
-\end{minipage}
-
-\item \textbf{Ductility Ratio}:\\[8pt]
-\begin{minipage}{0.3\textwidth}
-    \begin{equation}
-        \frac{\varepsilon_u}{\varepsilon_y}
-    \end{equation}
-\end{minipage}\hfill
-\begin{minipage}{0.6\textwidth}
-    This ratio compares the ultimate strain (\(\varepsilon_u\)) to the strain at yield (\(\varepsilon_y\)), reflecting how much plastic deformation a material can undergo compared to its initial elastic deformation.
-\end{minipage}
-
-\item \textbf{Modulus of Resilience to Modulus of Toughness Ratio}:\\[8pt]
-\begin{minipage}{0.3\textwidth}
-    \begin{equation}
-        \frac{U_r}{U_t}
-    \end{equation}
-\end{minipage}\hfill
-\begin{minipage}{0.6\textwidth}
-    This ratio compares the modulus of resilience (energy absorbed without permanent deformation) to the modulus of toughness (total energy absorbed before fracture).
-\end{minipage}
-
-\item \textbf{Poisson's Ratio}:\\[8pt]
-Poisson's ratio, which measures the lateral strain resulting from axial stress, cannot be accurately determined in this test due to the lack of precise lateral strain measurements in the current experimental setup.
-
-\end{itemize}
+\subsection{Material Property Ratios}\label{mpr}
+\vspace{0.5em}
+\begin{enumerate}
+    
+    \item \textbf{Strength Ratio}:\\[8pt]
+    \begin{minipage}{0.3\textwidth}
+        \begin{equation}
+            \frac{\sigma_u}{\sigma_y}
+        \end{equation}
+    \end{minipage}\hfill
+    \begin{minipage}{0.6\textwidth}
+        This ratio compares the ultimate tensile strength (\(\sigma_u\)) to the yield strength (\(\sigma_y\)), providing an idea of how much additional strain a material can take beyond the yield point before failure.
+    \end{minipage}
+    
+    \item \textbf{Strain Ratio}:\\[8pt]
+    \begin{minipage}{0.3\textwidth}
+        \begin{equation}
+            \frac{\varepsilon_u}{\varepsilon_y}
+        \end{equation}
+    \end{minipage}\hfill
+    \begin{minipage}{0.6\textwidth}
+        This ratio compares the ultimate strain (\(\varepsilon_u\)) to the strain at yield (\(\varepsilon_y\)), reflecting how much plastic deformation a material can undergo compared to its initial elastic deformation.
+    \end{minipage}
+    
+    \item \textbf{Toughness-to-Resilience Ratio}:\\[8pt]
+    \begin{minipage}{0.3\textwidth}
+        \begin{equation}
+            \frac{U_t}{U_r}
+        \end{equation}
+    \end{minipage}\hfill
+    \begin{minipage}{0.6\textwidth}
+        This ratio compares the modulus of toughness (energy absorbed before fracture) to the modulus of resilience (energy absorbed without permanent deformation), providing insight into the material's energy absorption capacity.
+    \end{minipage}
+    
+    \item \textbf{Fracture-to-UTS Stress Ratio}:\\[8pt]
+    \begin{minipage}{0.3\textwidth}
+        \begin{equation}
+            \frac{\sigma_f}{\sigma_u}
+        \end{equation}
+    \end{minipage}\hfill
+    \begin{minipage}{0.6\textwidth}
+        This ratio compares the fracture stress (\(\sigma_f\)) to the ultimate tensile strength (\(\sigma_u\)), indicating how much higher the material's ultimate strength is compared to the fracture strength.
+    \end{minipage}
+    
+\end{enumerate}
+\vspace{1em}
+\textbf{Note:} While there are many other material property ratios that can be derived, we focus here on these four key ratios due to their relevance in understanding the fundamental mechanical behavior of materials. Other ratios, such as the Young’s Modulus to Yield Strength ratio or the Slimness ratio, may provide useful insights but are beyond the scope of this discussion.
 
         
     \newpage\vspace*{-20pt}
     
-    \section{Data and Result Calculations}
+    \section{Data, Calculations and Results}
     
     While the tensile test provides valuable information about a material's strength and ductility, there are certain parameters that cannot be directly derived or accurately measured in this specific test setup. These limitations include:
     \begin{itemize}[left=0pt, itemsep=-1mm]
@@ -1947,22 +1344,25 @@ Poisson's ratio, which measures the lateral strain resulting from axial stress, 
     Now that we have collected the following data:
     \begin{itemize}
         \item Hardness (HV5)
-        \item Gauge Width (\(w\)), Thickness (\(d\)), Length (\(L_0\))
-         \item Corresponding set of values for Force \((F)\) that relate to a specific Change in Length \((\Delta L)\).    
+        \item Gauge [Width (\(w\)), Thickness (\(d\)), Length (\(L_0\))]
+        \item Corresponding set of values for Force \((F)\) that relate to a specific Change in Length \((\Delta L)\).
     \end{itemize}
     We can derive several mechanical properties from the test data. The properties outlined in the theory section include:
     \begin{itemize}
+        \item Cross-Sectional Area ($A_0$)
         \item Stress ($\sigma$) and Strain ($\varepsilon$)
         \item Stiffness ($k$) and Young's Modulus ($E$)
+        \item \textbf{Yield point:} Yield Strength ($\sigma_y$) and Yield Strain ($\varepsilon_y$)
         \item Resilience ($U_r$) and Toughness ($U_t$)
-        \item Yield Strength ($\sigma_y$) and Yield Strain ($\varepsilon_y$)
-        \item Ultimate Strength ($\sigma_u$) and Ultimate Strain ($\varepsilon_u$)
-        \item Percent Elongation ($eL$) and Plastic Strain at Failure ($\varepsilon_f$)    
+        \item Ultimate Strength ($\sigma_u$)
+        \item \textbf{Fracture point:} Ultimate Strain ($\varepsilon_u$) and Fracture Stress ($\sigma_f$)
+        \item Plastic Strain at Failure ($\varepsilon_f$) and Percent Elongation ($eL$)  
+        \item Material Property Ratios
     \end{itemize}
-    These derived properties help us fully characterize the mechanical performance of the material under stress.
-
+    These derived properties help us fully characterize the mechanical performance of the material under stress.\\
+    \textbf{All interpretations of results are included in the Discussions and Conclusion section}
     \newpage
-    \subsection{Hardness Data}\label{meanhard}
+    \subsection{Hardness}\label{meanhard}
     While we've gone over the important equations for the Vickers hardness test, in this prior theory section (See Section \ref{VHC}) there's no need to actually do the calculations by hand since the machine has already provided the results. I hope this much is clear by now.\\[8pt] 
     The data recorded in Table \ref{tab:hv5} is outlined as such:\vspace{1em}
     \begin{center}
@@ -2010,35 +1410,615 @@ Poisson's ratio, which measures the lateral strain resulting from axial stress, 
     \end{minipage}
     \end{center}    
     Thus, the means for each group are as follows:\vspace{1em}
-    \begin{center}
-        \begin{tblr}{
-                width=\textwidth,
-                colspec={X[3,c]X[0.75,c]X[0.75,c]X[0.75,c]X[0.75,c]X[0.75,c]X[0.75,c]X[0.8,c]X[0.8,c]X[0.8,c]},
-                hlines,vlines,
-                rows={ht=1\baselineskip},
-                row{1} = {ht=1\baselineskip,font=\bfseries,c,m},
-                cells={valign=m,halign=c}
-            }
-            Property (\(\bm{\text{unitless}}\)) & \SetCell[c=2]{c} AR & & \SetCell[c=2]{c} ST & & \SetCell[c=3]{c} PH & & \\
-            HV5 (Individual) & 119 & 123 & 36 & 36.8 & \(\cancel{102.8}\) & 131 & 126 \\
-            HV5 (Average) & \SetCell[c=2]{c} 121 & & \SetCell[c=2]{c} 36.4 & & \SetCell[c=3]{c} 128.5 & & \\
-        \end{tblr}
-        \caption{HV5 individual and mean data}
-        \label{tab:hv5mean}
-    \end{center}\vspace{1em}
+        \begin{table}[H]
+            \centering
+            \begin{tblr}{
+                    width=\textwidth,
+                    colspec={X[3,c]X[1,c]X[1,c]X[1,c]},
+                    hlines,vlines,
+                    rows={ht=1\baselineskip},
+                    row{1} = {ht=1\baselineskip,font=\bfseries,c,m},
+                    cells={valign=m,halign=c}
+                }
+                Property (\(\bm{\text{unitless}}\)) & AR & ST & PH \\
+                HV5 (Average) & 121 & 36.4 & 128.5 \\
+            \end{tblr}
+            \caption{HV5 individual and mean data}
+            \label{tab:hv5mean}
+        \end{table}
+        
     Honestly this is pretty much it for the hardness test we got our individual and averages there not much else we can do with this.
     \newpage
+    
+        \subsection{Cross-Sectional Areas (CSA)}
+        
+        \begin{center}
+        \begin{minipage}{0.3\textwidth} 
+            \centering
+            \begin{tikzpicture}[rotate around y=225, use Hobby shortcut, scale=0.25, every node/.style={scale=0.25}]
+                \large
+                \def\width{4}
+                \def\gap{10}
+                \def\main{8}
+                \def\curvy{1.9}
+                \def\depth{3}
+                
+                \def\n{3.3}
+                \def\z{1/\n}
+                \pgfmathsetmacro{\s}{1-\z}
+                
+                \coordinate (A) at (0,\main,0);
+                \coordinate (B) at (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,0);
+                \coordinate (C) at (\width*\z,\main+\curvy,0);
+                
+                \coordinate (A2) at (\width,\main,0);
+                \coordinate (B2) at (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,0);
+                \coordinate (C2) at (\width*\s,\main+\curvy,0);
+                
+                \coordinate (A3) at (0,\main+\gap,0);
+                \coordinate (B3) at (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,0);
+                \coordinate (C3) at (\width*\z,\main+\gap-\curvy,0);
+                
+                \coordinate (A4) at (\width,\main+\gap,0);
+                \coordinate (B4) at (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,0);
+                \coordinate (C4) at (\width*\s,\main+\gap-\curvy,0);
+                
+                % Back variation with \depth (subtracting \depth from the z-coordinate)
+                \coordinate (A') at (0,\main,\depth);
+                \coordinate (B') at (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth);
+                \coordinate (C') at (\width*\z,\main+\curvy,\depth);
+                
+                \coordinate (A2') at (\width,\main,\depth);
+                \coordinate (B2') at (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth);
+                \coordinate (C2') at (\width*\s,\main+\curvy,\depth);
+                
+                \coordinate (A3') at (0,\main+\gap,\depth);
+                \coordinate (B3') at (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth);
+                \coordinate (C3') at (\width*\z,\main+\gap-\curvy,\depth);
+                
+                \coordinate (A4') at (\width,\main+\gap,\depth);
+                \coordinate (B4') at (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth);
+                \coordinate (C4') at (\width*\s,\main+\gap-\curvy,\depth);
+                
+                
+                % Back face fill
+                \fill[black!40] 
+                (0,0,\depth) -- (\width,0,\depth) -- (\width,\main,\depth) 
+                to[hobby,tension=3] (\width,\main,\depth) .. (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth) .. (\width*\s,\main+\curvy,\depth) -- 
+                (\width*\s,\main+\gap-\curvy,\depth) 
+                to[hobby,tension=3] (\width*\s,\main+\gap-\curvy,\depth)  .. (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth) .. (\width,\main+\gap,\depth) --
+                (\width,2*\main+\gap,\depth) -- (0,2*\main+\gap,\depth) -- 
+                (0,\main+\gap,\depth) to[hobby,tension=3] (0,\main+\gap,\depth) .. (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth) .. (\width*\z,\main+\gap-\curvy,\depth) --
+                (\width*\z,\main+\curvy,\depth) to[hobby,tension=3] (\width*\z,\main+\curvy,\depth) .. (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth) .. (0,\main,\depth) --
+                cycle;
+                
+                % Curves fills with refined fades
+                \fill[left color=gray!80, middle color=gray!50, right color=gray!20, opacity=0.8] 
+                (A) to[hobby,tension=3] (A) .. (B) .. (C) -- (C3) to[hobby,tension=3] (C3) .. (B3) .. (A3) -- 
+                (A3') to[hobby,tension=3] (A3') .. (B3') .. (C3') --
+                (C') to[hobby,tension=3] (C') .. (B') .. (A') -- cycle;
+                
+                \fill[left color=gray!80, middle color=gray!50, right color=gray!20, opacity=0.8] 
+                (A2) to[hobby,tension=3] (A2) .. (B2) .. (C2) -- (C4) to[hobby,tension=3] (C4) .. (B4) .. (A4) -- 
+                (A4') to[hobby,tension=3] (A4') .. (B4') .. (C4') --
+                (C2') to[hobby,tension=3] (C2') .. (B2') .. (A2') -- cycle;
+                
+                
+                \draw[-,hobby,tension=3] (A2') .. (B2') .. (C2');
+                \draw[-,hobby,tension=3] (A4') .. (B4') .. (C4');
+                
+                % Fill for bottom rectangle section
+                \fill[black!33] 
+                (0,0,0) -- (\width,0,0) -- (\width,0,\depth) -- (0,0,\depth) -- cycle;
+                \fill[black!33] 
+                (0,0,0) -- (0,\main,0) -- (0,\main,\depth) -- (0,0,\depth) -- cycle;
+                \fill[black!40] 
+                (\width,0,0) -- (\width,\main,0) -- (\width,\main,\depth) -- (\width,0,\depth) -- cycle;
+                
+                % Fill for top rectangle section
+                \fill[black!30] 
+                (0,2*\main+\gap,0) -- (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth) -- (0,2*\main+\gap,\depth) -- cycle;
+                \fill[black!30] 
+                (0,\main+\gap,0) -- (0,2*\main+\gap,0) -- (0,2*\main+\gap,\depth) -- (0,\main+\gap,\depth) -- cycle;
+                \fill[black!33] 
+                (\width,\main+\gap,0) -- (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth) -- (\width,\main+\gap,\depth) -- cycle;
+                
+                
+                
+                % Front face fill
+                \fill[black!36] 
+                (0,0,0) -- (\width,0,0) -- (\width,\main,0) 
+                to[hobby,tension=3] (A2) .. (B2) .. (C2) -- 
+                (\width*\s,\main+\gap-\curvy,0) 
+                to[hobby,tension=3] (C4) .. (B4) .. (A4) --
+                (\width,2*\main+\gap,0) -- (0,2*\main+\gap,0) -- 
+                (0,\main+\gap,0) to[hobby,tension=3] (A3) .. (B3) .. (C3) --
+                (\width*\z,\main+\curvy,0) to[hobby,tension=3] (C) .. (B) .. (A) --
+                cycle;
+                \draw[hobby,tension=3] (A) .. (B) .. (C);
+                \draw[hobby,tension=3] (A2) .. (B2) .. (C2);
+                \draw[hobby,tension=3] (A3) .. (B3) .. (C3);
+                \draw[hobby,tension=3] (A4) .. (B4) .. (C4);
+                \draw[dashed, opacity=0.3,hobby,tension=3] (A3') .. (B3') .. (C3');
+                \draw[dashed, opacity=0.3,hobby,tension=3] (A') .. (B') .. (C');
+                % Front face outline
+                
+                \draw[-] (0,0,0) -- (\width,0,0);
+                \draw[-] (0,0,0) -- (0,\main,0);
+                \draw[-] (\width*\z,\main+\curvy,0) -- (\width*\z,\main+\gap-\curvy,0);
+                \draw[-] (0,\main+\gap,0) -- (0,2*\main+\gap,0);
+                \draw[-] (0,2*\main+\gap,0) -- (\width,2*\main+\gap,0);
+                \draw[-] (\width,2*\main+\gap,0) -- (\width,\main+\gap,0);
+                \draw[-] (\width*\s,\main+\curvy,0) -- (\width*\s,\main+\gap-\curvy,0);    
+                \draw[-] (\width,0,0) -- (\width,\main,0);
+                
+                
+                
+                
+                
+                % Back face outline
+                
+                
+                \draw[dashed, opacity=0.3] (\width*\z,\main+\curvy,\depth) -- (\width*\z,\main+\gap-\curvy,\depth);
+                \draw[-] (\width*\s,\main+\curvy,\depth) -- (\width*\s,\main+\gap-\curvy,\depth);
+                \draw[dashed, opacity=0.3] (0,0,\depth) -- (\width,0,\depth);
+                \draw[dashed, opacity=0.3] (0,0,\depth) -- (0,\main,\depth);
+                \draw[-] (\width,0,\depth) -- (\width,\main,\depth);
+                \draw[dashed, opacity=0.3] (0,\main+\gap,\depth) -- (0,2*\main+\gap,\depth);
+                \draw[-] (0,2*\main+\gap,\depth) -- (\width,2*\main+\gap,\depth);
+                \draw[-] (\width,2*\main+\gap,\depth) -- (\width,\main+\gap,\depth);
+                
+                
+                
+                % Connect front and back faces
+                %botom
+                \draw[-] (\width,\main,0) -- (\width,\main,\depth);
+                \draw[-] (\width,0,0) -- (\width,0,\depth);
+                \draw[dashed, opacity=0.3] (0,0,0) -- (0,0,\depth);
+                \draw[-] (0,\main,0) -- (0,\main,\depth);
+                %top
+                \draw[-] (\width,\main+\gap,0) -- (\width,\main+\gap,\depth);
+                \draw[-] (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth);
+                \draw[-] (0,2*\main+\gap,0) -- (0,2*\main+\gap,\depth);
+                \draw[dashed, opacity=0.3] (0,\main+\gap,0) -- (0,\main+\gap,\depth);
+                
+                
+                
+                %curves
+                \draw[dashed, opacity=0.3] (C) -- (C2);
+                \draw[dashed, opacity=0.3] (C3) -- (C4);
+                \draw[dashed, opacity=0.3] (C') -- (C2');
+                \draw[dashed, opacity=0.3] (C3') -- (C4');
+                \draw[dashed, opacity=0.3] (C) -- (C');
+                \draw[dashed, opacity=0.3] (C2) -- (C2');
+                \draw[dashed, opacity=0.3] (C3) -- (C3');
+                \draw[dashed, opacity=0.3] (C4) -- (C4');
+                
+                
+                \fill[opacity=0.6,pattern={Lines[
+                    distance=1mm,
+                    angle=45,
+                    line width=0.4mm
+                    ]},
+                pattern color=blue
+                ] (C2) -- (C) -- (C3) -- (C4) -- cycle;
+                
+            \end{tikzpicture}\\
+            \color{blue} \textbf{\textsf{CSA 1}}
+        \end{minipage}\hspace{-1em}
+        \begin{minipage}{0.3\textwidth}
+            \centering
+            \begin{tikzpicture}[rotate around y=225, use Hobby shortcut, scale=0.25, every node/.style={scale=0.25}]
+                \large
+                \def\width{4}
+                \def\gap{10}
+                \def\main{8}
+                \def\curvy{1.9}
+                \def\depth{3}
+                
+                \def\n{3.3}
+                \def\z{1/\n}
+                \pgfmathsetmacro{\s}{1-\z}
+                
+                \coordinate (A) at (0,\main,0);
+                \coordinate (B) at (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,0);
+                \coordinate (C) at (\width*\z,\main+\curvy,0);
+                
+                \coordinate (A2) at (\width,\main,0);
+                \coordinate (B2) at (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,0);
+                \coordinate (C2) at (\width*\s,\main+\curvy,0);
+                
+                \coordinate (A3) at (0,\main+\gap,0);
+                \coordinate (B3) at (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,0);
+                \coordinate (C3) at (\width*\z,\main+\gap-\curvy,0);
+                
+                \coordinate (A4) at (\width,\main+\gap,0);
+                \coordinate (B4) at (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,0);
+                \coordinate (C4) at (\width*\s,\main+\gap-\curvy,0);
+                
+                % Back variation with \depth (subtracting \depth from the z-coordinate)
+                \coordinate (A') at (0,\main,\depth);
+                \coordinate (B') at (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth);
+                \coordinate (C') at (\width*\z,\main+\curvy,\depth);
+                
+                \coordinate (A2') at (\width,\main,\depth);
+                \coordinate (B2') at (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth);
+                \coordinate (C2') at (\width*\s,\main+\curvy,\depth);
+                
+                \coordinate (A3') at (0,\main+\gap,\depth);
+                \coordinate (B3') at (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth);
+                \coordinate (C3') at (\width*\z,\main+\gap-\curvy,\depth);
+                
+                \coordinate (A4') at (\width,\main+\gap,\depth);
+                \coordinate (B4') at (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth);
+                \coordinate (C4') at (\width*\s,\main+\gap-\curvy,\depth);
+                
+                
+                % Back face fill
+                \fill[black!40] 
+                (0,0,\depth) -- (\width,0,\depth) -- (\width,\main,\depth) 
+                to[hobby,tension=3] (\width,\main,\depth) .. (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth) .. (\width*\s,\main+\curvy,\depth) -- 
+                (\width*\s,\main+\gap-\curvy,\depth) 
+                to[hobby,tension=3] (\width*\s,\main+\gap-\curvy,\depth)  .. (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth) .. (\width,\main+\gap,\depth) --
+                (\width,2*\main+\gap,\depth) -- (0,2*\main+\gap,\depth) -- 
+                (0,\main+\gap,\depth) to[hobby,tension=3] (0,\main+\gap,\depth) .. (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth) .. (\width*\z,\main+\gap-\curvy,\depth) --
+                (\width*\z,\main+\curvy,\depth) to[hobby,tension=3] (\width*\z,\main+\curvy,\depth) .. (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth) .. (0,\main,\depth) --
+                cycle;
+                
+                % Curves fills with refined fades
+                \fill[left color=gray!80, middle color=gray!50, right color=gray!20, opacity=0.8] 
+                (A) to[hobby,tension=3] (A) .. (B) .. (C) -- (C3) to[hobby,tension=3] (C3) .. (B3) .. (A3) -- 
+                (A3') to[hobby,tension=3] (A3') .. (B3') .. (C3') --
+                (C') to[hobby,tension=3] (C') .. (B') .. (A') -- cycle;
+                
+                \fill[left color=gray!80, middle color=gray!50, right color=gray!20, opacity=0.8] 
+                (A2) to[hobby,tension=3] (A2) .. (B2) .. (C2) -- (C4) to[hobby,tension=3] (C4) .. (B4) .. (A4) -- 
+                (A4') to[hobby,tension=3] (A4') .. (B4') .. (C4') --
+                (C2') to[hobby,tension=3] (C2') .. (B2') .. (A2') -- cycle;
+                
+                
+                \draw[-,hobby,tension=3] (A2') .. (B2') .. (C2');
+                \draw[-,hobby,tension=3] (A4') .. (B4') .. (C4');
+                
+                % Fill for bottom rectangle section
+                \fill[black!33] 
+                (0,0,0) -- (\width,0,0) -- (\width,0,\depth) -- (0,0,\depth) -- cycle;
+                \fill[black!33] 
+                (0,0,0) -- (0,\main,0) -- (0,\main,\depth) -- (0,0,\depth) -- cycle;
+                \fill[black!40] 
+                (\width,0,0) -- (\width,\main,0) -- (\width,\main,\depth) -- (\width,0,\depth) -- cycle;
+                
+                % Fill for top rectangle section
+                \fill[black!30] 
+                (0,2*\main+\gap,0) -- (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth) -- (0,2*\main+\gap,\depth) -- cycle;
+                \fill[black!30] 
+                (0,\main+\gap,0) -- (0,2*\main+\gap,0) -- (0,2*\main+\gap,\depth) -- (0,\main+\gap,\depth) -- cycle;
+                \fill[black!33] 
+                (\width,\main+\gap,0) -- (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth) -- (\width,\main+\gap,\depth) -- cycle;
+                
+                
+                
+                % Front face fill
+                \fill[black!36] 
+                (0,0,0) -- (\width,0,0) -- (\width,\main,0) 
+                to[hobby,tension=3] (A2) .. (B2) .. (C2) -- 
+                (\width*\s,\main+\gap-\curvy,0) 
+                to[hobby,tension=3] (C4) .. (B4) .. (A4) --
+                (\width,2*\main+\gap,0) -- (0,2*\main+\gap,0) -- 
+                (0,\main+\gap,0) to[hobby,tension=3] (A3) .. (B3) .. (C3) --
+                (\width*\z,\main+\curvy,0) to[hobby,tension=3] (C) .. (B) .. (A) --
+                cycle;
+                \draw[hobby,tension=3] (A) .. (B) .. (C);
+                \draw[hobby,tension=3] (A2) .. (B2) .. (C2);
+                \draw[hobby,tension=3] (A3) .. (B3) .. (C3);
+                \draw[hobby,tension=3] (A4) .. (B4) .. (C4);
+                \draw[dashed, opacity=0.3,hobby,tension=3] (A3') .. (B3') .. (C3');
+                \draw[dashed, opacity=0.3,hobby,tension=3] (A') .. (B') .. (C');
+                % Front face outline
+                
+                \draw[-] (0,0,0) -- (\width,0,0);
+                \draw[-] (0,0,0) -- (0,\main,0);
+                \draw[-] (\width*\z,\main+\curvy,0) -- (\width*\z,\main+\gap-\curvy,0);
+                \draw[-] (0,\main+\gap,0) -- (0,2*\main+\gap,0);
+                \draw[-] (0,2*\main+\gap,0) -- (\width,2*\main+\gap,0);
+                \draw[-] (\width,2*\main+\gap,0) -- (\width,\main+\gap,0);
+                \draw[-] (\width*\s,\main+\curvy,0) -- (\width*\s,\main+\gap-\curvy,0);    
+                \draw[-] (\width,0,0) -- (\width,\main,0);
+                
+                
+                
+                
+                
+                % Back face outline
+                
+                
+                \draw[dashed, opacity=0.3] (\width*\z,\main+\curvy,\depth) -- (\width*\z,\main+\gap-\curvy,\depth);
+                \draw[-] (\width*\s,\main+\curvy,\depth) -- (\width*\s,\main+\gap-\curvy,\depth);
+                \draw[dashed, opacity=0.3] (0,0,\depth) -- (\width,0,\depth);
+                \draw[dashed, opacity=0.3] (0,0,\depth) -- (0,\main,\depth);
+                \draw[-] (\width,0,\depth) -- (\width,\main,\depth);
+                \draw[dashed, opacity=0.3] (0,\main+\gap,\depth) -- (0,2*\main+\gap,\depth);
+                \draw[-] (0,2*\main+\gap,\depth) -- (\width,2*\main+\gap,\depth);
+                \draw[-] (\width,2*\main+\gap,\depth) -- (\width,\main+\gap,\depth);
+                
+                
+                
+                % Connect front and back faces
+                %botom
+                \draw[-] (\width,\main,0) -- (\width,\main,\depth);
+                \draw[-] (\width,0,0) -- (\width,0,\depth);
+                \draw[dashed, opacity=0.3] (0,0,0) -- (0,0,\depth);
+                \draw[-] (0,\main,0) -- (0,\main,\depth);
+                %top
+                \draw[-] (\width,\main+\gap,0) -- (\width,\main+\gap,\depth);
+                \draw[-] (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth);
+                \draw[-] (0,2*\main+\gap,0) -- (0,2*\main+\gap,\depth);
+                \draw[dashed, opacity=0.3] (0,\main+\gap,0) -- (0,\main+\gap,\depth);
+                
+                
+                
+                %curves
+                \draw[dashed, opacity=0.3] (C) -- (C2);
+                \draw[dashed, opacity=0.3] (C3) -- (C4);
+                \draw[dashed, opacity=0.3] (C') -- (C2');
+                \draw[dashed, opacity=0.3] (C3') -- (C4');
+                \draw[dashed, opacity=0.3] (C) -- (C');
+                \draw[dashed, opacity=0.3] (C2) -- (C2');
+                \draw[dashed, opacity=0.3] (C3) -- (C3');
+                \draw[dashed, opacity=0.3] (C4) -- (C4');
+                
+                
+                \fill[opacity=0.6,pattern={Lines[
+                    distance=1mm,
+                    angle=45,
+                    line width=0.4mm
+                    ]},
+                pattern color=green!70!black
+                ] (C2) -- (C4) -- (C4') -- (C2') -- cycle;
+            \end{tikzpicture}\\    
+            \color{green!50!black} \textbf{\textsf{CSA 2}}
+        \end{minipage}\hspace{-1em}
+        \begin{minipage}{0.3\textwidth}
+            \centering
+            \begin{tikzpicture}[rotate around y=225, use Hobby shortcut, scale=0.25, every node/.style={scale=0.25}]
+                \large
+                \def\width{4}
+                \def\gap{10}
+                \def\main{8}
+                \def\curvy{1.9}
+                \def\depth{3}
+                
+                \def\n{3.3}
+                \def\z{1/\n}
+                \pgfmathsetmacro{\s}{1-\z}
+                
+                \coordinate (A) at (0,\main,0);
+                \coordinate (B) at (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,0);
+                \coordinate (C) at (\width*\z,\main+\curvy,0);
+                
+                \coordinate (A2) at (\width,\main,0);
+                \coordinate (B2) at (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,0);
+                \coordinate (C2) at (\width*\s,\main+\curvy,0);
+                
+                \coordinate (A3) at (0,\main+\gap,0);
+                \coordinate (B3) at (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,0);
+                \coordinate (C3) at (\width*\z,\main+\gap-\curvy,0);
+                
+                \coordinate (A4) at (\width,\main+\gap,0);
+                \coordinate (B4) at (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,0);
+                \coordinate (C4) at (\width*\s,\main+\gap-\curvy,0);
+                
+                % Back variation with \depth (subtracting \depth from the z-coordinate)
+                \coordinate (A') at (0,\main,\depth);
+                \coordinate (B') at (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth);
+                \coordinate (C') at (\width*\z,\main+\curvy,\depth);
+                
+                \coordinate (A2') at (\width,\main,\depth);
+                \coordinate (B2') at (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth);
+                \coordinate (C2') at (\width*\s,\main+\curvy,\depth);
+                
+                \coordinate (A3') at (0,\main+\gap,\depth);
+                \coordinate (B3') at (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth);
+                \coordinate (C3') at (\width*\z,\main+\gap-\curvy,\depth);
+                
+                \coordinate (A4') at (\width,\main+\gap,\depth);
+                \coordinate (B4') at (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth);
+                \coordinate (C4') at (\width*\s,\main+\gap-\curvy,\depth);
+                
+                
+                % Back face fill
+                \fill[black!40] 
+                (0,0,\depth) -- (\width,0,\depth) -- (\width,\main,\depth) 
+                to[hobby,tension=3] (\width,\main,\depth) .. (\width*\s+\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth) .. (\width*\s,\main+\curvy,\depth) -- 
+                (\width*\s,\main+\gap-\curvy,\depth) 
+                to[hobby,tension=3] (\width*\s,\main+\gap-\curvy,\depth)  .. (\width*\s+\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth) .. (\width,\main+\gap,\depth) --
+                (\width,2*\main+\gap,\depth) -- (0,2*\main+\gap,\depth) -- 
+                (0,\main+\gap,\depth) to[hobby,tension=3] (0,\main+\gap,\depth) .. (\width*\z-\width*\z*0.23,\main+\gap-\curvy+\curvy*0.7,\depth) .. (\width*\z,\main+\gap-\curvy,\depth) --
+                (\width*\z,\main+\curvy,\depth) to[hobby,tension=3] (\width*\z,\main+\curvy,\depth) .. (\width*\z-\width*\z*0.23,\main+\curvy-\curvy*0.7,\depth) .. (0,\main,\depth) --
+                cycle;
+                
+                % Curves fills with refined fades
+                \fill[left color=gray!80, middle color=gray!50, right color=gray!20, opacity=0.8] 
+                (A) to[hobby,tension=3] (A) .. (B) .. (C) -- (C3) to[hobby,tension=3] (C3) .. (B3) .. (A3) -- 
+                (A3') to[hobby,tension=3] (A3') .. (B3') .. (C3') --
+                (C') to[hobby,tension=3] (C') .. (B') .. (A') -- cycle;
+                
+                \fill[left color=gray!80, middle color=gray!50, right color=gray!20, opacity=0.8] 
+                (A2) to[hobby,tension=3] (A2) .. (B2) .. (C2) -- (C4) to[hobby,tension=3] (C4) .. (B4) .. (A4) -- 
+                (A4') to[hobby,tension=3] (A4') .. (B4') .. (C4') --
+                (C2') to[hobby,tension=3] (C2') .. (B2') .. (A2') -- cycle;
+                
+                
+                \draw[-,hobby,tension=3] (A2') .. (B2') .. (C2');
+                \draw[-,hobby,tension=3] (A4') .. (B4') .. (C4');
+                
+                % Fill for bottom rectangle section
+                \fill[black!33] 
+                (0,0,0) -- (\width,0,0) -- (\width,0,\depth) -- (0,0,\depth) -- cycle;
+                \fill[black!33] 
+                (0,0,0) -- (0,\main,0) -- (0,\main,\depth) -- (0,0,\depth) -- cycle;
+                \fill[black!40] 
+                (\width,0,0) -- (\width,\main,0) -- (\width,\main,\depth) -- (\width,0,\depth) -- cycle;
+                
+                % Fill for top rectangle section
+                \fill[black!30] 
+                (0,2*\main+\gap,0) -- (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth) -- (0,2*\main+\gap,\depth) -- cycle;
+                \fill[black!30] 
+                (0,\main+\gap,0) -- (0,2*\main+\gap,0) -- (0,2*\main+\gap,\depth) -- (0,\main+\gap,\depth) -- cycle;
+                \fill[black!33] 
+                (\width,\main+\gap,0) -- (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth) -- (\width,\main+\gap,\depth) -- cycle;
+                
+                
+                
+                % Front face fill
+                \fill[black!36] 
+                (0,0,0) -- (\width,0,0) -- (\width,\main,0) 
+                to[hobby,tension=3] (A2) .. (B2) .. (C2) -- 
+                (\width*\s,\main+\gap-\curvy,0) 
+                to[hobby,tension=3] (C4) .. (B4) .. (A4) --
+                (\width,2*\main+\gap,0) -- (0,2*\main+\gap,0) -- 
+                (0,\main+\gap,0) to[hobby,tension=3] (A3) .. (B3) .. (C3) --
+                (\width*\z,\main+\curvy,0) to[hobby,tension=3] (C) .. (B) .. (A) --
+                cycle;
+                \draw[hobby,tension=3] (A) .. (B) .. (C);
+                \draw[hobby,tension=3] (A2) .. (B2) .. (C2);
+                \draw[hobby,tension=3] (A3) .. (B3) .. (C3);
+                \draw[hobby,tension=3] (A4) .. (B4) .. (C4);
+                \draw[dashed, opacity=0.3,hobby,tension=3] (A3') .. (B3') .. (C3');
+                \draw[dashed, opacity=0.3,hobby,tension=3] (A') .. (B') .. (C');
+                % Front face outline
+                
+                \draw[-] (0,0,0) -- (\width,0,0);
+                \draw[-] (0,0,0) -- (0,\main,0);
+                \draw[-] (\width*\z,\main+\curvy,0) -- (\width*\z,\main+\gap-\curvy,0);
+                \draw[-] (0,\main+\gap,0) -- (0,2*\main+\gap,0);
+                \draw[-] (0,2*\main+\gap,0) -- (\width,2*\main+\gap,0);
+                \draw[-] (\width,2*\main+\gap,0) -- (\width,\main+\gap,0);
+                \draw[-] (\width*\s,\main+\curvy,0) -- (\width*\s,\main+\gap-\curvy,0);    
+                \draw[-] (\width,0,0) -- (\width,\main,0);
+                
+                
+                
+                
+                
+                % Back face outline
+                
+                
+                \draw[dashed, opacity=0.3] (\width*\z,\main+\curvy,\depth) -- (\width*\z,\main+\gap-\curvy,\depth);
+                \draw[-] (\width*\s,\main+\curvy,\depth) -- (\width*\s,\main+\gap-\curvy,\depth);
+                \draw[dashed, opacity=0.3] (0,0,\depth) -- (\width,0,\depth);
+                \draw[dashed, opacity=0.3] (0,0,\depth) -- (0,\main,\depth);
+                \draw[-] (\width,0,\depth) -- (\width,\main,\depth);
+                \draw[dashed, opacity=0.3] (0,\main+\gap,\depth) -- (0,2*\main+\gap,\depth);
+                \draw[-] (0,2*\main+\gap,\depth) -- (\width,2*\main+\gap,\depth);
+                \draw[-] (\width,2*\main+\gap,\depth) -- (\width,\main+\gap,\depth);
+                
+                
+                
+                % Connect front and back faces
+                %botom
+                \draw[-] (\width,\main,0) -- (\width,\main,\depth);
+                \draw[-] (\width,0,0) -- (\width,0,\depth);
+                \draw[dashed, opacity=0.3] (0,0,0) -- (0,0,\depth);
+                \draw[-] (0,\main,0) -- (0,\main,\depth);
+                %top
+                \draw[-] (\width,\main+\gap,0) -- (\width,\main+\gap,\depth);
+                \draw[-] (\width,2*\main+\gap,0) -- (\width,2*\main+\gap,\depth);
+                \draw[-] (0,2*\main+\gap,0) -- (0,2*\main+\gap,\depth);
+                \draw[dashed, opacity=0.3] (0,\main+\gap,0) -- (0,\main+\gap,\depth);
+                
+                
+                
+                %curves
+                \draw[dashed, opacity=0.3] (C) -- (C2);
+                \draw[dashed, opacity=0.3] (C3) -- (C4);
+                \draw[dashed, opacity=0.3] (C') -- (C2');
+                \draw[dashed, opacity=0.3] (C3') -- (C4');
+                \draw[dashed, opacity=0.3] (C) -- (C');
+                \draw[dashed, opacity=0.3] (C2) -- (C2');
+                \draw[dashed, opacity=0.3] (C3) -- (C3');
+                \draw[dashed, opacity=0.3] (C4) -- (C4');
+                
+                \pgfmathsetmacro{\halfgap}{0.5*\gap}
+                
+                \coordinate (C3m) at (\width*\z,\main+\halfgap,0);
+                \coordinate (C4m) at (\width*\s,\main+\halfgap,0);
+                \coordinate (C3'm) at (\width*\z,\main+\halfgap,\depth);
+                \coordinate (C4'm) at (\width*\s,\main+\halfgap,\depth);
+                
+                \fill[pattern={Lines[
+                    distance=1mm,
+                    angle=45,
+                    line width=0.4mm
+                    ]},
+                pattern color=red,
+                opacity=0.6] (C3m) -- (C3'm) -- (C4'm) -- (C4m) -- cycle;
+            \end{tikzpicture}\\
+            \color{red} \textbf{\textsf{CSA 3}}
+        \end{minipage}\\[1em]
+
+            \begin{tblr}{
+                    width=\textwidth,
+                    colspec={X[2.9,c]X[1.5,c]X[1.5,c]X[1.6,c]},
+                    hlines,vlines,
+                    rows={ht=1.5\baselineskip},
+                    row{1} = {ht=1\baselineskip,font=\bfseries,c,m},
+                    cells={valign=m,halign=c}
+                }
+                Property ($\bm{\text{mm}^2}$) & AR & ST & PH\\
+                {\color{blue} \textbf{\textsf{CSA 1}} \\ Width \(\times\) Length} 
+                & {\(11.98 \times 50\) \\ \(= 599\)} 
+                & {\(12 \times 50\) \\ \(= 600\)} 
+                & {\(11.97 \times 50\) \\ \(= 598.5\)} \\
+                {\color{green!50!black} \textbf{\textsf{CSA 2}} \\ Thickness \(\times\) Length} 
+                & {\(6 \times 50\) \\ \(= 300\)} 
+                & {\(6.38 \times 50\) \\ \(= 319\)} 
+                & {\(6.18 \times 50\) \\ \(= 309\)} \\
+                {\color{red} \textbf{\textsf{CSA 3}} \\ Width \(\times\) Thickness} 
+                & {\(11.98 \times 6\) \\ \(= 71.88\)} 
+                & {\(12 \times 6.38\) \\ \(= 76.56\)} 
+                & {\(11.97 \times 6.18\) \\ \(= 73.96\)} \\
+            \end{tblr}
+            \captionof{table}{Calculated Cross-Sectional Areas (CSA) for AR, ST, and PH (Dimensions from Table \ref{tab:dimensions})}
+            \label{tab:csa}
+        \end{center}
+        In a tensile test, force is applied from the top and bottom of the alloy, stretching it along its length. Stress is calculated as the force divided by the area \textbf{perpendicular} to the applied force (See Eq. \ref{eq:stress}). Thus, the appropriate cross-sectional area for stress calculation is the one that is orthogonal to this force.
+    \begin{itemize}[left=0pt,itemsep=-0.3mm]
+        \item \textbf{\textcolor{blue}{\textsf{CSA 1}}:} This CSA parameterizes the thickness dimension of the alloy and remains coplanar with the applied force vector, rendering it unsuitable for stress calculations.
+        \item \textbf{\textcolor{green!50!black}{\textsf{CSA 2}}:} This CSA parameterizes the width dimension and also remains coplanar with the applied force vector, thus it is not utilized for stress calculations.
+        \item \textbf{\textcolor{red}{\textsf{CSA 3}}:} This CSA parameterizes the longitudinal dimension of the material and maintains orthogonality to the applied force vector, making it the appropriate choice for stress calculations.
+    \end{itemize}
+    Thus, for stress calculations, we use \textbf{CSA 3}, as it is the area perpendicular to the applied force. The table below shows the calculated cross section area values for which is to be used.
+    \begin{center}
+        \begin{tblr}{
+               width=\textwidth,
+                colspec={X[3.5,c]X[1,c]X[1,c]X[1,c]},
+                hlines,vlines,
+                rows={ht=1.3\baselineskip},
+                row{1} = {ht=0.9\baselineskip,font=\bfseries,c,m},
+                cells={valign=m,halign=c}
+                }
+            Property  & AR & ST & PH\\
+        \(\textbf{Cross-Sectional Area}\ (\bm{A_0})\ (\text{mm}^2)\) & 71.88 & 76.56 & 73.97 \\
+        \end{tblr}
+        \captionof{table}{Cross-Sectional Area (CSA) to be used for stress}
+        \label{tab:csa3}
+    \end{center}
+
+    This data will be used in subsequent calculations for stress and other related analyses.
+    \newpage
+    
     \subsection{Force vs Displacement}
-        This data from the A4 from the machine (See Figure \ref{fig:tensile_results}) has been revised for clarity, removing any unnecessary details. The table and graph axis and title has been reformatted to enhance readability.
+        The data from the A4 sheet printed by the machine (see Figure \ref{fig:tensile_results}) has been revised for clarity by eliminating unnecessary details. The table, graph axes, and titles have been reformatted to improve readability.
         \renewcommand{\arraystretch}{1.4}
         \begin{table}[H]
             \centering
             \begin{tblr}{
-                    colspec={X[1,c]X[1,c]X[1,c]},
+                    colspec={X[1,c]X[2,c]X[2,c]},
                     hlines,vlines,
                     cells={valign=m,halign=c}
                 }
-                \textbf{Specimen ID} & \textbf{Maximum Load (N)} & \textbf{Extension at Break (mm)} \\
+                \textbf{Specimen ID} & \(\textbf{Maximum Load}\ \bm{(F_{max})}\ \text{(N)}\) & \(\textbf{Extension at Break}\ \bm{(\Delta L_f)}\ \text{(mm)}\) \\
                 \textcolor{red}{ST} & 8580 & 19.8 \\
                 \textcolor{green!50!black}{PH} & 23800 & 9.8 \\
                 \textcolor{blue}{AR} & 24400 & 9.7 \\
@@ -2051,7 +2031,8 @@ Poisson's ratio, which measures the lateral strain resulting from axial stress, 
         \includegraphics[width=0.8\textwidth]{figures/force_vs_elongation.png}        \caption{Machine produced data for Force vs Elongation}
         \label{fig:force_elong}
     \end{figure}
-   The data was reconstructed into CSV files using automeris.io, as the original data file was not available. The graph was subsequently plotted using Matplotlib.
+   The data was reconstructed into CSV files using automeris.io, as the original data file was not given. The graph was subsequently plotted using Matplotlib.
+   
  \subsection{Stress vs. Strain}
  
  The transition from Force vs. Elongation to Stress vs. Strain is a critical step in analyzing the mechanical properties of materials. This section explains the process and the utilization of code to perform this transformation.\\[8pt]
@@ -2081,93 +2062,569 @@ Poisson's ratio, which measures the lateral strain resulting from axial stress, 
    \newpage
 \subsection{Young's Modulus}
 
-Young's Modulus, also known as the modulus of elasticity, is a measure of the stiffness of a material. It is defined as the slope of the stress-strain curve in the linear elastic region. In this section, i describe the methodology used to calculate Young's Modulus for each specimen and present the results.
+Young's Modulus, also known as the modulus of elasticity, is a measure of the stiffness of a material. It is defined as the slope of the stress-strain curve in the linear elastic region. In this section, i describe the methodology used to calculate Young's Modulus for each specimen and present the results.\\[8pt]
 
-\subsubsection{Methodology}
+\textbf{Methodology}\\[8pt]
 
-To calculate Young's Modulus, i performed linear regression on a specified strain range within the stress-strain data. The strain range was chosen to ensure that the material behavior is linear and elastic. The following steps were taken:
+To calculate Young's Modulus, i performed linear regression\footnote{In statistics, linear regression is a model that estimates the linear relationship between a scalar response and one or more explanatory variables. A model with exactly one explanatory variable is a simple linear regression; a model with two or more explanatory variables is a multiple linear regression. (Wikipedia,2024)} on a specified strain range within the stress-strain data. The strain range was chosen to ensure that the material behavior is linear and elastic. The following steps were taken:
 
 \begin{enumerate}
     \item \textbf{Loading Data}: The stress and strain data for each specimen were loaded from previously created CSV files.
     \item \textbf{Defining Strain Range}: A specific strain range was defined for each specimen to ensure linear elastic behavior.
-    \item \textbf{Linear Regression}\footnotemark: Linear regression was performed on the data points within the specified strain range to calculate the slope, which represents Young's Modulus.
+    \item \textbf{Linear Regression}: Linear regression was performed on the data points within the specified strain range to calculate the slope, which represents Young's Modulus.
     \item \textbf{Plotting}: The stress vs. strain data and the fitted line for Young's Modulus were plotted for each specimen.
 \end{enumerate}
-\footnotetext{In statistics, linear regression is a model that estimates the linear relationship between a scalar response and one or more explanatory variables. A model with exactly one explanatory variable is a simple linear regression; a model with two or more explanatory variables is a multiple linear regression. (Wikipedia,2024)}
 \newpage
-\subsubsection{Specimen AR}
-
-For specimen AR, the strain range used for calculating Young's Modulus was from 10\% to 40\% of the total strain data. This range was chosen to ensure that the material behavior is linear and elastic.
-
-\begin{figure}[H]
+\textbf{Specimen Analysis and Results}\\[8pt]
+The strain range used for calculating Young's Modulus was chosen to ensure that the material behavior is linear and elastic:  
+\begin{itemize}
+    \item \textbf{Specimen AR \& PH}: The strain range selected for calculating Young's Modulus is from 10\% to 40\% of the total strain. This range excludes the initial region of the stress-strain curve, where a slight curvature is observed. The curvature at the start likely arises from initial imperfections in the setup, such as slack in the specimen or the grips, or minor adjustments during the early stages of loading. These effects can introduce non-linearity that does not reflect the true elastic behavior of the material.
+    \item \textbf{Specimen ST}: The strain range selected for calculating Young's Modulus is from 0\% to 10\% of the total strain. Unlike Specimens AR and PH, the stress-strain curve for Specimen ST begins with a distinct linear region but transitions to non-linear behavior at a much lower strain value. This early deviation from linearity indicates that the material’s elastic region is more limited compared to the other specimens.
+\end{itemize}
+\vspace{1em}
+\begin{minipage}[t]{0.3\textwidth}
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/stress_vs_strain_with_fit_AR.png}
-    \caption{Stress vs. Strain for Specimen AR with Young's Modulus}
+    \includegraphics[width=\textwidth]{figures/stress_vs_strain_with_fit_AR.png}
+    \captionof{figure}{\(E\) fit for {alloy AR}}
     \label{fig:stress_strain_AR}
-\end{figure}
-
-The calculated Young's Modulus for specimen AR is \textbf{5522.83 N/mm\textsuperscript{2}}.
-\newpage
-\subsubsection{Specimen PH}
-
-For specimen PH, the strain range used for calculating Young's Modulus was from 10\% to 40\% of the total strain data. This range was chosen to ensure that the material behavior is linear and elastic.
-
-\begin{figure}[H]
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.3\textwidth}
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/stress_vs_strain_with_fit_PH.png}
-    \caption{Stress vs. Strain for Specimen PH with Young's Modulus}
+    \includegraphics[width=\textwidth]{figures/stress_vs_strain_with_fit_ST.png}
+    \captionof{figure}{\(E\) fit for {alloy PH}}
     \label{fig:stress_strain_PH}
-\end{figure}
-
-The calculated Young's Modulus for specimen PH is \textbf{5154.74 N/mm\textsuperscript{2}}.
-\newpage
-\subsubsection{Specimen ST}
-
-For specimen ST, the strain range used for calculating Young's Modulus was from 0\% to 10\% of the total strain data. This range was chosen to ensure that the material behavior is linear and elastic.
-
-\begin{figure}[H]
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.3\textwidth}
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/stress_vs_strain_with_fit_ST.png}
-    \caption{Stress vs. Strain for Specimen ST with Young's Modulus}
+    \includegraphics[width=\textwidth]{figures/stress_vs_strain_with_fit_PH.png}
+    \captionof{figure}{\(E\) fit for {alloy ST}}
     \label{fig:stress_strain_ST}
-\end{figure}
-
-The calculated Young's Modulus for specimen ST is \textbf{1850.18 N/mm\textsuperscript{2}}.
-
-\newpage
-
-The calculated Young's Modulus for each specimen is presented in the table below:
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{figures/stress_vs_strain_with_fits.png}
-    \caption{Stress vs. Strain for All Specimens with Young's Modulus}
-    \label{fig:stress_strain_all}
-\end{figure}    
+\end{minipage}\\[8pt]
+The calculated Young's Modulus for all specimens is summarized below:
 \begin{table}[H]
     \centering
     \begin{tblr}{
-            colspec={X[1,c]X[1,c]X[1,c]X[1,c]},
+            width=\textwidth,
+            colspec={X[3.5,c]X[1,c]X[1,c]X[1,c]},
             hlines,vlines,
+            rows={ht=1.3\baselineskip},
+            row{1} = {ht=0.9\baselineskip,font=\bfseries,c,m},
             cells={valign=m,halign=c}
-        }\Large
-        & AR & ST & PH \\
-        Young's Modulus  (\(E\)) (N/mm\textsuperscript{2}) & 5522.83 & 1850.18 & 5154.74 \\
+        }
+        Property & \textbf{AR} & \textbf{ST} & \textbf{PH} \\
+        \(\textbf{Young's Modulus}\ (\bm{E})\ (\text{N/}\text{mm}^2)\) & 5522.83 & 1850.18 & 5154.74 \\
     \end{tblr}
-    \caption{Young's Modulus for Each Specimen}
+    \caption{{Young's Modulus for Each Specimen}}
     \label{tab:youngs_modulus}
 \end{table}
-Conclusion to be made further on    
+\vspace{1em}\noindent
+\newpage
 \subsection{Stiffness}
+The stiffness is the effective spring constant, which represents the material's resistance to deformation. We derived \( k \), the stiffness, in the Hooke's Law section as follows:
+\begin{equation}
+    k = \frac{AE}{L_0}
+\end{equation}
+Given the data collected for Young's Modulus \( E \) (See Table \ref{tab:youngs_modulus}), original length \( L_0 \) (See Table \ref{tab:dimensions}), and original cross-sectional area \( A_0 \) (See Table \ref{tab:csa3}), we summarize and combine the relevant data:\vspace{-1em}
+\begin{center}
+    \begin{tblr}{
+            width=\textwidth,
+            colspec={X[3.5,c]X[1,c]X[1,c]X[1,c]},
+            hlines,vlines,
+            rows={ht=1.3\baselineskip},
+            row{1} = {ht=0.9\baselineskip,font=\bfseries,c,m},
+            cells={valign=m,halign=c}
+        }
+        Property & AR & ST & PH \\
+        \(\textbf{Young's Modulus}\ (\bm{E})\ (\text{N/}\text{mm}^2)\) & 5522.83 & 1850.18 & 5154.74 \\
+        \(\textbf{Cross-Sectional Area}\ (\bm{A_0})\ (\text{mm}^2)\) & 71.88 & 76.56 & 73.97 \\
+        \(\textbf{Original Length}\ (\bm{L_0})\ (\text{mm})\) & 50 & 50 & 50 \\
+    \end{tblr}
+\end{center}
+We perform the calculations as follows:\\[8pt]
 
-    \newpage\vspace*{-5pt}
-    \section{Discussion}\label{discuss}
-    The similarity between the Force vs Elongation graph and the Stress vs Strain graph arises from the underlying relationship between force, elongation, stress, and strain. In the Force vs Elongation graph, force (in Newtons) is plotted against the change in length (elongation, in millimeters), showing the direct relationship between the applied load and the resulting deformation. However, in the Stress vs Strain graph, both force and elongation are scaled down by constants: force is divided by the cross-sectional area of the specimen, and elongation is divided by the original gauge length of the specimen. This scaling reduces the magnitude of the values in the Stress vs Strain graph, which is why the graph appears smaller, even though the overall shape and behavior are similar. Specifically, stress represents force per unit area, and strain represents the relative change in length, both of which are dimensionless or have smaller units compared to force and elongation. Therefore, the difference in graph scales is simply due to this division by constants, which doesn't affect the overall shape of the curve but rather scales the values down, making the Stress vs Strain graph appear "smaller" than the Force vs Elongation graph.
-    \newpage\vspace*{-5pt}
-    \section{Conclusions}
+    \begin{minipage}{1.1\textwidth}    \hspace{-1em}
+    \begin{minipage}{0.3\textwidth}\centering
+    \textbf{AR:}
+    \begin{align*}
+        k &= \frac{71.88 \, \text{mm}^2 \times 5522.83 \, \text{N/}\text{mm}^2}{50 \, \text{mm}} \\
+        &\approx 7939.6 \, \text{N/mm or kN/m}
+    \end{align*}
+\end{minipage}\hspace{0.5em}\vrule\hspace{0.5em}
+\begin{minipage}{0.3\textwidth}\centering
+    \textbf{ST:}
+    \begin{align*}
+        k &= \frac{76.56 \, \text{mm}^2 \times 1850.18 \, \text{N/}\text{mm}^2}{50 \, \text{mm}} \\
+        &\approx 2833 \, \text{N/mm or kN/m}
+    \end{align*}
+\end{minipage}\hspace{0.5em}\vrule\hspace{0.5em}
+\begin{minipage}{0.3\textwidth}\centering
+    \textbf{PH:}
+    \begin{align*}
+        k &= \frac{73.97 \, \text{mm}^2 \times 5154.74 \, \text{N/}\text{mm}^2}{50 \, \text{mm}} \\
+        &\approx 7625.9 \, \text{N/mm or kN/m}
+    \end{align*}
+\end{minipage}
+\end{minipage}\\[10pt]
+These calculations provide the stiffness for each specimen, which is a crucial parameter in understanding the material's resistance to deformation under applied loads, summarised results are in the table below:\vspace{-1em}
+\begin{center}
+    \begin{tblr}{
+            width=\textwidth,
+            colspec={X[3.5,c]X[1,c]X[1,c]X[1,c]},
+            hlines,vlines,
+            rows={ht=1.3\baselineskip},
+            row{1} = {ht=0.9\baselineskip,font=\bfseries,c,m},
+            cells={valign=m,halign=c}
+        }
+        Property & AR & ST & PH \\
+        \(\textbf{Stiffness}\ (\bm{k})\ (\text{N/mm or kN/m})\) & 7939.6 & 2833 & 7625.9 \\
+    \end{tblr}
+    \captionof{table}{Stiffness for Each Specimen}
+    \label{tab:stiffness}
+\end{center}
+\newpage
+\subsection{Yield Point}
+Given that the \(E\)-line is already plotted alongside the respective curves for Specimens AR, ST, and PH in Figures \ref{fig:stress_strain_AR}, \ref{fig:stress_strain_ST}, and \ref{fig:stress_strain_PH}, I simply made an appropriate observation-based choice for each specimen.\\[8pt]
+\begin{minipage}[t]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/stress_vs_strain_with_fit_ARand_yield.png}
+    \captionof{figure}{yield point for {alloy AR}}
+    \label{fig:stress_strain_AR_y}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/stress_vs_strain_with_fit_STand_yield.png}
+    \captionof{figure}{yield point  for {alloy PH}}
+    \label{fig:stress_strain_PH_y}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/stress_vs_strain_with_fit_PHand_yield.png}
+    \captionof{figure}{yield point for {Specimen ST}}
+    \label{fig:stress_strain_ST_y}
+\end{minipage}\\[8pt]
+The observed yield point for all specimens is summarized below:
+\begin{table}[H]
+    \centering
+    \begin{tblr}{
+            width=\textwidth,
+            colspec={X[3.5,c]X[1,c]X[1,c]X[1,c]},
+            hlines,vlines,
+            rows={ht=1.3\baselineskip},
+            row{1} = {ht=0.9\baselineskip,font=\bfseries,c,m},
+            cells={valign=m,halign=c}
+        }
+        Property & AR & ST & PH \\
+        \(\textbf{Yield Strain}\ \bm{(\varepsilon_y)}\ (\text{no units})\) & 0.068 & 0.024 & 0.063 \\
+        \(\textbf{Yield Stress}\ \bm{(\sigma_y)}\ (\text{N/}\text{mm}^2)\) & 322.2 & 44.35 & 298.54 \\
+    \end{tblr}
+    \caption{Yield point consisting of yield strength and corresponding strain for alloys}
+    \label{tab:yeildpoint}
+\end{table}
+\newpage
+\subsection{Modulus of Resilience}
+We identified in the theory section (See section \ref{mor}) that the Modulus of Resilience is:
+\[U_r = \frac{\sigma_y^2}{2E}\]
+Given the data collected for Young's Modulus \( E \) (See Table \ref{tab:youngs_modulus}), yield stress (See Table \ref{tab:yeildpoint}), we summarize and combine the relevant data:\vspace{-1em}
+\begin{center}
+    \begin{tblr}{
+            width=\textwidth,
+            colspec={X[3.5,c]X[1,c]X[1,c]X[1,c]},
+            hlines,vlines,
+            rows={ht=1.3\baselineskip},
+            row{1} = {ht=0.9\baselineskip,font=\bfseries,c,m},
+            cells={valign=m,halign=c}
+        }
+        Property & AR & ST & PH \\
+        \(\textbf{Young's Modulus}\ (\bm{E})\ (\text{N/}\text{mm}^2)\) & 5522.83 & 1850.18 & 5154.74 \\
+        \(\textbf{Yield Stress}\ (\bm{\sigma_y})\ (\text{N/}\text{mm}^2)\) & 322.2 & 44.35 & 298.54 \\
+    \end{tblr}
+\end{center}
+We perform the calculations as follows:\\[8pt]
+\begin{minipage}{0.3\textwidth}\centering
+    \textbf{AR:}
+    \begin{align*}
+        U_r &= \frac{(322.2 \, \text{N/mm}^2)^2}{2 \times 5522.83 \, \text{N/mm}^2} \\
+        &\approx 9.399 \, (\text{N/}{\text{mm}}^3\text{ or MPa})
+    \end{align*}
+\end{minipage}\hspace{0.5em}\vrule\hspace{0.5em}
+\begin{minipage}{0.3\textwidth}\centering
+    \textbf{ST:}
+    \begin{align*}
+        U_r &= \frac{(44.35 \, \text{N/mm}^2)^2}{2 \times 1850.18 \, \text{N/mm}^2} \\
+        &\approx 0.53 \, (\text{N/}{\text{mm}}^3\text{ or MPa})
+    \end{align*}
+\end{minipage}\hspace{0.5em}\vrule\hspace{0.5em}
+\begin{minipage}{0.3\textwidth}\centering
+    \textbf{PH:}
+    \begin{align*}
+        U_r &= \frac{(298.54 \, \text{N/mm}^2)^2}{2 \times 5154.74 \, \text{N/mm}^2} \\
+        &\approx 8.65 \, (\text{N/}{\text{mm}}^3\text{ or MPa})
+    \end{align*}
+\end{minipage}\\[8pt]
+These calculations provide the resilience for each specimen, which is a crucial parameter in understanding the material's ability to absorb energy elastically, with summarized results shown in the table below:\vspace{-1em}
+\begin{center}
+    \begin{tblr}{
+            width=\textwidth,
+            colspec={X[3.5,c]X[1,c]X[1,c]X[1,c]},
+            hlines,vlines,
+            rows={ht=1.3\baselineskip},
+            row{1} = {ht=0.9\baselineskip,font=\bfseries,c,m},
+            cells={valign=m,halign=c}
+        }
+        Property & AR & ST & PH \\
+        \(\textbf{Modulus of Resilience}\ \bm{(U_r)}\ (\text{MPa})\) & 9.39 & 0.53 & 8.65 \\
+    \end{tblr}
+    \captionof{table}{Calculated Modulus of Resilience for all alloys}
+    \label{tab:resilience}
+\end{center}
+\newpage
+\subsection{Ultimate Tensile Strength (UTS)}
+\begin{minipage}[t]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/stress_vs_strain_with_uts_AR.png}
+    \captionof{figure}{Yield point for AR}
+    \label{fig:stress_strain_AR_uts}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/stress_vs_strain_with_uts_ST.png}
+    \captionof{figure}{Yield point for PH}
+    \label{fig:stress_strain_PH_uts}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/stress_vs_strain_with_uts_PH.png}
+    \captionof{figure}{Yield point for ST}
+    \label{fig:stress_strain_ST_uts}
+\end{minipage}\\[8pt]
+The concluded results are as so:
+\begin{center}
+    \begin{tblr}{
+            width=\textwidth,
+            colspec={X[3.8,c]X[0.8,c]X[0.8,c]X[0.8,c]},
+            hlines,vlines,
+            rows={ht=1.3\baselineskip},
+            row{1} = {ht=0.9\baselineskip,font=\bfseries,c,m},
+            cells={valign=m,halign=c}
+        }
+        Property & AR & ST & PH \\
+        \(\textbf{Ultimate tensile strength}\ \bm{(\sigma_u)}\ (\text{N/}{\text{mm}}^2)\) & 344.82 & 110.65 & 326.17 \\
+    \end{tblr}
+    \captionof{table}{UTS for all alloys}
+    \label{tab:uts}
+\end{center}
+\subsection{Fracture Point}
+\begin{minipage}[t]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/stress_vs_strain_with_ultstrain_AR.png}
+    \captionof{figure}{fracture point for AR}
+    \label{fig:ultstrainAR}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/stress_vs_strain_with_ultstrain_ST.png}
+    \captionof{figure}{fracture point for ST}
+    \label{fig:ultstrainST}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/stress_vs_strain_with_ultstrain_PH.png}
+    \captionof{figure}{fracture point for PH}
+    \label{fig:ultstrainPH}
+\end{minipage}\\[8pt]
+The concluded results are as so:
+\begin{center}
+    \begin{tblr}{
+            width=\textwidth,
+            colspec={X[3.8,c]X[0.8,c]X[0.8,c]X[0.8,c]},
+            hlines,vlines,
+            rows={ht=1.3\baselineskip},
+            row{1} = {ht=0.9\baselineskip,font=\bfseries,c,m},
+            cells={valign=m,halign=c}
+        }
+        Property & AR & ST & PH \\
+        \(\textbf{Ultimate Strain}\ \bm{(\varepsilon_u)}\ \text{(no units)}\) & 0.19 & 0.4 & 0.2 \\
+        \(\textbf{Fracture Stress}\ \bm{(\sigma_f)}\ (\text{N/}\text{mm})^2\) & 296.68 & 90.99 & 264.77\\
+    \end{tblr}
+    \captionof{table}{Ultimate strain for all alloys}
+    \label{tab:ultstrain}
+\end{center}
 
-    \newpage\vspace*{-5pt}
-    \section{Recommendations}
 
+\newpage
+\subsection{Modulus of Toughness}
+The modulus of toughness is a measure of the energy a material can absorb before fracture. It represents the area under the stress-strain curve.\\[8pt]
+\textbf{Methodology}\\[8pt]
+Computational analysis was performed to calculate the modulus of toughness by integrating the stress-strain curve using the trapezoidal rule.\\[8pt]
+\begin{minipage}[t]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/stress_vs_strain_AR_tough.png}
+    \captionof{figure}{Modulus of Toughness for AR}
+    \label{fig:stress_strain_AR_tough}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/stress_vs_strain_ST_tough.png}
+    \captionof{figure}{Modulus of Toughness for ST}
+    \label{fig:stress_strain_ST_tough}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/stress_vs_strain_PH_tough.png}
+    \captionof{figure}{Modulus of Toughness for PH}
+    \label{fig:stress_strain_PH_tough}
+\end{minipage}\\[10pt]
+The calculated Modulus of Toughness for all specimens is summarized below:\vspace{-1em}
+\begin{center}
+    \begin{tblr}{
+            width=\textwidth,
+            colspec={X[3.5,c]X[1,c]X[1,c]X[1,c]},
+            hlines,vlines,
+            rows={ht=1.3\baselineskip},
+            row{1} = {ht=0.9\baselineskip,font=\bfseries,c,m},
+            cells={valign=m,halign=c}
+        }
+        Property & AR & ST & PH \\
+        \(\textbf{Modulus of Toughness}\ \bm{(U_t)}\ \text{(MPa)}\) & 52.02 & 37.55 & 50.09 \\
+    \end{tblr}
+    \captionof{table}{Modulus of Toughness for all specimens}
+    \label{tab:toughness_results}
+\end{center}
+\newpage
+
+    \subsection{Plastic Strain at Failure}
+    The Plastic Strain at Failure was defined in the theory section (See Section \ref{Ductility} \ref{duc}) as:
+    \[\varepsilon_f = \frac{L_f - L_0}{L_0}\]
+    The data on the final change in length (\(\Delta L_f\)) (See Table \ref{tab:specimen_data}) and original length \(L_0\) (See Table \ref{tab:dimensions}) is summarized as follows:\vspace{-1em}
+    \begin{center}
+        \begin{tblr}{
+                width=\textwidth,
+                colspec={X[3.5,c]X[1,c]X[1,c]X[1,c]},
+                hlines,vlines,
+                rows={ht=1.3\baselineskip},
+                row{1} = {ht=0.9\baselineskip,font=\bfseries,c,m},
+                cells={valign=m,halign=c}
+            }
+            Property & AR & ST & PH \\
+            \(\textbf{Original Length}\ (\bm{L_0})\ (\text{mm})\) & 50 & 50 & 50 \\
+            \(\textbf{Final Change in Length}\ (\bm{\Delta L_f})\ (\text{mm})\) & 9.7 & 19.8 & 9.8 \\
+        \end{tblr}
+    \end{center}
+   To calculate the final length \(L_f\), we use the formula:
+    \begin{equation}
+        L_f = L_0 + \Delta L_f
+    \end{equation}
+    Rearranging we have:
+    \[\Delta L_f = L_f - L_0\]
+    This is already in the form which the numerator needs in the formula for plastic strain at failure (\(\varepsilon_f\)) as shown above, so we can proceed with the calculations using \(\Delta L_f\):
+    \begin{center}
+        \begin{minipage}{0.3\textwidth}\centering
+            \textbf{AR:}
+            \[\varepsilon_f = \frac{9.7\ \text{mm}}{50\ \text{mm}} \approx 0.194\]        \end{minipage}\hspace{0.8em}\vrule\hspace{0.8em}
+        \begin{minipage}{0.3\textwidth}\centering
+            \textbf{ST:}
+                \[\varepsilon_f = \frac{19.8\ \text{mm}}{50\ \text{mm}} \approx 0.396\]
+        \end{minipage}\hspace{0.8em}\vrule\hspace{0.8em}
+        \begin{minipage}{0.3\textwidth}\centering
+            \textbf{PH:}
+            \[\varepsilon_f = \frac{9.8\ \text{mm}}{50\ \text{mm}}\approx 0.196\] 
+        \end{minipage}
+    \end{center}
+    Therefore, the plastic strain at failure for each material is:\vspace{-1em}
+        \begin{center}
+            \begin{tblr}{
+                width=\textwidth,
+                colspec={X[3.5,c]X[1,c]X[1,c]X[1,c]},
+                hlines,vlines,
+                rows={ht=1.3\baselineskip},
+                row{1} = {ht=0.9\baselineskip,font=\bfseries,c,m},
+                cells={valign=m,halign=c}
+            }
+            Property & AR & ST & PH \\
+            \(\textbf{Plastic Strain at Failure}\ (\bm{\varepsilon_f})\) & 0.194 & 0.396 & 0.196 \\
+        \end{tblr}
+        \captionof{table}{Plastic Strain at Failure for all alloys}
+        \label{tab:plasticstrain}
+    \end{center}
+    
+\subsection{Percent Elongation}
+It is calculated by converting the plastic strain at failure (\(\varepsilon_f\)) into a percentage. The formula for percent elongation (See Section \ref{duc} \ref{el}) is given by:
+\[eL = \varepsilon_f \times 100\%\]
+Using the plastic strain at failure values from Table \ref{tab:plasticstrain}, we can calculate the percent elongation for each alloy as follows:\vspace{-1em}
+\begin{center}
+    \begin{tblr}{
+            width=\textwidth,
+            colspec={X[3.5,c]X[1,c]X[1,c]X[1,c]},
+            hlines,vlines,
+            rows={ht=1.3\baselineskip},
+            row{1} = {ht=0.9\baselineskip,font=\bfseries,c,m},
+            cells={valign=m,halign=c}
+        }
+        Property & AR & ST & PH \\
+        \(\textbf{Percent Elongation}\ (\bm{eL})\ \text{(\%)}\) & 19.4\% & 39.6\% & 19.6\% \\
+    \end{tblr}
+    \captionof{table}{Percent Elongation for all alloys}
+    \label{tab:plasticstrain_elongation}
+\end{center}
+
+\subsection{Material Property Ratios}
+Now that we have outlined our properties, we can calculate the following ratios (See Section \ref{mpr}):
+\begin{itemize}[itemsep=-1mm]
+\item Strength: $\myfrac{\sigma_u}{\sigma_y}$
+\item Strain: $\myfrac{\varepsilon_u}{\varepsilon_y}$
+\item Toughness-to-Resilience: $\myfrac{U_t}{U_r}$
+\item Fracture-to-UTS Stress: $\myfrac{\sigma_f}{\sigma_u}$
+\end{itemize}
+Here i outline all the derived relevant properties needed for calculations:
+\begin{center}
+    \begin{tblr}{
+            width=\textwidth,
+            colspec={X[3.5,c]X[1,c]X[1,c]X[1,c]},
+            hlines,vlines,
+            rows={ht=1.3\baselineskip},
+            row{1} = {ht=0.9\baselineskip,font=\bfseries,c,m},
+            cells={valign=m,halign=c}
+        }
+        Property & AR & ST & PH \\
+        \(\textbf{Yield Strain}\ \bm{(\varepsilon_y)}\ (\text{no units})\) & 0.068 & 0.024 & 0.063 \\
+        \(\textbf{Yield Stress}\ \bm{(\sigma_y)}\ (\text{N/}\text{mm}^2)\) & 322.2 & 44.35 & 298.54 \\
+        \(\textbf{Modulus of Resilience}\ \bm{(U_r)}\ (\text{MPa})\) & 9.39 & 0.53 & 8.65 \\
+        \(\textbf{Ultimate tensile strength}\ \bm{(\sigma_u)}\ (\text{N/}{\text{mm}}^2)\) & 344.82 & 110.65 & 326.17 \\
+        \(\textbf{Ultimate Strain}\ \bm{(\varepsilon_u)}\ \text{(no units)}\) & 0.19 & 0.4 & 0.2 \\
+        \(\textbf{Fracture Stress}\ \bm{(\sigma_f)}\ (\text{N/}\text{mm}^2)\) & 296.68 & 90.99 & 264.77\\
+        \(\textbf{Modulus of Toughness}\ \bm{(U_t)}\ \text{(MPa)}\) & 52.02 & 37.55 & 50.09 \\
+        \(\textbf{Plastic Strain at Failure}\ (\bm{\varepsilon_f})\) & 0.194 & 0.396 & 0.196 \\
+    \end{tblr}
+\end{center}
+The calculations are as follows:
+\begin{center}
+    \begin{minipage}{0.3\textwidth}\centering
+        \textbf{AR:}
+        \begin{align*}
+            \frac{\sigma_u}{\sigma_y} &= \frac{344.82\ \text{N/mm}^2}{322.2\ \text{N/mm}^2} \approx 1.07 \\[3pt]
+            \frac{\varepsilon_u}{\varepsilon_y} &= \frac{0.19}{0.068} \approx 2.79 \\[3pt]
+            \frac{U_t}{U_r} &= \frac{52.02\ \text{MPa}}{9.39\ \text{MPa}} \approx 5.54 \\[3pt]
+            \frac{\sigma_f}{\sigma_u} &= \frac{296.68\ \text{N/mm}^2}{344.82\ \text{N/mm}^2} \approx 0.86
+        \end{align*}
+    \end{minipage}\hspace{0.8em}\vrule\hspace{0.8em}
+    \begin{minipage}{0.3\textwidth}\centering
+        \textbf{ST:}
+        \begin{align*}
+            \frac{\sigma_u}{\sigma_y} &= \frac{110.65\ \text{N/mm}^2}{44.35\ \text{N/mm}^2} \approx 2.49 \\[3pt]
+            \frac{\varepsilon_u}{\varepsilon_y} &= \frac{0.4}{0.024} \approx 16.67 \\[3pt]
+            \frac{U_t}{U_r} &= \frac{37.55\ \text{MPa}}{0.53\ \text{MPa}} \approx 70.85 \\[3pt]
+            \frac{\sigma_f}{\sigma_u} &= \frac{90.99\ \text{N/mm}^2}{110.65\ \text{N/mm}^2} \approx 0.82
+        \end{align*}
+    \end{minipage}\hspace{0.8em}\vrule\hspace{0.8em}
+    \begin{minipage}{0.3\textwidth}\centering
+        \textbf{PH:}
+        \begin{align*}
+            \frac{\sigma_u}{\sigma_y} &= \frac{326.17\ \text{N/mm}^2}{298.54\ \text{N/mm}^2} \approx 1.09 \\[3pt]
+            \frac{\varepsilon_u}{\varepsilon_y} &= \frac{0.2}{0.063} \approx 3.17 \\[3pt]
+            \frac{U_t}{U_r} &= \frac{50.09\ \text{MPa}}{8.65\ \text{MPa}} \approx 5.79 \\[3pt]
+            \frac{\sigma_f}{\sigma_u} &= \frac{264.77\ \text{N/mm}^2}{326.17\ \text{N/mm}^2} \approx 0.81
+        \end{align*}
+    \end{minipage}
+\end{center}    
+\begin{center}
+    \begin{tblr}{
+            width=\textwidth,
+            colspec={X[3.5,c]X[1,c]X[1,c]X[1,c]},
+            hlines,vlines,
+            rows={ht=1.3\baselineskip},
+            row{1} = {ht=0.9\baselineskip,font=\bfseries,c,m},
+            cells={valign=m,halign=c}
+        }
+        Property & AR & ST & PH \\
+        \(\textbf{Strength Ratio}\ \bm{\left(\frac{\sigma_u}{\sigma_y}\right)}\) & 1.07 & 2.49 & 1.09 \\
+        \(\textbf{Strain Ratio}\ \bm{\left(\frac{\varepsilon_u}{\varepsilon_y}\right)}\) & 2.79 & 16.67 & 3.17 \\
+        \(\textbf{Toughness-to-Resilience Ratio}\ \bm{\left(\frac{U_t}{U_r}\right)}\) & 5.54 & 70.85 & 5.79 \\
+        \(\textbf{Fracture-to-UTS Stress Ratio}\ \bm{\left(\frac{\sigma_f}{\sigma_u}\right)}\) & 0.86 & 0.82 & 0.81 \\
+    \end{tblr}
+    \captionof{table}{Material property ratios for all alloys}
+    \label{ratios}
+\end{center}
+
+\subsection{Summary of Derived Results}
+\vspace{-1.5em}
+\begin{table}[H]
+    \centering
+    \[
+\begin{tblr}{
+        width=\textwidth,
+        colspec={X[3.5,c]X[1,c]X[1,c]X[1,c]},
+        hlines,vlines,
+        rows={ht=1.3\baselineskip},
+        row{1} = {ht=0.9\baselineskip,font=\bfseries,c,m},
+        cells={valign=m,halign=c}
+    }
+    \text{Property} & \text{AR} & \text{ST} & \text{PH} \\
+    \textbf{Average Hardness (HV5)} & 121 & 36.4^{\textcolor{red}{-69.92\%}} & 128.5^{\textcolor{darkgreen}{+6.20\%}}_{\textcolor{darkgreen}{+253.02\%}}\\
+    \textbf{Cross-Sectional Area}\ (A_0)\ (\text{mm}^2) & 71.88 & 76.56^{\textcolor{darkgreen}{+6.51\%}} & 73.97^{\textcolor{darkgreen}{+2.91\%}}_{\textcolor{red}{-3.38\%}} \\
+    \textbf{Original Length}\ (L_0)\ (\text{mm}) & 50 & 50^{+0\%} & 50^{+0\%}_{+0\%} \\
+    \textbf{Young's Modulus}\ (E)\ (\text{N/mm}^2) & 5522.83 & 1850.18^{\textcolor{red}{-66.50\%}} & 5154.74^{\textcolor{red}{-6.66\%}}_{\textcolor{darkgreen}{+178.60\%}} \\
+    \textbf{Stiffness}\ (k)\ (\text{N/mm or kN/m}) & 7939.6 & 2833^{\textcolor{red}{-64.31\%}} & 7625.9^{\textcolor{red}{-3.95\%}}_{\textcolor{darkgreen}{+169.14\%}} \\
+    \textbf{Yield Strain}\ (\varepsilon_y)\ (\text{no units}) & 0.068 & 0.024^{\textcolor{red}{-64.71\%}} & 0.063^{\textcolor{red}{-7.35\%}}_{\textcolor{darkgreen}{+162.50\%}} \\
+    \textbf{Yield Stress}\ (\sigma_y)\ (\text{N/mm}^2) & 322.2 & 44.35^{\textcolor{red}{-86.24\%}} & 298.54^{\textcolor{red}{-7.34\%}}_{\textcolor{darkgreen}{+573.16\%}} \\
+    \textbf{Modulus of Resilience}\ (U_r)\ (\text{MPa}) & 9.39 & 0.53^{\textcolor{red}{-94.35\%}} & 8.65^{\textcolor{red}{-7.88\%}}_{\textcolor{darkgreen}{+1532.08\%}} \\
+    \textbf{Ultimate Tensile Strength}\ (\sigma_u)\ (\text{N/mm}^2) & 344.82 & 110.65^{\textcolor{red}{-67.92\%}} & 326.17^{\textcolor{red}{-5.41\%}}_{\textcolor{darkgreen}{+194.71\%}} \\
+    \textbf{Ultimate Strain}\ (\varepsilon_u)\ (\text{no units}) & 0.19 & 0.4^{\textcolor{darkgreen}{+110.53\%}} & 0.2^{\textcolor{darkgreen}{+5.26\%}}_{\textcolor{red}{-50.00\%}} \\
+    \textbf{Fracture Stress}\ (\sigma_f)\ (\text{N/mm}^2) & 296.68 & 90.99^{\textcolor{red}{-69.33\%}} & 264.77^{\textcolor{red}{-10.75\%}}_{\textcolor{darkgreen}{+191.00\%}} \\
+    \textbf{Modulus of Toughness}\ (U_t)\ (\text{MPa}) & 52.02 & 37.55^{\textcolor{red}{-27.82\%}} & 50.09^{\textcolor{red}{-3.71\%}}_{\textcolor{darkgreen}{+33.40\%}} \\
+    \textbf{Plastic Strain at Failure}\ (\varepsilon_f) & 0.194 & 0.396^{\textcolor{darkgreen}{+103.61\%}} & 0.196^{\textcolor{darkgreen}{+1.03\%}}_{\textcolor{red}{-50.51\%}} \\
+    \textbf{Percent Elongation}\ (eL)\ (\%) & 19.4 & 39.6^{\textcolor{darkgreen}{+104.12\%}} & 19.6^{\textcolor{darkgreen}{+1.03\%}}_{\textcolor{red}{-50.51\%}} \\
+    \textbf{Strength Ratio}\ \left(\frac{\sigma_u}{\sigma_y}\right) & 1.07 & 2.49^{\textcolor{darkgreen}{+132.71\%}} & 1.09^{\textcolor{darkgreen}{+1.87\%}}_{\textcolor{red}{-56.22\%}} \\
+    \textbf{Strain Ratio}\ \left(\frac{\varepsilon_u}{\varepsilon_y}\right) & 2.79 & 16.67^{\textcolor{darkgreen}{+497.85\%}} & 3.17^{\textcolor{darkgreen}{+13.62\%}}_{\textcolor{red}{-80.99\%}} \\
+    \textbf{Toughness-to-Resilience Ratio}\ \left(\frac{U_t}{U_r}\right) & 5.54 & 70.85^{\textcolor{darkgreen}{+1179.24\%}} & 5.79^{\textcolor{darkgreen}{+4.51\%}}_{\textcolor{red}{-91.83\%}} \\
+    \textbf{Fracture-to-UTS Stress Ratio}\ \left(\frac{\sigma_f}{\sigma_u}\right) & 0.86 & 0.82^{\textcolor{red}{-4.65\%}} & 0.81^{\textcolor{red}{-5.81\%}}_{\textcolor{red}{-1.22\%}} \\
+\end{tblr}
+\]    
+\caption{Material Properties and Percentage Changes Through Sequential Heat Treatments}
+\label{final}
+\end{table}
+\[
+\begin{tblr}{
+        width=\textwidth,
+        colspec={X[2.7,c]X[1.2,c]X[1.2,c]X[1.2,c]},
+        hlines,vlines,
+        rows={ht=1.3\baselineskip},
+        row{1} = {ht=0.9\baselineskip,font=\bfseries,c,m},
+        cells={valign=m,halign=c}
+    }
+    \text{Property} & \text{AR} & \text{ST} & \text{PH} \\
+    \zeta & \text{Val} & \text{Val}^{\text{(ST to AR)}\%} & \text{Val}^{\text{(PH to AR)}\%}_{\text{(PH to ST)}\%}
+\end{tblr}
+\]\\[3pt]
+Where:
+\begin{enumerate}[itemsep=-1mm]
+    \item The percentage difference between ST and AR represents the change from the initial, untreated alloy (AR) to the alloy after the first step of heat treatment (ST).
+    \item The percentage difference between PH and ST indicates the change from the Solution Treated alloy to the Precipitation Hardened alloy.
+    \item The percentage difference between PH and AR reflects the overall change from the initial, untreated alloy (AR) to the PH-treated alloy.
+\end{enumerate}
+Therefore, the percentage difference values represent the relative change with respect to the previous treatment stage and the base material in the heat treatment process.
+  
+    \newpage\restoregeometry\vspace*{-30pt}
+    \section{Conclusions}\label{discuss}
+    Here i understand by conclusions we mean to make a assessment on these results like in the methodolgy secton i mentioned that we used ils ie drawing multiple insights, data, to make and an assessment. but the question is what even is the goal of the heat treatment how do we know that if something is lower than another it means good and bad, you need to understand some things being lower or vice versa does not always means it is good becaise high vice versa this is the basis of what type of purpose a material wants. do i make an assumption on the gaol merely on the principle of what people aim for in doing an n amouunt of degress at an n amount of time. or do i deduce it based of resukts, in the end theese are guessess we really in the end dont really know what is wanted in the end.    
+    but hey dont get me wrong the fact that one is lower than another can be scientificaly explained no doubt. that much is still in stone but understand this is another thing, we are to do two things.
+    explain a scientifc justtificatonn as to why this is higher or lower adnd than its principle of use in that it is a step into what we want out material to act. these are two different things. dont get me wrong nothring is hindering me from doing numbber one but number two is not easy i dont see and outlined clear distincted goal as to what is wanted to be acheived but the alloys heat treatment, but honselty this might just be another obeservational insight that needs to be observed, this doesnt have to be set in stone proir but rarther it can be deduced based of the results, this is what i assume is what i need to do, it would help in that i get to compare what is deduced to what is specified but that is not an option, i want to say such things on the results is overlooked we are merely given vague instructions, like  "Present an engineering analysis in a structured and coherent way." that is not all that enticing for someone who is writing.
+    
+    
+    \newpage\vspace*{-30pt}
+    \section{Discussions and Recommendations}
+    while i want to jump straight into the final results we need to talk about the questions that may have arisen on the way to receive these final results
+    
+    
     \newpage\vspace*{-5pt}
     \section{References}
     \begin{enumerate}
