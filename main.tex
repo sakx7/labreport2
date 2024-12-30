@@ -93,7 +93,7 @@
 \newcommand{\crossitem}{\raisebox{-0.25\height}{\includegraphics[width=0.4cm]{cross.png}}}
 
 
-\usepackage[margin=1in, left=0.8in, right=0.8in, includeheadfoot]{geometry}
+\usepackage[margin=1in, left=0.8in, right=0.8in, includeheadfoot,letterpaper]{geometry}
 \usepackage{fancyhdr}
 \usepackage{graphicx}
 \usepackage{tabularray}
@@ -124,6 +124,14 @@
 \setlength{\headheight}{30pt}
 \setlength{\footskip}{20pt}
 
+\fancypagestyle{plain}{
+    \fancyhf{} % Clear all header and footer fields for plain style
+    \fancyhead[L]{\includegraphics[height=1.2cm]{images/Kingston_University_London_logo_200-tablet.png}} % Left header
+    \fancyhead[R]{EG4019 - ME - Engineering Mechanics and Materials} % Right header
+    \fancyfoot[C]{Department of Mechanical Engineering} % Center footer
+    \fancyfoot[R]{\thepage} % Right footer (page number)
+}
+
 
 \usepackage[export]{adjustbox}
 \usepackage{tocloft}
@@ -134,9 +142,17 @@
 \setlength{\cftbeforesecskip}{0.5em}
 
 
-\usepackage{xurl}
+\usepackage{xcolor}      % For color options
+\usepackage{hyperref}    % For hyperlinks
+\usepackage{xurl}        % For better URL handling
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!50!black,
+    urlcolor=blue,       % Color for URLs
+}
 
-\renewcommand{\theequation}{\text{Eq.}~\arabic{equation}}
+
+
 %Refer to the equation as \eqref{equation}.
 \usepackage{caption}  % This package allows captioning outside of a float
 \usepackage[export]{adjustbox}
@@ -230,20 +246,21 @@
     
     \normalsize
     \newpage
-    \noindent\vspace{-3em}
+    \noindent\vspace{1em}
     \begin{center}
         \LARGE \textbf{Table of Contents}\\[-0.5em]
     \end{center}
-    \tableofcontents
-    \thispagestyle{fancy}
+    {
+        \hypersetup{linkcolor=black}  % Change TOC link color to red
+        \tableofcontents
+    }    
 
 
     \large\newpage\vspace*{-20pt}
 
     \section{Abstract}
     \vspace*{1em}
-    This study investigated the effects of two thermal treatments on the mechanical properties of HE30/BS1476 aluminium alloy, initially characterized by a hardness of 120 HV5, an elastic modulus of 6 GPa, and an ultimate tensile strength of 500 MPa. The alloy underwent two heat treatments: first, heating for 90 minutes at 520\textdegree C, followed by an additional 40 minutes at 184\textdegree C in open air. Three distinct alloy variations were produced as a result of these treatments. The aim of the research was to quantify changes in hardness, modulus of elasticity, yield strength, ultimate tensile strength (UTS), and percentage elongation. Hardness was measured using a Zwick Roell ZHU hardness testing machine with a 5 kg load (HV5) (See Appendix A), and properties such as stress and strain were derived from data obtained using a Zwick Roell 2050 tensile testing machine.
-%   {Needs small info on results and reflection/conclusion (to be added at a later date)}
+    This study examined the effects of two thermal treatments on the mechanical properties of HE30/BS1476 aluminium alloy, initially characterized by a hardness of 121 HV5, an elastic modulus of 5522.83 N/\(\text{mm}^2\), and an ultimate tensile strength (UTS) of 344.82 N/\(\text{mm}^2\). The aim of the research was to quantify changes in mechanical properties such as hardness, modulus of toughness and resilience, yield strength, ultimate tensile strength (UTS), percentage elongation e.t.c. Hardness was measured using a Zwick Roell ZHU hardness testing machine with a 5 kg load (HV5), and properties such as stress and strain were derived from data obtained using a Zwick Roell 2050 tensile testing machine. The alloy underwent Solution Treatment (ST) at 520\textdegree C for 90 minutes, followed by Precipitation Hardening (PH) at 184\textdegree C for 40 minutes. Results showed that ST significantly softened the material, reducing strength (yield stress by 86\% and UTS by 68\%) while enhancing ductility (ultimate strain increased by 110\% and elongation by 104\%). PH partially restored strength and toughness mechanical properties, with hardness, yield stress, and UTS recovering close to their as-received (AR) values. However, some ductility improvements were retained from ST, leading to a well-balanced material with improved strength, toughness, and ductility, ideal for structural applications.
    
     
     \newpage\vspace*{-20pt}
@@ -257,15 +274,14 @@ This research investigates the response of HE30 aluminium alloy to thermal treat
 
 \newpage\vspace*{-20pt}
 \section{Method}
-This laboratory research primarily focused on evaluating the mechanical properties of our alloy samples, including key metrics such as yield strength, ultimate tensile strength (UTS), modulus of elasticity, hardness, and percentage elongation. These properties are essential for understanding the material's behavior under stress and assessing its suitability for various engineering applications.\\[8pt]
-The methodologies employed in this study were designed to optimize the data obtained from individual experiments on the alloys. By utilizing advanced data analysis techniques such as \textbf{Response Surface Methodology (RSM) and Fraction Factorial Design (FFD)} (See Appendix B), we uncovered correlations and dependencies that might otherwise remain hidden. For instance, tensile testing, beyond yielding basic parameters like UTS and modulus of elasticity, provided insights into failure mechanisms and material behavior under specific conditions. This approach reduces the need for extensive experimental operations while deepening our understanding of the alloys' properties and enabling predictive modeling. By focusing on a minimal set of tests that deliver insights into multiple material properties, the methodology ensures each procedure is maximally informative, minimizing resource usage and reducing the likelihood of error.\\[8pt]
+This laboratory research primarily aimed to evaluate the mechanical properties of our alloy samples, focusing on key metrics such as yield strength, ultimate tensile strength (UTS), modulus of elasticity, hardness, and percentage elongation. Understanding these properties is crucial for assessing how the material behaves under stress and determining its suitability for various engineering applications.\\[8pt]
+The methodologies used in this study were crafted to optimize the data gathered from individual experiments on the alloys. By employing advanced data analysis techniques like \textbf{Response Surface Methodology (RSM) and Fraction Factorial Design (FFD)} (See Appendix A), we were able to uncover correlations and dependencies that might otherwise go unnoticed. For example, tensile testing not only provided basic parameters like UTS and modulus of elasticity but also offered insights into failure mechanisms and material behavior under specific conditions. This approach minimizes the need for extensive experimental operations while enhancing our understanding of the alloys' properties and facilitating predictive modeling. By concentrating on a limited set of tests that yield insights into multiple material properties, the methodology ensures that each procedure is as informative as possible, reducing resource usage and the potential for error.\\[8pt]
 Building on this optimized experimental design, the research approach utilized in this study incorporates an \textbf{Integrated Testing Strategy (ITS)}. ITS combines collected data to provide a comprehensive and precise assessment of the alloy's mechanical properties. It reduces redundancy and streamlines the evaluation process by avoiding reliance on a single test or series of tests. As an example of broader interdisciplinary efforts, the ITS developed in this study was designed to reduce operational costs, minimize resource consumption, and shorten the time required to carry out processes (Rovida et al., 2015; Alan Turing Institute, 2024)\\[8pt]
 Our approach was characterized by the following key procedures:
 \begin{enumerate}[itemsep=-0.5mm]
     \item Dimensional Analysis
     \item Hardness Testing
     \item Tensile Testing 
-    \item Data Analysis
 \end{enumerate}
 \footnote{Note that \textbf{Sample Preparation} is separate from the testing process; therefore, it is not considered a part of the list of procedures in the experiment 'we' conducted.} By designing the experiment with this set of procedures, each offering multiple insights through its respective process, we were able to perform a comprehensive evaluation of the alloy's mechanical properties. This approach minimized time, resource consumption and potential errors, ensuring the accuracy and reliability of the results while providing a robust dataset for detailed analysis and interpretation of the alloy's performance characteristics.
 
@@ -357,7 +373,7 @@ Aluminium alloy 6082 and HE30 are corresponding designations, though not precise
 \begin{minipage}{0.53\textwidth}
     The composition of 6082 conforms to the standard specifications for this aluminium alloy at the BS EN 573-3:2009, as detailed in Table \ref{tab:composition_6082}. These values are consistent with industry standards for 6082, providing a foundation for further analysis.\\[8pt]
     Once again, I stress that there may be minor differences in the composition of HE30, especially in accordance with the BS 1476 specifications.\\[8pt] 
-    The values listed here are provided for reference, but the exact composition of the specifci HE30 alloy we used should be verified for accurate work in our lab, as it may not align with typical web standards.
+    The values listed here are provided for reference, but the exact composition of the specific HE30 alloy we used should be verified for accurate work in our lab, as it may not align with typical web standards.
     \vspace{1em}\hrule\vspace{1em}
     Although I do have actual information regarding the "Aluminium alloy to the HE30 BS1476 specification" from Dr. Santiago shown in Table \ref{tab:composition_he30}, it is important to note that this source lacks proper documentation, and its credibility remains uncertain.\\[8pt]
     The BS1476 has been withdrawn and has not been explicitly updated or replaced, as I stated. It is still largely unreferenced and not widely recognised in the contemporary literature. So this data provided contradicts to much of what is being currently pertaining to the standard.\\[8pt]
@@ -370,9 +386,7 @@ Aluminium alloy 6082 and HE30 are corresponding designations, though not precise
 Each sample was treated under different conditions to evaluate the effect of heat treatment on its mechanical properties. The samples were provided in the typical bone-shaped form for tensile testing. The heat treatment conditions are as follows:
 \begin{itemize}[itemsep=-1mm]
     \item \textbf{AR (As Received)}: The sample was used without any heat treatment, in its initial state as supplied.
-    
     \item \textbf{ST (Solution Treatment)}: The sample was heated at 520\textdegree C for 90 minutes to dissolve precipitates, improving ductility. The exact quenching method is unspecified.
-    
     \item \textbf{PH (Precipitation Hardening)}: The sample was first heated at 520\textdegree C for 90 minutes, followed by aging at 184\textdegree C for 40 minutes to enhance strength and hardness.
 \end{itemize}
 These treatments were applied to assess how they influence the alloy's mechanical properties.
@@ -406,7 +420,7 @@ These treatments were applied to assess how they influence the alloy's mechanica
             row{1} = {ht=2\baselineskip,font=\bfseries,c,m},
         }
         \textbf{Equipment} & \textbf{Image} & \textbf{Reasoning} \\ 
-        Digital Caliper & \includegraphics[width=\imas,valign=c]{images/digital_vernier_caliper.jpg} & Enables precise and accurate measurement of small dimensions, such as the width, thickness, and length of alloys gauge, crucial for ensuring consistency in the data calculations for accurate results. \\
+        Digital Caliper & \includegraphics[width=\imas,valign=c]{images/digital_vernier_caliper.jpg} & Enables precise and accurate measurement of small dimensions, such as the width, thickness, and length of the alloys gauge, crucial for ensuring consistency in the data calculations for accurate results. \\
         Vickers Hardness Testing Machine & \includegraphics[width=2.1cm,height=2.4cm,valign=c]{images/hardness.png} & Used to measure the hardness of the alloys by applying a standardized force to create an indentation, which is then used to assess and determine the material's resistance to deformation. \\
         Zwick Roell 2050 Tensile Testing Machine & \includegraphics[width=\imas,valign=c]{images/tensilemachine.png} & Evaluates the tensile strength and mechanical properties of the alloys under uniaxial tension, providing data essential for material performance analysis and comparisons. \\
         \textbf{Personal Protective Equipment (PPE):} Safety glasses, closed-toe shoes, lab coat & \includegraphics[width=\imas,valign=c]{images/ppe.jpg} & Protects against potential hazards in tensile testing, such as flying debris from specimen fracture, pinch points in the testing machine, and general laboratory risks further shown in Table \ref{tab:risk-assessment}.\\
@@ -716,7 +730,7 @@ Here Table \ref{tab:hv5} shows the individual Vickers hardness (HV5) values for 
 \end{minipage}\hfill
 \begin{minipage}{0.555\textwidth}
 \subsection{Tensile Test}
-This phase of the experiment focused tensile testing to assess the alloy's mechanical characteristics, particularly its tensile strength and elongation. The tensile tester used in this lab was a {Zwick machine}, with a maximum load capacity of 50 kN and an adjustable pulling rate (See Figure \ref{fig:tensile_machine}).\\[8pt]
+This phase of the experiment focused tensile testing to assess the alloy's mechanical characteristics. The tensile tester used in this lab was a {Zwick machine}, with a maximum load capacity of 50 kN and an adjustable pulling rate (See Figure \ref{fig:tensile_machine}).\\[8pt]
 An axial load was applied to the standardised dog-bone-shaped alloy as part of the destructive test procedure. The alloy, which had a precisely sized gauge length, was held firmly at both ends and extended at a regulated pace until it broke.\\[8pt]
 For analysis, a real-time plot of force (N) versus change in length (mm) was generated during the experiment.
 \end{minipage}\\[8pt]
@@ -729,14 +743,14 @@ To gain further insights, we must relate the generated data to the initial measu
     \captionof{figure}{The shape of a ductile specimen changes during tensile testing (ADMET, 2017)}
     \label{fig:alloys_next_graph}
 \end{figure}
-This stress-strain graph, though not produced during our lab, illustrates key regions corresponding to visual changes in the alloy. While our real-time force vs. change in length graph isn't a true stress-strain curve, it represents similar principles due to proportional relationships. Thus, observed deformations can be linked to these stages. (For Further explanations see Section \ref{discuss}).\\[8pt]
+This stress-strain graph, though not produced during our lab, illustrates key regions corresponding to visual changes in the alloy. While our real-time force vs. change in length graph isn't a true stress-strain curve, it represents similar principles due to proportional relationships. Thus, observed deformations can be linked to these stages. (For Further explanations see Section \ref{tt}).\\[8pt]
 The procedure followed during the tensile test was as follows: 
 \begin{enumerate}
     \item We ensured all safety precautions, including wearing safety glasses and maintaining a safe distance (approximately 1.5 meters) from the equipment before starting the test.
     \item Upon initiating the test by clicking the "Start" button, the upper and lower grips moved in opposite directions according to the set pulling rate.
     \item The initial \textbf{elastic deformation region}, where the material experienced reversible stretching, was not noticeably perceptible in the alloys if not closely observant, due to the small change in length during this phase.\footnote{This region also corresponds to the Lüders region, where some materials undergo localized yielding before uniform plastic deformation. Whether this occurred in our alloy is uncertain, as I do not observe it in the graph produced by the machine (see Figure \ref{fig:tensile_results}). Regardless, no visible change in the material's shape or bands is seen during this phase.}
     \item Following the elastic region, the material enters the \textbf{uniform plastic deformation region}, where the material elongates uniformly across the specimen, and the elongation becomes more noticeable, with no localized necking occurring as of yet.
-    \item The first noticeable event was \textbf{necking}, which visually manifests as a localized narrowing of the material at the gauge length region, indicating the onset of plastic deformation. This region is where the material started to stretch disproportionately at a certain point.
+    \item The first noticeable event was \textbf{necking}, which appears as a localized narrowing of the material in the gauge length area, signaling the beginning of plastic deformation. This is the point where the material begins to stretch unevenly.
 \end{enumerate}
 \newpage
 \begin{enumerate}
@@ -781,18 +795,18 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
             \item \textbf{Stress \& Strain}
             \item \textbf{Young's Modulus}
             \item \textbf{Hooke's Law}
-            \item \textbf{Yield Strength}
+            \item \textbf{Yield Point}
             \item \textbf{Modulus of Resilience}
             \item \textbf{Ultimate Tensile Strength (UTS)}
-            \item \textbf{Toughness \& Modulus of Toughness}
+            \item \textbf{Modulus of Toughness}
             \item \textbf{Ductility}
-            \item \textbf{Ratios}
+            \item \textbf{Material Property Ratios}
         \end{itemize}
     \end{itemize}
     Understanding all these properties will enable us to fully characterize the mechanical performance of the material under stress, allowing us to calculate them from the data collected during the experiment and fully assess our alloy.
     \newpage
    \subsection{Hardness}\label{hardnesstypes}
-    Hardness is a material property that measures its resistance to deformation, scratching, or penetration by external forces. It is a critical factor in evaluating the durability and wear resistance of materials, often used in material science and engineering to determine suitability for specific applications.\\[8pt]
+    Hardness is a material property that measures its resistance to deformation, scratching, or penetration by external forces. It is a critical factor in evaluating the durability and wear resistance of materials, often used in material science and engineering to determine suitability for specific applications (ScienceDirect, n.d.).\\[8pt]
     The concept of hardness is multifaceted, encompassing several types:
     \begin{itemize}
         \item \textbf{Scratch Hardness}: The resistance of a material to scratching, often assessed using the Mohs scale, which ranks materials based on their ability to scratch one another.
@@ -800,7 +814,7 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
         \item \textbf{Rebound Hardness}: The ability of a material to resist impact, evaluated through methods such as the Shore scleroscope test.
     \end{itemize}
     These approaches rely on different theoretical principles. For instance, indentation hardness tests use mathematical models to relate the force applied and the resulting deformation, often involving elastic and plastic deformation mechanics. The Mohs scale, on the other hand, is more qualitative and based on empirical observations.\\[8pt]
-    Understanding hardness is essential in applications ranging from manufacturing to material selection, where wear resistance, strength, and surface durability are critical considerations.
+    Understanding hardness is essential in applications ranging from manufacturing to material selection, where wear resistance, strength, and surface durability are critical considerations.\\[1.5em]
 
     \begin{figure}[H]
         \centering
@@ -810,7 +824,7 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
             
             \centering
             \vspace{2em}\includegraphics[width=0.8\textwidth]{figures/3537580_orig-0000.jpg}
-            \caption{Diagram showing the diamond-shaped indenter with the 136° angle and diagonals \(d_1\) and \(d_2\).}
+            \caption{Diagram showing the diamond-shaped indenter with the 136° angle and diagonals \(d_1\) and \(d_2\). (ResearchGate, 2009)}
             \label{fig:vickers-diagram}
         \end{minipage}\hfill
         \begin{minipage}{0.51\textwidth}
@@ -837,7 +851,7 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
             \end{equation}
         \end{minipage}\\
     \end{figure}
-    \vspace{-1em}\noindent
+    \vspace{-1em}\newpage\noindent
     Thus the derived formula is commonly shown as
     \begin{equation}
         {\text{HV} = \frac{F}{A} \approx \, \frac{1.854 \times F}{d^2} \approx \, \frac{7.236\times F}{\left(d_1 + d_2\right)^2}}    
@@ -846,13 +860,13 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
     \begin{equation}
         \text{HV5} = \frac{49.03}{A} \approx \, \frac{90.902}{d^2} \approx \, \frac{354.781}{\left(d_1 + d_2\right)^2}
     \end{equation}
-    Values for \(d_1\) and \(d_2\) were obtained from the machine dial, and the corresponding hardness values were calculated accordingly. It is worth noting, if not already disclosed, that the resulting HV and HV5 values are expressed as dimensionless numbers. \\[1em]
+    Values for \(d_1\) and \(d_2\) were obtained from the machine dial, and the corresponding hardness values were calculated accordingly. It is worth noting, if not already disclosed, that the resulting HV and HV5 values are expressed as dimensionless numbers. Special thanks to N.A.S.R.U.L DESIGN (2024) for their valuable insights and assistance with the logical framework.\\[1em]
     \hrule\vspace{1em}
-    Going into detail about each type of hardness, along with their specific equations and characteristics, seems excessive for this context. I concentrated on Vickers hardness because it directly relates to the test we performed. Although I aim for this theory section to cover a broad theoretical background, my goal is to include only the information that is specifically relevant to this report. As Anton Chekhov famously said, \begin{formal}[Anton Chekhov]{If in the first act you have hung a pistol on the wall, then in the following one it should be fired. Otherwise, don't put it there.}\end{formal} This principle means that every detail should serve a purpose. In this report, only relevant information is included to support the main points. If you're interested, relevant equations and descriptions for \textbf{indentation types} can be found in Appendix A.
+    Going into detail about each type of hardness, along with their specific equations and characteristics, seems excessive for this context. I concentrated on Vickers hardness because it directly relates to the test we performed. My goal is to include only the information that is specifically relevant to this report.
     
     \newpage
 
-    \subsection{Tensile Testing}
+    \subsection{Tensile Testing}\label{tt}
     
     \begin{formal}[iqytechnicalcollege, 2012]
         Tensile testing is used to establish operational load limits for metals and alloys. A sample of the material is prepared so that a force can be applied along its axis. A central portion of the sample is reduced in width so that it will experience the highest stresses.\\[8pt]
@@ -865,7 +879,7 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
 
      Stress and strain are fundamental concepts in tensile testing:\\[8pt]
      \subsection{Stress}
-     \textbf{Stress} ($\sigma$) is the force divided by the cross-sectional area where that force is applied perpendicular to the material. In a tensile test, specifically the \textit{engineering stress}, the area is constant (initial area $A_0$), while the applied force ($F$) changes, Mathematically, it is expressed as:\\[8pt]
+     \textbf{Stress} ($\sigma$) is the force (\(F\)) divided by the cross-sectional area (\(A\)) where that force is applied perpendicular to the material. In a tensile test, specifically the \textit{engineering stress}, the area is constant (initial area $A_0$), while the applied force ($F$) changes. Mathematically, it is expressed as:\\[8pt]
     \begin{minipage}{0.46\textwidth}
             \begin{equation}
                 \sigma = \frac{F}{A}
@@ -890,10 +904,9 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
         \end{minipage}\\[8pt]
         The final stress should be expressed in Newtons per meter, in so unit conversions must be applied where necessary to achieve that.
         \newpage
-        
         Stress ($\sigma$) is a measure of how much internal resistance a material has against external forces that try to change its shape. It indicates how a material responds to applied loads, detailing the intensity of the internal force for each unit area.\\[8pt]
         Understanding stress is essential for analyzing how materials deform under various loading conditions and is crucial for evaluating their strength and structural integrity, especially before any yielding or plastic deformation takes place.        
-        
+
         \subsection{Strain}
         Strain ($\varepsilon$) is defined as the ratio of the change in length ($\Delta L$) to the original length ($L_0$) of the material, where these lengths refer to the gauge length used in a tensile test. The original length \(L_0\) is constant, and the change in length \(\Delta L\) varies. Unlike stress, strain is a dimensionless quantity because it indicates how much a material stretches or compresses in response to stress, without having any units. It can be mathematically expressed as:\\[8pt]
         
@@ -925,7 +938,7 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
         \footnotetext{In practice, tensile testing machines usually determine displacement by counting incremental encoder pulses instead of measuring absolute position. The overall displacement is computed by adding these incremental changes starting from the initial reference point.}
 
     \subsection{True Stress and Strain}
-    Engineers typically work with \textbf{engineering stress}, which is the force divided by the original area of the specimen before loading (See \ref{eq:stress}).\\[8pt] However, as a material is loaded, the area decreases. The \textbf{true stress}, $(\tilde{\sigma})$, considers the actual area of the specimen. Because the area decreases as a material is loaded, true stress is higher than engineering stress.\\[8pt]
+    Engineers typically work with \textbf{engineering stress}, which is the force divided by the original area of the specimen before loading (See Eq. \ref{eq:stress}).\\[8pt] However, as a material is loaded, the area decreases. The \textbf{true stress}, $(\tilde{\sigma})$, considers the actual area of the specimen. Because the area decreases as a material is loaded, true stress is higher than engineering stress.\\[8pt]
     The figure below shows an engineering stress-strain curve as compared to a true stress-strain curve. Because the engineering stress is calculated as force divided by the original area (which is constant), the engineering stress-strain curve has the same shape as the load-deflection curve. The engineering stress-strain curve drops after the ultimate strength is reached because the force that can be supported by the material drops as it begins to neck down. However, the stress value in the true stress-strain curve always increases as the strain increases. This is because the instantaneous value of area is used when calculating true stress. Even when the force supported by the material \newpage 
     drops, the reduction in the specimen area outweighs the reduction in force, and the stress continues to increase. (mechanicalc, 2024)    
     \begin{figure}[H]
@@ -935,7 +948,7 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
         \label{fig:tvn}
     \end{figure}
     It should be noted that the engineering stress and the true stress are essentially the same in the linear-elastic region of the stress-strain curve. Because engineers typically operate within this linear-elastic region (it is uncommon to design a structure that is intended to operate beyond the elastic limit), it is valid to work with engineering stress as opposed to true stress.\\[8pt]
-    \textbf{Engineering strain} is the change in length divided by the original length (See \ref{eq:stress}) Instead of just calculating a single value of $\Delta L$, consider that the change in length is divided among many small increments, $\Delta L_j$. The strain is also calculated in small increments:
+    \textbf{Engineering strain} is the change in length divided by the original length (See Eq. \ref{eq:strain}) Instead of just calculating a single value of $\Delta L$, consider that the change in length is divided among many small increments, $\Delta L_j$. The strain is also calculated in small increments:
     \begin{equation}
         \varepsilon_j = \frac{\Delta L_j}{L_j},
     \end{equation}
@@ -961,9 +974,9 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
         \item \( \sigma \): Stress Pascals (Pascals, Pa) or (Newtons per metre, \(\text{N/m}^2\))
         \item \( \varepsilon \): Strain (no units).
     \end{itemize}    
-    The formulas for stress (\( \sigma \)) (\ref{eq:stress}) and strain (\( \varepsilon \))(\ref{eq:strain}) can be used to expand the equation, and if needed, \ref{eq:deltaL} and \ref{eq:csa} can be incorporated for further elaboration. This can also be written as follows\footnote{Relevant units and variables are from the equations named, so i will not do an itemize for this}:
+    The formulas for stress (\( \sigma \)) (Eq. \ref{eq:stress}) and strain (\( \varepsilon \))(Eq. \ref{eq:strain}) can be used to expand the equation, and if needed, Eq. \ref{eq:deltaL} and Eq. \ref{eq:csa} can be incorporated for further elaboration. This can also be written as follows\footnote{Relevant units and variables are from the equations named, so i will not do an itemize for this}:
     \begin{equation}
-        E = \frac{F \times L_0}{A\times\Delta L} = \frac{F \times L_0}{\left(w\times d\right)\left(|L-L_0|\right)}
+        E = \frac{F \times L_0}{A\times\Delta L} = \frac{F \times L_0}{\left(w\times d\right)\left(L-L_0\right)}
     \end{equation}
 {\begin{minipage}{0.5\textwidth}
     \begin{figure}[H]
@@ -974,24 +987,21 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
     \end{figure}
 \end{minipage}}\hspace{1em}
 {\begin{minipage}{\dimexpr\textwidth-0.55\textwidth\relax}
-    {Young's Modulus} ($E$) is a fundamental material property that describes the relationship between stress ($\sigma$) and strain ($\varepsilon$) in the elastic region of a material's deformation.\\[8pt]
-    It represents the stiffness of a material, indicating how much strain will occur in response to a given stress.\\
+    Young's Modulus ($E$) is a key material property that defines the relationship between stress ($\sigma$) and strain ($\varepsilon$) within the elastic range of a material's deformation. It indicates the stiffness of a material, showing how much strain will result from a specific stress.
     
-    In the context of the tensile test, Young's Modulus is determined from the linear portion of the stress-strain curve,
-\end{minipage}}\\[4pt]
-    known as the elastic region, where the material deforms proportionally to the applied load, as shown above (See Figure \ref{fig:young}).\\[8pt]
-    Within this region, the material will return to its original shape once the load is removed, and the relationship between stress and strain is linear.\\[8pt]
-    Young's Modulus is important because it measures how stiff a material is, which is essential for choosing the right materials in engineering and construction.
-    \begin{itemize}
-        \item \textbf{High }\(\bm{E}\): A higher Young's Modulus indicates that the material is stiffer, allowing it to resist deformation more effectively when stress is applied.\\[3pt] 
-        This property is particularly advantageous in scenarios where minimal elastic deformation is crucial, such as in the design of structural components or precision instruments.
-        \item \textbf{Low }\(\bm{E}\): Conversely, materials with a lower Young's Modulus are more flexible and may be more appropriate for applications that require compliance or the ability to absorb energy.
-    \end{itemize}    
-
+    In a tensile test, Young's Modulus is calculated from the linear section of the stress-strain curve, 
+\end{minipage}
+known as the elastic region, where the material deforms in proportion to the applied load, as illustrated above (See Figure \ref{fig:young}).\\[8pt]  
+In this region, the material will revert to its original shape once the load is removed, and the relationship between stress and strain remains linear.\\[8pt] 
+Young's Modulus is significant because it quantifies a material's stiffness, which is crucial for selecting appropriate materials in engineering and construction.
+\begin{itemize}
+    \item \textbf{High }\(\bm{E}\): A higher Young's Modulus signifies that the material is stiffer, enabling it to resist deformation more effectively under stress. This characteristic is particularly beneficial in situations where minimal elastic deformation is essential, such as in the design of structural components or precision instruments.
+    \item \textbf{Low }\(\bm{E}\): On the other hand, materials with a lower Young's Modulus are more flexible and may be better suited for applications that require compliance or the capacity to absorb energy.
+\end{itemize}
     \newpage
 
     \subsection{Hooke's Law}
-    One might see Hooke's law and be confused since this relates to springs, but here i show how the stress-strain, Young's modulus relationship interlinks with it. Hooke's law is an empirical law which states that the force needed to extend or compress a spring by some distance scales linearly with respect to that distance (Wikipedia).\\[8pt]
+    One might see Hooke's law and be confused since this relates to springs, but here i show how the stress-strain, Young's modulus relationship interlinks with it. Hooke's law is an empirical law which states that the force needed to extend or compress a spring by some distance scales linearly with respect to that distance (Wikipedia, 2024).\\[8pt]
     In its simplest form, Hooke's Law states that:
     \begin{equation}
         F = kx
@@ -1003,7 +1013,7 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
         \item $x$ Displacement (metres, m)
     \end{itemize}
     Note displacement is from equilibrium position\\[8pt] 
-    This principle applies not only to springs but also to any elastic material. Here i prove such a thing, we begin with the stress-strain relationship, Young's Modulus (\(E\)) \ref{eq:ym} in tensile testing \footnote{Most equations presented here are meant only for derivation purposes (to prove my point). They consist of straightforward rearrangements and are not meant to be individually referenced at any particular point; hence, they are not numbered.}:    
+    This principle applies not only to springs but also to any elastic material. Here i prove such a thing, we begin with the stress-strain relationship, Young's Modulus (\(E\)) Eq. \ref{eq:ym} in tensile testing \footnote{Most equations presented here are meant only for derivation purposes (to prove my point). They consist of straightforward rearrangements and are not meant to be individually referenced at any particular point; hence, they are not numbered.}:    
     \[E = \frac{\sigma}{\varepsilon}\]
     \begin{center}
     Rearranging this equation to solve for stress (Multiply both sides by \(\varepsilon\)), we get:
@@ -1049,13 +1059,10 @@ However, it's crucial to understand the limitations and broader applications of 
     \item In so, Hooke's Law is valid only within the elastic limit of a material, where deformation is reversible. Beyond this limit, permanent deformation occurs, and the stress-strain relationship becomes non-linear.
     \item Temperature significantly affects material properties, including Young's Modulus, altering material stiffness.
 \end{itemize}
-The linear behavior up to the elastic limit is due to the proportional stretching of atomic bonds relative to the applied force. This allows for reversible deformation. Beyond the elastic limit, atomic bonds begin to permanently deform, leading to plastic deformation and deviation from linearity. \\[8pt]
+The linear behavior up to the elastic limit is due to the proportional stretching of atomic bonds relative to the applied force. This allows for reversible deformation. Beyond the elastic limit, atomic bonds begin to permanently deform, leading to plastic deformation and deviation from linearity (semanticscholar, 2017). \\[8pt]
 
-Several misconceptions surround Hooke's Law, one of which is that materials react instantly to applied loads, adhering to Hooke's Law right away. In truth, many materials display time-dependent behaviors like \textbf{creep} (gradual deformation under constant stress) or \textbf{stress relaxation} (a decrease in stress under constant strain). These behaviors indicate that the straightforward, linear relationship outlined by Hooke's Law may not always represent the initial or only response of a material to applied forces. Grasping these time-dependent behaviors is essential for accurately forecasting material performance, particularly in long-term or dynamic loading scenarios. While I acknowledge this misconception, it will not be covered in depth in this report. \\[8pt]
-As analysed Hooke's Law extends beyond simple spring systems. When subjected to dynamic loading conditions, materials can behave differently than they do in static situations. Complex shapes with uneven stress distributions often necessitate advanced methods, such as finite element analysis, to accurately forecast their responses. Furthermore, composite materials exhibit complex stress-strain relationships that differ from the straightforward nature of homogeneous materials.\\[8pt]
-A thorough understanding of Hooke's Law, its limitations, and its relationship with Young's Modulus is vital for effectively modeling and engineering material behavior across various applications.
-
-    
+Several misconceptions surround Hooke's Law, one of which is that materials react instantly to applied loads, adhering to Hooke's Law right away. In truth, many materials display time-dependent behaviors like \textbf{creep} (gradual deformation under constant stress) or \textbf{stress relaxation} (a decrease in stress under constant strain). These behaviors indicate that the straightforward, linear relationship outlined by Hooke's Law may not always represent the initial or only response of a material to applied forces. While I acknowledge this misconception, it will not be covered in depth in this report. \\[8pt]
+A thorough understanding of Hooke's Law, its limitations, and its relationship with Young's Modulus is vital for effectively modeling and engineering material behavior across various applications.    
     
     \newpage
 \subsection{Yield Point and Yield Strength}
@@ -1074,19 +1081,19 @@ Yielding can be defined in several ways:\\
  \end{minipage}\hfil
 \begin{minipage}{0.6\textwidth}
  \begin{enumerate}
-     \item \textbf{True elastic limit:} The lowest stress at which dislocations move. This definition is rarely used since dislocations move at very low stresses, and detecting such movement is very difficult.
+     \item \textbf{True elastic limit:} The lowest stress at which dislocations move. This definition is rarely used since dislocations move at very low stresses, and detecting such movement is very difficult (Wikipedia, 2024).
      \item \textbf{Proportionality Limit:} The point where stress is proportional to strain, corresponding to Hooke's law.
      \item \textbf{Elastic Limit (Yield Strength)}: The lowest stress at which permanent deformation occurs \((\sigma_y,\ \varepsilon_y)\).
      \item \textbf{Offset Yield Point (Proof Stress):} Used when no distinct yield point is observed, typically defined at 0.2\% plastic strain.
  \end{enumerate}
   \end{minipage}\\[8pt]
-\textbf{Upper and Lower Yield Points:} For materials like mild steel, an upper yield point is followed by a drop to a lower yield point. The lower yield point is used for conservative design.\\[8pt]
+\textbf{Upper and Lower Yield Points:} For materials like mild steel, an upper yield point is followed by a drop to a lower yield point. The lower yield point is used for conservative design (Wikipedia, 2024).\\[8pt]
 The \textbf{Elastic Limit (Yield Strength)} is important in determining the maximum allowable load a material can bear without permanent deformation. It is distinct from the \textit{ultimate tensile strength} (UTS), which is the maximum load a material can withstand before failure. For ductile materials, the ratio of yield strength to UTS is often used in applications like pipelines and is proportional to the strain hardening exponent shown in the ratio section (See Section \ref{}).
     
-    \newpage    
-    
-    \subsection{Resilience and Modulus of Resilience}\label{mor}
-    
+\newpage    
+
+\subsection{Resilience and Modulus of Resilience}\label{mor}
+
 The \textbf{modulus of resilience} is defined as the \textbf{maximum energy} absorbed \textbf{per unit volume} of a material due to straining up to the elastic limit. It represents the energy stored in the material when it deforms elastically, following Hooke's Law, without any permanent deformation. It is typically denoted as \( U_r \). Mathematically, the modulus of resilience is given by:
 
 \begin{equation}
@@ -1103,7 +1110,7 @@ Where proof resilience refers to the area under the stress-strain curve up to th
     \caption{resilience (mechcontent,2024)}
     \label{fig:resilience}
 \end{figure}
-\textbf{Resilience} is the \textbf{energy stored} in an object or specimen when it is strained below the elastic limit. More specifically, it is the strain energy stored in the object up to the elastic limit. It can also be described as the area under the stress-strain curve up to the elastic limit.
+\textbf{Resilience} is the \textbf{energy stored} in an object or specimen when it is strained below the elastic limit. More specifically, it is the strain energy stored in the object up to the elastic limit. It can also be described as the area under the load deflection curve up to the elastic limit (mechanicalc,2024;mechcontent,2024;testbook,2023).
 \end{minipage}\hfil
 \begin{minipage}[t]{0.46\textwidth}
 \begin{figure}[H]
@@ -1112,7 +1119,7 @@ Where proof resilience refers to the area under the stress-strain curve up to th
     \caption{proof-resilience, (mechcontent,2024)}
     \label{fig:proof-resilience}
 \end{figure}
-\textbf{Proof resilience} is the \textbf{maximum value} of resilience, or the maximum amount of strain energy absorbed by the object up to the elastic limit. This energy does not cause permanent deformation. Proof resilience is also represented by the area under the stress-strain curve up to the elastic limit.
+\textbf{Proof resilience} is the \textbf{maximum value} of resilience, or the maximum amount of strain energy absorbed by the object up to the elastic limit. This energy does not cause permanent deformation. Proof resilience is also represented by the area under the stress-strain curve up to the elastic limit (mechcontent,2024;testbook,2023).
 \end{minipage}
 
 \end{center}
@@ -1122,7 +1129,7 @@ The \textbf{modulus of resilience} ($U_r$) quantifies the strain energy stored i
     U_r = \int_0^{\varepsilon_y} \sigma \, d\varepsilon
 \end{equation}
 In this equation, $\sigma$ represents the stress at a given strain $\varepsilon$, and $d\varepsilon$ is the infinitesimal change in strain. The integral sums the infinitesimal energy contributions $\sigma d\varepsilon$ from zero to the yield strain $\varepsilon_y$, which corresponds to the yield stress $\sigma_y$.\\[8pt]
-\textbf{For materials exhibiting linear elastic behavior up to the yield point, the relationship between stress and strain is linear, and the integral can be simplified.} 
+\textbf{For materials exhibiting linear elastic behavior up to the yield point, the relationship between stress and strain is linear, and the integral can be simplified, else this is the general form.} 
 \newpage
 In this case, the area under the stress-strain curve up to the yield point (which is a triangle) gives the modulus of resilience:
 \begin{equation}
@@ -1142,10 +1149,8 @@ Where:
 \begin{itemize}[itemsep=-1mm]
     \item \( E \): {Young's modulus} (Pascals, Pa) or (Newtons per meter squared, \( \text{N/m}^2 \))
 \end{itemize}
-The formula represents the modulus of resilience, which is the maximum strain energy per unit volume that the material can store in the elastic region (up to the yield point) without permanent deformation. Volume does not explicitly appear because the modulus of resilience (\(U_r\)) is defined as energy per unit volume. Stress (\(\sigma\)) and strain (\(\varepsilon\)) are normalized measures that inherently account for material dimensions, so their product directly yields energy density without needing to include volume in the formula.\\[8pt]
-Off course for non-linear elastic materials, the area under the stress-strain curve up to the yield point must be calculated directly, as the simplified formulas may not apply.\\[1em]
-\hrule\vspace{1em}
-This approach is acceptable when the proportionality ends clearly, as the yield strength (elastic limit) is often well-defined as a triangle. However, I believe engineers either assume or are hesitant to acknowledge the non-linearity that can occur between the proportional limit (\(k\)) and the yield point (\(y\)). It’s crucial to recognize that yield strength can also include offsets if they are not clearly defined. Many definitions tend to overlook or ignore this nuance, describing resilience as “the energy up to the elastic limit” and representing it as a linear triangular integral. This representation doesn’t fully capture reality, as that region isn’t always entirely linear. I suspect that engineers often overlook this small, roughly 0.2\% offset that disrupts linearity because its effect is minimal. The focus is on consistency and practicality. Components are typically designed to operate well below either point, and the precise energy in this small non-linear region rarely influences decisions. When references mention “energy up to the elastic limit” and simplify it as a triangular integration, they are making a practical assumption that is justified by the minimal impact on real-world engineering outcomes. Again, this is all my own assumption; it does not necessarily have any concrete evidence to back it up as fact.
+The formula represents the modulus of resilience, which is the maximum strain energy per unit volume that the material can store in the elastic region (up to the yield point) without permanent deformation. Volume does not explicitly appear because the modulus of resilience (\(U_r\)) is defined strain energy density, which is the strain energy per unit volume. This is equal to the area under the stress-strain diagram:  Stress (\(\sigma\)) and strain (\(\varepsilon\)) are normalized measures that inherently account for material dimensions, so their product directly yields energy density without needing to include volume in the formula.\\[8pt]
+Off course for non-linear elastic materials, the area under the stress-strain curve up to the yield point must be calculated directly, as the simplified formulas may not apply.
 \newpage    
 
 \subsection{Ultimate Tensile Strength (UTS)}
@@ -1172,7 +1177,7 @@ In practical terms, UTS measures the maximum force per unit area a material can 
     \begin{minipage}{0.45\textwidth}
         The UTS marks the transition where the material reaches its maximum load-bearing capacity before necking begins.\\[8pt] 
         After UTS, the material experiences localized deformation and ultimately fractures.\\[8pt]
-        Ultimate Tensile Strength is commonly reported in units such as pounds per square inch (psi) or Newtons per square millimeter (MPa, Mega Pascals). These units are used because UTS values are typically large, making these units practical for communicating and comparing material performance.    
+        Ultimate Tensile Strength is commonly reported in units such as  Mega Pascals (MPa). These units are used because UTS values are typically large, making these units practical for communicating and comparing material performance.    
     \end{minipage}
 \end{center}
 Understanding the plastic behavior beyond UTS is essential for applications requiring high ductility and toughness, such as forming and shaping processes.
@@ -1181,7 +1186,8 @@ Understanding the plastic behavior beyond UTS is essential for applications requ
 \newpage
 
 \subsection{Ductility}\label{Ductility}
-Ductility is an indication of how much plastic strain a material can withstand before it breaks. A ductile material can sustain large strains even after it has begun to yield. Common measures of ductility include percent elongation and reduction in area, as discussed in this section.
+\begin{formal}[mechanicalc, 2024]
+Ductility is an indication of how much plastic strain a material can withstand before it breaks. A ductile material can sustain large strains even after it has begun to yield. Common measures of ductility include percent elongation and reduction in area , as discussed in this section.
 After a specimen breaks during a tensile test, the final length of the specimen is measured, and the \textbf{plastic strain at failure} $(\varepsilon_f)$, is calculated:
 \begin{equation}
     \varepsilon_f = \frac{L_f - L_0}{L_0}
@@ -1192,16 +1198,16 @@ After a specimen breaks during a tensile test, the final length of the specimen 
     \item $L_0$: Original length (metres, m)
     \item $L_f$: Final length (metres, m)
 \end{itemize}
-It is important to note that after the specimen breaks, the elastic strain that existed while the specimen was under load is recovered. Therefore, the measured difference between the final and initial lengths gives the plastic strain at failure. This is illustrated in the figure below:\\[8pt]
+It is important to note that after the specimen breaks, the elastic strain that existed while the specimen was under load is recovered. Therefore, the measured difference between the final and initial lengths gives the plastic strain at failure (mechanicalc, 2024). This is illustrated in the figure below:\\[8pt]
 \begin{minipage}{0.45\textwidth}\centering
     \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{images/elastic-plastic-strain-at-break-01.png}
-    \caption{Elastic and Plastic Strain at Break.}
+    \caption{Elastic and Plastic Strain at Break (mechanicalc, 2024).}
     \label{fig:strain-break}
 \end{figure}
 \end{minipage}\hfill
-\begin{minipage}{0.51\textwidth}
+\begin{minipage}{0.49\textwidth}
 In the figure, it can be seen that the plastic strain at failure, is the strain remaining in the material after the elastic strain has been recovered.\\[8pt]
 The \textbf{percent elongation} \((eL)\) is calculated from the plastic strain at failure by:
 \begin{equation}
@@ -1219,14 +1225,16 @@ The percent elongation is a commonly provided material property, so the plastic 
 The \textbf{ultimate strain} $(\varepsilon_u)$ accounts for both plastic and elastic strain at failure, representing the total strain at failure as the sum of the plastic strain and the elastic strain:
 \begin{equation}
     \varepsilon_u = \varepsilon_f + \frac{\sigma_{u}}{E}
+    \label{useless}
 \end{equation}
 \begin{itemize}[itemsep=-1mm]
     \item $\varepsilon_u$: Ultimate strain (No units)
     \item $\sigma_{u}$: Ultimate stress (Pascals, Pa) or (Newtons per metre, \(\text{N/m}^2\))
     \item $E$: Young's modulus (Pascals, Pa) or (Newtons per metre, \(\text{N/m}^2\))
 \end{itemize} 
-While the formula provides a theoretical relationship between ultimate strain, plastic strain at failure, ultimate stress, and Young's modulus, its practical utility is limited because ultimate strain is typically measured directly from experimental data rather than calculated, and material behavior is often too complex to be accurately captured by this simple linear addition.
+\end{formal}
 \newpage
+While \ref{useless} provides a theoretical relationship between ultimate strain, plastic strain at failure, ultimate stress, and Young's modulus, its practical utility is limited because ultimate strain is typically measured directly from experimental data rather than calculated\\[8pt]
 The stress at the ultimate strain is known as the \textbf{Fracture Stress} \((\sigma_f)\) represents the stress at the point where the material breaks. It is typically less than the Ultimate Tensile Strength (UTS) for ductile materials because the material continues to deform plastically after reaching UTS but before fracturing.\\[8pt]
 Another important material property that can be measured during a tensile test is the reduction in area, which is calculated by:
 \begin{equation}
@@ -1236,7 +1244,7 @@ Another important material property that can be measured during a tensile test i
     \item $A_0$ Original cross-sectional area
     \item $A_f$ Cross-sectional area after fracture
 \end{itemize}
-The actual units are only relevant in ensuring consistency throughout the calculation. This consistency guarantees that the Reduction in Area percentage is dimensionless or properly represented as a percentage.\\ It is also important to remember that percent elongation and reduction in area account for the plastic components of the axial strain and the lateral strain, respectively.\\
+Again units are only relevant in ensuring that the Reduction in Area percentage is dimensionless or properly represented as a percentage. It is also important to remember that percent elongation and reduction in area account for the plastic components of the axial strain and the lateral strain, respectively.\\
 
 
 
@@ -1244,14 +1252,15 @@ The actual units are only relevant in ensuring consistency throughout the calcul
 
 \subsection{Toughness and Modulus of Toughness}
 
-\textbf{Toughness} is a material's ability to absorb energy up to the point of fracture, combining strength and ductility. In material science, toughness is typically determined as the area under the {stress-strain curve}, which represents the energy absorbed per unit volume of the material. This normalization removes dependence on sample size and geometry, reflecting intrinsic material properties.\\[8pt]
-The \textbf{modulus of toughness} quantifies the strain energy density a material can absorb just before fracturing, calculated from the total area under the stress-strain curve up to the point of fracture. It can be approximated by dividing the stress-strain curve into triangular and rectangular sections, with the height being the average of the yield and ultimate strengths.
+\textbf{Toughness} is a material's ability to absorb energy up to the point of fracture, combining strength and ductility. In material science, toughness is typically determined as the area under the load vs deflection curve, which represents the energy absorbed by the material.\\[8pt]
+\begin{formal}[mechanicalc, 2024]
+    The \textbf{modulus of toughness} quantifies the strain energy density a material can absorb just before fracturing, calculated from the total area under the stress-strain curve up to the point of fracture. It can be approximated by dividing the stress-strain curve into triangular and rectangular sections, with the height being the average of the yield and ultimate strengths.
 \begin{center}
     \begin{minipage}{0.5\textwidth}\centering
         \begin{figure}[H]
             \centering
             \includegraphics[width=1\textwidth]{images/modulus-of-toughness-approx-01(1).jpg}
-            \caption{modulus-of-toughness-approx}
+            \caption{modulus-of-toughness-approx (mechanicalc, 2024)}
             \label{fig:mot}
         \end{figure}
     \end{minipage}\hfil
@@ -1264,18 +1273,18 @@ The \textbf{modulus of toughness} quantifies the strain energy density a materia
         \end{equation}
         Where:
         \begin{itemize}[left=0pt, itemsep=-1mm]
-            \item \( U_t \): Modulus of toughness (Pa\(\cdot\)m or psi\(\cdot\)in\(^2\))
-            \item $\sigma_y$: Tensile yield strength (Pa or psi)
-            \item $\sigma_u$: Tensile ultimate strength (Pa or psi)
+            \item \( U_t \): Modulus of toughness (Pascals, Pa)
+            \item $\sigma_y$: Tensile yield strength (Pascals, Pa)
+            \item $\sigma_u$: Tensile ultimate strength (Pascals, Pa)
             \item $\varepsilon_y$: Strain at yield (no units)
             \item $\varepsilon_u$: Ultimate strain (no units)
-            \item $E$: Elastic modulus (Pa or psi)
+            \item $E$: Elastic modulus (Pascals, Pa)
         \end{itemize}
     \end{minipage}
 \end{center}
 For a more accurate calculation, the \textbf{Ramberg-Osgood equation} can be used to approximate the stress-strain curve, followed by integration to find the area under the curve.\\[8pt]
-The plastic region (rectangular portion) of the stress-strain curve significantly contributes to toughness. Ductile materials can withstand more plastic strain than brittle ones, so they exhibit a higher modulus of toughness, even with the same yield strength. While structures are designed to keep stresses within the elastic region, ductile materials with a higher modulus of toughness are better suited for applications involving accidental overloads.\\[8pt]
-Note that the units of the modulus of toughness are the same as those of strain energy density: psi in US Customary units and Pa in SI units.
+The plastic region (rectangular portion) of the stress-strain curve significantly contributes to toughness. Ductile materials can withstand more plastic strain than brittle ones, so they exhibit a higher modulus of toughness, even with the same yield strength. While structures are designed to keep stresses within the elastic region, ductile materials with a higher modulus of toughness are better suited for applications involving accidental overloads.
+\end{formal}
 
 \newpage
 
@@ -1334,10 +1343,10 @@ Note that the units of the modulus of toughness are the same as those of strain 
     
     While the tensile test provides valuable information about a material's strength and ductility, there are certain parameters that cannot be directly derived or accurately measured in this specific test setup. These limitations include:
     \begin{itemize}[left=0pt, itemsep=-1mm]
-        \item \textbf{Reduction in Area:} The reduction in area, which measures the change in cross-sectional area at the point of fracture, cannot be directly determined in this test setup as the fracture point and necking behavior are not fully captured.
+        \item \textbf{Reduction in Area:} The reduction in area, which measures the change in cross-sectional area at the point of fracture, cannot be directly determined in this test setup as the fracture point and necking behavior are not fully captured i.e they weren't measured.
         \item \textbf{True Stress and True Strain:} The calculation of true stress and true strain requires continuous measurement of the specimen's dimensions during deformation. In this case, only engineering stress and strain are measured, which are based on the original dimensions of the specimen and do not account for changes in geometry during deformation.
     \end{itemize}
-    As a result, certain material properties that rely on these parameters are not directly available from the current tensile test data. Regardless we move\\
+    As a result, certain material properties that rely on these parameters are not directly available from the current tensile test data. Regardless we move on with the analysis.\\
     \vspace{1em}
     \hrule
     \vspace{1em}
@@ -1345,7 +1354,7 @@ Note that the units of the modulus of toughness are the same as those of strain 
     \begin{itemize}
         \item Hardness (HV5)
         \item Gauge [Width (\(w\)), Thickness (\(d\)), Length (\(L_0\))]
-        \item Corresponding set of values for Force \((F)\) that relate to a specific Change in Length \((\Delta L)\).
+        \item Corresponding set of values of Forces \((F)\) that relate to a specific Change in Length \((\Delta L)\).
     \end{itemize}
     We can derive several mechanical properties from the test data. The properties outlined in the theory section include:
     \begin{itemize}
@@ -1359,8 +1368,7 @@ Note that the units of the modulus of toughness are the same as those of strain 
         \item Plastic Strain at Failure ($\varepsilon_f$) and Percent Elongation ($eL$)  
         \item Material Property Ratios
     \end{itemize}
-    These derived properties help us fully characterize the mechanical performance of the material under stress.\\
-    \textbf{All interpretations of results are included in the Discussions and Conclusion section}
+    These derived properties help us fully characterize the mechanical performance of the material under stress. \textbf{All interpretations of results are included in the Discussion Section.}
     \newpage
     \subsection{Hardness}\label{meanhard}
     While we've gone over the important equations for the Vickers hardness test, in this prior theory section (See Section \ref{VHC}) there's no need to actually do the calculations by hand since the machine has already provided the results. I hope this much is clear by now.\\[8pt] 
@@ -1427,7 +1435,7 @@ Note that the units of the modulus of toughness are the same as those of strain 
             \label{tab:hv5mean}
         \end{table}
         
-    Honestly this is pretty much it for the hardness test we got our individual and averages there not much else we can do with this.
+    Honestly this is pretty much it for the hardness test we got our individual and averages there's not much else we can do with this.
     \newpage
     
         \subsection{Cross-Sectional Areas (CSA)}
@@ -2028,15 +2036,15 @@ Note that the units of the modulus of toughness are the same as those of strain 
         \end{table}
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.8\textwidth]{figures/force_vs_elongation.png}        \caption{Machine produced data for Force vs Elongation}
+        \includegraphics[width=0.8\textwidth]{figures/force_vs_elongation.png}        \caption{Machine produced data for Force vs Change in Length}
         \label{fig:force_elong}
     \end{figure}
    The data was reconstructed into CSV files using automeris.io, as the original data file was not given. The graph was subsequently plotted using Matplotlib.
    
  \subsection{Stress vs. Strain}
  
- The transition from Force vs. Elongation to Stress vs. Strain is a critical step in analyzing the mechanical properties of materials. This section explains the process and the utilization of code to perform this transformation.\\[8pt]
- The Force vs. Elongation graph (Figure \ref{fig:force_elong}) shows the direct relationship between the applied load and the change in length of the specimen. This raw data is essential but lacks the normalization required for comparative analysis. To gain a deeper understanding of the material's behavior, the raw data must be transformed into stress and strain. This normalization process involves the following steps:
+ The transition from Force vs Change in Length to Stress vs Strain is a critical step in analyzing the mechanical properties of materials. This section explains the process and the utilization of code to perform this transformation.\\[8pt]
+ The Force vs Change in Length graph (Figure \ref{fig:force_elong}) shows the direct relationship between the applied load and the change in length of the specimen. This raw data is essential but lacks the normalization required for comparative analysis. To gain a deeper understanding of the material's behavior, the raw data must be transformed into stress and strain. This normalization process involves the following steps:
  \begin{enumerate}
      \item \textbf{Calculating Stress}: Stress is defined as the force per unit area (See Eq. \ref{eq:stress}). This normalizes the force data, making it independent of the specimen's size.
      \item \textbf{Calculating Strain}: Strain is the change in length relative to the original length (See Eq. \ref{eq:strain}). This normalizes the elongation data, providing a dimensionless measure of deformation.
@@ -2056,9 +2064,8 @@ Note that the units of the modulus of toughness are the same as those of strain 
      \caption{Calculated produced data for Stress vs. Strain}
      \label{fig:stress_strain}
  \end{figure} 
- The transition from Force vs. Elongation to Stress vs. Strain is essential for understanding and comparing the mechanical properties of materials. By normalizing the raw data, we obtain a more universal and meaningful representation of material behavior. The utilization of code streamlines this transformation process, ensuring accuracy and efficiency in data analysis.
-    we now have our baseline.\\
-    lets move on with defining the properties.
+ The transition from Force vs. Elongation to Stress vs. Strain is essential for understanding and comparing the mechanical properties of materials. By normalizing the raw data, we obtain a more universal and meaningful representation of material behavior. The utilization of code streamlines this transformation process, ensuring accuracy and efficiency in data analysis.\\[8pt] 
+ Let's now define the attributes now that we have our baseline.
    \newpage
 \subsection{Young's Modulus}
 
@@ -2403,7 +2410,7 @@ The calculated Modulus of Toughness for all specimens is summarized below:\vspac
 \newpage
 
     \subsection{Plastic Strain at Failure}
-    The Plastic Strain at Failure was defined in the theory section (See Section \ref{Ductility} \ref{duc}) as:
+    The Plastic Strain at Failure was defined in the theory section (See Section \ref{Ductility} Eq. \ref{duc}) as:
     \[\varepsilon_f = \frac{L_f - L_0}{L_0}\]
     The data on the final change in length (\(\Delta L_f\)) (See Table \ref{tab:specimen_data}) and original length \(L_0\) (See Table \ref{tab:dimensions}) is summarized as follows:\vspace{-1em}
     \begin{center}
@@ -2458,7 +2465,7 @@ The calculated Modulus of Toughness for all specimens is summarized below:\vspac
     \end{center}
     
 \subsection{Percent Elongation}
-It is calculated by converting the plastic strain at failure (\(\varepsilon_f\)) into a percentage. The formula for percent elongation (See Section \ref{duc} \ref{el}) is given by:
+It is calculated by converting the plastic strain at failure (\(\varepsilon_f\)) into a percentage. The formula for percent elongation (See Section \ref{Ductility} Eq.\ref{duc} Eq.\ref{el}) is given by:
 \[eL = \varepsilon_f \times 100\%\]
 Using the plastic strain at failure values from Table \ref{tab:plasticstrain}, we can calculate the percent elongation for each alloy as follows:\vspace{-1em}
 \begin{center}
@@ -2571,7 +2578,6 @@ The calculations are as follows:
     \text{Property} & \text{AR} & \text{ST} & \text{PH} \\
     \textbf{Average Hardness (HV5)} & 121 & 36.4^{\textcolor{red}{-69.92\%}} & 128.5^{\textcolor{darkgreen}{+6.20\%}}_{\textcolor{darkgreen}{+253.02\%}}\\
     \textbf{Cross-Sectional Area}\ (A_0)\ (\text{mm}^2) & 71.88 & 76.56^{\textcolor{darkgreen}{+6.51\%}} & 73.97^{\textcolor{darkgreen}{+2.91\%}}_{\textcolor{red}{-3.38\%}} \\
-    \textbf{Original Length}\ (L_0)\ (\text{mm}) & 50 & 50^{+0\%} & 50^{+0\%}_{+0\%} \\
     \textbf{Young's Modulus}\ (E)\ (\text{N/mm}^2) & 5522.83 & 1850.18^{\textcolor{red}{-66.50\%}} & 5154.74^{\textcolor{red}{-6.66\%}}_{\textcolor{darkgreen}{+178.60\%}} \\
     \textbf{Stiffness}\ (k)\ (\text{N/mm or kN/m}) & 7939.6 & 2833^{\textcolor{red}{-64.31\%}} & 7625.9^{\textcolor{red}{-3.95\%}}_{\textcolor{darkgreen}{+169.14\%}} \\
     \textbf{Yield Strain}\ (\varepsilon_y)\ (\text{no units}) & 0.068 & 0.024^{\textcolor{red}{-64.71\%}} & 0.063^{\textcolor{red}{-7.35\%}}_{\textcolor{darkgreen}{+162.50\%}} \\
@@ -2605,81 +2611,137 @@ The calculations are as follows:
     \zeta & \text{Val} & \text{Val}^{\text{(ST to AR)}\%} & \text{Val}^{\text{(PH to AR)}\%}_{\text{(PH to ST)}\%}
 \end{tblr}
 \]\\[3pt]
-Where:
+if it wasn't already obvious here is the explanation:
 \begin{enumerate}[itemsep=-1mm]
-    \item The percentage difference between ST and AR represents the change from the initial, untreated alloy (AR) to the alloy after the first step of heat treatment (ST).
-    \item The percentage difference between PH and ST indicates the change from the Solution Treated alloy to the Precipitation Hardened alloy.
-    \item The percentage difference between PH and AR reflects the overall change from the initial, untreated alloy (AR) to the PH-treated alloy.
+    \item \textbf{(ST to AR)\%}: The percentage difference between ST and AR represents the change from the initial, untreated alloy (AR) to the alloy after the first step of heat treatment (ST).
+    \item \textbf{(PH to AR)\%}: The percentage difference between PH and AR reflects the overall change from the initial, untreated alloy (AR) to the PH-treated alloy.
+    \item \textbf{(PH to ST)\%}: The percentage difference between PH and ST indicates the change from the Solution Treated alloy to the Precipitation Hardened alloy.
 \end{enumerate}
 Therefore, the percentage difference values represent the relative change with respect to the previous treatment stage and the base material in the heat treatment process.
+
   
     \newpage\restoregeometry\vspace*{-30pt}
-    \section{Conclusions}\label{discuss}
-    Here i understand by conclusions we mean to make a assessment on these results like in the methodolgy secton i mentioned that we used ils ie drawing multiple insights, data, to make and an assessment. but the question is what even is the goal of the heat treatment how do we know that if something is lower than another it means good and bad, you need to understand some things being lower or vice versa does not always means it is good becaise high vice versa this is the basis of what type of purpose a material wants. do i make an assumption on the gaol merely on the principle of what people aim for in doing an n amouunt of degress at an n amount of time. or do i deduce it based of resukts, in the end theese are guessess we really in the end dont really know what is wanted in the end.    
-    but hey dont get me wrong the fact that one is lower than another can be scientificaly explained no doubt. that much is still in stone but understand this is another thing, we are to do two things.
-    explain a scientifc justtificatonn as to why this is higher or lower adnd than its principle of use in that it is a step into what we want out material to act. these are two different things. dont get me wrong nothring is hindering me from doing numbber one but number two is not easy i dont see and outlined clear distincted goal as to what is wanted to be acheived but the alloys heat treatment, but honselty this might just be another obeservational insight that needs to be observed, this doesnt have to be set in stone proir but rarther it can be deduced based of the results, this is what i assume is what i need to do, it would help in that i get to compare what is deduced to what is specified but that is not an option, i want to say such things on the results is overlooked we are merely given vague instructions, like  "Present an engineering analysis in a structured and coherent way." that is not all that enticing for someone who is writing.
+    \section{Discussion of Results}\label{discuss}
+    As I discuss the results, it's important to clarify the significance of heat treatment in this practical. Whether the focus is on material testing or the heat treatment itself, understanding its role is essential as it greatly influences the outcomes. Even if testing is the primary lab we did, the treatment must be recognized since it directly impacts the material properties being examined. Although I touched on this at \textbf{Heat Treatments and Alloy Conditions}, I wish I had elaborated more earlier; at that time, I either underestimated its importance or simply overlooked it. Initially, I was more focused on material testing and less on the theoretical aspects of heat treatment. Moving forward here, I will explain why certain properties are higher or lower and connect these observations to the material's intended use, basing my deductions on common observations made.\\[1em]
+    \hrule\vspace{1em}
+    The data reveals significant trends in the material's properties after heat treatment, particularly in comparison to the \textbf{As-Received (AR)} state. These trends highlight the effects of the two-step heat treatment process:
+\begin{enumerate}[itemsep=-1mm]
+    \item \textbf{Softening and Ductility Enhancement}\\
+    After Solution Treatment (ST), the material exhibits substantial softening. The yield stress and ultimate tensile strength decrease by approximately \textcolor{red}{86\%} and \textcolor{red}{68\%}, respectively, relative to the AR state. This reduction in strength is accompanied by a notable increase in ductility. The ultimate strain increases by \textcolor{darkgreen}{110\%}, while the percent elongation rises by \textcolor{darkgreen}{104\%}.
+    \item \textbf{Elastic Property Restoration}\\
+    Precipitation Hardening (PH) effectively restores the material's elastic properties. Compared to AR, the Young’s Modulus and stiffness experience only slight reductions of \textcolor{red}{6.7\%} and \textcolor{red}{4\%}, respectively. While pertaining its softening and ductility properties from the Solution treated.
+    \item \textbf{Toughness and Resilience Recovery}\\
+    Solution Treatment significantly reduces the material's toughness, with the modulus of resilience decreasing by \textcolor{red}{94\%} and the modulus of toughness dropping by \textcolor{red}{27.82\%} compared to AR. However, PH partially restores these properties back to its originality AR. The modulus of resilience shows a recovery, deviating from AR by only \textcolor{red}{7.88\%}, and modulus of toughness deviating by \textcolor{red}{3.71\%}.
+    \item \textbf{Strength and Work Hardening Recovery}\\
+    The strength ratio increases significantly after ST, by approximately \textcolor{darkgreen}{133\%}, indicating enhanced work hardening behavior. The strain ratio also increases nearly \textbf{fivefold} during ST, demonstrating that the material becomes better suited to sustain deformation. After PH, the strength and strain ratios recover to levels slightly above AR, confirming that PH restores the work hardening capacity to a satisfactory degree above the original.
+\end{enumerate}
+\subsection{Overall Impact of Heat Treatment}
+\begin{enumerate}
+    \item \textbf{Solution Treatment (ST)} significantly softens the material, reducing hardness, yield strength, resilience, ultimate tensile strength (UTS), and toughness. However, it greatly enhances ductility, as shown by substantial increases in percent elongation, ultimate strain, and strain ratio. This makes the material capable of withstanding more plastic deformation.
+    \item \textbf{Precipitation Hardening (PH)} restores most of the material’s mechanical properties, including hardness, yield strength, resilience, UTS, and toughness, bringing them closer to the original AR state. At the same time, PH retains some of the ductility improvements introduced by ST, resulting in a material with a well-balanced combination of strength, toughness, and ductility. This makes it ideal for structural applications.
+\end{enumerate}
+The combined effect of ST and PH produces a material with an optimized balance of mechanical properties, suitable for a wide range of applications. PH enhances strength and toughness while maintaining ductility, as reflected in improvements in the strength ratio, strain ratio, and toughness-to-resilience ratio relative to the AR state.
+\begin{formal}[Fractory, 2024]
+    Precipitation hardening is a heat treatment process that increases the yield and tensile strength of metal alloys while improving ductility. This enhances resilience and prevents cracking or breakage. When performed correctly, the process guarantees a harder and stronger metal, particularly beneficial for soft metals like aluminum.
+\end{formal}
+This aligns with the results and supports the conclusion that PH restores strength while retaining ductility gains, resulting in an overall improvement in material performance.
+\subsection{Comparison with Literature Values}
+To validate the AR values for the HE30 alloy, a comparison with typical internet-reported values (ThePipingMart, 2023) was conducted:
+\begin{enumerate}
+    \item \textbf{Ultimate Tensile Strength (UTS)}: The conducted value was 344.82 MPa; the Internet range is between 290 and 310 MPa. Despite being slightly higher, the conducted value falls within a tolerable range.
+    \item \textbf{Yield Strength (\( \sigma_y \))}: The conducted value is 322.2 MPa, while the Internet range is 240–260 MPa. The conducted value appears to be significantly higher, possibly due to specific processing conditions.
+    \item \textbf{Young’s Modulus (\( E \))}: The conducted value is 5.5 GPa, with an Internet range of 68 to 70 GPa. The conducted value is significantly lower due to the exclusion of the non-linear region in the stress-strain curve, potentially caused by machine compliance or sample settling. However, even considering this, the gap is substantial and doesn't fully explain the discrepancy. 
+    \item \textbf{Elongation at Break (\( eL \))}: The conducted amount is 19.4\%, whereas the Internet range is 8–10\%. The larger elongation indicates that the AR sample is more ductile than usual.
+    \item \textbf{Hardness}: The conducted value is 121 HV5 (119, 123 average), and the internet range is 95–105 HB. Even if the scales (Vickers vs. Brinell) are different, the conducted value falls within a comparable range, especially given the leverage of the testing being generally questionable in accuracy.
+\end{enumerate}
+Future improvements in testing methodology could address these discrepancies, including:
+\begin{itemize}
+    \item Investigating potential machine-related artifacts.
+    \item Using alternative methods like ultrasonic testing for independent verification.
+    \item Comparing to non-internet values, but rather the pertained standard (BS1476) of the specific alloy.
+\end{itemize}
+The differences between AR values and typical internet-reported values highlight the influence of specific sample conditions and testing methodologies.
+
+    \newpage\vspace*{-30pt}
+    \section{Conclusions}
+    
+    The results of the experimental study clearly show how heat treatment significantly affects the mechanical properties of aluminum alloys. By applying Solution Treatment (ST) and Precipitation Hardening (PH), we observed notable changes in strength, ductility, and toughness. ST enhanced ductility and formability, while PH effectively restored strength and resilience. These findings emphasize the dual role of the heat treatment process—softening the material for better deformability and subsequently restoring its strength for improved structural performance. Although the material exhibited significant enhancements after treatment, not all properties fully recovered, suggesting that further refinement of the process may be necessary to optimize performance completely.\\[8pt]    
+    Looking ahead, additional testing and analysis, especially examining the full stress-strain curve and varying heat treatment conditions, could yield a more thorough understanding of the material's behavior. The insights gained from this study add valuable knowledge to the broader field of material science, paving the way for the development of more durable and versatile alloys for structural applications.
+    
+    \newpage\vspace*{-30pt}
+    \section{Recommendations}  
+    To enhance the reliability and clarity of future experimental work, the following recommendations are suggested:  
+    \begin{itemize}  
+        \item Accurately measure the gauge length of the specimens before testing to ensure consistency in calculations.  
+        \item Provide students with comprehensive datasets to enable meaningful analysis and comparison of results.  
+        \item Clearly label graph axes, titles, and format tables properly to improve clarity and understanding of the data presented.  
+        \item Perform additional hardness testing to achieve a more representative average and minimize variability in the results.  
+        \item Make information about the specific aluminum alloys used easily accessible online or through trustworthy reference materials for better context and comparison.  
+    \end{itemize}      
+    
     
     
     \newpage\vspace*{-30pt}
-    \section{Discussions and Recommendations}
-    while i want to jump straight into the final results we need to talk about the questions that may have arisen on the way to receive these final results
+
+\section{References}
+\begin{enumerate}
+    \item Eurotherm (2024) \textit{An Introduction to the Heat Treatment of Metallic Alloys}. Available at: \url{https://www.eurotherm.com/sv/heat-treatment-articles-sv/an-introduction-to-the-heat-treatment-of-metallic-alloys/} [Accessed 19 December 2024].
+    
+    \item Rajaa, S. M., Abdulhadi, H. A., Jabur, K. S., and Mohammed, G. R. (2018) \textit{Aging Time Effects on the Mechanical Properties of Al 6061-T6 Alloy}. Available at: \url{https://pdfs.semanticscholar.org/a99b/8b7e771be0fecaaeb970074c7a2871a77032.pdf} [Accessed 19 December 2024].        
+    
+    \item Singh, P., Singh, R.K. \& Das, A.K. (2023) \textit{Optimization of Heat Treatment Cycle for Cast-Al6082 Alloy to Enhance the Mechanical Properties}. Research Square. Available at: \url{https://assets-eu.researchsquare.com/files/rs-3363991/v1/9cd60f8c-a164-4e04-8552-1933478eaded.pdf?c=1711467707} [Accessed 7 December 2024].
+    
+    \item Thyssenkrupp Materials (2023) \textit{Aerospace Grade Aluminium}. Available at: \url{https://www.thyssenkrupp-materials.co.uk/aerospace-grade-aluminum} [Accessed 19 December 2024].
+    
+    \item Truventor (2019) \textit{Aluminium 6082 Data Sheet}. Available at: \url{https://truventor.ai/assets/pdf/datasheets/Aluminium\%206082.pdf} [Accessed 19 December 2024].
+    
+    \item Rovida, C., et al. (2015) \textit{Integrated Testing Strategies (ITS) for Safety Assessment}. Available at: \url{https://www.researchgate.net/publication/6538912_The_Principles_of_Weight_of_Evidence_Validation_of_Test_Methods_and_Testing_Strategies_The_Report_and_Recommendations_of_ECVAM_Workshop_58} [Accessed 20 December 2024].
+    
+    \item Alan Turing Institute (2024) \textit{Data-Driven Experiment Design}. Available at: \url{https://www.turing.ac.uk/research/research-projects/data-driven-experiment-design} [Accessed 20 December 2024].
+    
+    \item Castres, M., Berthe, J., Brieu, M., Deletombe, E. (2016) \textit{Elastic stress or strain threshold for carbon/epoxy materials behavior}. Available at: \url{https://www.semanticscholar.org/paper/Elastic-stress-or-strain-threshold-for-carbon-epoxy-Castres-Berthe/171cb2c907fb6a9e0a116761684f5dceabbb23ad} [Accessed 12 December 2024].
+    
+    \item Fedulov, B., Fedorenko, A., Safonov, A., Lomakin, E. (2017) \textit{Nonlinear shear behavior and failure of composite materials under plane stress conditions}. Available at: \url{https://www.semanticscholar.org/paper/Nonlinear-shear-behavior-and-failure-of-composite-Fedulov-Fedorenko/e0c9fe9ec59efa00bd5972b700436d913c9c8b6f} [Accessed 12 December 2024].
+    
+    \item Thibault, S. (2009) \textit{Multicharged nitrogen ion-implantation effects on physico-chemical properties and microstructure of aluminium}. ResearchGate. Available at: \url{https://www.researchgate.net/figure/Indenteur-Vickers-et-empreinte-residuelle-apres-essai-La-durete-Vickers-H-v-est-alors_fig63_278633876} [Accessed 21 December 2024].
+    
+    \item Modak, A. (2023) \textit{Aluminium Alloy HE 30 – Composition, Properties and Uses}. ThePipingMart. Available at: \url{https://blog.thepipingmart.com/grades/aluminium-alloy-he-30-composition-properties-and-uses/} [Accessed 8 December 2024].
+    
+    \item Wikipedia (2024) \textit{Hooke's law}. Available at: \url{https://en.wikipedia.org/wiki/Hooke\%27s_law} [Accessed 8 December 2024].
+    
+    \item Sild, S. (2024) \textit{Precipitation Hardening - How It Works, Benefits \& More}. Fractory. Available at: \url{https://fractory.com/precipitation-hardening-explained/} [Accessed 14 December 2024].
+    
+    \item MechaniCalc (2011) \textit{Mechanical Properties of Materials}. Available at: \url{https://mechanicalc.com/reference/mechanical-properties-of-materials} [Accessed 27 December 2024].
+    
+    \item Testbook (2023) \textit{Modulus of Resilience: Formula, Units, Calculation, \& Importance}. Available at: \url{https://testbook.com/civil-engineering/modulus-of-resilience} [Accessed 16 December 2024].
+    
+    \item Wikipedia Contributors (2019) \textit{Yield (engineering)}. Wikipedia. Available at: \url{https://en.wikipedia.org/wiki/Yield_\%28engineering\%29} [Accessed 9 December 2024].
+    
+    \item Webassign (2003) \textit{n/a}. Available at: \url{https://demo.webassign.net/ebooks/cj6demo/xlinks/c10-fig-0034.htm} [Accessed 22 December 2024].
+    
+    \item Yalcin, D. (2017) \textit{Effect of Specimen Geometry on Tensile Testing Results}. ADMET. Available at: \url{https://www.admet.com/blog/effect-specimen-geometry-tensile-testing-results/} [Accessed 22 December 2024].
+    
+    \item Ultramag (2024) \textit{Hardness Testing}. Available at: \url{https://www.ultramag.co.uk/ndt-inspection/hardness-testing/} [Accessed 30 December 2024].
+    
+    \item Zwick Roell (2024) \textit{Vickers hardness testing: ISO 6507, ASTM E384}. Available at: \url{https://www.zwickroell.com/industries/metals/metals-standards/vickers-test-iso-6507/} [Accessed 6 December 2024].
+    
+    \item Actonbrightsteel (2020) \textit{6082 T6 - Acton Bright Steel Technical Guide}. Available at: \url{https://www.actonbrightsteel.co.uk/6082-t6-acton-bright-steel.html} [Accessed 30 December 2024].
+    
+    \item Aalco (2019) \textit{Aluminium Alloy - Commercial Alloy - 6082 - T6~T651 Plate}. Available at: \url{https://www.aalco.co.uk/datasheets/Aluminium-Alloy_6082-T6~T651_148.ashx} [Accessed 18 December 2024].
+    
+    \item N.A.S.R.U.L DESIGN (2024) \textit{NDT - Brief overview}. Available at: \url{https://nasruldesign.weebly.com/ndt---brief-overview.html} [Accessed 30 December 2024].
+    
+    \item ScienceDirect (n.d.) \textit{Indentation Hardness Testing - an overview}. Available at: \url{https://www.sciencedirect.com/topics/materials-science/indentation-hardness-testing} [Accessed 4 December 2024].
+    
+    \item Chandler, H. (ed.) (1999) \textit{Hardness Testing}. 2nd edn. ASM International. Available at: \url{https://nasruldesign.weebly.com/uploads/7/4/1/9/7419180/hardness_testing_manual.pdf} [Accessed 29 December 2024].
+\end{enumerate}
+
+
     
     
-    \newpage\vspace*{-5pt}
-    \section{References}
-    \begin{enumerate}
-        \item Eurotherm (2024) \textit{An Introduction to the Heat Treatment of Metallic Alloys}. Available at: \url{https://www.eurotherm.com/sv/heat-treatment-articles-sv/an-introduction-to-the-heat-treatment-of-metallic-alloys/} [Accessed 19 December 2024].
-        
-        \item Rajaa, S. M., Abdulhadi, H. A., Jabur, K. S., and Mohammed, G. R. (2018). Aging Time Effects on the Mechanical Properties of Al 6061-T6 Alloy. Available at: \url{https://pdfs.semanticscholar.org/a99b/8b7e771be0fecaaeb970074c7a2871a77032.pdf} [Accessed 19 December 2024].        
-
-        \item Singh, P., Singh, R.K. \& Das, A.K. (2023) \textit{‘Optimization of Heat Treatment Cycle for Cast-Al6082 Alloy to Enhance the Mechanical Properties’}. Research Square. Available at: \url{https://assets-eu.researchsquare.com/files/rs-3363991/v1/9cd60f8c-a164-4e04-8552-1933478eaded.pdf?c=1711467707} [Accessed 7 December 2024].
-        
-        \item Thyssenkrupp Materials (2023) \textit{Aerospace Grade Aluminium}. Available at: \url{https://www.thyssenkrupp-materials.co.uk/aerospace-grade-aluminum} [Accessed 19 December 2024].
-        
-        \item Truventor (2019) \textit{Aluminium 6082 Data Sheet}. Available at: \url{https://truventor.ai/assets/pdf/datasheets/Aluminium%206082.pdf} [Accessed 19 December 2024].
-        
-        \item Rovida, C., Alépée, N., Api, A.M., Basketter, D.A., Bois, F.Y., Caloni, F., Corsini, E., Daneshian, M., Eskes, C., Ezendam, J., Fuchs, H., Hayden, P., Hegele-Hartung, C., Hoffmann, S., Hubesch, B., Jacobs, M.N., Jaworska, J., Kleensang, A., Kleinstreuer, N., Lalko, J., Landsiedel, R., Lebreux, F., Luechtefeld, T., Locatelli, M., Mehling, A., Natsch, A., Pitchford, J.W., Prater, D., Prieto, P., Schepky, A., Schüürmann, G., Smirnova, L., Toole, C., van Vliet, E., Weisensee, D. and Hartung, T. (2015) \textit{Integrated Testing Strategies (ITS) for Safety Assessment}. Available at: \url{https://www.researchgate.net/publication/6538912_The_Principles_of_Weight_of_Evidence_Validation_of_Test_Methods_and_Testing_Strategies_The_Report_and_Recommendations_of_ECVAM_Workshop_58} [Accessed 20 December 2024].
-        
-        \item Alan Turing Institute (2024) \textit{Data-Driven Experiment Design}. Available at: \url{https://www.turing.ac.uk/research/research-projects/data-driven-experiment-design} [Accessed 20 December 2024].
-
-        % true stress and strain
-        % https://mechanicalc.com/reference/mechanical-properties-of-materials
-
-        % resilence
-        %https://testbook.com/civil-engineering/modulus-of-resilience
-        % https://mechcontent.com/modulus-of-resilience/
-        % umages 
-        % https://mechcontent.com/modulus-of-resilience/
-        
-        % yield strength        
-        % https://en.wikipedia.org/wiki/Yield_%28engineering%29
-        
-        % webassign.net hook law image
-        % https://demo.webassign.net/ebooks/cj6demo/xlinks/c10-fig-0034.htm
-                
-        % alloy image
-        % https://www.admet.com/blog/effect-specimen-geometry-tensile-testing-results/
-        
-       % vickesrs hardness
-        %https://www.ultramag.co.uk/ndt-inspection/hardness-testing/
-        %https://www.zwickroell.com/industries/metals/metals-standards/vickers-test-iso-6507/
-        
-        % confirmation clari
-        % https://www.actonbrightsteel.co.uk/6082-t6-acton-bright-steel.html
-        
-        % compisition
-        % file:///home/sak/Downloads/Aalco-Metals-Ltd_Aluminium-Alloy-6082-T6T651-Plate_148.pdf
-        % https://www.aalco.co.uk/datasheets/Aluminium-Alloy_6082-T6~T651_148.ashx
-    \end{enumerate}
-
-    
-    
-    %https://nasruldesign.weebly.com/ndt---brief-overview.html
-    %https://www.sciencedirect.com/topics/materials-science/indentation-hardness-testing
-    %https://nasruldesign.weebly.com/uploads/7/4/1/9/7419180/hardness_testing_manual.pdf
     
 
-    \newpage\vspace*{-5pt}
+    \newpage\vspace*{-30pt}
     
    
     
@@ -2687,22 +2749,20 @@ Therefore, the percentage difference values represent the relative change with r
 \normalsize
 \renewcommand{\thesubsection}{\Alph{subsection}}
 
-\subsection{Indentation hardness types}
-The Brinell Hardness Number (BHN) measures a material's resistance to deformation, determined by the indentation left by a hard steel or carbide ball pressed into the material under a specified load. This test is commonly used for materials with a coarse or heterogeneous grain structure.\\[1em]
-The formula for calculating the Brinell Hardness Number is:
-\begin{equation}
-    BHN = \frac{2P}{\pi D (D - \sqrt{D^2 - d^2})}
-\end{equation}
-Where:
-\begin{itemize}[itemsep=-1mm]
-    \item \( P \) : applied load in kilogram-force (kgf),
-    \item \( D \) : diameter of the indenter (typically 10 mm),
-    \item \( d \) : diameter of the indentation (mm).
-\end{itemize}
-\textbf{Note}: The Brinell test may use either $P$ or $F$ for the load, depending on the source.\\ 
-The BHN provides insight into a material's ability to resist wear and deformation, which is important for assessing the durability and suitability of metals in various engineering applications. BHN values are particularly useful for testing larger, rougher materials and are commonly applied to metals like steel and cast iron. The results help predict wear resistance and strength under load.
-
-
+%\subsection{Indentation hardness types}
+%The Brinell Hardness Number (BHN) measures a material's resistance to deformation, determined by the indentation left by a hard steel or carbide ball pressed into the material under a specified load. This test is commonly used for materials with a coarse or heterogeneous grain structure.\\[1em]
+%The formula for calculating the Brinell Hardness Number is:
+%\begin{equation}
+%    BHN = \frac{2P}{\pi D (D - \sqrt{D^2 - d^2})}
+%\end{equation}
+%Where:
+%\begin{itemize}[itemsep=-1mm]
+%    \item \( P \) : applied load in kilogram-force (kgf),
+%    \item \( D \) : diameter of the indenter (typically 10 mm),
+%    \item \( d \) : diameter of the indentation (mm).
+%\end{itemize}
+%\textbf{Note}: The Brinell test may use either $P$ or $F$ for the load, depending on the source.\\ 
+%The BHN provides insight into a material's ability to resist wear and deformation, which is important for assessing the durability and suitability of metals in various engineering applications. BHN values are particularly useful for testing larger, rougher materials and are commonly applied to metals like steel and cast iron. The results help predict wear resistance and strength under load.
 \subsection{RSM and FFS}
 \textbf{Response Surface Methodology (RSM)} is a type of adaptive or sequential design. Sequential designs involve multiple rounds of experimentation, with the choice of treatments in each later round being dependent on the data accumulated from completed rounds. RSM is usually used to identify some sort of optimum, often for industrial production. Sequential designs also exist outside of the RSM framework, however, such as Bayesian Adaptive Experimental Design.\\[8pt]
 \textbf{Fractional Factorial Designs (FFDs)} are a specific group of experimental designs. They allow useful information to be extracted from relatively tiny experiments, especially in situations with a large number of predictors. The central (quite reasonable) assumption is that higher-order interactions are less important than lower-order ones and main effects, which is called the "sparsity-of-effects principle". Experimental designs can therefore be scaled down by neglecting the higher-order interactions. This scaling down involves intentionally confounding (‘aliasing’) combinations of factors relative to the full factorial experiment, with the consequence that one cannot estimate each separate main effect and interaction term. We can still learn a great deal of useful information from the data despite this limitation, though.\\[8pt]

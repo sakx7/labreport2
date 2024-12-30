@@ -23,7 +23,7 @@ plt.plot(elongation3, force3, label='ST', color='red')
 plt.rcParams['text.usetex'] = True
 
 # Set the axis labels and title with increased font size
-plt.xlabel(r'Elongation $(\Delta L)$ [mm]', fontsize=14)
+plt.xlabel(r'Change in Length $(\Delta L)$ [mm]', fontsize=14)
 plt.ylabel(r'Force $(F)$ [N]', fontsize=14)
 plt.title(r'Force vs Change in Length for Different Specimens', fontsize=16)
 

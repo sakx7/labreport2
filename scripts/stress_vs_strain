@@ -47,8 +47,8 @@ plt.plot(strain3, stress3, label='ST', color='red')
 # Set the axis labels
 plt.rcParams['text.usetex'] = True
 
-plt.xlabel(r'Strain $(\sigma)$ [dimensionless]',fontsize=14)
-plt.ylabel(r'Stress $(\varepsilon)$ $[\text{N/}\text{mm}^2]$',fontsize=14)
+plt.xlabel(r'Strain $(\varepsilon)$ [dimensionless]',fontsize=14)
+plt.ylabel(r'Stress $(\sigma)$ $[\text{N/}\text{mm}^2]$',fontsize=14)
 plt.title('Stress vs Strain for Different Specimens',fontsize=16)
 
 # Add a legend
