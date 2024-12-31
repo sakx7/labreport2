@@ -93,7 +93,7 @@
 \newcommand{\crossitem}{\raisebox{-0.25\height}{\includegraphics[width=0.4cm]{cross.png}}}
 
 
-\usepackage[margin=1in, left=0.8in, right=0.8in, includeheadfoot,letterpaper]{geometry}
+\usepackage[left=0.8in,right=0.8in,top=0.5in,bottom=0.69in,includeheadfoot,letterpaper]{geometry}
 \usepackage{fancyhdr}
 \usepackage{graphicx}
 \usepackage{tabularray}
@@ -118,19 +118,18 @@
 \fancyfoot[C]{Department of Mechanical Engineering}
 \fancyfoot[R]{\thepage}
 
-\geometry{top=0.5in,bottom=0.69in}
 \usepackage{scalerel}
 
 \setlength{\headheight}{30pt}
 \setlength{\footskip}{20pt}
 
-\fancypagestyle{plain}{
-    \fancyhf{} % Clear all header and footer fields for plain style
-    \fancyhead[L]{\includegraphics[height=1.2cm]{images/Kingston_University_London_logo_200-tablet.png}} % Left header
-    \fancyhead[R]{EG4019 - ME - Engineering Mechanics and Materials} % Right header
-    \fancyfoot[C]{Department of Mechanical Engineering} % Center footer
-    \fancyfoot[R]{\thepage} % Right footer (page number)
-}
+%\fancypagestyle{plain}{
+%    \fancyhf{} % Clear all header and footer fields for plain style
+%    \fancyhead[L]{\includegraphics[height=1.2cm]{images/Kingston_University_London_logo_200-tablet.png}} % Left header
+%    \fancyhead[R]{EG4019 - ME - Engineering Mechanics and Materials} % Right header
+%    \fancyfoot[C]{Department of Mechanical Engineering} % Center footer
+%    \fancyfoot[R]{\thepage} % Right footer (page number)
+%}
 
 
 \usepackage[export]{adjustbox}
@@ -239,17 +238,17 @@
         Student & Course & Contribution & Picture \\ 
         Sakariye Abiikar & Mechanical Engineering & Results, Theory, Recommendations, Experimental  Procedures & \includegraphics[width=2cm,valign=c]{images/image(7).jpeg} \\ 
         Alrifai Naim & Mechanical Engineering  & Conclusion, Abstract & \includegraphics[width=2cm,valign=c]{images/image(9).jpeg} \\ 
-        Harry J Carter-Oram & Mechanical Engineering  &  & \includegraphics[width=2cm,valign=c]{images/profile.jpg} \\ 
         Aland Floyd Noronha & Mechanical Engineering & Introduction, Method, Discussion & \includegraphics[width=2cm,valign=c]{images/Media.jpeg} \\ 
         Alan Roy & Mechanical Engineering & Results, Discussion, Conclusion  & \includegraphics[width=2cm,valign=c]{images/image(8).jpeg} \\ 
-        Sandeep Singh & Mechanical Engineering & Theory, Conducting the Experiment & \includegraphics[width=2cm,valign=c]{images/image(10).jpeg} \\     
+        Sandeep Singh & Mechanical Engineering & Theory, Conducting the Experiment & \includegraphics[width=2cm,valign=c]{images/image(10).jpeg} \\
+        Harry J Carter-Oram & Mechanical Engineering  &  & \includegraphics[width=2cm,valign=c]{images/profile.jpg} \\ 
     \end{tblr}
   
     \normalsize
-    \newpage
-    \noindent\vspace*{1em}
+    \newpage\newgeometry{top=0.2in,bottom=0.6in,left=0.8in,right=0.8in}
+    \noindent\vspace{0em}
     \begin{center}
-        \LARGE \textbf{Table of Contents}\\[-0.5em]
+        \LARGE \textbf{Table of Contents}\\[-7em]
     \end{center}
     {
         \hypersetup{linkcolor=black}
@@ -257,7 +256,7 @@
     }    
 
 
-    \large\newpage\vspace*{-20pt}
+    \large\newpage\restoregeometry\vspace*{-20pt}
 
     \section{Abstract}
     \vspace*{1em}
@@ -2659,6 +2658,7 @@ The differences between AR values and typical internet-reported values highlight
         \item Clearly label graph axes, titles, and format tables properly to improve clarity and understanding of the data presented.  
         \item Perform additional hardness testing to achieve a more representative average and minimize variability in the results.  
         \item Make information about the specific aluminum alloys used easily accessible online or through trustworthy reference materials for better context and comparison.  
+        \item specific guidlines and documentations should all be in one place/file
     \end{itemize}      
     
     

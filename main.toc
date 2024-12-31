@@ -1,51 +1,51 @@
-\contentsline {section}{\numberline {1}Abstract}{5}{section.1}%
-\contentsline {section}{\numberline {2}Introduction}{6}{section.2}%
-\contentsline {section}{\numberline {3}Method}{7}{section.3}%
-\contentsline {section}{\numberline {4}Experimental Procedures}{8}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Description}{8}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Composition}{9}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Heat Treatments and Alloy Conditions}{10}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Equipment List}{10}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Risk Assessment}{11}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Conducting the Experiment}{11}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Measurements}{13}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Hardness Test}{13}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Tensile Test}{14}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Theory}{17}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Hardness}{18}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Vickers Hardness Calculation}{18}{subsubsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.2}Stress}{20}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Strain}{20}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}True Stress and Strain}{21}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Young's Modulus}{22}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Hooke's Law}{23}{subsection.6.6}%
-\contentsline {subsection}{\numberline {6.7}Yield Point and Yield Strength}{25}{subsection.6.7}%
-\contentsline {subsection}{\numberline {6.8}Resilience and Modulus of Resilience}{26}{subsection.6.8}%
-\contentsline {subsection}{\numberline {6.9}Ultimate Tensile Strength (UTS)}{28}{subsection.6.9}%
-\contentsline {subsection}{\numberline {6.10}Ductility}{29}{subsection.6.10}%
-\contentsline {subsection}{\numberline {6.11}Toughness and Modulus of Toughness}{31}{subsection.6.11}%
-\contentsline {subsection}{\numberline {6.12}Material Property Ratios}{32}{subsection.6.12}%
-\contentsline {section}{\numberline {7}Data, Calculations and Results}{33}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Hardness}{34}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Cross-Sectional Areas (CSA)}{35}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Force vs Displacement}{36}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Stress vs. Strain}{37}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Young's Modulus}{39}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}Stiffness}{41}{subsection.7.6}%
-\contentsline {subsection}{\numberline {7.7}Yield Point}{42}{subsection.7.7}%
-\contentsline {subsection}{\numberline {7.8}Modulus of Resilience}{43}{subsection.7.8}%
-\contentsline {subsection}{\numberline {7.9}Ultimate Tensile Strength (UTS)}{44}{subsection.7.9}%
-\contentsline {subsection}{\numberline {7.10}Fracture Point}{44}{subsection.7.10}%
-\contentsline {subsection}{\numberline {7.11}Modulus of Toughness}{45}{subsection.7.11}%
-\contentsline {subsection}{\numberline {7.12}Plastic Strain at Failure}{46}{subsection.7.12}%
-\contentsline {subsection}{\numberline {7.13}Percent Elongation}{46}{subsection.7.13}%
-\contentsline {subsection}{\numberline {7.14}Material Property Ratios}{47}{subsection.7.14}%
-\contentsline {subsection}{\numberline {7.15}Summary of Derived Results}{48}{subsection.7.15}%
-\contentsline {section}{\numberline {8}Discussion of Results}{49}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Overall Impact of Heat Treatment}{49}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Comparison with Literature Values}{50}{subsection.8.2}%
-\contentsline {section}{\numberline {9}Conclusions}{51}{section.9}%
-\contentsline {section}{\numberline {10}Recommendations}{52}{section.10}%
-\contentsline {section}{\numberline {11}References}{53}{section.11}%
-\contentsline {section}{\numberline {12}Appendix}{55}{section.12}%
-\contentsline {subsection}{\numberline {A}RSM and FFS}{55}{subsection.12.1}%
+\contentsline {section}{\numberline {1}Abstract}{4}{section.1}%
+\contentsline {section}{\numberline {2}Introduction}{5}{section.2}%
+\contentsline {section}{\numberline {3}Method}{6}{section.3}%
+\contentsline {section}{\numberline {4}Experimental Procedures}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Description}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Composition}{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Heat Treatments and Alloy Conditions}{9}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Equipment List}{9}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Risk Assessment}{9}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Conducting the Experiment}{10}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Measurements}{12}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Hardness Test}{12}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Tensile Test}{13}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Theory}{16}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Hardness}{17}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Vickers Hardness Calculation}{17}{subsubsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.2}Stress}{19}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Strain}{19}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}True Stress and Strain}{20}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Young's Modulus}{21}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Hooke's Law}{22}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}Yield Point and Yield Strength}{24}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8}Resilience and Modulus of Resilience}{25}{subsection.6.8}%
+\contentsline {subsection}{\numberline {6.9}Ultimate Tensile Strength (UTS)}{27}{subsection.6.9}%
+\contentsline {subsection}{\numberline {6.10}Ductility}{28}{subsection.6.10}%
+\contentsline {subsection}{\numberline {6.11}Toughness and Modulus of Toughness}{30}{subsection.6.11}%
+\contentsline {subsection}{\numberline {6.12}Material Property Ratios}{31}{subsection.6.12}%
+\contentsline {section}{\numberline {7}Data, Calculations and Results}{32}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Hardness}{33}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Cross-Sectional Areas (CSA)}{34}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Force vs Displacement}{35}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Stress vs. Strain}{36}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Young's Modulus}{38}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Stiffness}{40}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}Yield Point}{41}{subsection.7.7}%
+\contentsline {subsection}{\numberline {7.8}Modulus of Resilience}{42}{subsection.7.8}%
+\contentsline {subsection}{\numberline {7.9}Ultimate Tensile Strength (UTS)}{43}{subsection.7.9}%
+\contentsline {subsection}{\numberline {7.10}Fracture Point}{43}{subsection.7.10}%
+\contentsline {subsection}{\numberline {7.11}Modulus of Toughness}{44}{subsection.7.11}%
+\contentsline {subsection}{\numberline {7.12}Plastic Strain at Failure}{45}{subsection.7.12}%
+\contentsline {subsection}{\numberline {7.13}Percent Elongation}{45}{subsection.7.13}%
+\contentsline {subsection}{\numberline {7.14}Material Property Ratios}{46}{subsection.7.14}%
+\contentsline {subsection}{\numberline {7.15}Summary of Derived Results}{47}{subsection.7.15}%
+\contentsline {section}{\numberline {8}Discussion of Results}{48}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Overall Impact of Heat Treatment}{48}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Comparison with Literature Values}{49}{subsection.8.2}%
+\contentsline {section}{\numberline {9}Conclusions}{50}{section.9}%
+\contentsline {section}{\numberline {10}Recommendations}{51}{section.10}%
+\contentsline {section}{\numberline {11}References}{52}{section.11}%
+\contentsline {section}{\numberline {12}Appendix}{54}{section.12}%
+\contentsline {subsection}{\numberline {A}RSM and FFS}{54}{subsection.12.1}%
