@@ -438,6 +438,7 @@ These treatments were applied to assess how they influence the alloy's mechanica
     \end{varwidth}%
 }
 
+\newpage
 
 \subsection{Risk Assessment}
 The experimental procedures involved several potential hazards. The identified risks, their levels, and mitigation strategies are outlined below:
@@ -2045,7 +2046,7 @@ The plastic region (rectangular portion) of the stress-strain curve significantl
      \caption{Calculated produced data for Stress vs. Strain}
      \label{fig:stress_strain}
  \end{figure} 
- The transition from Force vs. Elongation to Stress vs. Strain is essential for understanding and comparing the mechanical properties of materials. By normalizing the raw data, we obtain a more universal and meaningful representation of material behavior. The utilization of code streamlines this transformation process, ensuring accuracy and efficiency in data analysis.\\[8pt] 
+ The transition from Force vs Change in Length to Stress vs Strain is essential for understanding and comparing the mechanical properties of materials. By normalizing the raw data, we obtain a more universal and meaningful representation of material behavior. The utilization of code streamlines this transformation process, ensuring accuracy and efficiency in data analysis.\\[8pt] 
  Let's now define the attributes now that we have our baseline.
    \newpage
 \subsection{Young's Modulus}
@@ -2340,7 +2341,7 @@ The concluded results are as so:
         }
         Property & AR & ST & PH \\
         \(\textbf{Ultimate Strain}\ \bm{(\varepsilon_u)}\ \text{(no units)}\) & 0.19 & 0.4 & 0.2 \\
-        \(\textbf{Fracture Stress}\ \bm{(\sigma_f)}\ (\text{N/}\text{mm})^2\) & 296.68 & 90.99 & 264.77\\
+        \(\textbf{Fracture Stress}\ \bm{(\sigma_f)}\ (\text{N/}\text{mm}^2)\) & 296.68 & 90.99 & 264.77\\
     \end{tblr}
     \captionof{table}{Ultimate strain for all alloys}
     \label{tab:ultstrain}
@@ -2439,7 +2440,7 @@ The calculated Modulus of Toughness for all specimens is summarized below:\vspac
                 cells={valign=m,halign=c}
             }
             Property & AR & ST & PH \\
-            \(\textbf{Plastic Strain at Failure}\ (\bm{\varepsilon_f})\) & 0.194 & 0.396 & 0.196 \\
+            \(\textbf{Plastic Strain at Failure}\ (\bm{\varepsilon_f}) (\text{no units})\) & 0.194 & 0.396 & 0.196 \\
         \end{tblr}
         \captionof{table}{Plastic Strain at Failure for all alloys}
         \label{tab:plasticstrain}
@@ -2491,7 +2492,7 @@ Here i outline all the derived relevant properties needed for calculations:
         \(\textbf{Ultimate Strain}\ \bm{(\varepsilon_u)}\ \text{(no units)}\) & 0.19 & 0.4 & 0.2 \\
         \(\textbf{Fracture Stress}\ \bm{(\sigma_f)}\ (\text{N/}\text{mm}^2)\) & 296.68 & 90.99 & 264.77\\
         \(\textbf{Modulus of Toughness}\ \bm{(U_t)}\ \text{(MPa)}\) & 52.02 & 37.55 & 50.09 \\
-        \(\textbf{Plastic Strain at Failure}\ (\bm{\varepsilon_f})\) & 0.194 & 0.396 & 0.196 \\
+        \(\textbf{Plastic Strain at Failure}\ (\bm{\varepsilon_f}) (\text{no units})\) & 0.194 & 0.396 & 0.196 \\
     \end{tblr}
 \end{center}
 The calculations are as follows:
@@ -2557,7 +2558,7 @@ The calculations are as follows:
         cells={valign=m,halign=c}
     }
     \text{Property} & \text{AR} & \text{ST} & \text{PH} \\
-    \textbf{Average Hardness (HV5)} & 121 & 36.4^{\textcolor{red}{-69.92\%}} & 128.5^{\textcolor{darkgreen}{+6.20\%}}_{\textcolor{darkgreen}{+253.02\%}}\\
+    \textbf{Average Hardness}\text{(HV5)} & 121 & 36.4^{\textcolor{red}{-69.92\%}} & 128.5^{\textcolor{darkgreen}{+6.20\%}}_{\textcolor{darkgreen}{+253.02\%}}\\
     \textbf{Cross-Sectional Area}\ (A_0)\ (\text{mm}^2) & 71.88 & 76.56^{\textcolor{darkgreen}{+6.51\%}} & 73.97^{\textcolor{darkgreen}{+2.91\%}}_{\textcolor{red}{-3.38\%}} \\
     \textbf{Young's Modulus}\ (E)\ (\text{N/mm}^2) & 5522.83 & 1850.18^{\textcolor{red}{-66.50\%}} & 5154.74^{\textcolor{red}{-6.66\%}}_{\textcolor{darkgreen}{+178.60\%}} \\
     \textbf{Stiffness}\ (k)\ (\text{N/mm or kN/m}) & 7939.6 & 2833^{\textcolor{red}{-64.31\%}} & 7625.9^{\textcolor{red}{-3.95\%}}_{\textcolor{darkgreen}{+169.14\%}} \\
@@ -2568,7 +2569,7 @@ The calculations are as follows:
     \textbf{Ultimate Strain}\ (\varepsilon_u)\ (\text{no units}) & 0.19 & 0.4^{\textcolor{darkgreen}{+110.53\%}} & 0.2^{\textcolor{darkgreen}{+5.26\%}}_{\textcolor{red}{-50.00\%}} \\
     \textbf{Fracture Stress}\ (\sigma_f)\ (\text{N/mm}^2) & 296.68 & 90.99^{\textcolor{red}{-69.33\%}} & 264.77^{\textcolor{red}{-10.75\%}}_{\textcolor{darkgreen}{+191.00\%}} \\
     \textbf{Modulus of Toughness}\ (U_t)\ (\text{MPa}) & 52.02 & 37.55^{\textcolor{red}{-27.82\%}} & 50.09^{\textcolor{red}{-3.71\%}}_{\textcolor{darkgreen}{+33.40\%}} \\
-    \textbf{Plastic Strain at Failure}\ (\varepsilon_f) & 0.194 & 0.396^{\textcolor{darkgreen}{+103.61\%}} & 0.196^{\textcolor{darkgreen}{+1.03\%}}_{\textcolor{red}{-50.51\%}} \\
+    \textbf{Plastic Strain at Failure}\ (\varepsilon_f) (\text{no units})& 0.194 & 0.396^{\textcolor{darkgreen}{+103.61\%}} & 0.196^{\textcolor{darkgreen}{+1.03\%}}_{\textcolor{red}{-50.51\%}} \\
     \textbf{Percent Elongation}\ (eL)\ (\%) & 19.4 & 39.6^{\textcolor{darkgreen}{+104.12\%}} & 19.6^{\textcolor{darkgreen}{+1.03\%}}_{\textcolor{red}{-50.51\%}} \\
     \textbf{Strength Ratio}\ \left(\frac{\sigma_u}{\sigma_y}\right) & 1.07 & 2.49^{\textcolor{darkgreen}{+132.71\%}} & 1.09^{\textcolor{darkgreen}{+1.87\%}}_{\textcolor{red}{-56.22\%}} \\
     \textbf{Strain Ratio}\ \left(\frac{\varepsilon_u}{\varepsilon_y}\right) & 2.79 & 16.67^{\textcolor{darkgreen}{+497.85\%}} & 3.17^{\textcolor{darkgreen}{+13.62\%}}_{\textcolor{red}{-80.99\%}} \\
@@ -2603,7 +2604,7 @@ Therefore, the percentage difference values represent the relative change with r
   
     \newpage\restoregeometry\vspace*{-30pt}
     \section{Discussion of Results}\label{discuss}
-    As I discuss the results, it's important to clarify the significance of heat treatment in this practical. Whether the focus is on material testing or the heat treatment itself, understanding its role is essential as it greatly influences the outcomes. Even if testing is the primary lab we did, the treatment must be recognized since it directly impacts the material properties being examined. Although I touched on this at \textbf{Heat Treatments and Alloy Conditions}, I wish I had elaborated more earlier; at that time, I either underestimated its importance or simply overlooked it. Initially, I was more focused on material testing and less on the theoretical aspects of heat treatment. Moving forward here, I will explain why certain properties are higher or lower and connect these observations to the material's intended use, basing my deductions on common observations made.\\[1em]
+    As I discuss the results, it's important to clarify the significance of heat treatment in this practical. Whether the focus is on material testing or the heat treatment itself, understanding its role is essential as it greatly influences the outcomes. Even if testing is the primary lab we did, the treatment must be recognized since it directly impacts the material properties being examined. Although we touched on this at \textbf{Heat Treatments and Alloy Conditions}, it is regret full that it was not elaborated more earlier; at that time, its importance was underestimated and simply overlooked it. There is more of a focus on material testing and less on the theoretical aspects of heat treatment. Moving forward here, I will explain why certain properties are higher or lower and connect these observations to the material's intended use, basing my deductions on common observations made.\\[1em]
     \hrule\vspace{1em}
     The data reveals significant trends in the material's properties after heat treatment, particularly in comparison to the \textbf{As-Received (AR)} state. These trends highlight the effects of the two-step heat treatment process:
 \begin{enumerate}[itemsep=-1mm]
@@ -2658,7 +2659,7 @@ The differences between AR values and typical internet-reported values highlight
         \item Clearly label graph axes, titles, and format tables properly to improve clarity and understanding of the data presented.  
         \item Perform additional hardness testing to achieve a more representative average and minimize variability in the results.  
         \item Make information about the specific aluminum alloys used easily accessible online or through trustworthy reference materials for better context and comparison.  
-        \item specific guidlines and documentations should all be in one place/file
+        \item All specific guidelines and documentation should be consolidated into a single location or file.
     \end{itemize}      
     
     
@@ -2667,55 +2668,57 @@ The differences between AR values and typical internet-reported values highlight
 
 \section{References}
 \begin{enumerate}
-    \item Eurotherm (2024) \textit{An Introduction to the Heat Treatment of Metallic Alloys}. Available at: \url{https://www.eurotherm.com/sv/heat-treatment-articles-sv/an-introduction-to-the-heat-treatment-of-metallic-alloys/} [Accessed 19 December 2024].
+    \item Actonbrightsteel (2020) \textit{6082 T6 - Acton Bright Steel Technical Guide}. Available at: \url{https://www.actonbrightsteel.co.uk/6082-t6-acton-bright-steel.html} [Accessed 30 December 2024].
     
-    \item Rajaa, S. M., Abdulhadi, H. A., Jabur, K. S., and Mohammed, G. R. (2018) \textit{Aging Time Effects on the Mechanical Properties of Al 6061-T6 Alloy}. Available at: \url{https://pdfs.semanticscholar.org/a99b/8b7e771be0fecaaeb970074c7a2871a77032.pdf} [Accessed 19 December 2024].        
-    
-    \item Singh, P., Singh, R.K. \& Das, A.K. (2023) \textit{Optimization of Heat Treatment Cycle for Cast-Al6082 Alloy to Enhance the Mechanical Properties}. Research Square. Available at: \url{https://assets-eu.researchsquare.com/files/rs-3363991/v1/9cd60f8c-a164-4e04-8552-1933478eaded.pdf?c=1711467707} [Accessed 7 December 2024].
-    
-    \item Thyssenkrupp Materials (2023) \textit{Aerospace Grade Aluminium}. Available at: \url{https://www.thyssenkrupp-materials.co.uk/aerospace-grade-aluminum} [Accessed 19 December 2024].
-    
-    \item Truventor (2019) \textit{Aluminium 6082 Data Sheet}. Available at: \url{https://truventor.ai/assets/pdf/datasheets/Aluminium\%206082.pdf} [Accessed 19 December 2024].
-    
-    \item Rovida, C., et al. (2015) \textit{Integrated Testing Strategies (ITS) for Safety Assessment}. Available at: \url{https://www.researchgate.net/publication/6538912_The_Principles_of_Weight_of_Evidence_Validation_of_Test_Methods_and_Testing_Strategies_The_Report_and_Recommendations_of_ECVAM_Workshop_58} [Accessed 20 December 2024].
+    \item Aalco (2019) \textit{Aluminium Alloy - Commercial Alloy - 6082 - T6~T651 Plate}. Available at: \url{https://www.aalco.co.uk/datasheets/Aluminium-Alloy_6082-T6~T651_148.ashx} [Accessed 18 December 2024].
     
     \item Alan Turing Institute (2024) \textit{Data-Driven Experiment Design}. Available at: \url{https://www.turing.ac.uk/research/research-projects/data-driven-experiment-design} [Accessed 20 December 2024].
     
     \item Castres, M., Berthe, J., Brieu, M., Deletombe, E. (2016) \textit{Elastic stress or strain threshold for carbon/epoxy materials behavior}. Available at: \url{https://www.semanticscholar.org/paper/Elastic-stress-or-strain-threshold-for-carbon-epoxy-Castres-Berthe/171cb2c907fb6a9e0a116761684f5dceabbb23ad} [Accessed 12 December 2024].
     
+    \item Chandler, H. (ed.) (1999) \textit{Hardness Testing}. 2nd edn. ASM International. Available at: \url{https://nasruldesign.weebly.com/uploads/7/4/1/9/7419180/hardness_testing_manual.pdf} [Accessed 29 December 2024].
+    
+    \item Eurotherm (2024) \textit{An Introduction to the Heat Treatment of Metallic Alloys}. Available at: \url{https://www.eurotherm.com/sv/heat-treatment-articles-sv/an-introduction-to-the-heat-treatment-of-metallic-alloys/} [Accessed 19 December 2024].
+    
     \item Fedulov, B., Fedorenko, A., Safonov, A., Lomakin, E. (2017) \textit{Nonlinear shear behavior and failure of composite materials under plane stress conditions}. Available at: \url{https://www.semanticscholar.org/paper/Nonlinear-shear-behavior-and-failure-of-composite-Fedulov-Fedorenko/e0c9fe9ec59efa00bd5972b700436d913c9c8b6f} [Accessed 12 December 2024].
-    
-    \item Thibault, S. (2009) \textit{Multicharged nitrogen ion-implantation effects on physico-chemical properties and microstructure of aluminium}. ResearchGate. Available at: \url{https://www.researchgate.net/figure/Indenteur-Vickers-et-empreinte-residuelle-apres-essai-La-durete-Vickers-H-v-est-alors_fig63_278633876} [Accessed 21 December 2024].
-    
-    \item Modak, A. (2023) \textit{Aluminium Alloy HE 30 – Composition, Properties and Uses}. ThePipingMart. Available at: \url{https://blog.thepipingmart.com/grades/aluminium-alloy-he-30-composition-properties-and-uses/} [Accessed 8 December 2024].
-    
-    \item Wikipedia (2024) \textit{Hooke's law}. Available at: \url{https://en.wikipedia.org/wiki/Hooke\%27s_law} [Accessed 8 December 2024].
-    
-    \item Sild, S. (2024) \textit{Precipitation Hardening - How It Works, Benefits \& More}. Fractory. Available at: \url{https://fractory.com/precipitation-hardening-explained/} [Accessed 14 December 2024].
     
     \item MechaniCalc (2011) \textit{Mechanical Properties of Materials}. Available at: \url{https://mechanicalc.com/reference/mechanical-properties-of-materials} [Accessed 27 December 2024].
     
-    \item Testbook (2023) \textit{Modulus of Resilience: Formula, Units, Calculation, \& Importance}. Available at: \url{https://testbook.com/civil-engineering/modulus-of-resilience} [Accessed 16 December 2024].
+    \item Modak, A. (2023) \textit{Aluminium Alloy HE 30 – Composition, Properties and Uses}. ThePipingMart. Available at: \url{https://blog.thepipingmart.com/grades/aluminium-alloy-he-30-composition-properties-and-uses/} [Accessed 8 December 2024].
     
-    \item Wikipedia Contributors (2019) \textit{Yield (engineering)}. Wikipedia. Available at: \url{https://en.wikipedia.org/wiki/Yield_\%28engineering\%29} [Accessed 9 December 2024].
-    
-    \item Webassign (2003) \textit{n/a}. Available at: \url{https://demo.webassign.net/ebooks/cj6demo/xlinks/c10-fig-0034.htm} [Accessed 22 December 2024].
-    
-    \item Yalcin, D. (2017) \textit{Effect of Specimen Geometry on Tensile Testing Results}. ADMET. Available at: \url{https://www.admet.com/blog/effect-specimen-geometry-tensile-testing-results/} [Accessed 22 December 2024].
-    
-    \item Ultramag (2024) \textit{Hardness Testing}. Available at: \url{https://www.ultramag.co.uk/ndt-inspection/hardness-testing/} [Accessed 30 December 2024].
-    
-    \item Zwick Roell (2024) \textit{Vickers hardness testing: ISO 6507, ASTM E384}. Available at: \url{https://www.zwickroell.com/industries/metals/metals-standards/vickers-test-iso-6507/} [Accessed 6 December 2024].
-    
-    \item Actonbrightsteel (2020) \textit{6082 T6 - Acton Bright Steel Technical Guide}. Available at: \url{https://www.actonbrightsteel.co.uk/6082-t6-acton-bright-steel.html} [Accessed 30 December 2024].
-    
-    \item Aalco (2019) \textit{Aluminium Alloy - Commercial Alloy - 6082 - T6~T651 Plate}. Available at: \url{https://www.aalco.co.uk/datasheets/Aluminium-Alloy_6082-T6~T651_148.ashx} [Accessed 18 December 2024].
+    \item mkt (2023) \textit{How do Fractional Factorial Designs relate to 'Response Surface Methodology'?}. StackExchange. Available at: \url{https://stats.stackexchange.com/questions/610940/how-do-fractional-factorial-designs-relate-to-response-surface-methodology}
     
     \item N.A.S.R.U.L DESIGN (2024) \textit{NDT - Brief overview}. Available at: \url{https://nasruldesign.weebly.com/ndt---brief-overview.html} [Accessed 30 December 2024].
     
+    \item Rajaa, S. M., Abdulhadi, H. A., Jabur, K. S., and Mohammed, G. R. (2018) \textit{Aging Time Effects on the Mechanical Properties of Al 6061-T6 Alloy}. Available at: \url{https://pdfs.semanticscholar.org/a99b/8b7e771be0fecaaeb970074c7a2871a77032.pdf} [Accessed 19 December 2024].
+    
+    \item Rovida, C., et al. (2015) \textit{Integrated Testing Strategies (ITS) for Safety Assessment}. Available at: \url{https://www.researchgate.net/publication/6538912_The_Principles_of_Weight_of_Evidence_Validation_of_Test_Methods_and_Testing_Strategies_The_Report_and_Recommendations_of_ECVAM_Workshop_58} [Accessed 20 December 2024].
+    
     \item ScienceDirect (n.d.) \textit{Indentation Hardness Testing - an overview}. Available at: \url{https://www.sciencedirect.com/topics/materials-science/indentation-hardness-testing} [Accessed 4 December 2024].
     
-    \item Chandler, H. (ed.) (1999) \textit{Hardness Testing}. 2nd edn. ASM International. Available at: \url{https://nasruldesign.weebly.com/uploads/7/4/1/9/7419180/hardness_testing_manual.pdf} [Accessed 29 December 2024].
+    \item Sild, S. (2024) \textit{Precipitation Hardening - How It Works, Benefits \& More}. Fractory. Available at: \url{https://fractory.com/precipitation-hardening-explained/} [Accessed 14 December 2024].
+    
+    \item Singh, P., Singh, R.K. \& Das, A.K. (2023) \textit{Optimization of Heat Treatment Cycle for Cast-Al6082 Alloy to Enhance the Mechanical Properties}. Research Square. Available at: \url{https://assets-eu.researchsquare.com/files/rs-3363991/v1/9cd60f8c-a164-4e04-8552-1933478eaded.pdf?c=1711467707} [Accessed 7 December 2024].
+    
+    \item Testbook (2023) \textit{Modulus of Resilience: Formula, Units, Calculation, \& Importance}. Available at: \url{https://testbook.com/civil-engineering/modulus-of-resilience} [Accessed 16 December 2024].
+    
+    \item Thibault, S. (2009) \textit{Multicharged nitrogen ion-implantation effects on physico-chemical properties and microstructure of aluminium}. ResearchGate. Available at: \url{https://www.researchgate.net/figure/Indenteur-Vickers-et-empreinte-residuelle-apres-essai-La-durete-Vickers-H-v-est-alors_fig63_278633876} [Accessed 21 December 2024].
+    
+    \item Thyssenkrupp Materials (2023) \textit{Aerospace Grade Aluminium}. Available at: \url{https://www.thyssenkrupp-materials.co.uk/aerospace-grade-aluminum} [Accessed 19 December 2024].
+    
+    \item Truventor (2019) \textit{Aluminium 6082 Data Sheet}. Available at: \url{https://truventor.ai/assets/pdf/datasheets/Aluminium\%206082.pdf} [Accessed 19 December 2024].
+    
+    \item Ultramag (2024) \textit{Hardness Testing}. Available at: \url{https://www.ultramag.co.uk/ndt-inspection/hardness-testing/} [Accessed 30 December 2024].
+    
+    \item Webassign (2003) \textit{n/a}. Available at: \url{https://demo.webassign.net/ebooks/cj6demo/xlinks/c10-fig-0034.htm} [Accessed 22 December 2024].
+    
+    \item Wikipedia Contributors (2024) \textit{Hooke's law}. Available at: \url{https://en.wikipedia.org/wiki/Hooke\%27s_law} [Accessed 8 December 2024].
+    
+    \item Wikipedia Contributors (2019) \textit{Yield (engineering)}. Wikipedia. Available at: \url{https://en.wikipedia.org/wiki/Yield_\%28engineering\%29} [Accessed 9 December 2024].
+    
+    \item Yalcin, D. (2017) \textit{Effect of Specimen Geometry on Tensile Testing Results}. ADMET. Available at: \url{https://www.admet.com/blog/effect-specimen-geometry-tensile-testing-results/} [Accessed 22 December 2024].
+    
+    \item Zwick Roell (2024) \textit{Vickers hardness testing: ISO 6507, ASTM E384}. Available at: \url{https://www.zwickroell.com/industries/metals/metals-standards/vickers-test-iso-6507/} [Accessed 6 December 2024].
 \end{enumerate}
 
 
@@ -2746,12 +2749,13 @@ The differences between AR values and typical internet-reported values highlight
 %\textbf{Note}: The Brinell test may use either $P$ or $F$ for the load, depending on the source.\\ 
 %The BHN provides insight into a material's ability to resist wear and deformation, which is important for assessing the durability and suitability of metals in various engineering applications. BHN values are particularly useful for testing larger, rougher materials and are commonly applied to metals like steel and cast iron. The results help predict wear resistance and strength under load.
 \subsection{RSM and FFS}
-\textbf{Response Surface Methodology (RSM)} is a type of adaptive or sequential design. Sequential designs involve multiple rounds of experimentation, with the choice of treatments in each later round being dependent on the data accumulated from completed rounds. RSM is usually used to identify some sort of optimum, often for industrial production. Sequential designs also exist outside of the RSM framework, however, such as Bayesian Adaptive Experimental Design.\\[8pt]
-\textbf{Fractional Factorial Designs (FFDs)} are a specific group of experimental designs. They allow useful information to be extracted from relatively tiny experiments, especially in situations with a large number of predictors. The central (quite reasonable) assumption is that higher-order interactions are less important than lower-order ones and main effects, which is called the "sparsity-of-effects principle". Experimental designs can therefore be scaled down by neglecting the higher-order interactions. This scaling down involves intentionally confounding (‘aliasing’) combinations of factors relative to the full factorial experiment, with the consequence that one cannot estimate each separate main effect and interaction term. We can still learn a great deal of useful information from the data despite this limitation, though.\\[8pt]
-\textbf{How RSM and FFDs interact:}\\[8pt]
-FFDs are most often used as a component of RSM. But they can in principle be used independently, either as part of a one-shot experiment, or as part of a sequential design approach that does not involve RSM. They seem unlikely to be very useful when used in a one-shot experiment, which is probably why they are so tightly connected to RSM.\\[8pt]
-Additionally, RSM can take as its input experimental designs that are not FFDs. Central Composite Designs and Box-Behnken designs are two other commonly-used designs.\\[8pt]
-My thanks to kjetil b halvorsen and Gregg H for their input and the suggested resources. I was not able to lay my hands on the Montgomery book but found the Box, Hunter \& Hunter book very useful.
-
+\begin{formal}[mkt, 2023]
+    \textbf{Response Surface Methodology (RSM)} is a type of adaptive or sequential design. Sequential designs involve multiple rounds of experimentation, with the choice of treatments in each later round being dependent on the data accumulated from completed rounds. RSM is usually used to identify some sort of optimum, often for industrial production. Sequential designs also exist outside of the RSM framework, however, such as Bayesian Adaptive Experimental Design.\\[8pt]
+    \textbf{Fractional Factorial Designs (FFDs)} are a specific group of experimental designs. They allow useful information to be extracted from relatively tiny experiments, especially in situations with a large number of predictors. The central (quite reasonable) assumption is that higher-order interactions are less important than lower-order ones and main effects, which is called the "sparsity-of-effects principle". Experimental designs can therefore be scaled down by neglecting the higher-order interactions. This scaling down involves intentionally confounding (‘aliasing’) combinations of factors relative to the full factorial experiment, with the consequence that one cannot estimate each separate main effect and interaction term. We can still learn a great deal of useful information from the data despite this limitation, though.\\[8pt]
+    \textbf{How RSM and FFDs interact:}\\[8pt]
+    FFDs are most often used as a component of RSM. But they can in principle be used independently, either as part of a one-shot experiment, or as part of a sequential design approach that does not involve RSM. They seem unlikely to be very useful when used in a one-shot experiment, which is probably why they are so tightly connected to RSM.\\[8pt]
+    Additionally, RSM can take as its input experimental designs that are not FFDs. Central Composite Designs and Box-Behnken designs are two other commonly-used designs.\\[8pt]
+    My thanks to kjetil b halvorsen and Gregg H for their input and the suggested resources. I was not able to lay my hands on the Montgomery book but found the Box, Hunter \& Hunter book very useful.
+\end{formal}
     
 \end{document}
