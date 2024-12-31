@@ -238,11 +238,11 @@
         }
         Student & Course & Contribution & Picture \\ 
         Sakariye Abiikar & Mechanical Engineering & Results, Theory, Recommendations & \includegraphics[width=2cm,valign=c]{images/image(7).jpeg} \\ 
-        Alrifai Naim & Mechanical Engineering  & Introduction & \includegraphics[width=2cm,valign=c]{images/image(9).jpeg} \\ 
-        Harry J Carter-Oram & Mechanical Engineering  &  & \includegraphics[width=2cm,valign=c]{images/profile.jpg} \\ 
-        Aland Floyd Noronha & Mechanical Engineering & Discussion, References & \includegraphics[width=2cm,valign=c]{images/Media.jpeg} \\ 
+        Alrifai Naim & Mechanical Engineering  & \textcolor{red}{Introduction? NEEDS CONFIRM} & \includegraphics[width=2cm,valign=c]{images/image(9).jpeg} \\ 
+        Harry J Carter-Oram & Mechanical Engineering  & \textcolor{red}{bruh} & \includegraphics[width=2cm,valign=c]{images/profile.jpg} \\ 
+        Aland Floyd Noronha & Mechanical Engineering & \textcolor{red}{Discussion? NEEDS CONFIRM} & \includegraphics[width=2cm,valign=c]{images/Media.jpeg} \\ 
         Alan Roy & Mechanical Engineering & Results, Discussion, Conclusion  & \includegraphics[width=2cm,valign=c]{images/image(8).jpeg} \\ 
-        Sandeep Singh & Civil Engineering &  & \includegraphics[width=2cm,valign=c]{images/profile.jpg} \\     
+        Sandeep Singh & Mechanical Engineering & Theory & \includegraphics[width=2cm,valign=c]{images/image(10).jpeg} \\     
     \end{tblr}
   
     \normalsize
@@ -861,24 +861,11 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
     \begin{equation}
         \text{HV5} = \frac{49.03}{A} \approx \, \frac{90.902}{d^2} \approx \, \frac{354.781}{\left(d_1 + d_2\right)^2}
     \end{equation}
-    Values for \(d_1\) and \(d_2\) were obtained from the machine dial, and the corresponding hardness values were calculated accordingly. It is worth noting, if not already disclosed, that the resulting HV and HV5 values are expressed as dimensionless numbers. Special thanks to N.A.S.R.U.L DESIGN (2024) for their valuable insights and assistance with the logical framework.\\[1em]
+    Values for \(d_1\) and \(d_2\) were obtained from the machine dial, and the corresponding hardness values were calculated accordingly. It is worth noting, if not already disclosed, that the resulting HV and HV5 values are expressed as dimensionless numbers. Special thanks to N.A.S.R.U.L DESIGN (2024) for insights and assistance with the logical framework of the Vickers hardness.\\[1em]
     \hrule\vspace{1em}
     Going into detail about each type of hardness, along with their specific equations and characteristics, seems excessive for this context. I concentrated on Vickers hardness because it directly relates to the test we performed. My goal is to include only the information that is specifically relevant to this report.
     
     \newpage
-
-    \subsection{Tensile Testing}\label{tt}
-    
-    \begin{formal}[iqytechnicalcollege, 2012]
-        Tensile testing is used to establish operational load limits for metals and alloys. A sample of the material is prepared so that a force can be applied along its axis. A central portion of the sample is reduced in width so that it will experience the highest stresses.\\[8pt]
-        The tensile test measures the ability of a material to support a stress (force per unit area). The response of a tensile sample to the application of an increasing stress can be described in terms of elastic and plastic behavior. Initially, the sample undergoes elastic elongation as it is pulled. As increasing stress is applied, the sample undergoes permanent deformation; that is, plastic strain.\\[8pt]
-        A stress-strain curve is used to determine the point at which the reversible elastic strain is exceeded and permanent or plastic deformation occurs. The yield strength is the stress necessary to cause significant plastic deformation (usually defined as 0.2\% strain).\\[8pt]
-        Young’s modulus, or the modulus of elasticity, states the relationship between stress and strain represented by the straight-line portion of the stress-strain curve. It reflects the tendency of a material to deflect under a given applied stress.\\[8pt]
-        Once yielding has begun, there is significant motion of dislocations within the metal grains. Grain boundaries, phase boundaries, and other dislocations hinder their movement. As more obstacles are encountered, the stress necessary to cause continued dislocation movement becomes greater. The maximum stress that the material can withstand before breaking is the ultimate tensile strength.\\[8pt]
-        Reduction of area and percent elongation can be calculated from the broken sample. They are both indicators of a material’s ductility.
-        \end{formal}
-
-     Stress and strain are fundamental concepts in tensile testing:\\[8pt]
      \subsection{Stress}
      \textbf{Stress} ($\sigma$) is the force (\(F\)) divided by the cross-sectional area (\(A\)) where that force is applied perpendicular to the material. In a tensile test, specifically the \textit{engineering stress}, the area is constant (initial area $A_0$), while the applied force ($F$) changes. Mathematically, it is expressed as:\\[8pt]
     \begin{minipage}{0.46\textwidth}
@@ -903,13 +890,12 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
                 \wm{\item \(d\): Depth or thickness (meters, \(\text{m}\))}            
             \end{itemize}
         \end{minipage}\\[8pt]
-        The final stress should be expressed in Newtons per meter, in so unit conversions must be applied where necessary to achieve that.
-        \newpage
+        The final stress should be expressed in Newtons per meter, in so unit conversions must be applied where necessary to achieve that.\\[8pt]
         Stress ($\sigma$) is a measure of how much internal resistance a material has against external forces that try to change its shape. It indicates how a material responds to applied loads, detailing the intensity of the internal force for each unit area.\\[8pt]
         Understanding stress is essential for analyzing how materials deform under various loading conditions and is crucial for evaluating their strength and structural integrity, especially before any yielding or plastic deformation takes place.        
 
         \subsection{Strain}
-        Strain ($\varepsilon$) is defined as the ratio of the change in length ($\Delta L$) to the original length ($L_0$) of the material, where these lengths refer to the gauge length used in a tensile test. The original length \(L_0\) is constant, and the change in length \(\Delta L\) varies. Unlike stress, strain is a dimensionless quantity because it indicates how much a material stretches or compresses in response to stress, without having any units. It can be mathematically expressed as:\\[8pt]
+        Strain ($\varepsilon$) is defined as the ratio of the change in length ($\Delta L$) to the original length ($L_0$) of the material, where these lengths refer to the gauge length used in a tensile test. The original length \((L_0)\) is constant, and the change in length \((\Delta L)\) varies\footnotemark. Unlike stress, strain is a dimensionless quantity because it indicates how much a material stretches or compresses in response to stress, without having any units. It can be mathematically expressed as:\\[8pt]
         
         \begin{minipage}{0.48\textwidth}
             \begin{equation}
@@ -924,30 +910,36 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
         \end{minipage}\hfill
         \begin{minipage}{0.48\textwidth}
             \begin{equation}
-                \Delta L = \left| L - L_0 \right|
+                \Delta L =  L - L_0
                 \label{eq:deltaL}
             \end{equation}
             \begin{itemize}[left=0pt,itemsep=-1mm]
                 \item \( \Delta L \): Change in length (meters, \(\text{m}\))
-                \item \( L \): Current length (meters, \(\text{m}\))\footnotemark
+                \item \( L \): Current length (meters, \(\text{m}\))
                 \item \( L_0 \): Original length (meters, \(\text{m}\))
             \end{itemize}
         \end{minipage}\\[8pt]
-        Unit conversions should ensure that $\Delta L$ and $L_0$ are in the same units, with the final strain ($\varepsilon$) being unitless.\\[8pt]
+        Unit conversions should ensure that $(\Delta L)$ and $(L_0)$ are of the same units, so that the strain $(\varepsilon)$ is unit less.\\[8pt]
         Strain ($\varepsilon$) measures how much a material deforms when a force is applied. It reflects the change in length relative to the material's original length.\\[8pt]
-        Grasping the concept of strain is essential for understanding how materials behave under load, especially regarding their elasticity. It shows whether a material can return to its original shape after the load is removed (elastic deformation) or if it will undergo permanent deformation (plastic deformation). Because it helps determine the point at which a material may fail or become permanently deformed.
+        Grasping the concept of strain is essential for understanding how materials behave under load, especially regarding their elasticity. It shows whether a material can return to its original shape after the load is removed (elastic deformation) or if it will undergo permanent deformation (plastic deformation). Because it helps determine the point at which a material may fail or become permanently deformed.\\
         \footnotetext{In practice, tensile testing machines usually determine displacement by counting incremental encoder pulses instead of measuring absolute position. The overall displacement is computed by adding these incremental changes starting from the initial reference point.}
-
+        \newpage
     \subsection{True Stress and Strain}
     Engineers typically work with \textbf{engineering stress}, which is the force divided by the original area of the specimen before loading (See Eq. \ref{eq:stress}).\\[8pt] However, as a material is loaded, the area decreases. The \textbf{true stress}, $(\tilde{\sigma})$, considers the actual area of the specimen. Because the area decreases as a material is loaded, true stress is higher than engineering stress.\\[8pt]
-    The figure below shows an engineering stress-strain curve as compared to a true stress-strain curve. Because the engineering stress is calculated as force divided by the original area (which is constant), the engineering stress-strain curve has the same shape as the load-deflection curve. The engineering stress-strain curve drops after the ultimate strength is reached because the force that can be supported by the material drops as it begins to neck down. However, the stress value in the true stress-strain curve always increases as the strain increases. This is because the instantaneous value of area is used when calculating true stress. Even when the force supported by the material \newpage 
-    drops, the reduction in the specimen area outweighs the reduction in force, and the stress continues to increase. (mechanicalc, 2024)    
+    \begin{minipage}{0.45\textwidth}
+        The figure to the side here shows an engineering stress-strain curve as compared to a true stress-strain curve.\\[8pt]
+        Because the engineering stress is calculated as force divided by the original area (which is constant), the engineering stress-strain curve has the same shape as the load-deflection curve.\\[8pt] 
+        The engineering stress-strain curve drops after the ultimate strength is reached because the force that can be supported by the material drops as it begins to neck down. However, the stress value in the true stress-strain curve always increases as the strain increases. This is because the instantaneous value of area is used when calculating true stress.
+    \end{minipage}\hfill
+    \begin{minipage}{0.5\textwidth}
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.6\textwidth]{images/true-stress-strain-diagram-01.png}
+        \includegraphics[width=1\textwidth]{images/true-stress-strain-diagram-01.png}
         \caption{True and engineering Stress and Strain curves (mechanicalc, 2024)}
         \label{fig:tvn}
     \end{figure}
+    \end{minipage}\\[8pt]
+    Even when the force supported by the material drops, the reduction in the specimen area outweighs the reduction in force, and the stress continues to increase. (mechanicalc, 2024)    \\[8pt]
     It should be noted that the engineering stress and the true stress are essentially the same in the linear-elastic region of the stress-strain curve. Because engineers typically operate within this linear-elastic region (it is uncommon to design a structure that is intended to operate beyond the elastic limit), it is valid to work with engineering stress as opposed to true stress.\\[8pt]
     \textbf{Engineering strain} is the change in length divided by the original length (See Eq. \ref{eq:strain}) Instead of just calculating a single value of $\Delta L$, consider that the change in length is divided among many small increments, $\Delta L_j$. The strain is also calculated in small increments:
     \begin{equation}
@@ -988,10 +980,9 @@ Once all three alloys broke, we were left with a shared force vs. change in leng
     \end{figure}
 \end{minipage}}\hspace{1em}
 {\begin{minipage}{\dimexpr\textwidth-0.55\textwidth\relax}
-    Young's Modulus ($E$) is a key material property that defines the relationship between stress ($\sigma$) and strain ($\varepsilon$) within the elastic range of a material's deformation. It indicates the stiffness of a material, showing how much strain will result from a specific stress.
-    
+    Young's Modulus ($E$) is a key material property that defines the relationship between stress ($\sigma$) and strain ($\varepsilon$) within the elastic range of a material's deformation. It indicates the stiffness of a material, showing how much strain will result from a specific stress.\\[8pt]
     In a tensile test, Young's Modulus is calculated from the linear section of the stress-strain curve, 
-\end{minipage}
+\end{minipage}\\[3pt]
 known as the elastic region, where the material deforms in proportion to the applied load, as illustrated above (See Figure \ref{fig:young}).\\[8pt]  
 In this region, the material will revert to its original shape once the load is removed, and the relationship between stress and strain remains linear.\\[8pt] 
 Young's Modulus is significant because it quantifies a material's stiffness, which is crucial for selecting appropriate materials in engineering and construction.
@@ -1089,7 +1080,7 @@ Yielding can be defined in several ways:\\
  \end{enumerate}
   \end{minipage}\\[8pt]
 \textbf{Upper and Lower Yield Points:} For materials like mild steel, an upper yield point is followed by a drop to a lower yield point. The lower yield point is used for conservative design (Wikipedia, 2024).\\[8pt]
-The \textbf{Elastic Limit (Yield Strength)} is important in determining the maximum allowable load a material can bear without permanent deformation. It is distinct from the \textit{ultimate tensile strength} (UTS), which is the maximum load a material can withstand before failure. For ductile materials, the ratio of yield strength to UTS is often used in applications like pipelines and is proportional to the strain hardening exponent shown in the ratio section (See Section \ref{}).
+The \textbf{Elastic Limit (Yield Strength)} is important in determining the maximum allowable load a material can bear without permanent deformation. It is distinct from the \textit{ultimate tensile strength} (UTS), which is the maximum load a material can withstand before failure. For ductile materials, the ratio of yield strength to UTS is often used in applications like pipelines and is proportional to the strain hardening exponent (See Section \ref{mpr}).
     
 \newpage    
 
@@ -1101,7 +1092,7 @@ The \textbf{modulus of resilience} is defined as the \textbf{maximum energy} abs
     U_r = \frac{\text{Proof Resilience}}{\text{Volume of the object}}
 \end{equation}
 
-Where proof resilience refers to the area under the stress-strain curve up to the elastic limit. To understand the modulus of resilience, it is important to first define \textbf{resilience} and \textbf{proof resilience}.
+Where proof resilience refers to the area under the stress-strain curve up to the elastic limit. To understand the modulus of resilience, it is important to first define \textbf{resilience} and \textbf{proof resilience} (mechcontent, 2024):
 
 \begin{center}
 \begin{minipage}[t]{0.46\textwidth}
@@ -1111,7 +1102,7 @@ Where proof resilience refers to the area under the stress-strain curve up to th
     \caption{resilience (mechcontent,2024)}
     \label{fig:resilience}
 \end{figure}
-\textbf{Resilience} is the \textbf{energy stored} in an object or specimen when it is strained below the elastic limit. More specifically, it is the strain energy stored in the object up to the elastic limit. It can also be described as the area under the load deflection curve up to the elastic limit (mechanicalc,2024;mechcontent,2024;testbook,2023).
+\textbf{Resilience} is the \textbf{energy stored} in an object or specimen when it is strained below the elastic limit. More specifically, it is the strain energy stored in the object up to the elastic limit. It can also be described as the area under the load deflection curve up to the elastic limit (mechanicalc, 2024; testbook, 2023).
 \end{minipage}\hfil
 \begin{minipage}[t]{0.46\textwidth}
 \begin{figure}[H]
@@ -1120,7 +1111,7 @@ Where proof resilience refers to the area under the stress-strain curve up to th
     \caption{proof-resilience, (mechcontent,2024)}
     \label{fig:proof-resilience}
 \end{figure}
-\textbf{Proof resilience} is the \textbf{maximum value} of resilience, or the maximum amount of strain energy absorbed by the object up to the elastic limit. This energy does not cause permanent deformation. Proof resilience is also represented by the area under the stress-strain curve up to the elastic limit (mechcontent,2024;testbook,2023).
+\textbf{Proof resilience} is the \textbf{maximum value} of resilience, or the maximum amount of strain energy absorbed by the object up to the elastic limit. This energy does not cause permanent deformation. Proof resilience is also represented by the area under the stress-strain curve up to the elastic limit (mechcontent, 2024; testbook, 2023).
 \end{minipage}
 
 \end{center}
@@ -1150,8 +1141,8 @@ Where:
 \begin{itemize}[itemsep=-1mm]
     \item \( E \): {Young's modulus} (Pascals, Pa) or (Newtons per meter squared, \( \text{N/m}^2 \))
 \end{itemize}
-The formula represents the modulus of resilience, which is the maximum strain energy per unit volume that the material can store in the elastic region (up to the yield point) without permanent deformation. Volume does not explicitly appear because the modulus of resilience (\(U_r\)) is defined strain energy density, which is the strain energy per unit volume. This is equal to the area under the stress-strain diagram:  Stress (\(\sigma\)) and strain (\(\varepsilon\)) are normalized measures that inherently account for material dimensions, so their product directly yields energy density without needing to include volume in the formula.\\[8pt]
-Off course for non-linear elastic materials, the area under the stress-strain curve up to the yield point must be calculated directly, as the simplified formulas may not apply.
+The formula represents the modulus of resilience, which is the maximum strain energy per unit volume that the material can store in the elastic region (up to the yield point) without permanent deformation. For non-linear elastic materials, the area under the stress-strain curve up to the yield point must be calculated directly, in general integral form, as the simplified formulas may not apply.
+
 \newpage    
 
 \subsection{Ultimate Tensile Strength (UTS)}
@@ -1167,7 +1158,7 @@ It corresponds to the maximum force ($F_{\text{max}}$) applied relative to the o
 \end{itemize}
 In practical terms, UTS measures the maximum force per unit area a material can handle before failure. The value of UTS ($\sigma_{u}$) is observed directly from experimental data as the highest stress on a stress-strain curve. However, this equation is not always a useful analytical tool, as UTS is an observational property rather than a predictive one, especially since we typically use stress-strain relationships as the foundation for analysis.
 \begin{center}
-    \begin{minipage}{0.47\textwidth}\centering
+    \begin{minipage}{0.42\textwidth}\centering
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.9\textwidth]{images/ultimate-tensile-strength.png}
@@ -1235,7 +1226,7 @@ The \textbf{ultimate strain} $(\varepsilon_u)$ accounts for both plastic and ela
 \end{itemize} 
 \end{formal}
 \newpage
-While \ref{useless} provides a theoretical relationship between ultimate strain, plastic strain at failure, ultimate stress, and Young's modulus, its practical utility is limited because ultimate strain is typically measured directly from experimental data rather than calculated\\[8pt]
+While Eq. \ref{useless} provides a theoretical relationship between ultimate strain, plastic strain at failure, ultimate stress, and Young's modulus, its practical utility is limited because ultimate strain is typically measured directly from experimental data rather than calculated\\[8pt]
 The stress at the ultimate strain is known as the \textbf{Fracture Stress} \((\sigma_f)\) represents the stress at the point where the material breaks. It is typically less than the Ultimate Tensile Strength (UTS) for ductile materials because the material continues to deform plastically after reaching UTS but before fracturing.\\[8pt]
 Another important material property that can be measured during a tensile test is the reduction in area, which is calculated by:
 \begin{equation}
