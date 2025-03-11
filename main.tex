@@ -32,7 +32,6 @@
 \usepackage[oldvoltagedirection]{circuitikz}
 \usepackage{microtype}
 \usepackage{tikz-3dplot}
-\usepackage{bibref}
 \usepackage{textcomp}
 % Custom commands
 \newcommand{\vect}[1]{\boldsymbol{\mathbf{#1}}}
@@ -59,33 +58,33 @@
 \newcommand{\formalsource}{} % Initialize an empty macro to store the source text
 
 \newenvironment{formal}[1][]{% Start of the environment
-    \renewcommand{\formalsource}{#1}% Store the optional argument
-    \def\FrameCommand{%
-        \hspace{1pt}%
-        {\color{gray}\vrule width 2pt}%
-        {\color{white}\vrule width 4pt}%
-        \colorbox{white}%
-    }%
-    \MakeFramed{\advance\hsize-\width\FrameRestore}%
-    \noindent\hspace{-4.55pt}% Disable indenting the first paragraph
-    \begin{adjustwidth}{}{7pt}%
-        \vspace{2pt}%
-    }%
-    {%
-        \vspace{4pt}%
-        \ifx\formalsource\empty % Check if the source is empty
-        \else
-        \hfill{\footnotesize{\formalsource}}% Align source to the bottom-right
-        \fi
-    \end{adjustwidth}\endMakeFramed%
+	\renewcommand{\formalsource}{#1}% Store the optional argument
+	\def\FrameCommand{%
+		\hspace{1pt}%
+		{\color{gray}\vrule width 2pt}%
+		{\color{white}\vrule width 4pt}%
+		\colorbox{white}%
+	}%
+	\MakeFramed{\advance\hsize-\width\FrameRestore}%
+	\noindent\hspace{-4.55pt}% Disable indenting the first paragraph
+	\begin{adjustwidth}{}{7pt}%
+		\vspace{2pt}%
+	}%
+	{%
+		\vspace{4pt}%
+		\ifx\formalsource\empty % Check if the source is empty
+		\else
+		\hfill{\footnotesize{\formalsource}}% Align source to the bottom-right
+		\fi
+	\end{adjustwidth}\endMakeFramed%
 }
 
 
 % Custom itemize list with images for positive and negative items
 \newlist{gitemize}{itemize}{1} % Just one level for the list
 \setlist[gitemize,1]{
-    leftmargin=2.8em, % Adjust the margin for the list
-    labelsep=1em % Control the space between the label and the list item
+	leftmargin=2.8em, % Adjust the margin for the list
+	labelsep=1em % Control the space between the label and the list item
 }
 
 % Define checkmark and cross symbols for positive and negative items
@@ -101,9 +100,9 @@
 
 
 \newcommand{\wm}[1]{%
-    \begin{minipage}{1\textwidth}
-        #1
-    \end{minipage}%
+	\begin{minipage}{1\textwidth}
+		#1
+	\end{minipage}%
 }
 
 \pagestyle{fancy}
@@ -124,12 +123,12 @@
 \setlength{\footskip}{20pt}
 
 %\fancypagestyle{plain}{
-%    \fancyhf{} % Clear all header and footer fields for plain style
-%    \fancyhead[L]{\includegraphics[height=1.2cm]{images/Kingston_University_London_logo_200-tablet.png}} % Left header
-%    \fancyhead[R]{EG4019 - ME - Engineering Mechanics and Materials} % Right header
-%    \fancyfoot[C]{Department of Mechanical Engineering} % Center footer
-%    \fancyfoot[R]{\thepage} % Right footer (page number)
-%}
+	%    \fancyhf{} % Clear all header and footer fields for plain style
+	%    \fancyhead[L]{\includegraphics[height=1.2cm]{images/Kingston_University_London_logo_200-tablet.png}} % Left header
+	%    \fancyhead[R]{EG4019 - ME - Engineering Mechanics and Materials} % Right header
+	%    \fancyfoot[C]{Department of Mechanical Engineering} % Center footer
+	%    \fancyfoot[R]{\thepage} % Right footer (page number)
+	%}
 
 
 \usepackage[export]{adjustbox}
@@ -145,9 +144,9 @@
 \usepackage{hyperref}    % For hyperlinks
 \usepackage{xurl}        % For better URL handling
 \hypersetup{
-    colorlinks=true,
-    linkcolor=blue!50!black,
-    urlcolor=blue,       % Color for URLs
+	colorlinks=true,
+	linkcolor=blue!50!black,
+	urlcolor=blue,       % Color for URLs
 }
 
 
@@ -162,33 +161,35 @@
 \usetikzlibrary{patterns.meta}
 
 \pgfdeclarepattern{
-    name=hatch,
-    parameters={\hatchsize,\hatchangle,\hatchlinewidth},
-    bottom left={\pgfpoint{-.1pt}{-.1pt}},
-    top right={\pgfpoint{\hatchsize+.1pt}{\hatchsize+.1pt}},
-    tile size={\pgfpoint{\hatchsize}{\hatchsize}},
-    tile transformation={\pgftransformrotate{\hatchangle}},
-    code={
-        \pgfsetlinewidth{\hatchlinewidth}
-        \pgfpathmoveto{\pgfpoint{-.1pt}{-.1pt}}
-        \pgfpathlineto{\pgfpoint{\hatchsize+.1pt}{\hatchsize+.1pt}}
-        \pgfpathmoveto{\pgfpoint{-.1pt}{\hatchsize+.1pt}}
-        \pgfpathlineto{\pgfpoint{\hatchsize+.1pt}{-.1pt}}
-        \pgfusepath{stroke}
-    }
+	name=hatch,
+	parameters={\hatchsize,\hatchangle,\hatchlinewidth},
+	bottom left={\pgfpoint{-.1pt}{-.1pt}},
+	top right={\pgfpoint{\hatchsize+.1pt}{\hatchsize+.1pt}},
+	tile size={\pgfpoint{\hatchsize}{\hatchsize}},
+	tile transformation={\pgftransformrotate{\hatchangle}},
+	code={
+		\pgfsetlinewidth{\hatchlinewidth}
+		\pgfpathmoveto{\pgfpoint{-.1pt}{-.1pt}}
+		\pgfpathlineto{\pgfpoint{\hatchsize+.1pt}{\hatchsize+.1pt}}
+		\pgfpathmoveto{\pgfpoint{-.1pt}{\hatchsize+.1pt}}
+		\pgfpathlineto{\pgfpoint{\hatchsize+.1pt}{-.1pt}}
+		\pgfusepath{stroke}
+	}
 }
 
 \tikzset{
-    hatch size/.store in=\hatchsize,
-    hatch angle/.store in=\hatchangle,
-    hatch line width/.store in=\hatchlinewidth,
-    hatch size=5pt,           % Smaller hatch size for fewer lines
-    hatch angle=45pt,         % More angle to spread lines
-    hatch line width=.5pt,    % Thin lines
+	hatch size/.store in=\hatchsize,
+	hatch angle/.store in=\hatchangle,
+	hatch line width/.store in=\hatchlinewidth,
+	hatch size=5pt,           % Smaller hatch size for fewer lines
+	hatch angle=45pt,         % More angle to spread lines
+	hatch line width=.5pt,    % Thin lines
 }
 
 \usepackage[para]{footmisc} % Example of making footnotes run together in a paragraph
 \definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}  % Darker green
+
+
 
 
 \begin{document}
@@ -461,7 +462,7 @@ The experimental procedures involved several potential hazards. The identified r
     \caption{Identified hazards, associated risks, levels, and control measures.}
     \label{tab:risk-assessment}
 \end{table}
-
+\newpage
 \section{Conducting the Experiment}
 For the experiment, we were provided with three samples, Additionally, we were given an A4 sheet with a form to complete, as shown below:
 \begin{figure}[H] 
@@ -474,9 +475,8 @@ For the experiment, we were provided with three samples, Additionally, we were g
 \textbf{General Overview:}
 The experiment was conducted in two phases: measuring the dimensions and hardness of alloy samples, followed by testing their tensile properties with the Zwick Roell 2050 Tensile Testing Machine. \\[8pt]
 In the first phase, the width and length of each sample were recorded using digital calipers (in millimeters), while hardness was measured with a Vickers Hardness test machine using the HV5 scale. These tasks were conducted simultaneously, as both are quick and independent processes.\\[8pt]
-After documenting the dimensions and hardness on the data sheet (See Figure \ref{fig:alloys}), we proceeded to the second phase of the experiment, were each sample was subjected to a controlled tensile force until fracture using the Zwick Roell 2050 Tensile Testing Machine. The data, including force applied vs change in length was recorded on a shared graph for all three alloys, this along with a table outlining key metrics for the respective graphs.\\[8pt] 
-This information was printed on an A4 sheet and given for additional examination outside of the lab (see Figure \ref{fig:tensile_results}). Important parameters, including stress, strain, yield strength, uts, and others are to be calculated after the experiment and are presented as a key part of analysis in this report.\\[8pt]
-The following subsections detail the use of the equipment, outlining each step of the procedure.\\
+After documenting the dimensions and hardness on the data sheet (See Figure \ref{fig:alloys}), we proceeded to the second phase of the experiment, were each sample was subjected to a controlled tensile force until fracture using the Zwick Roell 2050 Tensile Testing Machine. The data, including force applied vs change in length was recorded on a shared graph for all three alloys, this along with a table outlining key metrics for the respective graphs. This information was printed on an A4 sheet and given for additional examination outside of the lab (see Figure \ref{fig:tensile_results}). Important parameters, including stress, strain, yield strength, uts, and others are to be calculated after the experiment and are presented as a key part of analysis in this report.\\[8pt]
+The following subsections detail the use of the equipment, outlining each step of the procedure.
 \newpage\newgeometry{margin=1in,right=0.8in,left=0.8in,bottom=0.65in}
 \begin{minipage}{0.32\textwidth}
 \hspace{2em}
@@ -2041,14 +2041,14 @@ The plastic region (rectangular portion) of the stress-strain curve significantl
  \end{enumerate}
  The resulting Stress vs. Strain graph (Figure \ref{fig:stress_strain}) provides a standardized and comparable representation of the material's behavior under tensile loading.\\\noindent\footnotetext{"A CSV (comma-separated values) file is a plain text file that stores data in a table-structured format, with commas separating values and newlines separating records. CSV files are commonly used to transfer large amounts of data between programs with little to no user reformatting"}    \newpage
  \begin{figure}[H]
-     \centering
-     \includegraphics[width=0.8\textwidth]{figures/stress_vs_strain.png}
-     \caption{Calculated produced data for Stress vs. Strain}
-     \label{fig:stress_strain}
- \end{figure} 
- The transition from Force vs Change in Length to Stress vs Strain is essential for understanding and comparing the mechanical properties of materials. By normalizing the raw data, we obtain a more universal and meaningful representation of material behavior. The utilization of code streamlines this transformation process, ensuring accuracy and efficiency in data analysis.\\[8pt] 
- Let's now define the attributes now that we have our baseline.
-   \newpage
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/stress_vs_strain.png}
+	\caption{Calculated produced data for Stress vs. Strain}
+	\label{fig:stress_strain}
+\end{figure}
+The utilization of code streamlines this transformation process, ensuring accuracy and efficiency in data analysis.\\[8pt] 
+Let's now define the attributes now that we have our baseline.
+\newpage
 \subsection{Young's Modulus}
 
 Young's Modulus, also known as the modulus of elasticity, is a measure of the stiffness of a material. It is defined as the slope of the stress-strain curve in the linear elastic region. In this section, i describe the methodology used to calculate Young's Modulus for each specimen and present the results.\\[8pt]

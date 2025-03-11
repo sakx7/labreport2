@@ -7,7 +7,7 @@
 \contentsline {subsection}{\numberline {4.3}Heat Treatments and Alloy Conditions}{9}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Equipment List}{9}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Risk Assessment}{10}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Conducting the Experiment}{10}{section.5}%
+\contentsline {section}{\numberline {5}Conducting the Experiment}{11}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Measurements}{12}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Hardness Test}{12}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}Tensile Test}{13}{subsection.5.3}%
