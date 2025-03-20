@@ -57,13 +57,13 @@
 
 \newcommand{\formalsource}{} % Initialize an empty macro to store the source text
 
-\newenvironment{formal}[1][]{% Start of the environment
+\newenvironment{formal}[3][]{% Start of the environment
 	\renewcommand{\formalsource}{#1}% Store the optional argument
 	\def\FrameCommand{%
 		\hspace{1pt}%
-		{\color{gray}\vrule width 2pt}%
-		{\color{white}\vrule width 4pt}%
-		\colorbox{white}%
+		{\color{#2}\vrule width 2pt}%
+		{\color{#3}\vrule width 4pt}%
+		\colorbox{#3}%
 	}%
 	\MakeFramed{\advance\hsize-\width\FrameRestore}%
 	\noindent\hspace{-4.55pt}% Disable indenting the first paragraph
@@ -111,7 +111,7 @@
 
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
-\usepackage{mathtools}
+
 \fancyhead[L]{\includegraphics[height=1.2cm]{images/Kingston_University_London_logo_200-tablet.png}}
 \fancyhead[R]{EG4024 – ME – Fluid Mechanics and Thermodynamics}
 \fancyfoot[C]{Department of Mechanical Engineering}
@@ -122,13 +122,6 @@
 \setlength{\headheight}{30pt}
 \setlength{\footskip}{20pt}
 
-%\fancypagestyle{plain}{
-	%    \fancyhf{} % Clear all header and footer fields for plain style
-	%    \fancyhead[L]{\includegraphics[height=1.2cm]{images/Kingston_University_London_logo_200-tablet.png}} % Left header
-	%    \fancyhead[R]{EG4019 - ME - Engineering Mechanics and Materials} % Right header
-	%    \fancyfoot[C]{Department of Mechanical Engineering} % Center footer
-	%    \fancyfoot[R]{\thepage} % Right footer (page number)
-	%}
 
 
 \usepackage[export]{adjustbox}
@@ -160,37 +153,12 @@
 
 \usetikzlibrary{patterns.meta}
 
-\pgfdeclarepattern{
-	name=hatch,
-	parameters={\hatchsize,\hatchangle,\hatchlinewidth},
-	bottom left={\pgfpoint{-.1pt}{-.1pt}},
-	top right={\pgfpoint{\hatchsize+.1pt}{\hatchsize+.1pt}},
-	tile size={\pgfpoint{\hatchsize}{\hatchsize}},
-	tile transformation={\pgftransformrotate{\hatchangle}},
-	code={
-		\pgfsetlinewidth{\hatchlinewidth}
-		\pgfpathmoveto{\pgfpoint{-.1pt}{-.1pt}}
-		\pgfpathlineto{\pgfpoint{\hatchsize+.1pt}{\hatchsize+.1pt}}
-		\pgfpathmoveto{\pgfpoint{-.1pt}{\hatchsize+.1pt}}
-		\pgfpathlineto{\pgfpoint{\hatchsize+.1pt}{-.1pt}}
-		\pgfusepath{stroke}
-	}
-}
-
-\tikzset{
-	hatch size/.store in=\hatchsize,
-	hatch angle/.store in=\hatchangle,
-	hatch line width/.store in=\hatchlinewidth,
-	hatch size=5pt,           % Smaller hatch size for fewer lines
-	hatch angle=45pt,         % More angle to spread lines
-	hatch line width=.5pt,    % Thin lines
-}
-
 \usepackage[para]{footmisc} % Example of making footnotes run together in a paragraph
 \definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}  % Darker green
 
+\usepackage{datetime}
 
-
+\usepackage{xcolor}
 
 \begin{document}
 	
@@ -203,20 +171,21 @@
 	
 	\Large    
 	\begin{tabular}{@{}l l l@{}}
-		\textbf{Submitted by:} & Sakariye Abiikar (Group Leader)\phantom{ssssss} & K2371673 \\
-		& $\zeta$~ & K~ \\
-		& $\zeta$~ &  K~ \\
-		& $\zeta$~ & K~ \\
-		& $\zeta$~ & K~ \\
-		& $\zeta$~ & K~ \\   
+		\textbf{Submitted by:} & Sakariye Abiikar & K2371673 \\
+		& Alireza Alishahi & K2333243 \\
+		& Naim Alrifai & K2459662 \\
+		& Munachi J Atuegbu & K2463699 \\
+		& Ehsan Haque & K2453799 \\
+		& Abdul Mueed & K2454880 \\   
+		& Abdelrahman Shehata & K2426523 \\   
 	\end{tabular}
 	
 	\vspace*{\fill}
 	
 	\begin{tabular}{@{}l l@{}}
-		\textbf{Key Dates:} & Date of practical: Varies\\
-		& Deadline: 31/12/2024 \\
-		& Date of submission: 31/12/2024\\
+		\textbf{Key Dates:} & Date of practical: Wednesday 19$^{\text{th}}$ March, 2025 \\
+		& Deadline: Tuesday 3$^{\text{rd}}$ April, 2025 \\
+		& Last Updated: \today\, \currenttime\\
 	\end{tabular}
 	\vspace*{\fill}
 	
@@ -237,11 +206,12 @@
 		}
 		Student & Course & Contribution & Picture \\ 
 		Sakariye Abiikar & Mechanical Engineering & ~ & \includegraphics[width=2cm,valign=c]{images/profile.jpg} \\ 
-		~ & Mechanical Engineering  & ~ & \includegraphics[width=2cm,valign=c]{images//profile.jpg} \\ 
-		~ & Mechanical Engineering & ~ & \includegraphics[width=2cm,valign=c]{images/profile.jpg} \\ 
-		~ & Mechanical Engineering & ~  & \includegraphics[width=2cm,valign=c]{images//profile.jpg} \\ 
-		~ & Mechanical Engineering & ~ & \includegraphics[width=2cm,valign=c]{images//profile.jpg} \\
-		~ & Mechanical Engineering  & ~ & \includegraphics[width=2cm,valign=c]{images/profile.jpg} \\ 
+		Alireza Alishahi & Mechanical Engineering  & ~ & \includegraphics[width=2cm,valign=c]{images//profile.jpg} \\ 
+		Naim Alrifai & Mechanical Engineering & ~ & \includegraphics[width=2cm,valign=c]{images/profile.jpg} \\ 
+		Munachi J Atuegbu & Mechanical Engineering & ~  & \includegraphics[width=2cm,valign=c]{images//profile.jpg} \\ 
+		Ehsan Haque & Mechanical Engineering & ~ & \includegraphics[width=2cm,valign=c]{images//profile.jpg} \\
+		Abdul Mueed & Mechanical Engineering  & ~ & \includegraphics[width=2cm,valign=c]{images/profile.jpg} \\ 
+		Abdelrahman Shehata & Mechanical Engineering  & ~ & \includegraphics[width=2cm,valign=c]{images/profile.jpg}\\   
 	\end{tblr}
 	
 	\normalsize
@@ -258,13 +228,56 @@
 	
 	\large\newpage\restoregeometry\vspace*{-20pt}
 	
-	\section{Abstract}
-	\vspace*{1em}
+	\noindent
 	
+\section{Abstract}
+\begin{formal}[\textcolor{blue}{1}]{blue!40!black}{blue!10!white}
+	\Large" \large \textit{In this experiment, we calibrated and compared the performance of multiple pressure-measuring devices, including two Bourdon gauges, a Budenberg pressure gauge, and an Hg glass manometer (with a maximum range of 32 cm Hg). The devices were connected to a pressure calibrator, which allowed us to apply both positive and negative pressures.}\Large\," \large   
+\end{formal}
+\textbf{Feedback:} Good start. However, you say \textit{"calibrated and compared"} consider following up with a sentence clarifying how these devices were evaluated and what they were compared with. For example:
+\begin{enumerate}
+	\item In tandem with a reference pressure calibrator (DPI-603 Portable Pressure Calibrator), which served as the baseline for pressure measurements due to its higher accuracy.  
+\end{enumerate}
+Revised:
+\begin{formal}{green!40!black}{green!10!white}
+	In this experiment, we calibrated and compared the performance of multiple pressure-measuring devices, including two Bourdon gauges, a Budenberg pressure gauge, and an Hg glass manometer (with a maximum range of 32 cm Hg), in tandem with a reference pressure calibrator (DPI-603 Portable Pressure Calibrator), which served as the baseline for pressure measurements due to its higher accuracy. The devices were connected to this DPI-603 Portable Pressure Calibrator, which allowed us to apply both positive and negative pressures in respective increments of approximately 5 kPa.
+\end{formal}
+\hrule
+\begin{formal}[\textcolor{blue}{2}]{blue!40!black}{blue!10!white}
+	\Large" \large \textit{We started by setting the pressure calibrator to zero and gradually increased the pressure in positive mode, taking readings from all the devices after each increment, with pressure changes ranging between 4.9 and 6.2 kPa.\\[1em]
+	This process was repeated 10 times. Afterward, we switched the calibrator to negative mode, reset to zero, and followed the same process again, with the readings decreasing between -5 and -6 kPa with each step.}
+\end{formal}
+\noindent\textbf{Feedback:} This level of detail is too specific for the abstract. The abstract should remain concise and focus on the purpose, and main findings rather than detailed \textbf{procedural steps} this has its own section. Part \textcolor{blue}{1} already provides sufficient context. this part should focus on datasets made and concluded statements based of off them.
+\begin{formal}[\textcolor{blue}{3}]{blue!40!black}{blue!10!white}
+	\Large" \large \textit{The collected data will be used to analyze the accuracy and consistency of the instruments under both positive and negative pressure conditions. Overall, this experiment provided a hands-on understanding of pressure calibration and highlighted how different devices respond to varying pressure inputs.} 
+\end{formal}
+\noindent\textbf{Feedback:} this is an attempt on conluding on results however the abstract should summarize key results \textbf{actually obtained} rather than describe future analysis. Instead of stating what the experiment provided, briefly outline the main findings like showing numbers. Writing the abstract last might be best, so consider using a placeholder for now. here i will provide an example:\\[1em]
+Revised:
+\begin{formal}{green!40!black}{green!10!white}
+By doing so, we obtained a rich dataset that revealed significant variations in the performance of the pressure-measuring devices. The Hg glass manometer demonstrated the highest accuracy, with deviations of $\leq$ 1\% across both positive and negative pressure ranges. The Budenberg pressure gauge also performed well, with errors $\leq$ 2\%, while the Bourdon gauges exhibited higher deviations, up to 4\%, particularly under negative pressure conditions.  These results highlight the importance of selecting appropriate devices based on precision requirements and operating conditions, as well as the potential impact of human error in reading analog instruments like the Bourdon gauges and Hg manometer. The experiment underscores the need for careful calibration, repeated measurements, and operator training to minimize errors and ensure reliable pressure measurements in practical applications.
+\end{formal}
+
+\textbf{New Abstract}\\[1em]
+In this experiment, we calibrated and compared the performance of multiple pressure-measuring devices, including two Bourdon gauges, a Budenberg pressure gauge, and an Hg glass manometer (with a maximum range of 32 cm Hg), in tandem with a reference pressure calibrator (DPI-603 Portable Pressure Calibrator), which served as the baseline for pressure measurements due to its higher accuracy. The devices were connected to this DPI-603 Portable Pressure Calibrator, which allowed us to apply both positive and negative pressures in respective increments of approximately $\pm$5 kPa. By doing so, we obtained a rich dataset that revealed significant variations in the performance of the pressure-measuring devices. The Hg glass manometer demonstrated the highest accuracy, with deviations of $\leq$ 1\% across both positive and negative pressure ranges. The Budenberg pressure gauge also performed well, with errors $\leq$ 2\%, while the Bourdon gauges exhibited higher deviations, up to 4\%, particularly under negative pressure conditions.  These results highlighted the importance of selecting appropriate devices based on precision requirements and operating conditions, as well as the potential impact of human error in reading analog instruments like the Bourdon gauges and Hg manometer. The experiment underscores the need for careful calibration, repeated measurements, and operator training to minimize errors and ensure reliable pressure measurements in practical applications.
+
 	
 	\newpage\vspace*{-20pt}
 	\section{Introduction}
 	
+
+	Pressure measurement is a fundamental aspect of many industrial processes, ensuring safety, efficiency, and accuracy in everything from manufacturing systems to environmental monitoring.\\[1em] 
+	This experiment focused on understanding how different pressure-measuring devices respond to changes in pressure by comparing their readings against a standard pressure calibrator. By conducting tests in both positive and negative pressure modes, we aimed to analyze the behaviour and accuracy of these instruments under varying conditions. \\[1em]
+	The devices used in the experiment included two Bourdon gauges, a Budenberg pressure gauge, and an Hg glass manometer with a maximum range of 32 cm Hg. Each of these instruments operates using different principles, which allowed us to observe how different technologies react to applied pressure. For instance, the Bourdon gauge measures pressure through the deformation of a coiled tube, while the Hg glass manometer relies on the displacement of mercury to indicate changes in pressure. \\[1em]
+	To conduct the experiment, all devices were connected to a pressure calibrator, which served as the reference point for applying controlled increments of pressure. Starting from zero, we gradually increased the pressure in positive mode and recorded the readings from each device after every step. This process was repeated 10 times to ensure consistency. Once the positive measurements were complete, we switched the calibrator to negative mode, reset the system to zero, and repeated the process. As pressure decreased incrementally, we captured another set of 10 readings from each device. \\[1em]
+	To analyze the collected data, we plotted a series of graphs, with the applied pressure values on the x-axis and the corresponding readings from each device on the y-axis. Separate graphs were created for Bourdon Gauge 1, Bourdon Gauge 2, the Budenberg pressure gauge, and the Hg glass manometer for both positive and negative pressure values. These visual representations will help us better interpret how the different devices performed and identify any inconsistencies or trends in the measurements. \\[1em]
+	By establishing a clear comparison between these devices, this experiment aims to deepen our understanding of how various pressure-measuring instruments behave under different conditions, ultimately providing valuable insights into their performance and reliability. 
+\\[1em]	
+	\Huge$\ldots$
+	\large
+\\[1em]
+	\noindent
+	\textcolor{red}{The \textbf{topic being studied} should serve as the foundation for an introduction, providing a concise overview for those who desire one.  In this instance, the context should be limited to gauges, absolute pressure, history, and so on, just one page.  Here again, you are referring to an introduction to the particular experiment and are even outlining steps; this is again for the \textbf{procedure section}. Please update using the new perspective I've provided, i can give you my intro i made for my other lab report as a reference its nice and concise.}\\[1em]
+
 	
 	\newpage\vspace*{-20pt}
 	\section{Method}
