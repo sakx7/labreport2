@@ -1,12 +1,10 @@
 \contentsline {section}{\numberline {1}Abstract}{4}{section.1}%
 \contentsline {section}{\numberline {2}Introduction}{6}{section.2}%
-\contentsline {section}{\numberline {3}Method}{7}{section.3}%
-\contentsline {section}{\numberline {4}Experimental Procedures}{8}{section.4}%
-\contentsline {section}{\numberline {5}Conducting the Experiment}{9}{section.5}%
-\contentsline {section}{\numberline {6}Theory}{10}{section.6}%
-\contentsline {section}{\numberline {7}Data, Calculations and Results}{11}{section.7}%
-\contentsline {section}{\numberline {8}Discussion of Results}{12}{section.8}%
-\contentsline {section}{\numberline {9}Conclusions}{13}{section.9}%
-\contentsline {section}{\numberline {10}Recommendations}{14}{section.10}%
-\contentsline {section}{\numberline {11}References}{15}{section.11}%
-\contentsline {section}{\numberline {12}Appendix}{16}{section.12}%
+\contentsline {section}{\numberline {3}Method \& Experimental Procedures}{7}{section.3}%
+\contentsline {section}{\numberline {4}Theory}{8}{section.4}%
+\contentsline {section}{\numberline {5}Data, Calculations and Results}{9}{section.5}%
+\contentsline {section}{\numberline {6}Discussion of Results}{10}{section.6}%
+\contentsline {section}{\numberline {7}Conclusions}{11}{section.7}%
+\contentsline {section}{\numberline {8}Recommendations}{12}{section.8}%
+\contentsline {section}{\numberline {9}References}{13}{section.9}%
+\contentsline {section}{\numberline {10}Appendix}{14}{section.10}%
