@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  21 MAR 2025 15:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  21 MAR 2025 16:30
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1869,6 +1869,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 LaTeX Warning: Reference `fig:DPI-603' on page 8 undefined on input line 270.
 
+
+LaTeX Warning: Reference `fig:DPI-603' on page 8 undefined on input line 272.
+
 \openout4 = `figures/main-figure0.dpth'.
 
 <extracted_images/image_8_1.png, id=9, 122.5305pt x 194.472pt>
@@ -1947,17 +1950,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 264--301
 The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
 logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
 se' to disable this.
+The command '\includegraphics [width=0.2\textwidth ]{example-image}' has been o
+ptimized away. Use '/tikz/external/optimize=false' to disable this.
+
+
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 3
+59.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `pcr' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+The command '\includegraphics [width=0.2\textwidth ]{example-image}' has been o
+ptimized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=0.2\textwidth ]{example-image}' has been o
+ptimized away. Use '/tikz/external/optimize=false' to disable this.
 
 
 The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
 logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
 se' to disable this.
 
-LaTeX Warning: Reference `Method_Experimental_Procedures' on page 10 undefined 
-on input line 313.
+LaTeX Warning: Reference `Method_Experimental_Procedures' on page 11 undefined 
+on input line 382.
 
 
-LaTeX Warning: Reference `figure:s' on page 10 undefined on input line 313.
+LaTeX Warning: Reference `figure:s' on page 11 undefined on input line 382.
 
 > Step: init table outer spec.
 > Step: parse table options.
@@ -1976,7 +1999,7 @@ LaTeX Warning: Reference `figure:s' on page 10 undefined on input line 313.
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
 
-Underfull \hbox (badness 2644) in paragraph at lines 367--367
+Underfull \hbox (badness 2644) in paragraph at lines 436--436
 []\OT1/ptm/m/n/10 (+20) Table 2: |Bour-don
  []
 
@@ -1989,7 +2012,7 @@ Underfull \hbox (badness 2644) in paragraph at lines 367--367
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
 
-Underfull \hbox (badness 2644) in paragraph at lines 393--393
+Underfull \hbox (badness 2644) in paragraph at lines 462--462
 []\OT1/ptm/m/n/10 (+20) Table 3: |Bour-don
  []
 
@@ -2029,25 +2052,16 @@ se' to disable this.
 The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
 logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
 se' to disable this.
-
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 53
+4.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
 
 The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
 logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
 se' to disable this.
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 4
-64.
-(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `pcr' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 46
-6.
-(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/t1ptm.fd
-File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-)
+
 
 The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
 logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
@@ -2061,18 +2075,18 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 71192 strings out of 473201
- 1764290 string characters out of 5716126
+ 71211 strings out of 473201
+ 1764487 string characters out of 5716126
  2557035 words of memory out of 5000000
- 93412 multiletter control sequences out of 15000+600000
- 625415 words of font info for 281 fonts, out of 8000000 for 9000
+ 93413 multiletter control sequences out of 15000+600000
+ 625892 words of font info for 290 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 88i,13n,120p,1073b,1271s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,12n,120p,1073b,1267s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol12.pf
 b></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on figures/main-figure0.pdf (1 page, 55857 bytes).
+Output written on figures/main-figure0.pdf (1 page, 55851 bytes).
 PDF statistics:
- 33 PDF objects out of 1000 (max. 8388607)
+ 34 PDF objects out of 1000 (max. 8388607)
  20 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
  57874 words of extra memory for PDF output out of 61914 (max. 10000000)

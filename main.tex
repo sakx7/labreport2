@@ -161,6 +161,13 @@
 
 \usepackage{xcolor}
 
+
+\usepackage{etoolbox}
+
+\makeatletter
+\def\tagform@#1{\maketag@@@{{Eq.~#1}}} % Adds "Eq." and makes it bold
+\makeatother
+
 \begin{document}
 	
 	\vspace*{\fill}
@@ -252,16 +259,29 @@ In this experiment, we calibrated and compared the performance of multiple press
 	
 	\newpage\vspace*{-20pt}
 	\section{Method \& Experimental Procedures}\label{Method_Experimental_Procedures}
-	We are first given a table to record our findings as shown:\footnote{We started of in the lab by doing the refrigerator but this is redacted as its not a part of this lab report, following this we did the pressure lab experiment.}
+	%We are first given a table to record our findings as shown:\footnote{We started of in the lab by doing the refrigerator but this is redacted as its not a part of this lab report, following this we did the pressure lab experiment.}
+
 	\begin{figure}[H] 
-		\centering 
-		\includegraphics[width=1\textwidth,cfbox=gray!15 1pt]{images/tableland-1_page-0001.jpg} 
-		\caption{Form for recording pressure measurements} 
-		\label{fig:pressurestable} 
+			\centering 
+			\includegraphics[width=0.95\textwidth]{extracted_images/image_7_1.png} 
+			\caption{Setup} 
+			\label{fig:setup} 
 	\end{figure}
-	We are then told the ropes of what the lab is, the steps we outlined as follows:
-	\newpage
-\hfil
+	
+	\begin{figure}[H] 
+			\centering 
+			\includegraphics[width=1\textwidth,cfbox=gray!15 1pt]{images/tableland-1_page-0001.jpg} 
+			\caption{Form for recording pressure measurements} 
+			\label{fig:pressurestable} 
+	\end{figure}
+	
+	\underline{The experiment \textbf{summary} is as follows:}\\[1em]
+	\noindent
+The instructor guided us through operating the equipment, demonstrating how to use the pressure calibrator and interpret the gauge readings. Before diving in, we received crucial instructions on what to avoid to prevent major issues—such as compromising our data, ensuring safety, and other key considerations.\\[1em] 
+After carefully analyzing the gauge readings as a team, we recorded the pressure measurements in the designated table (Figure \ref{fig:pressurestable}).\\[1em]
+A detailed breakdown of the \textbf{exact steps} we followed is provided on the next page.
+\newpage
+
 \begin{minipage}{0.5\textwidth}	
 	\subsection{Operating Procedure}
 	\begin{enumerate}[left=0in,itemsep=2mm]
@@ -280,17 +300,17 @@ In this experiment, we calibrated and compared the performance of multiple press
 		\begin{tikzpicture}[scale=0.5,transform shape]
 			\node[anchor=center] (image) at (0,0) {\includegraphics[width=1\textwidth]{extracted_images/image_8_1.png}};
 		     
-		    \draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm] (-2, 3.4) -- (-5, 3) node[left=10mm,below=5mm] {\Huge \wm{1}{Pressure\\ Units}}; 
+		    \draw[{Latex[length=3mm,width=3mm]}-,line width=0.5mm] (-2, 3.4) -- (-5, 3) node[left=10mm,below=5mm] {\Huge \wm{1}{Pressure\\ Units}}; 
 		
-		\draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm] (-0.15, -5) -- (-0.15, -8) node[below=1mm] {\Huge $\pm \text{VE}$}; 
+		\draw[{Latex[length=3mm,width=3mm]}-,line width=0.5mm] (-0.15, -5) -- (-0.15, -8) node[below=1mm] {\Huge $\pm \text{VE}$}; 
 		
-		\draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm] (1.35, -6.3) -- (3, -8) node[below=6.5mm,right] {\Huge\text{Hand Pump}}; 
+		\draw[{Latex[length=3mm,width=3mm]}-,line width=0.5mm] (1.35, -6.3) -- (3, -8) node[below=6.5mm,right] {\Huge\text{Hand Pump}}; 
 		
-		\draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm] (1.35-3, -6.3) -- (-3, -8) node[below=5.9mm,left] {\Huge\text{Volume Control}}; 
+		\draw[{Latex[length=3mm,width=3mm]}-,line width=0.5mm] (1.35-3, -6.3) -- (-3, -8) node[below=5.9mm,left] {\Huge\text{Volume Control}}; 
 		
-		\draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm] (-1.5, 5) -- (-3.5, 7.4) node[above=5.9mm,left=-1cm] {\Huge\text{Main Display}}; 
+		\draw[{Latex[length=3mm,width=3mm]}-,line width=0.5mm] (-1.5, 5) -- (-3.5, 7.4) node[above=5.9mm,left=-1cm] {\Huge\text{Main Display}}; 
 		
-		\draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm,draw=black] (2.5, 5) -- (4.3, 7.4) node[above=5.9mm,right=-1cm] {\Huge\text{Power}}; 
+		\draw[{Latex[length=3mm,width=3mm]}-,line width=0.5mm,draw=black] (2.5, 5) -- (4.3, 7.4) node[above=5.9mm,right=-1cm] {\Huge\text{Power}}; 
 		
 		\end{tikzpicture}
 		\caption{DPI-603 Portable Pressure Calibrator} 
@@ -307,6 +327,109 @@ In this experiment, we calibrated and compared the performance of multiple press
 	
 	\newpage
 	\section{Theory}
+	
+	\subsection{Pressure}
+	
+	When we talk about pressure, the first thing that comes to mind is its physical definition. It refers to the effect or various types of deflection when a force is applied to a surface.
+	
+	\begin{figure}[h]
+		\centering
+		\begin{minipage}{0.45\textwidth}
+			\centering
+			\begin{equation}
+				P = \frac{F}{A}
+				\label{eq:pressure}
+			\end{equation}
+			\wm{0.7}{
+			\begin{itemize}[itemsep=-1mm]
+				\item \( P \) = Pressure (Pa, Pascal)
+				\item \( F \) = Force applied (N, Newton)
+				\item \( A \) = Surface area (m\(^2\))
+			\end{itemize}
+			}\\[1em]\raggedright
+			"Pressure is the force per unit area exerted normal to the surface."
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{images/Pressure.jpg}
+			\caption{Illustration of pressure application}
+			\label{fig:pressure}
+		\end{minipage}
+	\end{figure}
+	\noindent
+	The type of deflection caused by pressure depends on its magnitude and the duration of application. Pressure has numerous examples and applications, such as vehicle tires and press machines.\\[1em]
+	The most effective way to estimate applied pressure is by measuring its effects, for example, by observing changes in the dimensions of an elastic object or the height of a liquid column, as shown in the following image.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{images/Piezometer.jpg}
+		\caption{Pressure measurement using a liquid column}
+		\label{fig:piezometer}
+	\end{figure}
+	\noindent
+	Pressure is categorized into two main groups: \textbf{gauge pressure} and \textbf{absolute pressure}, explained in the following diagram.
+	\subsection{Absolute Pressure}
+	Absolute pressure, or absolute zero pressure, is the lowest possible pressure measurable. Consequently, all measured pressures are positive in comparison to this reference point. Achieving absolute zero pressure is practically impossible unless calculated or represented through an extremely accurate curve.
+	\subsection{Gauge Pressure}
+	Gauge pressure, also known as relative pressure, is measured relative to local atmospheric pressure. Since we live under constant atmospheric pressure, it is often convenient to measure the difference between actual pressure and atmospheric pressure, which is referred to as gauge pressure. This measurement is commonly used in industrial applications.\\[-0.2em]
+	\hrule\vspace{0.8em}
+	It is important to note that:\\[-5pt]
+	\begin{itemize}
+		\item Any pressure between local atmospheric pressure and absolute zero pressure is called \textbf{vacuum pressure}.
+		\item Any pressure higher than local atmospheric pressure is considered \textbf{positive pressure}.
+	\end{itemize}
+	\vspace{0.7em}\noindent
+	The relationship between absolute and gauge pressure is given by:\\[0.5em]
+	\begin{equation}
+		P_{\text{absolute}} = P_{\text{atmosphere}} + P_{\text{gauge}}
+		\label{eq:absolute}
+	\end{equation}\\
+	\vspace{0.5em}
+	The following diagram illustrates the definitions of pressure more clearly.	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\textwidth]{images/Pressure Diagram.jpg}
+		\caption{Pressure categories and their relationships}
+		\label{fig:pressure_diagram}
+	\end{figure}
+	
+	\subsection{Other Types of Pressure in Flow Measurement}
+	Additionally, different interpretations of pressure are applicable in flow measurement. The most common types of pressure in this context are \textbf{total}, \textbf{static}, and \textbf{dynamic} pressures.
+	
+	\subsubsection{Total Pressure}
+	Total pressure is the force per unit area felt when a flowing fluid is brought to rest. It is typically measured using a Pitot tube, as shown in the figure below. Total pressure is the sum of static pressure and dynamic pressure:\\[0.5em]
+	\begin{equation}
+		P_{\text{total}} = P_{\text{static}} + P_{\text{dynamic}}
+		\label{eq:total}
+	\end{equation}\\
+	Total pressure is also referred to as stagnation pressure.
+	\subsubsection{Static Pressure}
+	Static pressure is the force exerted on a fluid particle from all directions when the fluid is at rest or when measured in a moving reference frame. It is commonly measured using gauges or transmitters attached to the side of a pipe or tank wall. In most discussions, the term "pressure" generally refers to static pressure.
+	\subsubsection{Dynamic Pressure}
+	Dynamic pressure represents the kinetic energy of a flowing fluid and is the difference between total and static pressure. It is given by:
+	\begin{equation}
+		P_{\text{dynamic}} = \frac{\rho v^2}{2g}
+		\label{eq:dynamic}
+	\end{equation}	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\textwidth]{images/Flow Rate.jpg}
+		\caption{Measurement of dynamic pressure in fluid flow}
+		\label{fig:flow_rate}
+	\end{figure}
+	
+	\subsection*{Pressure Units}
+	The SI unit for pressure is the Pascal (Pa), which is defined as one Newton per square meter (N/m\(^2\)). In other unit systems, pressure is often measured in pounds per square inch (psi). However, one of the most widely used units is the bar or millibar (mbar). Some common pressure units and their equivalents are listed below:
+	
+	\begin{itemize}
+		\item \(1\) bar = \(10^5\) Pa
+		\item \(1\) atm = \(101325\) Pa
+		\item \(1\) psi = \(6894.76\) Pa
+		\item \(1\) mmHg = \(133.322\) Pa
+	\end{itemize}
+	
+	
+	
 	
 	\newpage	
 	\section{Data, Calculations and Results}
