@@ -99,9 +99,10 @@
 \usepackage{varwidth} 
 
 
-\newcommand{\wm}[1]{%
-	\begin{minipage}{1\textwidth}
-		#1
+\newcommand{\wm}[2]{%
+	\begin{minipage}{#1\textwidth}
+		\centering
+		#2
 	\end{minipage}%
 }
 
@@ -234,62 +235,213 @@
 	\noindent
 	
 \section{Abstract}
-\begin{formal}[\textcolor{blue}{1}]{blue!40!black}{blue!10!white}
-	\Large" \large \textit{In this experiment, we calibrated and compared the performance of multiple pressure-measuring devices, including two Bourdon gauges, a Budenberg pressure gauge, and an Hg glass manometer (with a maximum range of 32 cm Hg). The devices were connected to a pressure calibrator, which allowed us to apply both positive and negative pressures.}\Large\," \large   
-\end{formal}
-\textbf{Feedback:} Good start. However, you say \textit{"calibrated and compared"} consider following up with a sentence clarifying how these devices were evaluated and what they were compared with. For example:
-\begin{enumerate}
-	\item In tandem with a reference pressure calibrator (DPI-603 Portable Pressure Calibrator), which served as the baseline for pressure measurements due to its higher accuracy.  
-\end{enumerate}
-Revised:
-\begin{formal}{green!40!black}{green!10!white}
-	In this experiment, we calibrated and compared the performance of multiple pressure-measuring devices, including two Bourdon gauges, a Budenberg pressure gauge, and an Hg glass manometer (with a maximum range of 32 cm Hg), in tandem with a reference pressure calibrator (DPI-603 Portable Pressure Calibrator), which served as the baseline for pressure measurements due to its higher accuracy. The devices were connected to this DPI-603 Portable Pressure Calibrator, which allowed us to apply both positive and negative pressures in respective increments of approximately 5 kPa.
-\end{formal}
-\hrule
-\begin{formal}[\textcolor{blue}{2}]{blue!40!black}{blue!10!white}
-	\Large" \large \textit{We started by setting the pressure calibrator to zero and gradually increased the pressure in positive mode, taking readings from all the devices after each increment, with pressure changes ranging between 4.9 and 6.2 kPa.\\[1em]
-	This process was repeated 10 times. Afterward, we switched the calibrator to negative mode, reset to zero, and followed the same process again, with the readings decreasing between -5 and -6 kPa with each step.}
-\end{formal}
-\noindent\textbf{Feedback:} This level of detail is too specific for the abstract. The abstract should remain concise and focus on the purpose, and main findings rather than detailed \textbf{procedural steps} this has its own section. Part \textcolor{blue}{1} already provides sufficient context. this part should focus on datasets made and concluded statements based of off them.
-\begin{formal}[\textcolor{blue}{3}]{blue!40!black}{blue!10!white}
-	\Large" \large \textit{The collected data will be used to analyze the accuracy and consistency of the instruments under both positive and negative pressure conditions. Overall, this experiment provided a hands-on understanding of pressure calibration and highlighted how different devices respond to varying pressure inputs.} 
-\end{formal}
-\noindent\textbf{Feedback:} this is an attempt on conluding on results however the abstract should summarize key results \textbf{actually obtained} rather than describe future analysis. Instead of stating what the experiment provided, briefly outline the main findings like showing numbers. Writing the abstract last might be best, so consider using a placeholder for now. here i will provide an example:\\[1em]
-Revised:
-\begin{formal}{green!40!black}{green!10!white}
-By doing so, we obtained a rich dataset that revealed significant variations in the performance of the pressure-measuring devices. The Hg glass manometer demonstrated the highest accuracy, with deviations of $\leq$ 1\% across both positive and negative pressure ranges. The Budenberg pressure gauge also performed well, with errors $\leq$ 2\%, while the Bourdon gauges exhibited higher deviations, up to 4\%, particularly under negative pressure conditions.  These results highlight the importance of selecting appropriate devices based on precision requirements and operating conditions, as well as the potential impact of human error in reading analog instruments like the Bourdon gauges and Hg manometer. The experiment underscores the need for careful calibration, repeated measurements, and operator training to minimize errors and ensure reliable pressure measurements in practical applications.
-\end{formal}
-
-\textbf{New Abstract}\\[1em]
-In this experiment, we calibrated and compared the performance of multiple pressure-measuring devices, including two Bourdon gauges, a Budenberg pressure gauge, and an Hg glass manometer (with a maximum range of 32 cm Hg), in tandem with a reference pressure calibrator (DPI-603 Portable Pressure Calibrator), which served as the baseline for pressure measurements due to its higher accuracy. The devices were connected to this DPI-603 Portable Pressure Calibrator, which allowed us to apply both positive and negative pressures in respective increments of approximately $\pm$5 kPa. By doing so, we obtained a rich dataset that revealed significant variations in the performance of the pressure-measuring devices. The Hg glass manometer demonstrated the highest accuracy, with deviations of $\leq$ 1\% across both positive and negative pressure ranges. The Budenberg pressure gauge also performed well, with errors $\leq$ 2\%, while the Bourdon gauges exhibited higher deviations, up to 4\%, particularly under negative pressure conditions.  These results highlighted the importance of selecting appropriate devices based on precision requirements and operating conditions, as well as the potential impact of human error in reading analog instruments like the Bourdon gauges and Hg manometer. The experiment underscores the need for careful calibration, repeated measurements, and operator training to minimize errors and ensure reliable pressure measurements in practical applications.
+In this experiment, we calibrated and compared the performance of multiple pressure-measuring devices, including two Bourdon gauges, a Budenberg pressure gauge and a Hg glass manometer, in tandem with a reference pressure calibrator (DPI-603 Portable Pressure Calibrator), which served as the baseline for pressure measurements and as the source of the applied pressure. The devices were connected to the DPI-603 Portable Pressure Calibrator, enabling us to apply both positive and negative pressures in increments of approximately $\pm$5 kPa. Through this process, we were able to get an exhaustive dataset that demonstrated notable differences in the pressure-measuring devices' performance. \textcolor{red!50!white}{[Placeholder breif results findings]}. These results highlighted the importance of selecting appropriate devices based on precision requirements and operating conditions, as well as the potential impact of human error in reading analog instruments like the Bourdon gauges and Hg manometer. 
 
 	
 	\newpage\vspace*{-20pt}
+
 	\section{Introduction}
-	
-
-	Pressure measurement is a fundamental aspect of many industrial processes, ensuring safety, efficiency, and accuracy in everything from manufacturing systems to environmental monitoring.\\[1em] 
-	This experiment focused on understanding how different pressure-measuring devices respond to changes in pressure by comparing their readings against a standard pressure calibrator. By conducting tests in both positive and negative pressure modes, we aimed to analyze the behaviour and accuracy of these instruments under varying conditions. \\[1em]
-	The devices used in the experiment included two Bourdon gauges, a Budenberg pressure gauge, and an Hg glass manometer with a maximum range of 32 cm Hg. Each of these instruments operates using different principles, which allowed us to observe how different technologies react to applied pressure. For instance, the Bourdon gauge measures pressure through the deformation of a coiled tube, while the Hg glass manometer relies on the displacement of mercury to indicate changes in pressure. \\[1em]
-	To conduct the experiment, all devices were connected to a pressure calibrator, which served as the reference point for applying controlled increments of pressure. Starting from zero, we gradually increased the pressure in positive mode and recorded the readings from each device after every step. This process was repeated 10 times to ensure consistency. Once the positive measurements were complete, we switched the calibrator to negative mode, reset the system to zero, and repeated the process. As pressure decreased incrementally, we captured another set of 10 readings from each device. \\[1em]
-	To analyze the collected data, we plotted a series of graphs, with the applied pressure values on the x-axis and the corresponding readings from each device on the y-axis. Separate graphs were created for Bourdon Gauge 1, Bourdon Gauge 2, the Budenberg pressure gauge, and the Hg glass manometer for both positive and negative pressure values. These visual representations will help us better interpret how the different devices performed and identify any inconsistencies or trends in the measurements. \\[1em]
-	By establishing a clear comparison between these devices, this experiment aims to deepen our understanding of how various pressure-measuring instruments behave under different conditions, ultimately providing valuable insights into their performance and reliability. 
-\\[1em]	
-	\Huge$\ldots$
-	\large
-\\[1em]
-	\noindent
-	\textcolor{red}{The \textbf{topic being studied} should serve as the foundation for an introduction, providing a concise overview for those who desire one.  In this instance, the context should be limited to gauges, absolute pressure, history, and so on, just one page.  Here again, you are referring to an introduction to the particular experiment and are even outlining steps; this is again for the \textbf{procedure section}. Please update using the new perspective I've provided, i can give you my intro i made for my other lab report as a reference its nice and concise.}\\[1em]
+	In engineering and scientific applications, pressure measurement is essential, playing a critical role in fields such as fluid dynamics, meteorology, and industrial control. Over time, pressure-measuring instruments have evolved, from early liquid column manometers to modern mechanical and digital gauges, each designed to provide accurate measurements under varying conditions.\\[1em]
+	A key distinction in pressure measurement is between \textbf{absolute} and \textbf{gauge} pressure \footnote{\textbf{differential} pressure i decided to redact in the context of our lab though it would be among this list}.\\ 
+	Absolute pressure is measured relative to a vacuum, while gauge pressure is measured relative to atmospheric pressure. This distinction influences the design and function of pressure-measuring devices.\\[1em]
+	Historically, the invention of the Bourdon gauge by Eugène Bourdon in 1849 marked a significant advancement in pressure measurement. It provided a robust and reliable means of monitoring pressure in industrial settings, where durability and consistency were paramount. On the other hand, liquid column manometers, particularly those using mercury, have been essential in laboratory settings due to their precision in measuring small pressure differences.\\[1em]
+	Despite the advantages of different pressure-measuring devices, each has limitations, such as calibration errors and environmental influences.\\[1em]
+	Previous studies have highlighted various challenges and findings related to pressure measurement devices. For example, a study by Hodgkinson et al. (2020) found that the accuracy of home blood pressure monitors varied significantly, with validated monitors showing a higher pass rate in static pressure tests compared to unvalidated ones. This emphasizes the importance of validation and calibration in ensuring the accuracy of pressure-measuring devices.\\[1em]
+	In this experiment, we aimed to evaluate the performance and accuracy of various pressure-measuring devices under controlled conditions, comparing their responses to varying pressure levels.
 
 	
 	\newpage\vspace*{-20pt}
-	\section{Method \& Experimental Procedures}
+	\section{Method \& Experimental Procedures}\label{Method_Experimental_Procedures}
+	We are first given a table to record our findings as shown:\footnote{We started of in the lab by doing the refrigerator but this is redacted as its not a part of this lab report, following this we did the pressure lab experiment.}
+	\begin{figure}[H] 
+		\centering 
+		\includegraphics[width=1\textwidth,cfbox=gray!15 1pt]{images/tableland-1_page-0001.jpg} 
+		\caption{Form for recording pressure measurements} 
+		\label{fig:pressurestable} 
+	\end{figure}
+	We are then told the ropes of what the lab is, the steps we outlined as follows:
+	\newpage
+\hfil
+\begin{minipage}{0.5\textwidth}	
+	\subsection{Operating Procedure}
+	\begin{enumerate}[left=0in,itemsep=2mm]
+	\item Visual check test rigs pneumatic connections.
+	\item Open the instruments vent valve.
+	\item Select between positive (\textsf{\textcolor{red}{+}}) or negative (\textsf{\textcolor{blue}{-}}) as required. (This is the selector on the front of the DPI-603 ($\pm$VE on Figure \ref{fig:DPI-603}), located between the hand pump and the volume adjuster.)\\[5pt] We started with the positive pressure (Excess).
+	\item Switch on the unit, pressing the power.
+	\item Select Calibration Units, i.e., in Hg or bar, etc,\\[5pt] We went with kPa.
+	\item  Close Vent valve and zero instrument using Vent Valve.\\[5pt] It was determined that due to the sensitivity of the vent valves, the instructure must perform this.
+	\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}	
+	\begin{figure}[H] 
+		\centering 
+		\begin{tikzpicture}[scale=0.5,transform shape]
+			\node[anchor=center] (image) at (0,0) {\includegraphics[width=1\textwidth]{extracted_images/image_8_1.png}};
+			\draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm] (3, -2) -- (5, -1) node[above=1mm,right] {\Huge Vent Valve}; 
+			
+			\draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm] (-0.15, -5) -- (-0.15, -8) node[below=1mm] {\Huge $\pm \text{VE}$}; 
+			
+			\draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm] (1.35, -6) -- (3, -8) node[below=6.5mm,right] {\Huge\text{Hand Pump}}; 
+			
+			\draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm] (1.35-3, -6) -- (-3, -8) node[below=5.9mm,left] {\Huge\text{Volume Control}}; 
+			
+			\draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm] (-2, 5) -- (-4, 7.5) node[above=5.9mm,left=-3cm] {\Huge\text{Calibration Units}}; 
+			
+			\draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm,draw=black] (2.3, 4.8) -- (4.3, 7.4) node[above=5.9mm,right=-1cm] {\Huge\text{Power}}; 
+		\end{tikzpicture}
+		\caption{DPI-603 Portable Pressure Calibrator} 
+		\label{fig:DPI-603} 
+	\end{figure}
+\end{minipage}\\
+\begin{enumerate}
+\item[7.] Using the hand pump pressurize the system to the required value ($\approx\pm 5$ kPa).\footnote{Caution is required when using the mercury (Hg) glass manometer. The maximum pressure should not exceed 32 cm Hg to prevent damage to the glass. In this experiment, pressure increments of 5 kPa were recorded, totaling 50 kPa, which remains safely within both the 32 cm Hg limit and the 75 kPa threshold. Therefore, the calibration was performed without exceeding the safe pressure limits.} Vent air using the vent valve and adjust pressure by pumping air using the hand pump. Use the volume control to fine-tune the pressure.
+\item[7.] Once the required Obtain data from all relevant pressure gauges.
+
+\item[9.] Reverse procedure for Vacuum.
+\end{enumerate}
+
 	
 	\newpage
 	\section{Theory}
 	
 	\newpage	
 	\section{Data, Calculations and Results}
+	Thus, as explained in the Method \& Experimental Procedures Section \ref{Method_Experimental_Procedures}, we have gathered a simple dataset for the corresponding pressure gauges. Our goal now is to make calculations, illustrate trends, etc., and simply produce another dataset from which we can draw fair conclusions from. Here, I first describe the baseline data that was collected and recorded on the table that was made available for use in the lab (Figure \ref{figure:s}).
+	\subsection{Pressure Calibrator Readings}
+	\vspace{-1em}
+	\begin{table}[H]
+		\centering
+		\begin{minipage}[t]{0.17\textwidth}
+			\centering
+			\textbf{\textsf{kPa}}\\[8pt]
+			
+			\begin{tblr}{
+					colspec={X[1cm]X[1cm]},
+					hlines,vlines,
+					cells={valign=m,halign=c},
+					rows={ht=1\baselineskip},
+					row{1}={ht=1\baselineskip,font=\bfseries},
+				}
+				\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
+				0.0  & 0.0  \\
+				5.7  & -5.6  \\
+				10.4 & -12.1 \\
+				16.0 & -18.0 \\
+				21.1 & -21.8 \\
+				27.7 & -25.4 \\
+				34.2 & -29.3 \\
+				40.0 & -33.6 \\
+				46.1 & -37.6 \\
+				52.2 & -41.7 \\
+			\end{tblr}
+			\caption{Pressure Calibrator}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.17\textwidth}
+			\centering
+			\textbf{\textsf{psi}}\\[8pt]
+			
+			\begin{tblr}{
+					colspec={X[1cm]X[1cm]},
+					hlines,vlines,
+					cells={valign=m,halign=c},
+					rows={ht=1\baselineskip},
+					row{1}={ht=1\baselineskip,font=\bfseries},
+				}
+				\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
+				1.0  & 1.2  \\
+				2.0  & 0.4  \\
+				2.6  & -0.5  \\
+				3.4  & -2.0  \\
+				4.1  & -2.8  \\
+				5.0  & -4.0  \\
+				6.0  & -6.0  \\
+				6.8  & -7.1  \\
+				7.6  & -8.3  \\
+				8.5  & -9.5  \\
+			\end{tblr}
+			\caption{Bourdon Gauge 1}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.17\textwidth}
+			\centering
+			\textbf{\textsf{kN/m$\bm{^2}$}}\\[8pt]
+			
+			\begin{tblr}{
+					colspec={X[1cm]X[1cm]},
+					hlines,vlines,
+					cells={valign=m,halign=c},
+					rows={ht=1\baselineskip},
+					row{1}={ht=1\baselineskip,font=\bfseries},
+				}
+				\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
+				1.0  & 2.5  \\
+				8.0  & -1.0  \\
+				14.0 & -9.0  \\
+				20.0 & -15.0 \\
+				25.0 & -20.0 \\
+				30.0 & -23.0 \\
+				39.0 & -27.0 \\
+				45.0 & -32.0 \\
+				50.0 & -36.0 \\
+				57.0 & -40.0 \\
+			\end{tblr}
+			\caption{Bourdon Gauge 2}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.17\textwidth}
+			\centering
+			\textbf{\textsf{bar}}\\[8pt]
+			
+			\begin{tblr}{
+					colspec={X[1cm]X[1cm]},
+					hlines,vlines,
+					cells={valign=m,halign=c},
+					rows={ht=1\baselineskip},
+					row{1}={ht=1\baselineskip,font=\bfseries},
+				}
+				\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
+				-0.05 & -0.05  \\
+				0.00  & -0.10  \\
+				0.04  & -0.16  \\
+				0.10  & -0.24  \\
+				0.15  & -0.27  \\
+				0.22  & -0.30  \\
+				0.29  & -0.35  \\
+				0.35  & -0.40  \\
+				0.40  & -0.44  \\
+				0.47  & -0.49  \\
+			\end{tblr}
+			\caption{Budenberg Pressure Gauge}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.17\textwidth}
+			\centering
+			\textbf{\textsf{cm Hg}}\\[8pt]
+			
+			\begin{tblr}{
+					colspec={X[1cm]X[1cm]},
+					hlines,vlines,
+					cells={valign=m,halign=c},
+					rows={ht=1\baselineskip},
+					row{1}={ht=1\baselineskip,font=\bfseries},
+				}
+				\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
+				0.4  & 0.4  \\
+				3.5  & -0.7  \\
+				5.3  & -3.7  \\
+				7.4  & -5.4  \\
+				9.4  & -6.8  \\
+				11.6 & -8.2  \\
+				14.2 & -9.6  \\
+				16.4 & -11.3 \\
+				18.7 & -12.8 \\
+				21.0 & -14.4 \\
+			\end{tblr}
+			\caption{Hg Glass Manometer}
+		\end{minipage}
+	\end{table}
 	
 	\newpage
 	\section{Discussion of Results}
@@ -305,6 +457,10 @@ In this experiment, we calibrated and compared the performance of multiple press
 	\section{References}		
 	\newpage\vspace*{-30pt}
 	
+	\begin{enumerate}
+		\item Hodgkinson, J.A. et al. (2020). \textit{Accuracy of blood-pressure monitors owned by patients with hypertension (ACCU-RATE study): a cross-sectional, observational study in central England}. British Journal of General Practice, [online] 70(697), pp.e548–e554. Available at: \url{https://bjgp.org/content/70/697/e548.}
+	\end{enumerate}
+	‌	
 	
 	\section{Appendix}
 	
