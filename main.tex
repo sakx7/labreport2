@@ -269,26 +269,29 @@ In this experiment, we calibrated and compared the performance of multiple press
 	\item Open the instruments vent valve.
 	\item Select between positive (\textsf{\textcolor{red}{+}}) or negative (\textsf{\textcolor{blue}{-}}) as required. (This is the selector on the front of the DPI-603 ($\pm$VE on Figure \ref{fig:DPI-603}), located between the hand pump and the volume adjuster.)\\[5pt] We started with the positive pressure (Excess).
 	\item Switch on the unit, pressing the power.
-	\item Select Calibration Units, i.e., in Hg or bar, etc,\\[5pt] We went with kPa.
+	\item Select Pressure Units, i.e., in Hg or bar, etc, by cycling through clicking the button shown in Figure \ref{fig:DPI-603}, we went with kPa.
 	\item  Close Vent valve and zero instrument using Vent Valve.\\[5pt] It was determined that due to the sensitivity of the vent valves, the instructure must perform this.
 	\end{enumerate}
 \end{minipage}\hfill
-\begin{minipage}{0.45\textwidth}	
+\begin{minipage}{0.45\textwidth}
 	\begin{figure}[H] 
-		\centering 
+		\centering 		
+		\hspace*{-2em}
 		\begin{tikzpicture}[scale=0.5,transform shape]
 			\node[anchor=center] (image) at (0,0) {\includegraphics[width=1\textwidth]{extracted_images/image_8_1.png}};
-			\draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm] (3, -2) -- (5, -1) node[above=1mm,right] {\Huge Vent Valve}; 
-			
-			\draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm] (-0.15, -5) -- (-0.15, -8) node[below=1mm] {\Huge $\pm \text{VE}$}; 
-			
-			\draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm] (1.35, -6) -- (3, -8) node[below=6.5mm,right] {\Huge\text{Hand Pump}}; 
-			
-			\draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm] (1.35-3, -6) -- (-3, -8) node[below=5.9mm,left] {\Huge\text{Volume Control}}; 
-			
-			\draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm] (-2, 5) -- (-4, 7.5) node[above=5.9mm,left=-3cm] {\Huge\text{Calibration Units}}; 
-			
-			\draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm,draw=black] (2.3, 4.8) -- (4.3, 7.4) node[above=5.9mm,right=-1cm] {\Huge\text{Power}}; 
+		     
+		    \draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm] (-2, 3.4) -- (-5, 3) node[left=10mm,below=5mm] {\Huge \wm{1}{Pressure\\ Units}}; 
+		
+		\draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm] (-0.15, -5) -- (-0.15, -8) node[below=1mm] {\Huge $\pm \text{VE}$}; 
+		
+		\draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm] (1.35, -6.3) -- (3, -8) node[below=6.5mm,right] {\Huge\text{Hand Pump}}; 
+		
+		\draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm] (1.35-3, -6.3) -- (-3, -8) node[below=5.9mm,left] {\Huge\text{Volume Control}}; 
+		
+		\draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm] (-1.5, 5) -- (-3.5, 7.4) node[above=5.9mm,left=-1cm] {\Huge\text{Main Display}}; 
+		
+		\draw[-{Latex[length=3mm,width=3mm]},line width=0.5mm,draw=black] (2.5, 5) -- (4.3, 7.4) node[above=5.9mm,right=-1cm] {\Huge\text{Power}}; 
+		
 		\end{tikzpicture}
 		\caption{DPI-603 Portable Pressure Calibrator} 
 		\label{fig:DPI-603} 
