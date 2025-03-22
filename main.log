@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  22 MAR 2025 00:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  22 MAR 2025 01:03
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2091,7 +2091,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 299.
+ used on input line 297.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2134,7 +2134,7 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Trying to load font information for OT1+phv on input line 3
-06.
+04.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
@@ -2146,43 +2146,43 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 ===== Image 'figures/main-figure1' is up-to-date. ======
 
-Overfull \hbox (7.41907pt too wide) in paragraph at lines 314--332
+Overfull \hbox (7.41907pt too wide) in paragraph at lines 312--330
  []|  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--337
+Underfull \hbox (badness 10000) in paragraph at lines 299--335
 
  []
 
 <images/Image(1).jpg, id=156, 3276.24pt x 2457.18pt>
 File: images/Image(1).jpg Graphic file (type jpg)
 <use images/Image(1).jpg>
-Package pdftex.def Info: images/Image(1).jpg  used on input line 350.
+Package pdftex.def Info: images/Image(1).jpg  used on input line 348.
 (pdftex.def)             Requested size: 121.17305pt x 90.84674pt.
 
-Overfull \hbox (20.19525pt too wide) in paragraph at lines 350--350
+Overfull \hbox (20.19525pt too wide) in paragraph at lines 348--348
  [][] 
  []
 
 <images/Image(6).jpg, id=157, 2069.7325pt x 2151.03625pt>
 File: images/Image(6).jpg Graphic file (type jpg)
 <use images/Image(6).jpg>
-Package pdftex.def Info: images/Image(6).jpg  used on input line 351.
+Package pdftex.def Info: images/Image(6).jpg  used on input line 349.
 (pdftex.def)             Requested size: 121.17305pt x 125.90569pt.
 
-Overfull \hbox (20.19525pt too wide) in paragraph at lines 351--352
+Overfull \hbox (20.19525pt too wide) in paragraph at lines 349--350
  [][] 
  []
 
 <images/Image(2).jpg, id=158, 469.755pt x 2155.05125pt>
 File: images/Image(2).jpg Graphic file (type jpg)
 <use images/Image(2).jpg>
-Package pdftex.def Info: images/Image(2).jpg  used on input line 354.
+Package pdftex.def Info: images/Image(2).jpg  used on input line 352.
 (pdftex.def)             Requested size: 49.36678pt x 226.46791pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 356.
+(caption)                particular \caption on input line 354.
 See the caption package documentation for explanation.
 
 
@@ -2191,7 +2191,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 368.
+ used on input line 366.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2206,7 +2206,7 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 figures/main-figure1.pdf> <./images/Image(1).jpg> <./images/Image(6).jpg> <./im
 ages/Image(2).jpg>]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
-89.
+87.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
@@ -2214,15 +2214,15 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 <images/Pressure.jpg, id=188, 376.40625pt x 234.1247pt>
 File: images/Pressure.jpg Graphic file (type jpg)
 <use images/Pressure.jpg>
-Package pdftex.def Info: images/Pressure.jpg  used on input line 395.
+Package pdftex.def Info: images/Pressure.jpg  used on input line 393.
 (pdftex.def)             Requested size: 224.39664pt x 139.57921pt.
 <images/Piezometer.jpg, id=189, 261.22594pt x 127.97812pt>
 File: images/Piezometer.jpg Graphic file (type jpg)
 <use images/Piezometer.jpg>
-Package pdftex.def Info: images/Piezometer.jpg  used on input line 405.
+Package pdftex.def Info: images/Piezometer.jpg  used on input line 403.
 (pdftex.def)             Requested size: 249.33128pt x 122.15263pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 414--415
+Underfull \hbox (badness 10000) in paragraph at lines 412--413
 
  []
 
@@ -2232,7 +2232,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 415.
+ used on input line 413.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2244,19 +2244,19 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 [9
 
  <./images/Pressure.jpg> <./images/Piezometer.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 416--418
+Underfull \hbox (badness 10000) in paragraph at lines 414--416
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--423
+Underfull \hbox (badness 10000) in paragraph at lines 419--421
 
  []
 
 <images/Pressure Diagram.jpg, id=200, 721.94719pt x 665.48625pt>
 File: images/Pressure Diagram.jpg Graphic file (type jpg)
 <use images/Pressure Diagram.jpg>
-Package pdftex.def Info: images/Pressure Diagram.jpg  used on input line 431.
+Package pdftex.def Info: images/Pressure Diagram.jpg  used on input line 429.
 (pdftex.def)             Requested size: 398.93158pt x 367.73466pt.
 
 
@@ -2264,7 +2264,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 439.
+ used on input line 437.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2274,14 +2274,14 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
 [10 <./images/Pressure Diagram.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 440--441
+Underfull \hbox (badness 10000) in paragraph at lines 438--439
 
  []
 
 <images/Flow Rate.jpg, id=208, 301.125pt x 192.72pt>
 File: images/Flow Rate.jpg Graphic file (type jpg)
 <use images/Flow Rate.jpg>
-Package pdftex.def Info: images/Flow Rate.jpg  used on input line 456.
+Package pdftex.def Info: images/Flow Rate.jpg  used on input line 454.
 (pdftex.def)             Requested size: 373.99693pt x 239.382pt.
 
 
@@ -2289,7 +2289,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 463.
+ used on input line 461.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2304,7 +2304,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 474.
+ used on input line 472.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2315,7 +2315,7 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 [12]
 
-LaTeX Warning: Reference `figure:s' on page 13 undefined on input line 476.
+LaTeX Warning: Reference `figure:s' on page 13 undefined on input line 474.
 
 > Step: init table outer spec.
 > Step: parse table options.
@@ -2334,7 +2334,7 @@ LaTeX Warning: Reference `figure:s' on page 13 undefined on input line 476.
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
 
-Underfull \hbox (badness 2644) in paragraph at lines 530--530
+Underfull \hbox (badness 2644) in paragraph at lines 528--528
 []\OT1/ptm/m/n/10 (+20) Table 2: |Bour-don
  []
 
@@ -2347,7 +2347,7 @@ Underfull \hbox (badness 2644) in paragraph at lines 530--530
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
 
-Underfull \hbox (badness 2644) in paragraph at lines 556--556
+Underfull \hbox (badness 2644) in paragraph at lines 554--554
 []\OT1/ptm/m/n/10 (+20) Table 3: |Bour-don
  []
 
@@ -2373,7 +2373,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 612.
+ used on input line 610.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2388,7 +2388,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 615.
+ used on input line 613.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2403,7 +2403,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 617.
+ used on input line 615.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2418,7 +2418,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 620.
+ used on input line 618.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2429,7 +2429,7 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 [16]
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 6
-26.
+24.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
@@ -2438,7 +2438,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 62
-8.
+6.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -2448,7 +2448,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 629.
+ used on input line 627.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2463,7 +2463,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 634.
+ used on input line 632.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2485,13 +2485,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 582FF200765F5FD3DC56BC28CC6CA2E6;2688.
  ) 
 Here is how much of TeX's memory you used:
- 71344 strings out of 473201
- 1764943 string characters out of 5716126
+ 71347 strings out of 473201
+ 1764970 string characters out of 5716126
  2560643 words of memory out of 5000000
  93366 multiletter control sequences out of 15000+600000
- 632405 words of font info for 321 fonts, out of 8000000 for 9000
+ 632524 words of font info for 323 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,15n,117p,1049b,1108s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,16n,117p,1049b,1108s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol10.pf
 b></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol12.pf
 b></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb>
@@ -2506,7 +2506,7 @@ texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2024/texmf-d
 ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/
 type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/
 times/utmri8a.pfb>
-Output written on main.pdf (18 pages, 4413049 bytes).
+Output written on main.pdf (18 pages, 4413132 bytes).
 PDF statistics:
  334 PDF objects out of 1000 (max. 8388607)
  263 compressed objects within 3 object streams
