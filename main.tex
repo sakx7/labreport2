@@ -249,7 +249,7 @@ In this experiment, we calibrated and compared the performance of multiple press
 
 	\section{Introduction}
 	In engineering and scientific applications, pressure measurement is essential, playing a critical role in fields such as fluid dynamics, meteorology, and industrial control. Over time, pressure-measuring instruments have evolved, from early liquid column manometers to modern mechanical and digital gauges, each designed to provide accurate measurements under varying conditions.\\[1em]
-	A key distinction in pressure measurement is between \textbf{absolute} and \textbf{gauge} pressure \footnote{\textbf{differential} pressure i decided to redact in the context of our lab though it would be among this list}.\\ 
+	A key distinction in pressure measurement is between \textbf{absolute} and \textbf{gauge} pressure \footnote{\textbf{Differential} pressure i decided to redact in the context of our lab though it would be among this list}.\\ 
 	Absolute pressure is measured relative to a vacuum, while gauge pressure is measured relative to atmospheric pressure. This distinction influences the design and function of pressure-measuring devices.\\[1em]
 	Historically, the invention of the Bourdon gauge by Eugène Bourdon in 1849 marked a significant advancement in pressure measurement. It provided a robust and reliable means of monitoring pressure in industrial settings, where durability and consistency were paramount. On the other hand, liquid column manometers, particularly those using mercury, have been essential in laboratory settings due to their precision in measuring small pressure differences.\\[1em]
 	Despite the advantages of different pressure-measuring devices, each has limitations, such as calibration errors and environmental influences.\\[1em]
@@ -263,9 +263,24 @@ In this experiment, we calibrated and compared the performance of multiple press
 
 	\begin{figure}[H] 
 			\centering 
-			\includegraphics[width=0.95\textwidth]{extracted_images/image_7_1.png} 
-			\caption{Setup} 
-			\label{fig:setup} 
+		    \begin{tikzpicture}[auto,
+			block/.style ={rectangle, draw=blue, thick, fill=blue!20, text width=1em,align=center, rounded corners, minimum height=2em},
+			block1/.style ={rectangle, draw=blue, thick, fill=blue!20, text width=5em,align=center, rounded corners, minimum height=2em},
+			line/.style ={draw, thick, -latex',shorten >=2pt},
+			cloud/.style ={draw=red, thick, ellipse,fill=red!20,
+				minimum height=1em}]
+			\node[anchor=center] (image) at (-10,0) {\includegraphics[width=0.9\textwidth]{extracted_images/image_7_1.png}};
+			\node[block] (A) at (-9.85,-4.5) {1};
+			\node[block] (B) at (-7.15,-4.5) {2};
+			\node[block1] (Gauge) at (-8.5,-3) {Bourdon Gauge};
+			\draw[line] (Gauge.south) -- ++(0,-0.25) -| (A.north);
+			\draw[line] (Gauge.south) -- ++(0,-0.25) -| (B.north);			
+			\node[block1] (Gauge) at (-15.5,-4.2) {Pressure calibrator};
+			\node[block1] (Gauge) at (-7.5,-1.1) {Pressure Gauge};
+			\node[block1] (Gauge) at (-3.5,7.6) {Mercury Glass Manometer};
+		\end{tikzpicture}
+		\caption{Pressure Measurement Bench} 
+		\label{fig:pressure_measurement_bench} 
 	\end{figure}
 	
 	\begin{figure}[H] 
@@ -277,30 +292,31 @@ In this experiment, we calibrated and compared the performance of multiple press
 	
 	\underline{The experiment \textbf{summary} is as follows:}\\[1em]
 	\noindent
-The instructor guided us through operating the equipment, demonstrating how to use the pressure calibrator and interpret the gauge readings. Before diving in, we received crucial instructions on what to avoid to prevent major issues—such as compromising our data, ensuring safety, and other key considerations.\\[1em] 
-After carefully analyzing the gauge readings as a team, we recorded the pressure measurements in the designated table (Figure \ref{fig:pressurestable}).\\[1em]
-A detailed breakdown of the \textbf{exact steps} we followed is provided on the next page.
+The instructor guided us through operating the equipment, demonstrating how to use the pressure calibrator and interpret the corresponding gauge readings.\\[1em] 
+Before we started, we were given important instructions on how to avoid serious problems, like things that could compromising our data, making sure we were safe and no accidents happen, and other crucial factors.\\[1em] 
+Now when carefully applying the pressures, we analyzed the gauge readings as a team concluding an agreed value reading, as to be recorded in the designated pressure measurement table (Figure \ref{fig:pressurestable}).\\[1em]
+A detailed breakdown of the \textbf{exact steps} we followed is as follows:
 \newpage
-
+\newgeometry{left=0.8in,right=0.8in,top=1.3in,bottom=0.6in}
 \begin{minipage}{0.5\textwidth}	
 	\subsection{Operating Procedure}
 	\begin{enumerate}[left=0in,itemsep=2mm]
-	\item Visual check test rigs pneumatic connections.
-	\item Open the instruments vent valve.
-	\item Select between positive (\textsf{\textcolor{red}{+}}) or negative (\textsf{\textcolor{blue}{-}}) as required. (This is the selector on the front of the DPI-603 ($\pm$VE on Figure \ref{fig:DPI-603}), located between the hand pump and the volume adjuster.)\\[5pt] We started with the positive pressure (Excess).
-	\item Switch on the unit, pressing the power.
-	\item Select Pressure Units, i.e., in Hg or bar, etc, by cycling through clicking the button shown in Figure \ref{fig:DPI-603}, we went with kPa.
-	\item  Close Vent valve and zero instrument using Vent Valve.\\[5pt] It was determined that due to the sensitivity of the vent valves, the instructure must perform this.
+	    \item The instructor inspected the test rig’s pneumatic connections to ensure they were secure.  
+		\item The instrument’s vent valve was opened as part of the setup process.  
+		\item Given the choice between vacuum (\textsf{\textcolor{blue}{-}}) and excess (\textsf{\textcolor{red}{+}}) pressure, we initially set the selector on the front of the DPI-603 ($\pm$VE in Figure \ref{fig:DPI-603}) to positive pressure. This setting allowed us to apply the necessary excess pressure for the procedure.  
+		\item The unit was powered on by pressing the power button.  
+		\item Using the pressure units button, we cycled through the available options (in Hg, bar, etc.) and selected kPa.  
 	\end{enumerate}
 \end{minipage}\hfill
 \begin{minipage}{0.45\textwidth}
 	\begin{figure}[H] 
 		\centering 		
 		\hspace*{-2em}
-		\begin{tikzpicture}[scale=0.5,transform shape]
+		\begin{tikzpicture}[scale=0.45,transform shape]
 			\node[anchor=center] (image) at (0,0) {\includegraphics[width=1\textwidth]{extracted_images/image_8_1.png}};
+     \draw[{Latex[length=3mm,width=3mm]}-,line width=0.5mm] (3.2, -2.2) -- (5, -3) node[above=1mm,right] {\Huge Vent Valve}; 
 		     
-		    \draw[{Latex[length=3mm,width=3mm]}-,line width=0.5mm] (-2, 3.4) -- (-5, 3) node[left=10mm,below=5mm] {\Huge \wm{1}{Pressure\\ Units}}; 
+		    \draw[{Latex[length=3mm,width=3mm]}-,line width=0.5mm] (-2, 3.4) -- (-5, 3) node[left=14mm,below=-10mm] {\Huge \wm{1}{Pressure\\ Units}}; 
 		
 		\draw[{Latex[length=3mm,width=3mm]}-,line width=0.5mm] (-0.15, -5) -- (-0.15, -8) node[below=1mm] {\Huge $\pm \text{VE}$}; 
 		
@@ -318,14 +334,38 @@ A detailed breakdown of the \textbf{exact steps} we followed is provided on the 
 	\end{figure}
 \end{minipage}\\
 \begin{enumerate}
-\item[7.] Using the hand pump pressurize the system to the required value ($\approx\pm 5$ kPa).\footnote{Caution is required when using the mercury (Hg) glass manometer. The maximum pressure should not exceed 32 cm Hg to prevent damage to the glass. In this experiment, pressure increments of 5 kPa were recorded, totaling 50 kPa, which remains safely within both the 32 cm Hg limit and the 75 kPa threshold. Therefore, the calibration was performed without exceeding the safe pressure limits.} Vent air using the vent valve and adjust pressure by pumping air using the hand pump. Use the volume control to fine-tune the pressure.
-\item[7.] Once the required Obtain data from all relevant pressure gauges.
+\item[6.] The vent valve was closed and used to zero the instrument. It was concluded that this procedure should be carried out by the instructor due to the vent valve’s sensitivity.  
+\end{enumerate}
+\noindent
+Here Steps 1–6 primarily cover the setup phase and were mainly carried out by the instructor. It was now our role to conduct the rest of the experiment, which proceeded as follows:
 
-\item[9.] Reverse procedure for Vacuum.
+\begin{enumerate}
+\item[7.] We used the hand pump to pressurize the system to the required value ($\approx\pm 5$ kPa). To achieve precise control, we vented air using the vent valve and adjusted the pressure by pumping air as needed.
+\item[8.] Once the required incremtal $\pm 5$ kPa was observed on the pressure calibrator, we then observe and recorded the readings seen on the following gauges:
 \end{enumerate}
 
+	\begin{minipage}{0.45\textwidth}\centering
+		\begin{center}
+			\begin{minipage}{0.45\textwidth}\centering
+				\includegraphics[width=1.2\textwidth]{images/Image(1).jpg}\\[0.5em]
+				\rotatebox[origin=c]{0}{\includegraphics[width=1.2\textwidth]{images/Image(6).jpg}}
+			\end{minipage}\hspace{0.5em}
+			\begin{minipage}{0.4\textwidth}\centering
+				\includegraphics[width=0.55\textwidth]{images/Image(2).jpg}
+			\end{minipage}
+			\captionof{figure}{Gauges}\small See Figure \ref{fig:pressure_measurement_bench} for references as to see what gauge is what
+		\end{center}
+	\end{minipage}
+	\begin{minipage}{0.51\textwidth}\vspace{-2em}\raggedright
+		\begin{enumerate}[left=0in]
+			\item[9.]  By reaching a consensus as a team over what is being read on the instruments for this related pressure value on the calibrator, we recorded them in the designated pressure measurement table (Figure \ref{fig:pressurestable}). 
+			\item[10.] This procedure (Steps 7-9) is repeated 10 times, Starting the \textbf{initial reading of 0kPa} and ending at 50kPa. 
+			\item[11.] Once done, we reverse the process (Steps 6-10), in which we proceed to do the same for vacuum.
+		\end{enumerate}\noindent
+		This concludes all that was done in the laboratory\\ for us to conclude results based on the data gathered.
+	\end{minipage}
 	
-	\newpage
+	\newpage\restoregeometry
 	\section{Theory}
 	
 	\subsection{Pressure}
