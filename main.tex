@@ -11,8 +11,11 @@
 \usepackage{placeins}
 \usepackage{enumitem}
 \usepackage{siunitx}
+
 %\usepackage{showframe}
 \usepackage{times}
+
+\DeclareSIUnit{\atm}{atm}
 
 \usepackage{tabularx}
 \usepackage{amsmath, amssymb, amscd, MnSymbol, mathrsfs}
@@ -144,6 +147,20 @@
 }
 
 
+\usepackage{xcolor}
+\definecolor{ChineseGold}{HTML}{C59401}
+\definecolor{AmericanGold}{HTML}{D3AF37}
+\definecolor{MetallicSunburst}{HTML}{A77C37}
+\definecolor{GoldenBrown}{HTML}{996515}
+\definecolor{DarkBrown}{HTML}{674222}
+\definecolor{SkyBlue}{HTML}{87CEEB}      % Soft and bright
+\definecolor{BabyBlue}{HTML}{89CFF0}     % Gentle, pastel-like
+\definecolor{SteelBlue}{HTML}{4682B4}    % Rich but not overpowering
+\definecolor{RoyalBlue}{HTML}{4169E1}    % Strong, slightly purplish
+\definecolor{MidnightBlue}{HTML}{191970} % Almost black, deep navy
+\definecolor{PrussianBlue}{HTML}{003153} % Very deep blue with a classic look
+
+
 
 %Refer to the equation as \eqref{equation}.
 \usepackage{caption}  % This package allows captioning outside of a float
@@ -160,20 +177,36 @@
 \usepackage{datetime}
 
 \usepackage{xcolor}
-
+\usepackage{tcolorbox}
 
 \usepackage{etoolbox}
 
 \makeatletter
 \def\tagform@#1{\maketag@@@{{Eq.~#1}}} % Adds "Eq." and makes it bold
 \makeatother
-
+\usepackage{listings}
+\lstdefinestyle{mypythonstyle}{
+	language=Python,
+	basicstyle=\ttfamily,
+	showstringspaces=false,
+	breaklines=true,
+	commentstyle=\color{green!60!black},  % Softer gray for comments
+	stringstyle=\color{orange},  % Different color for strings
+	backgroundcolor=\color{gray!3},  % Light gray for background
+	tabsize=4,
+	belowcaptionskip=10pt, % Adjust space below caption
+	morekeywords={lambda}, % Add lambda to keywords
+	keywordstyle=\bfseries\color{pink!50!red},
+	keywordstyle=[2]\color{blue!80!black},  % Specific style for 'lambda'
+	morecomment=[l]{//},  % For inline comments
+	literate={~} {$\sim$}{1},  % Converts tilde to a symbol
+}
 \begin{document}
 	
 	\vspace*{\fill}
 	\begin{center}
 		\textbf{\Huge Laboratory Report}\\[10pt]
-		\LARGE \textbf{Pressure \& Refrigeration}
+		\LARGE \textbf{Pressure}
 	\end{center}
 	\vspace*{\fill}
 	
@@ -338,12 +371,12 @@ In this experiment, we calibrated and compared the performance of multiple press
 Here Steps 1–6 primarily cover the setup phase and were mainly carried out by the instructor. It was now our role to conduct the rest of the experiment, which proceeded as follows:
 
 \begin{enumerate}
-\item[7.] We used the hand pump to pressurize the system to the required value ($\approx\pm 5$ kPa). To achieve precise control, we vented air using the vent valve and adjusted the pressure by pumping air as needed.
-\item[8.] Once the required incremtal $\pm 5$ kPa was observed on the pressure calibrator, we then observe and recorded the readings seen on the following gauges:
+\item[7.] We used the hand pump to pressurize the system to the required value. To achieve precise control, we vented air using the vent valve and adjusted the pressure by pumping air as needed.
+\item[8.] Once the required incremental was observed on the pressure calibrator, we then observe and recorded the readings seen on the following gauges:
 \end{enumerate}
 
-	\begin{minipage}{0.45\textwidth}\centering
-		\begin{center}
+	\begin{minipage}{0.45\textwidth}
+			\hspace{0.9em}\begin{minipage}{1\textwidth}\centering
 			\begin{minipage}{0.45\textwidth}\centering
 				\includegraphics[width=1.2\textwidth]{images/Image(1).jpg}\\[0.5em]
 				\rotatebox[origin=c]{0}{\includegraphics[width=1.2\textwidth]{images/Image(6).jpg}}
@@ -351,16 +384,18 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 			\begin{minipage}{0.4\textwidth}\centering
 				\includegraphics[width=0.55\textwidth]{images/Image(2).jpg}
 			\end{minipage}
-			\captionof{figure}{Gauges}\small See Figure \ref{fig:pressure_measurement_bench} for references as to see what gauge is what
-		\end{center}
+			\end{minipage}
+			
+			\centering
+			\captionof{figure}{Gauges \& Manometer}\small Refer to Figure \ref{fig:pressure_measurement_bench} for illustrations labels.
 	\end{minipage}
 	\begin{minipage}{0.51\textwidth}\vspace{-2em}\raggedright
 		\begin{enumerate}[left=0in]
-			\item[9.]  By reaching a consensus as a team over what is being read on the instruments for this related pressure value on the calibrator, we recorded them in the designated pressure measurement table (Figure \ref{fig:pressurestable}). 
-			\item[10.] This procedure (Steps 7-9) is repeated 10 times, Starting the \textbf{initial reading of 0kPa} and ending at 50kPa. 
-			\item[11.] Once done, we reverse the process (Steps 6-10), in which we proceed to do the same for vacuum.
+			\item[9.]  By reaching on a agreement as a team over what is being read on the instruments for this related pressure value on the calibrator, we recorded them in the designated pressure measurement table (Figure \ref{fig:pressurestable}). 
+			\item[10.] This procedure (Steps 7-9) is repeated, beginning with an \textbf{initial reading of 0 kPa} and continuing until the tenth increment, with each increment approximately $+5$ kPa.\\[-8pt]$$0,5,10, \ldots, 50$$\\[-6pt]
+			\item[11.] Once we're done, we go back and repeat steps 6–10, except this time we do for the vacuum ($-5$kPa).
 		\end{enumerate}\noindent
-		This concludes all that was done in the laboratory\\ for us to conclude results based on the data gathered in the tables.
+		This concludes everything that was done in the lab so that we may draw conclusions from the information in the tables.
 	\end{minipage}
 	
 	\newpage\restoregeometry
@@ -368,34 +403,30 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 	
 	\subsection{Pressure}
 	
-	When we talk about pressure, the first thing that comes to mind is its physical definition. It refers to the effect or various types of deflection when a force is applied to a surface.
-	
-	\begin{figure}[h]
+	When we talk about pressure, the first thing that comes to mind is its physical definition. It refers to the effect or various types of deflection when a force is applied to a surface.\vspace{-0.5em}
+	\begin{center}
+	\begin{minipage}{0.45\textwidth}
 		\centering
-		\begin{minipage}{0.45\textwidth}
-			\centering
-			\begin{equation}
-				P = \frac{F}{A}
-				\label{eq:pressure}
-			\end{equation}
-			\wm{0.7}{
-			\begin{itemize}[itemsep=-1mm]
-				\item \( P \) = Pressure (Pa, Pascal)
-				\item \( F \) = Force applied (N, Newton)
-				\item \( A \) = Surface area (m\(^2\))
-			\end{itemize}
-			}\\[1em]\raggedright
-			"Pressure is the force per unit area exerted normal to the surface."
-		\end{minipage}
-		\hfill
-		\begin{minipage}{0.45\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{images/Pressure.jpg}
-			\caption{Illustration of pressure application}
-			\label{fig:pressure}
-		\end{minipage}
-	\end{figure}
-	\noindent
+		\begin{equation}
+			P = \frac{F}{A}
+			\label{eq:pressure}
+		\end{equation}
+		\hspace*{2em}\wm{0.9}{
+		\begin{itemize}[itemsep=-1mm]
+			\item \( P \) = Pressure (Pa, Pascal)
+			\item \( F \) = Force applied (N, Newton)
+			\item \( A \) = Surface area (m\(^2\))
+		\end{itemize}
+		}\\[1em]\raggedright
+		"Pressure is the force per unit area exerted normal to the surface."
+	\end{minipage}
+	\hfil
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.8\textwidth]{images/Pressure.jpg}
+		\captionof{figure}{Illustration of pressure application}
+		\label{fig:pressure}
+	\end{minipage}\end{center}
 	The type of deflection caused by pressure depends on its magnitude and the duration of application. Pressure has numerous examples and applications, such as vehicle tires and press machines.\\[1em]
 	The most effective way to estimate applied pressure is by measuring its effects, for example, by observing changes in the dimensions of an elastic object or the height of a liquid column, as shown in the following image.
 	\begin{figure}[H]
@@ -409,9 +440,10 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 	\subsection{Absolute Pressure}
 	Absolute pressure, or absolute zero pressure, is the lowest possible pressure measurable. Consequently, all measured pressures are positive in comparison to this reference point. Achieving absolute zero pressure is practically impossible unless calculated or represented through an extremely accurate curve.
 	\subsection{Gauge Pressure}
-	Gauge pressure, also known as relative pressure, is measured relative to local atmospheric pressure. Since we live under constant atmospheric pressure, it is often convenient to measure the difference between actual pressure and atmospheric pressure, which is referred to as gauge pressure. This measurement is commonly used in industrial applications.\\[-0.2em]
-	\hrule\vspace{0.8em}
-	It is important to note that:\\[-5pt]
+	Gauge pressure, also known as relative pressure, is measured relative to local atmospheric pressure. Since we live under constant atmospheric pressure, it is often convenient to measure the difference between actual pressure and atmospheric pressure, which is referred to as gauge pressure. This measurement is commonly used in industrial applications.
+	
+	\newpage
+	\noindent It is important to note that:\\[-5pt]
 	\begin{itemize}
 		\item Any pressure between local atmospheric pressure and absolute zero pressure is called \textbf{vacuum pressure}.
 		\item Any pressure higher than local atmospheric pressure is considered \textbf{positive pressure}.
@@ -426,21 +458,15 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 	The following diagram illustrates the definitions of pressure more clearly.	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.8\textwidth]{images/Pressure Diagram.jpg}
+		\includegraphics[width=0.95\textwidth]{images/Pressure Diagram.jpg}
 		\caption{Pressure categories and their relationships}
 		\label{fig:pressure_diagram}
 	\end{figure}
 	
+	\newpage
 	\subsection{Other Types of Pressure in Flow Measurement}
 	Additionally, different interpretations of pressure are applicable in flow measurement. The most common types of pressure in this context are \textbf{total}, \textbf{static}, and \textbf{dynamic} pressures.
 	
-	\subsubsection{Total Pressure}
-	Total pressure is the force per unit area felt when a flowing fluid is brought to rest. It is typically measured using a Pitot tube, as shown in the figure below. Total pressure is the sum of static pressure and dynamic pressure:\\[0.5em]
-	\begin{equation}
-		P_{\text{total}} = P_{\text{static}} + P_{\text{dynamic}}
-		\label{eq:total}
-	\end{equation}\\
-	Total pressure is also referred to as stagnation pressure.
 	\subsubsection{Static Pressure}
 	Static pressure is the force exerted on a fluid particle from all directions when the fluid is at rest or when measured in a moving reference frame. It is commonly measured using gauges or transmitters attached to the side of a pipe or tank wall. In most discussions, the term "pressure" generally refers to static pressure.
 	\subsubsection{Dynamic Pressure}
@@ -449,41 +475,90 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 		P_{\text{dynamic}} = \frac{\rho v^2}{2g}
 		\label{eq:dynamic}
 	\end{equation}	
+		\subsubsection{Total Pressure}
+	Total pressure is the force per unit area felt when a flowing fluid is brought to rest. It is typically measured using a Pitot tube, as shown in the figure below. Total pressure is the sum of static pressure and dynamic pressure:\\[0.5em]
+	\begin{equation}
+		P_{\text{total}} = P_{\text{static}} + P_{\text{dynamic}}
+		\label{eq:total}
+	\end{equation}\\
+	Total pressure is also referred to as stagnation pressure.
+	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.75\textwidth]{images/Flow Rate.jpg}
 		\caption{Measurement of dynamic pressure in fluid flow}
 		\label{fig:flow_rate}
 	\end{figure}
+
+	\newpage
+	\subsection{How the instruments work}
 	
-	\subsection*{Pressure Units}
-	The SI unit for pressure is the Pascal (Pa), which is defined as one Newton per square meter (N/m\(^2\)). In other unit systems, pressure is often measured in pounds per square inch (psi). However, one of the most widely used units is the bar or millibar (mbar). Some common pressure units and their equivalents are listed below:
+	\newpage
 	
-	\begin{itemize}
-		\item \(1\) bar = \(10^5\) Pa
-		\item \(1\) atm = \(101325\) Pa
-		\item \(1\) psi = \(6894.76\) Pa
-		\item \(1\) mmHg = \(133.322\) Pa
-	\end{itemize}
-	
-	
+	\subsection{Pressure Units}\label{Pressure Units}
+The SI unit for pressure is the \textbf{Pascal (Pa)}, which is equivalent to \textbf{N/m\textsuperscript{2}} (Newton per square meter). Commonly used pressure units include \textbf{bar}, \textbf{psi} (pound per square inch), and \textbf{atm} (atmosphere). Below is a table of standard pressure units and their conversion factors:
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{lcccc}
+		\toprule
+		\textbf{Unit} & \textbf{Pa} & \textbf{bar} & \textbf{psi} & \textbf{atm} \\
+		\midrule
+		Pa            & 1           & $1 \times 10^{-5}$ & $1.450 \times 10^{-4}$ & $9.869 \times 10^{-6}$ \\
+		bar           & $1 \times 10^{5}$ & 1            & 14.5038      & 0.986923     \\
+		psi           & 6894.76     & 0.0689476    & 1            & 0.068046     \\
+		atm           & 101325      & 1.01325      & 14.6959      & 1            \\
+		\bottomrule
+	\end{tabular}
+	\caption{Standard Pressure Unit Conversions}
+	\label{tab:pressure_conversions}
+\end{table}
+\vspace{-2em}
+\subsubsection{Pascal (Pa)}
+The Pascal (Pa) is the SI unit of pressure, named after the French mathematician and physicist Blaise Pascal. It is defined as one Newton per square meter (\si{\newton\per\square\meter}). As a relatively small unit, the Pascal is commonly used in scientific fields such as laboratory research or atmospheric studies.
+\subsubsection{Atmosphere (atm)}
+The atmosphere (atm) is a unit of pressure defined as the average atmospheric pressure at sea level on Earth. Were \[1\,\text{atm}\approx101\, 325\,\text{Pa}\]
+The atmosphere is commonly used in chemistry and physics to describe gas pressures, especially in contexts like gas laws (e.g., Boyle's Law and Charles's Law), as well as in scuba diving to describe underwater pressures. It is used for convenience, providing a standardized unit for atmospheric pressure in various scientific and engineering applications.
+\subsubsection{Bar (bar)}
+The bar is a metric unit of pressure, though it is not part of the International System of Units (SI). It is defined as \[1\,\text{bar}=100\, 000\,\text{Pa}\] 
+This exact by definition. However, the relationship between bar and atm involves a small fractional difference due to the empirical value of standard atmospheric pressure, it is very close, specifically $$1\,\text{bar}\approx0.986923\,\text{atm}$$ Which is just 1.3077\% off. The bar is commonly used in meteorology, engineering, and industrial applications, as it provides a convenient scale for measuring pressures near atmospheric pressure.
+\subsubsection{Pound per Square Inch (psi)}
+The pound per square inch (psi) is a unit of pressure primarily used in the United States and other countries that follow the Imperial system. It is defined as the pressure exerted by one pound-force applied to an area of one square inch. PSI is widely used in automotive, mechanical engineering, and hydraulic systems, such as measuring tire pressure.\\[1em]
+The conversion factor between psi and Pascal is given as:
+\[1 \, \text{psi} = 6894.76 \, \text{Pa}.\]
+This conversion is derived from the definition of the pound-force (lbf) and the inch.\\
+One \textbf{pound-force (lbf)} is defined as the force required to accelerate a mass of one pound under the influence of gravity. In the metric system, 1 pound-force is approximately equivalent to 4.44822 Newtons (N). This is based on the following formulation:
+\[1\,\text{lbf}=1\,\text{lb}\times g\]
+\[1 \, \text{lbf} = 0.453592 \, \text{kg} \times 9.80665 \, \text{m/s}^2 = 4.44822 \, \text{N}.\]
+The force of one pound-force is applied over an area of one square inch. One square inch is defined as:
+\[1 \, \text{inch}^2 = 0.00064516 \, \text{m}^2.\]
+Thus, the conversion from psi to Pascal is calculated by dividing the force in Newtons by the area in square meters:
+\[1 \, \text{psi} = \frac{4.44822 \, \text{N}}{0.00064516 \, \text{m}^2} \approx 6894.76 \, \text{Pa}.\]
+This precise conversion reflects the accurate definitions of the pound-force and the inch, with the result ensuring consistent and reliable unit conversion between the Imperial and SI systems.
+
+
+
 	
 	
 	\newpage	
 	\section{Data, Calculations and Results}
-	Thus, as explained in the Method \& Experimental Procedures Section \ref{Method_Experimental_Procedures}, we have gathered a simple dataset for the corresponding pressure gauges. Our goal now is to make calculations, illustrate trends, etc., and simply produce another dataset from which we can draw fair conclusions from. Here, I first describe the baseline data that was collected and recorded on the table that was made available for use in the lab (Figure \ref{figure:s}).
-	\subsection{Pressure Calibrator Readings}
-	\vspace{-1em}
-	\begin{table}[H]
-		\centering
-		\begin{minipage}[t]{0.17\textwidth}
-			\centering
-			\textbf{\textsf{kPa}}\\[8pt]
-			
-			\begin{tblr}{
+	In this section, we will present the calculations and results derived from the dataset collected during the experiment, as detailed in the \textbf{Method \& Experimental Procedures} section \ref{Method_Experimental_Procedures}. The primary objective is to analyze the data, identify trends, and generate additional information that will help us draw meaningful conclusions. To start, I will first describe the baseline data, which was recorded in the table provided for the lab (Figure \ref{fig:pressurestable}).
+	
+	\tikzexternaldisable
+
+	
+	\subsection{Pressure Readings}
+	\begin{center}
+	\begin{minipage}{0.23\textwidth}
+		\begin{tcolorbox}[title={\color{black}\normalsize \textbf{Pressure Calibrator}}, colback=SkyBlue!6!white, 
+			colframe=SteelBlue!20!white, boxrule=0.5mm, width=\textwidth]
+		\hspace*{-0.82em}
+		\begin{minipage}{1.2\textwidth}\centering
+		\textbf{\textsf{kPa}}\\[8pt]
+		\begin{tblr}{
 					colspec={X[1cm]X[1cm]},
 					hlines,vlines,
-					cells={valign=m,halign=c},
+					cells={valign=m,halign=c,bg=white},
 					rows={ht=1\baselineskip},
 					row{1}={ht=1\baselineskip,font=\bfseries},
 				}
@@ -499,17 +574,28 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 				46.1 & -37.6 \\
 				52.2 & -41.7 \\
 			\end{tblr}
-			\caption{Pressure Calibrator}
+			\captionof{table}{Pressure Calibrator}
 		\end{minipage}
-		\hfill
-		\begin{minipage}[t]{0.17\textwidth}
+		\end{tcolorbox}
+	\end{minipage}
+	\begin{minipage}{0.75\textwidth}
+	\begin{tcolorbox}[
+		title={\color{black}\normalsize \textbf{Pressure measuring instruments}},
+		colback=MetallicSunburst!6!white, 
+		colframe=ChineseGold!20!white, 
+		boxrule=0.5mm, 
+		width=1\textwidth
+		]
+		\begin{minipage}{1.03\textwidth}
+			\hspace*{-1em}
+			\centering	
+			\begin{minipage}{0.225\textwidth}
 			\centering
 			\textbf{\textsf{psi}}\\[8pt]
-			
 			\begin{tblr}{
 					colspec={X[1cm]X[1cm]},
 					hlines,vlines,
-					cells={valign=m,halign=c},
+					cells={valign=m,halign=c,bg=white},
 					rows={ht=1\baselineskip},
 					row{1}={ht=1\baselineskip,font=\bfseries},
 				}
@@ -525,17 +611,16 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 				7.6  & -8.3  \\
 				8.5  & -9.5  \\
 			\end{tblr}
-			\caption{Bourdon Gauge 1}
+			\captionof{table}{Bourdon Gauge 1}
 		\end{minipage}
-		\hfill
-		\begin{minipage}[t]{0.17\textwidth}
+			\hfil
+			\begin{minipage}{0.225\textwidth}
 			\centering
 			\textbf{\textsf{kN/m$\bm{^2}$}}\\[8pt]
-			
 			\begin{tblr}{
 					colspec={X[1cm]X[1cm]},
 					hlines,vlines,
-					cells={valign=m,halign=c},
+					cells={valign=m,halign=c,bg=white},
 					rows={ht=1\baselineskip},
 					row{1}={ht=1\baselineskip,font=\bfseries},
 				}
@@ -551,17 +636,16 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 				50.0 & -36.0 \\
 				57.0 & -40.0 \\
 			\end{tblr}
-			\caption{Bourdon Gauge 2}
+			\captionof{table}{Bourdon Gauge 2}
 		\end{minipage}
-		\hfill
-		\begin{minipage}[t]{0.17\textwidth}
+			\hfil
+			\begin{minipage}{0.225\textwidth}
 			\centering
 			\textbf{\textsf{bar}}\\[8pt]
-			
 			\begin{tblr}{
 					colspec={X[1cm]X[1cm]},
 					hlines,vlines,
-					cells={valign=m,halign=c},
+					cells={valign=m,halign=c,bg=white},
 					rows={ht=1\baselineskip},
 					row{1}={ht=1\baselineskip,font=\bfseries},
 				}
@@ -577,17 +661,16 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 				0.40  & -0.44  \\
 				0.47  & -0.49  \\
 			\end{tblr}
-			\caption{Budenberg Pressure Gauge}
+			\captionof{table}{Budenberg Pressure Gauge}
 		\end{minipage}
-		\hfill
-		\begin{minipage}[t]{0.17\textwidth}
+			\hfil
+			\begin{minipage}{0.225\textwidth}
 			\centering
 			\textbf{\textsf{cm Hg}}\\[8pt]
-			
 			\begin{tblr}{
 					colspec={X[1cm]X[1cm]},
 					hlines,vlines,
-					cells={valign=m,halign=c},
+					cells={valign=m,halign=c,bg=white},
 					rows={ht=1\baselineskip},
 					row{1}={ht=1\baselineskip,font=\bfseries},
 				}
@@ -603,9 +686,284 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 				18.7 & -12.8 \\
 				21.0 & -14.4 \\
 			\end{tblr}
-			\caption{Hg Glass Manometer}
+			\captionof{table}{Hg Glass Manometer}
+			\end{minipage}
+		\end{minipage}		
+		\end{tcolorbox}		
+	\end{minipage}
+	\end{center}
+	As instructed, we first \textbf{zero out the data} by adjusting all values relative to the first element. This means that we subtract the first element from every value in the list. This ensures that the first element becomes zero, and the rest of the data maintains its relative differences. The specific reasonsing and justification for this is noted later.\\[1em] 
+	This can be simply done via code, by loading the csv files and performing the code\\[1em]
+	The results are as follows:
+	  
+	  \newgeometry{left=0.8in,right=0.8in,top=1in,bottom=0.6in}
+	  
+\begin{center}
+	\begin{minipage}{0.23\textwidth}
+		\begin{tcolorbox}[title={\color{black}\normalsize \textbf{Pressure Calibrator}}, colback=SkyBlue!6!white, 
+			colframe=SteelBlue!20!white, boxrule=0.5mm, width=\textwidth]
+			\hspace*{-0.82em}
+			\begin{minipage}{1.2\textwidth}\centering
+				\textbf{\textsf{kPa}}\\[8pt]
+				\begin{tblr}{
+						colspec={X[1cm]X[1cm]},
+						hlines,vlines,
+						cells={valign=m,halign=c,bg=white},
+						rows={ht=1\baselineskip},
+						row{1}={ht=1\baselineskip,font=\bfseries},
+					}
+					\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
+					0.0  & 0.0  \\
+					5.7  & -5.6  \\
+					10.4 & -12.1 \\
+					16.0 & -18.0 \\
+					21.1 & -21.8 \\
+					27.7 & -25.4 \\
+					34.2 & -29.3 \\
+					40.0 & -33.6 \\
+					46.1 & -37.6 \\
+					52.2 & -41.7 \\
+				\end{tblr}
+				\captionof{table}{Pressure Calibrator (Zeroed)}
+			\end{minipage}
+		\end{tcolorbox}
+	\end{minipage}
+	\begin{minipage}{0.75\textwidth}
+		\begin{tcolorbox}[
+			title={\color{black}\normalsize \textbf{Pressure measuring instruments}},
+			colback=MetallicSunburst!6!white, 
+			colframe=ChineseGold!20!white, 
+			boxrule=0.5mm, 
+			width=1\textwidth
+			]
+			\begin{minipage}{1.03\textwidth}
+				\hspace*{-1.5em}
+				\centering	
+				\begin{minipage}{0.22\textwidth}
+					\centering
+					\textbf{\textsf{psi}}\\[8pt]
+					\begin{tblr}{
+							colspec={X[1cm]X[1cm]},
+							hlines,vlines,
+							cells={valign=m,halign=c,bg=white},
+							rows={ht=1\baselineskip},
+							row{1}={ht=1\baselineskip,font=\bfseries},
+						}
+						\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
+						0.0  & 0.0  \\
+						1.0  & -0.8  \\
+						1.6  & -1.7  \\
+						2.4  & -3.2  \\
+						3.1  & -4.0  \\
+						4.0  & -5.2  \\
+						5.0  & -7.2  \\
+						5.8  & -8.3  \\
+						6.6  & -9.5  \\
+						7.5  & -10.7 \\
+					\end{tblr}
+					\captionof{table}{Bourdon Gauge 1 (Zeroed)}
+				\end{minipage}
+				\hfil
+				\begin{minipage}{0.22\textwidth}
+					\centering
+					\textbf{\textsf{kN/m$\bm{^2}$}}\\[8pt]
+					\begin{tblr}{
+							colspec={X[1cm]X[1cm]},
+							hlines,vlines,
+							cells={valign=m,halign=c,bg=white},
+							rows={ht=1\baselineskip},
+							row{1}={ht=1\baselineskip,font=\bfseries},
+						}
+						\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
+						0.0  & 0.0  \\
+						7.0  & -3.5  \\
+						13.0 & -11.5 \\
+						19.0 & -17.5 \\
+						24.0 & -22.5 \\
+						29.0 & -25.5 \\
+						38.0 & -29.5 \\
+						44.0 & -34.5 \\
+						49.0 & -38.5 \\
+						56.0 & -42.5 \\
+					\end{tblr}
+					\captionof{table}{Bourdon Gauge 2 (Zeroed)}
+				\end{minipage}
+				\hfil
+				\begin{minipage}{0.24\textwidth}
+					\centering
+					\textbf{\textsf{bar}}\\[8pt]
+					\begin{tblr}{
+							colspec={X[1cm]X[1cm]},
+							hlines,vlines,
+							cells={valign=m,halign=c,bg=white},
+							rows={ht=1\baselineskip},
+							row{1}={ht=1\baselineskip,font=\bfseries},
+						}
+						\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
+						0.00 & 0.00  \\
+						0.05 & -0.05  \\
+						0.09 & -0.11  \\
+						0.15 & -0.19  \\
+						0.20 & -0.22  \\
+						0.27 & -0.25  \\
+						0.34 & -0.30  \\
+						0.40 & -0.35  \\
+						0.45 & -0.39  \\
+						0.52 & -0.44  \\
+					\end{tblr}
+					\captionof{table}{Budenberg (Zeroed)}
+				\end{minipage}
+				\hfil
+				\begin{minipage}{0.22\textwidth}
+					\centering
+					\textbf{\textsf{cm Hg}}\\[8pt]
+					\begin{tblr}{
+							colspec={X[1cm]X[1cm]},
+							hlines,vlines,
+							cells={valign=m,halign=c,bg=white},
+							rows={ht=1\baselineskip},
+							row{1}={ht=1\baselineskip,font=\bfseries},
+						}
+						\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
+						0.0  & 0.0  \\
+						3.1  & -1.1  \\
+						4.9  & -4.1  \\
+						7.0  & -5.8  \\
+						9.0  & -7.2  \\
+						11.2 & -8.6  \\
+						13.8 & -10.0 \\
+						16.0 & -11.7 \\
+						18.3 & -13.2 \\
+						20.6 & -14.8 \\
+					\end{tblr}
+					\captionof{table}{Hg Glass (Zeroed)}
+				\end{minipage}
+			\end{minipage}		
+		\end{tcolorbox}		
+	\end{minipage}
+\end{center}
+Now, we need to perform some unit conversions to ensure consistency across all measurements.\\[8pt]
+In the context of this study, as seen in the table in Figure \ref{fig:pressurestable}, we are provided with a row for calculating bar and bar \(\text{P}_\text{abs}\), which directly suggests that all the pressures should be expressed in bar for all comparisons. In my opinion, the choice of unit doesn't significantly affect the results, when coming to conclusions we aim to achieve. I will demonstrate later in that the results are the same when using different units.\\[8pt]
+That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outlined in subsection \ref{Pressure Units}.
+\begin{center}
+\fbox{\hspace*{-0.5em}\begin{minipage}{0.46\textwidth}\centering		\begin{tikzpicture}
+		\draw[thick,->] 
+		(-1,3) 
+		.. controls (-0.5,4) and (2.5,4) .. 
+		(3,3)  
+		node[above,midway] {to Bar Units} 
+		node[below,midway] {$\times 10^{-2}$};
+	\end{tikzpicture}\\
+	\hspace*{1em}
+	\begin{minipage}{1\textwidth}
+\fbox{\begin{minipage}{0.4\textwidth}\centering
+	\textbf{\textsf{kPa}}\\[8pt]
+	\begin{tblr}{
+			colspec={X[1cm]X[1cm]},
+			hlines,vlines,
+			cells={valign=m,halign=c,bg=white},
+			rows={ht=1\baselineskip},
+			row{1}={ht=1\baselineskip,font=\bfseries},
+		}
+		\Large\textsf{\textcolor{red}{+}} &\Large\textsf{\textcolor{blue}{-}} \\ \hline
+		0.0  & 0.0  \\
+		5.7  & -5.6  \\
+		10.4 & -12.1 \\
+		16.0 & -18.0 \\
+		21.1 & -21.8 \\
+		27.7 & -25.4 \\
+		34.2 & -29.3 \\
+		40.0 & -33.6 \\
+		46.1 & -37.6 \\
+		52.2 & -41.7 \\
+	\end{tblr}
+\end{minipage}}
+\fbox{\begin{minipage}{0.43\textwidth}\centering
+	\textbf{\textsf{Bar}}\\[8pt]
+	\begin{tblr}{
+			colspec={X[1.2cm]X[1.2cm]},
+			hlines,vlines,
+			cells={valign=m,halign=c,bg=white},
+			rows={ht=1\baselineskip},
+			row{1}={ht=1\baselineskip,font=\bfseries},
+		}
+		\Large\textsf{\textcolor{red}{+}} &\Large\textsf{\textcolor{blue}{-}} \\ \hline
+		0.0  & 0.0  \\
+		0.057  & -0.056  \\
+		0.104 & -0.121 \\
+		0.160 & -0.180 \\
+		0.211 & -0.218 \\
+		0.277 & -0.254 \\
+		0.342 & -0.293 \\
+		0.400 & -0.336 \\
+		0.461 & -0.376 \\
+		0.522 & -0.417 \\
+	\end{tblr}
+\end{minipage}}
+\end{minipage}
+\end{minipage}}
+\fbox{\hspace*{-0.5em}\begin{minipage}{0.46\textwidth}\centering		\begin{tikzpicture}
+			\draw[thick,->] 
+			(-1,3) 
+			.. controls (-0.5,4) and (2.5,4) .. 
+			(3,3)  
+			node[above,midway] {to Bar Units} 
+			node[below,midway] {$\times 10^{-2}$};
+		\end{tikzpicture}\\
+		\hspace*{1em}
+		\begin{minipage}{1\textwidth}
+			\fbox{\begin{minipage}{0.4\textwidth}\centering
+					\textbf{\textsf{psi}}\\[6pt]
+					\begin{tblr}{
+							colspec={X[1cm]X[1cm]},
+							hlines,vlines,
+							cells={valign=m,halign=c,bg=white},
+							rows={ht=1\baselineskip},
+							row{1}={ht=1\baselineskip,font=\bfseries},
+						}
+						\Large\textsf{\textcolor{red}{+}} &\Large\textsf{\textcolor{blue}{-}} \\ \hline
+						0.0  & 0.0  \\
+						1.0  & -0.8  \\
+						1.6  & -1.7  \\
+						2.4  & -3.2  \\
+						3.1  & -4.0  \\
+						4.0  & -5.2  \\
+						5.0  & -7.2  \\
+						5.8  & -8.3  \\
+						6.6  & -9.5  \\
+						7.5  & -10.7 \\
+					\end{tblr}
+			\end{minipage}}
+			\fbox{\begin{minipage}{0.43\textwidth}\centering
+					\textbf{\textsf{Bar}}\\[8pt]
+					\begin{tblr}{
+							colspec={X[1.2cm]X[1.2cm]},
+							hlines,vlines,
+							cells={valign=m,halign=c,bg=white},
+							rows={ht=1\baselineskip},
+							row{1}={ht=1\baselineskip,font=\bfseries},
+						}
+						\Large\textsf{\textcolor{red}{+}} &\Large\textsf{\textcolor{blue}{-}} \\ \hline
+						 &  \\
+						 &  \\
+						 &  \\
+						 &  \\
+						 &  \\
+						 &  \\
+						 &  \\
+						 &  \\
+						 &  \\
+						 &  \\
+					\end{tblr}
+			\end{minipage}}
 		\end{minipage}
-	\end{table}
+\end{minipage}}
+\end{center}
+
+	\restoregeometry\newpage
+	
+	
+	\tikzexternalenable
 	
 	\newpage
 	\section{Discussion of Results}
