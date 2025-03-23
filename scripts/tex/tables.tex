@@ -3,7 +3,9 @@
 \usepackage{afterpage}
 
 \usepackage{capt-of}
-
+\usepackage{pgfplots, pgfplotstable}
+\pgfplotsset{compat=1.18}
+\usepackage{xstring}
 \usepackage{tabularray}
 \usepackage{amsmath}
 \usepackage{bm}
@@ -42,18 +44,17 @@
 %\def\bundenbergpressuregauges{{-0.05, -0.1, -0.16, -0.24, -0.27, -0.3, -0.35, -0.4, -0.44, -0.49}}
 %\def\hgglassmanometers{{0.4, -0.7, -3.7, -5.4, -6.8, -8.2, -9.6, -11.3, -12.8, -14.4}}
 
-\def\pressurecalibrator{{0, 5.7, 10.4, 16, 21.1, 27.7, 34.2, 40, 46.1, 52.2}}
-\def\bourdongauge{{0, 1, 1.6, 2.4, 3.1, 4, 5, 5.8, 6.6, 7.5}}
-\def\bourdongaugetwo{{0, 7, 13, 19, 24, 29, 38, 44, 49, 56}}
-\def\bundenbergpressuregauge{{0, 0.05, 0.09, 0.15, 0.2, 0.27, 0.34, 0.4, 0.45, 0.52}}
-\def\hgglassmanometer{{0, 3.1, 4.9, 7, 9, 11.2, 13.8, 16, 18.3, 20.6}}
+\def\pressurecalibrator{{0, 5.9, 9.1, 14.7, 19.2, 24.1, 30.0, 35.0, 40.0, 44.3}}
+\def\bourdongauge{{0, 1, 1.48, 2.25, 2.75, 3.6, 4.4, 5.0, 5.75, 6.25}}
+\def\bourdongaugetwo{{0, 6.5, 10, 16.5, 21.5, 26.5, 32.5, 38, 45, 48}}
+\def\bundenbergpressuregauge{{0, 0.05, 0.075, 0.12, 0.175, 0.225, 0.29, 0.34, 0.4, 0.425}}
+\def\hgglassmanometer{{0, 2.2, 3.4, 5.4, 7.1, 9, 11.2, 13, 14.9, 16.5}}
 
-\def\pressurecalibrators{{0, -5.6, -12.1, -18, -21.8, -25.4, -29.3, -33.6, -37.6, -41.7}}
-\def\bourdongauges{{0, -0.8, -1.7, -3.2, -4, -5.2, -7.2, -8.3, -9.5, -10.7}}
-\def\bourdongaugetwos{{0, -3.5, -11.5, -17.5, -22.5, -25.5, -29.5, -34.5, -38.5, -42.5}}
-\def\bundenbergpressuregauges{{0, -0.05, -0.11, -0.19, -0.22, -0.25, -0.3, -0.35, -0.39, -0.44}}
-\def\hgglassmanometers{{0, -1.1, -4.1, -5.8, -7.2, -8.6, -10, -11.7, -13.2, -14.8}}
-
+\def\pressurecalibrators{{0, -4.9, -10.1, -15, -19, -25.5, -29.7, -35, -39, -44.6}}
+\def\bourdongauges{{0, -0.5, -1.5, -3, -4, -6, -7, -8.5, -9.75, -11.25}}
+\def\bourdongaugetwos{{0, -3.5, -9, -15, -18.5, -26, -30, -36, -40, -46}}
+\def\bundenbergpressuregauges{{0, -0.01, -0.1, -0.15, -0.2, -0.21, -0.25, -0.36, -0.41, -0.45}}
+\def\hgglassmanometers{{0, -2.2, -3.8, -5.6, -7.1, -9.6, -11.2, -13.1, -14.7, -16.7}}
 
 \begin{document}
 
@@ -169,7 +170,8 @@
 	\item I preserved all the highlighted cells (with the blue and yellow backgrounds) exactly as in your original table.
 \end{enumerate}
 
-The table is now complete and ready to be included in document.
+The table is now complete and ready to be included in document.\newpage
+
 
 
 \end{document}

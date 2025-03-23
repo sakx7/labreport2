@@ -1,108 +1,125 @@
-
-import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
+import os
 
-# Conversion factors for each unit to bar
-psi_to_bar = 0.0689476
-kn_m2_to_bar = 0.01
-cmHg_to_bar = 0.00133322
+# Define paths
+data_dir = "data/same_units"
+output_dir = "figures"
 
-# Data in respective units (converted to bar for consistency)
-pressurecalibrator = np.array([0, 5.7, 10.4, 16, 21.1, 27.7, 34.2, 40, 46.1, 52.2]) * 0.001  # kPa to bar
-bourdongauge = np.array([0, 1, 1.6, 2.4, 3.1, 4, 5, 5.8, 6.6, 7.5]) * psi_to_bar  # psi to bar
-bourdongaugetwo = np.array([0, 7, 13, 19, 24, 29, 38, 44, 49, 56]) * kn_m2_to_bar  # kN/m^2 to bar
-bundenbergpressuregauge = np.array([0, 0.05, 0.09, 0.15, 0.2, 0.27, 0.34, 0.4, 0.45, 0.52])  # already in bar
-hgglassmanometer = np.array([0, 3.1, 4.9, 7, 9, 11.2, 13.8, 16, 18.3, 20.6]) * cmHg_to_bar  # cm Hg to bar
+# Ensure output directory exists
+os.makedirs(output_dir, exist_ok=True)
 
-# Negative counterparts in respective units (converted to bar)
-pressurecalibrators_neg = np.array([0, -5.6, -12.1, -18, -21.8, -25.4, -29.3, -33.6, -37.6, -41.7]) * 0.001  # kPa to bar
-bourdongauges = np.array([0, -0.8, -1.7, -3.2, -4, -5.2, -7.2, -8.3, -9.5, -10.7]) * psi_to_bar  # psi to bar
-bourdongaugetwos = np.array([0, -3.5, -11.5, -17.5, -22.5, -25.5, -29.5, -34.5, -38.5, -42.5]) * kn_m2_to_bar  # kN/m^2 to bar
-bundenbergpressuregauges = np.array([0, -0.05, -0.11, -0.19, -0.22, -0.25, -0.3, -0.35, -0.39, -0.44])  # already in bar
-hgglassmanometers = np.array([0, -1.1, -4.1, -5.8, -7.2, -8.6, -10, -11.7, -13.2, -14.8]) * cmHg_to_bar  # cm Hg to bar
+# Identify files
+files = sorted([f for f in os.listdir(data_dir) if f.endswith("_bar.csv")])
 
+# Identify the calibrator file
+calibrator_file = "Pressure_Calibrator_bar.csv"
+if calibrator_file not in files:
+    raise FileNotFoundError(f"{calibrator_file} not found in {data_dir}")
 
-print(pressurecalibrator)
-print(bourdongauge)
-print(bourdongaugetwo)
-print(bundenbergpressuregauge)
-print(hgglassmanometer)
+# Read calibrator data
+calibrator_df = pd.read_csv(os.path.join(data_dir, calibrator_file))
 
-print(pressurecalibrators_neg)
-print(bourdongauges)
-print(bourdongaugetwos)
-print(bundenbergpressuregauges)
-print(hgglassmanometers)
+# Check for required columns
+if "Positive" not in calibrator_df.columns or "Negative" not in calibrator_df.columns:
+    raise ValueError(f"{calibrator_file} does not have expected 'Positive' and 'Negative' columns.")
 
+# Function to fit and plot best-fit lines
+def plot_best_fit(x, y, label,file, color, linestyle="--", alpha=0.6):
+    coeffs = np.polyfit(x, y, 1)  # Linear fit (y = mx + c)
+    poly_eq = np.poly1d(coeffs)
+    plt.plot(x, poly_eq(x), linestyle=linestyle, color=color, label=f"{label} (Fit)", alpha=alpha)
+    print(f"{file},{label}, best-fit equation: y = {coeffs[0]:.4f}x + {coeffs[1]:.4f}")
 
+# Loop through all instruments
+for file in files:
+    if file == calibrator_file:
+        continue  # Skip the calibrator itself
 
-# Create x values (indices of data points)
-x = np.arange(len(pressurecalibrator))
+    instrument_df = pd.read_csv(os.path.join(data_dir, file))
 
-# Function to plot data and fit line, and return the gradient
-def plot_with_best_fit(data, label):
-    p = np.polyfit(x, data, 1)  # Line of best fit (linear fit)
-    y_fit = np.polyval(p, x)  # Best fit values
-    gradient = p[0]  # The first coefficient is the gradient (slope)
-    plt.scatter(x, data, label=label)
-    plt.plot(x, y_fit, linestyle='--', label=f"Best fit ({label})")
-    return gradient
+    # Check if required columns exist
+    if "Positive" not in instrument_df.columns or "Negative" not in instrument_df.columns:
+        print(f"Skipping {file}: Missing 'Positive' or 'Negative' columns.")
+        continue
 
-# Plot all data sets
-plt.figure(figsize=(12, 10))
+    # Extract values
+    x_pos, y_pos = instrument_df["Positive"], calibrator_df["Positive"]
+    x_neg, y_neg = instrument_df["Negative"], calibrator_df["Negative"]
 
-# Plot for Pressure Calibrator
-plt.subplot(2, 2, 1)
-gradient_1 = plot_with_best_fit(pressurecalibrator, "Pressure Calibrator (Positive)")
-gradient_2 = plot_with_best_fit(pressurecalibrators_neg, "Pressure Calibrators (Negative)")
-plt.title('Pressure Calibrator')
-plt.xlabel('Index')
-plt.ylabel('Pressure (bar)')
-plt.axhline(0, color='black',linewidth=1)  # Add horizontal axis
-plt.axvline(0, color='black',linewidth=1)  # Add vertical axis
-plt.grid(True)
-print(f"Gradient for Pressure Calibrator (Positive): {gradient_1}")
-print(f"Gradient for Pressure Calibrators (Negative): {gradient_2}")
+    # Combined data
+    x_combined = np.concatenate([x_pos, x_neg])
+    y_combined = np.concatenate([y_pos, y_neg])
 
-# Plot for Bourdon Gauge
-plt.subplot(2, 2, 2)
-gradient_3 = plot_with_best_fit(bourdongauge, "Bourdon Gauge (Positive)")
-gradient_4 = plot_with_best_fit(bourdongauges, "Bourdon Gauge (Negative)")
-plt.title('Bourdon Gauge')
-plt.xlabel('Index')
-plt.ylabel('Pressure (bar)')
-plt.axhline(0, color='black',linewidth=1)  # Add horizontal axis
-plt.axvline(0, color='black',linewidth=1)  # Add vertical axis
-plt.grid(True)
-print(f"Gradient for Bourdon Gauge (Positive): {gradient_3}")
-print(f"Gradient for Bourdon Gauge (Negative): {gradient_4}")
+    # Plot 1: Negative data with best-fit line (adjusted axes)
+    plt.figure(figsize=(8, 6))
+    plt.scatter(x_neg, y_neg, color="blue", label="Negative", alpha=0.7)
+    plot_best_fit(x_neg, y_neg, "Negative",file, "blue")
 
-# Plot for Bourdon Gauge Two
-plt.subplot(2, 2, 3)
-gradient_5 = plot_with_best_fit(bourdongaugetwo, "Bourdon Gauge Two (Positive)")
-gradient_6 = plot_with_best_fit(bourdongaugetwos, "Bourdon Gauge Two (Negative)")
-plt.title('Bourdon Gauge Two')
-plt.xlabel('Index')
-plt.ylabel('Pressure (bar)')
-plt.axhline(0, color='black',linewidth=1)  # Add horizontal axis
-plt.axvline(0, color='black',linewidth=1)  # Add vertical axis
-plt.grid(True)
-print(f"Gradient for Bourdon Gauge Two (Positive): {gradient_5}")
-print(f"Gradient for Bourdon Gauge Two (Negative): {gradient_6}")
+    # Adjust axes for negative plot
+    ax = plt.gca()
+    ax.xaxis.tick_top()  # Move x-axis to the top
+    ax.yaxis.tick_right()  # Move y-axis to the right
+    ax.xaxis.set_label_position('top')  # Move x-axis label to the top
+    ax.yaxis.set_label_position('right')  # Move y-axis label to the right
 
-# Plot for Bundenberg Pressure Gauge
-plt.subplot(2, 2, 4)
-gradient_7 = plot_with_best_fit(bundenbergpressuregauge, "Bundenberg Pressure Gauge (Positive)")
-gradient_8 = plot_with_best_fit(bundenbergpressuregauges, "Bundenberg Pressure Gauge (Negative)")
-plt.title('Bundenberg Pressure Gauge')
-plt.xlabel('Index')
-plt.ylabel('Pressure (bar)')
-plt.axhline(0, color='black',linewidth=1)  # Add horizontal axis
-plt.axvline(0, color='black',linewidth=1)  # Add vertical axis
-plt.grid(True)
-print(f"Gradient for Bundenberg Pressure Gauge (Positive): {gradient_7}")
-print(f"Gradient for Bundenberg Pressure Gauge (Negative): {gradient_8}")
+    plt.xlabel(file.replace("_bar.csv", "").replace("_", " ") + " (bar)")
+    plt.ylabel("Pressure Calibrator (bar)")
+    plt.title(f"Calibration: {file.replace('_bar.csv', '')} (Negative) vs Calibrator")
+    plt.legend(loc='lower left')  # Adjust legend position
+    plt.grid(True)
+    output_path_neg = os.path.join(output_dir, file.replace("_bar.csv", "_negative_calibration.png"))
+    plt.savefig(output_path_neg, dpi=300)
+    plt.show()
+    plt.close()
+    #print(f"Saved plot: {output_path_neg}")
 
-# Adjust layout
-plt.tight_layout()
-plt.show()
+    # Plot 2: Positive data with best-fit line (unchanged)
+    plt.figure(figsize=(8, 6))
+    plt.scatter(x_pos, y_pos, color="red", label="Positive", alpha=0.7)
+    plot_best_fit(x_pos, y_pos, "Positive",file, "red")
+    plt.xlabel(file.replace("_bar.csv", "").replace("_", " ") + " (bar)")
+    plt.ylabel("Pressure Calibrator (bar)")
+    plt.title(f"Calibration: {file.replace('_bar.csv', '')} (Positive) vs Calibrator")
+    plt.legend()
+    plt.grid(True)
+    output_path_pos = os.path.join(output_dir, file.replace("_bar.csv", "_positive_calibration.png"))
+    plt.savefig(output_path_pos, dpi=300)
+    plt.show()
+    plt.close()
+    #print(f"Saved plot: {output_path_pos}")
+
+    # Plot 3: Combined data with distinct dot colors and a single best-fit line (centered axes)
+    plt.figure(figsize=(8, 6))
+    ax = plt.gca()
+
+    # Move spines to the center
+    ax.spines['left'].set_position('zero')  # Move left spine to zero
+    ax.spines['bottom'].set_position('zero')  # Move bottom spine to zero
+    ax.spines['right'].set_color('none')  # Remove right spine
+    ax.spines['top'].set_color('none')  # Remove top spine
+
+    # Plot data points
+    plt.scatter(x_pos, y_pos, color="blue", label="Positive", alpha=0.7)  # Positive points in blue
+    plt.scatter(x_neg, y_neg, color="red", label="Negative", alpha=0.7)  # Negative points in red
+    plot_best_fit(x_combined, y_combined, "Combined",file, "black", linestyle="-")  # Combined best-fit in black with solid line
+
+    # Add arrows to indicate the direction of the axes
+    ax.plot((1), (0), ls="", marker=">", ms=10, color="k", transform=ax.get_yaxis_transform(), clip_on=False)
+    ax.plot((0), (1), ls="", marker="^", ms=10, color="k", transform=ax.get_xaxis_transform(), clip_on=False)
+
+    # Labels and title
+    plt.xlabel(file.replace("_bar.csv", "").replace("_", " ") + " (bar)")
+    plt.ylabel("Pressure Calibrator (bar)")
+    plt.title(f"Calibration: {file.replace('_bar.csv', '')} (Combined) vs Calibrator")
+    plt.legend()
+    plt.grid(True)
+    output_path_combined = os.path.join(output_dir, file.replace("_bar.csv", "_combined_calibration.png"))
+    plt.savefig(output_path_combined, dpi=300)
+    plt.show()
+    plt.close()
+    #print(f"Saved plot: {output_path_combined}")
+    print(f"------------------------")
+    
+print("All plots generated and saved in 'figures/'")    

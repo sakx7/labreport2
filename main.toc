@@ -6,18 +6,17 @@
 \contentsline {subsection}{\numberline {4.1}Pressure}{9}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Absolute Pressure}{9}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Gauge Pressure}{9}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Other Types of Pressure in Flow Measurement}{11}{subsection.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.1}Static Pressure}{11}{subsubsection.4.4.1}%
-\contentsline {subsubsection}{\numberline {4.4.2}Dynamic Pressure}{11}{subsubsection.4.4.2}%
-\contentsline {subsubsection}{\numberline {4.4.3}Total Pressure}{11}{subsubsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.5}How the instruments work}{12}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Pressure Units}{13}{subsection.4.6}%
-\contentsline {subsubsection}{\numberline {4.6.1}Pascal (Pa)}{13}{subsubsection.4.6.1}%
-\contentsline {subsubsection}{\numberline {4.6.2}Atmosphere (atm)}{13}{subsubsection.4.6.2}%
-\contentsline {subsubsection}{\numberline {4.6.3}Bar (bar)}{13}{subsubsection.4.6.3}%
-\contentsline {subsubsection}{\numberline {4.6.4}Pound per Square Inch (psi)}{13}{subsubsection.4.6.4}%
-\contentsline {section}{\numberline {5}Data, Calculations and Results}{15}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Pressure Readings}{15}{subsection.5.1}%
+\contentsline {subsection}{\numberline {4.4}How the instruments work}{11}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Pressure Units}{12}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Pascal (Pa)}{12}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}Atmosphere (atm)}{12}{subsubsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.3}Bar (bar)}{12}{subsubsection.4.5.3}%
+\contentsline {subsubsection}{\numberline {4.5.4}Pound per Square Inch (psi)}{12}{subsubsection.4.5.4}%
+\contentsline {section}{\numberline {5}Data, Calculations and Results}{14}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Pressure Readings}{14}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Borden Gauge 1 vs Calibrator}{17}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Borden Gauge 2 vs Calibrator}{17}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Bundenburg Gauge bar vs Calibrator}{17}{subsection.5.4}%
 \contentsline {section}{\numberline {6}Discussion of Results}{18}{section.6}%
 \contentsline {section}{\numberline {7}Conclusions}{19}{section.7}%
 \contentsline {section}{\numberline {8}Recommendations}{20}{section.8}%

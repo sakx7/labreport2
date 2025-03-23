@@ -31,6 +31,9 @@
 \usepackage{pdfpages}
 \usepackage{empheq}
 \usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{xstring}
+
 \pgfplotsset{compat=1.18}
 \usepackage[oldvoltagedirection]{circuitikz}
 \usepackage{microtype}
@@ -297,17 +300,17 @@ In this experiment, we calibrated and compared the performance of multiple press
 	\begin{figure}[H] 
 			\centering 
 		    \begin{tikzpicture}[auto,
-			block/.style ={rectangle, draw=blue, thick, fill=blue!20, text width=1em,align=center, rounded corners, minimum height=2em},
-			block1/.style ={rectangle, draw=blue, thick, fill=blue!20, text width=5em,align=center, rounded corners, minimum height=2em},
+			block/.style ={rectangle, draw=gray!70!black, thick, fill=white!94!black, text width=1em,align=center, rounded corners, minimum height=2em},
+			block1/.style ={rectangle, draw=gray!70!black, thick, fill=white!94!black, text width=5em,align=center, rounded corners, minimum height=2em},
 			line/.style ={draw, thick, -latex',shorten >=2pt},
 			cloud/.style ={draw=red, thick, ellipse,fill=red!20,
 				minimum height=1em}]
 			\node[anchor=center] (image) at (-10,0) {\includegraphics[width=0.9\textwidth]{extracted_images/image_7_1.png}};
 			\node[block] (A) at (-9.85,-4.5) {1};
 			\node[block] (B) at (-7.15,-4.5) {2};
-			\node[block1] (Gauge) at (-8.5,-3) {Bourdon Gauge};
-			\draw[line] (Gauge.south) -- ++(0,-0.25) -| (A.north);
-			\draw[line] (Gauge.south) -- ++(0,-0.25) -| (B.north);			
+			\node[block1] (Gauge) at (-8.5,-3.5) {Bourdon Gauge};
+			%\draw[line] (Gauge.south) -- ++(0,-0.25) -| (A.north);
+			%\draw[line] (Gauge.south) -- ++(0,-0.25) -| (B.north);			
 			\node[block1] (Gauge) at (-15.5,-4.2) {Pressure calibrator};
 			\node[block1] (Gauge) at (-7.5,-1.1) {Pressure Gauge};
 			\node[block1] (Gauge) at (-3.5,7.6) {Mercury Glass Manometer};
@@ -423,7 +426,7 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 	\hfil
 	\begin{minipage}{0.45\textwidth}
 		\centering
-		\includegraphics[width=0.8\textwidth]{images/Pressure.jpg}
+		\includegraphics[width=0.6\textwidth]{images/pressure_force2652641600190961771.png}\vspace{-1.6em}
 		\captionof{figure}{Illustration of pressure application}
 		\label{fig:pressure}
 	\end{minipage}\end{center}
@@ -462,33 +465,7 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 		\caption{Pressure categories and their relationships}
 		\label{fig:pressure_diagram}
 	\end{figure}
-	
-	\newpage
-	\subsection{Other Types of Pressure in Flow Measurement}
-	Additionally, different interpretations of pressure are applicable in flow measurement. The most common types of pressure in this context are \textbf{total}, \textbf{static}, and \textbf{dynamic} pressures.
-	
-	\subsubsection{Static Pressure}
-	Static pressure is the force exerted on a fluid particle from all directions when the fluid is at rest or when measured in a moving reference frame. It is commonly measured using gauges or transmitters attached to the side of a pipe or tank wall. In most discussions, the term "pressure" generally refers to static pressure.
-	\subsubsection{Dynamic Pressure}
-	Dynamic pressure represents the kinetic energy of a flowing fluid and is the difference between total and static pressure. It is given by:
-	\begin{equation}
-		P_{\text{dynamic}} = \frac{\rho v^2}{2g}
-		\label{eq:dynamic}
-	\end{equation}	
-		\subsubsection{Total Pressure}
-	Total pressure is the force per unit area felt when a flowing fluid is brought to rest. It is typically measured using a Pitot tube, as shown in the figure below. Total pressure is the sum of static pressure and dynamic pressure:\\[0.5em]
-	\begin{equation}
-		P_{\text{total}} = P_{\text{static}} + P_{\text{dynamic}}
-		\label{eq:total}
-	\end{equation}\\
-	Total pressure is also referred to as stagnation pressure.
-	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.75\textwidth]{images/Flow Rate.jpg}
-		\caption{Measurement of dynamic pressure in fluid flow}
-		\label{fig:flow_rate}
-	\end{figure}
+
 
 	\newpage
 	\subsection{How the instruments work}
@@ -564,7 +541,7 @@ This precise conversion reflects the accurate definitions of the pound-force and
 					row{1}={ht=1\baselineskip,font=\bfseries},
 				}
 				\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
-				0.0  & 0.0  \\
+				0  & 0  \\
 				5.7  & -5.6  \\
 				10.4 & -12.1 \\
 				16.0 & -18.0 \\
@@ -694,7 +671,6 @@ This precise conversion reflects the accurate definitions of the pound-force and
 	\end{minipage}
 	\end{center}
 	As instructed, we first \textbf{zero out the data} by adjusting all values relative to the first element. This means that we subtract the first element from every value in the list. This ensures that the first element becomes zero, and the rest of the data maintains its relative differences. The specific reasonsing and justification for this is noted later.\\[1em] 
-	This can be simply done via code, by loading the csv files and performing the code\\[1em]
 	The results are as follows:
 	  
 	  \newgeometry{left=0.8in,right=0.8in,top=1in,bottom=0.6in}
@@ -714,7 +690,7 @@ This precise conversion reflects the accurate definitions of the pound-force and
 						row{1}={ht=1\baselineskip,font=\bfseries},
 					}
 					\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
-					0.0  & 0.0  \\
+					0  & 0  \\
 					5.7  & -5.6  \\
 					10.4 & -12.1 \\
 					16.0 & -18.0 \\
@@ -751,7 +727,7 @@ This precise conversion reflects the accurate definitions of the pound-force and
 							row{1}={ht=1\baselineskip,font=\bfseries},
 						}
 						\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
-						0.0  & 0.0  \\
+						0  & 0  \\
 						1.0  & -0.8  \\
 						1.6  & -1.7  \\
 						2.4  & -3.2  \\
@@ -776,7 +752,7 @@ This precise conversion reflects the accurate definitions of the pound-force and
 							row{1}={ht=1\baselineskip,font=\bfseries},
 						}
 						\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
-						0.0  & 0.0  \\
+						0  & 0  \\
 						7.0  & -3.5  \\
 						13.0 & -11.5 \\
 						19.0 & -17.5 \\
@@ -826,7 +802,7 @@ This precise conversion reflects the accurate definitions of the pound-force and
 							row{1}={ht=1\baselineskip,font=\bfseries},
 						}
 						\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
-						0.0  & 0.0  \\
+						0  & 0  \\
 						3.1  & -1.1  \\
 						4.9  & -4.1  \\
 						7.0  & -5.8  \\
@@ -956,7 +932,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 							0.28 & -0.36 \\
 							0.34 & -0.5 \\
 							0.4 & -0.57 \\
-							0.45 & -0.66 \\
+							0.46 & -0.66 \\
 							0.52 & -0.74 \\
 						\end{tblr}
 				\end{minipage}
@@ -966,7 +942,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 
 	\restoregeometry\newpage
 	\begin{center}
-		\hspace*{-0.5em}\begin{minipage}{0.46\textwidth}\centering
+		\begin{minipage}{0.46\textwidth}\centering
 				\hspace*{-1em}\begin{tikzpicture}
 					\draw[thick,->] 
 					(-1,3.3) 
@@ -1022,7 +998,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 					\end{minipage}
 				\end{minipage}
 		\end{minipage}
-		\hspace*{-0.5em}\begin{minipage}{0.46\textwidth}\centering
+		\hfil\vrule\hfil\begin{minipage}{0.46\textwidth}\centering
 				\hspace*{-1em}\begin{tikzpicture}
 					\draw[thick,->] 
 					(-1,3.3) 
@@ -1097,7 +1073,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 							row{1}={ht=1\baselineskip,font=\bfseries},
 						}
 						\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
-						0.00  & 0.00  \\
+						0  & 0  \\
 						0.06  & -0.06  \\
 						0.10  & -0.12  \\
 						0.16  & -0.18  \\
@@ -1134,15 +1110,15 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 								row{1}={ht=1\baselineskip,font=\bfseries},
 							}
 							\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
-							0.00  & 0.00  \\
+							0  & 0  \\
 							0.07  & -0.06  \\
 							0.11  & -0.12  \\
 							0.17  & -0.22  \\
 							0.21  & -0.28  \\
 							0.28  & -0.36  \\
 							0.34  & -0.50  \\
-							0.40  & -0.57  \\
-							0.45  & -0.66  \\
+							0.4  & -0.57  \\
+							0.46  & -0.66  \\
 							0.52  & -0.74  \\
 						\end{tblr}
 						\captionof{table}{Bourdon Gauge 1 as bar}
@@ -1159,7 +1135,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 								row{1}={ht=1\baselineskip,font=\bfseries},
 							}
 							\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
-							0.00  & 0.00  \\
+							0  & 0  \\
 							0.07  & -0.04  \\
 							0.13  & -0.12  \\
 							0.19  & -0.18  \\
@@ -1184,7 +1160,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 								row{1}={ht=1\baselineskip,font=\bfseries},
 							}
 							\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
-							0.00 & 0.00  \\
+							0 & 0  \\
 							0.05 & -0.05  \\
 							0.09 & -0.11  \\
 							0.15 & -0.19  \\
@@ -1209,7 +1185,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 								row{1}={ht=1\baselineskip,font=\bfseries},
 							}
 							\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
-							0.00  & 0.00  \\
+							0  & 0  \\
 							0.04  & -0.01  \\
 							0.07  & -0.05  \\
 							0.09  & -0.08  \\
@@ -1227,8 +1203,564 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 		\end{minipage}
 	\end{center}
 	
-	\tikzexternalenable
+	\tikzexternalenable\newpage	  \newgeometry{left=0.8in,right=0.8in,top=0.9in,bottom=0.56in}
 	
+	\subsection{Borden Gauge 1 vs Calibrator}
+	\newcommand{\datadir}{data/same_units}
+	\newcommand{\instrumentfile}{Bourden_Gauge_bar.csv}
+	\pgfplotstableread[col sep=comma]{\datadir/\instrumentfile}\instrumenttable
+	\pgfplotstableread[col sep=comma]{\datadir/Pressure_Calibrator_bar.csv}\calibratortable
+	\StrBefore{\instrumentfile}{_bar.csv}[\instrumentname]
+	\StrSubstitute{\instrumentname}{_}{ }[\instrumentnameformatted]
+
+	\hspace*{-3em}
+	\begin{minipage}{1.2\textwidth}	
+	\begin{minipage}[t]{0.3\textwidth}\centering\vspace{0pt}
+	\begin{tikzpicture}[scale=0.8,transform shape]
+		\begin{axis}[
+			xlabel={\instrumentnameformatted\ (bar)},
+			ylabel={Pressure Calibrator (bar)},
+			axis lines=middle, 
+			grid=both,
+			legend pos=north west,
+			xlabel style={
+				at={(0.72,-0.15)}, 
+			},
+			ylabel style={
+				at={(-0.16,0.5)},
+				rotate=-90, 
+			},
+			xtick={0.1,0.2,0.3,0.4,0.5,0.6}, 
+			ytick={0.1,0.2,0.3,0.4,0.5,0.6},
+			xmin=0, xmax=0.6, 
+			ymax=0.6, ymin=0,
+			font=\small,
+			tick label style={font=\tiny},
+			label style={font=\footnotesize},
+			legend style={font=\tiny},
+			]
+			\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
+				\pgfplotstablegetelem{#1}{Positive}\of\instrumenttable
+				\edef\xvalue{\pgfplotsretval}
+				\pgfplotstablegetelem{#1}{Positive}\of\calibratortable
+				\edef\yvalue{\pgfplotsretval}
+				\addplot[only marks, mark=*, red] coordinates {(\xvalue, \yvalue)};
+			};
+			\addplot[
+			domain=0:0.7, 
+			samples=100,
+			color=red,
+			opacity=0.6,
+			dashed,
+			] {1.0224*x + -0.0074};
+			\addplot[
+			domain=0:0.6, 
+			samples=100,
+			color=black,
+			opacity=0.3,
+			] {x};
+			\legend{Positive Data,Best Fit}
+		\end{axis}
+	\end{tikzpicture}
+	\end{minipage}\hspace{1em}
+	\begin{minipage}[t]{0.3\textwidth}\centering\vspace{0pt}
+	\vspace*{-1em}
+	\begin{tikzpicture}[scale=0.8,transform shape]
+		\begin{axis}[
+			xlabel={\instrumentnameformatted\ (bar)},
+			ylabel={Pressure Calibrator (bar)},
+			axis lines=middle, 
+			grid=both,
+			legend pos=north west,legend style={font=\tiny, yshift=-10pt},
+			xlabel style={
+				at={(0.71,1.025)}, 
+			},
+			ylabel style={
+				at={(1.025,0.5)},
+				rotate=-90, 
+			},
+			xtick={-0.7,-0.6,-0.5,-0.4,-0.3,-0.2,-0.1,0}, 
+			ytick={-0.5,-0.4,-0.3,-0.2,-0.1,0},
+			xmin=-0.77, xmax=0, 
+			ymin=-0.52, ymax=0,
+			axis line style={stealth-}, 
+			font=\small,
+			tick label style={font=\tiny},
+			label style={font=\footnotesize},
+			legend style={font=\tiny},
+			]
+			\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
+				\pgfplotstablegetelem{#1}{Negative}\of\instrumenttable
+				\edef\xvalue{\pgfplotsretval}
+				\pgfplotstablegetelem{#1}{Negative}\of\calibratortable
+				\edef\yvalue{\pgfplotsretval}
+				\addplot[only marks, mark=*, blue] coordinates {(\xvalue, \yvalue)};
+			};
+			\addplot[
+			domain=0:-0.75, 
+			samples=100,
+			color=blue,
+			opacity=0.6,
+			dashed,
+			] {0.5241*x + -0.0423};
+			\addplot[
+			domain=0:-0.6, 
+			samples=100,
+			color=black,
+			opacity=0.3,
+			] {x};
+			\legend{Negative Data,Best Fit}
+		\end{axis}
+	\end{tikzpicture}
+	\end{minipage}\hspace{2em}\hspace{-1.7em}
+	\begin{minipage}[t]{0.3\textwidth}\centering\vspace{0pt}
+	\begin{tikzpicture}[scale=0.83,transform shape]
+		\begin{axis}[
+			xlabel={\instrumentnameformatted\ (bar)},
+			ylabel={Pressure Calibrator (bar)},
+			axis lines=middle, 
+			grid=both,
+			legend pos=north west,
+			xlabel style={
+				at={(0.7,-0.1)}, 
+			},
+			ylabel style={
+				at={(1.02,0.5)},
+				rotate=-90, 
+			},
+			xtick={-0.1,-0.2,-0.3,-0.4,-0.5,-0.6,-0.7,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8}, 
+			ytick={-0.1,-0.2,-0.3,-0.4,-0.5,-0.6,0.1,0.2,0.3,0.4,0.5,0.6},
+			xmin=-0.8, xmax=0.7, 
+			ymax=0.7, ymin=-0.5,
+			font=\small,
+			tick label style={font=\tiny},
+			label style={font=\footnotesize},
+			legend style={font=\tiny},
+			]
+			\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
+				\pgfplotstablegetelem{#1}{Positive}\of\instrumenttable
+				\edef\xvalue{\pgfplotsretval}
+				\pgfplotstablegetelem{#1}{Positive}\of\calibratortable
+				\edef\yvalue{\pgfplotsretval}
+				\addplot[only marks, mark=*, red] coordinates {(\xvalue, \yvalue)};
+			};
+			\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
+				\pgfplotstablegetelem{#1}{Negative}\of\instrumenttable
+				\edef\xvalue{\pgfplotsretval}
+				\pgfplotstablegetelem{#1}{Negative}\of\calibratortable
+				\edef\yvalue{\pgfplotsretval}
+				\addplot[only marks, mark=*, blue] coordinates {(\xvalue, \yvalue)};
+			};
+			\addplot[
+			domain=-0.7:0.7, 
+			samples=100,
+			color=black,
+			opacity=0.6,
+			dashed,
+			] {0.7554*x + 0.0496};
+			\addplot[
+			domain=-0.6:0.6, 
+			samples=100,
+			color=black,
+			opacity=0.3,
+			] {x};
+			\legend{Positive Data, Negative Data, Combined Fit}
+		\end{axis}
+	\end{tikzpicture}	\end{minipage}
+	\end{minipage}\vspace{-0.4em}
+	\begin{center}
+		\hspace*{-2em}
+		\begin{minipage}{1.1\textwidth}
+			\begin{minipage}{0.3\textwidth}	\centering
+				Positive, best-fit equation: 
+				\[y = 1.0224x + -0.0074\]
+			\end{minipage}\hfill
+			\begin{minipage}{0.3\textwidth}	\centering
+				Negative, best-fit equation: 
+				\[y = 0.5241x + -0.0423\]
+			\end{minipage}\hfill
+			\begin{minipage}{0.3\textwidth}	\centering
+				Combined, best-fit equation: 
+				\[y = 0.7554x + 0.0496\]
+			\end{minipage}
+		\end{minipage}
+	\end{center}
+
+	
+	\subsection{Borden Gauge 2 vs Calibrator}
+	
+	\newcommand{\instrumentfiletwo}{Bourden_Gauge_2_bar.csv}
+	\pgfplotstableread[col sep=comma]{\datadir/\instrumentfiletwo}\instrumenttabletwo
+	
+	\StrBefore{\instrumentfiletwo}{_bar.csv}[\instrumentnametwo]
+	\StrSubstitute{\instrumentnametwo}{_}{ }[\instrumentnameformattedtwo]
+	
+	\hspace*{-3em}
+	\begin{minipage}{1.2\textwidth}	
+		\begin{minipage}[t]{0.3\textwidth}\centering\vspace{0pt}
+			\begin{tikzpicture}[scale=0.8,transform shape]
+				\begin{axis}[
+					xlabel={\instrumentnameformattedtwo\ (bar)},
+					ylabel={Pressure Calibrator (bar)},
+					axis lines=middle, 
+					grid=both,
+					legend pos=north west,
+					xlabel style={
+						at={(0.72,-0.15)}, 
+					},
+					ylabel style={
+						at={(-0.16,0.5)},
+						rotate=-90, 
+					},
+					xtick={0.1,0.2,0.3,0.4,0.5,0.6}, 
+					ytick={0.1,0.2,0.3,0.4,0.5,0.6},
+					xmin=0, xmax=0.6, 
+					ymax=0.6, ymin=0,
+					font=\small,
+					tick label style={font=\tiny},
+					label style={font=\footnotesize},
+					legend style={font=\tiny},
+					]
+					\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
+						\pgfplotstablegetelem{#1}{Positive}\of\instrumenttabletwo
+						\edef\xvalue{\pgfplotsretval}
+						\pgfplotstablegetelem{#1}{Positive}\of\calibratortable
+						\edef\yvalue{\pgfplotsretval}
+						\addplot[only marks, mark=*, red] coordinates {(\xvalue, \yvalue)};
+					};
+
+
+					\addplot[
+					domain=0:0.6, 
+					samples=100,
+					color=red,
+					opacity=0.6,
+					dashed,
+					] {0.9462*x-0.0106};
+					\addplot[
+					domain=0:0.6, 
+					samples=100,
+					color=black,
+					opacity=0.3,
+					] {x};
+					\legend{Positive Data,Best Fit}
+				\end{axis}			
+			\end{tikzpicture}
+		\end{minipage}\hspace{1em}
+		\begin{minipage}[t]{0.3\textwidth}\centering\vspace{0pt}
+			\vspace*{-1em}
+			\begin{tikzpicture}[scale=0.8,transform shape]
+				\begin{axis}[
+					xlabel={\instrumentnameformattedtwo\ (bar)},
+					ylabel={Pressure Calibrator (bar)},
+					axis lines=middle, 
+					grid=both,
+					legend pos=north west,legend style={font=\tiny, yshift=-10pt},
+					xlabel style={
+						at={(0.71,1.025)}, 
+					},
+					ylabel style={
+						at={(1.025,0.5)},
+						rotate=-90, 
+					},
+					xtick={-0.5,-0.4,-0.3,-0.2,-0.1}, 
+					ytick={-0.5,-0.4,-0.3,-0.2,-0.1},
+					xmin=-0.5, xmax=0, 
+					ymin=-0.5, ymax=0,
+					axis line style={stealth-}, 
+					font=\small,
+					tick label style={font=\tiny},
+					label style={font=\footnotesize},
+					legend style={font=\tiny},
+					]
+					\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
+						\pgfplotstablegetelem{#1}{Negative}\of\instrumenttabletwo
+						\edef\xvalue{\pgfplotsretval}
+						\pgfplotstablegetelem{#1}{Negative}\of\calibratortable
+						\edef\yvalue{\pgfplotsretval}
+						\addplot[only marks, mark=*, blue] coordinates {(\xvalue, \yvalue)};
+					};
+
+
+					\addplot[
+					domain=0:-0.5, 
+					samples=100,
+					color=blue,
+					opacity=0.6,
+					dashed,
+					] {0.9509*x -0.0107};
+					\addplot[
+					domain=0:-0.5, 
+					samples=100,
+					color=black,
+					opacity=0.3,
+					] {x};
+					\legend{Negative Data,Best Fit}
+				\end{axis}
+			\end{tikzpicture}
+		\end{minipage}\hspace{2em}\hspace{-1.7em}
+		\begin{minipage}[t]{0.3\textwidth}\centering\vspace{0pt}
+			\begin{tikzpicture}[scale=0.83,transform shape]
+				\begin{axis}[
+					xlabel={\instrumentnameformattedtwo\ (bar)},
+					ylabel={Pressure Calibrator (bar)},
+					axis lines=middle, 
+					grid=both,
+					legend pos=north west,
+					xlabel style={
+						at={(0.7,-0.1)}, 
+					},
+					ylabel style={
+						at={(1.02,0.5)},
+						rotate=-90, 
+					},
+					xtick={-0.1,-0.2,-0.3,-0.4,-0.5,-0.6,-0.7,0.1,0.2,0.3,0.4,0.5,0.6,0.7}, 
+					ytick={-0.1,-0.2,-0.3,-0.4,-0.5,-0.6,0.1,0.2,0.3,0.4,0.5,0.6},
+					xmin=-0.5, xmax=0.7, 
+					ymax=0.7, ymin=-0.5,
+					font=\small,
+					tick label style={font=\tiny},
+					label style={font=\footnotesize},
+					legend style={font=\tiny},
+					]
+					\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
+						\pgfplotstablegetelem{#1}{Negative}\of\instrumenttabletwo
+						\edef\xvalue{\pgfplotsretval}
+						\pgfplotstablegetelem{#1}{Negative}\of\calibratortable
+						\edef\yvalue{\pgfplotsretval}
+						\addplot[only marks, mark=*, blue] coordinates {(\xvalue, \yvalue)};
+					};
+					\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
+						\pgfplotstablegetelem{#1}{Positive}\of\instrumenttabletwo
+						\edef\xvalue{\pgfplotsretval}
+						\pgfplotstablegetelem{#1}{Positive}\of\calibratortable
+						\edef\yvalue{\pgfplotsretval}
+						\addplot[only marks, mark=*, red] coordinates {(\xvalue, \yvalue)};
+				};
+				
+
+					\addplot[
+					domain=-0.7:0.7, 
+					samples=100,
+					color=black,
+					opacity=0.6,
+					dashed,
+					] {0.9483*x-0.0112};
+					\addplot[
+					domain=-0.6:0.6, 
+					samples=100,
+					color=black,
+					opacity=0.3,
+					] {x};
+					\legend{Positive Data, Negative Data, Combined Fit}
+				\end{axis}
+		\end{tikzpicture}	\end{minipage}
+	\end{minipage}\vspace{-0.4em}
+	\begin{center}
+		\hspace*{-2em}
+		\begin{minipage}{1.1\textwidth}
+			\begin{minipage}{0.3\textwidth}	\centering
+				Positive, best-fit equation: 
+				\[y = 0.9462x + -0.0106\]
+			\end{minipage}\hfill
+			\begin{minipage}{0.3\textwidth}	\centering
+				Negative, best-fit equation: 
+				\[y = 0.9509x + -0.0107\]
+			\end{minipage}\hfill
+			\begin{minipage}{0.3\textwidth}	\centering
+				Combined, best-fit equation: 
+				\[y = 0.9483x + -0.0112\]
+			\end{minipage}
+		\end{minipage}
+	\end{center}
+
+\subsection{Bundenburg Gauge bar vs Calibrator}
+
+\newcommand{\instrumentfilethree}{Bundenburg_Gauge_bar.csv}
+\pgfplotstableread[col sep=comma]{\datadir/\instrumentfilethree}\instrumenttablethree
+
+\StrBefore{\instrumentfilethree}{_bar.csv}[\instrumentnamethree]
+\StrSubstitute{\instrumentnamethree}{_}{ }[\instrumentnameformattedthree]
+
+\hspace*{-3em}
+\begin{minipage}{1.2\textwidth}	
+	\begin{minipage}[t]{0.3\textwidth}\centering\vspace{0pt}
+		\begin{tikzpicture}[scale=0.8,transform shape]
+			\begin{axis}[
+				xlabel={\instrumentnameformattedthree\ (bar)},
+				ylabel={Pressure Calibrator (bar)},
+				axis lines=middle, 
+				grid=both,
+				legend pos=north west,
+				xlabel style={
+					at={(0.72,-0.15)}, 
+				},
+				ylabel style={
+					at={(-0.16,0.5)},
+					rotate=-90, 
+				},
+				xtick={0.1,0.2,0.3,0.4,0.5,0.6}, 
+				ytick={0.1,0.2,0.3,0.4,0.5,0.6},
+				xmin=0, xmax=0.6, 
+				ymax=0.6, ymin=0,
+				font=\small,
+				tick label style={font=\tiny},
+				label style={font=\footnotesize},
+				legend style={font=\tiny},
+				]
+				\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
+					\pgfplotstablegetelem{#1}{Positive}\of\instrumenttablethree
+					\edef\xvalue{\pgfplotsretval}
+					\pgfplotstablegetelem{#1}{Positive}\of\calibratortable
+					\edef\yvalue{\pgfplotsretval}
+					\addplot[only marks, mark=*, red] coordinates {(\xvalue, \yvalue)};
+				};
+				
+				
+				\addplot[
+				domain=0:0.6, 
+				samples=100,
+				color=red,
+				opacity=0.6,
+				dashed,
+				] {0.9932*x + 0.0081};
+				\addplot[
+				domain=0:0.6, 
+				samples=100,
+				color=black,
+				opacity=0.3,
+				] {x};
+				\legend{Positive Data,Best Fit}
+			\end{axis}			
+		\end{tikzpicture}
+	\end{minipage}\hspace{1em}
+	\begin{minipage}[t]{0.3\textwidth}\centering\vspace{0pt}
+		\vspace*{-1em}
+		\begin{tikzpicture}[scale=0.8,transform shape]
+			\begin{axis}[
+				xlabel={\instrumentnameformattedthree\ (bar)},
+				ylabel={Pressure Calibrator (bar)},
+				axis lines=middle, 
+				grid=both,
+				legend pos=north west,legend style={font=\tiny, yshift=-10pt},
+				xlabel style={
+					at={(0.71,1.025)}, 
+				},
+				ylabel style={
+					at={(1.025,0.5)},
+					rotate=-90, 
+				},
+				xtick={-0.5,-0.4,-0.3,-0.2,-0.1}, 
+				ytick={-0.5,-0.4,-0.3,-0.2,-0.1},
+				xmin=-0.5, xmax=0, 
+				ymin=-0.5, ymax=0,
+				axis line style={stealth-}, 
+				font=\small,
+				tick label style={font=\tiny},
+				label style={font=\footnotesize},
+				legend style={font=\tiny},
+				]
+				\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
+					\pgfplotstablegetelem{#1}{Negative}\of\instrumenttablethree
+					\edef\xvalue{\pgfplotsretval}
+					\pgfplotstablegetelem{#1}{Negative}\of\calibratortable
+					\edef\yvalue{\pgfplotsretval}
+					\addplot[only marks, mark=*, blue] coordinates {(\xvalue, \yvalue)};
+				};
+				
+				
+				\addplot[
+				domain=0:-0.5, 
+				samples=100,
+				color=blue,
+				opacity=0.6,
+				dashed,
+				] { 0.9416*x + -0.0085};
+				\addplot[
+				domain=0:-0.5, 
+				samples=100,
+				color=black,
+				opacity=0.3,
+				] {x};
+				\legend{Negative Data,Best Fit}
+			\end{axis}
+		\end{tikzpicture}
+	\end{minipage}\hspace{2em}\hspace{-1.7em}
+	\begin{minipage}[t]{0.3\textwidth}\centering\vspace{0pt}
+		\begin{tikzpicture}[scale=0.83,transform shape]
+			\begin{axis}[
+				xlabel={\instrumentnameformattedthree\ (bar)},
+				ylabel={Pressure Calibrator (bar)},
+				axis lines=middle, 
+				grid=both,
+				legend pos=north west,
+				xlabel style={
+					at={(0.7,-0.1)}, 
+				},
+				ylabel style={
+					at={(1.02,0.5)},
+					rotate=-90, 
+				},
+				xtick={-0.1,-0.2,-0.3,-0.4,-0.5,-0.6,-0.7,0.1,0.2,0.3,0.4,0.5,0.6,0.7}, 
+				ytick={-0.1,-0.2,-0.3,-0.4,-0.5,-0.6,0.1,0.2,0.3,0.4,0.5,0.6},
+				xmin=-0.5, xmax=0.7, 
+				ymax=0.7, ymin=-0.5,
+				font=\small,
+				tick label style={font=\tiny},
+				label style={font=\footnotesize},
+				legend style={font=\tiny},
+				]
+				\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
+					\pgfplotstablegetelem{#1}{Negative}\of\instrumenttablethree
+					\edef\xvalue{\pgfplotsretval}
+					\pgfplotstablegetelem{#1}{Negative}\of\calibratortable
+					\edef\yvalue{\pgfplotsretval}
+					\addplot[only marks, mark=*, blue] coordinates {(\xvalue, \yvalue)};
+				};
+				\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
+					\pgfplotstablegetelem{#1}{Positive}\of\instrumenttablethree
+					\edef\xvalue{\pgfplotsretval}
+					\pgfplotstablegetelem{#1}{Positive}\of\calibratortable
+					\edef\yvalue{\pgfplotsretval}
+					\addplot[only marks, mark=*, red] coordinates {(\xvalue, \yvalue)};
+				};
+				
+				
+				\addplot[
+				domain=-0.7:0.7, 
+				samples=100,
+				color=black,
+				opacity=0.6,
+				dashed,
+				] {0.9941*x + 0.0057};
+				\addplot[
+				domain=-0.6:0.6, 
+				samples=100,
+				color=black,
+				opacity=0.3,
+				] {x};
+				\legend{Positive Data, Negative Data, Combined Fit}
+			\end{axis}
+	\end{tikzpicture}	\end{minipage}
+\end{minipage}\vspace{-0.4em}
+\begin{center}
+	\hspace*{-2em}
+	\begin{minipage}{1.1\textwidth}
+		\begin{minipage}{0.3\textwidth}	\centering
+			Positive, best-fit equation: 
+			\[y = 0.9932x + 0.0081\]
+		\end{minipage}\hfill
+		\begin{minipage}{0.3\textwidth}	\centering
+			Negative, best-fit equation: 
+			\[y =0.9416x + -0.0085\]
+		\end{minipage}\hfill
+		\begin{minipage}{0.3\textwidth}	\centering
+			Combined, best-fit equation: 
+			\[y = 0.9483x + -0.0112\]
+		\end{minipage}
+	\end{minipage}
+\end{center}
+
 	\newpage
 	\section{Discussion of Results}
 	
