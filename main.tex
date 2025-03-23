@@ -500,14 +500,15 @@ The SI unit for pressure is the \textbf{Pascal (Pa)}, which is equivalent to \te
 
 \begin{table}[ht]
 	\centering
-	\begin{tabular}{lcccc}
+	\begin{tabular}{lcccccc}
 		\toprule
-		\textbf{Unit} & \textbf{Pa} & \textbf{bar} & \textbf{psi} & \textbf{atm} \\
+		\textbf{Unit} & \textbf{Pa} & \textbf{bar} & \textbf{psi} & \textbf{atm} & \textbf{cm Hg} \\
 		\midrule
-		Pa            & 1           & $1 \times 10^{-5}$ & $1.450 \times 10^{-4}$ & $9.869 \times 10^{-6}$ \\
-		bar           & $1 \times 10^{5}$ & 1            & 14.5038      & 0.986923     \\
-		psi           & 6894.76     & 0.0689476    & 1            & 0.068046     \\
-		atm           & 101325      & 1.01325      & 14.6959      & 1            \\
+		Pa            & 1           & $1 \times 10^{-5}$ & $1.450 \times 10^{-4}$ & $9.869 \times 10^{-6}$ & $0.00750062$ \\
+		bar           & $1 \times 10^{5}$ & 1            & 14.5038      & 0.986923     & 75.0062 \\
+		psi           & 6894.76     & 0.0689476    & 1            & 0.068046     & 51.7149 \\
+		atm           & 101325      & 1.01325      & 14.6959      & 1            & 76.0032 \\ 
+		cm Hg         & 1333.22     & 0.013332     & 0.19337      & 0.013158     & 1 \\
 		\bottomrule
 	\end{tabular}
 	\caption{Standard Pressure Unit Conversions}
@@ -551,7 +552,7 @@ This precise conversion reflects the accurate definitions of the pound-force and
 	\begin{center}
 	\begin{minipage}{0.23\textwidth}
 		\begin{tcolorbox}[title={\color{black}\normalsize \textbf{Pressure Calibrator}}, colback=SkyBlue!6!white, 
-			colframe=SteelBlue!20!white, boxrule=0.5mm, width=\textwidth]
+			colframe=SteelBlue!10!white, boxrule=0.5mm, width=\textwidth]
 		\hspace*{-0.82em}
 		\begin{minipage}{1.2\textwidth}\centering
 		\textbf{\textsf{kPa}}\\[8pt]
@@ -582,7 +583,7 @@ This precise conversion reflects the accurate definitions of the pound-force and
 	\begin{tcolorbox}[
 		title={\color{black}\normalsize \textbf{Pressure measuring instruments}},
 		colback=MetallicSunburst!6!white, 
-		colframe=ChineseGold!20!white, 
+		colframe=ChineseGold!10!white, 
 		boxrule=0.5mm, 
 		width=1\textwidth
 		]
@@ -800,7 +801,7 @@ This precise conversion reflects the accurate definitions of the pound-force and
 							row{1}={ht=1\baselineskip,font=\bfseries},
 						}
 						\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
-						0.00 & 0.00  \\
+						0 & 0  \\
 						0.05 & -0.05  \\
 						0.09 & -0.11  \\
 						0.15 & -0.19  \\
@@ -845,75 +846,249 @@ This precise conversion reflects the accurate definitions of the pound-force and
 Now, we need to perform some unit conversions to ensure consistency across all measurements.\\[8pt]
 In the context of this study, as seen in the table in Figure \ref{fig:pressurestable}, we are provided with a row for calculating bar and bar \(\text{P}_\text{abs}\), which directly suggests that all the pressures should be expressed in bar for all comparisons. In my opinion, the choice of unit doesn't significantly affect the results, when coming to conclusions we aim to achieve. I will demonstrate later in that the results are the same when using different units.\\[8pt]
 That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outlined in subsection \ref{Pressure Units}.
-\begin{center}
-\fbox{\hspace*{-0.5em}\begin{minipage}{0.46\textwidth}\centering		\begin{tikzpicture}
-		\draw[thick,->] 
-		(-1,3) 
-		.. controls (-0.5,4) and (2.5,4) .. 
-		(3,3)  
-		node[above,midway] {to Bar Units} 
-		node[below,midway] {$\times 10^{-2}$};
-	\end{tikzpicture}\\
-	\hspace*{1em}
-	\begin{minipage}{1\textwidth}
-\fbox{\begin{minipage}{0.4\textwidth}\centering
-	\textbf{\textsf{kPa}}\\[8pt]
-	\begin{tblr}{
-			colspec={X[1cm]X[1cm]},
-			hlines,vlines,
-			cells={valign=m,halign=c,bg=white},
-			rows={ht=1\baselineskip},
-			row{1}={ht=1\baselineskip,font=\bfseries},
-		}
-		\Large\textsf{\textcolor{red}{+}} &\Large\textsf{\textcolor{blue}{-}} \\ \hline
-		0.0  & 0.0  \\
-		5.7  & -5.6  \\
-		10.4 & -12.1 \\
-		16.0 & -18.0 \\
-		21.1 & -21.8 \\
-		27.7 & -25.4 \\
-		34.2 & -29.3 \\
-		40.0 & -33.6 \\
-		46.1 & -37.6 \\
-		52.2 & -41.7 \\
-	\end{tblr}
-\end{minipage}}
-\fbox{\begin{minipage}{0.43\textwidth}\centering
-	\textbf{\textsf{Bar}}\\[8pt]
-	\begin{tblr}{
-			colspec={X[1.2cm]X[1.2cm]},
-			hlines,vlines,
-			cells={valign=m,halign=c,bg=white},
-			rows={ht=1\baselineskip},
-			row{1}={ht=1\baselineskip,font=\bfseries},
-		}
-		\Large\textsf{\textcolor{red}{+}} &\Large\textsf{\textcolor{blue}{-}} \\ \hline
-		0.0  & 0.0  \\
-		0.057  & -0.056  \\
-		0.104 & -0.121 \\
-		0.160 & -0.180 \\
-		0.211 & -0.218 \\
-		0.277 & -0.254 \\
-		0.342 & -0.293 \\
-		0.400 & -0.336 \\
-		0.461 & -0.376 \\
-		0.522 & -0.417 \\
-	\end{tblr}
-\end{minipage}}
-\end{minipage}
-\end{minipage}}
-\fbox{\hspace*{-0.5em}\begin{minipage}{0.46\textwidth}\centering		\begin{tikzpicture}
-			\draw[thick,->] 
-			(-1,3) 
-			.. controls (-0.5,4) and (2.5,4) .. 
-			(3,3)  
-			node[above,midway] {to Bar Units} 
-			node[below,midway] {$\times 10^{-2}$};
+
+	\begin{center}
+	\hspace*{-0.5em}\begin{minipage}{0.46\textwidth}\centering		
+		\hspace*{-1em}\begin{tikzpicture}
+			\begin{scope}		
+				\draw[thick,->] 
+				(-1,3.3) 
+				.. controls (-0.5,4) and (1.6,4) .. 
+				(2.4,3.3)  
+				node[above,midway] {$\times 0.01$};
+			\end{scope}
+
 		\end{tikzpicture}\\
 		\hspace*{1em}
-		\begin{minipage}{1\textwidth}
-			\fbox{\begin{minipage}{0.4\textwidth}\centering
-					\textbf{\textsf{psi}}\\[6pt]
+	\begin{minipage}{1\textwidth}
+	\begin{minipage}{0.4\textwidth}\centering
+		\textbf{\textsf{kPa}}\\[8pt]
+		\begin{tblr}{
+				colspec={X[1cm]X[1cm]},
+				hlines,vlines,
+				cells={valign=m,halign=c,bg=white},
+				rows={ht=1\baselineskip},
+				row{1}={ht=1\baselineskip,font=\bfseries},
+			}
+			\Large\textsf{\textcolor{red}{+}} &\Large\textsf{\textcolor{blue}{-}} \\ \hline
+			0  & 0  \\
+			5.7  & -5.6  \\
+			10.4 & -12.1 \\
+			16.0 & -18.0 \\
+			21.1 & -21.8 \\
+			27.7 & -25.4 \\
+			34.2 & -29.3 \\
+			40.0 & -33.6 \\
+			46.1 & -37.6 \\
+			52.2 & -41.7 \\
+		\end{tblr}
+	\end{minipage}
+	\begin{minipage}{0.43\textwidth}\centering
+		\textbf{\textsf{Bar}}\\[8pt]
+		\begin{tblr}{
+				colspec={X[1.2cm]X[1.2cm]},
+				hlines,vlines,
+				cells={valign=m,halign=c,bg=white},
+				rows={ht=1\baselineskip},
+				row{1}={ht=1\baselineskip,font=\bfseries},
+			}
+			\Large\textsf{\textcolor{red}{+}} &\Large\textsf{\textcolor{blue}{-}} \\ \hline
+			0 & 0 \\
+			0.06 & -0.06 \\
+			0.10 & -0.12 \\
+			0.16 & -0.18 \\
+			0.21 & -0.22 \\
+			0.28 & -0.25 \\
+			0.34 & -0.29 \\
+			0.40 & -0.34 \\
+			0.46 & -0.38 \\
+			0.52 & -0.42 \\
+		\end{tblr}
+	\end{minipage}
+	\end{minipage}
+	\end{minipage}\hfil\vrule\hfil
+	\hspace*{-0.5em}\begin{minipage}{0.46\textwidth}\centering		\hspace*{-1em}\begin{tikzpicture}
+				\draw[thick,->] 
+				(-1,3.3) 
+				.. controls (-0.5,4) and (1.6,4) .. 
+				(2.4,3.3)  
+				node[above,midway] {$\times 0.0689$};
+			\end{tikzpicture}\\
+			\hspace*{1em}
+			\begin{minipage}{1\textwidth}
+				\begin{minipage}{0.4\textwidth}\centering
+						\textbf{\textsf{psi}}\\[6pt]
+						\begin{tblr}{
+								colspec={X[1cm]X[1cm]},
+								hlines,vlines,
+								cells={valign=m,halign=c,bg=white},
+								rows={ht=1\baselineskip},
+								row{1}={ht=1\baselineskip,font=\bfseries},
+							}
+							\Large\textsf{\textcolor{red}{+}} &\Large\textsf{\textcolor{blue}{-}} \\ \hline
+							0  & 0  \\
+							1.0  & -0.8  \\
+							1.6  & -1.7  \\
+							2.4  & -3.2  \\
+							3.1  & -4.0  \\
+							4.0  & -5.2  \\
+							5.0  & -7.2  \\
+							5.8  & -8.3  \\
+							6.6  & -9.5  \\
+							7.5  & -10.7 \\
+						\end{tblr}
+				\end{minipage}
+				\begin{minipage}{0.43\textwidth}\centering
+						\textbf{\textsf{Bar}}\\[8pt]
+						\begin{tblr}{
+								colspec={X[1.2cm]X[1.2cm]},
+								hlines,vlines,
+								cells={valign=m,halign=c,bg=white},
+								rows={ht=1\baselineskip},
+								row{1}={ht=1\baselineskip,font=\bfseries},
+							}
+							\Large\textsf{\textcolor{red}{+}} &\Large\textsf{\textcolor{blue}{-}} \\ \hline
+							0 & 0 \\
+							0.07 & -0.06 \\
+							0.11 & -0.12 \\
+							0.17 & -0.22 \\
+							0.21 & -0.28 \\
+							0.28 & -0.36 \\
+							0.34 & -0.5 \\
+							0.4 & -0.57 \\
+							0.45 & -0.66 \\
+							0.52 & -0.74 \\
+						\end{tblr}
+				\end{minipage}
+			\end{minipage}
+	\end{minipage}
+	\end{center}
+
+	\restoregeometry\newpage
+	\begin{center}
+		\hspace*{-0.5em}\begin{minipage}{0.46\textwidth}\centering
+				\hspace*{-1em}\begin{tikzpicture}
+					\draw[thick,->] 
+					(-1,3.3) 
+					.. controls (-0.5,4) and (1.6,4) .. 
+					(2.4,3.3)  
+					node[above,midway] {$\times 0.01$};
+				\end{tikzpicture}\\
+				\hspace*{1em}
+				\begin{minipage}{1\textwidth}
+					\begin{minipage}{0.4\textwidth}\centering
+							\textbf{\textsf{kN/m$\bm{^2}$}}\\[8pt]
+							\begin{tblr}{
+									colspec={X[1cm]X[1cm]},
+									hlines,vlines,
+									cells={valign=m,halign=c,bg=white},
+									rows={ht=1\baselineskip},
+									row{1}={ht=1\baselineskip,font=\bfseries},
+								}
+								\Large\textsf{\textcolor{red}{+}} &\Large\textsf{\textcolor{blue}{-}} \\ \hline
+								0.0  & 0.0  \\
+								7.0  & -3.5  \\
+								13.0 & -11.5 \\
+								19.0 & -17.5 \\
+								24.0 & -22.5 \\
+								29.0 & -25.5 \\
+								38.0 & -29.5 \\
+								44.0 & -34.5 \\
+								49.0 & -38.5 \\
+								56.0 & -42.5 \\
+							\end{tblr}
+					\end{minipage}
+					\begin{minipage}{0.43\textwidth}\centering
+							\textbf{\textsf{Bar}}\\[8pt]
+							\begin{tblr}{
+									colspec={X[1.2cm]X[1.2cm]},
+									hlines,vlines,
+									cells={valign=m,halign=c,bg=white},
+									rows={ht=1\baselineskip},
+									row{1}={ht=1\baselineskip,font=\bfseries},
+								}
+								\Large\textsf{\textcolor{red}{+}} &\Large\textsf{\textcolor{blue}{-}} \\ \hline
+							    0  &  0 \\
+							    0.07  & -0.04  \\
+							    0.13  & -0.12  \\
+							    0.19  & -0.18  \\
+							    0.24  & -0.23  \\
+							    0.29  & -0.26  \\
+							    0.38  & -0.30  \\
+							    0.44  & -0.35  \\
+							    0.49  & -0.39  \\
+							    0.56  & -0.43  \\
+							\end{tblr}
+					\end{minipage}
+				\end{minipage}
+		\end{minipage}
+		\hspace*{-0.5em}\begin{minipage}{0.46\textwidth}\centering
+				\hspace*{-1em}\begin{tikzpicture}
+					\draw[thick,->] 
+					(-1,3.3) 
+					.. controls (-0.5,4) and (1.6,4) .. 
+					(2.4,3.3)  
+					node[above,midway] {$\times 0.01333$};
+				\end{tikzpicture}\\
+				\hspace*{1em}
+				\begin{minipage}{1\textwidth}
+					\begin{minipage}{0.4\textwidth}\centering
+							\textbf{\textsf{cm Hg}}\\[8pt]
+							\begin{tblr}{
+									colspec={X[1cm]X[1cm]},
+									hlines,vlines,
+									cells={valign=m,halign=c,bg=white},
+									rows={ht=1\baselineskip},
+									row{1}={ht=1\baselineskip,font=\bfseries},
+								}
+								\Large\textsf{\textcolor{red}{+}} &\Large\textsf{\textcolor{blue}{-}} \\ \hline
+								0  & 0  \\
+								3.1  & -1.1  \\
+								4.9  & -4.1  \\
+								7.0  & -5.8  \\
+								9.0  & -7.2  \\
+								11.2 & -8.6  \\
+								13.8 & -10.0 \\
+								16.0 & -11.7 \\
+								18.3 & -13.2 \\
+								20.6 & -14.8 \\
+							\end{tblr}
+					\end{minipage}
+					\begin{minipage}{0.43\textwidth}\centering
+							\textbf{\textsf{Bar}}\\[8pt]
+							\begin{tblr}{
+									colspec={X[1.2cm]X[1.2cm]},
+									hlines,vlines,
+									cells={valign=m,halign=c,bg=white},
+									rows={ht=1\baselineskip},
+									row{1}={ht=1\baselineskip,font=\bfseries},
+								}
+								\Large\textsf{\textcolor{red}{+}} &\Large\textsf{\textcolor{blue}{-}} \\ \hline
+							0 & 0 \\
+							0.04 & -0.01 \\
+							0.07 & -0.05 \\
+							0.09 & -0.08 \\
+							0.12 & -0.10 \\
+							0.15 & -0.11 \\
+							0.18 & -0.13 \\
+							0.21 & -0.16 \\
+							0.24 & -0.18 \\
+							0.27 & -0.20 \\
+							\end{tblr}
+					\end{minipage}
+				\end{minipage}
+		\end{minipage}
+	\end{center}
+	
+	
+	
+	\begin{center}
+		\begin{minipage}{0.23\textwidth}
+			\begin{tcolorbox}[title={\color{black}\normalsize \textbf{Pressure Calibrator}}, colback=SkyBlue!6!white, 
+				colframe=SteelBlue!30!white, boxrule=0.5mm, width=\textwidth]
+				\hspace*{-0.82em}
+				\begin{minipage}{1.2\textwidth}\centering
+					\textbf{\textsf{Bar}}\\[8pt]
 					\begin{tblr}{
 							colspec={X[1cm]X[1cm]},
 							hlines,vlines,
@@ -921,47 +1096,136 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 							rows={ht=1\baselineskip},
 							row{1}={ht=1\baselineskip,font=\bfseries},
 						}
-						\Large\textsf{\textcolor{red}{+}} &\Large\textsf{\textcolor{blue}{-}} \\ \hline
-						0.0  & 0.0  \\
-						1.0  & -0.8  \\
-						1.6  & -1.7  \\
-						2.4  & -3.2  \\
-						3.1  & -4.0  \\
-						4.0  & -5.2  \\
-						5.0  & -7.2  \\
-						5.8  & -8.3  \\
-						6.6  & -9.5  \\
-						7.5  & -10.7 \\
+						\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
+						0.00  & 0.00  \\
+						0.06  & -0.06  \\
+						0.10  & -0.12  \\
+						0.16  & -0.18  \\
+						0.21  & -0.22  \\
+						0.28  & -0.25  \\
+						0.34  & -0.29  \\
+						0.40  & -0.34  \\
+						0.46  & -0.38  \\
+						0.52  & -0.42  \\
 					\end{tblr}
-			\end{minipage}}
-			\fbox{\begin{minipage}{0.43\textwidth}\centering
-					\textbf{\textsf{Bar}}\\[8pt]
-					\begin{tblr}{
-							colspec={X[1.2cm]X[1.2cm]},
-							hlines,vlines,
-							cells={valign=m,halign=c,bg=white},
-							rows={ht=1\baselineskip},
-							row{1}={ht=1\baselineskip,font=\bfseries},
-						}
-						\Large\textsf{\textcolor{red}{+}} &\Large\textsf{\textcolor{blue}{-}} \\ \hline
-						 &  \\
-						 &  \\
-						 &  \\
-						 &  \\
-						 &  \\
-						 &  \\
-						 &  \\
-						 &  \\
-						 &  \\
-						 &  \\
-					\end{tblr}
-			\end{minipage}}
+					\captionof{table}{Pressure Calibrator as bar}
+				\end{minipage}
+			\end{tcolorbox}
 		\end{minipage}
-\end{minipage}}
-\end{center}
-
-	\restoregeometry\newpage
-	
+		\begin{minipage}{0.75\textwidth}
+			\begin{tcolorbox}[
+				title={\color{black}\normalsize \textbf{Pressure measuring instruments}},
+				colback=MetallicSunburst!6!white, 
+				colframe=ChineseGold!30!white, 
+				boxrule=0.5mm, 
+				width=1\textwidth
+				]
+				\begin{minipage}{1.03\textwidth}
+					\hspace*{-1.5em}
+					\centering	
+					\begin{minipage}{0.22\textwidth}
+						\centering
+						\textbf{\textsf{Bar}}\\[8pt]
+						\begin{tblr}{
+								colspec={X[1cm]X[1cm]},
+								hlines,vlines,
+								cells={valign=m,halign=c,bg=white},
+								rows={ht=1\baselineskip},
+								row{1}={ht=1\baselineskip,font=\bfseries},
+							}
+							\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
+							0.00  & 0.00  \\
+							0.07  & -0.06  \\
+							0.11  & -0.12  \\
+							0.17  & -0.22  \\
+							0.21  & -0.28  \\
+							0.28  & -0.36  \\
+							0.34  & -0.50  \\
+							0.40  & -0.57  \\
+							0.45  & -0.66  \\
+							0.52  & -0.74  \\
+						\end{tblr}
+						\captionof{table}{Bourdon Gauge 1 as bar}
+					\end{minipage}
+					\hfil
+					\begin{minipage}{0.22\textwidth}
+						\centering
+						\textbf{\textsf{Bar}}\\[8pt]
+						\begin{tblr}{
+								colspec={X[1cm]X[1cm]},
+								hlines,vlines,
+								cells={valign=m,halign=c,bg=white},
+								rows={ht=1\baselineskip},
+								row{1}={ht=1\baselineskip,font=\bfseries},
+							}
+							\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
+							0.00  & 0.00  \\
+							0.07  & -0.04  \\
+							0.13  & -0.12  \\
+							0.19  & -0.18  \\
+							0.24  & -0.23  \\
+							0.29  & -0.26  \\
+							0.38  & -0.30  \\
+							0.44  & -0.35  \\
+							0.49  & -0.39  \\
+							0.56  & -0.43  \\
+						\end{tblr}
+						\captionof{table}{Bourdon Gauge 2 as bar}
+					\end{minipage}
+					\hfil
+					\begin{minipage}{0.24\textwidth}
+						\vspace{-1em}\centering
+						\textbf{\textsf{Bar}}\\[8pt]
+						\begin{tblr}{
+								colspec={X[1cm]X[1cm]},
+								hlines,vlines,
+								cells={valign=m,halign=c,bg=white},
+								rows={ht=1\baselineskip},
+								row{1}={ht=1\baselineskip,font=\bfseries},
+							}
+							\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
+							0.00 & 0.00  \\
+							0.05 & -0.05  \\
+							0.09 & -0.11  \\
+							0.15 & -0.19  \\
+							0.20 & -0.22  \\
+							0.27 & -0.25  \\
+							0.34 & -0.30  \\
+							0.40 & -0.35  \\
+							0.45 & -0.39  \\
+							0.52 & -0.44  \\
+						\end{tblr}
+						\captionof{table}{Budenberg}
+					\end{minipage}
+					\hfil
+					\begin{minipage}{0.22\textwidth}
+						\centering
+						\textbf{\textsf{Bar}}\\[8pt]
+						\begin{tblr}{
+								colspec={X[1cm]X[1cm]},
+								hlines,vlines,
+								cells={valign=m,halign=c,bg=white},
+								rows={ht=1\baselineskip},
+								row{1}={ht=1\baselineskip,font=\bfseries},
+							}
+							\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
+							0.00  & 0.00  \\
+							0.04  & -0.01  \\
+							0.07  & -0.05  \\
+							0.09  & -0.08  \\
+							0.12  & -0.10  \\
+							0.15  & -0.11  \\
+							0.18  & -0.13  \\
+							0.21  & -0.16  \\
+							0.24  & -0.18  \\
+							0.27  & -0.20  \\
+						\end{tblr}
+						\captionof{table}{Hg Glass as bar}
+					\end{minipage}
+				\end{minipage}		
+			\end{tcolorbox}		
+		\end{minipage}
+	\end{center}
 	
 	\tikzexternalenable
 	
