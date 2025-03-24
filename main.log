@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  24 MAR 2025 20:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  24 MAR 2025 20:13
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2265,7 +2265,7 @@ Overfull \hbox (1.55896pt too wide) in paragraph at lines 416--423
  | $[]$ 
  []
 
-<images/pressure_force2652641600190961771.png, id=223, 225.84375pt x 225.84375p
+<images/pressure_force2652641600190961771.png, id=222, 225.84375pt x 225.84375p
 t>
 File: images/pressure_force2652641600190961771.png Graphic file (type png)
 <use images/pressure_force2652641600190961771.png>
@@ -2277,7 +2277,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 430.
 See the caption package documentation for explanation.
 
-<images/Piezometer.jpg, id=225, 261.22594pt x 127.97812pt>
+<images/Piezometer.jpg, id=224, 261.22594pt x 127.97812pt>
 File: images/Piezometer.jpg Graphic file (type jpg)
 <use images/Piezometer.jpg>
 Package pdftex.def Info: images/Piezometer.jpg  used on input line 437.
@@ -3182,7 +3182,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  73918 strings out of 473201
  1818505 string characters out of 5716126
- 2784395 words of memory out of 5000000
+ 2785395 words of memory out of 5000000
  95837 multiletter control sequences out of 15000+600000
  657990 words of font info for 395 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3207,7 +3207,7 @@ mf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2024/texmf-dist
 type1/urw/times/utmb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/
 times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr
 i8a.pfb>
-Output written on main.pdf (23 pages, 4582451 bytes).
+Output written on main.pdf (23 pages, 4582265 bytes).
 PDF statistics:
  637 PDF objects out of 1000 (max. 8388607)
  494 compressed objects within 5 object streams
