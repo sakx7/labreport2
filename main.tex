@@ -1059,7 +1059,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 	\vspace*{2em}		
 	\hspace*{-3em}	
 	\begin{minipage}{1.1\textwidth}
-	\begin{tcolorbox}[title={\color{white}\normalsize \textbf{Final Data-Set}}, colback=black!30!white,colframe=black, boxrule=0.5mm, width=\textwidth] 
+	\begin{tcolorbox}[title={\color{black}\normalsize \textbf{Final Data-Set}}, colback=black!9!white,colframe=black!25!white, boxrule=0.5mm, width=\textwidth] 
 		\begin{minipage}{0.23\textwidth}
 			\begin{tcolorbox}[title={\color{black}\normalsize \textbf{Pressure Calibrator}}, colback=SkyBlue!6!white, 
 				colframe=SteelBlue!30!white, boxrule=0.5mm, width=\textwidth]
@@ -1376,11 +1376,11 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 		\begin{minipage}{1.1\textwidth}
 			\begin{minipage}{0.3\textwidth}	\centering
 				Positive, best-fit equation: 
-				\[y = 1.0224x + -0.0074\]
+				\[y = 1.0224x-0.0074\]
 			\end{minipage}\hfill
 			\begin{minipage}{0.3\textwidth}	\centering
 				Negative, best-fit equation: 
-				\[y = 0.5241x + -0.0423\]
+				\[y = 0.5241x-0.0423\]
 			\end{minipage}\hfill
 			\begin{minipage}{0.3\textwidth}	\centering
 				Combined, best-fit equation: 
@@ -1564,15 +1564,15 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 		\begin{minipage}{1.1\textwidth}
 			\begin{minipage}{0.3\textwidth}	\centering
 				Positive, best-fit equation: 
-				\[y = 0.9462x + -0.0106\]
+				\[y = 0.9462x-0.0106\]
 			\end{minipage}\hfill
 			\begin{minipage}{0.3\textwidth}	\centering
 				Negative, best-fit equation: 
-				\[y = 0.9509x + -0.0107\]
+				\[y = 0.9509x-0.0107\]
 			\end{minipage}\hfill
 			\begin{minipage}{0.3\textwidth}	\centering
 				Combined, best-fit equation: 
-				\[y = 0.9483x + -0.0112\]
+				\[y = 0.9483x-0.0112\]
 			\end{minipage}
 		\end{minipage}
 	\end{center}
@@ -1755,14 +1755,226 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 		\end{minipage}\hfill
 		\begin{minipage}{0.3\textwidth}	\centering
 			Negative, best-fit equation: 
-			\[y =0.9416x + -0.0085\]
+			\[y =0.9416x-0.0085\]
 		\end{minipage}\hfill
 		\begin{minipage}{0.3\textwidth}	\centering
 			Combined, best-fit equation: 
-			\[y = 0.9483x + -0.0112\]
+			\[y = 0.9483x-0.0112\]
 		\end{minipage}
 	\end{minipage}
 \end{center}
+
+\newpage\newgeometry{left=0.8in,right=0.8in,top=1.23in,bottom=0.69in}
+
+\subsection{Hg Manometer vs Calibrator}
+
+\newcommand{\instrumentfilefour}{Hg_Glass_bar.csv}
+\pgfplotstableread[col sep=comma]{\datadir/\instrumentfilefour}\instrumenttablefour
+
+\StrBefore{\instrumentfilefour}{_bar.csv}[\instrumentnamefour]
+\StrSubstitute{\instrumentnamefour}{_}{ }[\instrumentnameformattedfour]
+
+\hspace*{-3em}
+\begin{minipage}{1.2\textwidth}	
+	\begin{minipage}[t]{0.3\textwidth}\centering\vspace{0pt}
+		\begin{tikzpicture}[scale=0.8,transform shape]
+			\begin{axis}[
+				xlabel={\instrumentnameformattedfour\ (bar)},
+				ylabel={Pressure Calibrator (bar)},
+				axis lines=middle, 
+				grid=both,
+				legend pos=north west,
+				xlabel style={
+					at={(0.72,-0.15)}, 
+				},
+				ylabel style={
+					at={(-0.16,0.5)},
+					rotate=-90, 
+				},
+				xtick={0.1,0.2,0.3,0.4,0.5,0.6}, 
+				ytick={0.1,0.2,0.3,0.4,0.5,0.6},
+				xmin=0, xmax=0.6, 
+				ymax=0.6, ymin=0,
+				font=\small,
+				tick label style={font=\tiny},
+				label style={font=\footnotesize},
+				legend style={font=\tiny},
+				]
+				\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
+					\pgfplotstablegetelem{#1}{Positive}\of\instrumenttablefour
+					\edef\xvalue{\pgfplotsretval}
+					\pgfplotstablegetelem{#1}{Positive}\of\calibratortable
+					\edef\yvalue{\pgfplotsretval}
+					\addplot[only marks, mark=*, red] coordinates {(\xvalue, \yvalue)};
+				};
+				
+				
+				\addplot[
+				domain=0:0.32, 
+				samples=100,
+				color=red,
+				opacity=0.6,
+				dashed,
+				] {1.9488*x + -0.0166};
+				\addplot[
+				domain=0:0.6, 
+				samples=100,
+				color=black,
+				opacity=0.3,
+				] {x};
+				\legend{Positive Data,Best Fit}
+			\end{axis}			
+		\end{tikzpicture}
+	\end{minipage}\hspace{1em}
+	\begin{minipage}[t]{0.3\textwidth}\centering\vspace{0pt}
+		\vspace*{-1em}
+		\begin{tikzpicture}[scale=0.8,transform shape]
+			\begin{axis}[
+				xlabel={\instrumentnameformattedfour\ (bar)},
+				ylabel={Pressure Calibrator (bar)},
+				axis lines=middle, 
+				grid=both,
+				legend pos=north west,legend style={font=\tiny, yshift=-10pt},
+				xlabel style={
+					at={(0.71,1.025)}, 
+				},
+				ylabel style={
+					at={(1.025,0.5)},
+					rotate=-90, 
+				},
+				xtick={-0.5,-0.4,-0.3,-0.2,-0.1}, 
+				ytick={-0.5,-0.4,-0.3,-0.2,-0.1},
+				xmin=-0.5, xmax=0, 
+				ymin=-0.5, ymax=0,
+				axis line style={stealth-}, 
+				font=\small,
+				tick label style={font=\tiny},
+				label style={font=\footnotesize},
+				legend style={font=\tiny},
+				]
+				\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
+					\pgfplotstablegetelem{#1}{Negative}\of\instrumenttablefour
+					\edef\xvalue{\pgfplotsretval}
+					\pgfplotstablegetelem{#1}{Negative}\of\calibratortable
+					\edef\yvalue{\pgfplotsretval}
+					\addplot[only marks, mark=*, blue] coordinates {(\xvalue, \yvalue)};
+				};
+				
+				
+				\addplot[
+				domain=0:-0.5, 
+				samples=100,
+				color=blue,
+				opacity=0.6,
+				dashed,
+				] {2.0679*x + -0.0142};
+				\addplot[
+				domain=0:-0.5, 
+				samples=100,
+				color=black,
+				opacity=0.3,
+				] {x};
+				\legend{Negative Data,Best Fit}
+			\end{axis}
+		\end{tikzpicture}
+	\end{minipage}\hspace{2em}\hspace{-1.7em}
+	\begin{minipage}[t]{0.3\textwidth}\centering\vspace{0pt}
+		\begin{tikzpicture}[scale=0.83,transform shape]
+			\begin{axis}[
+				xlabel={\instrumentnameformattedfour\ (bar)},
+				ylabel={Pressure Calibrator (bar)},
+				axis lines=middle, 
+				grid=both,
+				legend pos=north west,
+				xlabel style={
+					at={(0.7,-0.1)}, 
+				},
+				ylabel style={
+					at={(1.02,0.5)},
+					rotate=-90, 
+				},
+				xtick={-0.1,-0.2,-0.3,-0.4,-0.5,-0.6,-0.7,0.1,0.2,0.3,0.4,0.5,0.6,0.7}, 
+				ytick={-0.1,-0.2,-0.3,-0.4,-0.5,-0.6,0.1,0.2,0.3,0.4,0.5,0.6},
+				xmin=-0.5, xmax=0.7, 
+				ymax=0.7, ymin=-0.5,
+				font=\small,
+				tick label style={font=\tiny},
+				label style={font=\footnotesize},
+				legend style={font=\tiny},
+				]
+				\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
+					\pgfplotstablegetelem{#1}{Negative}\of\instrumenttablefour
+					\edef\xvalue{\pgfplotsretval}
+					\pgfplotstablegetelem{#1}{Negative}\of\calibratortable
+					\edef\yvalue{\pgfplotsretval}
+					\addplot[only marks, mark=*, blue] coordinates {(\xvalue, \yvalue)};
+				};
+				\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
+					\pgfplotstablegetelem{#1}{Positive}\of\instrumenttablefour
+					\edef\xvalue{\pgfplotsretval}
+					\pgfplotstablegetelem{#1}{Positive}\of\calibratortable
+					\edef\yvalue{\pgfplotsretval}
+					\addplot[only marks, mark=*, red] coordinates {(\xvalue, \yvalue)};
+				};
+				
+				
+				\addplot[
+				domain=-0.7:0.7, 
+				samples=100,
+				color=black,
+				opacity=0.6,
+				dashed,
+				] {1.9897*x + -0.0222};
+				\addplot[
+				domain=-0.6:0.6, 
+				samples=100,
+				color=black,
+				opacity=0.3,
+				] {x};
+				\legend{Positive Data, Negative Data, Combined Fit}
+			\end{axis}
+	\end{tikzpicture}	\end{minipage}
+\end{minipage}\vspace{-0.4em}
+\begin{center}
+	\hspace*{-2em}
+	\begin{minipage}{1.1\textwidth}
+		\begin{minipage}{0.3\textwidth}	\centering
+			Positive, best-fit equation: 
+			\[y = 1.9488x-0.0166\]
+		\end{minipage}\hfill
+		\begin{minipage}{0.3\textwidth}	\centering
+			Negative, best-fit equation: 
+			\[y = 2.0679x-0.0142\]
+		\end{minipage}\hfill
+		\begin{minipage}{0.3\textwidth}	\centering
+			Combined, best-fit equation: 
+			\[y = 1.9488x-0.0166\]
+		\end{minipage}
+	\end{minipage}
+\end{center}
+
+\subsection{Percentage errors}
+\begin{center}
+\begin{tblr}{		
+		colspec={
+			Q[3cm]
+			Q[2cm]Q[1.5cm]
+			Q[2cm]Q[1.5cm]
+			Q[2cm]Q[1.5cm]},
+		hlines,vlines,
+		cells={valign=m,halign=c},
+		rows={ht=2\baselineskip},
+		row{1}={ht=1.5\baselineskip,font=\bfseries},
+	}
+	Gauge & \SetCell[c=2]{c} Positive Gradient & &\SetCell[c=2]{c} Negative Gradient & &\SetCell[c=2]{c} Combined Gradient & \\ \hline
+	Borden Gauge 1 & 1.0224 & {\color{red!2.24!black} 2.24\%} & 0.5241 & {\color{red!47.59!black} 47.59\%} & 0.7554 & {\color{red!24.46!black} 24.46\%} \\\hline
+	Borden Gauge 2 & 0.9462 & {\color{red!5.38!black} 5.38\%} & 0.9509 & {\color{red!4.91!black} 4.91\%} & 0.9483 & {\color{red!5.17!black} 5.17\%} \\\hline
+	Bundenburg Gauge & 0.9932 & {\color{red!0.68!black} 0.68\%} & 0.9416 & {\color{red!5.84!black} 5.84\%} & 0.9483 & {\color{red!5.17!black} 5.17\%} \\\hline	
+    Hg Manometer & 1.9488 & {\color{red!94.88!black} 94.88\%} & 2.0679 & {\color{red!100!black} 106.79\%} & 1.9488 & {\color{red!94.88!black} 94.88\%} \\
+\end{tblr}
+\captionof{table}{Gradients of Best-Fit Equations for Different Gauges}
+\end{center}
+
 
 	\newpage
 	\section{Discussion of Results}

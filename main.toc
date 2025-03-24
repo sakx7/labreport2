@@ -17,8 +17,10 @@
 \contentsline {subsection}{\numberline {5.2}Borden Gauge 1 vs Calibrator}{17}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}Borden Gauge 2 vs Calibrator}{17}{subsection.5.3}%
 \contentsline {subsection}{\numberline {5.4}Bundenburg Gauge bar vs Calibrator}{17}{subsection.5.4}%
-\contentsline {section}{\numberline {6}Discussion of Results}{18}{section.6}%
-\contentsline {section}{\numberline {7}Conclusions}{19}{section.7}%
-\contentsline {section}{\numberline {8}Recommendations}{20}{section.8}%
-\contentsline {section}{\numberline {9}References}{21}{section.9}%
-\contentsline {section}{\numberline {10}Appendix}{22}{section.10}%
+\contentsline {subsection}{\numberline {5.5}Hg Manometer vs Calibrator}{18}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Percentage errors}{18}{subsection.5.6}%
+\contentsline {section}{\numberline {6}Discussion of Results}{19}{section.6}%
+\contentsline {section}{\numberline {7}Conclusions}{20}{section.7}%
+\contentsline {section}{\numberline {8}Recommendations}{21}{section.8}%
+\contentsline {section}{\numberline {9}References}{22}{section.9}%
+\contentsline {section}{\numberline {10}Appendix}{23}{section.10}%
