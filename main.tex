@@ -11,6 +11,8 @@
 \usepackage{placeins}
 \usepackage{enumitem}
 \usepackage{siunitx}
+\usepackage{lipsum}
+
 
 %\usepackage{showframe}
 \usepackage{times}
@@ -291,6 +293,166 @@ In this experiment, we calibrated and compared the performance of multiple press
 	Despite the advantages of different pressure-measuring devices, each has limitations, such as calibration errors and environmental influences.\\[1em]
 	Previous studies have highlighted various challenges and findings related to pressure measurement devices. For example, a study by Hodgkinson et al. (2020) found that the accuracy of home blood pressure monitors varied significantly, with validated monitors showing a higher pass rate in static pressure tests compared to unvalidated ones. This emphasizes the importance of validation and calibration in ensuring the accuracy of pressure-measuring devices.\\[1em]
 	In this experiment, we aimed to evaluate the performance and accuracy of various pressure-measuring devices under controlled conditions, comparing their responses to varying pressure levels.
+	
+	\newpage\restoregeometry
+
+	\section{Theory}
+
+	\subsection{Pressure}
+
+When we talk about pressure, the first thing that comes to mind is its physical definition. It refers to the effect or various types of deflection when a force is applied to a surface.\vspace{-0.5em}
+\begin{center}
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\begin{equation}
+			P = \frac{F}{A}
+			\label{eq:pressure}
+		\end{equation}
+		\hspace*{2em}\wm{0.9}{
+			\begin{itemize}[itemsep=-1mm]
+				\item \( P \) = Pressure (Pa, Pascal)
+				\item \( F \) = Force applied (N, Newton)
+				\item \( A \) = Surface area (m\(^2\))
+			\end{itemize}
+		}\\[1em]\raggedright
+		"Pressure is the force per unit area exerted normal to the surface."
+	\end{minipage}
+	\hfil
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.6\textwidth]{images/pressure_force2652641600190961771.png}\vspace{-1.6em}
+		\captionof{figure}{Illustration of pressure application}
+		\label{fig:pressure}
+\end{minipage}\end{center}
+The type of deflection caused by pressure depends on its magnitude and the duration of application. Pressure has numerous examples and applications, such as vehicle tires and press machines.\\[1em]
+The most effective way to estimate applied pressure is by measuring its effects, for example, by observing changes in the dimensions of an elastic object or the height of a liquid column, as shown in the following image.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{images/Piezometer.jpg}
+	\caption{Pressure measurement using a liquid column}
+	\label{fig:piezometer}
+\end{figure}
+\noindent
+Pressure is categorized into two main groups: \textbf{gauge pressure} and \textbf{absolute pressure}, explained in the following diagram.
+\subsection{Absolute Pressure}
+Absolute pressure, or absolute zero pressure, is the lowest possible pressure measurable. Consequently, all measured pressures are positive in comparison to this reference point. Achieving absolute zero pressure is practically impossible unless calculated or represented through an extremely accurate curve.
+\subsection{Gauge Pressure}
+Gauge pressure, also known as relative pressure, is measured relative to local atmospheric pressure. Since we live under constant atmospheric pressure, it is often convenient to measure the difference between actual pressure and atmospheric pressure, which is referred to as gauge pressure. This measurement is commonly used in industrial applications.
+
+\newpage
+\noindent It is important to note that:\\[-5pt]
+\begin{itemize}
+	\item Any pressure between local atmospheric pressure and absolute zero pressure is called \textbf{vacuum pressure}.
+	\item Any pressure higher than local atmospheric pressure is considered \textbf{positive pressure}.
+\end{itemize}
+\vspace{0.7em}\noindent
+The relationship between absolute and gauge pressure is given by:\\[0.5em]
+\begin{equation}
+	P_{\text{absolute}} = P_{\text{atmosphere}} + P_{\text{gauge}}
+	\label{eq:absolute}
+\end{equation}\\
+\vspace{0.5em}
+The following diagram illustrates the definitions of pressure more clearly.	
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{images/Pressure Diagram.jpg}
+	\caption{Pressure categories and their relationships}
+	\label{fig:pressure_diagram}
+\end{figure}
+
+
+\newpage
+\subsection{Devices and Mechanisms}
+adding freddie stuff tmmrw
+\newpage\newgeometry{left=0.8in,right=0.8in,top=1.23in,bottom=0.69in}
+
+\subsection{Pressure Units}\label{Pressure Units}
+
+% Define custom colors
+\definecolor{customteal}{RGB}{0,128,128}   % Teal
+\definecolor{custommaroon}{RGB}{128,0,0}   % Maroon
+\definecolor{customindigo}{RGB}{75,0,130}  % Indigo
+\definecolor{customcyan}{RGB}{0,255,255}   % Cyan
+\definecolor{customolive}{RGB}{128,128,0}  % Olive
+
+
+\begin{formal}{customteal}{customteal!2!white}
+	\vspace{-1em}\subsubsection{Pascal}	
+	The Pascal (Pa) is the SI unit of pressure, named after the French mathematician and physicist Blaise Pascal. It is defined as one Newton per square meter (\si{\newton\per\square\meter}). 
+	\[1\,\text{Pa}=1\,\text{kN}\ \text{m}^{-2}\]
+	As a relatively small unit, the Pascal is commonly used in scientific fields such as laboratory research or atmospheric studies.
+\end{formal}
+
+\begin{formal}{custommaroon}{custommaroon!2!white}
+	\vspace{-1em}\subsubsection{Atmosphere}
+	The atmosphere (atm) is a unit of pressure defined as the average atmospheric pressure at sea level on Earth. Were \[1\,\text{atm}\approx101\, 325\,\text{Pa}\]
+	The atmosphere is commonly used in chemistry and physics to describe gas pressures, especially in contexts like gas laws (e.g., Boyle's Law and Charles's Law), as well as in scuba diving to describe underwater pressures. It is used for convenience, providing a standardized unit for atmospheric pressure in various scientific and engineering applications.
+\end{formal}
+
+\begin{formal}{customindigo}{customindigo!2!white}
+	\vspace{-1em}\subsubsection{Bar}
+	The bar is a metric unit of pressure, though it is not part of the International System of Units (SI). It is defined as \[1\,\text{bar}=100\, 000\,\text{Pa}\] 
+	This exact by definition. However, the relationship between bar and atm involves a small fractional difference due to the empirical value of standard atmospheric pressure, it is very close, specifically $$1\,\text{bar}\approx0.986923\,\text{atm}$$ Which is just 1.013\% off. The bar is commonly used in meteorology, engineering, and industrial applications, as it provides a convenient scale for measuring pressures near atmospheric pressure.
+\end{formal}
+
+\begin{formal}{customcyan!50!black}{customcyan!2!white}
+	\vspace{-1em}\subsubsection{Pound per Square Inch}
+	The pound per square inch (psi) is a unit of pressure primarily used in the United States and other countries that follow the Imperial system. It is defined as the pressure exerted by one pound-force applied to an area of one square inch. PSI is widely used in automotive, mechanical engineering, and hydraulic systems, such as measuring tire pressure.\\[8pt]
+	The conversion factor between psi and Pascal is given as:
+	\[1 \, \text{psi} = 6894.76 \, \text{Pa}.\]
+	This conversion is derived from the definition of the pound-force (lbf) and the inch.\\
+	One \textbf{pound-force (lbf)} is defined as the force required to accelerate a mass of one pound under the influence of gravity. In the metric system, 1 pound-force is approximately equivalent to 4.44822 Newtons (N). This is based on the following formulation:
+	\[1\,\text{lbf}=1\,\text{lb}\times g\]
+	\[1 \, \text{lbf} = 0.453592 \, \text{kg} \times 9.80665 \, \text{m/s}^2 = 4.44822 \, \text{N}.\]
+	The force of one pound-force is applied over an area of one square inch. One square inch is defined as:
+	\[1 \, \text{inch}^2 = 0.00064516 \, \text{m}^2.\]
+	Thus, the conversion from psi to Pascal is calculated by dividing the force in Newtons by the area in square meters:
+	\[1 \, \text{psi} = \frac{4.44822 \, \text{N}}{0.00064516 \, \text{m}^2} \approx 6894.76 \, \text{Pa}.\]
+	This precise conversion reflects the accurate definitions of the pound-force and the inch, with the result ensuring consistent and reliable unit conversion between the Imperial and SI systems.
+\end{formal}
+\begin{formal}{customolive}{customolive!2!white}
+	\vspace{-1em}\subsubsection{Millimeters of Mercury}
+	The millimeter of mercury (mmHg) is a unit of pressure historically based on the height of a mercury column that exerts a given pressure. It is commonly used in medical and scientific applications, particularly in measuring blood pressure and vacuum pressures.\\[8pt]
+	It is defined as:
+	\[1\,\text{mmHg} = 133.322\,\text{Pa}\]
+	\begin{minipage}{0.9\textwidth}		
+		This conversion is derived from the hydrostatic pressure equation:\\
+		\[P = \rho g h\]
+		\begin{itemize}[itemsep=-1mm]
+			\item \(\rho : \text{Density of mercury}\, (13.5951 \, \text{g/cm}^3)\)
+			\item \(g : \text{Gravitational acceleration}\, (9.80665 \, \text{m/s}^2)\)
+			\item \(h : \text{Height}\, (\text{mm},\, \text{interchangeable})\).	
+		\end{itemize}
+	\end{minipage}\hspace{-7em}
+	\begin{minipage}{0.2\textwidth}\vspace{-2em}
+		$$\frac{g}{cm^3} \times \frac{m}{s^2} \times mm$$
+		$$g\frac{m}{s^2} \times\frac{mm}{cm^3}$$
+		$$10^{-3}N \times10^{3}m^{-2}$$
+		$$N m^{-2} = \text{Pa}$$
+	\end{minipage}\\[8pt]
+	Although mmHg is not an SI unit, it remains widely used in medicine (e.g., blood pressure readings of 120/80 mmHg) and laboratory sciences for its convenience in low-pressure measurements.
+\end{formal}
+
+\noindent This allows us to create a conclusive table demonstrating the conversion of all these units to one another by straightforward alterations and calculations. The final table is as follows:
+
+\begin{center}
+	\begin{tblr}{		
+			colspec={Q[2.3cm]Q[2.3cm]Q[2.3cm]Q[2.3cm]Q[2.3cm]Q[2.3cm]}, 
+			hlines, vlines,
+			cells={valign=m, halign=c},
+			rows={ht=2\baselineskip},
+			row{1}={ht=2\baselineskip, font=\bfseries,bg=black!10!white},
+			column{1}={font=\bfseries,bg=black!10!white}
+		}
+		\SetCell{bg=black!40!white,fg=white}\textbf{Unit} & \textbf{Pa} & \textbf{bar} & \textbf{psi} & \textbf{atm} & \textbf{cm Hg} \\
+		Pa & 1& $1 \times 10^{-5}$ & $1.450 \times 10^{-4}$&$9.869 \times 10^{-6}$ & $0.00750062$ \\
+		bar& $1 \times 10^{5}$ & 1& 14.5038& 0.986923    &75.0062 \\
+		psi & 6894.76 & 0.0689476&1& 0.068046&51.7149 \\
+		atm& 101325&1.01325&14.6959& 1 & 76.0032 \\ 
+		cm Hg&1333.22&0.013332&0.19337& 0.013158 & 1 \\
+	\end{tblr}
+\end{center}	
+\captionof{table}{Standard Pressure Unit Conversions}
 
 	
 	\newpage\vspace*{-20pt}
@@ -401,174 +563,12 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 		This concludes everything that was done in the lab so that we may draw conclusions from the information in the tables.
 	\end{minipage}
 	
-	\newpage\restoregeometry
-	\section{Theory}
-	
-	\subsection{Pressure}
-	
-	When we talk about pressure, the first thing that comes to mind is its physical definition. It refers to the effect or various types of deflection when a force is applied to a surface.\vspace{-0.5em}
-	\begin{center}
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\begin{equation}
-			P = \frac{F}{A}
-			\label{eq:pressure}
-		\end{equation}
-		\hspace*{2em}\wm{0.9}{
-		\begin{itemize}[itemsep=-1mm]
-			\item \( P \) = Pressure (Pa, Pascal)
-			\item \( F \) = Force applied (N, Newton)
-			\item \( A \) = Surface area (m\(^2\))
-		\end{itemize}
-		}\\[1em]\raggedright
-		"Pressure is the force per unit area exerted normal to the surface."
-	\end{minipage}
-	\hfil
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.6\textwidth]{images/pressure_force2652641600190961771.png}\vspace{-1.6em}
-		\captionof{figure}{Illustration of pressure application}
-		\label{fig:pressure}
-	\end{minipage}\end{center}
-	The type of deflection caused by pressure depends on its magnitude and the duration of application. Pressure has numerous examples and applications, such as vehicle tires and press machines.\\[1em]
-	The most effective way to estimate applied pressure is by measuring its effects, for example, by observing changes in the dimensions of an elastic object or the height of a liquid column, as shown in the following image.
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.5\textwidth]{images/Piezometer.jpg}
-		\caption{Pressure measurement using a liquid column}
-		\label{fig:piezometer}
-	\end{figure}
-	\noindent
-	Pressure is categorized into two main groups: \textbf{gauge pressure} and \textbf{absolute pressure}, explained in the following diagram.
-	\subsection{Absolute Pressure}
-	Absolute pressure, or absolute zero pressure, is the lowest possible pressure measurable. Consequently, all measured pressures are positive in comparison to this reference point. Achieving absolute zero pressure is practically impossible unless calculated or represented through an extremely accurate curve.
-	\subsection{Gauge Pressure}
-	Gauge pressure, also known as relative pressure, is measured relative to local atmospheric pressure. Since we live under constant atmospheric pressure, it is often convenient to measure the difference between actual pressure and atmospheric pressure, which is referred to as gauge pressure. This measurement is commonly used in industrial applications.
-	
-	\newpage
-	\noindent It is important to note that:\\[-5pt]
-	\begin{itemize}
-		\item Any pressure between local atmospheric pressure and absolute zero pressure is called \textbf{vacuum pressure}.
-		\item Any pressure higher than local atmospheric pressure is considered \textbf{positive pressure}.
-	\end{itemize}
-	\vspace{0.7em}\noindent
-	The relationship between absolute and gauge pressure is given by:\\[0.5em]
-	\begin{equation}
-		P_{\text{absolute}} = P_{\text{atmosphere}} + P_{\text{gauge}}
-		\label{eq:absolute}
-	\end{equation}\\
-	\vspace{0.5em}
-	The following diagram illustrates the definitions of pressure more clearly.	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.95\textwidth]{images/Pressure Diagram.jpg}
-		\caption{Pressure categories and their relationships}
-		\label{fig:pressure_diagram}
-	\end{figure}
-
-
-	\newpage
-	\subsection{How the instruments work}
-	adding freddie stuff tmmrw
-	\newpage\newgeometry{left=0.8in,right=0.8in,top=1.23in,bottom=0.69in}
-	
-\subsection{Pressure Units}\label{Pressure Units}
-
-% Define custom colors
-\definecolor{customteal}{RGB}{0,128,128}   % Teal
-\definecolor{custommaroon}{RGB}{128,0,0}   % Maroon
-\definecolor{customindigo}{RGB}{75,0,130}  % Indigo
-\definecolor{customcyan}{RGB}{0,255,255}   % Cyan
-\definecolor{customolive}{RGB}{128,128,0}  % Olive
-
-
-\begin{formal}{customteal}{customteal!2!white}
-	\vspace{-1em}\subsubsection{Pascal}	
-	The Pascal (Pa) is the SI unit of pressure, named after the French mathematician and physicist Blaise Pascal. It is defined as one Newton per square meter (\si{\newton\per\square\meter}). 
-	\[1\,\text{Pa}=1\,\text{kN}\ \text{m}^{-2}\]
-	As a relatively small unit, the Pascal is commonly used in scientific fields such as laboratory research or atmospheric studies.
-\end{formal}
-
-\begin{formal}{custommaroon}{custommaroon!2!white}
-	\vspace{-1em}\subsubsection{Atmosphere}
-	The atmosphere (atm) is a unit of pressure defined as the average atmospheric pressure at sea level on Earth. Were \[1\,\text{atm}\approx101\, 325\,\text{Pa}\]
-	The atmosphere is commonly used in chemistry and physics to describe gas pressures, especially in contexts like gas laws (e.g., Boyle's Law and Charles's Law), as well as in scuba diving to describe underwater pressures. It is used for convenience, providing a standardized unit for atmospheric pressure in various scientific and engineering applications.
-\end{formal}
-
-\begin{formal}{customindigo}{customindigo!2!white}
-	\vspace{-1em}\subsubsection{Bar}
-	The bar is a metric unit of pressure, though it is not part of the International System of Units (SI). It is defined as \[1\,\text{bar}=100\, 000\,\text{Pa}\] 
-	This exact by definition. However, the relationship between bar and atm involves a small fractional difference due to the empirical value of standard atmospheric pressure, it is very close, specifically $$1\,\text{bar}\approx0.986923\,\text{atm}$$ Which is just 1.013\% off. The bar is commonly used in meteorology, engineering, and industrial applications, as it provides a convenient scale for measuring pressures near atmospheric pressure.
-\end{formal}
-
-\begin{formal}{customcyan!50!black}{customcyan!2!white}
-	\vspace{-1em}\subsubsection{Pound per Square Inch}
-	The pound per square inch (psi) is a unit of pressure primarily used in the United States and other countries that follow the Imperial system. It is defined as the pressure exerted by one pound-force applied to an area of one square inch. PSI is widely used in automotive, mechanical engineering, and hydraulic systems, such as measuring tire pressure.\\[8pt]
-	The conversion factor between psi and Pascal is given as:
-	\[1 \, \text{psi} = 6894.76 \, \text{Pa}.\]
-	This conversion is derived from the definition of the pound-force (lbf) and the inch.\\
-	One \textbf{pound-force (lbf)} is defined as the force required to accelerate a mass of one pound under the influence of gravity. In the metric system, 1 pound-force is approximately equivalent to 4.44822 Newtons (N). This is based on the following formulation:
-	\[1\,\text{lbf}=1\,\text{lb}\times g\]
-	\[1 \, \text{lbf} = 0.453592 \, \text{kg} \times 9.80665 \, \text{m/s}^2 = 4.44822 \, \text{N}.\]
-	The force of one pound-force is applied over an area of one square inch. One square inch is defined as:
-	\[1 \, \text{inch}^2 = 0.00064516 \, \text{m}^2.\]
-	Thus, the conversion from psi to Pascal is calculated by dividing the force in Newtons by the area in square meters:
-	\[1 \, \text{psi} = \frac{4.44822 \, \text{N}}{0.00064516 \, \text{m}^2} \approx 6894.76 \, \text{Pa}.\]
-	This precise conversion reflects the accurate definitions of the pound-force and the inch, with the result ensuring consistent and reliable unit conversion between the Imperial and SI systems.
-\end{formal}
-\begin{formal}{customolive}{customolive!2!white}
-	\vspace{-1em}\subsubsection{Millimeters of Mercury}
-	The millimeter of mercury (mmHg) is a unit of pressure historically based on the height of a mercury column that exerts a given pressure. It is commonly used in medical and scientific applications, particularly in measuring blood pressure and vacuum pressures.\\[8pt]
-	It is defined as:
-	\[1\,\text{mmHg} = 133.322\,\text{Pa}\]
-	\begin{minipage}{0.9\textwidth}		
-	This conversion is derived from the hydrostatic pressure equation:\\
-	\[P = \rho g h\]
-	\begin{itemize}[itemsep=-1mm]
-		\item \(\rho : \text{Density of mercury}\, (13.5951 \, \text{g/cm}^3)\)
-		\item \(g : \text{Gravitational acceleration}\, (9.80665 \, \text{m/s}^2)\)
-		\item \(h : \text{Height}\, (\text{mm},\, \text{interchangeable})\).	
-	\end{itemize}
-	\end{minipage}\hspace{-7em}
-	\begin{minipage}{0.2\textwidth}\vspace{-2em}
-		$$\frac{g}{cm^3} \times \frac{m}{s^2} \times mm$$
-		$$g\frac{m}{s^2} \times\frac{mm}{cm^3}$$
-		$$10^{-3}N \times10^{3}m^{-2}$$
-		$$N m^{-2} = \text{Pa}$$
-	\end{minipage}\\[8pt]
-	Although mmHg is not an SI unit, it remains widely used in medicine (e.g., blood pressure readings of 120/80 mmHg) and laboratory sciences for its convenience in low-pressure measurements.
-\end{formal}
-
-\noindent This allows us to create a conclusive table demonstrating the conversion of all these units to one another by straightforward alterations and calculations. The final table is as follows:
-
-	\begin{center}
-		\begin{tblr}{		
-					colspec={Q[2.3cm]Q[2.3cm]Q[2.3cm]Q[2.3cm]Q[2.3cm]Q[2.3cm]}, 
-					hlines, vlines,
-					cells={valign=m, halign=c},
-					rows={ht=2\baselineskip},
-					row{1}={ht=2\baselineskip, font=\bfseries,bg=black!10!white},
-					column{1}={font=\bfseries,bg=black!10!white}
-			}
-			\SetCell{bg=black!40!white,fg=white}\textbf{Unit} & \textbf{Pa} & \textbf{bar} & \textbf{psi} & \textbf{atm} & \textbf{cm Hg} \\
-			Pa & 1& $1 \times 10^{-5}$ & $1.450 \times 10^{-4}$&$9.869 \times 10^{-6}$ & $0.00750062$ \\
-			bar& $1 \times 10^{5}$ & 1& 14.5038& 0.986923    &75.0062 \\
-			psi & 6894.76 & 0.0689476&1& 0.068046&51.7149 \\
-			atm& 101325&1.01325&14.6959& 1 & 76.0032 \\ 
-			cm Hg&1333.22&0.013332&0.19337& 0.013158 & 1 \\
-		\end{tblr}
-	\end{center}	
-	\captionof{table}{Standard Pressure Unit Conversions}
-	
 
 	\newpage\restoregeometry
 	\section{Data, Calculations and Results}
-	In this section, we will present the calculations and results derived from the dataset collected during the experiment, as detailed in the \textbf{Method \& Experimental Procedures} section \ref{Method_Experimental_Procedures}. The primary objective is to analyze the data, identify trends, and generate additional information that will help us draw meaningful conclusions. To start, I will first describe the baseline data, which was recorded in the table provided for the lab (Figure \ref{fig:pressurestable}).
 	
 	\tikzexternaldisable
 
-	
-	\subsection{Pressure Readings}
 	\begin{center}
 	\begin{minipage}{0.23\textwidth}
 		\begin{tcolorbox}[title={\color{black}\normalsize \textbf{Pressure Calibrator}}, colback=SkyBlue!6!white, 
@@ -713,15 +713,11 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 		\end{tcolorbox}		
 	\end{minipage}
 	\end{center}
-	As instructed, we first \textbf{zero out the data} by adjusting all values relative to the first element. This means that we subtract the first element from every value in the list. This ensures that the first element becomes zero, and the rest of the data maintains its relative differences. The specific reasonsing and justification for this is noted later.\\[1em] 
-	The results are as follows:
-	  
-	  \newgeometry{left=0.8in,right=0.8in,top=1in,bottom=0.6in}
-	  
+	  \hrule
 \begin{center}
 	\begin{minipage}{0.23\textwidth}
 		\begin{tcolorbox}[title={\color{black}\normalsize \textbf{Pressure Calibrator}}, colback=SkyBlue!6!white, 
-			colframe=SteelBlue!20!white, boxrule=0.5mm, width=\textwidth]
+			colframe=SteelBlue!10!white, boxrule=0.5mm, width=\textwidth]
 			\hspace*{-0.82em}
 			\begin{minipage}{1.2\textwidth}\centering
 				\textbf{\textsf{kPa}}\\[8pt]
@@ -752,7 +748,7 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 		\begin{tcolorbox}[
 			title={\color{black}\normalsize \textbf{Pressure measuring instruments}},
 			colback=MetallicSunburst!6!white, 
-			colframe=ChineseGold!20!white, 
+			colframe=ChineseGold!10!white, 
 			boxrule=0.5mm, 
 			width=1\textwidth
 			]
@@ -862,12 +858,13 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 		\end{tcolorbox}		
 	\end{minipage}
 \end{center}
+\newpage
 Now, we need to perform some unit conversions to ensure consistency across all measurements.\\[8pt]
 In the context of this study, as seen in the table in Figure \ref{fig:pressurestable}, we are provided with a row for calculating bar and bar \(\text{P}_\text{abs}\), which directly suggests that all the pressures should be expressed in bar for all comparisons. In my opinion, the choice of unit doesn't significantly affect the results, when coming to conclusions we aim to achieve. I will demonstrate later in that the results are the same when using different units.\\[8pt]
 That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outlined in subsection \ref{Pressure Units}.
 
 	\begin{center}
-	\hspace*{-0.5em}\begin{minipage}{0.46\textwidth}\centering		
+	\hspace*{0em}\begin{minipage}{0.46\textwidth}\centering		
 		\hspace*{-1em}\begin{tikzpicture}
 			\begin{scope}		
 				\draw[thick,->] 
@@ -925,8 +922,9 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 		\end{tblr}
 	\end{minipage}
 	\end{minipage}
-	\end{minipage}\hfil\vrule\hfil
-	\hspace*{-0.5em}\begin{minipage}{0.46\textwidth}\centering		\hspace*{-1em}\begin{tikzpicture}
+	\end{minipage}\hfil\vrule\hfil\hspace*{-0.4em}
+	\begin{minipage}{0.46\textwidth}\centering		
+		\hspace*{-1em}\begin{tikzpicture}
 				\draw[thick,->] 
 				(-1,3.3) 
 				.. controls (-0.5,4) and (1.6,4) .. 
@@ -983,7 +981,6 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 	\end{minipage}
 	\end{center}
 
-	\restoregeometry\newpage
 	\begin{center}
 		\begin{minipage}{0.46\textwidth}\centering
 				\hspace*{-1em}\begin{tikzpicture}
@@ -1098,9 +1095,8 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 				\end{minipage}
 		\end{minipage}
 	\end{center}
-	
-	\vspace*{2em}		
-	\hspace*{-2.5em}	
+	\newpage
+	\hspace*{-2em}	
 	\begin{minipage}{1.1\textwidth}
 	\begin{tcolorbox}[title={\color{black}\normalsize \textbf{Final Data-Set}}, colback=black!4!white,colframe=black!10!white, boxrule=0.5mm, width=\textwidth] 
 		\begin{minipage}{0.23\textwidth}
@@ -1249,7 +1245,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 	\end{minipage}
 
 	
-	\tikzexternalenable\newpage	  \newgeometry{left=0.8in,right=0.8in,top=0.9in,bottom=0.56in}
+	\tikzexternalenable
 	
 	\subsection{Borden Gauge 1 vs Calibrator}
 	\newcommand{\datadir}{data/same_units}
@@ -1433,7 +1429,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 		\end{minipage}
 	\end{center}
 
-	
+	\newgeometry{left=0.8in,right=0.8in,top=0.9in,bottom=0.56in}
 	\subsection{Borden Gauge 2 vs Calibrator}
 	
 	\newcommand{\instrumentfiletwo}{Bourden_Gauge_2_bar.csv}
@@ -1691,7 +1687,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 				grid=both,
 				legend pos=north west,legend style={font=\tiny, yshift=-10pt},
 				xlabel style={
-					at={(0.71,1.025)}, 
+					at={(0.73,1.025)}, 
 				},
 				ylabel style={
 					at={(1.025,0.5)},
@@ -1742,7 +1738,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 				grid=both,
 				legend pos=north west,
 				xlabel style={
-					at={(0.7,-0.1)}, 
+					at={(0.73,-0.1)}, 
 				},
 				ylabel style={
 					at={(1.02,0.5)},
@@ -1808,8 +1804,6 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 	\end{minipage}
 \end{center}
 
-\newpage\newgeometry{left=0.8in,right=0.8in,top=1.23in,bottom=0.69in}
-
 \subsection{Hg Manometer vs Calibrator}
 
 \newcommand{\instrumentfilefour}{Hg_Glass_bar.csv}
@@ -1829,7 +1823,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 				grid=both,
 				legend pos=north west,
 				xlabel style={
-					at={(0.72,-0.15)}, 
+					at={(0.65,-0.15)}, 
 				},
 				ylabel style={
 					at={(-0.16,0.5)},
@@ -1880,7 +1874,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 				grid=both,
 				legend pos=north west,legend style={font=\tiny, yshift=-10pt},
 				xlabel style={
-					at={(0.71,1.025)}, 
+					at={(0.65,1.025)}, 
 				},
 				ylabel style={
 					at={(1.025,0.5)},
@@ -1996,7 +1990,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 		\end{minipage}
 	\end{minipage}
 \end{center}
-
+\restoregeometry
 \subsection{Percentage errors}
 \begin{center}
 \begin{tblr}{		
@@ -2018,10 +2012,16 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 \end{tblr}
 \captionof{table}{Gradients of Best-Fit Equations for Different Gauges}
 \end{center}
-
+\lipsum[2]
 
 	\newpage
 	\section{Discussion of Results}
+	\lipsum[4]
+	\vspace{1em}
+	\lipsum[1]
+	\vspace{1em}
+	\lipsum[3]
+	
 	
 	\newpage\vspace*{-30pt}
 	\section{Conclusions}

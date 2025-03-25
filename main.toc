@@ -1,25 +1,24 @@
 \contentsline {section}{\numberline {1}Abstract}{4}{section.1}%
 \contentsline {section}{\numberline {2}Introduction}{5}{section.2}%
-\contentsline {section}{\numberline {3}Method \& Experimental Procedures}{6}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Operating Procedure}{8}{subsection.3.1}%
-\contentsline {section}{\numberline {4}Theory}{9}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Pressure}{9}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Absolute Pressure}{9}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Gauge Pressure}{9}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}How the instruments work}{11}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Pressure Units}{12}{subsection.4.5}%
-\contentsline {subsubsection}{\numberline {4.5.1}Pascal}{12}{subsubsection.4.5.1}%
-\contentsline {subsubsection}{\numberline {4.5.2}Atmosphere}{12}{subsubsection.4.5.2}%
-\contentsline {subsubsection}{\numberline {4.5.3}Bar}{12}{subsubsection.4.5.3}%
-\contentsline {subsubsection}{\numberline {4.5.4}Pound per Square Inch}{12}{subsubsection.4.5.4}%
-\contentsline {subsubsection}{\numberline {4.5.5}Millimeters of Mercury}{13}{subsubsection.4.5.5}%
+\contentsline {section}{\numberline {3}Theory}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Pressure}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Absolute Pressure}{6}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Gauge Pressure}{6}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Devices and Mechanisms}{8}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Pressure Units}{9}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Pascal}{9}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Atmosphere}{9}{subsubsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.3}Bar}{9}{subsubsection.3.5.3}%
+\contentsline {subsubsection}{\numberline {3.5.4}Pound per Square Inch}{9}{subsubsection.3.5.4}%
+\contentsline {subsubsection}{\numberline {3.5.5}Millimeters of Mercury}{10}{subsubsection.3.5.5}%
+\contentsline {section}{\numberline {4}Method \& Experimental Procedures}{11}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Operating Procedure}{13}{subsection.4.1}%
 \contentsline {section}{\numberline {5}Data, Calculations and Results}{14}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Pressure Readings}{14}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Borden Gauge 1 vs Calibrator}{17}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Borden Gauge 2 vs Calibrator}{17}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Bundenburg Gauge bar vs Calibrator}{17}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Hg Manometer vs Calibrator}{18}{subsection.5.5}%
-\contentsline {subsection}{\numberline {5.6}Percentage errors}{18}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.1}Borden Gauge 1 vs Calibrator}{16}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Borden Gauge 2 vs Calibrator}{17}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Bundenburg Gauge bar vs Calibrator}{17}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Hg Manometer vs Calibrator}{17}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Percentage errors}{18}{subsection.5.5}%
 \contentsline {section}{\numberline {6}Discussion of Results}{19}{section.6}%
 \contentsline {section}{\numberline {7}Conclusions}{20}{section.7}%
 \contentsline {section}{\numberline {8}Recommendations}{21}{section.8}%
