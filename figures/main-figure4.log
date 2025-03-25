@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  23 MAR 2025 19:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  24 MAR 2025 22:35
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2429,11 +2429,11 @@ Overfull \hbox (14.28003pt too wide) in paragraph at lines 1009--1056
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1087.
+(caption)                particular \caption on input line 1088.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (9.11815pt too wide) in paragraph at lines 1065--1089
+Overfull \hbox (9.9724pt too wide) in paragraph at lines 1066--1090
 []|  $[]$ 
  []
 
@@ -2445,16 +2445,16 @@ Overfull \hbox (9.11815pt too wide) in paragraph at lines 1065--1089
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-Package tabularray Warning: Table width is too small, need 4.44955pt more!
+Package tabularray Warning: Table width is too small, need 1.29333pt more!
 
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1124.
+(caption)                particular \caption on input line 1125.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (4.44955pt too wide) in paragraph at lines 1123--1124
+Overfull \hbox (1.29333pt too wide) in paragraph at lines 1124--1125
  [][] 
  []
 
@@ -2466,16 +2466,16 @@ Overfull \hbox (4.44955pt too wide) in paragraph at lines 1123--1124
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-Package tabularray Warning: Table width is too small, need 4.44955pt more!
+Package tabularray Warning: Table width is too small, need 1.29333pt more!
 
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1149.
+(caption)                particular \caption on input line 1150.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (4.44955pt too wide) in paragraph at lines 1148--1149
+Overfull \hbox (1.29333pt too wide) in paragraph at lines 1149--1150
  [][] 
  []
 
@@ -2489,7 +2489,7 @@ Overfull \hbox (4.44955pt too wide) in paragraph at lines 1148--1149
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1174.
+(caption)                particular \caption on input line 1175.
 See the caption package documentation for explanation.
 
 > Step: init table outer spec.
@@ -2500,22 +2500,27 @@ See the caption package documentation for explanation.
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 
-Package tabularray Warning: Table width is too small, need 4.44955pt more!
+Package tabularray Warning: Table width is too small, need 1.29333pt more!
 
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1199.
+(caption)                particular \caption on input line 1200.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (4.44955pt too wide) in paragraph at lines 1198--1199
+Overfull \hbox (1.29333pt too wide) in paragraph at lines 1199--1200
  [][] 
  []
 
 
-Overfull \hbox (10.28055pt too wide) in paragraph at lines 1099--1202
+Overfull \hbox (10.69838pt too wide) in paragraph at lines 1100--1203
 []$[]$ 
+ []
+
+
+Overfull \hbox (31.14932pt too wide) in paragraph at lines 1060--1207
+[]|  $[]$ 
  []
 
 
@@ -2523,6 +2528,38 @@ Overfull \hbox (10.28055pt too wide) in paragraph at lines 1099--1202
 The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
 logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
 se' to disable this.
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(57.81621pt, 498.66258pt, 57.81621pt)
+* v-part:(T,H,B)=(65.04256pt, 689.4564pt, 40.47102pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=498.66258pt
+* \textheight=689.4564pt
+* \oddsidemargin=-14.45378pt
+* \evensidemargin=-14.45378pt
+* \topmargin=-62.22743pt
+* \headheight=30.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=20.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
 PGFPlots: reading {data/same_units/Bourden_Gauge_bar.csv}
 PGFPlots: reading {data/same_units/Pressure_Calibrator_bar.csv}
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
@@ -2539,12 +2576,12 @@ Missing character: There is no ; in font nullfont!
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2024/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/usr/local/t
 exlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-Overfull \hbox (66.01102pt too wide) in paragraph at lines 1216--1371
+Overfull \hbox (66.01102pt too wide) in paragraph at lines 1219--1375
 |  $[]$ 
  []
 
 
-Overfull \hbox (28.14932pt too wide) in paragraph at lines 1372--1387
+Overfull \hbox (28.14932pt too wide) in paragraph at lines 1376--1391
  |  $[]$ 
  []
 
@@ -2556,14 +2593,98 @@ isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-Overfull \hbox (66.01102pt too wide) in paragraph at lines 1398--1559
+Overfull \hbox (66.01102pt too wide) in paragraph at lines 1402--1563
 |  $[]$ 
  []
 
 
-Overfull \hbox (28.14932pt too wide) in paragraph at lines 1560--1575
+Overfull \hbox (28.14932pt too wide) in paragraph at lines 1564--1579
  |  $[]$ 
  []
+
+PGFPlots: reading {data/same_units/Bundenburg_Gauge_bar.csv}
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+Overfull \hbox (66.01102pt too wide) in paragraph at lines 1589--1750
+|  $[]$ 
+ []
+
+
+Overfull \hbox (28.14932pt too wide) in paragraph at lines 1751--1766
+ |  $[]$ 
+ []
+
+
+
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(57.81621pt, 498.66258pt, 57.81621pt)
+* v-part:(T,H,B)=(88.89178pt, 656.21173pt, 49.86647pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=498.66258pt
+* \textheight=656.21173pt
+* \oddsidemargin=-14.45378pt
+* \evensidemargin=-14.45378pt
+* \topmargin=-38.3782pt
+* \headheight=30.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=20.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+PGFPlots: reading {data/same_units/Hg_Glass_bar.csv}
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+
+Overfull \hbox (66.01102pt too wide) in paragraph at lines 1778--1939
+|  $[]$ 
+ []
+
+
+Overfull \hbox (28.14932pt too wide) in paragraph at lines 1940--1955
+ |  $[]$ 
+ []
+
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+> Step: build the whole table.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1976.
+See the caption package documentation for explanation.
 
 
 
@@ -2586,7 +2707,7 @@ The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
 logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
 se' to disable this.
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
-592.
+994.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
@@ -2594,8 +2715,8 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 15
-94.
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 19
+96.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
@@ -2617,18 +2738,18 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 73982 strings out of 473201
- 1823678 string characters out of 5716126
- 2860999 words of memory out of 5000000
- 96103 multiletter control sequences out of 15000+600000
- 639308 words of font info for 322 fonts, out of 8000000 for 9000
+ 74118 strings out of 473201
+ 1828096 string characters out of 5716126
+ 2861998 words of memory out of 5000000
+ 96235 multiletter control sequences out of 15000+600000
+ 640757 words of font info for 325 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  88i,23n,120p,1073b,2556s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol5.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><
 /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></us
 r/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on figures/main-figure4.pdf (1 page, 48944 bytes).
+Output written on figures/main-figure4.pdf (1 page, 49149 bytes).
 PDF statistics:
  41 PDF objects out of 1000 (max. 8388607)
  26 compressed objects within 1 object stream

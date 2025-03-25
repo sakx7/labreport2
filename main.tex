@@ -469,56 +469,99 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 
 	\newpage
 	\subsection{How the instruments work}
+	adding freddie stuff tmmrw
+	\newpage\newgeometry{left=0.8in,right=0.8in,top=1.23in,bottom=0.69in}
 	
-	\newpage
-	
-	\subsection{Pressure Units}\label{Pressure Units}
-The SI unit for pressure is the \textbf{Pascal (Pa)}, which is equivalent to \textbf{N/m\textsuperscript{2}} (Newton per square meter). Commonly used pressure units include \textbf{bar}, \textbf{psi} (pound per square inch), and \textbf{atm} (atmosphere). Below is a table of standard pressure units and their conversion factors:
+\subsection{Pressure Units}\label{Pressure Units}
 
-\begin{table}[ht]
-	\centering
-	\begin{tabular}{lcccccc}
-		\toprule
-		\textbf{Unit} & \textbf{Pa} & \textbf{bar} & \textbf{psi} & \textbf{atm} & \textbf{cm Hg} \\
-		\midrule
-		Pa            & 1           & $1 \times 10^{-5}$ & $1.450 \times 10^{-4}$ & $9.869 \times 10^{-6}$ & $0.00750062$ \\
-		bar           & $1 \times 10^{5}$ & 1            & 14.5038      & 0.986923     & 75.0062 \\
-		psi           & 6894.76     & 0.0689476    & 1            & 0.068046     & 51.7149 \\
-		atm           & 101325      & 1.01325      & 14.6959      & 1            & 76.0032 \\ 
-		cm Hg         & 1333.22     & 0.013332     & 0.19337      & 0.013158     & 1 \\
-		\bottomrule
-	\end{tabular}
-	\caption{Standard Pressure Unit Conversions}
-	\label{tab:pressure_conversions}
-\end{table}
-\vspace{-2em}
-\subsubsection{Pascal (Pa)}
-The Pascal (Pa) is the SI unit of pressure, named after the French mathematician and physicist Blaise Pascal. It is defined as one Newton per square meter (\si{\newton\per\square\meter}). As a relatively small unit, the Pascal is commonly used in scientific fields such as laboratory research or atmospheric studies.
-\subsubsection{Atmosphere (atm)}
-The atmosphere (atm) is a unit of pressure defined as the average atmospheric pressure at sea level on Earth. Were \[1\,\text{atm}\approx101\, 325\,\text{Pa}\]
-The atmosphere is commonly used in chemistry and physics to describe gas pressures, especially in contexts like gas laws (e.g., Boyle's Law and Charles's Law), as well as in scuba diving to describe underwater pressures. It is used for convenience, providing a standardized unit for atmospheric pressure in various scientific and engineering applications.
-\subsubsection{Bar (bar)}
-The bar is a metric unit of pressure, though it is not part of the International System of Units (SI). It is defined as \[1\,\text{bar}=100\, 000\,\text{Pa}\] 
-This exact by definition. However, the relationship between bar and atm involves a small fractional difference due to the empirical value of standard atmospheric pressure, it is very close, specifically $$1\,\text{bar}\approx0.986923\,\text{atm}$$ Which is just 1.3077\% off. The bar is commonly used in meteorology, engineering, and industrial applications, as it provides a convenient scale for measuring pressures near atmospheric pressure.
-\subsubsection{Pound per Square Inch (psi)}
-The pound per square inch (psi) is a unit of pressure primarily used in the United States and other countries that follow the Imperial system. It is defined as the pressure exerted by one pound-force applied to an area of one square inch. PSI is widely used in automotive, mechanical engineering, and hydraulic systems, such as measuring tire pressure.\\[1em]
-The conversion factor between psi and Pascal is given as:
-\[1 \, \text{psi} = 6894.76 \, \text{Pa}.\]
-This conversion is derived from the definition of the pound-force (lbf) and the inch.\\
-One \textbf{pound-force (lbf)} is defined as the force required to accelerate a mass of one pound under the influence of gravity. In the metric system, 1 pound-force is approximately equivalent to 4.44822 Newtons (N). This is based on the following formulation:
-\[1\,\text{lbf}=1\,\text{lb}\times g\]
-\[1 \, \text{lbf} = 0.453592 \, \text{kg} \times 9.80665 \, \text{m/s}^2 = 4.44822 \, \text{N}.\]
-The force of one pound-force is applied over an area of one square inch. One square inch is defined as:
-\[1 \, \text{inch}^2 = 0.00064516 \, \text{m}^2.\]
-Thus, the conversion from psi to Pascal is calculated by dividing the force in Newtons by the area in square meters:
-\[1 \, \text{psi} = \frac{4.44822 \, \text{N}}{0.00064516 \, \text{m}^2} \approx 6894.76 \, \text{Pa}.\]
-This precise conversion reflects the accurate definitions of the pound-force and the inch, with the result ensuring consistent and reliable unit conversion between the Imperial and SI systems.
+% Define custom colors
+\definecolor{customteal}{RGB}{0,128,128}   % Teal
+\definecolor{custommaroon}{RGB}{128,0,0}   % Maroon
+\definecolor{customindigo}{RGB}{75,0,130}  % Indigo
+\definecolor{customcyan}{RGB}{0,255,255}   % Cyan
+\definecolor{customolive}{RGB}{128,128,0}  % Olive
 
 
+\begin{formal}{customteal}{customteal!3!white}
+	\vspace{-1em}\subsubsection{Pascal}	
+	The Pascal (Pa) is the SI unit of pressure, named after the French mathematician and physicist Blaise Pascal. It is defined as one Newton per square meter (\si{\newton\per\square\meter}). 
+	\[1\,\text{Pa}=1\,\text{kN}\ \text{m}^{-2}\]
+	As a relatively small unit, the Pascal is commonly used in scientific fields such as laboratory research or atmospheric studies.
+\end{formal}
 
+\begin{formal}{custommaroon}{custommaroon!3!white}
+	\vspace{-1em}\subsubsection{Atmosphere}
+	The atmosphere (atm) is a unit of pressure defined as the average atmospheric pressure at sea level on Earth. Were \[1\,\text{atm}\approx101\, 325\,\text{Pa}\]
+	The atmosphere is commonly used in chemistry and physics to describe gas pressures, especially in contexts like gas laws (e.g., Boyle's Law and Charles's Law), as well as in scuba diving to describe underwater pressures. It is used for convenience, providing a standardized unit for atmospheric pressure in various scientific and engineering applications.
+\end{formal}
+
+\begin{formal}{customindigo}{customindigo!3!white}
+	\vspace{-1em}\subsubsection{Bar}
+	The bar is a metric unit of pressure, though it is not part of the International System of Units (SI). It is defined as \[1\,\text{bar}=100\, 000\,\text{Pa}\] 
+	This exact by definition. However, the relationship between bar and atm involves a small fractional difference due to the empirical value of standard atmospheric pressure, it is very close, specifically $$1\,\text{bar}\approx0.986923\,\text{atm}$$ Which is just 1.013\% off. The bar is commonly used in meteorology, engineering, and industrial applications, as it provides a convenient scale for measuring pressures near atmospheric pressure.
+\end{formal}
+
+\begin{formal}{customcyan!50!black}{customcyan!3!white}
+	\vspace{-1em}\subsubsection{Pound per Square Inch}
+	The pound per square inch (psi) is a unit of pressure primarily used in the United States and other countries that follow the Imperial system. It is defined as the pressure exerted by one pound-force applied to an area of one square inch. PSI is widely used in automotive, mechanical engineering, and hydraulic systems, such as measuring tire pressure.\\[8pt]
+	The conversion factor between psi and Pascal is given as:
+	\[1 \, \text{psi} = 6894.76 \, \text{Pa}.\]
+	This conversion is derived from the definition of the pound-force (lbf) and the inch.\\
+	One \textbf{pound-force (lbf)} is defined as the force required to accelerate a mass of one pound under the influence of gravity. In the metric system, 1 pound-force is approximately equivalent to 4.44822 Newtons (N). This is based on the following formulation:
+	\[1\,\text{lbf}=1\,\text{lb}\times g\]
+	\[1 \, \text{lbf} = 0.453592 \, \text{kg} \times 9.80665 \, \text{m/s}^2 = 4.44822 \, \text{N}.\]
+	The force of one pound-force is applied over an area of one square inch. One square inch is defined as:
+	\[1 \, \text{inch}^2 = 0.00064516 \, \text{m}^2.\]
+	Thus, the conversion from psi to Pascal is calculated by dividing the force in Newtons by the area in square meters:
+	\[1 \, \text{psi} = \frac{4.44822 \, \text{N}}{0.00064516 \, \text{m}^2} \approx 6894.76 \, \text{Pa}.\]
+	This precise conversion reflects the accurate definitions of the pound-force and the inch, with the result ensuring consistent and reliable unit conversion between the Imperial and SI systems.
+\end{formal}
+\begin{formal}{customolive}{customolive!3!white}
+	\vspace{-1em}\subsubsection{Millimeters of Mercury}
+	The millimeter of mercury (mmHg) is a unit of pressure historically based on the height of a mercury column that exerts a given pressure. It is commonly used in medical and scientific applications, particularly in measuring blood pressure and vacuum pressures.\\[8pt]
+	It is defined as:
+	\[1\,\text{mmHg} = 133.322\,\text{Pa}\]
+	\begin{minipage}{0.9\textwidth}		
+	This conversion is derived from the hydrostatic pressure equation:\\
+	\[P = \rho g h\]
+	\begin{itemize}[itemsep=-1mm]
+		\item \(\rho : \text{Density of mercury}\, (13.5951 \, \text{g/cm}^3)\)
+		\item \(g : \text{Gravitational acceleration}\, (9.80665 \, \text{m/s}^2)\)
+		\item \(h : \text{Height}\, (\text{mm},\, \text{interchangeable})\).	
+	\end{itemize}
+	\end{minipage}\hspace{-7em}
+	\begin{minipage}{0.2\textwidth}\vspace{-2em}
+		$$\frac{g}{cm^3} \times \frac{m}{s^2} \times mm$$
+		$$g\frac{m}{s^2} \times\frac{mm}{cm^3}$$
+		$$10^{-3}N \times10^{3}m^{-2}$$
+		$$N m^{-2} = \text{Pa}$$
+	\end{minipage}\\[8pt]
+	Although mmHg is not an SI unit, it remains widely used in medicine (e.g., blood pressure readings of 120/80 mmHg) and laboratory sciences for its convenience in low-pressure measurements.
+\end{formal}
+
+\noindent This allows us to create a conclusive table demonstrating the conversion of all these units to one another by straightforward alterations and calculations. The final table is as follows:
+
+	\begin{center}
+		\begin{tblr}{		
+					colspec={Q[2.3cm]Q[2.3cm]Q[2.3cm]Q[2.3cm]Q[2.3cm]Q[2.3cm]}, 
+					hlines, vlines,
+					cells={valign=m, halign=c},
+					rows={ht=2\baselineskip},
+					row{1}={ht=2\baselineskip, font=\bfseries,bg=black!10!white},
+					column{1}={font=\bfseries,bg=black!10!white}
+			}
+			\SetCell{bg=black!40!white,fg=white}\textbf{Unit} & \textbf{Pa} & \textbf{bar} & \textbf{psi} & \textbf{atm} & \textbf{cm Hg} \\
+			Pa & 1& $1 \times 10^{-5}$ & $1.450 \times 10^{-4}$&$9.869 \times 10^{-6}$ & $0.00750062$ \\
+			bar& $1 \times 10^{5}$ & 1& 14.5038& 0.986923    &75.0062 \\
+			psi & 6894.76 & 0.0689476&1& 0.068046&51.7149 \\
+			atm& 101325&1.01325&14.6959& 1 & 76.0032 \\ 
+			cm Hg&1333.22&0.013332&0.19337& 0.013158 & 1 \\
+		\end{tblr}
+	\end{center}	
+	\captionof{table}{Standard Pressure Unit Conversions}
 	
-	
-	\newpage	
+
+	\newpage\restoregeometry
 	\section{Data, Calculations and Results}
 	In this section, we will present the calculations and results derived from the dataset collected during the experiment, as detailed in the \textbf{Method \& Experimental Procedures} section \ref{Method_Experimental_Procedures}. The primary objective is to analyze the data, identify trends, and generate additional information that will help us draw meaningful conclusions. To start, I will first describe the baseline data, which was recorded in the table provided for the lab (Figure \ref{fig:pressurestable}).
 	
@@ -1331,10 +1374,10 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 				at={(1.02,0.5)},
 				rotate=-90, 
 			},
-			xtick={-0.1,-0.2,-0.3,-0.4,-0.5,-0.6,-0.7,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8}, 
+			xtick={-0.1,-0.2,-0.3,-0.4,-0.5,-0.6,-0.7,-0.8,0.1,0.2,0.3,0.4,0.5,0.6}, 
 			ytick={-0.1,-0.2,-0.3,-0.4,-0.5,-0.6,0.1,0.2,0.3,0.4,0.5,0.6},
-			xmin=-0.8, xmax=0.7, 
-			ymax=0.7, ymin=-0.5,
+			xmin=-0.8, xmax=0.6, 
+			ymax=0.6, ymin=-0.5,
 			font=\small,
 			tick label style={font=\tiny},
 			label style={font=\footnotesize},
@@ -1369,7 +1412,8 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 			] {x};
 			\legend{Positive Data, Negative Data, Combined Fit}
 		\end{axis}
-	\end{tikzpicture}	\end{minipage}
+	\end{tikzpicture}	
+\end{minipage}
 	\end{minipage}\vspace{-0.4em}
 	\begin{center}
 		\hspace*{-2em}
@@ -1517,10 +1561,10 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 						at={(1.02,0.5)},
 						rotate=-90, 
 					},
-					xtick={-0.1,-0.2,-0.3,-0.4,-0.5,-0.6,-0.7,0.1,0.2,0.3,0.4,0.5,0.6,0.7}, 
-					ytick={-0.1,-0.2,-0.3,-0.4,-0.5,-0.6,0.1,0.2,0.3,0.4,0.5,0.6},
-					xmin=-0.5, xmax=0.7, 
-					ymax=0.7, ymin=-0.5,
+					xtick={-0.1,-0.2,-0.3,-0.4,-0.5,-0.6,-0.7,0.1,0.2,0.3,0.4,0.5,0.6}, 
+					ytick={-0.1,-0.2,-0.3,-0.4,-0.5,0.1,0.2,0.3,0.4,0.5,0.6},
+					xmin=-0.5, xmax=0.6, 
+					ymax=0.6, ymin=-0.5,
 					font=\small,
 					tick label style={font=\tiny},
 					label style={font=\footnotesize},
