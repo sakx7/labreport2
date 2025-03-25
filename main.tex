@@ -195,6 +195,23 @@
 \usepackage{calc}
 \usepackage{datenumber}
 
+\usepackage{physics}
+\usepackage[outline]{contour}
+\usetikzlibrary{patterns,decorations.pathmorphing}
+\usetikzlibrary{arrows.meta}
+\tikzset{>=latex}
+\contourlength{1.1pt}
+
+\colorlet{mydarkblue}{blue!50!black}
+\colorlet{myred}{red!65!black}
+\colorlet{watercol}{blue!80!cyan!10!white}
+\colorlet{darkwatercol}{blue!80!cyan!20!white}
+\tikzstyle{piston}=[blue!50!black,top color=blue!30,bottom color=blue!50,middle color=blue!20,shading angle=0]
+\tikzstyle{water}=[draw=mydarkblue,top color=watercol!90,bottom color=watercol!90!black,shading angle=5]
+\tikzstyle{vertical water}=[water,
+top color=watercol!90!black!90,bottom color=watercol!90!black!90,middle color=watercol!80,shading angle=90]
+\def\tick#1#2{\draw[thick] (#1)++(#2:0.1) --++ (#2-180:0.2)}
+
 
 % Initialize counters
 \newcounter{deadlineyear}\setcounter{deadlineyear}{2025}
@@ -348,8 +365,6 @@ In this experiment, we calibrated and compared the performance of multiple press
 
 	\section{Theory}
 
-	\subsection{Pressure}
-
 When we talk about pressure, the first thing that comes to mind is its physical definition. It refers to the effect or various types of deflection when a force is applied to a surface.\vspace{-0.5em}
 \begin{center}
 	\begin{minipage}{0.45\textwidth}
@@ -364,8 +379,7 @@ When we talk about pressure, the first thing that comes to mind is its physical 
 				\item \( F \) = Force applied (N, Newton)
 				\item \( A \) = Surface area (m\(^2\))
 			\end{itemize}
-		}\\[1em]\raggedright
-		"Pressure is the force per unit area exerted normal to the surface."
+		}
 	\end{minipage}
 	\hfil
 	\begin{minipage}{0.45\textwidth}
@@ -374,17 +388,150 @@ When we talk about pressure, the first thing that comes to mind is its physical 
 		\captionof{figure}{Illustration of pressure application}
 		\label{fig:pressure}
 \end{minipage}\end{center}
-The type of deflection caused by pressure depends on its magnitude and the duration of application. Pressure has numerous examples and applications, such as vehicle tires and press machines.\\[1em]
-The most effective way to estimate applied pressure is by measuring its effects, for example, by observing changes in the dimensions of an elastic object or the height of a liquid column, as shown in the following image.
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.5\textwidth]{images/Piezometer.jpg}
-	\caption{Pressure measurement using a liquid column}
-	\label{fig:piezometer}
-\end{figure}
-\noindent
-Pressure is categorized into two main groups: \textbf{gauge pressure} and \textbf{absolute pressure}, explained in the following diagram.
-\subsection{Absolute Pressure}
+The type of deflection caused by pressure depends on its magnitude and the duration of application. Pressure has numerous examples and applications, such as vehicle tires and press machines.\\[8pt]
+Pressure measurement fundamentally relies on observing its physical effects on measurable systems. The accompanying figures demonstrate three classical approaches:\\[8pt]
+\begin{minipage}{1\textwidth}
+\begin{minipage}{0.3\textwidth}\centering
+\begin{tikzpicture}[scale=1.3,transform shape]
+	\def\Rx{1.0}
+	\def\Ry{0.05*\Rx}
+	\def\rx{0.18*\Rx}
+	\def\ry{0.06*\rx}
+	\def\H{1.0}
+	\def\h{0.72*\H}   % water level height
+	\def\th{2.7*\H}   % tube height
+	\def\ty{0.95*\th} % tube level
+	\def\td{0.6*\h}   % tube depth
+	\def\N{14}
+	
+	% WATER + CONTAINER
+	\draw[vertical water] %rounded corners=2
+	(-\Rx,\h) --++ (0,-\h) arc(180:360:{\Rx} and {\Ry}) --++ (0,\h);
+	\draw[water]
+	(0,\h) ellipse ({\Rx} and {\Ry});
+	\draw[thick] (0,\H) ellipse ({\Rx} and {\Ry});
+	
+	% TUBE
+	\draw[vertical water]
+	(-\rx,\h) |-++ (2*\rx,\ty) --++ (0,-\ty);
+	\draw[water]
+	(0,\h+\ty) ellipse ({\rx} and {\ry});
+	\draw[thick,line cap=round]
+	(-\rx,\h) --++ (0,\th) coordinate (T) arc(180:0:\rx) --++ (0,-\th);
+	\draw[mydarkblue,line cap=round]
+	(-1.09*\rx,\h-0.005) arc(180:360:{1.09*\rx} and 1.12*\ry);
+	\foreach \i [evaluate={\y=1.12*\H+0.84*\th*\i/\N}] in {0,...,\N}{
+		\draw[line cap=round] (\rx,\y) arc(0:-50:{\rx} and \ry);
+	}
+	\begin{scope}
+		\clip (-\Rx,\h) |-++ (2*\Rx,-\h) --++ (0,\h) arc(360:180:{\Rx} and {\Ry}) -- cycle;
+		\draw[thick,line cap=round]
+		(-\rx,\h) --++ (0,-\td) (\rx,\h) --++ (0,-\td);
+		%(-\rx,\h) --++ (0,-\td) arc(180:360:{\rx} and {\ry}) --++ (0,\td);
+		\draw[vertical water,opacity=0.5]
+		(-\Rx,\h) --++ (0,-\h) arc(180:360:{\Rx} and {\Ry}) --++ (0,\h);
+	\end{scope}
+	\draw[mydarkblue]
+	(-\Rx,\h) arc(180:360:{\Rx} and {\Ry});
+	\draw[<->] (0.6*\Rx,\h) --++ (0,\ty) node[midway,fill=white,inner sep=1] {$h$};
+	\draw[very thin,line cap=round]
+	(T)++(130:\rx) node[anchor=-19,inner sep=1] {$P=0$} to[out=-50,in=170]++ (-30:1.5*\rx);
+	\node[above] at (-0.6*\Rx,\H) {$P_\mathrm{atm}$};
+	
+	% CONTAINER
+	\draw[thick]
+	(-\Rx,\H) --++ (0,-\H) arc(180:360:{\Rx} and {\Ry})
+	--++ (0,\H) arc(360:180:{\Rx} and {\Ry}) -- cycle;
+	
+\end{tikzpicture}
+\captionof{figure}{Torricelli's method}
+\end{minipage}\hfill
+\vspace{1.5em}\begin{minipage}{0.3\textwidth}\centering\hspace*{-2.7em}
+\begin{tikzpicture}[scale=1.4,transform shape]
+	\def\W{0.8}       % pressure box height
+	\def\H{0.7}       % pressure box height
+	\def\Rx{0.55}     % tube bend radius horizontal
+	\def\Ry{0.2*\Rx}  % tube bend radius vertical
+	\def\rx{0.28*\Rx} % tube radius horizontal
+	\def\ry{0.28*\Ry} % tube radius vertical
+	\def\HL{1.3}      % tube height left
+	\def\HR{2.2}      % stube height right
+	\def\hL{0.40*\HL} % water level height left
+	\def\hR{0.95*\HR} % water level height right
+	%\def\th{2.7*\H}   % tube height
+	%\def\ty{0.93*\th} % tube level
+	\def\N{14}
+	
+	% WATER + CONTAINER
+	\draw[water]
+	(-\Rx,\hL) --++ (0,-\hL) arc(180:360:\Rx) --++ (0,\hR) --++ (2*\rx,0) --++
+	(0,-\hR) arc(360:180:\Rx+2*\rx) --++ (0,\hL);
+	\draw[water]
+	(-\Rx-\rx,\hL) ellipse({\rx} and {\ry})
+	(\Rx+\rx,\hR) ellipse({\rx} and {\ry});
+	\draw[thick]
+	(-\Rx,\HL) --++ (0,-\HL) arc(180:360:\Rx) --++ (0,\HR) coordinate (T) arc(180:0:\rx)
+	--++ (0,-\HR) arc(360:180:\Rx+2*\rx) --++ (0,\HL);
+	\draw[thick]
+	(-\Rx-\rx,\HL) ellipse({\rx} and {\ry});
+	\foreach \i [evaluate={\y=(\hL+\hR)/2+0.8*\HR*(\i-\N/2)/\N;}] in {0,...,\N}{
+		\draw[line cap=round] (\Rx+2*\rx+0.007,\y) arc(0:-50:{\rx} and \ry);
+	}
+	%\draw[line cap=round,myred] (\Rx+2*\rx+0.007,{(\hL+\hR)/2}) arc(0:-70:{\rx} and \ry);
+	\draw[line cap=round,myred] (-\Rx+0.007,\hL+\hR-\HR-\rx) arc(0:-70:{\rx} and \ry);
+	\node at (-\W/2-2*\rx-\Rx,\HL+1.7*\rx) {$P_\mathrm{atm}$};
+	\draw[very thin,line cap=round]
+	(T)++(130:\rx) node[anchor=-19,inner sep=1] {$P=0$} to[out=-50,in=170]++ (-30:1.5*\rx);
+	\draw[dashed] (-\Rx,\hL) --++ (1.3*\Rx,0) (\Rx,\hR) --++ (-1.3*\Rx,0);
+	\draw[<->] (0,\hL) -- (0,\hR) node[midway,fill=white,inner sep=1] {$h$};
+\end{tikzpicture}
+\vspace{0.3em}
+\captionof{figure}{Open manometers}
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}\centering\vspace{-0.9em}
+\begin{tikzpicture}[scale=1.4,transform shape]
+	\def\W{0.8}       % pressure box height
+	\def\H{0.7}       % pressure box height
+	\def\Rx{0.55}     % tube bend radius horizontal
+	\def\Ry{0.2*\Rx}  % tube bend radius vertical
+	\def\rx{0.28*\Rx} % tube radius horizontal
+	\def\ry{0.28*\Ry} % tube radius vertical
+	\def\HL{1.3}      % tube height left
+	\def\HR{2.2}      % stube height right
+	\def\hL{0.40*\HL} % water level height left
+	\def\hR{0.80*\HR} % water level height right
+	%\def\th{2.7*\H}   % tube height
+	%\def\ty{0.93*\th} % tube level
+	\def\N{14}
+	\draw[water]
+	(-\Rx,\hL) --++ (0,-\hL) arc(180:360:\Rx) --++ (0,\hR) --++ (2*\rx,0) --++
+	(0,-\hR) arc(360:180:\Rx+2*\rx) --++ (0,\hL);
+	\draw[water]
+	(-\Rx-\rx,\hL) ellipse({\rx} and {\ry})
+	(\Rx+\rx,\hR) ellipse({\rx} and {\ry});
+	\draw[thick]
+	(-\Rx,\HL) --++ (0,-\HL) arc(180:360:\Rx) --++ (0,\HR) arc(180:0:{\rx} and \ry)
+	--++ (0,-\HR) arc(360:180:\Rx+2*\rx) --++ (0,\HL)
+	arc(0:90:\rx) --++ (-\rx,0) --++ (0,0.7*\rx-\H/2) -|++ (-\W,\H) -|++ (\W,0.7*\rx-\H/2)
+	--++ (2*\rx,0) arc(90:0:2*\rx) -- cycle;
+	\draw[thick]
+	(\Rx+\rx,\HR) ellipse({\rx} and \ry);
+	\foreach \i [evaluate={\y=(\hL+\hR)/2+0.8*\HR*(\i-\N/2)/\N;}] in {0,...,\N}{
+		\draw[line cap=round] (\Rx+2*\rx+0.007,\y) arc(0:-50:{\rx} and \ry);
+	}
+	\draw[line cap=round,myred] (\Rx+2*\rx+0.007,{(\hL+\hR)/2}) arc(0:-70:{\rx} and \ry);
+	\draw[line cap=round,myred] (-\Rx+0.007,{(\hL+\hR)/2}) arc(0:-70:{\rx} and \ry);
+	\node at (-\W/2-4*\rx-\Rx,\HL+1.7*\rx) {$P$};
+	\node[above=2] at (\Rx+\rx,\HR+\ry) {$P_\mathrm{atm}$};
+	\draw[dashed] (-\Rx,\hL) --++ (1.3*\Rx,0) (\Rx,\hR) --++ (-1.3*\Rx,0);
+	\draw[<->] (0,\hL) -- (0,\hR) node[midway,fill=white,inner sep=1] {$h$};
+\end{tikzpicture}
+\vspace{0.2em}\captionof{figure}{Sealed manometers}
+\end{minipage}
+\end{minipage}\\[-1em]
+Each technique quantifies pressure by correlating it with dimensional changes - either in liquid column elevation or elastic element deformation. The choice between methods depends on required precision, pressure range, and whether absolute or differential measurements are needed.
+Pressure is categorized into two main groups:
+\vspace{-1em} \subsection{Absolute Pressure}
 Absolute pressure, or absolute zero pressure, is the lowest possible pressure measurable. Consequently, all measured pressures are positive in comparison to this reference point. Achieving absolute zero pressure is practically impossible unless calculated or represented through an extremely accurate curve.
 \subsection{Gauge Pressure}
 Gauge pressure, also known as relative pressure, is measured relative to local atmospheric pressure. Since we live under constant atmospheric pressure, it is often convenient to measure the difference between actual pressure and atmospheric pressure, which is referred to as gauge pressure. This measurement is commonly used in industrial applications.
@@ -413,7 +560,51 @@ The following diagram illustrates the definitions of pressure more clearly.
 
 \newpage
 \subsection{Devices and Mechanisms}
-adding freddie stuff tmmrw
+
+\begin{formal}[(Brannan, n.d.)(InstTools, 2017)(ScienceDirect,n.d.), ]{black!50!white}{white}
+\vspace{-1em}
+\subsubsection{Bourdon Gauges}	
+A Bourdon gauge consists of a curled up tube, with one end closed and the other open to the system.\\[8pt] 
+As the pressure increases, the tube uncurls which can then be used to give a reading of pressure. The tube has been flattened, which causes the pressure exerted outwards to act on two opposing flat planes, making the tube straighten in a more predictable fashion.\\[8pt]
+The tip of the tube is connected to a linkage and a pivot, which is then connected to a movement (gearing system).\\[8pt]
+This mechanism measures the mechanical movement of the tube resulting from the force created by the pressure. As shown in Equation \ref{eq:pressure}, if the area remains constant, force and pressure are directly proportional. This means that with knowledge of the mechanical properties of the tube material and the force required to move it, you can accurately determine the fluid pressure in the tube.\\[8pt] 
+However, this requires the pressure to remain within certain boundaries. Excessive pressure could exceed the material's yield point, causing plastic deformation that would permanently damage the gauge and render it inaccurate.\vspace{-0.5em}
+\subsubsection*{Types of Bourdon Gauges}
+There are three main types of Bourdon gauges, each with different sensitivities and pressure ratings:
+
+\begin{itemize}
+	\item \textbf{C-Type:}\\[8pt]
+	\begin{minipage}{0.3\textwidth}\centering\hspace*{-1em}
+		\includegraphics[width=1.1\textwidth]{images/ezgif-42a6b97cab4453(2)}
+		\captionof{figure}{C-Type Bourdon gauge (Efunda, 2024)}
+	\end{minipage}\hfill
+	\begin{minipage}{0.6\textwidth}
+		The C-Type Bourdon gauge features a flattened metal tube formed into a C-shape, with approximately 6mm of tip movement. This simple design makes it the \textbf{least accurate} Bourdon type, as the small movement requires mechanical amplification through gears and linkages.\\[5pt]
+		These additional components can introduce inefficiencies and potential accuracy issues from loose or sticking parts.\\[5pt]
+		Consequently, C-Type gauges are best suited for general-purpose applications where high precision isn't critical.
+	\end{minipage}
+   \item \textbf{Spiral:}\\[8pt]
+	\begin{minipage}{0.3\textwidth}\centering
+			\includegraphics[width=1\textwidth]{images/ctype-ezgif.com-webp-to-jpg-converter.jpg}
+			\captionof{figure}{Spiral Bourdon gauge (InstTools, 2017)}
+	\end{minipage}\hfill
+	\begin{minipage}{0.6\textwidth}
+			This is similar to the C type bourdon gauge it follows the same principles of as pressure increases, it causes the coil to deform which can be measured and converted to a pressure reading.\\[5pt] Spiral gauges employ a coiled tube that provides 15-20mm of movement, three times more than C-types. This greater displacement eliminates the need for error-prone gear mechanisms.\\[8pt]
+			The enhanced sensitivity ($\pm0.5\%$ accuracy) comes at higher cost, but proves essential for laboratory instruments and precision process control where small pressure changes matter.
+	\end{minipage}\newpage
+		
+	\item \textbf{Helical:}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{images/helix-ezgif.com-webp-to-jpg-converter.jpg}
+		\caption{Helical-type Bourdon gauge  (InstTools, 2017)}
+		\label{fig:helical}
+	\end{figure}
+	
+	The helical structure offers variable sensitivity across different pressure ranges. More coils enable operation at higher pressures while maintaining accuracy. The tip motion decreases as pressure increases, allowing customization of the optimal working range by adjusting the number of coils. Like spiral gauges, helical types maintain good efficiency due to minimal moving parts.
+\end{itemize}
+\end{formal}
+
 \newpage\newgeometry{left=0.8in,right=0.8in,top=1.23in,bottom=0.69in}
 
 \subsection{Pressure Units}\label{Pressure Units}
@@ -2062,15 +2253,9 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 \end{tblr}
 \captionof{table}{Gradients of Best-Fit Equations for Different Gauges}
 \end{center}
-\lipsum[2]
 
 	\newpage
 	\section{Discussion of Results}
-	\lipsum[4]
-	\vspace{1em}
-	\lipsum[1]
-	\vspace{1em}
-	\lipsum[3]
 	
 	
 	\newpage\vspace*{-30pt}
@@ -2084,7 +2269,11 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 	
 	\section{References}	
 	\begin{enumerate}
-		\item Hodgkinson, J.A. et al. (2020). \textit{Accuracy of blood-pressure monitors owned by patients with hypertension (ACCU-RATE study): a cross-sectional, observational study in central England}. British Journal of General Practice, [online] 70(697), pp.e548–e554. Available at: \url{https://bjgp.org/content/70/697/e548.}
+		\item Hodgkinson, J.A. et al. (2020). \textit{Accuracy of blood-pressure monitors owned by patients with hypertension (ACCU-RATE study): a cross-sectional, observational study in central England}. British Journal of General Practice, [online] 70(697), pp.e548–e554. Available at: \url{https://bjgp.org/content/70/697/e548}.
+		\item Efunda (2024). \textit{eFunda: Introduction to Bourdon Tubes}. [online] Available at: \url{https://www.efunda.com/designstandards/sensors/bourdon_tubes/bourdon_intro.cfm}.
+		\item InstTools (2017). \textit{Types of Bourdon Tube}. [online] Instrumentation Tools. Available at: \url{https://instrumentationtools.com/types-of-bourdon-tube/}.
+		\item ScienceDirect (n.d.). \textit{Bourdon Gauge - an overview | ScienceDirect Topics}. [online] Available at: \url{https://www.sciencedirect.com/topics/engineering/bourdon-gauge}.
+		‌\item Brannan (n.d.). \textit{Pressure gauges - bourdon tubes}. [online] Available at: \url{https://www.brannan.co.uk/knowledge_base/pressure-gauges-bourdon-tubes/}.
 	\end{enumerate}
 	‌	
 	\newpage\vspace*{-30pt}
