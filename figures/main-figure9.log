@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  25 MAR 2025 16:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  25 MAR 2025 17:11
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2050,33 +2050,32 @@ Overfull \hbox (1.55896pt too wide) in paragraph at lines 397--405
  | $[]$ 
  []
 
-The command '\includegraphics [width=0.6\textwidth ]{images/pressure_force26526
-41600190961771.png}' has been optimized away. Use '/tikz/external/optimize=fals
-e' to disable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 410.
+(caption)                particular \caption on input line 430.
 See the caption package documentation for explanation.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 469.
+(caption)                particular \caption on input line 489.
 See the caption package documentation for explanation.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 511.
+(caption)                particular \caption on input line 531.
 See the caption package documentation for explanation.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 551.
+(caption)                particular \caption on input line 571.
 See the caption package documentation for explanation.
 
 
@@ -2085,12 +2084,12 @@ The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
 logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
 se' to disable this.
 
-Underfull \hbox (badness 10000) in paragraph at lines 562--564
+Underfull \hbox (badness 10000) in paragraph at lines 582--584
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 567--569
+Underfull \hbox (badness 10000) in paragraph at lines 587--589
 
  []
 
@@ -2103,14 +2102,14 @@ The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
 logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
 se' to disable this.
 
-LaTeX Warning: Reference `eq:pressure' on page 9 undefined on input line 592.
+LaTeX Warning: Reference `eq:pressure' on page 9 undefined on input line 612.
 
 The command '\includegraphics [width=1.1\textwidth ]{images/ezgif-42a6b97cab445
 3(2)}' has been optimized away. Use '/tikz/external/optimize=false' to disable 
 this.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 601.
+(caption)                particular \caption on input line 621.
 See the caption package documentation for explanation.
 
 The command '\includegraphics [width=1\textwidth ]{images/ctype-ezgif.com-webp-
@@ -2118,7 +2117,7 @@ to-jpg-converter.jpg}' has been optimized away. Use '/tikz/external/optimize=fa
 lse' to disable this.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 611.
+(caption)                particular \caption on input line 631.
 See the caption package documentation for explanation.
 
 The command '\includegraphics [width=0.5\textwidth ]{images/helix-ezgif.com-web
@@ -2166,8 +2165,26 @@ se' to disable this.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+> Step: build the whole table.
 
-Underfull \hbox (badness 10000) in paragraph at lines 679--680
+Package caption Warning: \setcaptiontype
+(caption)                outside box or environment on input line 672.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 672.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 712--713
 
  []
 
@@ -2179,7 +2196,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 694.
+ used on input line 727.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2193,37 +2210,14 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
 logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
 se' to disable this.
-> Step: init table outer spec.
-> Step: parse table options.
-> Step: split table.
-> Step: init table inner spec.
-> Step: parse table inner spec.
-> Step: execute table commands.
-> Step: calculate cell and line sizes.
-> Step: build the whole table.
-
-Package caption Warning: \setcaptiontype
-(caption)                outside box or environment on input line 717.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 717.
-See the caption package documentation for explanation.
-
-
-
-The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
-logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
-se' to disable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 The command '\includegraphics [width=1\textwidth ,cfbox=gray!15 1pt]{images/tab
 leland-1_page-0001.jpg}' has been optimized away. Use '/tikz/external/optimize=
 false' to disable this.
 
-LaTeX Warning: Reference `fig:pressurestable' on page 14 undefined on input lin
-e 755.
+LaTeX Warning: Reference `fig:pressurestable' on page 13 undefined on input lin
+e 767.
 
 
 
@@ -2263,7 +2257,7 @@ se' to disable this.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Trying to load font information for OT1+phv on input line 7
-64.
+76.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 )
@@ -2272,12 +2266,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-LaTeX Warning: Reference `fig:DPI-603' on page 15 undefined on input line 764.
+LaTeX Warning: Reference `fig:DPI-603' on page 14 undefined on input line 776.
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--795
+Underfull \hbox (badness 10000) in paragraph at lines 771--807
 
  []
 
@@ -2286,29 +2280,29 @@ been optimized away. Use '/tikz/external/optimize=false' to disable this.
 The command '\includegraphics [width=1.2\textwidth ]{images/Image(6).jpg}' has 
 been optimized away. Use '/tikz/external/optimize=false' to disable this.
 
-Overfull \hbox (395.35896pt too wide) in paragraph at lines 809--810
+Overfull \hbox (395.35896pt too wide) in paragraph at lines 821--822
  [][] 
  []
 
 The command '\includegraphics [width=0.55\textwidth ]{images/Image(2).jpg}' has
  been optimized away. Use '/tikz/external/optimize=false' to disable this.
 
-Overfull \hbox (10.79993pt too wide) in paragraph at lines 806--815
+Overfull \hbox (10.79993pt too wide) in paragraph at lines 818--827
 [] $[]$ 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 817.
+(caption)                particular \caption on input line 829.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:pressure_measurement_bench' on page 15 undefined 
-on input line 817.
+LaTeX Warning: Reference `fig:pressure_measurement_bench' on page 14 undefined 
+on input line 829.
 
 
-LaTeX Warning: Reference `fig:pressurestable' on page 15 undefined on input lin
-e 821.
+LaTeX Warning: Reference `fig:pressurestable' on page 14 undefined on input lin
+e 833.
 
 
 
@@ -2325,11 +2319,11 @@ se' to disable this.
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 860.
+(caption)                particular \caption on input line 872.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (9.11815pt too wide) in paragraph at lines 838--862
+Overfull \hbox (9.11815pt too wide) in paragraph at lines 850--874
 []|  $[]$ 
  []
 
@@ -2346,11 +2340,11 @@ Package tabularray Warning: Table width is too small, need 2.68292pt more!
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 897.
+(caption)                particular \caption on input line 909.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (2.68292pt too wide) in paragraph at lines 896--897
+Overfull \hbox (2.68292pt too wide) in paragraph at lines 908--909
  [][] 
  []
 
@@ -2367,11 +2361,11 @@ Package tabularray Warning: Table width is too small, need 2.68292pt more!
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 922.
+(caption)                particular \caption on input line 934.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (2.68292pt too wide) in paragraph at lines 921--922
+Overfull \hbox (2.68292pt too wide) in paragraph at lines 933--934
  [][] 
  []
 
@@ -2388,11 +2382,11 @@ Package tabularray Warning: Table width is too small, need 2.68292pt more!
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 947.
+(caption)                particular \caption on input line 959.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (2.68292pt too wide) in paragraph at lines 946--947
+Overfull \hbox (2.68292pt too wide) in paragraph at lines 958--959
  [][] 
  []
 
@@ -2409,16 +2403,16 @@ Package tabularray Warning: Table width is too small, need 2.68292pt more!
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 972.
+(caption)                particular \caption on input line 984.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (2.68292pt too wide) in paragraph at lines 971--972
+Overfull \hbox (2.68292pt too wide) in paragraph at lines 983--984
  [][] 
  []
 
 
-Overfull \hbox (10.28055pt too wide) in paragraph at lines 872--975
+Overfull \hbox (10.28055pt too wide) in paragraph at lines 884--987
 []$[]$ 
  []
 
@@ -2432,11 +2426,11 @@ Overfull \hbox (10.28055pt too wide) in paragraph at lines 872--975
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1005.
+(caption)                particular \caption on input line 1017.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (9.11815pt too wide) in paragraph at lines 983--1007
+Overfull \hbox (9.11815pt too wide) in paragraph at lines 995--1019
 []|  $[]$ 
  []
 
@@ -2453,11 +2447,11 @@ Package tabularray Warning: Table width is too small, need 4.44955pt more!
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1042.
+(caption)                particular \caption on input line 1054.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (4.44955pt too wide) in paragraph at lines 1041--1042
+Overfull \hbox (4.44955pt too wide) in paragraph at lines 1053--1054
  [][] 
  []
 
@@ -2474,11 +2468,11 @@ Package tabularray Warning: Table width is too small, need 4.44955pt more!
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1067.
+(caption)                particular \caption on input line 1079.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (4.44955pt too wide) in paragraph at lines 1066--1067
+Overfull \hbox (4.44955pt too wide) in paragraph at lines 1078--1079
  [][] 
  []
 
@@ -2492,7 +2486,7 @@ Overfull \hbox (4.44955pt too wide) in paragraph at lines 1066--1067
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1092.
+(caption)                particular \caption on input line 1104.
 See the caption package documentation for explanation.
 
 > Step: init table outer spec.
@@ -2508,16 +2502,16 @@ Package tabularray Warning: Table width is too small, need 4.44955pt more!
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1117.
+(caption)                particular \caption on input line 1129.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (4.44955pt too wide) in paragraph at lines 1116--1117
+Overfull \hbox (4.44955pt too wide) in paragraph at lines 1128--1129
  [][] 
  []
 
 
-Overfull \hbox (10.28055pt too wide) in paragraph at lines 1017--1120
+Overfull \hbox (10.28055pt too wide) in paragraph at lines 1029--1132
 []$[]$ 
  []
 
@@ -2527,7 +2521,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1123.
+ used on input line 1135.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2537,12 +2531,12 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
 
-LaTeX Warning: Reference `fig:pressurestable' on page 17 undefined on input lin
-e 1125.
+LaTeX Warning: Reference `fig:pressurestable' on page 16 undefined on input lin
+e 1137.
 
 
-LaTeX Warning: Reference `Pressure Units' on page 17 undefined on input line 11
-26.
+LaTeX Warning: Reference `Pressure Units' on page 16 undefined on input line 11
+38.
 
 > Step: init table outer spec.
 > Step: parse table options.
@@ -2561,7 +2555,7 @@ LaTeX Warning: Reference `Pressure Units' on page 17 undefined on input line 11
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
 
-Overfull \hbox (14.28003pt too wide) in paragraph at lines 1140--1187
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 1152--1199
  []|  $[]$ 
  []
 
@@ -2582,7 +2576,7 @@ Overfull \hbox (14.28003pt too wide) in paragraph at lines 1140--1187
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
 
-Overfull \hbox (14.28003pt too wide) in paragraph at lines 1196--1243
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 1208--1255
  []|  $[]$ 
  []
 
@@ -2603,7 +2597,7 @@ Overfull \hbox (14.28003pt too wide) in paragraph at lines 1196--1243
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
 
-Overfull \hbox (14.28003pt too wide) in paragraph at lines 1255--1302
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 1267--1314
  []|  $[]$ 
  []
 
@@ -2624,7 +2618,7 @@ Overfull \hbox (14.28003pt too wide) in paragraph at lines 1255--1302
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
 
-Overfull \hbox (14.28003pt too wide) in paragraph at lines 1311--1358
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 1323--1370
  []|  $[]$ 
  []
 
@@ -2634,7 +2628,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1360.
+ used on input line 1372.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2653,11 +2647,11 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1389.
+(caption)                particular \caption on input line 1401.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (9.9724pt too wide) in paragraph at lines 1367--1391
+Overfull \hbox (9.9724pt too wide) in paragraph at lines 1379--1403
 []|  $[]$ 
  []
 
@@ -2674,11 +2668,11 @@ Package tabularray Warning: Table width is too small, need 1.29333pt more!
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1426.
+(caption)                particular \caption on input line 1438.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (1.29333pt too wide) in paragraph at lines 1425--1426
+Overfull \hbox (1.29333pt too wide) in paragraph at lines 1437--1438
  [][] 
  []
 
@@ -2695,11 +2689,11 @@ Package tabularray Warning: Table width is too small, need 1.29333pt more!
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1451.
+(caption)                particular \caption on input line 1463.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (1.29333pt too wide) in paragraph at lines 1450--1451
+Overfull \hbox (1.29333pt too wide) in paragraph at lines 1462--1463
  [][] 
  []
 
@@ -2713,7 +2707,7 @@ Overfull \hbox (1.29333pt too wide) in paragraph at lines 1450--1451
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1476.
+(caption)                particular \caption on input line 1488.
 See the caption package documentation for explanation.
 
 > Step: init table outer spec.
@@ -2729,21 +2723,21 @@ Package tabularray Warning: Table width is too small, need 1.29333pt more!
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1501.
+(caption)                particular \caption on input line 1513.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (1.29333pt too wide) in paragraph at lines 1500--1501
+Overfull \hbox (1.29333pt too wide) in paragraph at lines 1512--1513
  [][] 
  []
 
 
-Overfull \hbox (10.69838pt too wide) in paragraph at lines 1401--1504
+Overfull \hbox (10.69838pt too wide) in paragraph at lines 1413--1516
 []$[]$ 
  []
 
 
-Overfull \hbox (28.14932pt too wide) in paragraph at lines 1361--1508
+Overfull \hbox (28.14932pt too wide) in paragraph at lines 1373--1520
 []|  $[]$ 
  []
 
@@ -2756,12 +2750,12 @@ isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-Overfull \hbox (66.01102pt too wide) in paragraph at lines 1520--1676
+Overfull \hbox (66.01102pt too wide) in paragraph at lines 1532--1688
 |  $[]$ 
  []
 
 
-Overfull \hbox (28.14932pt too wide) in paragraph at lines 1677--1692
+Overfull \hbox (28.14932pt too wide) in paragraph at lines 1689--1704
  |  $[]$ 
  []
 
@@ -2803,26 +2797,25 @@ se' to disable this.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 PGFPlots: reading {data/same_units/Bourden_Gauge_2_bar.csv}
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
 \openout4 = `figures/main-figure9.dpth'.
 
 Missing character: There is no ; in font nullfont!
-[19
+[18
 
 \providecommand \oddpage@label [2]{}
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
-al/texlive/2024/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/usr/local/t
-exlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}]
+al/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}]
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-Overfull \hbox (66.01102pt too wide) in paragraph at lines 1703--1864
+Overfull \hbox (66.01102pt too wide) in paragraph at lines 1715--1876
 |  $[]$ 
  []
 
 
-Overfull \hbox (28.14932pt too wide) in paragraph at lines 1865--1880
+Overfull \hbox (28.14932pt too wide) in paragraph at lines 1877--1892
  |  $[]$ 
  []
 
@@ -2834,12 +2827,12 @@ isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-Overfull \hbox (66.01102pt too wide) in paragraph at lines 1890--2051
+Overfull \hbox (66.01102pt too wide) in paragraph at lines 1902--2063
 |  $[]$ 
  []
 
 
-Overfull \hbox (28.14932pt too wide) in paragraph at lines 2052--2067
+Overfull \hbox (28.14932pt too wide) in paragraph at lines 2064--2079
  |  $[]$ 
  []
 
@@ -2851,12 +2844,12 @@ isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-Overfull \hbox (66.01102pt too wide) in paragraph at lines 2077--2238
+Overfull \hbox (66.01102pt too wide) in paragraph at lines 2089--2250
 |  $[]$ 
  []
 
 
-Overfull \hbox (28.14932pt too wide) in paragraph at lines 2239--2254
+Overfull \hbox (28.14932pt too wide) in paragraph at lines 2251--2266
  |  $[]$ 
  []
 
@@ -2875,7 +2868,7 @@ se' to disable this.
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 2275.
+(caption)                particular \caption on input line 2287.
 See the caption package documentation for explanation.
 
 
@@ -2899,7 +2892,7 @@ The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
 logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
 se' to disable this.
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 2
-293.
+305.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
@@ -2907,8 +2900,8 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 22
-97.
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 23
+09.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
@@ -2930,21 +2923,20 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 78431 strings out of 473201
- 1942733 string characters out of 5716126
- 3098302 words of memory out of 5000000
- 100427 multiletter control sequences out of 15000+600000
+ 78415 strings out of 473201
+ 1942405 string characters out of 5716126
+ 3096496 words of memory out of 5000000
+ 100412 multiletter control sequences out of 15000+600000
  642659 words of font info for 335 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,23n,120p,1073b,2568s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol5.pfb
-></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><
-/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></us
-r/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on figures/main-figure9.pdf (1 page, 49331 bytes).
+ 102i,23n,120p,1073b,2558s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb>
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></u
+sr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on figures/main-figure9.pdf (1 page, 36578 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 75 PDF objects out of 1000 (max. 8388607)
+ 34 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
  61090 words of extra memory for PDF output out of 61914 (max. 10000000)
 

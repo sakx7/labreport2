@@ -24,7 +24,7 @@
 \usepackage{amsmath, amssymb, amscd, MnSymbol, mathrsfs}
 \usepackage{cellspace}
 \usepackage{tikz}
-\usetikzlibrary{calc, patterns, angles, quotes, decorations.markings, decorations.pathmorphing, hobby}
+\usetikzlibrary{calc,3d, patterns, angles, quotes, decorations.markings, decorations.pathmorphing, hobby}
 \usepackage{xfrac}
 
 \usepackage{chemfig}
@@ -376,7 +376,7 @@ In this experiment, we calibrated and compared the performance of multiple press
 
 	\section{Introduction}
 	In engineering and scientific applications, pressure measurement is essential, playing a critical role in fields such as fluid dynamics, meteorology, and industrial control. Over time, pressure-measuring instruments have evolved, from early liquid column manometers to modern mechanical and digital gauges, each designed to provide accurate measurements under varying conditions.\\[1em]
-	A key distinction in pressure measurement is between \textbf{absolute} and \textbf{gauge} pressure \footnote{\textbf{Differential} pressure i decided to redact in the context of our lab though it would be among this list}.\\ 
+	A key distinction in pressure measurement is between \textbf{absolute} and \textbf{gauge} pressure.\\ 
 	Absolute pressure is measured relative to a vacuum, while gauge pressure is measured relative to atmospheric pressure. This distinction influences the design and function of pressure-measuring devices.\\[1em]
 	Historically, the invention of the Bourdon gauge by Eugène Bourdon in 1849 marked a significant advancement in pressure measurement. It provided a robust and reliable means of monitoring pressure in industrial settings, where durability and consistency were paramount. On the other hand, liquid column manometers, particularly those using mercury, have been essential in laboratory settings due to their precision in measuring small pressure differences.\\[1em]
 	Despite the advantages of different pressure-measuring devices, each has limitations, such as calibration errors and environmental influences.\\[1em]
@@ -389,29 +389,62 @@ In this experiment, we calibrated and compared the performance of multiple press
 
 When we talk about pressure, the first thing that comes to mind is its physical definition. It refers to the effect or various types of deflection when a force is applied to a surface.\vspace{-0.5em}
 \begin{center}
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\begin{equation}
-			P = \frac{F}{A}
-			\label{eq:pressure}
-		\end{equation}
+	\begin{minipage}{0.51\textwidth}
+		\centering\hspace{-3em}
+		\begin{minipage}{0.45\textwidth}
+			\begin{equation}
+				P = \frac{F}{A}
+				\label{eq:pressure}
+			\end{equation}
+		\end{minipage}\,,\hspace{0.3em}
+		\begin{minipage}{0.45\textwidth}
+			\vspace{-0.6em}
+			\begin{equation}
+				P_{\text{local}} = \frac{dF}{dA}
+				\label{eq:localpressure}
+			\end{equation}	
+		\end{minipage}\\[1em]
 		\hspace*{2em}\wm{0.9}{
 			\begin{itemize}[itemsep=-1mm]
 				\item \( P \) = Pressure (Pa, Pascal)
 				\item \( F \) = Force applied (N, Newton)
 				\item \( A \) = Surface area (m\(^2\))
 			\end{itemize}
-		}
+		}\\[9pt]\raggedright
+		Local pressure \( P_{\text{local}}\) varies spatially. It peaks under concentrated loads (red zone) and vanishes at free edges (blue zone).\\[5pt] 
+		Critical for analyzing stress concentrations in engineering designs.
 	\end{minipage}
-	\hfil
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.6\textwidth]{images/pressure_force2652641600190961771.png}\vspace{-1.6em}
+	\hfill
+	\begin{minipage}{0.46\textwidth}
+		\vspace{-1.2em}\centering\hspace*{2.5em}
+		\begin{tikzpicture}[scale=2,transform shape]
+			\coordinate (c1) at (1,0,1);
+			\coordinate (c2) at (-1,0,1);
+			\coordinate (c3) at (-1,0,-1);
+			\coordinate (c4) at (1,0,-1);
+			\fill[blue!70!black] (c1) -- (c2) -- (c3) -- (c4) -- cycle;
+			\begin{scope}
+				\clip (c1) -- (c2) -- (c3) -- (c4) -- cycle;
+				\begin{scope}[canvas is xz plane at y=0]
+					\shade[inner color=red, outer color=blue!70!black, shading=radial] 
+					(0,0) circle (1.36cm);
+					\shade[inner color=red, outer color=blue!70!black, shading=radial] 
+					(0,0) circle (1.2cm);
+				\end{scope}
+			\end{scope}
+			\draw[thick] (c1) -- (c2) -- (c3) -- (c4) -- cycle;
+			\draw[thick,-{Latex[scale=1.5,length=2mm,width=2mm]},line width=0.1mm] (0,1,0) node[above,right=1] {\large $\vec{F}$} -- (0,0,0);
+			\draw[thick,<->] (1.05,-0.05,1.05) -- (-1.05,-0.05,1.05) node[midway,below=1.1] {\tiny$L_x$};
+			\draw[thick,<->] (1.05,-0.05,1.05) -- (1.05,-0.05,-1.05) node[midway,right=1.1] {\tiny$L_x$};
+			\node at (1.05,-0.05,1.05) [below] {$A$};
+		\end{tikzpicture}
+		\vspace{-1em}
 		\captionof{figure}{Illustration of pressure application}
-		\label{fig:pressure}
+		\label{fig:pressure}\raggedright
+		\vspace{1em}Average pressure assumes uniform distribution. Local pressure reveals real-world stress hotspots.
 \end{minipage}\end{center}
 The type of deflection caused by pressure depends on its magnitude and the duration of application. Pressure has numerous examples and applications, such as vehicle tires and press machines.\\[8pt]
-Pressure measurement fundamentally relies on observing its physical effects on measurable systems. The accompanying figures demonstrate three classical approaches:\\[8pt]
+Pressure measurement fundamentally relies on observing its physical effects on measurable systems. The accompanying figures demonstrate three classical approaches:\\[1em]
 \begin{minipage}{1\textwidth}
 \begin{minipage}{0.3\textwidth}\centering
 \begin{tikzpicture}[scale=1.3,transform shape]
@@ -550,16 +583,18 @@ Pressure measurement fundamentally relies on observing its physical effects on m
 \end{tikzpicture}
 \vspace{0.2em}\captionof{figure}{Sealed manometers}
 \end{minipage}
-\end{minipage}\\[-1em]
+\end{minipage}\\[-0.6em]
 Each technique quantifies pressure by correlating it with dimensional changes - either in liquid column elevation or elastic element deformation. The choice between methods depends on required precision, pressure range, and whether absolute or differential measurements are needed.
-Pressure is categorized into two main groups:
-\vspace{-1em} \subsection{Absolute Pressure}
-Absolute pressure, or absolute zero pressure, is the lowest possible pressure measurable. Consequently, all measured pressures are positive in comparison to this reference point. Achieving absolute zero pressure is practically impossible unless calculated or represented through an extremely accurate curve.
+Pressure is categorized into two main groups:\\
+\begin{minipage}{0.49\textwidth}
+\subsection{Absolute Pressure}
+Absolute pressure, or absolute zero pressure, is the lowest possible pressure measurable. Consequently, all measured pressures are positive in comparison to this reference point. Achieving absolute zero pressure is practically impossible unless calculated or represented through an extremely accurate curve.\end{minipage}\hfill
+\begin{minipage}{0.49\textwidth}
 \subsection{Gauge Pressure}
-Gauge pressure, also known as relative pressure, is measured relative to local atmospheric pressure. Since we live under constant atmospheric pressure, it is often convenient to measure the difference between actual pressure and atmospheric pressure, which is referred to as gauge pressure. This measurement is commonly used in industrial applications.
-
+Gauge pressure, also known as relative pressure, is measured relative to local atmospheric pressure. Since we live under constant atmospheric pressure, it is often convenient to measure the difference between actual pressure and atmospheric pressure, which is referred to as gauge pressure. This measurement is commonly used in industrial applications.\end{minipage}
 \newpage
-\noindent It is important to note that:\\[-5pt]
+
+It is important to note that:\\[-5pt]
 \begin{itemize}
 	\item Any pressure between local atmospheric pressure and absolute zero pressure is called \textbf{vacuum pressure}.
 	\item Any pressure higher than local atmospheric pressure is considered \textbf{positive pressure}.
@@ -574,7 +609,7 @@ The relationship between absolute and gauge pressure is given by:\\[0.5em]
 The following diagram illustrates the definitions of pressure more clearly.	
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.95\textwidth]{images/Pressure Diagram.jpg}
+	\includegraphics[width=0.8\textwidth]{images/Pressure Diagram.jpg}
 	\caption{Pressure categories and their relationships}
 	\label{fig:pressure_diagram}
 \end{figure}
@@ -642,7 +677,7 @@ There are three main types of Bourdon gauges, each with different sensitivities 
 			font=\bfseries,bg=black!5!white},
 			column{1}={font=\bfseries,bg=black!5!white}
 		}
-		\SetCell{bg=black!20!white,fg=black}\textbf{Unit} & \textbf{Pa} & \textbf{bar} & \textbf{psi} & \textbf{atm} & \textbf{cm Hg} \\
+		\SetCell{bg=black!10!white,fg=black}\textbf{Unit} & \textbf{Pa} & \textbf{bar} & \textbf{psi} & \textbf{atm} & \textbf{cm Hg} \\
 		Pa & 1& $1 \times 10^{-5}$ & $1.450 \times 10^{-4}$&$9.869 \times 10^{-6}$ & $0.00750062$ \\
 		bar& $1 \times 10^{5}$ & 1& 14.5038& 0.986923    &75.0062 \\
 		psi & 6894.76 & 0.0689476&1& 0.068046&51.7149 \\
