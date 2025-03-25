@@ -177,7 +177,8 @@
 \usetikzlibrary{patterns.meta}
 
 \usepackage[para]{footmisc} % Example of making footnotes run together in a paragraph
-\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}  % Darker green
+
+\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
 
 \usepackage{datetime}
 
@@ -187,25 +188,73 @@
 \usepackage{etoolbox}
 
 \makeatletter
-\def\tagform@#1{\maketag@@@{{Eq.~#1}}} % Adds "Eq." and makes it bold
+\def\tagform@#1{\maketag@@@{{Eq.~#1}}} 
 \makeatother
-\usepackage{listings}
-\lstdefinestyle{mypythonstyle}{
-	language=Python,
-	basicstyle=\ttfamily,
-	showstringspaces=false,
-	breaklines=true,
-	commentstyle=\color{green!60!black},  % Softer gray for comments
-	stringstyle=\color{orange},  % Different color for strings
-	backgroundcolor=\color{gray!3},  % Light gray for background
-	tabsize=4,
-	belowcaptionskip=10pt, % Adjust space below caption
-	morekeywords={lambda}, % Add lambda to keywords
-	keywordstyle=\bfseries\color{pink!50!red},
-	keywordstyle=[2]\color{blue!80!black},  % Specific style for 'lambda'
-	morecomment=[l]{//},  % For inline comments
-	literate={~} {$\sim$}{1},  % Converts tilde to a symbol
+
+\usepackage{ifthen}
+\usepackage{calc}
+\usepackage{datenumber}
+
+
+% Initialize counters
+\newcounter{deadlineyear}\setcounter{deadlineyear}{2025}
+\newcounter{deadlinemonth}\setcounter{deadlinemonth}{4}
+\newcounter{deadlineday}\setcounter{deadlineday}{3}
+\newcounter{mydatenumber}  % Date conversion
+\newcounter{currentdate}   % Current date
+\newcounter{daysdiff}      % Days difference
+\newcounter{currenttime}   % Current minutes since midnight
+\newcounter{totalminutes}  % Total remaining minutes
+\newcounter{displaydays}   % Days to display
+\newcounter{remainingmins} % Remaining minutes after days
+\newcounter{displayhours}  % Hours to display
+\newcounter{displaymins}   % Minutes to display
+
+% Main calculation command
+\newcommand{\timeUntilDeadline}{%
+	% Calculate days between dates
+	\setmydatenumber{mydatenumber}{\thedeadlineyear}{\thedeadlinemonth}{\thedeadlineday}%
+	\setmydatenumber{currentdate}{\the\year}{\the\month}{\the\day}%
+	\setcounter{daysdiff}{\themydatenumber - \thecurrentdate}%
+	
+	% Get current time in minutes since midnight
+	\setcounter{currenttime}{\time}%
+	
+	% Calculate total remaining minutes
+	\setcounter{totalminutes}{\numexpr\thedaysdiff * 1440 - \thecurrenttime}%
+	
+	% Check deadline status
+	\ifnum\thetotalminutes < 0
+	\textbf{\color{red}Deadline passed!}%
+	\else
+	% Calculate time components
+	\setcounter{displaydays}{\thetotalminutes / 1440}%
+	\setcounter{remainingmins}{\numexpr\thetotalminutes - \thedisplaydays * 1440}%
+	\setcounter{displayhours}{\theremainingmins / 60}%
+	\setcounter{displaymins}{\numexpr\theremainingmins - \thedisplayhours * 60}%
+	
+	% Format output
+	\textbf{%
+		\ifnum\thedisplaydays > 0
+		\thedisplaydays\ day\ifnum\thedisplaydays > 1 s\fi%
+		\ifnum\thedisplayhours > 0
+		\ifnum\thedisplaymins > 0, \else\ and \fi%
+		\else
+		\ifnum\thedisplaymins > 0\ and \fi%
+		\fi%
+		\fi%
+		\ifnum\thedisplayhours > 0
+		\thedisplayhours\ hour\ifnum\thedisplayhours > 1 s\fi%
+		\ifnum\thedisplaymins > 0\ and \fi%
+		\fi%
+		\ifnum\thedisplaymins > 0
+		\thedisplaymins\ minute\ifnum\thedisplaymins > 1 s\fi%
+		\fi%
+		\ left}%
+	\fi
 }
+
+
 \begin{document}
 	
 	\vspace*{\fill}
@@ -233,6 +282,7 @@
 		\textbf{Key Dates:} & Date of practical: Wednesday 19$^{\text{th}}$ March, 2025 \\
 		& Deadline: Tuesday 3$^{\text{rd}}$ April, 2025 \\
 		& Last Updated: \today\, \currenttime\\
+		& Days left until deadline: \timeUntilDeadline \\
 	\end{tabular}
 	\vspace*{\fill}
 	
