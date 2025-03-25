@@ -606,14 +606,53 @@ The relationship between absolute and gauge pressure is given by:\\[0.5em]
 	\label{eq:absolute}
 \end{equation}\\
 \vspace{0.5em}
-The following diagram illustrates the definitions of pressure more clearly.	
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{images/Pressure Diagram.jpg}
-	\caption{Pressure categories and their relationships}
-	\label{fig:pressure_diagram}
-\end{figure}
+The following diagram illustrates the definitions of pressure more clearly.\\[8pt]	
 
+
+\begin{center}
+\begin{tikzpicture}[scale=2,transform shape]	
+	\def\floorx{5.5+2.5}
+	\def\lapx{2.6+1.8}
+	\def\twox{2.8+2}
+	\def\onex{\floorx-0.4}
+	
+	\def\floory{-0.1}    
+	\def\lapy{3+1}
+	\def\twoy{0.5*\lapy}
+	\def\oney{1.65*\lapy+0.5}
+	
+	\def\padding{0.7}
+	
+	\fill[bottom color=white, top color=gray] (0,0) rectangle (\floorx,\floory-0.08);
+	\draw[-,gray!80!black] (0,0) -- (\floorx,0);    
+	
+	\fill[bottom color=white, top color=blue!50!white] (0,\lapy) rectangle (\lapx,\lapy-0.15);
+	\draw[-,blue!50!white] (0,\lapy) -- (\lapx,\lapy);    
+	
+	\draw[-latex] (\lapx-0.2,\lapy) -- (\lapx-0.2,\twoy) node[midway,fill=white, inner sep=2pt, text=black] {\tiny\wm{0.1}{\textsf{Rel. Press.\\ of point 2}}};    
+	\draw[-latex] (\lapx-0.2,0) -- (\lapx-0.2,\twoy) node[midway,fill=white, inner sep=2pt, text=black] {\tiny\wm{0.1}{\textsf{Abs. Press.\\ of point 2}}};
+	
+	\draw[-] (\lapx-0.4,\twoy) -- (\twox+\padding,\twoy);
+	
+	\draw[latex-latex] (\twox+\padding,\twoy) -- (\twox+\padding,\oney) node[midway,fill=white, inner sep=2pt, text=black] {\tiny\wm{0.2}{\textsf{Differential. Press.\\ Between 1 \& 2}}};
+	
+	\node[circle,draw=black, fill=orange, inner sep=0pt,minimum size=7pt] (b) at (\twox,\twoy) {};
+	\node[above=1.4] at (\twox,\twoy) {\footnotesize \textsf{2}};
+	
+	\draw[-] (\onex,\oney) -- (\lapx-1,\oney);
+	\node[circle,draw=black, fill=green, inner sep=0pt,minimum size=7pt] (a) at (\onex,\oney) {};
+	\node[above=1.4] at (\onex,\oney) {\footnotesize \textsf{1}};  
+	\draw[latex-] (\lapx-0.6,\oney) -- (\lapx-0.6,\lapy) node[midway,fill=white, inner sep=2pt, text=black] {\tiny\wm{0.1}{\textsf{Rel. Press.\\ of point 2}}};   
+	
+	\draw[-latex] (\onex*2.4,0) -- (\onex*2.4,\oney) node[midway,fill=white, inner sep=2pt, text=black] {\tiny\wm{0.1}{\textsf{Abs. Press.\\ of point 1}}};
+	
+	\node[right] at (0,\lapy-0.4) {\footnotesize \textcolor{blue!70!white}{\textsf{Local Atmospheric Pressure}}};
+	
+	\node[right] at (0,\lapy*2.4) {\small\wm{0.2}{\textsf{Positive\\ Pressure}}};
+	\node[right] at (0,\lapy-\lapy) {\small\wm{0.2}{\textsf{Negative\\ Pressure\\ (Vacuum)}}};
+	\node[left=-0.2cm] at (\floorx*0.5,-0.5) {\wm{0.3}{\small\textsf{Absolute Zero Pressure}}};
+\end{tikzpicture}
+\end{center}
 
 \newpage
 \subsection{Devices and Mechanisms}
