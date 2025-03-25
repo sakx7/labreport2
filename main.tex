@@ -12,6 +12,7 @@
 \usepackage{enumitem}
 \usepackage{siunitx}
 \usepackage{lipsum}
+\usepackage[most]{tcolorbox}
 
 
 %\usepackage{showframe}
@@ -28,7 +29,6 @@
 
 \usepackage{chemfig}
 \usepackage{caption}
-\usepackage{tcolorbox}
 \usepackage{bm}
 \usepackage{pdfpages}
 \usepackage{empheq}
@@ -142,7 +142,7 @@
 \setlength{\cftbeforesecskip}{0.5em}
 
 
-\usepackage{xcolor}      % For color options
+
 \usepackage{hyperref}    % For hyperlinks
 \usepackage{xurl}        % For better URL handling
 \hypersetup{
@@ -152,7 +152,6 @@
 }
 
 
-\usepackage{xcolor}
 \definecolor{ChineseGold}{HTML}{C59401}
 \definecolor{AmericanGold}{HTML}{D3AF37}
 \definecolor{MetallicSunburst}{HTML}{A77C37}
@@ -175,15 +174,11 @@
 \usetikzlibrary{patterns}
 
 \usetikzlibrary{patterns.meta}
-
 \usepackage[para]{footmisc} % Example of making footnotes run together in a paragraph
 
 \definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
 
 \usepackage{datetime}
-
-\usepackage{xcolor}
-\usepackage{tcolorbox}
 
 \usepackage{etoolbox}
 
@@ -270,6 +265,33 @@ top color=watercol!90!black!90,bottom color=watercol!90!black!90,middle color=wa
 		\ left}%
 	\fi
 }
+
+\definecolor{mygreen}{HTML}{07a56d}
+
+\newtcbtheorem{briefillus}{Definiton}{
+	enhanced,
+	sharp corners,
+	attach boxed title to top left={
+		xshift=0pt, 
+		yshift=-\tcboxedtitleheight, 
+		yshifttext=-\tcboxedtitleheight/2-0.5em
+	},
+	colback=white,
+	colframe=black,
+	fonttitle=\bfseries,
+	coltitle=white,
+	boxed title style={
+		rounded corners,
+		arc=2pt,
+		size=small,
+		colback=black,
+		colframe=black,
+	},
+	leftrule=0pt, 
+	rightrule=0pt, 
+}{thm}
+
+
 
 
 \begin{document}
@@ -609,35 +631,46 @@ There are three main types of Bourdon gauges, each with different sensitivities 
 
 \subsection{Pressure Units}\label{Pressure Units}
 
-% Define custom colors
-\definecolor{customteal}{RGB}{0,128,128}   % Teal
-\definecolor{custommaroon}{RGB}{128,0,0}   % Maroon
-\definecolor{customindigo}{RGB}{75,0,130}  % Indigo
-\definecolor{customcyan}{RGB}{0,255,255}   % Cyan
-\definecolor{customolive}{RGB}{128,128,0}  % Olive
+
+\begin{center}
+	\begin{tblr}{
+			colspec={Q[2.3cm]Q[2.3cm]Q[2.3cm]Q[2.3cm]Q[2.3cm]Q[2.3cm]},
+			hlines, vlines, 
+			cells={valign=m, halign=c},
+			rows={ht=2\baselineskip},
+			row{1}={ht=2\baselineskip,
+			font=\bfseries,bg=black!5!white},
+			column{1}={font=\bfseries,bg=black!5!white}
+		}
+		\SetCell{bg=black!20!white,fg=black}\textbf{Unit} & \textbf{Pa} & \textbf{bar} & \textbf{psi} & \textbf{atm} & \textbf{cm Hg} \\
+		Pa & 1& $1 \times 10^{-5}$ & $1.450 \times 10^{-4}$&$9.869 \times 10^{-6}$ & $0.00750062$ \\
+		bar& $1 \times 10^{5}$ & 1& 14.5038& 0.986923    &75.0062 \\
+		psi & 6894.76 & 0.0689476&1& 0.068046&51.7149 \\
+		atm& 101325&1.01325&14.6959& 1 & 76.0032 \\ 
+		cm Hg&1333.22&0.013332&0.19337& 0.013158 & 1 \\
+	\end{tblr}
+\end{center}	\vspace{-1em}\captionof{table}{Standard Pressure Unit Conversions}
 
 
-\begin{formal}{customteal}{customteal!2!white}
-	\vspace{-1em}\subsubsection{Pascal}	
+\tikzexternaldisable
+
+\begin{briefillus}{Pascal}{}
 	The Pascal (Pa) is the SI unit of pressure, named after the French mathematician and physicist Blaise Pascal. It is defined as one Newton per square meter (\si{\newton\per\square\meter}). 
 	\[1\,\text{Pa}=1\,\text{kN}\ \text{m}^{-2}\]
 	As a relatively small unit, the Pascal is commonly used in scientific fields such as laboratory research or atmospheric studies.
-\end{formal}
+\end{briefillus}
 
-\begin{formal}{custommaroon}{custommaroon!2!white}
-	\vspace{-1em}\subsubsection{Atmosphere}
+\begin{briefillus}{Atmosphere}{}
 	The atmosphere (atm) is a unit of pressure defined as the average atmospheric pressure at sea level on Earth. Were \[1\,\text{atm}\approx101\, 325\,\text{Pa}\]
 	The atmosphere is commonly used in chemistry and physics to describe gas pressures, especially in contexts like gas laws (e.g., Boyle's Law and Charles's Law), as well as in scuba diving to describe underwater pressures. It is used for convenience, providing a standardized unit for atmospheric pressure in various scientific and engineering applications.
-\end{formal}
+\end{briefillus}
 
-\begin{formal}{customindigo}{customindigo!2!white}
-	\vspace{-1em}\subsubsection{Bar}
+\begin{briefillus}{Bar}{}
 	The bar is a metric unit of pressure, though it is not part of the International System of Units (SI). It is defined as \[1\,\text{bar}=100\, 000\,\text{Pa}\] 
 	This exact by definition. However, the relationship between bar and atm involves a small fractional difference due to the empirical value of standard atmospheric pressure, it is very close, specifically $$1\,\text{bar}\approx0.986923\,\text{atm}$$ Which is just 1.013\% off. The bar is commonly used in meteorology, engineering, and industrial applications, as it provides a convenient scale for measuring pressures near atmospheric pressure.
-\end{formal}
+\end{briefillus}
 
-\begin{formal}{customcyan!50!black}{customcyan!2!white}
-	\vspace{-1em}\subsubsection{Pound per Square Inch}
+\begin{briefillus}{Pound per square inch}{}
 	The pound per square inch (psi) is a unit of pressure primarily used in the United States and other countries that follow the Imperial system. It is defined as the pressure exerted by one pound-force applied to an area of one square inch. PSI is widely used in automotive, mechanical engineering, and hydraulic systems, such as measuring tire pressure.\\[8pt]
 	The conversion factor between psi and Pascal is given as:
 	\[1 \, \text{psi} = 6894.76 \, \text{Pa}.\]
@@ -650,9 +683,8 @@ There are three main types of Bourdon gauges, each with different sensitivities 
 	Thus, the conversion from psi to Pascal is calculated by dividing the force in Newtons by the area in square meters:
 	\[1 \, \text{psi} = \frac{4.44822 \, \text{N}}{0.00064516 \, \text{m}^2} \approx 6894.76 \, \text{Pa}.\]
 	This precise conversion reflects the accurate definitions of the pound-force and the inch, with the result ensuring consistent and reliable unit conversion between the Imperial and SI systems.
-\end{formal}
-\begin{formal}{customolive}{customolive!2!white}
-	\vspace{-1em}\subsubsection{Millimeters of Mercury}
+\end{briefillus}
+\begin{briefillus}{Millimeter of Mercury}{}
 	The millimeter of mercury (mmHg) is a unit of pressure historically based on the height of a mercury column that exerts a given pressure. It is commonly used in medical and scientific applications, particularly in measuring blood pressure and vacuum pressures.\\[8pt]
 	It is defined as:
 	\[1\,\text{mmHg} = 133.322\,\text{Pa}\]
@@ -672,28 +704,9 @@ There are three main types of Bourdon gauges, each with different sensitivities 
 		$$N m^{-2} = \text{Pa}$$
 	\end{minipage}\\[8pt]
 	Although mmHg is not an SI unit, it remains widely used in medicine (e.g., blood pressure readings of 120/80 mmHg) and laboratory sciences for its convenience in low-pressure measurements.
-\end{formal}
+\end{briefillus}
 
-\noindent This allows us to create a conclusive table demonstrating the conversion of all these units to one another by straightforward alterations and calculations. The final table is as follows:
-
-\begin{center}
-	\begin{tblr}{		
-			colspec={Q[2.3cm]Q[2.3cm]Q[2.3cm]Q[2.3cm]Q[2.3cm]Q[2.3cm]}, 
-			hlines, vlines,
-			cells={valign=m, halign=c},
-			rows={ht=2\baselineskip},
-			row{1}={ht=2\baselineskip, font=\bfseries,bg=black!10!white},
-			column{1}={font=\bfseries,bg=black!10!white}
-		}
-		\SetCell{bg=black!40!white,fg=white}\textbf{Unit} & \textbf{Pa} & \textbf{bar} & \textbf{psi} & \textbf{atm} & \textbf{cm Hg} \\
-		Pa & 1& $1 \times 10^{-5}$ & $1.450 \times 10^{-4}$&$9.869 \times 10^{-6}$ & $0.00750062$ \\
-		bar& $1 \times 10^{5}$ & 1& 14.5038& 0.986923    &75.0062 \\
-		psi & 6894.76 & 0.0689476&1& 0.068046&51.7149 \\
-		atm& 101325&1.01325&14.6959& 1 & 76.0032 \\ 
-		cm Hg&1333.22&0.013332&0.19337& 0.013158 & 1 \\
-	\end{tblr}
-\end{center}	
-\captionof{table}{Standard Pressure Unit Conversions}
+\tikzexternalenable
 
 	
 	\newpage\vspace*{-20pt}

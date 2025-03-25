@@ -6,11 +6,6 @@
 \contentsline {subsection}{\numberline {3.3}Devices and Mechanisms}{8}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Bourdon Gauges}{8}{subsubsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.4}Pressure Units}{10}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}Pascal}{10}{subsubsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.2}Atmosphere}{10}{subsubsection.3.4.2}%
-\contentsline {subsubsection}{\numberline {3.4.3}Bar}{10}{subsubsection.3.4.3}%
-\contentsline {subsubsection}{\numberline {3.4.4}Pound per Square Inch}{10}{subsubsection.3.4.4}%
-\contentsline {subsubsection}{\numberline {3.4.5}Millimeters of Mercury}{11}{subsubsection.3.4.5}%
 \contentsline {section}{\numberline {4}Method \& Experimental Procedures}{12}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Operating Procedure}{14}{subsection.4.1}%
 \contentsline {section}{\numberline {5}Data, Calculations and Results}{15}{section.5}%
