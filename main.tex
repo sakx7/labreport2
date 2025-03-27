@@ -1609,13 +1609,18 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 			label style={font=\footnotesize},
 			legend style={font=\tiny},
 			]
-			\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
-				\pgfplotstablegetelem{#1}{Positive}\of\instrumenttable
-				\edef\xvalue{\pgfplotsretval}
-				\pgfplotstablegetelem{#1}{Positive}\of\calibratortable
-				\edef\yvalue{\pgfplotsretval}
-				\addplot[only marks, mark=*, red] coordinates {(\xvalue, \yvalue)};
-			};
+						\edef\poscoords{}
+			\pgfplotsforeachungrouped \i in {0,1,...,9} {
+				\pgfplotstablegetelem{\i}{Positive}\of\instrumenttable
+				\edef\tempx{\pgfplotsretval}
+				\pgfplotstablegetelem{\i}{Positive}\of\calibratortable
+				\edef\tempy{\pgfplotsretval}
+				\edef\poscoords{\poscoords (\tempx,\tempy)}
+			}
+			% Plot all positive points at once
+			\addplot[only marks, mark=*, red] coordinates {\poscoords};
+			\addlegendentry{Positive Data}
+			
 			\addplot[
 			domain=0:0.7, 
 			samples=100,
@@ -1623,13 +1628,13 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 			opacity=0.6,
 			dashed,
 			] {1.0224*x + -0.0074};
+			\addlegendentry{Best Fit}
 			\addplot[
 			domain=0:0.6, 
 			samples=100,
 			color=black,
 			opacity=0.3,
 			] {x};
-			\legend{Positive Data,Best Fit}
 		\end{axis}
 	\end{tikzpicture}
 	\end{minipage}\hspace{1em}
@@ -1659,13 +1664,17 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 			label style={font=\footnotesize},
 			legend style={font=\tiny},
 			]
-			\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
-				\pgfplotstablegetelem{#1}{Negative}\of\instrumenttable
-				\edef\xvalue{\pgfplotsretval}
-				\pgfplotstablegetelem{#1}{Negative}\of\calibratortable
-				\edef\yvalue{\pgfplotsretval}
-				\addplot[only marks, mark=*, blue] coordinates {(\xvalue, \yvalue)};
-			};
+			\edef\negcoords{}
+			\pgfplotsforeachungrouped \i in {0,1,...,9} {
+				\pgfplotstablegetelem{\i}{Negative}\of\instrumenttable
+				\edef\tempx{\pgfplotsretval}
+				\pgfplotstablegetelem{\i}{Negative}\of\calibratortable
+				\edef\tempy{\pgfplotsretval}
+				\edef\negcoords{\negcoords (\tempx,\tempy)}
+			}
+			% Plot all negative points at once
+			\addplot[only marks, mark=*, blue] coordinates {\negcoords};
+			\addlegendentry{Negative Data}
 			\addplot[
 			domain=0:-0.75, 
 			samples=100,
@@ -1673,13 +1682,13 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 			opacity=0.6,
 			dashed,
 			] {0.5241*x + -0.0423};
+			\addlegendentry{Best Fit}
 			\addplot[
 			domain=0:-0.6, 
 			samples=100,
 			color=black,
 			opacity=0.3,
 			] {x};
-			\legend{Negative Data,Best Fit}
 		\end{axis}
 	\end{tikzpicture}
 	\end{minipage}\hspace{2em}\hspace{-1.7em}
@@ -1707,34 +1716,44 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 			label style={font=\footnotesize},
 			legend style={font=\tiny},
 			]
-			\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
-				\pgfplotstablegetelem{#1}{Positive}\of\instrumenttable
-				\edef\xvalue{\pgfplotsretval}
-				\pgfplotstablegetelem{#1}{Positive}\of\calibratortable
-				\edef\yvalue{\pgfplotsretval}
-				\addplot[only marks, mark=*, red] coordinates {(\xvalue, \yvalue)};
-			};
-			\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
-				\pgfplotstablegetelem{#1}{Negative}\of\instrumenttable
-				\edef\xvalue{\pgfplotsretval}
-				\pgfplotstablegetelem{#1}{Negative}\of\calibratortable
-				\edef\yvalue{\pgfplotsretval}
-				\addplot[only marks, mark=*, blue] coordinates {(\xvalue, \yvalue)};
-			};
+			\edef\negcoords{}
+			\pgfplotsforeachungrouped \i in {0,1,...,9} {
+				\pgfplotstablegetelem{\i}{Negative}\of\instrumenttable
+				\edef\tempx{\pgfplotsretval}
+				\pgfplotstablegetelem{\i}{Negative}\of\calibratortable
+				\edef\tempy{\pgfplotsretval}
+				\edef\negcoords{\negcoords (\tempx,\tempy)}
+			}
+			% Plot all negative points at once
+			\addplot[only marks, mark=*, blue] coordinates {\negcoords};
+			\addlegendentry{Negative Data}
+			
+			% Then collect all positive points
+			\edef\poscoords{}
+			\pgfplotsforeachungrouped \i in {0,1,...,9} {
+				\pgfplotstablegetelem{\i}{Positive}\of\instrumenttable
+				\edef\tempx{\pgfplotsretval}
+				\pgfplotstablegetelem{\i}{Positive}\of\calibratortable
+				\edef\tempy{\pgfplotsretval}
+				\edef\poscoords{\poscoords (\tempx,\tempy)}
+			}
+			% Plot all positive points at once
+			\addplot[only marks, mark=*, red] coordinates {\poscoords};
+			\addlegendentry{Positive Data}
+			
 			\addplot[
 			domain=-0.7:0.7, 
 			samples=100,
-			color=black,
-			opacity=0.6,
-			dashed,
+			color=green!80!black,
+			dashed,	
 			] {0.7554*x + 0.0496};
+			\addlegendentry{Cumaltive Fit}
 			\addplot[
 			domain=-0.6:0.6, 
 			samples=100,
 			color=black,
 			opacity=0.3,
 			] {x};
-			\legend{Positive Data, Negative Data, Combined Fit}
 		\end{axis}
 	\end{tikzpicture}	
 \end{minipage}
@@ -1792,15 +1811,18 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 					label style={font=\footnotesize},
 					legend style={font=\tiny},
 					]
-					\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
-						\pgfplotstablegetelem{#1}{Positive}\of\instrumenttabletwo
-						\edef\xvalue{\pgfplotsretval}
-						\pgfplotstablegetelem{#1}{Positive}\of\calibratortable
-						\edef\yvalue{\pgfplotsretval}
-						\addplot[only marks, mark=*, red] coordinates {(\xvalue, \yvalue)};
-					};
-
-
+					\edef\poscoords{}
+				\pgfplotsforeachungrouped \i in {0,1,...,9} {
+					\pgfplotstablegetelem{\i}{Positive}\of\instrumenttabletwo
+					\edef\tempx{\pgfplotsretval}
+					\pgfplotstablegetelem{\i}{Positive}\of\calibratortable
+					\edef\tempy{\pgfplotsretval}
+					\edef\poscoords{\poscoords (\tempx,\tempy)}
+				}
+				% Plot all positive points at once
+				\addplot[only marks, mark=*, red] coordinates {\poscoords};
+				\addlegendentry{Positive Data}
+				
 					\addplot[
 					domain=0:0.6, 
 					samples=100,
@@ -1808,13 +1830,13 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 					opacity=0.6,
 					dashed,
 					] {0.9462*x-0.0106};
+					\addlegendentry{Best Fit}
 					\addplot[
 					domain=0:0.6, 
 					samples=100,
 					color=black,
 					opacity=0.3,
 					] {x};
-					\legend{Positive Data,Best Fit}
 				\end{axis}			
 			\end{tikzpicture}
 		\end{minipage}\hspace{1em}
@@ -1844,13 +1866,17 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 					label style={font=\footnotesize},
 					legend style={font=\tiny},
 					]
-					\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
-						\pgfplotstablegetelem{#1}{Negative}\of\instrumenttabletwo
-						\edef\xvalue{\pgfplotsretval}
-						\pgfplotstablegetelem{#1}{Negative}\of\calibratortable
-						\edef\yvalue{\pgfplotsretval}
-						\addplot[only marks, mark=*, blue] coordinates {(\xvalue, \yvalue)};
-					};
+					\edef\negcoords{}
+					\pgfplotsforeachungrouped \i in {0,1,...,9} {
+						\pgfplotstablegetelem{\i}{Negative}\of\instrumenttabletwo
+						\edef\tempx{\pgfplotsretval}
+						\pgfplotstablegetelem{\i}{Negative}\of\calibratortable
+						\edef\tempy{\pgfplotsretval}
+						\edef\negcoords{\negcoords (\tempx,\tempy)}
+					}
+					% Plot all negative points at once
+					\addplot[only marks, mark=*, blue] coordinates {\negcoords};
+					\addlegendentry{Negative Data}
 
 
 					\addplot[
@@ -1860,13 +1886,13 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 					opacity=0.6,
 					dashed,
 					] {0.9509*x -0.0107};
+					\addlegendentry{Best Fit}
 					\addplot[
 					domain=0:-0.5, 
 					samples=100,
 					color=black,
 					opacity=0.3,
 					] {x};
-					\legend{Negative Data,Best Fit}
 				\end{axis}
 			\end{tikzpicture}
 		\end{minipage}\hspace{2em}\hspace{-1.7em}
@@ -1894,36 +1920,44 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 					label style={font=\footnotesize},
 					legend style={font=\tiny},
 					]
-					\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
-						\pgfplotstablegetelem{#1}{Negative}\of\instrumenttabletwo
-						\edef\xvalue{\pgfplotsretval}
-						\pgfplotstablegetelem{#1}{Negative}\of\calibratortable
-						\edef\yvalue{\pgfplotsretval}
-						\addplot[only marks, mark=*, blue] coordinates {(\xvalue, \yvalue)};
-					};
-					\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
-						\pgfplotstablegetelem{#1}{Positive}\of\instrumenttabletwo
-						\edef\xvalue{\pgfplotsretval}
-						\pgfplotstablegetelem{#1}{Positive}\of\calibratortable
-						\edef\yvalue{\pgfplotsretval}
-						\addplot[only marks, mark=*, red] coordinates {(\xvalue, \yvalue)};
-				};
-				
+					\edef\negcoords{}
+					\pgfplotsforeachungrouped \i in {0,1,...,9} {
+						\pgfplotstablegetelem{\i}{Negative}\of\instrumenttabletwo
+						\edef\tempx{\pgfplotsretval}
+						\pgfplotstablegetelem{\i}{Negative}\of\calibratortable
+						\edef\tempy{\pgfplotsretval}
+						\edef\negcoords{\negcoords (\tempx,\tempy)}
+					}
+					% Plot all negative points at once
+					\addplot[only marks, mark=*, blue] coordinates {\negcoords};
+					\addlegendentry{Negative Data}
+					
+					% Then collect all positive points
+					\edef\poscoords{}
+					\pgfplotsforeachungrouped \i in {0,1,...,9} {
+						\pgfplotstablegetelem{\i}{Positive}\of\instrumenttabletwo
+						\edef\tempx{\pgfplotsretval}
+						\pgfplotstablegetelem{\i}{Positive}\of\calibratortable
+						\edef\tempy{\pgfplotsretval}
+						\edef\poscoords{\poscoords (\tempx,\tempy)}
+					}
+					% Plot all positive points at once
+					\addplot[only marks, mark=*, red] coordinates {\poscoords};
+					\addlegendentry{Positive Data}
 
 					\addplot[
 					domain=-0.7:0.7, 
 					samples=100,
-					color=black,
-					opacity=0.6,
+					color=green!80!black,
 					dashed,
 					] {0.9483*x-0.0112};
+					\addlegendentry{Cumalitive Fit}
 					\addplot[
 					domain=-0.6:0.6, 
 					samples=100,
 					color=black,
 					opacity=0.3,
 					] {x};
-					\legend{Positive Data, Negative Data, Combined Fit}
 				\end{axis}
 		\end{tikzpicture}	\end{minipage}
 	\end{minipage}\vspace{-0.4em}
@@ -1979,15 +2013,19 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 				label style={font=\footnotesize},
 				legend style={font=\tiny},
 				]
-				\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
-					\pgfplotstablegetelem{#1}{Positive}\of\instrumenttablethree
-					\edef\xvalue{\pgfplotsretval}
-					\pgfplotstablegetelem{#1}{Positive}\of\calibratortable
-					\edef\yvalue{\pgfplotsretval}
-					\addplot[only marks, mark=*, red] coordinates {(\xvalue, \yvalue)};
-				};
-				
-				
+
+				\edef\poscoords{}
+				\pgfplotsforeachungrouped \i in {0,1,...,9} {
+					\pgfplotstablegetelem{\i}{Positive}\of\instrumenttablethree
+					\edef\tempx{\pgfplotsretval}
+					\pgfplotstablegetelem{\i}{Positive}\of\calibratortable
+					\edef\tempy{\pgfplotsretval}
+					\edef\poscoords{\poscoords (\tempx,\tempy)}
+				}
+				% Plot all positive points at once
+				\addplot[only marks, mark=*, red] coordinates {\poscoords};
+				\addlegendentry{Positive Data}
+
 				\addplot[
 				domain=0:0.6, 
 				samples=100,
@@ -1995,13 +2033,13 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 				opacity=0.6,
 				dashed,
 				] {0.9932*x + 0.0081};
+				\addlegendentry{Positive Data,Best Fit}
 				\addplot[
 				domain=0:0.6, 
 				samples=100,
 				color=black,
 				opacity=0.3,
 				] {x};
-				\legend{Positive Data,Best Fit}
 			\end{axis}			
 		\end{tikzpicture}
 	\end{minipage}\hspace{1em}
@@ -2031,13 +2069,17 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 				label style={font=\footnotesize},
 				legend style={font=\tiny},
 				]
-				\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
-					\pgfplotstablegetelem{#1}{Negative}\of\instrumenttablethree
-					\edef\xvalue{\pgfplotsretval}
-					\pgfplotstablegetelem{#1}{Negative}\of\calibratortable
-					\edef\yvalue{\pgfplotsretval}
-					\addplot[only marks, mark=*, blue] coordinates {(\xvalue, \yvalue)};
-				};
+				\edef\negcoords{}
+				\pgfplotsforeachungrouped \i in {0,1,...,9} {
+					\pgfplotstablegetelem{\i}{Negative}\of\instrumenttablethree
+					\edef\tempx{\pgfplotsretval}
+					\pgfplotstablegetelem{\i}{Negative}\of\calibratortable
+					\edef\tempy{\pgfplotsretval}
+					\edef\negcoords{\negcoords (\tempx,\tempy)}
+				}
+				% Plot all negative points at once
+				\addplot[only marks, mark=*, blue] coordinates {\negcoords};
+				\addlegendentry{Negative Data}
 				
 				
 				\addplot[
@@ -2046,7 +2088,8 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 				color=blue,
 				opacity=0.6,
 				dashed,
-				] { 0.9416*x + -0.0085};
+				] {0.9416*x-0.0085};
+				\addlegendentry{Best Fit}
 				\addplot[
 				domain=0:-0.5, 
 				samples=100,
@@ -2072,45 +2115,54 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 					at={(1.02,0.5)},
 					rotate=-90, 
 				},
-				xtick={-0.1,-0.2,-0.3,-0.4,-0.5,-0.6,-0.7,0.1,0.2,0.3,0.4,0.5,0.6,0.7}, 
+				xtick={-0.1,-0.2,-0.3,-0.4,-0.5,-0.6,-0.7,0.1,0.2,0.3,0.4,0.5,0.6}, 
 				ytick={-0.1,-0.2,-0.3,-0.4,-0.5,-0.6,0.1,0.2,0.3,0.4,0.5,0.6},
-				xmin=-0.5, xmax=0.7, 
-				ymax=0.7, ymin=-0.5,
+				xmin=-0.5, xmax=0.6, 
+				ymax=0.6, ymin=-0.5,
 				font=\small,
 				tick label style={font=\tiny},
 				label style={font=\footnotesize},
 				legend style={font=\tiny},
 				]
-				\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
-					\pgfplotstablegetelem{#1}{Negative}\of\instrumenttablethree
-					\edef\xvalue{\pgfplotsretval}
-					\pgfplotstablegetelem{#1}{Negative}\of\calibratortable
-					\edef\yvalue{\pgfplotsretval}
-					\addplot[only marks, mark=*, blue] coordinates {(\xvalue, \yvalue)};
-				};
-				\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
-					\pgfplotstablegetelem{#1}{Positive}\of\instrumenttablethree
-					\edef\xvalue{\pgfplotsretval}
-					\pgfplotstablegetelem{#1}{Positive}\of\calibratortable
-					\edef\yvalue{\pgfplotsretval}
-					\addplot[only marks, mark=*, red] coordinates {(\xvalue, \yvalue)};
-				};
+					\edef\negcoords{}
+\pgfplotsforeachungrouped \i in {0,1,...,9} {
+	\pgfplotstablegetelem{\i}{Negative}\of\instrumenttablethree
+	\edef\tempx{\pgfplotsretval}
+	\pgfplotstablegetelem{\i}{Negative}\of\calibratortable
+	\edef\tempy{\pgfplotsretval}
+	\edef\negcoords{\negcoords (\tempx,\tempy)}
+}
+% Plot all negative points at once
+\addplot[only marks, mark=*, blue] coordinates {\negcoords};
+\addlegendentry{Negative Data}
+
+% Then collect all positive points
+\edef\poscoords{}
+\pgfplotsforeachungrouped \i in {0,1,...,9} {
+	\pgfplotstablegetelem{\i}{Positive}\of\instrumenttablethree
+	\edef\tempx{\pgfplotsretval}
+	\pgfplotstablegetelem{\i}{Positive}\of\calibratortable
+	\edef\tempy{\pgfplotsretval}
+	\edef\poscoords{\poscoords (\tempx,\tempy)}
+}
+% Plot all positive points at once
+\addplot[only marks, mark=*, red] coordinates {\poscoords};
+\addlegendentry{Positive Data}
 				
 				
 				\addplot[
-				domain=-0.7:0.7, 
+				domain=-0.5:0.6, 
 				samples=100,
-				color=black,
-				opacity=0.6,
+				color=green!80!black,
 				dashed,
 				] {0.9941*x + 0.0057};
+				\addlegendentry{Cumalitive Fit}
 				\addplot[
-				domain=-0.6:0.6, 
+				domain=-0.5:0.6, 
 				samples=100,
 				color=black,
 				opacity=0.3,
 				] {x};
-				\legend{Positive Data, Negative Data, Combined Fit}
 			\end{axis}
 	\end{tikzpicture}	\end{minipage}
 \end{minipage}\vspace{-0.4em}
@@ -2166,14 +2218,17 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 				label style={font=\footnotesize},
 				legend style={font=\tiny},
 				]
-				\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
-					\pgfplotstablegetelem{#1}{Positive}\of\instrumenttablefour
-					\edef\xvalue{\pgfplotsretval}
-					\pgfplotstablegetelem{#1}{Positive}\of\calibratortable
-					\edef\yvalue{\pgfplotsretval}
-					\addplot[only marks, mark=*, red] coordinates {(\xvalue, \yvalue)};
-				};
-				
+				\edef\poscoords{}
+			\pgfplotsforeachungrouped \i in {0,1,...,9} {
+				\pgfplotstablegetelem{\i}{Positive}\of\instrumenttablefour
+				\edef\tempx{\pgfplotsretval}
+				\pgfplotstablegetelem{\i}{Positive}\of\calibratortable
+				\edef\tempy{\pgfplotsretval}
+				\edef\poscoords{\poscoords (\tempx,\tempy)}
+			}
+			% Plot all positive points at once
+			\addplot[only marks, mark=*, red] coordinates {\poscoords};
+			\addlegendentry{Positive Data}
 				
 				\addplot[
 				domain=0:0.32, 
@@ -2182,13 +2237,14 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 				opacity=0.6,
 				dashed,
 				] {1.9488*x + -0.0166};
+				\addlegendentry{Best Fit}
 				\addplot[
 				domain=0:0.6, 
 				samples=100,
 				color=black,
 				opacity=0.3,
 				] {x};
-				\legend{Positive Data,Best Fit}
+
 			\end{axis}			
 		\end{tikzpicture}
 	\end{minipage}\hspace{1em}
@@ -2218,13 +2274,17 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 				label style={font=\footnotesize},
 				legend style={font=\tiny},
 				]
-				\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
-					\pgfplotstablegetelem{#1}{Negative}\of\instrumenttablefour
-					\edef\xvalue{\pgfplotsretval}
-					\pgfplotstablegetelem{#1}{Negative}\of\calibratortable
-					\edef\yvalue{\pgfplotsretval}
-					\addplot[only marks, mark=*, blue] coordinates {(\xvalue, \yvalue)};
-				};
+				\edef\negcoords{}
+			\pgfplotsforeachungrouped \i in {0,1,...,9} {
+				\pgfplotstablegetelem{\i}{Negative}\of\instrumenttablefour
+				\edef\tempx{\pgfplotsretval}
+				\pgfplotstablegetelem{\i}{Negative}\of\calibratortable
+				\edef\tempy{\pgfplotsretval}
+				\edef\negcoords{\negcoords (\tempx,\tempy)}
+			}
+			% Plot all negative points at once
+			\addplot[only marks, mark=*, blue] coordinates {\negcoords};
+			\addlegendentry{Negative Data}
 				
 				
 				\addplot[
@@ -2234,71 +2294,84 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 				opacity=0.6,
 				dashed,
 				] {2.0679*x + -0.0142};
+				\addlegendentry{Best Fit}
 				\addplot[
 				domain=0:-0.5, 
 				samples=100,
 				color=black,
 				opacity=0.3,
 				] {x};
-				\legend{Negative Data,Best Fit}
+
 			\end{axis}
 		\end{tikzpicture}
 	\end{minipage}\hspace{2em}\hspace{-1.7em}
 	\begin{minipage}[t]{0.3\textwidth}\centering\vspace{0pt}
 		\begin{tikzpicture}[scale=0.83,transform shape]
-			\begin{axis}[
-				xlabel={\instrumentnameformattedfour\ (bar)},
-				ylabel={Pressure Calibrator (bar)},
-				axis lines=middle, 
-				grid=both,
-				legend pos=north west,
-				xlabel style={
-					at={(0.7,-0.1)}, 
-				},
-				ylabel style={
-					at={(1.02,0.5)},
-					rotate=-90, 
-				},
-				xtick={-0.1,-0.2,-0.3,-0.4,-0.5,-0.6,-0.7,0.1,0.2,0.3,0.4,0.5,0.6,0.7}, 
-				ytick={-0.1,-0.2,-0.3,-0.4,-0.5,-0.6,0.1,0.2,0.3,0.4,0.5,0.6},
-				xmin=-0.5, xmax=0.7, 
-				ymax=0.7, ymin=-0.5,
-				font=\small,
-				tick label style={font=\tiny},
-				label style={font=\footnotesize},
-				legend style={font=\tiny},
-				]
-				\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
-					\pgfplotstablegetelem{#1}{Negative}\of\instrumenttablefour
-					\edef\xvalue{\pgfplotsretval}
-					\pgfplotstablegetelem{#1}{Negative}\of\calibratortable
-					\edef\yvalue{\pgfplotsretval}
-					\addplot[only marks, mark=*, blue] coordinates {(\xvalue, \yvalue)};
-				};
-				\pgfplotsinvokeforeach{0,1,2,3,4,5,6,7,8,9} {
-					\pgfplotstablegetelem{#1}{Positive}\of\instrumenttablefour
-					\edef\xvalue{\pgfplotsretval}
-					\pgfplotstablegetelem{#1}{Positive}\of\calibratortable
-					\edef\yvalue{\pgfplotsretval}
-					\addplot[only marks, mark=*, red] coordinates {(\xvalue, \yvalue)};
-				};
-				
-				
-				\addplot[
-				domain=-0.7:0.7, 
-				samples=100,
-				color=black,
-				opacity=0.6,
-				dashed,
-				] {1.9897*x + -0.0222};
-				\addplot[
-				domain=-0.6:0.6, 
-				samples=100,
-				color=black,
-				opacity=0.3,
-				] {x};
-				\legend{Positive Data, Negative Data, Combined Fit}
-			\end{axis}
+\begin{axis}[
+	xlabel={\instrumentnameformattedtwo\ (bar)},
+	ylabel={Pressure Calibrator (bar)},
+	axis lines=middle, 
+	grid=both,
+	legend pos=north west,
+	xlabel style={
+		at={(0.7,-0.1)}, 
+	},
+	ylabel style={
+		at={(1.02,0.5)},
+		rotate=-90, 
+	},
+	xtick={-0.1,-0.2,-0.3,-0.4,-0.5,-0.6,-0.7,0.1,0.2,0.3,0.4,0.5,0.6}, 
+	ytick={-0.1,-0.2,-0.3,-0.4,-0.5,0.1,0.2,0.3,0.4,0.5,0.6},
+	xmin=-0.5, xmax=0.6, 
+	ymax=0.6, ymin=-0.5,
+	font=\small,
+	tick label style={font=\tiny},
+	label style={font=\footnotesize},
+	legend style={font=\tiny},
+	]
+	\edef\negcoords{}
+	\pgfplotsforeachungrouped \i in {0,1,...,9} {
+		\pgfplotstablegetelem{\i}{Negative}\of\instrumenttablefour
+		\edef\tempx{\pgfplotsretval}
+		\pgfplotstablegetelem{\i}{Negative}\of\calibratortable
+		\edef\tempy{\pgfplotsretval}
+		\edef\negcoords{\negcoords (\tempx,\tempy)}
+	}
+	% Plot all negative points at once
+	\addplot[only marks, mark=*, blue] coordinates {\negcoords};
+	\addlegendentry{Negative Data}
+	
+	% Then collect all positive points
+	\edef\poscoords{}
+	\pgfplotsforeachungrouped \i in {0,1,...,9} {
+		\pgfplotstablegetelem{\i}{Positive}\of\instrumenttablefour
+		\edef\tempx{\pgfplotsretval}
+		\pgfplotstablegetelem{\i}{Positive}\of\calibratortable
+		\edef\tempy{\pgfplotsretval}
+		\edef\poscoords{\poscoords (\tempx,\tempy)}
+	}
+	% Plot all positive points at once
+	\addplot[only marks, mark=*, red] coordinates {\poscoords};
+	\addlegendentry{Positive Data}
+	
+	% Add fit lines
+	\addplot[
+	domain=-0.7:0.7, 
+	samples=100,
+	color=green!80!black,
+	dashed,
+	] {1.9488*x-0.0166};
+	\addlegendentry{Cumalitive Fit}
+	\addplot[
+	domain=-0.6:0.6, 
+	samples=100,
+	color=black,
+	opacity=0.3,
+	] {x};
+	
+	% Add legend (now only shows three entries)
+
+\end{axis}
 	\end{tikzpicture}	\end{minipage}
 \end{minipage}\vspace{-0.4em}
 \begin{center}
