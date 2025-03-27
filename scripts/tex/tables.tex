@@ -32,31 +32,114 @@
 \usepackage{pgfplots}
 
 
-%\def\pressurecalibrator{{0, 5.7, 10.4, 16, 21.1, 27.7, 34.2, 40, 46.1, 52.2}}
-%\def\bourdongauge{{1, 2, 2.6, 3.4, 4.1, 5, 6, 6.8, 7.6, 8.5}}
-%\def\bourdongaugetwo{{1, 8, 14, 20, 25, 30, 39, 45, 50, 57}}
-%\def\bundenbergpressuregauge{{-0.05, 0, 0.04, 0.10, 0.15, 0.22, 0.29, 0.35, 0.4, 0.47}}
-%\def\hgglassmanometer{{0.4, 3.5, 5.3, 7.4, 9.4, 11.6, 14.2, 16.4, 18.7, 21}}
+\def\pressurecalibrator{{0, 5.7, 10.4, 16, 21.1, 27.7, 34.2, 40, 46.1, 52.2}}
+\def\bourdongauge{{1, 2, 2.6, 3.4, 4.1, 5, 6, 6.8, 7.6, 8.5}}
+\def\bourdongaugetwo{{1, 8, 14, 20, 25, 30, 39, 45, 50, 57}}
+\def\bundenbergpressuregauge{{-0.05, 0, 0.04, 0.10, 0.15, 0.22, 0.29, 0.35, 0.4, 0.47}}
+\def\hgglassmanometer{{0.4, 3.5, 5.3, 7.4, 9.4, 11.6, 14.2, 16.4, 18.7, 21}}
 
-%\def\pressurecalibrators{{0, -5.6, -12.1, -18, -21.8, -25.4, -29.3, -33.6, -37.6, -41.7}}
-%\def\bourdongauges{{1.2, 0.4, -0.5, -2, -2.8, -4, -6, -7.1, -8.3, -9.5}}
-%\def\bourdongaugetwos{{2.5, -1, -9, -15, -20, -23, -27, -32, -36, -40}}
-%\def\bundenbergpressuregauges{{-0.05, -0.1, -0.16, -0.24, -0.27, -0.3, -0.35, -0.4, -0.44, -0.49}}
-%\def\hgglassmanometers{{0.4, -0.7, -3.7, -5.4, -6.8, -8.2, -9.6, -11.3, -12.8, -14.4}}
+\def\pressurecalibrators{{0, -5.6, -12.1, -18, -21.8, -25.4, -29.3, -33.6, -37.6, -41.7}}
+\def\bourdongauges{{1.2, 0.4, -0.5, -2, -2.8, -4, -6, -7.1, -8.3, -9.5}}
+\def\bourdongaugetwos{{2.5, -1, -9, -15, -20, -23, -27, -32, -36, -40}}
+\def\bundenbergpressuregauges{{-0.05, -0.1, -0.16, -0.24, -0.27, -0.3, -0.35, -0.4, -0.44, -0.49}}
+\def\hgglassmanometers{{0.4, -0.7, -3.7, -5.4, -6.8, -8.2, -9.6, -11.3, -12.8, -14.4}}
 
-\def\pressurecalibrator{{0, 5.9, 9.1, 14.7, 19.2, 24.1, 30.0, 35.0, 40.0, 44.3}}
-\def\bourdongauge{{0, 1, 1.48, 2.25, 2.75, 3.6, 4.4, 5.0, 5.75, 6.25}}
-\def\bourdongaugetwo{{0, 6.5, 10, 16.5, 21.5, 26.5, 32.5, 38, 45, 48}}
-\def\bundenbergpressuregauge{{0, 0.05, 0.075, 0.12, 0.175, 0.225, 0.29, 0.34, 0.4, 0.425}}
-\def\hgglassmanometer{{0, 2.2, 3.4, 5.4, 7.1, 9, 11.2, 13, 14.9, 16.5}}
+%\def\pressurecalibrator{{0, 5.9, 9.1, 14.7, 19.2, 24.1, 30.0, 35.0, 40.0, 44.3}}
+%\def\bourdongauge{{0, 1, 1.48, 2.25, 2.75, 3.6, 4.4, 5.0, 5.75, 6.25}}
+%\def\bourdongaugetwo{{0, 6.5, 10, 16.5, 21.5, 26.5, 32.5, 38, 45, 48}}
+%\def\bundenbergpressuregauge{{0, 0.05, 0.075, 0.12, 0.175, 0.225, 0.29, 0.34, 0.4, 0.425}}
+%\def\hgglassmanometer{{0, 2.2, 3.4, 5.4, 7.1, 9, 11.2, 13, 14.9, 16.5}}
 
-\def\pressurecalibrators{{0, -4.9, -10.1, -15, -19, -25.5, -29.7, -35, -39, -44.6}}
-\def\bourdongauges{{0, -0.5, -1.5, -3, -4, -6, -7, -8.5, -9.75, -11.25}}
-\def\bourdongaugetwos{{0, -3.5, -9, -15, -18.5, -26, -30, -36, -40, -46}}
-\def\bundenbergpressuregauges{{0, -0.01, -0.1, -0.15, -0.2, -0.21, -0.25, -0.36, -0.41, -0.45}}
-\def\hgglassmanometers{{0, -2.2, -3.8, -5.6, -7.1, -9.6, -11.2, -13.1, -14.7, -16.7}}
+%\def\pressurecalibrators{{0, -4.9, -10.1, -15, -19, -25.5, -29.7, -35, -39, -44.6}}
+%\def\bourdongauges{{0, -0.5, -1.5, -3, -4, -6, -7, -8.5, -9.75, -11.25}}
+%\def\bourdongaugetwos{{0, -3.5, -9, -15, -18.5, -26, -30, -36, -40, -46}}
+%\def\bundenbergpressuregauges{{0, -0.01, -0.1, -0.15, -0.2, -0.21, -0.25, -0.36, -0.41, -0.45}}
+%\def\hgglassmanometers{{0, -2.2, -3.8, -5.6, -7.1, -9.6, -11.2, -13.1, -14.7, -16.7}}
 
 \begin{document}
+
+
+\afterpage{%
+	\clearpage
+	\thispagestyle{empty}
+	\newgeometry{left=6mm, right=1mm, bottom=10mm, top=10mm}
+	\begin{landscape}
+		\centering
+		\begin{tblr}{
+				colspec={
+					|[0.2em]X[c,0.5]|[0.2em]X[c,1]|[0.2em]
+					X[c,2]X[c,2]X[c,2]|[0.2em]
+					X[c,2]X[c,2]X[c,2]|[0.2em]
+					X[c,2]X[c,2]X[c,2]|[0.2em]
+					X[c,2]X[c,2]|[0.2em]
+					X[c,2]X[c,2]X[c,2]|[0.2em]},
+				hlines, vlines,
+				rows={ht=1\baselineskip},
+				row{1} = {1.7\baselineskip,font=\bfseries, c, m},
+				row{2} = {3\baselineskip, c, m},
+				cell{4-Z}{4,5,7,8,10,11,13,15,16} = {fg=black!50!white},
+				hline{1,Z,3,4,2} = {0.2em},
+				cells={valign=m, halign=c}
+			}
+			\SetCell[c=16]{c} {P\kern0.2em O\kern0.2em S\kern0.2em I\kern0.2em  T\kern0.2em  I\kern0.2em  V\kern0.2em  E}\\			\SetCell[r=2]{m} \# &\SetCell[r=2]{m} \rotatebox{90}{\wm{0.1}{Reference\\ Value}} & \SetCell[c=3]{c} \wm{0.15}{Pressure Calibrator\\[2pt] \textcolor{red}{{\textbf{MAX 75 kPa}}}} & & &   \SetCell[c=3]{c} Bourdon Gauge 1 & & & \SetCell[c=3]{c} Bourdon Gauge 2 & & & \SetCell[c=2]{c} \wm{0.15}{Bundenberg\\[1pt] Pressure Gauge} & & \SetCell[c=3]{c} \wm{0.2}{Hg Glass Manometer (+) \\[2pt] \textcolor{red}{{\textbf{MAX 32 cm Hg}}}}  \\
+			&  & \SetCell{bg=\yels,fg=black}\textbf{kPa} & bar & bar $\textsf{P}_{\textsf{abs}}$ &  \SetCell{bg=\yels,fg=black} \textbf{psi} & bar & bar $\textsf{P}_{\textsf{abs}}$  & \SetCell{bg=\yels,fg=black} \textbf{kN/m}$\bm{^2}$ & bar & bar $\textsf{P}_{\textsf{abs}}$  &\SetCell{bg=\yels,fg=black} \textbf{bar} & bar $\textsf{P}_{\textsf{abs}}$ & \SetCell{bg=\yels,fg=black}\textbf{cm Hg} & bar & bar $\textsf{P}_{\textsf{abs}}$ \\
+			1 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+			2 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+			3 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+			4 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+			5 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+			6 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+			7 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+			8 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+			9 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+			10 &  &  &  &  & \SetCell{bg=\blus,fg=black} &  &  & \SetCell{bg=\blus,fg=black} &  &  & \SetCell{bg=\blus,fg=black} &  & \SetCell{bg=\blus,fg=black} &  &  \\
+		\end{tblr}
+		
+		\vspace*{1em}
+		
+		\begin{tblr}{
+				colspec={
+					|[0.2em]X[c,0.5]|[0.2em]X[c,1]|[0.2em]
+					X[c,2]X[c,2]X[c,2]|[0.2em]
+					X[c,2]X[c,2]X[c,2]|[0.2em]
+					X[c,2]X[c,2]X[c,2]|[0.2em]
+					X[c,2]X[c,2]|[0.2em]
+					X[c,2]X[c,2]X[c,2]|[0.2em]},
+				hlines, vlines,
+				rows={ht=1\baselineskip},
+				row{1} = {1.7\baselineskip,font=\bfseries, c, m},
+				row{2} = {3\baselineskip, c, m},
+				hline{1,Z,3,4,2} = {0.2em},
+				cell{4-Z}{4,5,7,8,10,11,13,15,16} = {fg=black!50!white},
+				cells={valign=m, halign=c}
+			}
+			\SetCell[c=16]{c} {N\kern0.2em E\kern0.2em G\kern0.2em A\kern0.2em  T\kern0.2em  I\kern0.2em  V\kern0.2em  E}\\
+			\SetCell[r=2]{m} \# &\SetCell[r=2]{m} \rotatebox{90}{\wm{0.1}{Reference\\ Value}} & \SetCell[c=3]{c} \wm{0.15}{Pressure Calibrator\\[2pt] \textcolor{red}{{\textbf{MAX 75 kPa}}}} & & &   \SetCell[c=3]{c} Bourdon Gauge 1 & & & \SetCell[c=3]{c} Bourdon Gauge 2 & & & \SetCell[c=2]{c} \wm{0.15}{Bundenberg\\[1pt] Pressure Gauge} & & \SetCell[c=3]{c} \wm{0.2}{Hg Glass Manometer (+) \\[2pt] \textcolor{red}{{\textbf{MAX 32 cm Hg}}}}  \\
+			&  & \SetCell{bg=\yels,fg=black}\textbf{kPa} & bar & bar $\textsf{P}_{\textsf{abs}}$ &  \SetCell{bg=\yels,fg=black} \textbf{psi} & bar & bar $\textsf{P}_{\textsf{abs}}$  & \SetCell{bg=\yels,fg=black} \textbf{kN/m}$\bm{^2}$ & bar & bar $\textsf{P}_{\textsf{abs}}$ &\SetCell{bg=\yels,fg=black} \textbf{bar} & bar $\textsf{P}_{\textsf{abs}}$ & \SetCell{bg=\yels,fg=black}\textbf{cm Hg} & bar & bar $\textsf{P}_{\textsf{abs}}$ \\
+			1 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+			2 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+			3 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+			4 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+			5 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+			6 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+			7 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+			8 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+			9 &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+			10 &  &  &  &  & \SetCell{bg=\blus,fg=black} &  &  & \SetCell{bg=\blus,fg=black} &  &  & \SetCell{bg=\blus,fg=black} &  & \SetCell{bg=\blus,fg=black} &  &  \\
+		\end{tblr}
+		
+		\raggedright
+		
+		\vspace*{1em}
+		
+		Mercury manometer Pressure = Density $\times$ Gravity $\times$ Height in metres = $13600\times9.81\times$Hg height in metres\\[2pt]
+		Atmospheric Pressure (Patm) from the Digital Manometer This is a fill-in line with a specific length: \underline{\phantom{ssssssssssssss}}.mbar (1000 mbar = 1 bar)\\[2pt]
+		\colorbox{\blus}{\textcolor{black}{Bordon Gauge 1, Bourden Gauge 2, and Bundenberg Gauge offsets}}
+		
+	\end{landscape}
+	\clearpage
+}
+\newpage
 
 
 \afterpage{%

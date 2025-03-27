@@ -717,7 +717,7 @@ There are three main types of Bourdon gauges, each with different sensitivities 
 		atm& 101325&1.01325&14.6959& 1 & 76.0032 \\ 
 		cm Hg&1333.22&0.013332&0.19337& 0.013158 & 1 \\
 	\end{tblr}
-\end{center}	\vspace{-1em}\captionof{table}{Standard Pressure Unit Conversions}
+\end{center}	\vspace{-1em}\captionof{table}{Standard Pressure Unit Conversions}\label{table:Pressure_Unit_Conversions}
 
 
 \tikzexternaldisable
@@ -815,7 +815,7 @@ There are three main types of Bourdon gauges, each with different sensitivities 
 	As the experiment progressed, we worked as a team to carefully apply the required pressures, analyzing the gauge readings and reaching a consensus on the correct values, which were then recorded in the designated pressure measurement table (Figure \ref{fig:pressurestable}).\\[1em]
 	A detailed breakdown of the \textbf{exact steps} we followed is as follows:
 \newpage
-\newgeometry{left=0.8in,right=0.8in,top=1.3in,bottom=0.6in}
+\newgeometry{left=0.8in,right=0.8in,top=1.1in,bottom=0.6in}
 \begin{minipage}{0.5\textwidth}	
 	\subsection{Operating Procedure}
 	\begin{enumerate}[left=0in,itemsep=2mm]
@@ -850,7 +850,8 @@ There are three main types of Bourdon gauges, each with different sensitivities 
 		\caption{DPI-603 Portable Pressure Calibrator} 
 		\label{fig:DPI-603} 
 	\end{figure}
-\end{minipage}\\
+\end{minipage}
+\\
 \begin{enumerate}
 \item[6.] The vent valve was closed and used to zero the instrument. It was concluded that this procedure should be carried out by the instructor due to the vent valve’s sensitivity.  
 \end{enumerate}
@@ -886,12 +887,13 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 	\end{minipage}
 	
 
-	\newpage\restoregeometry
+	\newpage\newgeometry{left=0.8in,right=0.8in,top=1in,bottom=0.5in}
 	\section{Data, Calculations and Results}
-	
 	\tikzexternaldisable
 
-	\begin{center}
+	\hspace*{-2.2em}	
+	\begin{minipage}{1.1\textwidth}
+	\begin{tcolorbox}[title={\color{black}\normalsize \textbf{Original Data-Set}}, colback=black!4!white,colframe=black!10!white, boxrule=0.5mm, width=1\textwidth] 
 	\begin{minipage}{0.23\textwidth}
 		\begin{tcolorbox}[title={\color{black}\normalsize \textbf{Pressure Calibrator}}, colback=SkyBlue!6!white, 
 			colframe=SteelBlue!10!white, boxrule=0.5mm, width=\textwidth]
@@ -1034,9 +1036,11 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 		\end{minipage}		
 		\end{tcolorbox}		
 	\end{minipage}
-	\end{center}
-	  \hrule
-\begin{center}
+	\end{tcolorbox}
+	\end{minipage}\\
+	\hspace*{-2.2em}	
+	\begin{minipage}{1.1\textwidth}	
+	\begin{tcolorbox}[title={\color{black}\normalsize \textbf{Zeroed out Data-Set}}, colback=black!4!white,colframe=black!10!white, boxrule=0.5mm, width=\textwidth] 
 	\begin{minipage}{0.23\textwidth}
 		\begin{tcolorbox}[title={\color{black}\normalsize \textbf{Pressure Calibrator}}, colback=SkyBlue!6!white, 
 			colframe=SteelBlue!10!white, boxrule=0.5mm, width=\textwidth]
@@ -1179,11 +1183,13 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 			\end{minipage}		
 		\end{tcolorbox}		
 	\end{minipage}
-\end{center}
-\newpage
+	\end{tcolorbox}
+	\end{minipage}
+	
+\newpage\restoregeometry
 Now, we need to perform some unit conversions to ensure consistency across all measurements.\\[8pt]
-In the context of this study, as seen in the table in Figure \ref{fig:pressurestable}, we are provided with a row for calculating bar and bar \(\text{P}_\text{abs}\), which directly suggests that all the pressures should be expressed in bar for all comparisons. In my opinion, the choice of unit doesn't significantly affect the results, when coming to conclusions we aim to achieve. I will demonstrate later in that the results are the same when using different units.\\[8pt]
-That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outlined in subsection \ref{Pressure Units}.
+In the context of this study, as seen in the table in Figure \ref{fig:pressurestable}, we are provided with a row for calculating bar and bar \(\text{P}_\text{abs}\), which directly suggests that all the pressures should be expressed in bar for all comparisons. The selection of unit does not substantially influence the outcomes of the conclusions we seek to get. I will later demonstrate that the results remain consistent across multiple pressure unit conversions.\\[8pt]
+That aside, here i covert them all to \textbf{bar}, using the relevant calculations outlined in Table \ref{table:Pressure_Unit_Conversions}.
 
 	\begin{center}
 	\hspace*{0em}\begin{minipage}{0.46\textwidth}\centering		
@@ -1745,7 +1751,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 				\[y = 0.5241x-0.0423\]
 			\end{minipage}\hfill
 			\begin{minipage}{0.3\textwidth}	\centering
-				Combined, best-fit equation: 
+				Cumulative, best-fit equation: 
 				\[y = 0.7554x + 0.0496\]
 			\end{minipage}
 		\end{minipage}
@@ -1933,7 +1939,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 				\[y = 0.9509x-0.0107\]
 			\end{minipage}\hfill
 			\begin{minipage}{0.3\textwidth}	\centering
-				Combined, best-fit equation: 
+				Cumulative, best-fit equation: 
 				\[y = 0.9483x-0.0112\]
 			\end{minipage}
 		\end{minipage}
@@ -2120,7 +2126,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 			\[y =0.9416x-0.0085\]
 		\end{minipage}\hfill
 		\begin{minipage}{0.3\textwidth}	\centering
-			Combined, best-fit equation: 
+			Cumulative, best-fit equation: 
 			\[y = 0.9941x + 0.0057\]
 		\end{minipage}
 	\end{minipage}
@@ -2307,34 +2313,160 @@ That aside, here i covert them all to \textbf{bar}, using the relevnt calcs outl
 			\[y = 2.0679x-0.0142\]
 		\end{minipage}\hfill
 		\begin{minipage}{0.3\textwidth}	\centering
-			Combined, best-fit equation: 
+			Cumulative, best-fit equation: 
 			\[y = 1.9488x-0.0166\]
 		\end{minipage}
 	\end{minipage}
 \end{center}
 \restoregeometry
-\subsection{Percentage errors}
+	\subsection{Percentage errors}
+	Since the desired ideal value for the gradient is 1, we can calculate the percentage error using the following formula:
+	\begin{equation}
+		\% \text{Error} = \frac{\text{Value} - \text{Ideal}}{\text{Ideal}} \times 100
+	\end{equation}
+\vspace{0.2em}
 \begin{center}
-\begin{tblr}{		
-		colspec={
-			Q[3cm]
-			Q[2cm]Q[1.5cm]
-			Q[2cm]Q[1.5cm]
-			Q[2cm]Q[1.5cm]},
-		hlines,vlines,
-		cells={valign=m,halign=c},
-		rows={ht=2\baselineskip},
-		row{1}={ht=1.5\baselineskip,font=\bfseries},
-	}
-	Gauge & \SetCell[c=2]{c} Positive Gradient & &\SetCell[c=2]{c} Negative Gradient & &\SetCell[c=2]{c} Combined Gradient & \\ \hline
-	Borden Gauge 1 & 1.0224 & {\color{red!2.24!black} 2.24\%} & 0.5241 & {\color{red!47.59!black} 47.59\%} & 0.7554 & {\color{red!24.46!black} 24.46\%} \\\hline
-	Borden Gauge 2 & 0.9462 & {\color{red!5.38!black} 5.38\%} & 0.9509 & {\color{red!4.91!black} 4.91\%} & 0.9483 & {\color{red!5.17!black} 5.17\%} \\\hline
-	Bundenburg Gauge & 0.9932 & {\color{red!0.68!black} 0.68\%} & 0.9416 & {\color{red!5.84!black} 5.84\%} & 0.9941 & {\color{red!0.59!black} 0.59\%} \\\hline	
-    Hg Manometer & 1.9488 & {\color{red!94.88!black} 94.88\%} & 2.0679 & {\color{red!100!black} 106.79\%} & 1.9488 & {\color{red!94.88!black} 94.88\%} \\
-\end{tblr}
-\captionof{table}{Gradients of Best-Fit Equations for Different Gauges}
+	\hspace*{-1.3em}
+	\begin{minipage}[t]{3cm}
+		\centering
+		\begin{tblr}{
+				colspec={Q[3cm]},
+				hlines,vlines,
+				cells={valign=m,halign=c},
+				rows={ht=2\baselineskip},
+				row{1}={ht=1.5\baselineskip,font=\bfseries,bg=gray!30},
+			}
+			Gauge \\
+			Borden Gauge 1 \\
+			Borden Gauge 2 \\
+			Bundenburg Gauge \\
+			Hg Manometer \\
+		\end{tblr}
+	\end{minipage}
+	\hspace{1em}
+	\begin{minipage}[t]{3.5cm}
+		\centering
+		\begin{tblr}{
+				colspec={Q[2cm]Q[1.5cm]},
+				hlines,vlines,
+				cells={valign=m,halign=c},
+				rows={ht=2\baselineskip},
+				row{1}={ht=1.5\baselineskip,font=\bfseries,bg=red!30,fg=black},
+			}
+			\SetCell[c=2]{c} Pressurized & \\
+			1.0224 & {2.24\%} \\
+			0.9462 & {-5.38\%} \\
+			0.9932 & {-0.68\%} \\
+			1.9488 & {94.88\%} \\
+		\end{tblr}
+	\end{minipage}
+	\hspace{2em}
+	\begin{minipage}[t]{3.5cm}
+		\centering
+		\begin{tblr}{
+				colspec={Q[2cm]Q[1.5cm]},
+				hlines,vlines,
+				cells={valign=m,halign=c},
+				rows={ht=2\baselineskip},
+				row{1}={ht=1.5\baselineskip,font=\bfseries,bg=blue!30,fg=black},
+			}
+			\SetCell[c=2]{c} Vacuum &\\
+			0.5241 & {-47.59\%} \\
+			0.9509 & {-4.91\%} \\
+			0.9416 & {-5.84\%} \\
+			2.0679 & {106.79\%} \\
+		\end{tblr}
+	\end{minipage}
+	\hspace{2em}
+	\begin{minipage}[t]{3.5cm}
+		\centering
+		\begin{tblr}{
+				colspec={Q[2cm]Q[1.5cm]},
+				hlines,vlines,
+				cells={valign=m,halign=c},
+				rows={ht=2\baselineskip},
+				row{1}={ht=1.5\baselineskip,font=\bfseries,bg=green!30,fg=black},
+			}
+			\SetCell[c=2]{c} Cumulative& \\
+			0.7554 & {-24.46\%} \\
+			0.9483 & {-5.17\%} \\
+			0.9941 & {-0.59\%} \\
+			1.9488 & {94.88\%} \\
+		\end{tblr}
+	\end{minipage}
 \end{center}
 
+\captionof{table}{Gradients of Best-Fit Equations for Different Gauges}
+\vspace{1em}
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[scale=1.2]
+		\begin{axis}[
+			ybar=3pt,
+			bar width=15pt,
+			ymin=-120, ymax=120,
+			axis y line*=left,
+			axis x line*=bottom,
+			ylabel={Percentage Error (\%)},
+			xlabel={Gauge Type},
+			enlarge x limits=0.2,
+			ymajorgrids=true,
+			xtick=data,
+			xticklabels={
+				Borden Gauge 1,
+				Borden Gauge 2,
+				Bundenburg Gauge,
+				Hg Manometer
+			},
+			xticklabel style={
+				text width=2.5cm,
+				align=center,
+				font=\small
+			},
+			height=9cm,
+			width=13cm,
+			major tick length=5pt,
+			tick style={semithick},
+			legend style={at={(0.26,1)},column sep=1ex},
+			legend cell align=left,
+			extra y ticks = 0,
+			extra y tick labels={Ideal}, 
+			extra y tick style={grid=major,major grid style={thick,draw=black}, ticklabel pos=right}
+			]
+			
+			\def\bro{0.3}
+			% Positive Gradient (red)
+			\addplot[red, fill=red!30] 
+			coordinates {(1,2.24) (2,-5.38) (3,-0.68) (4,94.88)};
+			
+			% Negative Gradient (blue)
+			\addplot[blue, fill=blue!30] 
+			coordinates {(1,-47.59) (2,-4.91) (3,-5.84) (4,106.79)};
+			
+			% Combined Gradient (green)
+			\addplot[green!70!black, fill=green!30] 
+			coordinates {(1,-24.46) (2,-5.17) (3,-0.59) (4,94.88)};
+			
+			\legend{
+				Pressurized,
+				Vacuun,
+				Cumulative
+			}
+			
+			% Add right y-axis
+			\pgfplotsset{
+				after end axis/.code={
+					\node at (rel axis cs:1.02,0.5) 
+					[rotate=90, anchor=center, yshift=10pt] 
+					{};
+				}
+			}
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Percentage errors bar chart for gauge measurements}
+	\label{fig:final_errors}
+\end{figure}
 	\newpage
 	\section{Discussion of Results}
 	

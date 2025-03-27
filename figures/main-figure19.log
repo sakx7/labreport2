@@ -1,12 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  27 MAR 2025 18:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  27 MAR 2025 17:51
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
-LaTeX2e <2024-11-01> patch level 2
-L3 programming layer <2025-01-18>
-(/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
+**\def\tikzexternalrealjob{main}\input{main}
+(./main.tex (/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
@@ -22,40 +19,32 @@ File: size10.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen141
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen142
 \Gin@req@width=\dimen143
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count270
 \float@exts=\toks18
 \float@box=\box52
 \@float@everytoks=\toks19
 \@floatcapt=\box53
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/booktabs/booktabs.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen144
 \lightrulewidth=\dimen145
@@ -74,8 +63,7 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count273
 \@lastruleclass=\count274
 \@thisrulewidth=\dimen156
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/tools/array.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/array.sty
 Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
 \col@sep=\dimen157
 \ar@mcellbox=\box54
@@ -84,8 +72,7 @@ Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
 \extratabsurround=\skip51
 \backup@length=\skip52
 \ar@cellbox=\box55
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/arydshln/arydshln.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/arydshln/arydshln.sty
 Package: arydshln 2019/02/21 v1.76 
 \dashlinedash=\dimen159
 \dashlinegap=\dimen160
@@ -107,8 +94,7 @@ Package: arydshln 2019/02/21 v1.76
 \adl@clb=\count284
 \adl@everyvbox=\toks21
 \adl@LTpagetotal=\dimen166
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/siunitx/siunitx.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2025-01-21 v3.4.4 A comprehensive (SI) units package
 \l__siunitx_number_uncert_offset_int=\count285
 \l__siunitx_number_exponent_fixed_int=\count286
@@ -124,35 +110,27 @@ Package: siunitx 2025-01-21 v3.4.4 A comprehensive (SI) units package
 \l__siunitx_angle_marker_box=\box57
 \l__siunitx_angle_unit_box=\box58
 \l__siunitx_compound_count_int=\count295
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/translations/translations.sty
 Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
  (CN)
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count296
-)
-(/usr/local/texlive/2024/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
-
 (/usr/local/texlive/2024/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
-(/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
-)
-(/usr/local/texlive/2024/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-))
-(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amstext.sty
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks22
@@ -171,54 +149,43 @@ File: amsgen.sty 1999/11/30 v2.0 generic functions
 \l__siunitx_unit_tmp_int=\count297
 \l__siunitx_unit_position_int=\count298
 \l__siunitx_unit_total_int=\count299
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hyperref.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)
-(/usr/local/texlive/2024/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)
-(/usr/local/texlive/2024/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/hycolor/hycolor.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/nameref.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count300
-)
-(/usr/local/texlive/2024/texmf-dist/tex/generic/stringenc/stringenc.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
 \@linkdim=\dimen173
 \Hy@linkcounter=\count301
 \Hy@pagecounter=\count302
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-)
-(/usr/local/texlive/2024/texmf-dist/tex/generic/intcalc/intcalc.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count303
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -232,17 +199,14 @@ Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4424.
 \c@Hy@tempcnt=\count304
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4763.
 \XeTeXLinkMargin=\dimen174
-
 (/usr/local/texlive/2024/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-
 (/usr/local/texlive/2024/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
@@ -257,7 +221,6 @@ Package hyperref Info: backreferencing OFF on input line 6057.
 Package hyperref Info: Link coloring OFF on input line 6062.
 Package hyperref Info: Link coloring with OCG OFF on input line 6067.
 Package hyperref Info: PDF/A mode OFF on input line 6072.
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
@@ -267,10 +230,8 @@ package with kernel methods
 \c@Hfootnote=\count308
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
@@ -291,16 +252,13 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip53
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/cancel/cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/changepage/changepage.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/changepage/changepage.sty
 Package: changepage 2009/10/20 v1.0c check page and change page layout
 \c@cp@cntr=\count311
 \cp@tempcnt=\count312
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/placeins/placeins.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip54
 \enit@outerparindent=\dimen177
@@ -308,12 +266,10 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \enit@inbox=\box65
 \enit@count@id=\count313
 \enitdp@description=\count314
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/lipsum/lipsum.sty
-(/usr/local/texlive/2024/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
-(/usr/local/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/lipsum/lipsum.sty (/usr/local/t
+exlive/2024/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty (/usr/local/t
+exlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2025-01-18 L3 programming layer (loader) 
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count315
@@ -325,13 +281,12 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \g__lipsum_par_int=\count316
 \l__lipsum_a_int=\count317
 \l__lipsum_b_int=\count318
-(/usr/local/texlive/2024/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
-(/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (/usr/loc
+al/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 Package: tcolorbox 2024/10/22 version 6.4.1 text color boxes
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/
+local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texl
+ive/2024/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
 \pgfutil@everybye=\toks24
@@ -345,9 +300,8 @@ x
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 ))
 Package: pgf 2023-01-15 v3.1.10 (3.1.10)
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/
+local/texlive/2024/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
@@ -378,7 +332,6 @@ tered.code.tex
 \t@pgf@tokb=\toks29
 \t@pgf@tokc=\toks30
 \pgf@sys@id@count=\count323
-
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -403,12 +356,10 @@ code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )) (/usr/local/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
@@ -422,8 +373,8 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
-(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr
+/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen190
 \pgfmath@count=\count326
@@ -449,9 +400,9 @@ code.tex)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
 code.tex)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
-erarithmetics.code.tex)
-(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
-(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+erarithmetics.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/mat
+h/pgfmathcalc.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/mat
+h/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count327
 )) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
@@ -571,13 +522,12 @@ Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
-))
-(/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr
+/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/
+texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/loca
+l/texlive/2024/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/20
+24/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2024/
+texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen273
 \pgffor@skip=\dimen274
@@ -623,16 +573,13 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)))
-(/usr/local/texlive/2024/texmf-dist/tex/latex/tools/verbatim.sty
+))) (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks36
 \verbatim@line=\toks37
 \verbatim@in@stream=\read3
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/environ/environ.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
@@ -651,7 +598,6 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \tcb@temp=\box84
 \tcb@temp=\box85
 \tcb@temp=\box86
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
 Library (tcolorbox): 'tcbraster.code.tex' version '6.4.1'
 \c@tcbrastercolumn=\count343
@@ -662,7 +608,6 @@ Library (tcolorbox): 'tcbraster.code.tex' version '6.4.1'
 Library (tcolorbox): 'tcbskins.code.tex' version '6.4.1'
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
 Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tikzfill/tikzfill-common.sty
 Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
 )
@@ -673,8 +618,8 @@ File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
 ))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.4.1'
-))
-(/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.te
+x
 Library (tcolorbox): 'tcbbreakable.code.tex' version '6.4.1'
 (/usr/local/texlive/2024/texmf-dist/tex/latex/pdfcol/pdfcol.sty
 Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
@@ -683,21 +628,18 @@ Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
 \tcb@testbox=\box88
 \tcb@totalupperbox=\box89
 \tcb@totallowerbox=\box90
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
 Library (tcolorbox): 'tcbhooks.code.tex' version '6.4.1'
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
 Library (tcolorbox): 'tcbtheorems.code.tex' version '6.4.1'
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2024/11/05 v2.17t AMS math features
 \@mathmargin=\skip55
-
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen285
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count347
@@ -747,8 +689,7 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks42
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-))
-(/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
 Library (tcolorbox): 'tcbfitting.code.tex' version '6.4.1'
 \tcbfitdim=\dimen293
 \tcb@lowerfitdim=\dimen294
@@ -773,17 +714,14 @@ Library (tcolorbox): 'tcblistings.code.tex' version '6.4.1'
 \lst@newlines=\count364
 \lst@lineno=\count365
 \lst@maxwidth=\dimen299
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 \c@lstnumber=\count366
 \lst@skipnumbers=\count367
 \lst@framebox=\box94
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2024/09/23 1.10c listings configuration
 ))
 Package: listings 2024/09/23 1.10c (Carsten Heinz)
@@ -811,13 +749,11 @@ File: tikzlibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings
 .code.tex
 File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)))
-(/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
+))) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
 Library (tcolorbox): 'tcbposter.code.tex' version '6.4.1'
 )) (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/tools/tabularx.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@col@width=\dimen300
 \TX@old@table=\dimen301
@@ -826,10 +762,8 @@ Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@delta=\dimen304
 \TX@cols=\count369
 \TX@ftn=\toks44
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
@@ -837,17 +771,14 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amscd.sty
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amscd.sty
 Package: amscd 2017/04/14 v2.1 AMS Commutative Diagrams
 \athelp@=\toks45
 \minaw@=\dimen305
 \bigaw@=\dimen306
 \minCDarrowwidth=\dimen307
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/mnsymbol/MnSymbol.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/mnsymbol/MnSymbol.sty
 Package: MnSymbol 2007/01/21 v1.4 support for the MnSymbol font
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
 )
@@ -925,18 +856,14 @@ LaTeX Info: Redefining \surd on input line 1843.
 LaTeX Font Info:    Redeclaring math accent \widehat on input line 1845.
 LaTeX Font Info:    Redeclaring math accent \widetilde on input line 1846.
 LaTeX Font Info:    Redeclaring math accent \vec on input line 1848.
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup10
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/cellspace/cellspace.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/cellspace/cellspace.sty
 Package: cellspace 2022/01/04 v1.9.0 Spacing table cells (JN)
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count370
 \calc@Bcount=\count371
@@ -948,12 +875,10 @@ LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count372
 \calc@Cskip=\skip60
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
-
-(/usr/local/texlive/2024/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(/usr/local/texlive/2024/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2024/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local
+/texlive/2024/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks46
 \XKV@tempa@toks=\toks47
 )
@@ -1015,11 +940,11 @@ brarydecorations.markings.code.tex))
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarydecorations.pathmorphing.code.tex
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
-brarydecorations.pathmorphing.code.tex))
-(/usr/local/texlive/2024/texmf-dist/tex/latex/hobby/tikzlibraryhobby.code.tex
-(/usr/local/texlive/2024/texmf-dist/tex/latex/hobby/pgflibraryhobby.code.tex
-(/usr/local/texlive/2024/texmf-dist/tex/latex/hobby/hobby.code.tex
-(/usr/local/texlive/2024/texmf-dist/tex/latex/hobby/pml3array.sty
+brarydecorations.pathmorphing.code.tex)) (/usr/local/texlive/2024/texmf-dist/te
+x/latex/hobby/tikzlibraryhobby.code.tex (/usr/local/texlive/2024/texmf-dist/tex
+/latex/hobby/pgflibraryhobby.code.tex (/usr/local/texlive/2024/texmf-dist/tex/l
+atex/hobby/hobby.code.tex (/usr/local/texlive/2024/texmf-dist/tex/latex/hobby/p
+ml3array.sty
 \l_array_base_int=\count375
 \l_array_top_int=\count376
 \l_array_tmp_int=\count377
@@ -1028,8 +953,7 @@ brarydecorations.pathmorphing.code.tex))
 )
 \g__hobby_npoints_int=\count380
 \g__hobby_draw_int=\count381
-)))
-(/usr/local/texlive/2024/texmf-dist/tex/latex/xfrac/xfrac.sty
+))) (/usr/local/texlive/2024/texmf-dist/tex/latex/xfrac/xfrac.sty
 Package: xfrac 2024-06-04 Split-level fractions
 \l__xfrac_slash_box=\box96
 \l__xfrac_tmp_box=\box97
@@ -1053,10 +977,9 @@ LaTeX template Info: Declaring instance 'cmss' of type xfrac on line 392.
 
 LaTeX template Info: Declaring instance 'cmtt' of type xfrac on line 392.
 
-)
-(/usr/local/texlive/2024/texmf-dist/tex/generic/chemfig/chemfig.sty
-(/usr/local/texlive/2024/texmf-dist/tex/generic/chemfig/chemfig.tex
-(/usr/local/texlive/2024/texmf-dist/tex/generic/simplekv/simplekv.tex
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/chemfig/chemfig.sty (/usr/loc
+al/texlive/2024/texmf-dist/tex/generic/chemfig/chemfig.tex (/usr/local/texlive/
+2024/texmf-dist/tex/generic/simplekv/simplekv.tex
 Package: simplekv 2023/10/02 v0.2c Simple keyval package (CT)
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
@@ -1084,10 +1007,8 @@ File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \CF_substtoks=\toks48
 )
 Package: chemfig 2023/12/28 v1.66 Draw molecule with an easy syntax (CT)
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen334
@@ -1108,8 +1029,7 @@ Package caption Info: changepage package is loaded.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/tools/bm.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2023/12/19 v1.2f Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup11
 \symboldletters=\mathgroup12
@@ -1119,10 +1039,8 @@ Package bm Info: No bold for \U/msa/m/n, using \pmb.
 Package bm Info: No bold for \U/msb/m/n, using \pmb.
 Package bm Info: No bold for \U/rsfs/m/n, using \pmb.
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2025/01/30 v0.6e Insert pages of external PDF documents (AM)
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
 \ESO@tempdima=\dimen344
@@ -1131,7 +1049,6 @@ Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
 \AM@pagewidth=\dimen346
 \AM@pageheight=\dimen347
 \AM@fboxrule=\dimen348
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/pdfpages/pppdftex.def
 File: pppdftex.def 2025/01/30 v0.6e Pdfpages driver for pdfTeX (AM)
 )
@@ -1143,14 +1060,11 @@ File: pppdftex.def 2025/01/30 v0.6e Pdfpages driver for pdfTeX (AM)
 \AM@lof@heading=\toks51
 \c@AM@survey=\count392
 \AM@templatesizebox=\box103
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/empheq.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/empheq.sty
 Package: empheq 2024/08/09 v2.17 Emphasizing equations
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mathtools.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
 \g_MT_multlinerow_int=\count393
 \l_MT_multwidth_dim=\dimen349
@@ -1180,12 +1094,11 @@ Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
 \EQ_mathdisplay_box=\box105
 \EQ_tag_box=\box106
 \g_EQ_temprow_int=\count397
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/pgfplots/pgfplots.sty
-(/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgfplots/pgfplots.sty (/usr/loc
+al/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
-(/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
-(/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex (/us
+r/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
 \t@pgfplots@toka=\toks52
 \t@pgfplots@tokb=\toks53
 \t@pgfplots@tokc=\toks54
@@ -1284,24 +1197,21 @@ File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmar
 ks.code.tex
 File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)))
-(/usr/local/texlive/2024/texmf-dist/tex/latex/pgfplots/pgfplotstable.sty
-(/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+))) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgfplots/pgfplotstable.sty (/
+usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplotstable 2021/05/15 v1.18.1 Table typesetting and Pretty-printing
  (1.18.1)
 
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
 .code.tex
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
-.coltype.code.tex)))
-(/usr/local/texlive/2024/texmf-dist/tex/generic/xstring/xstring.sty
-(/usr/local/texlive/2024/texmf-dist/tex/generic/xstring/xstring.tex
+.coltype.code.tex))) (/usr/local/texlive/2024/texmf-dist/tex/generic/xstring/xs
+tring.sty (/usr/local/texlive/2024/texmf-dist/tex/generic/xstring/xstring.tex
 \xs_counta=\count404
 \xs_countb=\count405
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/circuitikz/circuitikz.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/circuitikz/circuitikz.sty
 Package: circuitikz 2025/01/10{} The CircuiTikz circuit drawing package version
  1.7.1
 
@@ -1330,8 +1240,8 @@ File: pgflibrarycurvilinear.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@arrows@the@rigidity=\dimen380
 ))
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryfpu.code.tex)
-(/usr/local/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcirc.defines.tex
+s/tikzlibraryfpu.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/circ
+uitikz/pgfcirc.defines.tex
 \pgf@circ@count@a=\count406
 \pgf@circ@count@b=\count407
 \pgf@circ@count@c=\count408
@@ -1348,13 +1258,12 @@ s/tikzlibraryfpu.code.tex)
 \pgfstartlinewidth=\dimen391
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcircutils.tex
 \ctikz@scratchbox=\box107
-)
-(/usr/local/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcircpath.tex)
-(/usr/local/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcircshapes.tex)
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcircpath.tex) (
+/usr/local/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcircshapes.tex)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcircmonopoles.tex
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcircbipoles.tex
-)
-(/usr/local/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcirctripoles.tex
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcirctripoles.te
+x
 \pgf@circ@res@count=\count409
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcircquadpoles.tex
@@ -1363,9 +1272,8 @@ s/tikzlibraryfpu.code.tex)
 x) (/usr/local/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcirclabel.tex)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcircvoltage.tex
 \pgfcirc@labelshift=\dimen392
-)
-(/usr/local/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcirccurrent.tex)
-(/usr/local/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcircflow.tex))
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcirccurrent.tex
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcircflow.tex)) 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2024/12/12 v3.2 Micro-typographical refinements (RS)
 \MT@toks=\toks59
@@ -1380,7 +1288,6 @@ LaTeX Info: Redefining \textls on input line 1437.
 LaTeX Info: Redefining \microtypecontext on input line 2041.
 LaTeX Info: Redefining \textmicrotypecontext on input line 2058.
 \MT@listname@count=\count411
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2024/12/12 v3.2 Definitions specific to pdftex (RS)
 LaTeX Info: Redefining \lsstyle on input line 944.
@@ -1388,13 +1295,11 @@ LaTeX Info: Redefining \lslig on input line 944.
 \MT@outer@space=\skip62
 )
 Package microtype Info: Loading configuration file microtype.cfg.
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2024/12/12 v3.2 microtype main configuration file (RS)
 )
 LaTeX Info: Redefining \microtypesetup on input line 3053.
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/tikz-3dplot/tikz-3dplot.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/tikz-3dplot/tikz-3dplot.sty
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -1408,9 +1313,9 @@ File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ibraryexternal.code.tex
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzexternalshared.code.tex))
-\openout3 = `main.auxlock'.
+No auxiliary output files.
 
-
+\w@pgfexternal@auxout=\write4
 (/usr/local/texlive/2024/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip63
@@ -1420,10 +1325,8 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameSep=\dimen398
 )
 \enitdp@gitemize=\count412
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
-
 (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
@@ -1439,8 +1342,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen405
 \Gm@layoutvoffset=\dimen406
 \Gm@dimlist=\toks61
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 
 \f@nch@headwidth=\skip64
@@ -1458,8 +1360,7 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthC=\skip76
 \f@nch@widthR=\skip77
 \@temptokenb=\toks62
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/tabularray/tabularray.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/tabularray/tabularray.sty
 Package: tabularray 2024-02-16 v2024A Typeset tabulars and arrays with LaTeX3
 \l__tblr_a_int=\count416
 \l__tblr_c_int=\count417
@@ -1550,15 +1451,13 @@ Package: tabularray 2024-02-16 v2024A Typeset tabulars and arrays with LaTeX3
 \l__tblr_cell_wd_dim=\dimen447
 \l__tblr_cell_ht_dim=\dimen448
 \l__tblr_diag_box=\box132
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/varwidth/varwidth.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box133
 \sift@deathcycles=\count439
 \@vwid@loff=\dimen449
 \@vwid@roff=\dimen450
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/scalerel/scalerel.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/scalerel/scalerel.sty
 Package: scalerel 2016/12/29 v1.8 Routines for constrained scaling and stretchi
 ng of objects, relative to a reference object or in absolute terms
 \thesrwidth=\skip78
@@ -1568,17 +1467,13 @@ ng of objects, relative to a reference object or in absolute terms
 \mnxsrwidth=\skip82
 \LMex=\skip83
 \LMpt=\skip84
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/adjustbox/adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
 -ends (calc, etex, pgfmath)
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/adjustbox/trimclip.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/adjustbox/trimclip.sty
 Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \collectedbox=\box134
@@ -1588,7 +1483,6 @@ Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \tc@urx=\dimen453
 \tc@ury=\dimen454
 Package trimclip Info: Using driver 'tc-pdftex.def'.
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
@@ -1600,13 +1494,11 @@ File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 \adjbox@pheight=\dimen460
 \adjbox@pdepth=\dimen461
 \adjbox@ptotalheight=\dimen462
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
 \c@checkoddpage=\count440
 LaTeX Info: Redefining \checkoddpage on input line 45.
-))
-(/usr/local/texlive/2024/texmf-dist/tex/latex/tocloft/tocloft.sty
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has section divisions on input line 51.
 \cftparskip=\skip85
@@ -1642,8 +1534,7 @@ Package tocloft Info: The document has section divisions on input line 51.
 \cftbeforetabskip=\skip113
 \cfttabindent=\skip114
 \cfttabnumwidth=\skip115
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/xurl/xurl.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/xurl/xurl.sty
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 152.
@@ -1651,8 +1542,8 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 152.
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarypatterns.meta.code.tex
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibrarypattern
-s.meta.code.tex))
-(/usr/local/texlive/2024/texmf-dist/tex/latex/footmisc/footmisc.sty
+s.meta.code.tex)) (/usr/local/texlive/2024/texmf-dist/tex/latex/footmisc/footmi
+sc.sty
 Package: footmisc 2024/12/24 v6.0g a miscellany of footnote facilities
 \FN@temptoken=\toks63
 \footnotemargin=\dimen463
@@ -1669,16 +1560,12 @@ Package footmisc Info: Declaring symbol style lamport-robust on input line 727.
 Package footmisc Info: Declaring symbol style lamport* on input line 747.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 768
 .
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/datetime/datetime.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/datetime/datetime.sty
 Package: datetime 2015/03/20 v2.60 Date Time Package
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/fmtcount/fmtcount.sty
 Package: fmtcount 2024/10/18 v3.09
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/fmtcount/fcprefix.sty
 Package: fcprefix 2012/09/28
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
 Package: fcnumparser 2017/06/15
 \fc@digit@counter=\count443
@@ -1692,8 +1579,7 @@ Package: fcnumparser 2017/06/15
 \@tmpstrctr=\count450
 \@DT@loopN=\count451
 \@DT@X=\count452
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/datetime/datetime-defaults.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/datetime/datetime-defaults.sty
 Package: datetime-defaults 2013/09/10
 )
 \@day=\count453
@@ -1716,8 +1602,7 @@ put line 308.
 LaTeX Info: Redefining \today on input line 736.
 \dt@a=\toks64
 \dt@b=\toks65
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/datenumber/datenumber.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/datenumber/datenumber.sty
 Package: datenumber 2022/01/27v0.03
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/datenumber/datenumberUSenglish.ld
@@ -1735,14 +1620,11 @@ File: datenumberUSenglish.ldf
 \@den=\count476
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/physics/physics.sty
 Package: physics 
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2024-08-16 L3 Experimental document command parser
-))
-(/usr/local/texlive/2024/texmf-dist/tex/latex/contour/contour.sty
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/contour/contour.sty
 Package: contour 2004/11/18 v2.14 Print contoured text (HH, MH)
 \con@length=\skip117
-
 Loading configuration file `contour.cfg'.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/contour/contour.cfg
 File: contour.cfg 2004/11/18 v2.14 Print contoured text (HH, MH)
@@ -1768,12 +1650,10 @@ Package translations Info: No language package found. I am going to use `englis
 h' as default language. on input line 297.
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 2
 97.
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-) (./main.aux)
-\openout1 = `main.aux'.
-
+)
+No file figures/main-figure19.aux.
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 297.
 LaTeX Font Info:    ... okay on input line 297.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 297.
@@ -1792,7 +1672,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 297.
 LaTeX Font Info:    ... okay on input line 297.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 297.
 LaTeX Font Info:    ... okay on input line 297.
-
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count490
@@ -1808,7 +1687,6 @@ LaTeX Font Info:    ... okay on input line 297.
 \everyMPtoPDFconversion=\toks67
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/grfext/grfext.sty
 Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
 )
@@ -1818,7 +1696,6 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 504.
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
@@ -1846,13 +1723,9 @@ nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 297.
+\providecommand\hyper@newdestlabel[2]{}
 Package hyperref Info: Link coloring ON on input line 297.
- (./main.out) (./main.out)
-\@outlinefile=\write4
-\openout4 = `main.out'.
-
 \c@lstlisting=\count496
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks68
@@ -1860,7 +1733,6 @@ Package: inputenc 2024/02/08 v1.3d Input encoding file
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
 
@@ -1868,7 +1740,7 @@ Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
 y
 Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
 F (HO)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/lscape.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
@@ -1939,11 +1811,9 @@ File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/ninecolors/ninecolors.sty
 Package: ninecolors 2022-02-13 v2022D Select colors with proper color contrast
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/fmtcount/fc-english.def
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2016/01/12
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
@@ -1958,20 +1828,16 @@ Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/7'
 (microtype)             (new value: 7.0pt) on input line 307.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 307
 .
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msa.cfg
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 307
 .
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msb.cfg
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/14.4
@@ -2004,7 +1870,6 @@ Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/7'
 (microtype)             (new value: 7.0pt) on input line 307.
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 30
 7.
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
@@ -2019,25 +1884,9 @@ Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/7'
 (microtype)             (new value: 7.0pt) on input line 307.
 
 
-<images/Kingston_University_London_logo_200-tablet.png, id=127, 200.75pt x 200.
-75pt>
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 329.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
-
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
-
-[1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l
-ocal/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}
-
- <./images/Kingston_University_London_logo_200-tablet.png (PNG copy)>]
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -2045,6 +1894,39 @@ ocal/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}
 > Step: parse table inner spec.
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
+The command '\includegraphics [width=2cm,valign=c]{images/image(7).jpeg}' has b
+een optimized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=2cm,valign=c]{images//profile.jpg}' has be
+en optimized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=2cm,valign=c]{images/profile.jpg}' has bee
+n optimized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=2cm,valign=c]{images//profile.jpg}' has be
+en optimized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=2cm,valign=c]{images//profile.jpg}' has be
+en optimized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=2cm,valign=c]{images/profile.jpg}' has bee
+n optimized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=2cm,valign=c]{images/profile.jpg}' has bee
+n optimized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=2cm,valign=c]{images/profile.jpg}' has bee
+n optimized away. Use '/tikz/external/optimize=false' to disable this.
+> Step: build the whole table.
+The command '\includegraphics [width=2cm,valign=c]{images/image(7).jpeg}' has b
+een optimized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=2cm,valign=c]{images//profile.jpg}' has be
+en optimized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=2cm,valign=c]{images/profile.jpg}' has bee
+n optimized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=2cm,valign=c]{images//profile.jpg}' has be
+en optimized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=2cm,valign=c]{images//profile.jpg}' has be
+en optimized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=2cm,valign=c]{images/profile.jpg}' has bee
+n optimized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=2cm,valign=c]{images/profile.jpg}' has bee
+n optimized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=2cm,valign=c]{images/profile.jpg}' has bee
+n optimized away. Use '/tikz/external/optimize=false' to disable this.
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/12
 '
 (microtype)             (new value: 12.0pt) on input line 352.
@@ -2087,90 +1969,19 @@ Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/8'
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/6'
 
 (microtype)             (new value: 6.0pt) on input line 352.
-<images/image(7).jpeg, id=135, 1036.87375pt x 1309.89375pt>
-File: images/image(7).jpeg Graphic file (type jpg)
-<use images/image(7).jpeg>
-Package pdftex.def Info: images/image(7).jpeg  used on input line 352.
-(pdftex.def)             Requested size: 56.9055pt x 71.87448pt.
-<images//profile.jpg, id=136, 903.375pt x 831.105pt>
-File: images//profile.jpg Graphic file (type jpg)
-<use images//profile.jpg>
-Package pdftex.def Info: images//profile.jpg  used on input line 352.
-(pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-<images/profile.jpg, id=137, 903.375pt x 831.105pt>
-File: images/profile.jpg Graphic file (type jpg)
-<use images/profile.jpg>
-Package pdftex.def Info: images/profile.jpg  used on input line 352.
-(pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-File: images//profile.jpg Graphic file (type jpg)
-<use images//profile.jpg>
-Package pdftex.def Info: images//profile.jpg  used on input line 352.
-(pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-File: images//profile.jpg Graphic file (type jpg)
-<use images//profile.jpg>
-Package pdftex.def Info: images//profile.jpg  used on input line 352.
-(pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-File: images/profile.jpg Graphic file (type jpg)
-<use images/profile.jpg>
-Package pdftex.def Info: images/profile.jpg  used on input line 352.
-(pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-File: images/profile.jpg Graphic file (type jpg)
-<use images/profile.jpg>
-Package pdftex.def Info: images/profile.jpg  used on input line 352.
-(pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-File: images/profile.jpg Graphic file (type jpg)
-<use images/profile.jpg>
-Package pdftex.def Info: images/profile.jpg  used on input line 352.
-(pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-> Step: build the whole table.
-File: images/image(7).jpeg Graphic file (type jpg)
-<use images/image(7).jpeg>
-Package pdftex.def Info: images/image(7).jpeg  used on input line 352.
-(pdftex.def)             Requested size: 56.9055pt x 71.87448pt.
-File: images//profile.jpg Graphic file (type jpg)
-<use images//profile.jpg>
-Package pdftex.def Info: images//profile.jpg  used on input line 352.
-(pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-File: images/profile.jpg Graphic file (type jpg)
-<use images/profile.jpg>
-Package pdftex.def Info: images/profile.jpg  used on input line 352.
-(pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-File: images//profile.jpg Graphic file (type jpg)
-<use images//profile.jpg>
-Package pdftex.def Info: images//profile.jpg  used on input line 352.
-(pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-File: images//profile.jpg Graphic file (type jpg)
-<use images//profile.jpg>
-Package pdftex.def Info: images//profile.jpg  used on input line 352.
-(pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-File: images/profile.jpg Graphic file (type jpg)
-<use images/profile.jpg>
-Package pdftex.def Info: images/profile.jpg  used on input line 352.
-(pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-File: images/profile.jpg Graphic file (type jpg)
-<use images/profile.jpg>
-Package pdftex.def Info: images/profile.jpg  used on input line 352.
-(pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-File: images/profile.jpg Graphic file (type jpg)
-<use images/profile.jpg>
-Package pdftex.def Info: images/profile.jpg  used on input line 352.
-(pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
 
 
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 356.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
 
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
+Overfull \vbox (198.03142pt too high) has occurred while \output is active []
 
-[2 <./images/Image(7).jpeg> <./images//profile.jpg> <./images/profile.jpg>]
+
+
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: letterpaper
@@ -2203,87 +2014,47 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
-(./main.toc
-Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/5'
-
-(microtype)             (new value: 5.0pt) on input line 1.
-Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/5'
-(microtype)             (new value: 5.0pt) on input line 1.
-Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/5'
-(microtype)             (new value: 5.0pt) on input line 1.
-Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/5'
-(microtype)             (new value: 5.0pt) on input line 1.
-Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/5'
-(microtype)             (new value: 5.0pt) on input line 1.
-Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/5'
-
-(microtype)             (new value: 5.0pt) on input line 1.
-)
-\tf@toc=\write5
-\openout5 = `main.toc'.
+No file figures/main-figure19.toc.
 
 
 
-[3
 
-]
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
 
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 375.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
-
-[4
-
-{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}]
-
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 386.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
-
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
-
-[5]
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 4
 04.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-===== Image 'figures/main-figure0' is up-to-date. ======
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 437.
 See the caption package documentation for explanation.
 
-===== Image 'figures/main-figure1' is up-to-date. ======
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 496.
 See the caption package documentation for explanation.
 
-===== Image 'figures/main-figure2' is up-to-date. ======
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 538.
 See the caption package documentation for explanation.
 
-===== Image 'figures/main-figure3' is up-to-date. ======
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 578.
@@ -2291,25 +2062,10 @@ See the caption package documentation for explanation.
 
 
 
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 589.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
 
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
-
-[6
-
-{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{/us
-r/local/texlive/2024/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc} <./figu
-res/main-figure0.pdf> <./figures/main-figure1.pdf> <./figures/main-figure2.pdf>
- <./figures/main-figure3.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 590--593
 
  []
@@ -2324,91 +2080,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 601--604
 
  []
 
-===== Image 'figures/main-figure4' is up-to-date. ======
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 
 
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 651.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
 
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
+LaTeX Warning: Reference `eq:pressure' on page 9 undefined on input line 660.
 
-[7 <./figures/main-figure4.pdf>]
-<images/ezgif-42a6b97cab4453(2).jpg, id=293, 1300.86pt x 815.045pt>
-File: images/ezgif-42a6b97cab4453(2).jpg Graphic file (type jpg)
-<use images/ezgif-42a6b97cab4453(2).jpg>
-Package pdftex.def Info: images/ezgif-42a6b97cab4453(2).jpg  used on input line
- 668.
-(pdftex.def)             Requested size: 160.27116pt x 100.41286pt.
-
+The command '\includegraphics [width=1.1\textwidth ]{images/ezgif-42a6b97cab445
+3(2)}' has been optimized away. Use '/tikz/external/optimize=false' to disable 
+this.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 669.
 See the caption package documentation for explanation.
 
-
-Overfull \hbox (4.85094pt too wide) in paragraph at lines 667--669
- []|  [] 
- []
-
-<images/ctype-ezgif.com-webp-to-jpg-converter.jpg, id=294, 692.5875pt x 633.366
-26pt>
-File: images/ctype-ezgif.com-webp-to-jpg-converter.jpg Graphic file (type jpg)
-<use images/ctype-ezgif.com-webp-to-jpg-converter.jpg>
-Package pdftex.def Info: images/ctype-ezgif.com-webp-to-jpg-converter.jpg  used
- on input line 678.
-(pdftex.def)             Requested size: 145.70026pt x 133.24278pt.
+The command '\includegraphics [width=1\textwidth ]{images/ctype-ezgif.com-webp-
+to-jpg-converter.jpg}' has been optimized away. Use '/tikz/external/optimize=fa
+lse' to disable this.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 679.
 See the caption package documentation for explanation.
 
-<images/helix-ezgif.com-webp-to-jpg-converter.jpg, id=295, 1086.0575pt x 646.41
-5pt>
-File: images/helix-ezgif.com-webp-to-jpg-converter.jpg Graphic file (type jpg)
-<use images/helix-ezgif.com-webp-to-jpg-converter.jpg>
-Package pdftex.def Info: images/helix-ezgif.com-webp-to-jpg-converter.jpg  used
- on input line 689.
-(pdftex.def)             Requested size: 242.83128pt x 144.52965pt.
+The command '\includegraphics [width=0.5\textwidth ]{images/helix-ezgif.com-web
+p-to-jpg-converter.jpg}' has been optimized away. Use '/tikz/external/optimize=
+false' to disable this.
 
 
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 696.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
 
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[8 <./images/ezgif-42a6b97cab4453(2).jpg> <./images/ctype-ezgif.com-webp-to-jpg
--converter.jpg>]
-
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 698.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
-
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
-
-[9 <./images/helix-ezgif.com-webp-to-jpg-converter.jpg>]
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: letterpaper
@@ -2450,7 +2160,6 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
 
-
 Package caption Warning: \setcaptiontype
 (caption)                outside box or environment on input line 720.
 See the caption package documentation for explanation.
@@ -2467,6 +2176,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 760--761
 
 
 
+<images/Kingston_University_London_logo_200-tablet.png, id=43, 200.75pt x 200.7
+5pt>
 File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
@@ -2480,67 +2191,25 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[10
 
-]
 
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 780.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+The command '\includegraphics [width=1\textwidth ,cfbox=gray!15 1pt]{images/tab
+leland-1_page-0001.jpg}' has been optimized away. Use '/tikz/external/optimize=
+false' to disable this.
 
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
-
-[11]
-===== Image 'figures/main-figure5' is up-to-date. ======
-<images/tableland-1_page-0001.jpg, id=325, 794.97pt x 614.295pt>
-File: images/tableland-1_page-0001.jpg Graphic file (type jpg)
-<use images/tableland-1_page-0001.jpg>
-Package pdftex.def Info: images/tableland-1_page-0001.jpg  used on input line 8
-08.
-(pdftex.def)             Requested size: 498.66258pt x 385.33943pt.
-
-Overfull \hbox (8.0pt too wide) in paragraph at lines 808--809
- [][] 
- []
+LaTeX Warning: Reference `fig:pressurestable' on page 13 undefined on input lin
+e 815.
 
 
 
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 812.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
-
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
-
-[12 <./figures/main-figure5.pdf>]
-
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 817.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
-
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
-
-[13 <./images/tableland-1_page-0001.jpg>]
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: letterpaper
@@ -2575,7 +2244,6 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 LaTeX Font Info:    Trying to load font information for OT1+phv on input line 8
 24.
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 )
@@ -2584,42 +2252,26 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-===== Image 'figures/main-figure6' is up-to-date. ======
+LaTeX Warning: Reference `fig:DPI-603' on page 14 undefined on input line 824.
 
-Overfull \hbox (7.41907pt too wide) in paragraph at lines 832--850
- []|  [] 
- []
-
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 
 Underfull \hbox (badness 10000) in paragraph at lines 819--856
 
  []
 
-<images/Image(1).jpg, id=349, 3276.24pt x 2457.18pt>
-File: images/Image(1).jpg Graphic file (type jpg)
-<use images/Image(1).jpg>
-Package pdftex.def Info: images/Image(1).jpg  used on input line 869.
-(pdftex.def)             Requested size: 121.17305pt x 90.84674pt.
+The command '\includegraphics [width=1.2\textwidth ]{images/Image(1).jpg}' has 
+been optimized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [width=1.2\textwidth ]{images/Image(6).jpg}' has 
+been optimized away. Use '/tikz/external/optimize=false' to disable this.
 
-Overfull \hbox (20.19525pt too wide) in paragraph at lines 869--869
+Overfull \hbox (395.35896pt too wide) in paragraph at lines 870--871
  [][] 
  []
 
-<images/Image(6).jpg, id=350, 2069.7325pt x 2151.03625pt>
-File: images/Image(6).jpg Graphic file (type jpg)
-<use images/Image(6).jpg>
-Package pdftex.def Info: images/Image(6).jpg  used on input line 870.
-(pdftex.def)             Requested size: 121.17305pt x 125.90569pt.
-
-Overfull \hbox (20.19525pt too wide) in paragraph at lines 870--871
- [][] 
- []
-
-<images/Image(2).jpg, id=351, 469.755pt x 2155.05125pt>
-File: images/Image(2).jpg Graphic file (type jpg)
-<use images/Image(2).jpg>
-Package pdftex.def Info: images/Image(2).jpg  used on input line 873.
-(pdftex.def)             Requested size: 49.36678pt x 226.46791pt.
+The command '\includegraphics [width=0.55\textwidth ]{images/Image(2).jpg}' has
+ been optimized away. Use '/tikz/external/optimize=false' to disable this.
 
 Overfull \hbox (10.79993pt too wide) in paragraph at lines 867--876
 [] $[]$ 
@@ -2631,24 +2283,18 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 
+LaTeX Warning: Reference `fig:pressure_measurement_bench' on page 14 undefined 
+on input line 878.
 
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 890.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
+LaTeX Warning: Reference `fig:pressurestable' on page 14 undefined on input lin
+e 882.
 
-[14
 
- <./figures/main-figure6.pdf> <./images/Image(1).jpg> <./images/Image(6).jpg> <
-./images/Image(2).jpg>]
+
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: letterpaper
@@ -2689,7 +2335,6 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
-
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 922.
@@ -2891,9 +2536,14 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[15
 
-]
+LaTeX Warning: Reference `fig:pressurestable' on page 16 undefined on input lin
+e 1191.
+
+
+LaTeX Warning: Reference `table:Pressure_Unit_Conversions' on page 16 undefined
+ on input line 1192.
+
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -2993,9 +2643,6 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[16
-
-]
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -3004,7 +2651,6 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
-
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1455.
@@ -3103,19 +2749,12 @@ Overfull \hbox (28.14932pt too wide) in paragraph at lines 1427--1574
 
 PGFPlots: reading {data/same_units/Bourden_Gauge_bar.csv}
 PGFPlots: reading {data/same_units/Pressure_Calibrator_bar.csv}
-===== Image 'figures/main-figure7' is up-to-date. ======
-
-Overfull \hbox (8.11813pt too wide) in paragraph at lines 1589--1635
- [][] 
- []
-
-===== Image 'figures/main-figure8' is up-to-date. ======
-===== Image 'figures/main-figure9' is up-to-date. ======
-
-Overfull \hbox (6.70384pt too wide) in paragraph at lines 1687--1740
- [][] 
- []
-
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 
 Overfull \hbox (66.01102pt too wide) in paragraph at lines 1586--1742
 |  $[]$ 
@@ -3128,21 +2767,9 @@ Overfull \hbox (28.14932pt too wide) in paragraph at lines 1743--1758
 
 
 
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1760.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
-
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
-
-[17 <./figures/main-figure7.pdf> <./figures/main-figure8.pdf> <./figures/main-f
-igure9.pdf>]
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: letterpaper
@@ -3176,25 +2803,12 @@ igure9.pdf>]
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 PGFPlots: reading {data/same_units/Bourden_Gauge_2_bar.csv}
-
-===== Image 'figures/main-figure10' is up-to-date. ======
-
-Overfull \hbox (8.11813pt too wide) in paragraph at lines 1772--1820
- [][] 
- []
-
-===== Image 'figures/main-figure11' is up-to-date. ======
-
-Overfull \hbox (0.75462pt too wide) in paragraph at lines 1823--1872
- [][] 
- []
-
-===== Image 'figures/main-figure12' is up-to-date. ======
-
-Overfull \hbox (6.71187pt too wide) in paragraph at lines 1874--1928
- [][] 
- []
-
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 
 Overfull \hbox (66.01102pt too wide) in paragraph at lines 1769--1930
 |  $[]$ 
@@ -3206,24 +2820,12 @@ Overfull \hbox (28.14932pt too wide) in paragraph at lines 1931--1946
  []
 
 PGFPlots: reading {data/same_units/Bundenburg_Gauge_bar.csv}
-===== Image 'figures/main-figure13' is up-to-date. ======
-
-Overfull \hbox (8.11813pt too wide) in paragraph at lines 1959--2007
- [][] 
- []
-
-===== Image 'figures/main-figure14' is up-to-date. ======
-
-Overfull \hbox (0.75462pt too wide) in paragraph at lines 2010--2059
- [][] 
- []
-
-===== Image 'figures/main-figure15' is up-to-date. ======
-
-Overfull \hbox (6.71388pt too wide) in paragraph at lines 2061--2115
- [][] 
- []
-
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 
 Overfull \hbox (66.01102pt too wide) in paragraph at lines 1956--2117
 |  $[]$ 
@@ -3235,24 +2837,12 @@ Overfull \hbox (28.14932pt too wide) in paragraph at lines 2118--2133
  []
 
 PGFPlots: reading {data/same_units/Hg_Glass_bar.csv}
-===== Image 'figures/main-figure16' is up-to-date. ======
-
-Overfull \hbox (8.11813pt too wide) in paragraph at lines 2146--2194
- [][] 
- []
-
-===== Image 'figures/main-figure17' is up-to-date. ======
-
-Overfull \hbox (0.75462pt too wide) in paragraph at lines 2197--2246
- [][] 
- []
-
-===== Image 'figures/main-figure18' is up-to-date. ======
-
-Overfull \hbox (6.71388pt too wide) in paragraph at lines 2248--2302
- [][] 
- []
-
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
 
 Overfull \hbox (66.01102pt too wide) in paragraph at lines 2143--2304
 |  $[]$ 
@@ -3265,25 +2855,9 @@ Overfull \hbox (28.14932pt too wide) in paragraph at lines 2305--2320
 
 
 
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 2321.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
-
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
-
-[18
-
- <./figures/main-figure10.pdf> <./figures/main-figure11.pdf> <./figures/main-fi
-gure12.pdf> <./figures/main-figure13.pdf> <./figures/main-figure14.pdf> <./figu
-res/main-figure15.pdf> <./figures/main-figure16.pdf> <./figures/main-figure17.p
-df> <./figures/main-figure18.pdf>]
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -3291,13 +2865,12 @@ df> <./figures/main-figure18.pdf>]
 > Step: parse table inner spec.
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
-
 
 Package tabularray Warning: Table width is too small, need 12.79999pt more!
 
 > Step: build the whole table.
 
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 2344--2345
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 2339--2340
  [][] 
  []
 
@@ -3313,7 +2886,38 @@ Package tabularray Warning: Table width is too small, need 25.19997pt more!
 
 > Step: build the whole table.
 
-Overfull \hbox (25.19997pt too wide) in paragraph at lines 2361--2362
+Overfull \hbox (25.19997pt too wide) in paragraph at lines 2356--2357
+ [][] 
+ []
+
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+
+Overfull \hbox (3.40144pt too wide) in paragraph at lines 2373--2373
+ [][]\OT1/ptm/m/n/12 (-20) +106.79% 
+ []
+
+
+Package tabularray Warning: Table width is too small, need 25.19997pt more!
+
+
+Overfull \hbox (3.40144pt too wide) in paragraph at lines 2373--2373
+ [][]\OT1/ptm/m/n/12 (-20) +106.79% 
+ []
+
+> Step: build the whole table.
+
+Overfull \hbox (3.40144pt too wide) in paragraph at lines 2373--2373
+ [][]\OT1/ptm/m/n/12 (-20) +106.79% 
+ []
+
+
+Overfull \hbox (25.19997pt too wide) in paragraph at lines 2373--2374
  [][] 
  []
 
@@ -3329,98 +2933,59 @@ Package tabularray Warning: Table width is too small, need 25.19997pt more!
 
 > Step: build the whole table.
 
-Overfull \hbox (25.19997pt too wide) in paragraph at lines 2378--2379
- [][] 
- []
-
-> Step: init table outer spec.
-> Step: parse table options.
-> Step: split table.
-> Step: init table inner spec.
-> Step: parse table inner spec.
-> Step: execute table commands.
-> Step: calculate cell and line sizes.
-
-Package tabularray Warning: Table width is too small, need 25.19997pt more!
-
-> Step: build the whole table.
-
-Overfull \hbox (25.19997pt too wide) in paragraph at lines 2395--2396
+Overfull \hbox (25.19997pt too wide) in paragraph at lines 2390--2391
  [][] 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 2399.
+(caption)                particular \caption on input line 2394.
 See the caption package documentation for explanation.
 
-===== Image 'figures/main-figure19' is up-to-date. ======
+\openout4 = `figures/main-figure19.dpth'.
 
+Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/5'
 
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 2470.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
+(microtype)             (new value: 5.0pt) on input line 2460.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/5'
+(microtype)             (new value: 5.0pt) on input line 2460.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/5'
+(microtype)             (new value: 5.0pt) on input line 2460.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/5'
+(microtype)             (new value: 5.0pt) on input line 2460.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/5'
+(microtype)             (new value: 5.0pt) on input line 2460.
+Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/5'
 
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
-
+(microtype)             (new value: 5.0pt) on input line 2460.
 [19
 
- <./figures/main-figure19.pdf>]
+\providecommand \oddpage@label [2]{}
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
+al/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2024
+/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}]
 
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 2474.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
 
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[20]
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
 
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 2476.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
 
-[21]
 
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 2479.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
-
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
-
-[22]
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 2
-485.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+480.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -3428,78 +2993,42 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 24
-89.
-
+84.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 2492.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
 
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[23]
-
-File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
-png)
-<use images/Kingston_University_London_logo_200-tablet.png>
-Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 2497.
-(pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
-
-Package fancyhdr Warning: \headheight is too small (30.0pt): 
-(fancyhdr)                Make it at least 37.74326pt, for example:
-(fancyhdr)                \setlength{\headheight}{37.74326pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
-
-[24] (./main.aux)
+The command '\includegraphics [height=1.2cm]{images/Kingston_University_London_
+logo_200-tablet.png}' has been optimized away. Use '/tikz/external/optimize=fal
+se' to disable this.
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7406A46A390C77C44ADBA47E36A03D4C;3106.
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 78218 strings out of 473201
- 1932360 string characters out of 5716126
- 3046856 words of memory out of 5000000
- 100014 multiletter control sequences out of 15000+600000
- 659876 words of font info for 406 fonts, out of 8000000 for 9000
+ 78384 strings out of 473201
+ 1940801 string characters out of 5716126
+ 3045186 words of memory out of 5000000
+ 100390 multiletter control sequences out of 15000+600000
+ 644222 words of font info for 338 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,20n,117p,1049b,1476s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,21n,120p,1073b,2517s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol10.pf
-b></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol12.pf
-b></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol5.pfb
-></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol8.pfb>
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
-usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
-sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
-/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
-ocal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local
-/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/te
-xlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
-ve/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2024/
-texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2024/texmf-d
-ist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2024/texmf-dist/fon
-ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/u
-rw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/u
-tmri8a.pfb>
-Output written on main.pdf (24 pages, 4018264 bytes).
+b></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+</usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on figures/main-figure19.pdf (1 page, 42842 bytes).
 PDF statistics:
- 764 PDF objects out of 1000 (max. 8388607)
- 570 compressed objects within 6 object streams
- 95 named destinations out of 1000 (max. 500000)
- 75744 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 75 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
+ 2 named destinations out of 1000 (max. 500000)
+ 56994 words of extra memory for PDF output out of 61914 (max. 10000000)
 
