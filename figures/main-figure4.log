@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  25 MAR 2025 23:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  27 MAR 2025 00:24
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2105,20 +2105,6 @@ Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/5'
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/5'
 
 (microtype)             (new value: 5.0pt) on input line 632.
-Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/9'
-
-(microtype)             (new value: 9.0pt) on input line 651.
-Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/9'
-(microtype)             (new value: 9.0pt) on input line 651.
-Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/9'
-(microtype)             (new value: 9.0pt) on input line 651.
-Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/9'
-(microtype)             (new value: 9.0pt) on input line 651.
-Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/9'
-(microtype)             (new value: 9.0pt) on input line 651.
-Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/9'
-
-(microtype)             (new value: 9.0pt) on input line 651.
 [8
 
 \providecommand \oddpage@label [2]{}
@@ -2935,18 +2921,18 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 78161 strings out of 473201
- 1933124 string characters out of 5716126
- 3044226 words of memory out of 5000000
- 100131 multiletter control sequences out of 15000+600000
- 649937 words of font info for 360 fonts, out of 8000000 for 9000
+ 78119 strings out of 473201
+ 1932421 string characters out of 5716126
+ 3044194 words of memory out of 5000000
+ 100101 multiletter control sequences out of 15000+600000
+ 645625 words of font info for 345 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,20n,120p,1073b,1476s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on figures/main-figure4.pdf (1 page, 14066 bytes).
+Output written on figures/main-figure4.pdf (1 page, 14061 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  30 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
- 68270 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 67246 words of extra memory for PDF output out of 74296 (max. 10000000)
 

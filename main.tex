@@ -390,20 +390,11 @@ In this experiment, we calibrated and compared the performance of multiple press
 When we talk about pressure, the first thing that comes to mind is its physical definition. It refers to the effect or various types of deflection when a force is applied to a surface.\vspace{-0.5em}
 \begin{center}
 	\begin{minipage}{0.51\textwidth}
-		\centering\hspace{-3em}
-		\begin{minipage}{0.45\textwidth}
+		\centering
 			\begin{equation}
 				P = \frac{F}{A}
 				\label{eq:pressure}
 			\end{equation}
-		\end{minipage}\,,\hspace{0.3em}
-		\begin{minipage}{0.45\textwidth}
-			\vspace{-0.6em}
-			\begin{equation}
-				P_{\text{local}} = \frac{dF}{dA}
-				\label{eq:localpressure}
-			\end{equation}	
-		\end{minipage}\\[1em]
 		\hspace*{2em}\wm{0.9}{
 			\begin{itemize}[itemsep=-1mm]
 				\item \( P \) = Pressure (Pa, Pascal)
@@ -411,7 +402,11 @@ When we talk about pressure, the first thing that comes to mind is its physical 
 				\item \( A \) = Surface area (m\(^2\))
 			\end{itemize}
 		}\\[9pt]\raggedright
-		Local pressure \( P_{\text{local}}\) varies spatially. It peaks under concentrated loads (red zone) and vanishes at free edges (blue zone).\\[5pt] 
+		Local pressure \( P_{\text{local}}\) varies spatially. It peaks under concentrated loads (red zone) and vanishes at free edges (blue zone).\\[-1em]
+		\begin{equation}
+			P_{\text{local}} = \frac{dF}{dA}
+			\label{eq:localpressure}
+		\end{equation}	
 		Critical for analyzing stress concentrations in engineering designs.
 	\end{minipage}
 	\hfill
@@ -422,13 +417,13 @@ When we talk about pressure, the first thing that comes to mind is its physical 
 			\coordinate (c2) at (-1,0,1);
 			\coordinate (c3) at (-1,0,-1);
 			\coordinate (c4) at (1,0,-1);
-			\fill[blue!70!black] (c1) -- (c2) -- (c3) -- (c4) -- cycle;
+			\fill[blue!70!black,opacity=0.3] (c1) -- (c2) -- (c3) -- (c4) -- cycle;
 			\begin{scope}
 				\clip (c1) -- (c2) -- (c3) -- (c4) -- cycle;
 				\begin{scope}[canvas is xz plane at y=0]
-					\shade[inner color=red, outer color=blue!70!black, shading=radial] 
+					\shade[inner color=red, outer color=blue!70!black, shading=radial,opacity=0.3] 
 					(0,0) circle (1.36cm);
-					\shade[inner color=red, outer color=blue!70!black, shading=radial] 
+					\shade[inner color=red, outer color=blue!70!black!50!white, shading=radial, opacity=0.3] 
 					(0,0) circle (1.2cm);
 				\end{scope}
 			\end{scope}
@@ -441,9 +436,8 @@ When we talk about pressure, the first thing that comes to mind is its physical 
 		\vspace{-1em}
 		\captionof{figure}{Illustration of pressure application}
 		\label{fig:pressure}\raggedright
-		\vspace{1em}Average pressure assumes uniform distribution. Local pressure reveals real-world stress hotspots.
+		\vspace{1em}Average pressure $\left(P\right)$ assumes uniform distribution. Local pressure $\left(P_{local}\right)$ reveals real-world stress hotspots.
 \end{minipage}\end{center}
-The type of deflection caused by pressure depends on its magnitude and the duration of application. Pressure has numerous examples and applications, such as vehicle tires and press machines.\\[8pt]
 Pressure measurement fundamentally relies on observing its physical effects on measurable systems. The accompanying figures demonstrate three classical approaches:\\[1em]
 \begin{minipage}{1\textwidth}
 \begin{minipage}{0.3\textwidth}\centering
@@ -583,7 +577,7 @@ Pressure measurement fundamentally relies on observing its physical effects on m
 \end{tikzpicture}
 \vspace{0.2em}\captionof{figure}{Sealed manometers}
 \end{minipage}
-\end{minipage}\\[-0.6em]
+\end{minipage}\\[0em]
 Each technique quantifies pressure by correlating it with dimensional changes - either in liquid column elevation or elastic element deformation. The choice between methods depends on required precision, pressure range, and whether absolute or differential measurements are needed.
 Pressure is categorized into two main groups:\\
 \begin{minipage}{0.49\textwidth}
@@ -593,7 +587,7 @@ Absolute pressure, or absolute zero pressure, is the lowest possible pressure me
 \subsection{Gauge Pressure}
 Gauge pressure, also known as relative pressure, is measured relative to local atmospheric pressure. Since we live under constant atmospheric pressure, it is often convenient to measure the difference between actual pressure and atmospheric pressure, which is referred to as gauge pressure. This measurement is commonly used in industrial applications.\end{minipage}
 \newpage
-
+\noindent
 It is important to note that:\\[-5pt]
 \begin{itemize}
 	\item Any pressure between local atmospheric pressure and absolute zero pressure is called \textbf{vacuum pressure}.
@@ -648,9 +642,9 @@ The following diagram illustrates the definitions of pressure more clearly.\\[8p
 	
 	\node[right] at (0,\lapy-0.4) {\footnotesize \textcolor{blue!70!white}{\textsf{Local Atmospheric Pressure}}};
 	
-	\node[right] at (0,\lapy*2.4) {\small\wm{0.2}{\textsf{Positive\\ Pressure}}};
-	\node[right] at (0,\lapy-\lapy) {\small\wm{0.2}{\textsf{Negative\\ Pressure\\ (Vacuum)}}};
-	\node[left=-0.2cm] at (\floorx*0.5,-0.5) {\wm{0.3}{\small\textsf{Absolute Zero Pressure}}};
+	\node[right] at (0,\lapy*2.4) {\scriptsize\wm{0.2}{\textsf{Positive\\ Pressure}}};
+	\node[right] at (0,\lapy-\lapy) {\scriptsize\wm{0.2}{\textsf{Negative\\ Pressure\\ (Vacuum)}}};
+	\node[left=-0.2cm] at (\floorx*0.5,-0.5) {\wm{0.3}{\scriptsize\textsf{Absolute Zero Pressure}}};
 \end{tikzpicture}
 \end{center}
 
