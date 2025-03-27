@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  27 MAR 2025 20:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  27 MAR 2025 22:47
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2019,7 +2019,7 @@ Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/7'
 (microtype)             (new value: 7.0pt) on input line 307.
 
 
-<images/Kingston_University_London_logo_200-tablet.png, id=127, 200.75pt x 200.
+<images/Kingston_University_London_logo_200-tablet.png, id=131, 200.75pt x 200.
 75pt>
 File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
 png)
@@ -2047,113 +2047,119 @@ ocal/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}
 > Step: calculate cell and line sizes.
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/12
 '
-(microtype)             (new value: 12.0pt) on input line 352.
+(microtype)             (new value: 12.0pt) on input line 353.
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/8'
 
-(microtype)             (new value: 8.0pt) on input line 352.
+(microtype)             (new value: 8.0pt) on input line 353.
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/6'
 
-(microtype)             (new value: 6.0pt) on input line 352.
+(microtype)             (new value: 6.0pt) on input line 353.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/12'
-(microtype)             (new value: 12.0pt) on input line 352.
+(microtype)             (new value: 12.0pt) on input line 353.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/8'
-(microtype)             (new value: 8.0pt) on input line 352.
+(microtype)             (new value: 8.0pt) on input line 353.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/6'
-(microtype)             (new value: 6.0pt) on input line 352.
+(microtype)             (new value: 6.0pt) on input line 353.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/12'
-(microtype)             (new value: 12.0pt) on input line 352.
+(microtype)             (new value: 12.0pt) on input line 353.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/8'
-(microtype)             (new value: 8.0pt) on input line 352.
+(microtype)             (new value: 8.0pt) on input line 353.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/6'
-(microtype)             (new value: 6.0pt) on input line 352.
+(microtype)             (new value: 6.0pt) on input line 353.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/12'
-(microtype)             (new value: 12.0pt) on input line 352.
+(microtype)             (new value: 12.0pt) on input line 353.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/8'
-(microtype)             (new value: 8.0pt) on input line 352.
+(microtype)             (new value: 8.0pt) on input line 353.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/6'
-(microtype)             (new value: 6.0pt) on input line 352.
+(microtype)             (new value: 6.0pt) on input line 353.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/12'
-(microtype)             (new value: 12.0pt) on input line 352.
+(microtype)             (new value: 12.0pt) on input line 353.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/8'
-(microtype)             (new value: 8.0pt) on input line 352.
+(microtype)             (new value: 8.0pt) on input line 353.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/6'
-(microtype)             (new value: 6.0pt) on input line 352.
+(microtype)             (new value: 6.0pt) on input line 353.
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/12
 '
-(microtype)             (new value: 12.0pt) on input line 352.
+(microtype)             (new value: 12.0pt) on input line 353.
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/8'
 
-(microtype)             (new value: 8.0pt) on input line 352.
+(microtype)             (new value: 8.0pt) on input line 353.
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/b/n/6'
 
-(microtype)             (new value: 6.0pt) on input line 352.
-<images/image(7).jpeg, id=135, 1036.87375pt x 1309.89375pt>
+(microtype)             (new value: 6.0pt) on input line 353.
+<images/image(7).jpeg, id=139, 1036.87375pt x 1309.89375pt>
 File: images/image(7).jpeg Graphic file (type jpg)
 <use images/image(7).jpeg>
-Package pdftex.def Info: images/image(7).jpeg  used on input line 352.
+Package pdftex.def Info: images/image(7).jpeg  used on input line 353.
 (pdftex.def)             Requested size: 56.9055pt x 71.87448pt.
-<images//profile.jpg, id=136, 903.375pt x 831.105pt>
-File: images//profile.jpg Graphic file (type jpg)
-<use images//profile.jpg>
-Package pdftex.def Info: images//profile.jpg  used on input line 352.
+<images/8_orgid_297f9608-cce6-40e3-adc2-86e161e7141f.jpg, id=140, 72.27pt x 72.
+27pt>
+File: images/8_orgid_297f9608-cce6-40e3-adc2-86e161e7141f.jpg Graphic file (typ
+e jpg)
+<use images/8_orgid_297f9608-cce6-40e3-adc2-86e161e7141f.jpg>
+Package pdftex.def Info: images/8_orgid_297f9608-cce6-40e3-adc2-86e161e7141f.jp
+g  used on input line 353.
+(pdftex.def)             Requested size: 56.9055pt x 56.90518pt.
+<images/profile.png, id=141, 903.375pt x 831.105pt>
+File: images/profile.png Graphic file (type png)
+<use images/profile.png>
+Package pdftex.def Info: images/profile.png  used on input line 353.
 (pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-<images/profile.jpg, id=137, 903.375pt x 831.105pt>
-File: images/profile.jpg Graphic file (type jpg)
-<use images/profile.jpg>
-Package pdftex.def Info: images/profile.jpg  used on input line 352.
+File: images/profile.png Graphic file (type png)
+<use images/profile.png>
+Package pdftex.def Info: images/profile.png  used on input line 353.
 (pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-File: images//profile.jpg Graphic file (type jpg)
-<use images//profile.jpg>
-Package pdftex.def Info: images//profile.jpg  used on input line 352.
+File: images/profile.png Graphic file (type png)
+<use images/profile.png>
+Package pdftex.def Info: images/profile.png  used on input line 353.
 (pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-File: images//profile.jpg Graphic file (type jpg)
-<use images//profile.jpg>
-Package pdftex.def Info: images//profile.jpg  used on input line 352.
+<images/Image(9).jpeg, id=143, 1194.4625pt x 1325.95375pt>
+File: images/Image(9).jpeg Graphic file (type jpg)
+<use images/Image(9).jpeg>
+Package pdftex.def Info: images/Image(9).jpeg  used on input line 353.
+(pdftex.def)             Requested size: 56.9055pt x 63.16554pt.
+File: images/profile.png Graphic file (type png)
+<use images/profile.png>
+Package pdftex.def Info: images/profile.png  used on input line 353.
 (pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-File: images/profile.jpg Graphic file (type jpg)
-<use images/profile.jpg>
-Package pdftex.def Info: images/profile.jpg  used on input line 352.
-(pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-File: images/profile.jpg Graphic file (type jpg)
-<use images/profile.jpg>
-Package pdftex.def Info: images/profile.jpg  used on input line 352.
-(pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-File: images/profile.jpg Graphic file (type jpg)
-<use images/profile.jpg>
-Package pdftex.def Info: images/profile.jpg  used on input line 352.
+File: images/profile.png Graphic file (type png)
+<use images/profile.png>
+Package pdftex.def Info: images/profile.png  used on input line 353.
 (pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
 > Step: build the whole table.
 File: images/image(7).jpeg Graphic file (type jpg)
 <use images/image(7).jpeg>
-Package pdftex.def Info: images/image(7).jpeg  used on input line 352.
+Package pdftex.def Info: images/image(7).jpeg  used on input line 353.
 (pdftex.def)             Requested size: 56.9055pt x 71.87448pt.
-File: images//profile.jpg Graphic file (type jpg)
-<use images//profile.jpg>
-Package pdftex.def Info: images//profile.jpg  used on input line 352.
+File: images/8_orgid_297f9608-cce6-40e3-adc2-86e161e7141f.jpg Graphic file (typ
+e jpg)
+<use images/8_orgid_297f9608-cce6-40e3-adc2-86e161e7141f.jpg>
+Package pdftex.def Info: images/8_orgid_297f9608-cce6-40e3-adc2-86e161e7141f.jp
+g  used on input line 353.
+(pdftex.def)             Requested size: 56.9055pt x 56.90518pt.
+File: images/profile.png Graphic file (type png)
+<use images/profile.png>
+Package pdftex.def Info: images/profile.png  used on input line 353.
 (pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-File: images/profile.jpg Graphic file (type jpg)
-<use images/profile.jpg>
-Package pdftex.def Info: images/profile.jpg  used on input line 352.
+File: images/profile.png Graphic file (type png)
+<use images/profile.png>
+Package pdftex.def Info: images/profile.png  used on input line 353.
 (pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-File: images//profile.jpg Graphic file (type jpg)
-<use images//profile.jpg>
-Package pdftex.def Info: images//profile.jpg  used on input line 352.
+File: images/profile.png Graphic file (type png)
+<use images/profile.png>
+Package pdftex.def Info: images/profile.png  used on input line 353.
 (pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-File: images//profile.jpg Graphic file (type jpg)
-<use images//profile.jpg>
-Package pdftex.def Info: images//profile.jpg  used on input line 352.
+File: images/Image(9).jpeg Graphic file (type jpg)
+<use images/Image(9).jpeg>
+Package pdftex.def Info: images/Image(9).jpeg  used on input line 353.
+(pdftex.def)             Requested size: 56.9055pt x 63.16554pt.
+File: images/profile.png Graphic file (type png)
+<use images/profile.png>
+Package pdftex.def Info: images/profile.png  used on input line 353.
 (pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-File: images/profile.jpg Graphic file (type jpg)
-<use images/profile.jpg>
-Package pdftex.def Info: images/profile.jpg  used on input line 352.
-(pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-File: images/profile.jpg Graphic file (type jpg)
-<use images/profile.jpg>
-Package pdftex.def Info: images/profile.jpg  used on input line 352.
-(pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
-File: images/profile.jpg Graphic file (type jpg)
-<use images/profile.jpg>
-Package pdftex.def Info: images/profile.jpg  used on input line 352.
+File: images/profile.png Graphic file (type png)
+<use images/profile.png>
+Package pdftex.def Info: images/profile.png  used on input line 353.
 (pdftex.def)             Requested size: 56.9055pt x 52.34975pt.
 
 
@@ -2161,7 +2167,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 356.
+ used on input line 357.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2170,7 +2176,8 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[2 <./images/Image(7).jpeg> <./images//profile.jpg> <./images/profile.jpg>]
+[2 <./images/Image(7).jpeg> <./images/8_orgid_297f9608-cce6-40e3-adc2-86e161e71
+41f.jpg> <./images/profile.png> <./images/Image(9).jpeg>]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: letterpaper
@@ -2203,8 +2210,7 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
-(./main.toc
+ (./main.toc
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/5'
 
 (microtype)             (new value: 5.0pt) on input line 1.
@@ -2233,7 +2239,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 375.
+ used on input line 376.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2244,13 +2250,13 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 [4
 
-{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}]
+]
 
 File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type 
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 386.
+ used on input line 387.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2261,32 +2267,32 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 [5]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 4
-04.
+05.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 ===== Image 'figures/main-figure0' is up-to-date. ======
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 437.
+(caption)                particular \caption on input line 438.
 See the caption package documentation for explanation.
 
 ===== Image 'figures/main-figure1' is up-to-date. ======
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 496.
+(caption)                particular \caption on input line 497.
 See the caption package documentation for explanation.
 
 ===== Image 'figures/main-figure2' is up-to-date. ======
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 538.
+(caption)                particular \caption on input line 539.
 See the caption package documentation for explanation.
 
 ===== Image 'figures/main-figure3' is up-to-date. ======
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 578.
+(caption)                particular \caption on input line 579.
 See the caption package documentation for explanation.
 
 
@@ -2295,7 +2301,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 589.
+ used on input line 590.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2310,17 +2316,17 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 r/local/texlive/2024/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc} <./figu
 res/main-figure0.pdf> <./figures/main-figure1.pdf> <./figures/main-figure2.pdf>
  <./figures/main-figure3.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 590--593
+Underfull \hbox (badness 10000) in paragraph at lines 591--594
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 596--598
+Underfull \hbox (badness 10000) in paragraph at lines 597--599
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 601--604
+Underfull \hbox (badness 10000) in paragraph at lines 602--605
 
  []
 
@@ -2331,7 +2337,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 651.
+ used on input line 652.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2340,42 +2346,43 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-7.74326pt}.
 
-[7 <./figures/main-figure4.pdf>]
-<images/ezgif-42a6b97cab4453(2).jpg, id=293, 1300.86pt x 815.045pt>
+[7{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc} <
+./figures/main-figure4.pdf>]
+<images/ezgif-42a6b97cab4453(2).jpg, id=301, 1300.86pt x 815.045pt>
 File: images/ezgif-42a6b97cab4453(2).jpg Graphic file (type jpg)
 <use images/ezgif-42a6b97cab4453(2).jpg>
 Package pdftex.def Info: images/ezgif-42a6b97cab4453(2).jpg  used on input line
- 668.
+ 669.
 (pdftex.def)             Requested size: 160.27116pt x 100.41286pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 669.
+(caption)                particular \caption on input line 670.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (4.85094pt too wide) in paragraph at lines 667--669
+Overfull \hbox (4.85094pt too wide) in paragraph at lines 668--670
  []|  [] 
  []
 
-<images/ctype-ezgif.com-webp-to-jpg-converter.jpg, id=294, 692.5875pt x 633.366
+<images/ctype-ezgif.com-webp-to-jpg-converter.jpg, id=302, 692.5875pt x 633.366
 26pt>
 File: images/ctype-ezgif.com-webp-to-jpg-converter.jpg Graphic file (type jpg)
 <use images/ctype-ezgif.com-webp-to-jpg-converter.jpg>
 Package pdftex.def Info: images/ctype-ezgif.com-webp-to-jpg-converter.jpg  used
- on input line 678.
+ on input line 679.
 (pdftex.def)             Requested size: 145.70026pt x 133.24278pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 679.
+(caption)                particular \caption on input line 680.
 See the caption package documentation for explanation.
 
-<images/helix-ezgif.com-webp-to-jpg-converter.jpg, id=295, 1086.0575pt x 646.41
+<images/helix-ezgif.com-webp-to-jpg-converter.jpg, id=303, 1086.0575pt x 646.41
 5pt>
 File: images/helix-ezgif.com-webp-to-jpg-converter.jpg Graphic file (type jpg)
 <use images/helix-ezgif.com-webp-to-jpg-converter.jpg>
 Package pdftex.def Info: images/helix-ezgif.com-webp-to-jpg-converter.jpg  used
- on input line 689.
+ on input line 690.
 (pdftex.def)             Requested size: 242.83128pt x 144.52965pt.
 
 
@@ -2383,7 +2390,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 696.
+ used on input line 697.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2399,7 +2406,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 698.
+ used on input line 702.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2452,16 +2459,16 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 
 Package caption Warning: \setcaptiontype
-(caption)                outside box or environment on input line 720.
+(caption)                outside box or environment on input line 724.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 720.
+(caption)                particular \caption on input line 724.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 760--761
+Underfull \hbox (badness 10000) in paragraph at lines 764--765
 
  []
 
@@ -2471,7 +2478,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 775.
+ used on input line 779.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2488,7 +2495,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 780.
+ used on input line 784.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2499,14 +2506,14 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 [11]
 ===== Image 'figures/main-figure5' is up-to-date. ======
-<images/tableland-1_page-0001.jpg, id=325, 794.97pt x 614.295pt>
+<images/tableland-1_page-0001.jpg, id=333, 794.97pt x 614.295pt>
 File: images/tableland-1_page-0001.jpg Graphic file (type jpg)
 <use images/tableland-1_page-0001.jpg>
 Package pdftex.def Info: images/tableland-1_page-0001.jpg  used on input line 8
-08.
+12.
 (pdftex.def)             Requested size: 498.66258pt x 385.33943pt.
 
-Overfull \hbox (8.0pt too wide) in paragraph at lines 808--809
+Overfull \hbox (8.0pt too wide) in paragraph at lines 812--813
  [][] 
  []
 
@@ -2516,7 +2523,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 812.
+ used on input line 816.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2531,7 +2538,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 817.
+ used on input line 821.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2574,7 +2581,7 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Trying to load font information for OT1+phv on input line 8
-24.
+28.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
@@ -2586,48 +2593,48 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 ===== Image 'figures/main-figure6' is up-to-date. ======
 
-Overfull \hbox (7.41907pt too wide) in paragraph at lines 832--850
+Overfull \hbox (7.41907pt too wide) in paragraph at lines 836--854
  []|  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 819--856
+Underfull \hbox (badness 10000) in paragraph at lines 823--860
 
  []
 
-<images/Image(1).jpg, id=349, 3276.24pt x 2457.18pt>
+<images/Image(1).jpg, id=357, 3276.24pt x 2457.18pt>
 File: images/Image(1).jpg Graphic file (type jpg)
 <use images/Image(1).jpg>
-Package pdftex.def Info: images/Image(1).jpg  used on input line 869.
+Package pdftex.def Info: images/Image(1).jpg  used on input line 873.
 (pdftex.def)             Requested size: 121.17305pt x 90.84674pt.
 
-Overfull \hbox (20.19525pt too wide) in paragraph at lines 869--869
+Overfull \hbox (20.19525pt too wide) in paragraph at lines 873--873
  [][] 
  []
 
-<images/Image(6).jpg, id=350, 2069.7325pt x 2151.03625pt>
+<images/Image(6).jpg, id=358, 2069.7325pt x 2151.03625pt>
 File: images/Image(6).jpg Graphic file (type jpg)
 <use images/Image(6).jpg>
-Package pdftex.def Info: images/Image(6).jpg  used on input line 870.
+Package pdftex.def Info: images/Image(6).jpg  used on input line 874.
 (pdftex.def)             Requested size: 121.17305pt x 125.90569pt.
 
-Overfull \hbox (20.19525pt too wide) in paragraph at lines 870--871
+Overfull \hbox (20.19525pt too wide) in paragraph at lines 874--875
  [][] 
  []
 
-<images/Image(2).jpg, id=351, 469.755pt x 2155.05125pt>
+<images/Image(2).jpg, id=359, 469.755pt x 2155.05125pt>
 File: images/Image(2).jpg Graphic file (type jpg)
 <use images/Image(2).jpg>
-Package pdftex.def Info: images/Image(2).jpg  used on input line 873.
+Package pdftex.def Info: images/Image(2).jpg  used on input line 877.
 (pdftex.def)             Requested size: 49.36678pt x 226.46791pt.
 
-Overfull \hbox (10.79993pt too wide) in paragraph at lines 867--876
+Overfull \hbox (10.79993pt too wide) in paragraph at lines 871--880
 [] $[]$ 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 878.
+(caption)                particular \caption on input line 882.
 See the caption package documentation for explanation.
 
 
@@ -2636,7 +2643,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 890.
+ used on input line 894.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2692,11 +2699,11 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 922.
+(caption)                particular \caption on input line 926.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (9.9724pt too wide) in paragraph at lines 900--924
+Overfull \hbox (9.9724pt too wide) in paragraph at lines 904--928
 []|  $[]$ 
  []
 
@@ -2710,11 +2717,11 @@ Overfull \hbox (9.9724pt too wide) in paragraph at lines 900--924
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 959.
+(caption)                particular \caption on input line 963.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 1577) in paragraph at lines 959--959
+Underfull \hbox (badness 1577) in paragraph at lines 963--963
 []\OT1/ptm/m/n/10 (+20) Table 3: |[]Bourdon
  []
 
@@ -2728,11 +2735,11 @@ Underfull \hbox (badness 1577) in paragraph at lines 959--959
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 984.
+(caption)                particular \caption on input line 988.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 1577) in paragraph at lines 984--984
+Underfull \hbox (badness 1577) in paragraph at lines 988--988
 []\OT1/ptm/m/n/10 (+20) Table 4: |[]Bourdon
  []
 
@@ -2746,7 +2753,7 @@ Underfull \hbox (badness 1577) in paragraph at lines 984--984
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1009.
+(caption)                particular \caption on input line 1013.
 See the caption package documentation for explanation.
 
 > Step: init table outer spec.
@@ -2759,11 +2766,11 @@ See the caption package documentation for explanation.
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1034.
+(caption)                particular \caption on input line 1038.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (10.69838pt too wide) in paragraph at lines 934--1037
+Overfull \hbox (10.69838pt too wide) in paragraph at lines 938--1041
 []$[]$ 
  []
 
@@ -2777,11 +2784,11 @@ Overfull \hbox (10.69838pt too wide) in paragraph at lines 934--1037
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1069.
+(caption)                particular \caption on input line 1073.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (9.9724pt too wide) in paragraph at lines 1047--1071
+Overfull \hbox (9.9724pt too wide) in paragraph at lines 1051--1075
 []|  $[]$ 
  []
 
@@ -2798,11 +2805,11 @@ Package tabularray Warning: Table width is too small, need 1.29333pt more!
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1106.
+(caption)                particular \caption on input line 1110.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (1.29333pt too wide) in paragraph at lines 1105--1106
+Overfull \hbox (1.29333pt too wide) in paragraph at lines 1109--1110
  [][] 
  []
 
@@ -2819,11 +2826,11 @@ Package tabularray Warning: Table width is too small, need 1.29333pt more!
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1131.
+(caption)                particular \caption on input line 1135.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (1.29333pt too wide) in paragraph at lines 1130--1131
+Overfull \hbox (1.29333pt too wide) in paragraph at lines 1134--1135
  [][] 
  []
 
@@ -2837,7 +2844,7 @@ Overfull \hbox (1.29333pt too wide) in paragraph at lines 1130--1131
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1156.
+(caption)                particular \caption on input line 1160.
 See the caption package documentation for explanation.
 
 > Step: init table outer spec.
@@ -2853,26 +2860,26 @@ Package tabularray Warning: Table width is too small, need 1.29333pt more!
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1181.
+(caption)                particular \caption on input line 1185.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (1.29333pt too wide) in paragraph at lines 1180--1181
+Overfull \hbox (1.29333pt too wide) in paragraph at lines 1184--1185
  [][] 
  []
 
 
-Overfull \hbox (10.69838pt too wide) in paragraph at lines 1081--1184
+Overfull \hbox (10.69838pt too wide) in paragraph at lines 1085--1188
 []$[]$ 
  []
 
 
-Overfull \hbox (25.74936pt too wide) in paragraph at lines 894--1188
+Overfull \hbox (25.74936pt too wide) in paragraph at lines 898--1192
 |  $[]$ 
  []
 
 
-Overfull \hbox (25.74936pt too wide) in paragraph at lines 894--1188
+Overfull \hbox (25.74936pt too wide) in paragraph at lines 898--1192
 |  $[]$ 
  []
 
@@ -2882,7 +2889,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1189.
+ used on input line 1193.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -2911,7 +2918,7 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
 
-Overfull \hbox (14.28003pt too wide) in paragraph at lines 1206--1253
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 1210--1257
  []|  $[]$ 
  []
 
@@ -2932,7 +2939,7 @@ Overfull \hbox (14.28003pt too wide) in paragraph at lines 1206--1253
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
 
-Overfull \hbox (14.28003pt too wide) in paragraph at lines 1262--1309
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 1266--1313
  []|  $[]$ 
  []
 
@@ -2953,7 +2960,7 @@ Overfull \hbox (14.28003pt too wide) in paragraph at lines 1262--1309
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
 
-Overfull \hbox (14.28003pt too wide) in paragraph at lines 1321--1368
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 1325--1372
  []|  $[]$ 
  []
 
@@ -2974,7 +2981,7 @@ Overfull \hbox (14.28003pt too wide) in paragraph at lines 1321--1368
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
 
-Overfull \hbox (14.28003pt too wide) in paragraph at lines 1377--1424
+Overfull \hbox (14.28003pt too wide) in paragraph at lines 1381--1428
  []|  $[]$ 
  []
 
@@ -2984,7 +2991,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1426.
+ used on input line 1430.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -3007,11 +3014,11 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1455.
+(caption)                particular \caption on input line 1459.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (9.9724pt too wide) in paragraph at lines 1433--1457
+Overfull \hbox (9.9724pt too wide) in paragraph at lines 1437--1461
 []|  $[]$ 
  []
 
@@ -3028,11 +3035,11 @@ Package tabularray Warning: Table width is too small, need 1.29333pt more!
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1492.
+(caption)                particular \caption on input line 1496.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (1.29333pt too wide) in paragraph at lines 1491--1492
+Overfull \hbox (1.29333pt too wide) in paragraph at lines 1495--1496
  [][] 
  []
 
@@ -3049,11 +3056,11 @@ Package tabularray Warning: Table width is too small, need 1.29333pt more!
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1517.
+(caption)                particular \caption on input line 1521.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (1.29333pt too wide) in paragraph at lines 1516--1517
+Overfull \hbox (1.29333pt too wide) in paragraph at lines 1520--1521
  [][] 
  []
 
@@ -3067,7 +3074,7 @@ Overfull \hbox (1.29333pt too wide) in paragraph at lines 1516--1517
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1542.
+(caption)                particular \caption on input line 1546.
 See the caption package documentation for explanation.
 
 > Step: init table outer spec.
@@ -3083,21 +3090,21 @@ Package tabularray Warning: Table width is too small, need 1.29333pt more!
 > Step: build the whole table.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1567.
+(caption)                particular \caption on input line 1571.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (1.29333pt too wide) in paragraph at lines 1566--1567
+Overfull \hbox (1.29333pt too wide) in paragraph at lines 1570--1571
  [][] 
  []
 
 
-Overfull \hbox (10.69838pt too wide) in paragraph at lines 1467--1570
+Overfull \hbox (10.69838pt too wide) in paragraph at lines 1471--1574
 []$[]$ 
  []
 
 
-Overfull \hbox (28.14932pt too wide) in paragraph at lines 1427--1574
+Overfull \hbox (28.14932pt too wide) in paragraph at lines 1431--1578
 []|  $[]$ 
  []
 
@@ -3105,24 +3112,24 @@ PGFPlots: reading {data/same_units/Bourden_Gauge_bar.csv}
 PGFPlots: reading {data/same_units/Pressure_Calibrator_bar.csv}
 ===== Image 'figures/main-figure7' is up-to-date. ======
 
-Overfull \hbox (8.11813pt too wide) in paragraph at lines 1589--1640
+Overfull \hbox (8.11813pt too wide) in paragraph at lines 1593--1644
  [][] 
  []
 
 ===== Image 'figures/main-figure8' is up-to-date. ======
 ===== Image 'figures/main-figure9' is up-to-date. ======
 
-Overfull \hbox (6.70384pt too wide) in paragraph at lines 1696--1759
+Overfull \hbox (6.70384pt too wide) in paragraph at lines 1700--1763
  [][] 
  []
 
 
-Overfull \hbox (66.01102pt too wide) in paragraph at lines 1586--1761
+Overfull \hbox (66.01102pt too wide) in paragraph at lines 1590--1765
 |  $[]$ 
  []
 
 
-Overfull \hbox (28.14932pt too wide) in paragraph at lines 1762--1777
+Overfull \hbox (28.14932pt too wide) in paragraph at lines 1766--1781
  |  $[]$ 
  []
 
@@ -3132,7 +3139,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 1779.
+ used on input line 1783.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -3179,99 +3186,87 @@ PGFPlots: reading {data/same_units/Bourden_Gauge_2_bar.csv}
 
 ===== Image 'figures/main-figure10' is up-to-date. ======
 
-Overfull \hbox (8.11813pt too wide) in paragraph at lines 1791--1842
+Overfull \hbox (8.11813pt too wide) in paragraph at lines 1795--1846
  [][] 
  []
 
 ===== Image 'figures/main-figure11' is up-to-date. ======
 
-Overfull \hbox (0.75462pt too wide) in paragraph at lines 1845--1898
+Overfull \hbox (0.75462pt too wide) in paragraph at lines 1849--1902
  [][] 
  []
 
 ===== Image 'figures/main-figure12' is up-to-date. ======
 
-Overfull \hbox (6.71187pt too wide) in paragraph at lines 1900--1962
+Overfull \hbox (6.71187pt too wide) in paragraph at lines 1904--1966
  [][] 
  []
 
 
-Overfull \hbox (66.01102pt too wide) in paragraph at lines 1788--1964
+Overfull \hbox (66.01102pt too wide) in paragraph at lines 1792--1968
 |  $[]$ 
  []
 
 
-Overfull \hbox (28.14932pt too wide) in paragraph at lines 1965--1980
+Overfull \hbox (28.14932pt too wide) in paragraph at lines 1969--1984
  |  $[]$ 
  []
 
 PGFPlots: reading {data/same_units/Bundenburg_Gauge_bar.csv}
 ===== Image 'figures/main-figure13' is up-to-date. ======
 
-Overfull \hbox (8.11813pt too wide) in paragraph at lines 1993--2045
+Overfull \hbox (8.11813pt too wide) in paragraph at lines 1997--2049
  [][] 
  []
 
 ===== Image 'figures/main-figure14' is up-to-date. ======
 
-Overfull \hbox (0.75462pt too wide) in paragraph at lines 2048--2102
+Overfull \hbox (0.75462pt too wide) in paragraph at lines 2052--2106
  [][] 
  []
 
 ===== Image 'figures/main-figure15' is up-to-date. ======
 
-Overfull \hbox (6.71187pt too wide) in paragraph at lines 2104--2167
+Overfull \hbox (6.71187pt too wide) in paragraph at lines 2108--2171
  [][] 
  []
 
 
-Overfull \hbox (66.01102pt too wide) in paragraph at lines 1990--2169
+Overfull \hbox (66.01102pt too wide) in paragraph at lines 1994--2173
 |  $[]$ 
  []
 
 
-Overfull \hbox (28.14932pt too wide) in paragraph at lines 2170--2185
+Overfull \hbox (28.14932pt too wide) in paragraph at lines 2174--2189
  |  $[]$ 
  []
 
 PGFPlots: reading {data/same_units/Hg_Glass_bar.csv}
-\openout3 = `figures/main-figure16.md5'.
+===== Image 'figures/main-figure16' is up-to-date. ======
 
-\openout3 = `main.auxlock'.
-
-===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "figures/main-figure16" "\def\tikzexter
-nalrealjob{main}\input{main}"' ========
-runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "figures/main-figure16" "\def\tikzexternalrealjob{main}\input{main}")...execut
-ed.
-
-\openout3 = `main.auxlock'.
-
-
-Overfull \hbox (8.11813pt too wide) in paragraph at lines 2198--2250
+Overfull \hbox (8.11813pt too wide) in paragraph at lines 2202--2254
  [][] 
  []
 
 ===== Image 'figures/main-figure17' is up-to-date. ======
 
-Overfull \hbox (0.75462pt too wide) in paragraph at lines 2253--2307
+Overfull \hbox (0.75462pt too wide) in paragraph at lines 2257--2311
  [][] 
  []
 
 ===== Image 'figures/main-figure18' is up-to-date. ======
 
-Overfull \hbox (6.71187pt too wide) in paragraph at lines 2309--2375
+Overfull \hbox (6.71187pt too wide) in paragraph at lines 2313--2379
  [][] 
  []
 
 
-Overfull \hbox (66.01102pt too wide) in paragraph at lines 2195--2377
+Overfull \hbox (66.01102pt too wide) in paragraph at lines 2199--2381
 |  $[]$ 
  []
 
 
-Overfull \hbox (28.14932pt too wide) in paragraph at lines 2378--2393
+Overfull \hbox (28.14932pt too wide) in paragraph at lines 2382--2397
  |  $[]$ 
  []
 
@@ -3281,7 +3276,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 2394.
+ used on input line 2398.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -3309,7 +3304,7 @@ Package tabularray Warning: Table width is too small, need 12.79999pt more!
 
 > Step: build the whole table.
 
-Overfull \hbox (12.79999pt too wide) in paragraph at lines 2417--2418
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 2421--2422
  [][] 
  []
 
@@ -3325,7 +3320,7 @@ Package tabularray Warning: Table width is too small, need 25.19997pt more!
 
 > Step: build the whole table.
 
-Overfull \hbox (25.19997pt too wide) in paragraph at lines 2434--2435
+Overfull \hbox (25.19997pt too wide) in paragraph at lines 2438--2439
  [][] 
  []
 
@@ -3341,7 +3336,7 @@ Package tabularray Warning: Table width is too small, need 25.19997pt more!
 
 > Step: build the whole table.
 
-Overfull \hbox (25.19997pt too wide) in paragraph at lines 2451--2452
+Overfull \hbox (25.19997pt too wide) in paragraph at lines 2455--2456
  [][] 
  []
 
@@ -3357,13 +3352,13 @@ Package tabularray Warning: Table width is too small, need 25.19997pt more!
 
 > Step: build the whole table.
 
-Overfull \hbox (25.19997pt too wide) in paragraph at lines 2468--2469
+Overfull \hbox (25.19997pt too wide) in paragraph at lines 2472--2473
  [][] 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 2472.
+(caption)                particular \caption on input line 2476.
 See the caption package documentation for explanation.
 
 ===== Image 'figures/main-figure19' is up-to-date. ======
@@ -3373,7 +3368,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 2543.
+ used on input line 2547.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -3390,7 +3385,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 2547.
+ used on input line 2551.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -3405,7 +3400,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 2549.
+ used on input line 2553.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -3420,7 +3415,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 2552.
+ used on input line 2556.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -3431,7 +3426,7 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 [22]
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 2
-558.
+562.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
@@ -3440,7 +3435,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 25
-62.
+66.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -3450,7 +3445,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 2565.
+ used on input line 2569.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -3465,7 +3460,7 @@ File: images/Kingston_University_London_logo_200-tablet.png Graphic file (type
 png)
 <use images/Kingston_University_London_logo_200-tablet.png>
 Package pdftex.def Info: images/Kingston_University_London_logo_200-tablet.png 
- used on input line 2570.
+ used on input line 2574.
 (pdftex.def)             Requested size: 34.14235pt x 34.14322pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -3480,16 +3475,16 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7406A46A390C77C44ADBA47E36A03D4C;3106.
+(rerunfilecheck)             Checksum: 7F5C780E16B7FA593CC8FF8ED0CB4A94;3224.
  ) 
 Here is how much of TeX's memory you used:
- 78220 strings out of 473201
- 1932376 string characters out of 5716126
- 3046856 words of memory out of 5000000
- 100016 multiletter control sequences out of 15000+600000
- 659876 words of font info for 406 fonts, out of 8000000 for 9000
+ 78242 strings out of 473201
+ 1933280 string characters out of 5716126
+ 3048326 words of memory out of 5000000
+ 100034 multiletter control sequences out of 15000+600000
+ 659995 words of font info for 408 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,20n,117p,1049b,1476s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,20n,117p,1034b,1476s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol10.pf
 b></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol12.pf
 b></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol5.pfb
@@ -3508,10 +3503,10 @@ ist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2024/texmf-dist/fon
 ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on main.pdf (24 pages, 4017518 bytes).
+Output written on main.pdf (24 pages, 4220444 bytes).
 PDF statistics:
- 764 PDF objects out of 1000 (max. 8388607)
- 570 compressed objects within 6 object streams
- 95 named destinations out of 1000 (max. 500000)
- 75744 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 772 PDF objects out of 1000 (max. 8388607)
+ 576 compressed objects within 6 object streams
+ 96 named destinations out of 1000 (max. 500000)
+ 75757 words of extra memory for PDF output out of 89155 (max. 10000000)
 

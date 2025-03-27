@@ -5,6 +5,7 @@
 \contentsline {subsection}{\numberline {3.2}Gauge Pressure}{6}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Devices and Mechanisms}{8}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Bourdon Gauges}{8}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Manometers}{9}{subsubsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.4}Pressure Units}{10}{subsection.3.4}%
 \contentsline {section}{\numberline {4}Method \& Experimental Procedures}{12}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Operating Procedure}{14}{subsection.4.1}%
