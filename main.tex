@@ -445,13 +445,18 @@ When we talk about pressure, the first thing that comes to mind is its physical 
 				\item \( F \) = Force applied (N, Newton)
 				\item \( A \) = Surface area (m\(^2\))
 			\end{itemize}
-		}\\[9pt]\raggedright
-		Local pressure \( P_{\text{local}}\) varies spatially. It peaks under concentrated loads (red zone) and vanishes at free edges (blue zone).\\[-1em]
+		}\\[9pt]
+		Average pressure $\left(P\right)$ assumes uniform distribution.\\[8pt]
+		\begin{minipage}{0.45\textwidth}\centering
+			Local pressure \( P_{\text{local}}\) varies spatially:
+		\end{minipage}
+		\begin{minipage}{0.45\textwidth}\vspace{-1em}
 		\begin{equation}
 			P_{\text{local}} = \frac{dF}{dA}
 			\label{eq:localpressure}
-		\end{equation}	
-		Critical for analyzing stress concentrations in engineering designs.
+		\end{equation}		
+		\end{minipage}\\[8pt]\raggedright
+		It peaks under concentrated loads (red zone) and vanishes at free edges (blue zone) revealing real-world stress hotspots (Figure \ref{fig:pressure}).
 	\end{minipage}
 	\hfill
 	\begin{minipage}{0.46\textwidth}
@@ -479,174 +484,47 @@ When we talk about pressure, the first thing that comes to mind is its physical 
 		\end{tikzpicture}
 		\vspace{-1em}
 		\captionof{figure}{Illustration of pressure application}
-		\label{fig:pressure}\raggedright
-		\vspace{1em}Average pressure $\left(P\right)$ assumes uniform distribution. Local pressure $\left(P_{local}\right)$ reveals real-world stress hotspots.
+		\label{fig:pressure}
 \end{minipage}\end{center}
-Pressure measurement fundamentally relies on observing its physical effects on measurable systems. The accompanying figures demonstrate three classical approaches:\\[1em]
-\begin{minipage}{1\textwidth}
-\begin{minipage}{0.3\textwidth}\centering
-\begin{tikzpicture}[scale=1.3,transform shape]
-	\def\Rx{1.0}
-	\def\Ry{0.05*\Rx}
-	\def\rx{0.18*\Rx}
-	\def\ry{0.06*\rx}
-	\def\H{1.0}
-	\def\h{0.72*\H}   % water level height
-	\def\th{2.7*\H}   % tube height
-	\def\ty{0.95*\th} % tube level
-	\def\td{0.6*\h}   % tube depth
-	\def\N{14}
-	
-	% WATER + CONTAINER
-	\draw[vertical water] %rounded corners=2
-	(-\Rx,\h) --++ (0,-\h) arc(180:360:{\Rx} and {\Ry}) --++ (0,\h);
-	\draw[water]
-	(0,\h) ellipse ({\Rx} and {\Ry});
-	\draw[thick] (0,\H) ellipse ({\Rx} and {\Ry});
-	
-	% TUBE
-	\draw[vertical water]
-	(-\rx,\h) |-++ (2*\rx,\ty) --++ (0,-\ty);
-	\draw[water]
-	(0,\h+\ty) ellipse ({\rx} and {\ry});
-	\draw[thick,line cap=round]
-	(-\rx,\h) --++ (0,\th) coordinate (T) arc(180:0:\rx) --++ (0,-\th);
-	\draw[mydarkblue,line cap=round]
-	(-1.09*\rx,\h-0.005) arc(180:360:{1.09*\rx} and 1.12*\ry);
-	\foreach \i [evaluate={\y=1.12*\H+0.84*\th*\i/\N}] in {0,...,\N}{
-		\draw[line cap=round] (\rx,\y) arc(0:-50:{\rx} and \ry);
-	}
-	\begin{scope}
-		\clip (-\Rx,\h) |-++ (2*\Rx,-\h) --++ (0,\h) arc(360:180:{\Rx} and {\Ry}) -- cycle;
-		\draw[thick,line cap=round]
-		(-\rx,\h) --++ (0,-\td) (\rx,\h) --++ (0,-\td);
-		%(-\rx,\h) --++ (0,-\td) arc(180:360:{\rx} and {\ry}) --++ (0,\td);
-		\draw[vertical water,opacity=0.5]
-		(-\Rx,\h) --++ (0,-\h) arc(180:360:{\Rx} and {\Ry}) --++ (0,\h);
-	\end{scope}
-	\draw[mydarkblue]
-	(-\Rx,\h) arc(180:360:{\Rx} and {\Ry});
-	\draw[<->] (0.6*\Rx,\h) --++ (0,\ty) node[midway,fill=white,inner sep=1] {$h$};
-	\draw[very thin,line cap=round]
-	(T)++(130:\rx) node[anchor=-19,inner sep=1] {$P=0$} to[out=-50,in=170]++ (-30:1.5*\rx);
-	\node[above] at (-0.6*\Rx,\H) {$P_\mathrm{atm}$};
-	
-	% CONTAINER
-	\draw[thick]
-	(-\Rx,\H) --++ (0,-\H) arc(180:360:{\Rx} and {\Ry})
-	--++ (0,\H) arc(360:180:{\Rx} and {\Ry}) -- cycle;
-	
-\end{tikzpicture}
-\captionof{figure}{Torricelli's method}
+\begin{center}
+\begin{minipage}{0.49\textwidth}
+	\subsection{Absolute Pressure}
+	Absolute pressure is measured relative to a perfect vacuum, where no molecules exert force. It represents the total pressure exerted, including atmospheric pressure. In practical applications, absolute zero pressure is unattainable, but it serves as the theoretical baseline for all pressure measurements.
 \end{minipage}\hfill
-\vspace{1.5em}\begin{minipage}{0.3\textwidth}\centering\hspace*{-2.7em}
-\begin{tikzpicture}[scale=1.4,transform shape]
-	\def\W{0.8}       % pressure box height
-	\def\H{0.7}       % pressure box height
-	\def\Rx{0.55}     % tube bend radius horizontal
-	\def\Ry{0.2*\Rx}  % tube bend radius vertical
-	\def\rx{0.28*\Rx} % tube radius horizontal
-	\def\ry{0.28*\Ry} % tube radius vertical
-	\def\HL{1.3}      % tube height left
-	\def\HR{2.2}      % stube height right
-	\def\hL{0.40*\HL} % water level height left
-	\def\hR{0.95*\HR} % water level height right
-	%\def\th{2.7*\H}   % tube height
-	%\def\ty{0.93*\th} % tube level
-	\def\N{14}
-	
-	% WATER + CONTAINER
-	\draw[water]
-	(-\Rx,\hL) --++ (0,-\hL) arc(180:360:\Rx) --++ (0,\hR) --++ (2*\rx,0) --++
-	(0,-\hR) arc(360:180:\Rx+2*\rx) --++ (0,\hL);
-	\draw[water]
-	(-\Rx-\rx,\hL) ellipse({\rx} and {\ry})
-	(\Rx+\rx,\hR) ellipse({\rx} and {\ry});
-	\draw[thick]
-	(-\Rx,\HL) --++ (0,-\HL) arc(180:360:\Rx) --++ (0,\HR) coordinate (T) arc(180:0:\rx)
-	--++ (0,-\HR) arc(360:180:\Rx+2*\rx) --++ (0,\HL);
-	\draw[thick]
-	(-\Rx-\rx,\HL) ellipse({\rx} and {\ry});
-	\foreach \i [evaluate={\y=(\hL+\hR)/2+0.8*\HR*(\i-\N/2)/\N;}] in {0,...,\N}{
-		\draw[line cap=round] (\Rx+2*\rx+0.007,\y) arc(0:-50:{\rx} and \ry);
-	}
-	%\draw[line cap=round,myred] (\Rx+2*\rx+0.007,{(\hL+\hR)/2}) arc(0:-70:{\rx} and \ry);
-	\draw[line cap=round,myred] (-\Rx+0.007,\hL+\hR-\HR-\rx) arc(0:-70:{\rx} and \ry);
-	\node at (-\W/2-2*\rx-\Rx,\HL+1.7*\rx) {$P_\mathrm{atm}$};
-	\draw[very thin,line cap=round]
-	(T)++(130:\rx) node[anchor=-19,inner sep=1] {$P=0$} to[out=-50,in=170]++ (-30:1.5*\rx);
-	\draw[dashed] (-\Rx,\hL) --++ (1.3*\Rx,0) (\Rx,\hR) --++ (-1.3*\Rx,0);
-	\draw[<->] (0,\hL) -- (0,\hR) node[midway,fill=white,inner sep=1] {$h$};
-\end{tikzpicture}
-\vspace{0.3em}
-\captionof{figure}{Open manometers}
-\end{minipage}\hfill
-\begin{minipage}{0.3\textwidth}\centering\vspace{-0.9em}
-\begin{tikzpicture}[scale=1.4,transform shape]
-	\def\W{0.8}       % pressure box height
-	\def\H{0.7}       % pressure box height
-	\def\Rx{0.55}     % tube bend radius horizontal
-	\def\Ry{0.2*\Rx}  % tube bend radius vertical
-	\def\rx{0.28*\Rx} % tube radius horizontal
-	\def\ry{0.28*\Ry} % tube radius vertical
-	\def\HL{1.3}      % tube height left
-	\def\HR{2.2}      % stube height right
-	\def\hL{0.40*\HL} % water level height left
-	\def\hR{0.80*\HR} % water level height right
-	%\def\th{2.7*\H}   % tube height
-	%\def\ty{0.93*\th} % tube level
-	\def\N{14}
-	\draw[water]
-	(-\Rx,\hL) --++ (0,-\hL) arc(180:360:\Rx) --++ (0,\hR) --++ (2*\rx,0) --++
-	(0,-\hR) arc(360:180:\Rx+2*\rx) --++ (0,\hL);
-	\draw[water]
-	(-\Rx-\rx,\hL) ellipse({\rx} and {\ry})
-	(\Rx+\rx,\hR) ellipse({\rx} and {\ry});
-	\draw[thick]
-	(-\Rx,\HL) --++ (0,-\HL) arc(180:360:\Rx) --++ (0,\HR) arc(180:0:{\rx} and \ry)
-	--++ (0,-\HR) arc(360:180:\Rx+2*\rx) --++ (0,\HL)
-	arc(0:90:\rx) --++ (-\rx,0) --++ (0,0.7*\rx-\H/2) -|++ (-\W,\H) -|++ (\W,0.7*\rx-\H/2)
-	--++ (2*\rx,0) arc(90:0:2*\rx) -- cycle;
-	\draw[thick]
-	(\Rx+\rx,\HR) ellipse({\rx} and \ry);
-	\foreach \i [evaluate={\y=(\hL+\hR)/2+0.8*\HR*(\i-\N/2)/\N;}] in {0,...,\N}{
-		\draw[line cap=round] (\Rx+2*\rx+0.007,\y) arc(0:-50:{\rx} and \ry);
-	}
-	\draw[line cap=round,myred] (\Rx+2*\rx+0.007,{(\hL+\hR)/2}) arc(0:-70:{\rx} and \ry);
-	\draw[line cap=round,myred] (-\Rx+0.007,{(\hL+\hR)/2}) arc(0:-70:{\rx} and \ry);
-	\node at (-\W/2-4*\rx-\Rx,\HL+1.7*\rx) {$P$};
-	\node[above=2] at (\Rx+\rx,\HR+\ry) {$P_\mathrm{atm}$};
-	\draw[dashed] (-\Rx,\hL) --++ (1.3*\Rx,0) (\Rx,\hR) --++ (-1.3*\Rx,0);
-	\draw[<->] (0,\hL) -- (0,\hR) node[midway,fill=white,inner sep=1] {$h$};
-\end{tikzpicture}
-\vspace{0.2em}\captionof{figure}{Sealed manometers}
+\begin{minipage}{0.49\textwidth}
+	\subsection{Gauge Pressure}
+	Gauge pressure, also referred to as relative pressure, is measured with respect to local atmospheric pressure. Since atmospheric pressure varies with altitude and weather conditions, gauge pressure is useful for measuring pressure differences in industrial and scientific applications. It can be positive or negative, depending on whether the measured pressure is above or below atmospheric pressure.
 \end{minipage}
-\end{minipage}\\[0em]
-Each technique quantifies pressure by correlating it with dimensional changes - either in liquid column elevation or elastic element deformation. The choice between methods depends on required precision, pressure range, and whether absolute or differential measurements are needed.
-Pressure is categorized into two main groups:\\
-\begin{minipage}{0.49\textwidth}
-\subsection{Absolute Pressure}
-Absolute pressure, or absolute zero pressure, is the lowest possible pressure measurable. Consequently, all measured pressures are positive in comparison to this reference point. Achieving absolute zero pressure is practically impossible unless calculated or represented through an extremely accurate curve.\end{minipage}\hfill
-\begin{minipage}{0.49\textwidth}
-\subsection{Gauge Pressure}
-Gauge pressure, also known as relative pressure, is measured relative to local atmospheric pressure. Since we live under constant atmospheric pressure, it is often convenient to measure the difference between actual pressure and atmospheric pressure, which is referred to as gauge pressure. This measurement is commonly used in industrial applications.\end{minipage}
-\newpage
-\noindent
-It is important to note that:\\[-5pt]
-\begin{itemize}
-	\item Any pressure between local atmospheric pressure and absolute zero pressure is called \textbf{vacuum pressure}.
-	\item Any pressure higher than local atmospheric pressure is considered \textbf{positive pressure}.
-\end{itemize}
-\vspace{0.7em}\noindent
-The relationship between absolute and gauge pressure is given by:\\[0.5em]
+\end{center}
+\vspace{-2em}
+\subsection{Atmospheric Pressure}
+Atmospheric pressure ($P_{\text{atm}}$) is the pressure exerted by the weight of air in the Earth's atmosphere. At sea level, it is approximately:
 \begin{equation}
-	P_{\text{absolute}} = P_{\text{atmosphere}} + P_{\text{gauge}}
+	P_{\text{atm}} \approx 101.325 \text{ kPa} = 1 \text{ atm}
+\end{equation}
+It decreases with altitude due to a reduction in air density. Atmospheric pressure serves as the reference for gauge pressure, which is defined as:
+\begin{equation}
+	P_{\text{gauge}} = P_{\text{absolute}} - P_{\text{atm}}
+\end{equation}
+Thus, absolute pressure can be expressed as:
+\begin{equation}
+	P_{\text{absolute}} = P_{\text{gauge}} + P_{\text{atm}}
 	\label{eq:absolute}
-\end{equation}\\
-\vspace{0.5em}
-The following diagram illustrates the definitions of pressure more clearly.\\[8pt]	
-
-
+\end{equation}
+Key pressure classifications include:\\
+\vspace{-1em}
+\begin{itemize}
+	\item \textbf{Vacuum Pressure ($P_{\text{vac}}$)}: Any pressure below atmospheric pressure but above absolute zero pressure.
+	\item \textbf{Positive (or Gauge) Pressure ($P_{\text{gauge}} > 0$)}: Any pressure higher than local atmospheric pressure.
+	\item \textbf{Negative (or Suction) Pressure ($P_{\text{gauge}} < 0$)}: Any pressure lower than atmospheric pressure but not reaching absolute zero.
+\end{itemize}\newgeometry{left=0.8in,right=0.8in,top=1in,bottom=0.7in}\noindent
+\textbf{Vacuum Pressure Relation:}  
+Vacuum pressure is often measured as a positive value but represents a pressure below atmospheric pressure:
+\begin{equation}
+	P_{\text{vac}} = P_{\text{atm}} - P_{\text{absolute}}
+\end{equation}
+where higher vacuum pressure indicates a lower absolute pressure.\\[0.5em]
+The following diagram illustrates these pressure definitions more clearly.\\\vspace{-1em}
 \begin{center}
 \begin{tikzpicture}[scale=2,transform shape]	
 	\def\floorx{5.5+2.5}
@@ -667,12 +545,12 @@ The following diagram illustrates the definitions of pressure more clearly.\\[8p
 	\fill[bottom color=white, top color=blue!50!white] (0,\lapy) rectangle (\lapx,\lapy-0.15);
 	\draw[-,blue!50!white] (0,\lapy) -- (\lapx,\lapy);    
 	
-	\draw[-latex] (\lapx-0.2,\lapy) -- (\lapx-0.2,\twoy) node[midway,fill=white, inner sep=2pt, text=black] {\tiny\wm{0.1}{\textsf{Rel. Press.\\ of point 2}}};    
-	\draw[-latex] (\lapx-0.2,0) -- (\lapx-0.2,\twoy) node[midway,fill=white, inner sep=2pt, text=black] {\tiny\wm{0.1}{\textsf{Abs. Press.\\ of point 2}}};
+	\draw[-{Latex[scale=1.5,length=2mm,width=2mm]}] (\lapx-0.2,\lapy) -- (\lapx-0.2,\twoy) node[midway,fill=white, inner sep=2pt, text=black] {\tiny\wm{0.1}{\textsf{Rel. Press.\\ of point 2}}};    
+	\draw[-{Latex[scale=1.5,length=2mm,width=2mm]}] (\lapx-0.2,0) -- (\lapx-0.2,\twoy) node[midway,fill=white, inner sep=2pt, text=black] {\tiny\wm{0.1}{\textsf{Abs. Press.\\ of point 2}}};
 	
 	\draw[-] (\lapx-0.4,\twoy) -- (\twox+\padding,\twoy);
 	
-	\draw[latex-latex] (\twox+\padding,\twoy) -- (\twox+\padding,\oney) node[midway,fill=white, inner sep=2pt, text=black] {\tiny\wm{0.2}{\textsf{Differential. Press.\\ Between 1 \& 2}}};
+	\draw[{Latex[scale=1.5,length=2mm,width=2mm]}-{Latex[scale=1.5,length=2mm,width=2mm]}] (\twox+\padding,\twoy) -- (\twox+\padding,\oney) node[midway,fill=white, inner sep=2pt, text=black] {\tiny\wm{0.2}{\textsf{Differential. Press.\\ Between 1 \& 2}}};
 	
 	\node[circle,draw=black, fill=orange, inner sep=0pt,minimum size=7pt] (b) at (\twox,\twoy) {};
 	\node[above=1.4] at (\twox,\twoy) {\footnotesize \textsf{2}};
@@ -680,9 +558,9 @@ The following diagram illustrates the definitions of pressure more clearly.\\[8p
 	\draw[-] (\onex,\oney) -- (\lapx-1,\oney);
 	\node[circle,draw=black, fill=green, inner sep=0pt,minimum size=7pt] (a) at (\onex,\oney) {};
 	\node[above=1.4] at (\onex,\oney) {\footnotesize \textsf{1}};  
-	\draw[latex-] (\lapx-0.6,\oney) -- (\lapx-0.6,\lapy) node[midway,fill=white, inner sep=2pt, text=black] {\tiny\wm{0.1}{\textsf{Rel. Press.\\ of point 2}}};   
+	\draw[{Latex[scale=1.5,length=2mm,width=2mm]}-] (\lapx-0.6,\oney) -- (\lapx-0.6,\lapy) node[midway,fill=white, inner sep=2pt, text=black] {\tiny\wm{0.1}{\textsf{Rel. Press.\\ of point 2}}};   
 	
-	\draw[-latex] (\onex*2.4,0) -- (\onex*2.4,\oney) node[midway,fill=white, inner sep=2pt, text=black] {\tiny\wm{0.1}{\textsf{Abs. Press.\\ of point 1}}};
+	\draw[-{Latex[scale=1.5,length=2mm,width=2mm]}] (\onex*2.4,0) -- (\onex*2.4,\oney) node[midway,fill=white, inner sep=2pt, text=black] {\tiny\wm{0.1}{\textsf{Abs. Press.\\ of point 1}}};
 	
 	\node[right] at (0,\lapy-0.4) {\footnotesize \textcolor{blue!70!white}{\textsf{Local Atmospheric Pressure}}};
 	
@@ -690,20 +568,29 @@ The following diagram illustrates the definitions of pressure more clearly.\\[8p
 	\node[right] at (0,\lapy-\lapy) {\scriptsize\wm{0.2}{\textsf{Negative\\ Pressure\\ (Vacuum)}}};
 	\node[left=-0.2cm] at (\floorx*0.5,-0.5) {\wm{0.3}{\scriptsize\textsf{Absolute Zero Pressure}}};
 \end{tikzpicture}
+\captionof{figure}{Representation of Pressures (Farbod Tabesh, 2019)}\label{representation of pressure}
 \end{center}
+\vspace{-1em}
+\subsection{Differential pressure}
+\begin{formal}[Renke, 2024]{black!50!white}{white!97!gray}
+	Differential pressure is the difference between the values of the pressures at different locations. For example, if the pressure at point 1 is $P_1$ and the pressure at point 2 is $P_2$, then the pressure difference from 1 to 2 is: 
+\begin{equation}
+	\Delta P=P_1-P_2
+\end{equation}
+\end{formal}
 
 \newpage
 \subsection{Devices and Mechanisms}
 
-\begin{formal}[(Brannan, n.d.)(InstTools, 2017)(ScienceDirect,n.d.), ]{black!50!white}{white}
+\begin{formal}[(Brannan, n.d.)(InstTools, 2017)(ScienceDirect,n.d.)]{black!50!white}{white!97!gray}
 \vspace{-1em}
 \subsubsection{Bourdon Gauges}	
 A Bourdon gauge consists of a curled up tube, with one end closed and the other open to the system.\\[8pt] 
 As the pressure increases, the tube uncurls which can then be used to give a reading of pressure. The tube has been flattened, which causes the pressure exerted outwards to act on two opposing flat planes, making the tube straighten in a more predictable fashion.\\[8pt]
 The tip of the tube is connected to a linkage and a pivot, which is then connected to a movement (gearing system).\\[8pt]
 This mechanism measures the mechanical movement of the tube resulting from the force created by the pressure. As shown in Equation \ref{eq:pressure}, if the area remains constant, force and pressure are directly proportional. This means that with knowledge of the mechanical properties of the tube material and the force required to move it, you can accurately determine the fluid pressure in the tube.\\[8pt] 
-However, this requires the pressure to remain within certain boundaries. Excessive pressure could exceed the material's yield point, causing plastic deformation that would permanently damage the gauge and render it inaccurate.\vspace{-0.5em}
-\subsubsection*{Types of Bourdon Gauges}
+However, this requires the pressure to remain within certain boundaries. Excessive pressure could exceed the material's yield point, causing plastic deformation that would permanently damage the gauge and render it inaccurate.\\\vspace{-2em}
+\paragraph{Types of Bourdon Gauges}\mbox{}\\[8pt]
 There are three main types of Bourdon gauges, each with different sensitivities and pressure ratings:
 
 \begin{itemize}
@@ -741,6 +628,209 @@ There are three main types of Bourdon gauges, each with different sensitivities 
 
 \vspace{1em}
 \subsubsection{Manometers}	
+
+Manometers operate on the fundamental principle of hydrostatic equilibrium, where a fluid column balances pressure differences through gravitational force. The governing equation derives from the Navier-Stokes equations under static conditions:
+\begin{equation}
+	\frac{dP}{dz} = -\rho g
+\end{equation}
+\noindent 
+For incompressible fluids, this integrates to the basic manometric equation:
+\begin{equation}
+	\Delta P = \rho g \Delta h
+\end{equation}
+\begin{center}
+\hspace{10em}\wm{0.7}{\centering
+	\begin{itemize}[itemsep=-1mm,leftmargin=0cm]
+		\item $P$ : Pressure (pascal, \si{\Pa})  
+		\item $\rho$ : Density (kilogram per cubic meter, \si{\kg\per\m\cubed})  
+		\item $g$ : Gravitational acceleration (meter per second squared, \si{\m\per\s\squared})  
+		\item $\Delta h$ : Height difference (meter, \si{\m})
+	\end{itemize}}
+\end{center}
+Key assumptions in classical manometry:
+\begin{enumerate}
+	\item Fluid density ($\rho$) remains constant (valid for liquids under moderate conditions)
+	\item Gravitational acceleration ($g$) is uniform (varies 0.5\% globally)
+	\item Capillary effects are negligible (requires tubes $>$10 mm diameter for water)
+	\item Temperature variations are minimal (affects $\rho$ by $\sim$0.1\%/\textdegree C for water)
+\end{enumerate}
+
+\paragraph{Manometer Types}\mbox{}\\[1em]
+\noindent
+\begin{minipage}{0.65\textwidth}
+	\textbf{1. Torricellian Barometer (Absolute Pressure)}\\[8pt]	
+	The mercury barometer illustrates the fundamental principle of atmospheric pressure measurement. It relies on the relationship between pressure, fluid density, and height, given by:  
+	\begin{equation}
+		P_{atm} = \rho_{\tiny \bm{Hg}}\, g  h
+	\end{equation}
+	\begin{itemize}[itemsep=-1mm]
+		\item $P_{atm}$ : Atmospheric pressure (pascal, \si{\Pa})
+		\item $\rho_{\tiny \bm{Hg}}$ : Mercury density (kilogram per cubic meter, \si{\kg\per\m\cubed})
+		\item $h$ : Height (meter, \si{\m})
+	\end{itemize}
+	A key feature of this device is the creation of a sustained vacuum above the mercury column, where the pressure is approximately zero. The use of mercury is essential due to its high density, with a value of 13,534 kg/m$^3$ at 20\textdegree C.
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}\centering
+	\begin{tikzpicture}[scale=1.3,transform shape]
+		\def\Rx{1.0} \def\Ry{0.05*\Rx} \def\rx{0.18*\Rx} 
+		\def\ry{0.06*\rx} \def\H{1.0} \def\h{0.72*\H}
+		\def\th{2.7*\H} \def\ty{0.95*\th} \def\td{0.6*\h} \def\N{14}
+		
+		% WATER + CONTAINER
+		\draw[vertical water] (-\Rx,\h) --++ (0,-\h) arc(180:360:{\Rx} and {\Ry}) --++ (0,\h);
+		\draw[water] (0,\h) ellipse ({\Rx} and {\Ry});
+		\draw[thick] (0,\H) ellipse ({\Rx} and {\Ry});
+		
+		% TUBE
+		\draw[vertical water] (-\rx,\h) |-++ (2*\rx,\ty) --++ (0,-\ty);
+		\draw[water] (0,\h+\ty) ellipse ({\rx} and {\ry});
+		\draw[thick,line cap=round] (-\rx,\h) --++ (0,\th) coordinate (T) arc(180:0:\rx) --++ (0,-\th);
+		\draw[mydarkblue,line cap=round] (-1.09*\rx,\h-0.005) arc(180:360:{1.09*\rx} and 1.12*\ry);
+		\foreach \i [evaluate={\y=1.12*\H+0.84*\th*\i/\N}] in {0,...,\N}{
+			\draw[line cap=round] (\rx,\y) arc(0:-50:{\rx} and \ry);
+		}
+		\begin{scope}
+			\clip (-\Rx,\h) |-++ (2*\Rx,-\h) --++ (0,\h) arc(360:180:{\Rx} and {\Ry}) -- cycle;
+			\draw[thick,line cap=round] (-\rx,\h) --++ (0,-\td) (\rx,\h) --++ (0,-\td);
+			\draw[vertical water,opacity=0.5] (-\Rx,\h) --++ (0,-\h) arc(180:360:{\Rx} and {\Ry}) --++ (0,\h);
+		\end{scope}
+		\draw[mydarkblue] (-\Rx,\h) arc(180:360:{\Rx} and {\Ry});
+		\draw[<->] (0.6*\Rx,\h) --++ (0,\ty) node[midway,fill=white,inner sep=1] {$h$};
+		\draw[very thin,line cap=round] (T)++(130:\rx) node[anchor=-19,inner sep=1] {$P=0$} to[out=-50,in=170]++ (-30:1.5*\rx);
+		\node[above] at (-0.6*\Rx,\H) {$P_\mathrm{atm}$};
+		
+		% CONTAINER
+		\draw[thick] (-\Rx,\H) --++ (0,-\H) arc(180:360:{\Rx} and {\Ry}) --++ (0,\H) arc(360:180:{\Rx} and {\Ry}) -- cycle;
+	\end{tikzpicture}
+	\captionof{figure}{Torricelli's method (Izaak Neutelings, 2021)}
+\end{minipage}\\[6pt]
+	 Since the density of mercury is temperature-dependent, a correction factor must be applied to the measured height. The corrected height is determined by:  
+\begin{equation}
+	h_{corr} = h[1 - (1.82\times10^{-4})(T-20°C)]
+\end{equation}
+\begin{itemize}[itemsep=-1mm]
+	\item $h_{corr}$ : Corrected height (meter, \si{\m})
+	\item $h$ : Measured height (meter, \si{\m})
+	\item $T$ : Temperature (degree Celsius, \si{\degreeCelsius})
+\end{itemize}
+This correction ensures accurate readings by accounting for thermal expansion effects.\\[6pt]
+\begin{minipage}{0.65\textwidth}
+	\textbf{2. Open-Tube Manometer (Differential Pressure)}\\[8pt]
+	The open-tube manometer, typically in a U-tube configuration, measures pressure differences by comparing the fluid levels in both arms of the tube. The pressure difference is given by:  
+	\begin{equation}
+		P_1 - P_2 = (\rho_m - \rho_f)gh
+	\end{equation}
+	For gases, where the fluid density $\rho_f$ is much smaller than the manometric fluid density $\rho_m$, this simplifies to:  
+	\begin{equation}
+		\Delta P \approx \rho_mgh
+	\end{equation}
+	When one side of the manometer is open to the atmosphere, it directly measures gauge pressure, meaning that $P_2$ is simply the atmospheric pressure.
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}\centering
+	\begin{tikzpicture}[scale=1.4,transform shape]
+		\def\W{0.8} \def\H{0.7} \def\Rx{0.55} \def\Ry{0.2*\Rx}
+		\def\rx{0.28*\Rx} \def\ry{0.28*\Ry} \def\HL{1.3} \def\HR{2.2}
+		\def\hL{0.40*\HL} \def\hR{0.95*\HR} \def\N{14}
+		
+		% WATER + CONTAINER
+		\draw[water] (-\Rx,\hL) --++ (0,-\hL) arc(180:360:\Rx) --++ (0,\hR) --++ (2*\rx,0) --++
+		(0,-\hR) arc(360:180:\Rx+2*\rx) --++ (0,\hL);
+		\draw[water] (-\Rx-\rx,\hL) ellipse({\rx} and {\ry}) (\Rx+\rx,\hR) ellipse({\rx} and {\ry});
+		\draw[thick] (-\Rx,\HL) --++ (0,-\HL) arc(180:360:\Rx) --++ (0,\HR) coordinate (T) arc(180:0:\rx)
+		--++ (0,-\HR) arc(360:180:\Rx+2*\rx) --++ (0,\HL);
+		\draw[thick] (-\Rx-\rx,\HL) ellipse({\rx} and {\ry});
+		\foreach \i [evaluate={\y=(\hL+\hR)/2+0.8*\HR*(\i-\N/2)/\N;}] in {0,...,\N}{
+			\draw[line cap=round] (\Rx+2*\rx+0.007,\y) arc(0:-50:{\rx} and \ry);
+		}
+		\draw[line cap=round,myred] (-\Rx+0.007,\hL+\hR-\HR-\rx) arc(0:-70:{\rx} and \ry);
+		\node at (-\W/2-2*\rx-\Rx,\HL+1.7*\rx) {$P_\mathrm{atm}$};
+		\draw[very thin,line cap=round] (T)++(130:\rx) node[anchor=-19,inner sep=1] {$P=0$} to[out=-50,in=170]++ (-30:1.5*\rx);
+		\draw[dashed] (-\Rx,\hL) --++ (1.3*\Rx,0) (\Rx,\hR) --++ (-1.3*\Rx,0);
+		\draw[<->] (0,\hL) -- (0,\hR) node[midway,fill=white,inner sep=1] {$h$};
+	\end{tikzpicture}
+	\captionof{figure}{Open manometers (Izaak Neutelings, 2021)}
+\end{minipage}\\[6pt]
+The sensitivity of the device can be enhanced in several ways. One approach is to use an \textbf{inclined tube}, where the pressure difference relates to the fluid displacement along the tube length $L$ at an angle $\theta$:  
+\begin{equation}
+	\Delta P = \rho gL\sin\theta
+\end{equation}
+Another method is to use a lower-density fluid, such as water, which has a density of 998 kg/m$^3$. This allows for greater displacement per unit pressure difference, improving measurement precision.\\
+\begin{minipage}{0.65\textwidth}
+	\textbf{3. Sealed-Tube Manometer (Absolute Pressure)}\\[8pt]
+	The sealed-tube manometer is designed for absolute pressure measurement. Unlike open-tube configurations, it has one end closed, providing a fixed reference point—either a vacuum or a gas of known pressure. The pressure is determined by:  
+	\begin{equation}
+		P = \rho g h
+	\end{equation}
+	A key advantage of this setup is that it eliminates the influence of atmospheric pressure, making it particularly useful for measuring vacuum pressures.\\[8pt]
+	In some designs, well-type sealed manometers are used to enhance precision. These variants account for differences in the cross-sectional areas of the tube and the well.
+\end{minipage}\hfill
+\begin{minipage}{0.3\textwidth}\centering
+	\begin{tikzpicture}[scale=1.4,transform shape]
+		\def\W{0.8} \def\H{0.7} \def\Rx{0.55} \def\Ry{0.2*\Rx}
+		\def\rx{0.28*\Rx} \def\ry{0.28*\Ry} \def\HL{1.3} \def\HR{2.2}
+		\def\hL{0.40*\HL} \def\hR{0.80*\HR} \def\N{14}
+		
+		\draw[water] (-\Rx,\hL) --++ (0,-\hL) arc(180:360:\Rx) --++ (0,\hR) --++ (2*\rx,0) --++
+		(0,-\hR) arc(360:180:\Rx+2*\rx) --++ (0,\hL);
+		\draw[water] (-\Rx-\rx,\hL) ellipse({\rx} and {\ry}) (\Rx+\rx,\hR) ellipse({\rx} and {\ry});
+		\draw[thick] (-\Rx,\HL) --++ (0,-\HL) arc(180:360:\Rx) --++ (0,\HR) arc(180:0:{\rx} and \ry)
+		--++ (0,-\HR) arc(360:180:\Rx+2*\rx) --++ (0,\HL)
+		arc(0:90:\rx) --++ (-\rx,0) --++ (0,0.7*\rx-\H/2) -|++ (-\W,\H) -|++ (\W,0.7*\rx-\H/2)
+		--++ (2*\rx,0) arc(90:0:2*\rx) -- cycle;
+		\draw[thick] (\Rx+\rx,\HR) ellipse({\rx} and \ry);
+		\foreach \i [evaluate={\y=(\hL+\hR)/2+0.8*\HR*(\i-\N/2)/\N;}] in {0,...,\N}{
+			\draw[line cap=round] (\Rx+2*\rx+0.007,\y) arc(0:-50:{\rx} and \ry);
+		}
+		\draw[line cap=round,myred] (\Rx+2*\rx+0.007,{(\hL+\hR)/2}) arc(0:-70:{\rx} and \ry);
+		\draw[line cap=round,myred] (-\Rx+0.007,{(\hL+\hR)/2}) arc(0:-70:{\rx} and \ry);
+		\node at (-\W/2-4*\rx-\Rx,\HL+1.7*\rx) {$P$};
+		\node[above=2] at (\Rx+\rx,\HR+\ry) {$P_\mathrm{atm}$};
+		\draw[dashed] (-\Rx,\hL) --++ (1.3*\Rx,0) (\Rx,\hR) --++ (-1.3*\Rx,0);
+		\draw[<->] (0,\hL) -- (0,\hR) node[midway,fill=white,inner sep=1] {$h$};
+	\end{tikzpicture}
+	\captionof{figure}{Sealed manometers (Izaak Neutelings, 2021)}
+\end{minipage}\\[8pt]
+The corrected pressure is given by:  
+\begin{equation}
+	P = \rho g h \left(1 + \frac{A_{tube}}{A_{well}}\right)
+\end{equation}
+This correction factor ensures more accurate pressure readings by compensating for fluid displacement effects in the well.\\[8pt]
+\noindent
+\textbf{Other Types of Manometers}\\[8pt]
+Beyond the standard designs, several specialized manometers exist for different applications:
+\begin{itemize}
+	\item \textbf{Inclined Manometer} – Enhances sensitivity by extending fluid displacement along an angled tube, improving low-pressure measurements. 
+	\item \textbf{Micro-Manometer} – A highly sensitive device that uses very fine fluid columns or micromechanical structures to measure minute pressure variations.
+	
+	\item \textbf{Digital Manometer} – Replaces traditional fluid columns with electronic pressure sensors, offering high precision and real-time readings.
+	
+	\item \textbf{Capacitance Manometer} – Measures pressure by detecting changes in capacitance between a diaphragm and a fixed electrode, commonly used in vacuum applications.
+	
+	\item \textbf{Bourdon Tube Manometer} – Uses a coiled, flexible metal tube that deforms under pressure changes, converting mechanical displacement into a readable scale.
+	
+	\item \textbf{McLeod Manometer} – Specialized for low-pressure measurements, it compresses a known gas volume to determine absolute pressure based on Boyle’s Law.
+	
+\end{itemize}
+\begin{center}
+	\begin{tblr}{
+			colspec={Q[2.3cm]Q[2.3cm]Q[2.3cm]Q[2.3cm]Q[2.3cm]},
+			hlines, vlines, 
+			cells={valign=m, halign=c,font=\small},
+			rows={ht=1\baselineskip},
+			row{1}={ht=1\baselineskip, font=\bfseries\small, bg=black!5!white},
+			column{1}={font=\bfseries\small, bg=black!5!white}
+		}
+		\SetCell{bg=black!10!white,fg=black}Parameter & Torricelli & Open-Tube & Sealed-Tube & Inclined & Digital \\
+		Pressure Type & Absolute & Differential & Absolute & Differential & Absolute \\
+		Typical Range & 0-300 kPa & 0-10 kPa & 0-100 kPa & 0-2 kPa & 0-1000 kPa \\
+		Accuracy & 0.01\% & 0.1\% & 0.05\% & 0.01\% & 0.05\% \\
+		Fluid & Mercury & Water/Oil & Mercury/Oil & Water/Oil & None (Electronic) \\
+		Applications & Atmospheric Pressure & Differential Pressure & Vacuum Measurements & Low Pressure & General Purpose \\
+	\end{tblr}
+	\captionof{table}{Comparative Analysis}
+\end{center}
+
+
 
 \newpage\newgeometry{left=0.8in,right=0.8in,top=1.23in,bottom=0.69in}
 
@@ -819,12 +909,11 @@ There are three main types of Bourdon gauges, each with different sensitivities 
 		$$N m^{-2} = \text{Pa}$$
 	\end{minipage}\\[8pt]
 	Although mmHg is not an SI unit, it remains widely used in medicine (e.g., blood pressure readings of 120/80 mmHg) and laboratory sciences for its convenience in low-pressure measurements.
-\end{briefillus}
-
+\end{briefillus}\vspace{0em}\noindent\footnotesize{The \textbf{torr} (symbol: Torr) is a unit of pressure based on an absolute scale, defined as exactly 1/760 of a standard atmosphere (101325 Pa). Thus one torr is exactly 101325/760 pascals ($\approx$ 133.32 Pa) (Wikipedia, 2025). This is a redacted unit in the context of this study}
 \tikzexternalenable
 
 	
-	\newpage\vspace*{-20pt}
+	\newpage\vspace*{-20pt}\large
 	\section{Method \& Experimental Procedures}\label{Method_Experimental_Procedures}
 	%We are first given a table to record our findings as shown:\footnote{We started of in the lab by doing the refrigerator but this is redacted as its not a part of this lab report, following this we did the pressure lab experiment.}
 
@@ -907,7 +996,7 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 
 \begin{enumerate}
 \item[7.] We used the hand pump to pressurize the system to the required value. To achieve precise control, we vented air using the vent valve and adjusted the pressure by pumping air as needed.
-\item[8.] Once the required incremental was observed on the pressure calibrator, we then observe and recorded the readings seen on the following gauges:
+\item[8.] Once the required incremental was observed on the pressure calibrator, we then observe and recorded the readings seen on the following gauges:\\[8pt]
 \end{enumerate}
 
 	\begin{minipage}{0.45\textwidth}
@@ -2446,79 +2535,39 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 \newgeometry{left=0.8in,right=0.8in,top=1in,bottom=0.7in}
 	
 \subsection{Choice of Unit in Relation to the Gradient}\label{consistency}
-As previously noted, the choice of pressure unit does not impact the overall results of the analysis. This subsection provides both theoretical justification and empirical validation, demonstrating that the gradients remain invariant across all unit systems (bar, psi, kPa, cmHg, absolute bar), confirming the consistency and robustness of the analysis regardless of unit conversion.
-\vspace{-8pt}
-\subsubsection{Theoretical Foundations}
-The gradient analysis reveals an important invariance property through these key mechanisms:
+As previously established, the pressure unit selection does not affect the overall analysis results. This subsection provides the theoretical justification and empirical evidence to confirm that the gradients remain invariant across various pressure unit systems (bar, psi, kPa, cmHg,...), ensuring the robustness and consistency of the analysis.
+
+\subsubsection{Theoretical Justification}
+The gradient analysis exhibits the following key mechanisms supporting unit invariance:
 
 \begin{enumerate}
 	\item \textbf{Linear Transformation Property}: 
-	Pressure unit conversions are linear transformations expressible as:
+	Pressure unit conversions follow a linear transformation, expressed as:
 	\begin{equation}
 		P' = kP + c
 	\end{equation}
-	where $k$ is the conversion factor and $c$ is the offset (nonzero only for absolute pressure conversions). In linear regression, gradients transform as:
+	where $k$ represents the conversion factor and $c$ the offset (nonzero for absolute pressure conversions). In the context of linear regression, gradients transform as:
 	\begin{equation}
 		\frac{dP'_i}{dP'_c} = \frac{k_i}{k_c} \frac{dP_i}{dP_c}
 	\end{equation}
-	where subscripts $i$ and $c$ denote instrument and calibrator respectively. The $\frac{k_i}{k_c}$ terms cancel when comparing the same instrument across units, preserving gradient values.
+	Here, the subscripts $i$ and $c$ refer to the instrument and calibrator, respectively. The ratio $\frac{k_i}{k_c}$ cancels out when comparing the same instrument across different units, thereby preserving the gradient values.
 	
 	\item \textbf{Dimensional Consistency}: 
-	The gradient $m = \Delta P_{\text{instrument}}/\Delta P_{\text{calibrator}}$ is inherently dimensionless. This unit independence ensures consistent relative performance comparisons across all pressure measurement systems.
+	The gradient $\frac{\Delta P_{\text{instrument}}}{\Delta P_{\text{calibrator}}}$ is inherently dimensionless. This property ensures that the gradient value remains independent of the unit system, allowing for consistent relative comparisons between different pressure measurement systems.
 \end{enumerate}
 
 \subsubsection{Empirical Validation}\label{empirical-validation}
-The theoretical framework was empirically verified through comprehensive analysis of multiple instruments across five unit systems (bar, psi, kPa, cmHg, absolute bar). Key validation results include:
-\begin{itemize}
-	\item \textbf{Exact Gradient Consistency}:
-	\begin{itemize}
-		\item Identical gradients across all 5 unit systems (bar, psi, kPa, cmHg, bar\_abs)
-		\item Zero variation ($\sigma = 0$) in all computed gradients
-		\item Confirmed for both positive and negative pressure regimes
-	\end{itemize}
-	
-	\item \textbf{Instrument-Specific Gradients}:
-	\begin{table}[h]
-		\centering
-		\begin{tabular}{lccc}
-			\toprule
-			Instrument & Positive & Negative & Combined \\
-			\midrule
-			Bourdon Gauge 1 & 1.0224 & 0.5241 & 0.7554 \\
-			Bourdon Gauge 2 & 0.9462 & 0.9509 & 0.9483 \\
-			Bundenburg Gauge & 0.9932 & 0.9416 & 0.9941 \\
-			Mercury Glass & 1.9488 & 2.0679 & 1.9897 \\
-			\bottomrule
-		\end{tabular}
-		\caption{Consistent Gradient Values Across Units}
-		\label{Consistent Gradient Values Across Units}
-	\end{table}
-\end{itemize}\vspace{-1em}
-The perfect consistency ($\sigma = 0$) confirms that:
-\begin{enumerate}[itemsep=-0.7mm]
-	\item The linear transformation property holds exactly in implementation
-	\item High-precision floating-point arithmetic (IEEE 754) preserves theoretical relationships
-	\item Unit conversions introduce no measurable numerical error in gradient calculations
-\end{enumerate}
-For a detailed explanation of the computational algorithm implemented in this validation process, please refer to Appendix \ref{subsec:code}.
-	\newpage\restoregeometry
-	
-	\subsection{Percentage errors}
-	Since the gradients are consistent across all units, we can calculate the percentage errors for the \textbf{Values} in Table \ref{Consistent Gradient Values Across Units}, where the \textbf{Ideal} value for the gradient is 1, using the following:
-	\begin{equation}
-		\% \text{Error} = \frac{\text{Value} - \text{Ideal}}{\text{Ideal}} \times 100
-	\end{equation}
-\vspace{0.2em}
+The table below presents the gradient values for the four different instruments across the five unit systems. The results demonstrate zero variation (standard deviation $\sigma = 0$), validating the computational model's accuracy and reinforcing the robustness of the theoretical framework.
+
 \begin{center}
-	\hspace*{-1.3em}
 	\begin{minipage}[t]{3cm}
 		\centering
 		\begin{tblr}{
-				colspec={Q[3cm]},
+				colspec={Q[4cm]},
 				hlines,vlines,
 				cells={valign=m,halign=c},
-				rows={ht=2\baselineskip},
-				row{1}={ht=1.5\baselineskip,font=\bfseries,bg=gray!30},
+				rows={ht=1.2\baselineskip},
+				row{1}={ht=1.2\baselineskip,font=\bfseries,bg=gray!30},
 			}
 			Gauge \\
 			Borden Gauge 1 \\
@@ -2527,57 +2576,151 @@ For a detailed explanation of the computational algorithm implemented in this va
 			Hg Manometer \\
 		\end{tblr}
 	\end{minipage}
+	\hspace{3.5em}
+	\begin{minipage}[t]{3.5cm}
+		\centering
+		\begin{tblr}{
+				colspec={Q[3.5cm]},
+				hlines,vlines,
+				cells={valign=m,halign=c},
+				rows={ht=1.2\baselineskip},
+				row{1}={ht=1.2\baselineskip,font=\bfseries,bg=red!30,fg=black},
+			}
+			Pressurized \\
+			{1.0224}\\ 
+			{0.9462} \\ 
+			{0.9932} \\
+			{1.9488} \\
+		\end{tblr}
+	\end{minipage}
 	\hspace{1em}
 	\begin{minipage}[t]{3.5cm}
 		\centering
 		\begin{tblr}{
-				colspec={Q[2cm]Q[1.5cm]},
+				colspec={Q[3.5cm]},
 				hlines,vlines,
 				cells={valign=m,halign=c},
-				rows={ht=2\baselineskip},
-				row{1}={ht=1.5\baselineskip,font=\bfseries,bg=red!30,fg=black},
+				rows={ht=1.2\baselineskip},
+				row{1}={ht=1.2\baselineskip,font=\bfseries,bg=blue!30,fg=black},
 			}
-			\SetCell[c=2]{c} Pressurized & \\
-			\SetCell[c=2]{c}{2.24\%}& \\ %1.0224
-			\SetCell[c=2]{c}{-5.38\%}& \\ %0.9462
-			\SetCell[c=2]{c}{-0.68\%}& \\ %0.9932
-			\SetCell[c=2]{c}{94.88\%}& \\%1.9488 
+			Vacuum \\
+			{0.5241} \\
+			{0.9509} \\
+			{0.9416} \\
+			{2.0679} \\ 
 		\end{tblr}
 	\end{minipage}
-	\hspace{2em}
+	\hspace{1em}
 	\begin{minipage}[t]{3.5cm}
 		\centering
 		\begin{tblr}{
-				colspec={Q[2cm]Q[1.5cm]},
+				colspec={Q[3.5cm]},
 				hlines,vlines,
 				cells={valign=m,halign=c},
-				rows={ht=2\baselineskip},
-				row{1}={ht=1.5\baselineskip,font=\bfseries,bg=blue!30,fg=black},
+				rows={ht=1.2\baselineskip},
+				row{1}={ht=1.2\baselineskip,font=\bfseries,bg=green!30,fg=black},
 			}
-			\SetCell[c=2]{c} Vacuum &\\
-			\SetCell[c=2]{c}{-47.59\%}&  \\ %0.5241
-			\SetCell[c=2]{c}{-4.91\%}& \\ %0.9509 
-			\SetCell[c=2]{c}{-5.84\%}& \\ %0.9416
-			\SetCell[c=2]{c}{106.79\%}& \\ %2.0679
+			Cumulative \\
+			{0.7554} \\
+			{-0.9483} \\
+			{0.9941} \\
+			{1.9488} \\
 		\end{tblr}
 	\end{minipage}
-	\hspace{2em}
+\end{center}
+\captionof{table}{Consistent Gradient Values Across Units, Mean = $\pm 0$}
+\label{Consistent Gradient Values Across Units}
+
+\vspace{1em}
+
+These zero-variance results validate that:
+
+\begin{enumerate}
+	\item The linear transformation property is accurately preserved across all unit systems.
+	\item High-precision floating-point arithmetic (IEEE 754) ensures that theoretical relationships remain intact.
+	\item Unit conversions have no measurable effect on the gradient calculations.
+\end{enumerate}
+
+For a detailed explanation of the algorithm used in the computational analysis, refer to Appendix \ref{subsec:code}.
+
+
+	\newpage\restoregeometry
+	
+	\subsection{Percentage errors}
+	Since the gradients are consistent across all units, we can calculate the percentage errors for the \textbf{Values} in Table \ref{Consistent Gradient Values Across Units}, where the \textbf{Ideal} value for the gradient is 1, using the following:
+	\begin{equation}
+		\% \text{Error} = \frac{\text{Value} - \text{Ideal}}{\text{Ideal}} \times 100
+	\end{equation}
+\vspace{0.2em}
+	\begin{center}	
+		\hspace*{-1em}
+	\begin{minipage}[t]{3cm}
+		\centering
+		\begin{tblr}{
+				colspec={Q[4cm]},
+				hlines,vlines,
+				cells={valign=m,halign=c},
+				rows={ht=1.2\baselineskip},
+				row{1}={ht=1.2\baselineskip,font=\bfseries,bg=gray!30},
+			}
+			Gauge \\
+			Borden Gauge 1 \\
+			Borden Gauge 2 \\
+			Bundenburg Gauge \\
+			Hg Manometer \\
+		\end{tblr}
+	\end{minipage}
+	\hspace{3.5em}
 	\begin{minipage}[t]{3.5cm}
 		\centering
 		\begin{tblr}{
-				colspec={Q[2cm]Q[1.5cm]},
+				colspec={Q[3.5cm]},
 				hlines,vlines,
 				cells={valign=m,halign=c},
-				rows={ht=2\baselineskip},
-				row{1}={ht=1.5\baselineskip,font=\bfseries,bg=green!30,fg=black},
+				rows={ht=1.2\baselineskip},
+				row{1}={ht=1.2\baselineskip,font=\bfseries,bg=red!30,fg=black},
 			}
-			\SetCell[c=2]{c} Cumulative& \\
-			 \SetCell[c=2]{c}{-24.46\%}& \\%0.7554
-			 \SetCell[c=2]{c}{-5.17\%}& \\%0.9483 
-			 \SetCell[c=2]{c}{-0.59\%}& \\%0.9941
-			 \SetCell[c=2]{c}{94.88\%}& \\%1.9488
+			Pressurized \\
+			{2.24\%}\\ %1.0224
+			{-5.38\%} \\ %0.9462
+			{-0.68\%} \\ %0.9932
+			{94.88\%} \\%1.9488 
 		\end{tblr}
 	\end{minipage}
+	\hspace{1em}
+	\begin{minipage}[t]{3.5cm}
+		\centering
+		\begin{tblr}{
+				colspec={Q[3.5cm]},
+				hlines,vlines,
+				cells={valign=m,halign=c},
+				rows={ht=1.2\baselineskip},
+				row{1}={ht=1.2\baselineskip,font=\bfseries,bg=blue!30,fg=black},
+			}
+			Vacuum \\
+			{-47.59\%} \\ %0.5241
+			{-4.91\%} \\ %0.9509 
+			{-5.84\%} \\ %0.9416
+			{106.79\%} \\ %2.0679
+		\end{tblr}
+	\end{minipage}
+	\hspace{1em}
+	\begin{minipage}[t]{3.5cm}
+		\centering
+		\begin{tblr}{
+				colspec={Q[3.5cm]},
+				hlines,vlines,
+				cells={valign=m,halign=c},
+				rows={ht=1.2\baselineskip},
+				row{1}={ht=1.2\baselineskip,font=\bfseries,bg=green!30,fg=black},
+			}
+			Cumulative \\
+			{-24.46\%} \\%0.7554
+			{-5.17\%} \\%0.9483 
+			{-0.59\%} \\%0.9941
+			{94.88\%} \\%1.9488
+		\end{tblr}
+	\end{minipage}	
 \end{center}
 \captionof{table}{Gradients of Best-Fit Equations for Different Gauges across all units}
 \vspace{1em}
@@ -2725,6 +2868,9 @@ At the conclusion of the discussion, our group summarised that the findings vali
 		\item InstTools (2017). \textit{Types of Bourdon Tube}. [online] Instrumentation Tools. Available at: \url{https://instrumentationtools.com/types-of-bourdon-tube/}.
 		\item ScienceDirect (n.d.). \textit{Bourdon Gauge - an overview | ScienceDirect Topics}. [online] Available at: \url{https://www.sciencedirect.com/topics/engineering/bourdon-gauge}.
 		‌\item Brannan (n.d.). \textit{Pressure gauges - bourdon tubes}. [online] Available at: \url{https://www.brannan.co.uk/knowledge_base/pressure-gauges-bourdon-tubes/}.
+		\item Izaak Neutelings (2021). \textit{Torricelli’s experiment \& barometers – TikZ.net}. [online] Tikz.net. Available at: \url{https://tikz.net/fluid_dynamics_barometer/} .[Accessed 29 Mar. 2025].
+		\item Renke (2024). \textit{Differential Pressure | What, How, Why - Renke}. [online] Available at: \url{https://www.renkeer.com/what-is-differential-pressure/}.[Accessed 29 Mar. 2025]
+		\item Farbod Tabesh (2019). \textit{Pressure Definition}. [online] Greenishco. Available at: \url{https://greenishco.com/PressureDefinition}.[Accessed 29 Mar. 2025].	‌
 	\end{enumerate}
 	‌	
 	\newpage
