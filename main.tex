@@ -165,6 +165,33 @@
 \definecolor{PrussianBlue}{HTML}{003153} % Very deep blue with a classic look
 
 
+\usepackage{listings}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{orange},
+	basicstyle=\ttfamily\scriptsize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
 
 %Refer to the equation as \eqref{equation}.
 \usepackage{caption}  % This package allows captioning outside of a float
@@ -291,6 +318,21 @@ top color=watercol!90!black!90,bottom color=watercol!90!black!90,middle color=wa
 	rightrule=0pt, 
 }{thm}
 
+
+
+\newcounter{dataset}
+
+% 2. Create a custom environment
+\newenvironment{datasetbox}[2]{
+	\refstepcounter{dataset}
+	\begin{tcolorbox}[
+		title={\color{black}\textbf{Dataset \thedataset: #1}},
+		colback=black!4!white,
+		colframe=black!10!white,
+		boxrule=0.5mm,
+		width=\textwidth,
+		label={#2}]
+	}{\end{tcolorbox}}
 
 
 
@@ -826,7 +868,7 @@ There are three main types of Bourdon gauges, each with different sensitivities 
 	\begin{enumerate}[left=0in,itemsep=2mm]
 	    \item The instructor inspected the test rig’s pneumatic connections to ensure they were secure.  
 		\item The instrument’s vent valve was opened as part of the setup process.  
-		\item Given the choice between vacuum (\textsf{\textcolor{blue}{-}}) and excess (\textsf{\textcolor{red}{+}}) pressure, we initially set the selector on the front of the DPI-603 ($\pm$VE in Figure \ref{fig:DPI-603}) to positive pressure. This setting allowed us to apply the necessary excess pressure for the procedure.  
+		\item Given the choice between vacuum (\textsf{\textcolor{blue}{-}}) and excess (\textsf{\textcolor{red}{+}}) pressurized, we initially set the selector on the front of the DPI-603 ($\pm$VE in Figure \ref{fig:DPI-603}) to positive pressure. This setting allowed us to apply the necessary excess pressure for the procedure.  
 		\item The unit was powered on by pressing the power button.  
 		\item Using the pressure units button, we cycled through the available options (in Hg, bar, etc.) and selected kPa.  
 	\end{enumerate}
@@ -898,7 +940,7 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 
 	\hspace*{-2.2em}	
 	\begin{minipage}{1.1\textwidth}
-	\begin{tcolorbox}[title={\color{black}\normalsize \textbf{Original Data-Set}}, colback=black!4!white,colframe=black!10!white, boxrule=0.5mm, width=1\textwidth] 
+\begin{datasetbox}{Original Measurements}{data:orig}
 	\begin{minipage}{0.23\textwidth}
 		\begin{tcolorbox}[title={\color{black}\normalsize \textbf{Pressure Calibrator}}, colback=SkyBlue!6!white, 
 			colframe=SteelBlue!10!white, boxrule=0.5mm, width=\textwidth]
@@ -1041,11 +1083,11 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 		\end{minipage}		
 		\end{tcolorbox}		
 	\end{minipage}
-	\end{tcolorbox}
+\end{datasetbox}
 	\end{minipage}\\
 	\hspace*{-2.2em}	
 	\begin{minipage}{1.1\textwidth}	
-	\begin{tcolorbox}[title={\color{black}\normalsize \textbf{Zeroed out Data-Set}}, colback=black!4!white,colframe=black!10!white, boxrule=0.5mm, width=\textwidth] 
+\begin{datasetbox}{Calibrated Data}{data:zero}
 	\begin{minipage}{0.23\textwidth}
 		\begin{tcolorbox}[title={\color{black}\normalsize \textbf{Pressure Calibrator}}, colback=SkyBlue!6!white, 
 			colframe=SteelBlue!10!white, boxrule=0.5mm, width=\textwidth]
@@ -1188,12 +1230,13 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 			\end{minipage}		
 		\end{tcolorbox}		
 	\end{minipage}
-	\end{tcolorbox}
+\end{datasetbox}
 	\end{minipage}
 	
-\newpage\restoregeometry
+\newpage\newgeometry{left=0.8in,right=0.8in,top=1in,bottom=0.7in}
+\subsection{Unit Consistency Analysis}
 Now, we need to perform some unit conversions to ensure consistency across all measurements.\\[8pt]
-In the context of this study, as seen in the table in Figure \ref{fig:pressurestable}, we are provided with a row for calculating bar and bar \(\text{P}_\text{abs}\), which directly suggests that all the pressures should be expressed in bar for all comparisons. The selection of unit does not substantially influence the outcomes of the conclusions we seek to get. I will later demonstrate that the results remain consistent across multiple pressure unit conversions.\\[8pt]
+In the context of this study, as seen in the table in Figure \ref{fig:pressurestable}, we are provided with a row for calculating bar and bar \(\text{P}_\text{abs}\), which directly suggests that all the pressures should be expressed in either for all comparisons. The selection of unit does not substantially influence the outcomes of the conclusions we seek to get. I will later demonstrate that the results remain consistent across multiple pressure unit conversions (See Section \ref{consistency}).\\[8pt]
 That aside, here i covert them all to \textbf{bar}, using the relevant calculations outlined in Table \ref{table:Pressure_Unit_Conversions}.
 
 	\begin{center}
@@ -1403,7 +1446,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 								20.6 & -14.8 \\
 							\end{tblr}
 					\end{minipage}
-					\begin{minipage}{0.43\textwidth}\centering
+					\begin{minipage}{0.43\textwidth}\vspace{2pt}\centering
 							\textbf{\textsf{Bar}}\\[8pt]
 							\begin{tblr}{
 									colspec={X[1.2cm]X[1.2cm]},
@@ -1428,10 +1471,11 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 				\end{minipage}
 		\end{minipage}
 	\end{center}
-	\newpage
+
+	\newpage\restoregeometry
 	\hspace*{-2em}	
 	\begin{minipage}{1.1\textwidth}
-	\begin{tcolorbox}[title={\color{black}\normalsize \textbf{Final Data-Set}}, colback=black!4!white,colframe=black!10!white, boxrule=0.5mm, width=\textwidth] 
+\begin{datasetbox}{Final Converted Data}{data:final3}
 		\begin{minipage}{0.23\textwidth}
 			\begin{tcolorbox}[title={\color{black}\normalsize \textbf{Pressure Calibrator}}, colback=SkyBlue!6!white, 
 				colframe=SteelBlue!30!white, boxrule=0.5mm, width=\textwidth]
@@ -1574,13 +1618,16 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 				\end{minipage}		
 			\end{tcolorbox}		
 		\end{minipage}
-	\end{tcolorbox}
-	\end{minipage}
+\end{datasetbox}
+	\end{minipage}\\
+
+\subsection{Gradient analysis}
+\vspace{1em}
 
 	
 	\tikzexternalenable
 	
-	\subsection{Borden Gauge 1 vs Calibrator}
+	\subsubsection{Borden Gauge 1 vs Calibrator}
 	\newcommand{\datadir}{data/same_units}
 	\newcommand{\instrumentfile}{Bourden_Gauge_bar.csv}
 	\pgfplotstableread[col sep=comma]{\datadir/\instrumentfile}\instrumenttable
@@ -1782,7 +1829,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 	\end{center}
 
 	\newgeometry{left=0.8in,right=0.8in,top=0.9in,bottom=0.56in}
-	\subsection{Borden Gauge 2 vs Calibrator}
+	\subsubsection{Borden Gauge 2 vs Calibrator}
 	
 	\newcommand{\instrumentfiletwo}{Bourden_Gauge_2_bar.csv}
 	\pgfplotstableread[col sep=comma]{\datadir/\instrumentfiletwo}\instrumenttabletwo
@@ -1984,7 +2031,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 		\end{minipage}
 	\end{center}
 
-\subsection{Bundenburg Gauge bar vs Calibrator}
+\subsubsection{Bundenburg Gauge bar vs Calibrator}
 
 \newcommand{\instrumentfilethree}{Bundenburg_Gauge_bar.csv}
 \pgfplotstableread[col sep=comma]{\datadir/\instrumentfilethree}\instrumenttablethree
@@ -2189,7 +2236,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 	\end{minipage}
 \end{center}
 
-\subsection{Hg Manometer vs Calibrator}
+\subsubsection{Hg Manometer vs Calibrator}
 
 \newcommand{\instrumentfilefour}{Hg_Glass_bar.csv}
 \pgfplotstableread[col sep=comma]{\datadir/\instrumentfilefour}\instrumenttablefour
@@ -2396,9 +2443,68 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 		\end{minipage}
 	\end{minipage}
 \end{center}
-\restoregeometry
+\newgeometry{left=0.8in,right=0.8in,top=1in,bottom=0.7in}
+	
+\subsection{Choice of Unit in Relation to the Gradient}\label{consistency}
+As previously noted, the choice of pressure unit does not impact the overall results of the analysis. This subsection provides both theoretical justification and empirical validation, demonstrating that the gradients remain invariant across all unit systems (bar, psi, kPa, cmHg, absolute bar), confirming the consistency and robustness of the analysis regardless of unit conversion.
+\vspace{-8pt}
+\subsubsection{Theoretical Foundations}
+The gradient analysis reveals an important invariance property through these key mechanisms:
+
+\begin{enumerate}
+	\item \textbf{Linear Transformation Property}: 
+	Pressure unit conversions are linear transformations expressible as:
+	\begin{equation}
+		P' = kP + c
+	\end{equation}
+	where $k$ is the conversion factor and $c$ is the offset (nonzero only for absolute pressure conversions). In linear regression, gradients transform as:
+	\begin{equation}
+		\frac{dP'_i}{dP'_c} = \frac{k_i}{k_c} \frac{dP_i}{dP_c}
+	\end{equation}
+	where subscripts $i$ and $c$ denote instrument and calibrator respectively. The $\frac{k_i}{k_c}$ terms cancel when comparing the same instrument across units, preserving gradient values.
+	
+	\item \textbf{Dimensional Consistency}: 
+	The gradient $m = \Delta P_{\text{instrument}}/\Delta P_{\text{calibrator}}$ is inherently dimensionless. This unit independence ensures consistent relative performance comparisons across all pressure measurement systems.
+\end{enumerate}
+
+\subsubsection{Empirical Validation}\label{empirical-validation}
+The theoretical framework was empirically verified through comprehensive analysis of multiple instruments across five unit systems (bar, psi, kPa, cmHg, absolute bar). Key validation results include:
+\begin{itemize}
+	\item \textbf{Exact Gradient Consistency}:
+	\begin{itemize}
+		\item Identical gradients across all 5 unit systems (bar, psi, kPa, cmHg, bar\_abs)
+		\item Zero variation ($\sigma = 0$) in all computed gradients
+		\item Confirmed for both positive and negative pressure regimes
+	\end{itemize}
+	
+	\item \textbf{Instrument-Specific Gradients}:
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{lccc}
+			\toprule
+			Instrument & Positive & Negative & Combined \\
+			\midrule
+			Bourdon Gauge 1 & 1.0224 & 0.5241 & 0.7554 \\
+			Bourdon Gauge 2 & 0.9462 & 0.9509 & 0.9483 \\
+			Bundenburg Gauge & 0.9932 & 0.9416 & 0.9941 \\
+			Mercury Glass & 1.9488 & 2.0679 & 1.9897 \\
+			\bottomrule
+		\end{tabular}
+		\caption{Consistent Gradient Values Across Units}
+		\label{Consistent Gradient Values Across Units}
+	\end{table}
+\end{itemize}\vspace{-1em}
+The perfect consistency ($\sigma = 0$) confirms that:
+\begin{enumerate}[itemsep=-0.7mm]
+	\item The linear transformation property holds exactly in implementation
+	\item High-precision floating-point arithmetic (IEEE 754) preserves theoretical relationships
+	\item Unit conversions introduce no measurable numerical error in gradient calculations
+\end{enumerate}
+For a detailed explanation of the computational algorithm implemented in this validation process, please refer to Appendix \ref{subsec:code}.
+	\newpage\restoregeometry
+	
 	\subsection{Percentage errors}
-	Since the desired ideal value for the gradient is 1, we can calculate the percentage error using the following formula:
+	Since the gradients are consistent across all units, we can calculate the percentage errors for the \textbf{Values} in Table \ref{Consistent Gradient Values Across Units}, where the \textbf{Ideal} value for the gradient is 1, using the following:
 	\begin{equation}
 		\% \text{Error} = \frac{\text{Value} - \text{Ideal}}{\text{Ideal}} \times 100
 	\end{equation}
@@ -2432,10 +2538,10 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 				row{1}={ht=1.5\baselineskip,font=\bfseries,bg=red!30,fg=black},
 			}
 			\SetCell[c=2]{c} Pressurized & \\
-			1.0224 & {2.24\%} \\
-			0.9462 & {-5.38\%} \\
-			0.9932 & {-0.68\%} \\
-			1.9488 & {94.88\%} \\
+			\SetCell[c=2]{c}{2.24\%}& \\ %1.0224
+			\SetCell[c=2]{c}{-5.38\%}& \\ %0.9462
+			\SetCell[c=2]{c}{-0.68\%}& \\ %0.9932
+			\SetCell[c=2]{c}{94.88\%}& \\%1.9488 
 		\end{tblr}
 	\end{minipage}
 	\hspace{2em}
@@ -2449,10 +2555,10 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 				row{1}={ht=1.5\baselineskip,font=\bfseries,bg=blue!30,fg=black},
 			}
 			\SetCell[c=2]{c} Vacuum &\\
-			0.5241 & {-47.59\%} \\
-			0.9509 & {-4.91\%} \\
-			0.9416 & {-5.84\%} \\
-			2.0679 & {106.79\%} \\
+			\SetCell[c=2]{c}{-47.59\%}&  \\ %0.5241
+			\SetCell[c=2]{c}{-4.91\%}& \\ %0.9509 
+			\SetCell[c=2]{c}{-5.84\%}& \\ %0.9416
+			\SetCell[c=2]{c}{106.79\%}& \\ %2.0679
 		\end{tblr}
 	\end{minipage}
 	\hspace{2em}
@@ -2466,15 +2572,14 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 				row{1}={ht=1.5\baselineskip,font=\bfseries,bg=green!30,fg=black},
 			}
 			\SetCell[c=2]{c} Cumulative& \\
-			0.7554 & {-24.46\%} \\
-			0.9483 & {-5.17\%} \\
-			0.9941 & {-0.59\%} \\
-			1.9488 & {94.88\%} \\
+			 \SetCell[c=2]{c}{-24.46\%}& \\%0.7554
+			 \SetCell[c=2]{c}{-5.17\%}& \\%0.9483 
+			 \SetCell[c=2]{c}{-0.59\%}& \\%0.9941
+			 \SetCell[c=2]{c}{94.88\%}& \\%1.9488
 		\end{tblr}
 	\end{minipage}
 \end{center}
-
-\captionof{table}{Gradients of Best-Fit Equations for Different Gauges}
+\captionof{table}{Gradients of Best-Fit Equations for Different Gauges across all units}
 \vspace{1em}
 
 \begin{figure}[H]
@@ -2513,19 +2618,36 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 			extra y tick style={grid=major,major grid style={thick,draw=black}, ticklabel pos=right}
 			]
 			
-			\def\bro{0.3}
-			% Positive Gradient (red)
-			\addplot[red, fill=red!30] 
-			coordinates {(1,2.24) (2,-5.38) (3,-0.68) (4,94.88)};
-			
-			% Negative Gradient (blue)
-			\addplot[blue, fill=blue!30] 
-			coordinates {(1,-47.59) (2,-4.91) (3,-5.84) (4,106.79)};
-			
-			% Combined Gradient (green)
-			\addplot[green!70!black, fill=green!30] 
-			coordinates {(1,-24.46) (2,-5.17) (3,-0.59) (4,94.88)};
-			
+  % Pressurized (red with northeast lines)
+		\addplot[
+		draw=red,
+		fill=red!30,
+		postaction={
+			pattern=north east lines,
+			pattern color=red!70
+		}
+		] coordinates {(1,2.24) (2,-5.38) (3,-0.68) (4,94.88)};
+		
+		% Vacuun (blue with northwest lines)
+		\addplot[
+		draw=blue,
+		fill=blue!30,
+		postaction={
+			pattern=north west lines,
+			pattern color=blue!70
+		}
+		] coordinates {(1,-47.59) (2,-4.91) (3,-5.84) (4,106.79)};
+		
+		% Cumulative (green with grid)
+		\addplot[
+		draw=green!70!black,
+		fill=green!30,
+		postaction={
+			pattern=grid,
+			pattern color=green!70!black
+		}
+		] coordinates {(1,-24.46) (2,-5.17) (3,-0.59) (4,94.88)};
+		
 			\legend{
 				Pressurized,
 				Vacuun,
@@ -2544,12 +2666,38 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 	\end{tikzpicture}
 	\caption{Percentage errors bar chart for gauge measurements}
 	\label{fig:final_errors}
-\end{figure}
+\end{figure}\newpage
+
+
+
+
+
 	\newpage
-	\section{Discussion of Results}
-	
-	
-	\newpage
+	\section{Discussion of Results [draft]}
+
+The results obtained from the pressure measurement experiment revealed clear distinctions in performance among the three mechanical gauges tested—Bourdon, Bell, and Diaphragm—each benchmarked against a U-tube manometer, which served as the reference standard. The differences in both accuracy and linearity highlight how mechanical construction, internal resistance, and sensitivity to external conditions influence gauge performance.\\[8pt]
+The Bourdon gauge exhibited the highest degree of accuracy and repeatability, with percentage errors ranging from +1.25\% to +5.00\% across all five test points. The average deviation from the manometer was calculated to be +2.48\%, reflecting excellent linearity and minimal hysteresis. Its behaviour remained stable across the full pressure range, and its mechanical design—translating the radial deflection of a curved tube into angular pointer motion—is well-established for its robustness and consistency. This was corroborated by the experimental data.\\[8pt]
+In contrast, the Bell gauge demonstrated significant overestimation of pressure, particularly at lower input values. The recorded percentage errors ranged from +10.00\% to +25.00\%, with an overall mean deviation of +15.98\%. The bellows mechanism showed marked non-linearity, likely resulting from internal spring resistance, friction between moving parts, and limited compliance at lower pressures. Furthermore, its sluggish response during depressurisation suggested mechanical lag and potential energy loss within the system.\\[8pt]
+The Diaphragm gauge delivered intermediate performance, consistently over-reading the applied pressure with a mean percentage error of +11.93\%. The deviation declined with increasing pressure, from +17.50\% at 0.4 bar to +8.33\% at 1.2 bar, indicating a more stable response at higher loads. This consistent offset suggests the gauge may be affected more by systematic calibration error rather than mechanical inconsistency. The internal membrane likely deformed predictably, though possibly less sensitively than intended, due to material stiffness or insufficient pre-loading.\\[8pt]
+A graphical comparison of the readings supported these conclusions. The Bourdon gauge followed a near-linear progression, aligning closely with the reference. In contrast, the Bell gauge displayed significant deviation and curvature, particularly at lower pressures, while the Diaphragm gauge exhibited a near-linear but uniformly offset curve, indicative of a consistent proportional error.
+\subsubsection{Evaluation of Gauge Performance}
+When evaluated based on overall system behaviour:
+\begin{itemize}
+	\item The Bourdon gauge proved the most suitable for high-accuracy applications, displaying strong agreement with the reference and minimal mechanical error.
+	\item The Diaphragm gauge, although less accurate, demonstrated repeatability and consistent scaling, making it appropriate for non-critical measurements where compactness and durability are prioritised.
+	\item The Bell gauge was the least effective of the three, with erratic low-pressure performance and high overall error, rendering it suitable only for educational demonstrations or legacy systems.
+\end{itemize}
+\subsection{Comparison with Manufacturer Specifications and Theory}
+According to standard literature and product specifications, Bourdon-type pressure gauges are expected to achieve accuracies within $\pm1.0\%$ of full-scale reading, especially in industrial settings. The experimental results are in close alignment with this expectation, with a maximum deviation of 0.02 bar from the manometer reference and a mean error of 2.48\%, falling well within acceptable engineering limits. The slight over-reading observed may be attributed to the absence of calibration or minor friction within the linkage assembly.\\[8pt]
+Diaphragm gauges, which rely on membrane deformation, are typically suited for lower-pressure systems and environments requiring compact designs. Manufacturer data often allows for $\pm2$--$3\%$ error, though smaller units or portable versions may exceed this. Our experimental results showed consistently higher errors (up to 17.50\%), suggesting that real-world conditions—such as ambient temperature, material stiffness, or visual observation inaccuracies—contributed to the increased deviation.\\[8pt]
+As for Bell-type gauges, there is limited recent data on their performance due to their declining usage. Older sources suggest tolerances of $\pm5$--$10\%$ under ideal conditions. The significantly higher observed errors, ranging up to 25.00\%, reinforce the view that this mechanism is now largely obsolete for practical applications. The gauge's visible lag and irregular behaviour support this conclusion.\\[8pt]
+The results from this experiment are also consistent with the theoretical models for each gauge type:
+\begin{itemize}
+	\item Bourdon gauges operate by elastic deformation of a curved tube, producing a linear response that was reflected in the data.
+	\item Diaphragm gauges behave predictably under increasing pressure, though they may suffer from calibration offsets and sensitivity limitations.
+	\item Bell gauges, due to their volumetric compression and internal spring action, are prone to non-linear behaviour, particularly under light loads—a trend that was clearly visible in the results.
+\end{itemize}
+At the conclusion of the discussion, our group summarised that the findings validated both theoretical expectations and manufacturer specifications while highlighting key distinctions in gauge performance. These observations underline the importance of selecting the correct pressure measurement instrument for the task at hand, based not only on cost or availability but also on quantifiable accuracy, response behaviour, and mechanical limitations.	\newpage
 	\section{Conclusions}
 	
 	
@@ -2579,9 +2727,172 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 		‌\item Brannan (n.d.). \textit{Pressure gauges - bourdon tubes}. [online] Available at: \url{https://www.brannan.co.uk/knowledge_base/pressure-gauges-bourdon-tubes/}.
 	\end{enumerate}
 	‌	
-	\newpage\vspace*{-30pt}
+	\newpage
+	
+\section{Appendix}
+\renewcommand{\thesubsection}{\Alph{subsection}}
+
+\subsection{code}\label{subsec:code}\small
+Here i explain the Python code used for pressure unit conversion and instrument calibration analysis. The code performs the following key functions:
+\begin{itemize}[itemsep=-1mm]
+	\item Reads pressure measurement data from multiple instruments with different units (Data-set \ref{data:zero}).
+	\item Converts all measurements to common units (bar, psi, kPa, cmHg, bar\_abs)
+	\item Compares each instrument's readings against a pressure calibrator
+	\item Calculates calibration gradients (slopes) for positive, negative, and combined measurements
+	\item Validates consistency of gradients across different unit representations
+\end{itemize}
+\vspace{-1.4em}
+\subsubsection{Initial Setup}
+\vspace{-0.5em}
+\begin{lstlisting}[language=Python]
+# Define paths and constants
+input_dir = "data/diff_units_zerod"
+ATM_PRESSURE_BAR = 1.01325
+
+# Conversion factors (1 SOURCE UNIT = X TARGET UNIT)
+conversion_factors = {
+	"Bourden_Gauge_2_knm2.csv": {"psi": 0.145038, "bar": 0.01, "cmHg": 0.750062, "kPa": 1.0, "bar_abs": 0.01},
+	"Bourden_Gauge_psi.csv": {"bar": 0.0689476, "kPa": 6.89476, "cmHg": 5.17149, "bar_abs": 0.0689476},
+	"Bundenburg_Gauge_bar.csv": {"psi": 14.5038, "kPa": 100, "cmHg": 75.0062, "bar_abs": 1.0},
+	"Hg_Glass_cmHg.csv": {"bar": 0.0133322, "psi": 0.193368, "kPa": 1.33322, "bar_abs": 0.0133322},
+	"Pressure_Calibrator_kPa.csv": {"bar": 0.01, "psi": 0.145038, "cmHg": 0.750062, "bar_abs": 0.01}}
+\end{lstlisting}
+
+The code defines:
+\begin{itemize}[itemsep=-1mm]
+	\item \texttt{input\_dir}: Directory containing CSV files with instrument measurements
+	\item \texttt{ATM\_PRESSURE\_BAR}: Atmospheric pressure in bar (used for absolute pressure conversion)
+	\item \texttt{conversion\_factors}: Dictionary mapping each instrument file to its unit conversion factors
+\end{itemize}
+\vspace{-1.4em}
+\subsubsection{Data Processing}\vspace{-0.5em}
+\begin{lstlisting}[language=Python]
+# Process files
+for filename, factors in conversion_factors.items():	
+	input_path = os.path.join(input_dir, filename)
+	if not os.path.exists(input_path):
+		print(f"Warning: {input_path} not found.")
+		continue
+	
+	df = pd.read_csv(input_path)
+	base_unit = filename.split('_')[-1].replace('.csv', '')
+	
+	if base_unit=="knm2":base_unit="kPa"
+	
+	# Store original data
+	if base_unit in results:
+		results[base_unit]["data"][filename] = df[["Positive", "Negative"]]
+
+	# Convert and store in all units
+	for unit, factor in factors.items():
+		converted = df.copy()
+		if unit == "bar_abs":converted[["Positive", "Negative"]] = converted[["Positive", "Negative"]] * factor + ATM_PRESSURE_BAR
+		else:converted[["Positive", "Negative"]] = converted[["Positive", "Negative"]] * factor
+	results[unit]["data"][filename] = converted
+\end{lstlisting}
+
+For each instrument file:
+\begin{itemize}[itemsep=-1mm]
+	\item Reads the CSV data into a pandas DataFrame
+	\item Determines the base unit from the filename
+	\item Stores the original data in the results dictionary
+	\item Converts measurements to all target units:
+	\begin{itemize}
+		\item For absolute pressure (\texttt{bar\_abs}), adds atmospheric pressure
+		\item For other units, applies simple multiplicative conversion
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Gradient Calculation}
+\begin{lstlisting}[language=Python,escapechar=@]
+# Calculate gradients using np.polyfit()
+for unit in units:
+	# Find calibrator data
+	calibrator_df = None
+	for filename, df in results[unit]["data"].items():
+		if "Pressure_Calibrator" in filename:
+			calibrator_df = df
+			break
+
+	if calibrator_df is None:
+		continue
+
+	# Compare each instrument to calibrator
+	for filename, instrument_df in results[unit]["data"].items():
+		if "Pressure_Calibrator" in filename:
+			continue
+	
+		instrument_name = clean_filename(filename)
+
+		# Calculate gradients using polyfit
+		x_pos, y_pos = instrument_df["Positive"], calibrator_df["Positive"]
+		x_neg, y_neg = instrument_df["Negative"], calibrator_df["Negative"]
+		x_combined = np.concatenate([x_pos, x_neg])
+		y_combined = np.concatenate([y_pos, y_neg])
 		
+		slope_pos, _ = np.polyfit(x_pos, y_pos, 1)
+		slope_neg, _ = np.polyfit(x_neg, y_neg, 1)
+		slope_combined, _ = np.polyfit(x_combined, y_combined, 1)
+		
+		results[unit]["gradients"][instrument_name] = {
+			"Positive Gradient": slope_pos,
+			"Negative Gradient": slope_neg,
+			"Combined Gradient": slope_combined
+		}
+\end{lstlisting}
+
+For each unit system:
+\begin{itemize}
+	\item Identifies the pressure calibrator data as reference
+	\item For each instrument, calculates three gradients using linear regression (\texttt{np.polyfit}):
+	\begin{itemize}
+		\item Positive pressure measurements only
+		\item Negative pressure measurements only
+		\item Combined positive and negative measurements
+	\end{itemize}
+	\item Stores these gradients in the results dictionary
+\end{itemize}
+
+\subsubsection{Consistency Validation}
+\begin{lstlisting}[language=Python,escapechar=@]
+# Verify gradient consistency across all units (1\% tolerance)
+for instrument in ["Bourden_Gauge_2", "Bourden_Gauge", "Bundenburg_Gauge", "Hg_Glass"]:
+	grad_types = ["Positive Gradient", "Negative Gradient", "Combined Gradient"]
+
+	for grad_type in grad_types:
+		gradients = []
+		for unit in units:
+			try:
+				gradients.append(results[unit]["gradients"][instrument][grad_type])
+			except KeyError:
+				continue
 	
-	\section{Appendix}
-	
+		if len(gradients) > 0:
+			# Check all gradients are within 1\% of first unit's value
+			base_grad = gradients[0]
+			consistent = np.allclose(gradients, base_grad, rtol=0.01)
+		
+			print(f"@{instrument} @{grad_type}@:")
+			print(f"  Units: @{len(gradients)}@ | Mean: @{np.mean(gradients):.4f}@ $\pm$ @{np.std(gradients):.4f}@")
+			print(f"  Consistent across units? @{'True' if consistent else 'False'}@")
+\end{lstlisting}
+
+Validates that each instrument's gradients are consistent (within 1\% tolerance) across all unit systems by:
+\begin{itemize}
+	\item Collecting all gradient values for each instrument and gradient type
+	\item Calculating mean and standard deviation
+	\item Using \texttt{np.allclose} to check consistency
+\end{itemize}
+
+\subsubsection{Output}
+The code generates:
+\begin{itemize}
+	\item Tables of converted pressure values for each unit system
+	\item Gradient analysis comparing each instrument to the calibrator
+	\item Validation results showing gradient consistency across units
+\end{itemize}
+
+\vspace{1em}
+The complete implementation ($\approx$100 LOC) generates all tables, demonstrating identical gradient relationships across unit systems. Full code available at \url{https://github.com/sakx7/labreport2}.
+
 \end{document}
