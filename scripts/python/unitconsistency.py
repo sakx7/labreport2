@@ -80,7 +80,7 @@ for unit in units:
             "Positive Gradient": slope_pos,
             "Negative Gradient": slope_neg,
             "Combined Gradient": slope_combined
-        }
+        }   
 
 # Print results
 for unit in units:
