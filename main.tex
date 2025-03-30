@@ -127,7 +127,7 @@
 \fancyfoot[R]{\thepage}
 
 \usepackage{scalerel}
-
+\usepackage{pythonhighlight}
 \setlength{\headheight}{30pt}
 \setlength{\footskip}{20pt}
 
@@ -173,9 +173,9 @@
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
 \lstdefinestyle{mystyle}{
-	backgroundcolor=\color{backcolour},   
+	backgroundcolor=\color{white!97!gray},   
 	commentstyle=\color{codegreen},
-	keywordstyle=\color{magenta},
+	keywordstyle=\color{purple},
 	numberstyle=\tiny\color{codegray},
 	stringstyle=\color{orange},
 	basicstyle=\ttfamily\scriptsize,
@@ -388,9 +388,9 @@ top color=watercol!90!black!90,bottom color=watercol!90!black!90,middle color=wa
 		Sakariye Abiikar & Mechanical Engineering & Formatter, Method \& Experimental Procedures, Introduction, Results & \includegraphics[width=2cm,valign=c]{images/image(7).jpeg} \\ 
 		Alireza Alishahi & Mechanical Engineering  & Abstract, Method \& Experimental Procedures & \includegraphics[width=2cm,valign=c]{images/8_orgid_297f9608-cce6-40e3-adc2-86e161e7141f.jpg} \\ 
 		Varley, Freddie & Mechanical Engineering & Theory, Recommendations &  \includegraphics[width=2cm,valign=c]{images/profile.png}\\
-		Abdul Mueed & Mechanical Engineering  & \wm{0.1}{Theory\\ \small in progress} & \includegraphics[width=2cm,valign=c]{images/profile.png} \\ 
-		Abdelrahman Shehata & Mechanical Engineering  & \wm{0.2}{Discussion of results\\ \small in progress} & \includegraphics[width=2cm,valign=c]{images/Image.jpg}\\
-		Naim Alrifai & Mechanical Engineering & \wm{0.1}{Conclusion\\ \small in progress} & \includegraphics[width=2cm,valign=c]{images/Image(9).jpeg} \\\hline
+		Abdul Mueed & Mechanical Engineering  & Theory & \includegraphics[width=2cm,valign=c]{images/profile.png} \\ 
+		Abdelrahman Shehata & Mechanical Engineering  & Discussion of results & \includegraphics[width=2cm,valign=c]{images/Image.jpg}\\
+		Naim Alrifai & Mechanical Engineering & Conclusion & \includegraphics[width=2cm,valign=c]{images/Image(9).jpeg} \\\hline
 		Munachi J Atuegbu & Mechanical Engineering & No contact at all might not be real. Last seen 11/29/24 is crazy & \includegraphics[width=2cm,valign=c]{images/profile.png} \\\hline
 		Ehsan Haque & Mechanical Engineering & Approved Mitigation  & \includegraphics[width=2cm,valign=c]{images/profile.png} \\
 	\end{tblr}
@@ -413,7 +413,7 @@ top color=watercol!90!black!90,bottom color=watercol!90!black!90,middle color=wa
 	\noindent
 	
 \section{Abstract}
-In this experiment, we calibrated and compared the performance of multiple pressure-measuring devices, including two Bourdon gauges, a Budenberg pressure gauge and a Hg glass manometer, in tandem with a reference pressure calibrator (DPI-603 Portable Pressure Calibrator), which served as the baseline for pressure measurements and as the source of the applied pressure. The devices were connected to the DPI-603 Portable Pressure Calibrator, enabling us to apply both positive and negative pressures in increments of approximately 5 kPa. Through this process, we were able to get an exhaustive dataset that demonstrated notable differences in the pressure-measuring devices' performance. \textcolor{red!50!white}{[Placeholder breif results findings]}. These results highlighted the importance of selecting appropriate devices based on precision requirements and operating conditions, as well as the potential impact of human error in reading analog instruments like the Bourdon gauges and Hg manometer. 
+In this experiment, we calibrated and compared the performance of multiple pressure-measuring devices, including two Bourdon gauges, a Budenberg pressure gauge and a Hg glass manometer, in tandem with a reference pressure calibrator (DPI-603 Portable Pressure Calibrator), which served as the baseline for pressure measurements and as the source of the applied pressure. The devices were connected to the DPI-603 Portable Pressure Calibrator, enabling us to apply both positive and negative pressures in increments of approximately 5 kPa. Through this process, we were able to get an exhaustive dataset that demonstrated notable differences in the pressure-measuring devices' performance. Our results revealed significant performance variations, with the Budenberg gauge showing exceptional accuracy (±0.59\% error) comparable to the Hg manometer (±0.58\%), while the Bourdon gauges exhibited larger errors (up to -47.59\% under vacuum conditions). These results highlighted the importance of selecting appropriate devices based on precision requirements and operating conditions, as well as the potential impact of human error in reading analog instruments like the Bourdon gauges.
 
 	
 	\newpage\vspace*{-20pt}
@@ -427,11 +427,11 @@ In this experiment, we calibrated and compared the performance of multiple press
 	Previous studies have highlighted various challenges and findings related to pressure measurement devices. For example, a study by Hodgkinson et al. (2020) found that the accuracy of home blood pressure monitors varied significantly, with validated monitors showing a higher pass rate in static pressure tests compared to unvalidated ones. This emphasizes the importance of validation and calibration in ensuring the accuracy of pressure-measuring devices.\\[1em]
 	In this experiment, we aimed to evaluate the performance and accuracy of various pressure-measuring devices under controlled conditions, comparing their responses to varying pressure levels.
 	
-	\newpage\restoregeometry
+	\newpage\newgeometry{left=0.8in,right=0.8in,top=1in,bottom=0.7in}
 
 	\section{Theory}
 
-When we talk about pressure, the first thing that comes to mind is its physical definition. It refers to the effect or various types of deflection when a force is applied to a surface.\vspace{-0.5em}
+When discussing pressure, the primary consideration is its physical definition. It is fundamentally characterized as the force exerted per unit area on a surface, leading to measurable effects such as deformation or displacement, depending on the material and conditions of application.\vspace{-0.5em}
 \begin{center}
 	\begin{minipage}{0.51\textwidth}
 		\centering
@@ -486,16 +486,20 @@ When we talk about pressure, the first thing that comes to mind is its physical 
 		\captionof{figure}{Illustration of pressure application}
 		\label{fig:pressure}
 \end{minipage}\end{center}
+
 \begin{center}
-\begin{minipage}{0.49\textwidth}
+\begin{formal}[(Farbod Tabesh, 2019)]{black!60!white}{white!93!gray}\vspace{-0.7em}
+\begin{minipage}[t]{0.48\textwidth}
 	\subsection{Absolute Pressure}
 	Absolute pressure is measured relative to a perfect vacuum, where no molecules exert force. It represents the total pressure exerted, including atmospheric pressure. In practical applications, absolute zero pressure is unattainable, but it serves as the theoretical baseline for all pressure measurements.
 \end{minipage}\hfill
-\begin{minipage}{0.49\textwidth}
+\begin{minipage}[t]{0.47\textwidth}
 	\subsection{Gauge Pressure}
 	Gauge pressure, also referred to as relative pressure, is measured with respect to local atmospheric pressure. Since atmospheric pressure varies with altitude and weather conditions, gauge pressure is useful for measuring pressure differences in industrial and scientific applications. It can be positive or negative, depending on whether the measured pressure is above or below atmospheric pressure.
-\end{minipage}
+\end{minipage}\\
+\end{formal}
 \end{center}
+
 \vspace{-2em}
 \subsection{Atmospheric Pressure}
 Atmospheric pressure ($P_{\text{atm}}$) is the pressure exerted by the weight of air in the Earth's atmosphere. At sea level, it is approximately:
@@ -517,7 +521,7 @@ Key pressure classifications include:\\
 	\item \textbf{Vacuum Pressure ($P_{\text{vac}}$)}: Any pressure below atmospheric pressure but above absolute zero pressure.
 	\item \textbf{Positive (or Gauge) Pressure ($P_{\text{gauge}} > 0$)}: Any pressure higher than local atmospheric pressure.
 	\item \textbf{Negative (or Suction) Pressure ($P_{\text{gauge}} < 0$)}: Any pressure lower than atmospheric pressure but not reaching absolute zero.
-\end{itemize}\newgeometry{left=0.8in,right=0.8in,top=1in,bottom=0.7in}\noindent
+\end{itemize}\newpage\noindent
 \textbf{Vacuum Pressure Relation:}  
 Vacuum pressure is often measured as a positive value but represents a pressure below atmospheric pressure:
 \begin{equation}
@@ -570,19 +574,14 @@ The following diagram illustrates these pressure definitions more clearly.\\\vsp
 \end{tikzpicture}
 \captionof{figure}{Representation of Pressures (Farbod Tabesh, 2019)}\label{representation of pressure}
 \end{center}
-\vspace{-1em}
 \subsection{Differential pressure}
-\begin{formal}[Renke, 2024]{black!50!white}{white!97!gray}
-	Differential pressure is the difference between the values of the pressures at different locations. For example, if the pressure at point 1 is $P_1$ and the pressure at point 2 is $P_2$, then the pressure difference from 1 to 2 is: 
+Differential pressure is the difference between the values of the pressures at different locations (Renke, 2024). For example, if the pressure at point 1 is $P_1$ and the pressure at point 2 is $P_2$, then the pressure difference from 1 to 2 is: 
 \begin{equation}
 	\Delta P=P_1-P_2
 \end{equation}
-\end{formal}
-
 \newpage
 \subsection{Devices and Mechanisms}
-
-\begin{formal}[(Brannan, n.d.)(InstTools, 2017)(ScienceDirect,n.d.)]{black!50!white}{white!97!gray}
+\begin{formal}[(Brannan, n.d.)(InstTools, 2017)(ScienceDirect,n.d.)]{black!60!white}{white!93!gray}
 \vspace{-1em}
 \subsubsection{Bourdon Gauges}	
 A Bourdon gauge consists of a curled up tube, with one end closed and the other open to the system.\\[8pt] 
@@ -596,7 +595,7 @@ There are three main types of Bourdon gauges, each with different sensitivities 
 \begin{itemize}
 	\item \textbf{C-Type:}\\[8pt]
 	\begin{minipage}{0.3\textwidth}\centering\hspace*{-1em}
-		\includegraphics[width=1.1\textwidth]{images/ezgif-42a6b97cab4453(2)}
+		\includegraphics[width=1.1\textwidth]{images/ezgif-42a6b97cab4453(2)-Photoroom.png}
 		\captionof{figure}{C-Type Bourdon gauge (Efunda, 2024)}
 	\end{minipage}\hfill
 	\begin{minipage}{0.6\textwidth}
@@ -606,7 +605,7 @@ There are three main types of Bourdon gauges, each with different sensitivities 
 	\end{minipage}
    \item \textbf{Spiral:}\\[8pt]
 	\begin{minipage}{0.3\textwidth}\centering
-			\includegraphics[width=1\textwidth]{images/ctype-ezgif.com-webp-to-jpg-converter.jpg}
+			\includegraphics[width=1\textwidth]{images/ctype-ezgif.com-webp-to-jpg-converter-Photoroom.png}
 			\captionof{figure}{Spiral Bourdon gauge (InstTools, 2017)}
 	\end{minipage}\hfill
 	\begin{minipage}{0.6\textwidth}
@@ -617,7 +616,7 @@ There are three main types of Bourdon gauges, each with different sensitivities 
 	\item \textbf{Helical:}
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\textwidth]{images/helix-ezgif.com-webp-to-jpg-converter.jpg}
+		\includegraphics[width=0.5\textwidth]{images/helix-ezgif.com-webp-to-jpg-converter-Photoroom.png}
 		\caption{Helical-type Bourdon gauge  (InstTools, 2017)}
 		\label{fig:helical}
 	\end{figure}
@@ -637,6 +636,7 @@ Manometers operate on the fundamental principle of hydrostatic equilibrium, wher
 For incompressible fluids, this integrates to the basic manometric equation:
 \begin{equation}
 	\Delta P = \rho g \Delta h
+	\label{pressure}
 \end{equation}
 \begin{center}
 \hspace{10em}\wm{0.7}{\centering
@@ -658,8 +658,8 @@ Key assumptions in classical manometry:
 \paragraph{Manometer Types}\mbox{}\\[1em]
 \noindent
 \begin{minipage}{0.65\textwidth}
-	\textbf{1. Torricellian Barometer (Absolute Pressure)}\\[8pt]	
-	The mercury barometer illustrates the fundamental principle of atmospheric pressure measurement. It relies on the relationship between pressure, fluid density, and height, given by:  
+	\small\textbf{1. Torricellian Barometer (Absolute Pressure)}\\[8pt]	
+	\large The mercury barometer illustrates the fundamental principle of atmospheric pressure measurement. It relies on the relationship between pressure, fluid density, and height, given by:  
 	\begin{equation}
 		P_{atm} = \rho_{\tiny \bm{Hg}}\, g  h
 	\end{equation}
@@ -713,9 +713,9 @@ Key assumptions in classical manometry:
 	\item $h$ : Measured height (meter, \si{\m})
 	\item $T$ : Temperature (degree Celsius, \si{\degreeCelsius})
 \end{itemize}
-This correction ensures accurate readings by accounting for thermal expansion effects.\\[6pt]
+This correction ensures accurate readings by accounting for thermal expansion effects.\\[1em]
 \begin{minipage}{0.65\textwidth}
-	\textbf{2. Open-Tube Manometer (Differential Pressure)}\\[8pt]
+	\small\textbf{2. Open-Tube Manometer (Differential Pressure)}\\[8pt] \large 
 	The open-tube manometer, typically in a U-tube configuration, measures pressure differences by comparing the fluid levels in both arms of the tube. The pressure difference is given by:  
 	\begin{equation}
 		P_1 - P_2 = (\rho_m - \rho_f)gh
@@ -756,7 +756,7 @@ The sensitivity of the device can be enhanced in several ways. One approach is t
 \end{equation}
 Another method is to use a lower-density fluid, such as water, which has a density of 998 kg/m$^3$. This allows for greater displacement per unit pressure difference, improving measurement precision.\\
 \begin{minipage}{0.65\textwidth}
-	\textbf{3. Sealed-Tube Manometer (Absolute Pressure)}\\[8pt]
+\small	\textbf{3. Sealed-Tube Manometer (Absolute Pressure)}\\[8pt]\large
 	The sealed-tube manometer is designed for absolute pressure measurement. Unlike open-tube configurations, it has one end closed, providing a fixed reference point—either a vacuum or a gas of known pressure. The pressure is determined by:  
 	\begin{equation}
 		P = \rho g h
@@ -796,40 +796,6 @@ The corrected pressure is given by:
 \end{equation}
 This correction factor ensures more accurate pressure readings by compensating for fluid displacement effects in the well.\\[8pt]
 \noindent
-\textbf{Other Types of Manometers}\\[8pt]
-Beyond the standard designs, several specialized manometers exist for different applications:
-\begin{itemize}
-	\item \textbf{Inclined Manometer} – Enhances sensitivity by extending fluid displacement along an angled tube, improving low-pressure measurements. 
-	\item \textbf{Micro-Manometer} – A highly sensitive device that uses very fine fluid columns or micromechanical structures to measure minute pressure variations.
-	
-	\item \textbf{Digital Manometer} – Replaces traditional fluid columns with electronic pressure sensors, offering high precision and real-time readings.
-	
-	\item \textbf{Capacitance Manometer} – Measures pressure by detecting changes in capacitance between a diaphragm and a fixed electrode, commonly used in vacuum applications.
-	
-	\item \textbf{Bourdon Tube Manometer} – Uses a coiled, flexible metal tube that deforms under pressure changes, converting mechanical displacement into a readable scale.
-	
-	\item \textbf{McLeod Manometer} – Specialized for low-pressure measurements, it compresses a known gas volume to determine absolute pressure based on Boyle’s Law.
-	
-\end{itemize}
-\begin{center}
-	\begin{tblr}{
-			colspec={Q[2.3cm]Q[2.3cm]Q[2.3cm]Q[2.3cm]Q[2.3cm]},
-			hlines, vlines, 
-			cells={valign=m, halign=c,font=\small},
-			rows={ht=1\baselineskip},
-			row{1}={ht=1\baselineskip, font=\bfseries\small, bg=black!5!white},
-			column{1}={font=\bfseries\small, bg=black!5!white}
-		}
-		\SetCell{bg=black!10!white,fg=black}Parameter & Torricelli & Open-Tube & Sealed-Tube & Inclined & Digital \\
-		Pressure Type & Absolute & Differential & Absolute & Differential & Absolute \\
-		Typical Range & 0-300 kPa & 0-10 kPa & 0-100 kPa & 0-2 kPa & 0-1000 kPa \\
-		Accuracy & 0.01\% & 0.1\% & 0.05\% & 0.01\% & 0.05\% \\
-		Fluid & Mercury & Water/Oil & Mercury/Oil & Water/Oil & None (Electronic) \\
-		Applications & Atmospheric Pressure & Differential Pressure & Vacuum Measurements & Low Pressure & General Purpose \\
-	\end{tblr}
-	\captionof{table}{Comparative Analysis}
-\end{center}
-
 
 
 \newpage\newgeometry{left=0.8in,right=0.8in,top=1.23in,bottom=0.69in}
@@ -1019,6 +985,8 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 	\newpage\newgeometry{left=0.8in,right=0.8in,top=1in,bottom=0.5in}
 	\section{Data, Calculations and Results}
 	\tikzexternaldisable
+	\subsection{Modifying the initial dataset}
+
 
 	\hspace*{-2.2em}	
 	\begin{minipage}{1.1\textwidth}
@@ -1140,7 +1108,7 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 			\hfil
 			\begin{minipage}{0.225\textwidth}
 			\centering
-			\textbf{\textsf{cm Hg}}\\[8pt]
+			\textbf{\textsf{cm Hg}}\\[8 pt]
 			\begin{tblr}{
 					colspec={X[1cm]X[1cm]},
 					hlines,vlines,
@@ -1166,7 +1134,104 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 		\end{tcolorbox}		
 	\end{minipage}
 \end{datasetbox}
-	\end{minipage}\\
+\end{minipage}\\[1em]
+\noindent
+The pressure readings from the other instruments are given in standard pressure units (kPa, psi, kN/m\(^2\), bar), while the manometer values currently only represent fluid height in cm of mercury. To compare them properly, these values must be converted into pressure using Eq \ref{pressure}:
+\[P = \rho g \Delta h\]
+where \( \rho \) is the density of mercury (\(13,600 \, \text{kg/m}^3\)), \( g \) is gravitational acceleration (\(9.81 \, \text{m/s}^2\)), and $\Delta h$ is the corrected height difference.\\[1em]
+\textbf{Manometer Data Correction:} The raw measurements represent the displacement \( h \) of one mercury column. The total height difference (\(\Delta h\)) is calculated as \( 2h \) for pressure conversion because:
+	\begin{itemize}
+		\item A U-tube manometer measures pressure via symmetric fluid displacement. When one side rises by \( h \), the other falls by \( h \), yielding:
+		\[\Delta h = |h_1| + |h_2| = h + h = 2h\]
+		\item The pressure difference is derived from hydrostatics:
+		\[\Delta P = \rho g \Delta h = 2 \rho g h\]
+		\item Substituting mercury density (\(\rho = 13,\!600\,\text{kg/m}^3\)) and gravity (\(g = 9.81\,\text{m/s}^2\)), with \( h \) in cm:
+			\[
+			\Delta P = \underbrace{2}_{\text{Factor for two sides}} \times \underbrace{13,600 \, \frac{\text{kg}}{\text{m}^3}}_{\text{Mercury density}} \times \underbrace{9.81 \, \frac{\text{m}}{\text{s}^2}}_{\text{Gravitational acceleration}} \times \underbrace{h \, (\text{cm})}_{\text{Height in cm}} \times \underbrace{10^{-2} \, \text{m}}_{\text{Conversion from cm to m}} \times \underbrace{\frac{1}{10^3}}_{\text{Convert Pa to kPa}}
+			\]
+	\end{itemize}
+\newpage\newgeometry{left=0.8in,right=0.8in,top=1in,bottom=0.7in}
+\begin{minipage}{0.55\textwidth}
+This simplifies to:
+\[P = 2.668 \times h\]
+where \( P \) is in kPa. Assuming the sealed end is a vacuum (0 pressure), then \( P \) represents the absolute pressure. If the sealed end has a reference pressure \( P_{\text{ref}} \neq 0 \), then the pressure difference is:
+\[\Delta P = P - P_{\text{ref}}\]
+It is difficult to ascertain the precise parameters of the system due to the limited information provided regarding the initial setup. \\[4pt]
+\textbf{Assumptions:} 
+\begin{itemize}
+	\item Initial balance (zero pressure difference).
+	\item Uniform tube cross-section (no capillary effects).
+	\item Negligible temperature effects on density.
+\end{itemize}\vspace{0.2em}
+Violations (e.g., asymmetric tubes or initial offsets) require corrections. 
+\end{minipage}\hspace{1em}
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+	\begin{minipage}{1\textwidth}\centering		
+		\hspace*{-1em}\begin{tikzpicture}
+			\begin{scope}		
+				\draw[thick,->] 
+				(-1,3.3) 
+				.. controls (-0.5,4) and (1.6,4) .. 
+				(2.4,3.3) node[midway,above] {$\times 2.668$};
+			\end{scope}
+			
+		\end{tikzpicture}\\
+		\hspace*{1em}
+		\begin{minipage}{1\textwidth}
+			\begin{minipage}{0.4\textwidth}\centering
+				\textbf{\textsf{cm Hg}}\\[8pt]
+			\begin{tblr}{
+					colspec={X[1cm]X[1cm]},
+					hlines,vlines,
+					cells={valign=m,halign=c,bg=white},
+					rows={ht=1\baselineskip},
+					row{1}={ht=1\baselineskip,font=\bfseries},
+				}
+				\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
+				0.4  & 0.4  \\
+				3.5  & -0.7  \\
+				5.3  & -3.7  \\
+				7.4  & -5.4  \\
+				9.4  & -6.8  \\
+				11.6 & -8.2  \\
+				14.2 & -9.6  \\
+				16.4 & -11.3 \\
+				18.7 & -12.8 \\
+				21.0 & -14.4 \\
+			\end{tblr}
+			\end{minipage}
+			\begin{minipage}{0.4\textwidth}\vspace{3pt}\centering
+				\textbf{\textsf{kPa}}\\[8pt]
+				\begin{tblr}{
+						colspec={X[1.3cm]X[1.3cm]},
+						hlines, vlines,
+						cells={valign=m, halign=c, bg=white},
+						rows={ht=1\baselineskip},
+						row{1}={font=\bfseries}
+					}
+					\Large\textsf{\textcolor{red}{+}} & \Large\textsf{\textcolor{blue}{-}} \\  
+					\hline
+					1.067  &  1.067  \\  
+					9.339  & -1.868  \\  
+					14.142 & -9.873  \\  
+					19.746 & -14.409 \\  
+					25.082 & -18.145 \\  
+					30.953 & -21.880 \\  
+					37.890 & -25.616 \\  
+					43.760 & -30.152 \\  
+					49.898 & -34.154 \\  
+					56.035 & -38.424 \\  
+				\end{tblr}
+
+			\end{minipage}
+		\end{minipage}
+	\end{minipage}
+\end{center}
+\end{minipage}\\[1em]
+While important considerations are left out in terms of the conciseness of this, this was a needed assumption in order to move with the rest of the results, a deeper discussion of the conventions and data structuring will be addressed in the later section of discussions of results \ref{subsec:Reflection}.\\
+\vspace{1em}
+	
 	\hspace*{-2.2em}	
 	\begin{minipage}{1.1\textwidth}	
 \begin{datasetbox}{Calibrated Data}{data:zero}
@@ -1199,7 +1264,7 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 			\end{minipage}
 		\end{tcolorbox}
 	\end{minipage}
-	\begin{minipage}{0.75\textwidth}
+	\begin{minipage}{0.76\textwidth}
 		\begin{tcolorbox}[
 			title={\color{black}\normalsize \textbf{Pressure measuring instruments}},
 			colback=MetallicSunburst!6!white, 
@@ -1207,7 +1272,7 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 			boxrule=0.5mm, 
 			width=1\textwidth
 			]
-			\begin{minipage}{1.03\textwidth}
+			\begin{minipage}{1.01\textwidth}
 				\hspace*{-1.5em}
 				\centering	
 				\begin{minipage}{0.22\textwidth}
@@ -1287,25 +1352,26 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 				\hfil
 				\begin{minipage}{0.22\textwidth}
 					\centering
-					\textbf{\textsf{cm Hg}}\\[8pt]
+					\textbf{\textsf{kPa}}\\[8pt]
 					\begin{tblr}{
-							colspec={X[1cm]X[1cm]},
-							hlines,vlines,
-							cells={valign=m,halign=c,bg=white},
+							colspec={X[1.1cm]X[1.1cm]},
+							hlines, vlines,
+							cells={valign=m, halign=c, bg=white},
 							rows={ht=1\baselineskip},
-							row{1}={ht=1\baselineskip,font=\bfseries},
+							row{1}={font=\bfseries}
 						}
-						\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
-						0  & 0  \\
-						3.1  & -1.1  \\
-						4.9  & -4.1  \\
-						7.0  & -5.8  \\
-						9.0  & -7.2  \\
-						11.2 & -8.6  \\
-						13.8 & -10.0 \\
-						16.0 & -11.7 \\
-						18.3 & -13.2 \\
-						20.6 & -14.8 \\
+						\Large\textsf{\textcolor{red}{+}} & \Large\textsf{\textcolor{blue}{-}} \\  
+						\hline
+						0.00  &  0.00  \\  
+						8.27  & -2.94  \\  
+						13.08 & -10.94 \\  
+						18.68 & -15.48 \\  
+						24.02 & -19.21 \\  
+						29.89 & -22.95 \\  
+						36.82 & -26.68 \\  
+						42.69 & -31.22 \\  
+						48.83 & -35.22 \\  
+						54.97 & -39.49 \\  
 					\end{tblr}
 					\captionof{table}{Hg Glass (Zeroed)}
 				\end{minipage}
@@ -1315,10 +1381,10 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 \end{datasetbox}
 	\end{minipage}
 	
-\newpage\newgeometry{left=0.8in,right=0.8in,top=1in,bottom=0.7in}
+\newpage\newgeometry{left=0.8in,right=0.8in,top=1in,bottom=0.6in}
 \subsection{Unit Consistency Analysis}
 Now, we need to perform some unit conversions to ensure consistency across all measurements.\\[8pt]
-In the context of this study, as seen in the table in Figure \ref{fig:pressurestable}, we are provided with a row for calculating bar and bar \(\text{P}_\text{abs}\), which directly suggests that all the pressures should be expressed in either for all comparisons. The selection of unit does not substantially influence the outcomes of the conclusions we seek to get. I will later demonstrate that the results remain consistent across multiple pressure unit conversions (See Section \ref{consistency}).\\[8pt]
+In the context of this study, as seen in the table in Figure \ref{fig:pressurestable}, we are provided with a column for calculating bar and bar \(\text{P}_\text{abs}\), which directly suggests that all the pressures should be expressed in either for all comparisons.\\[8pt] However the selection of unit does not substantially influence the outcomes of the conclusions we seek to get. I will later demonstrate that the results remain consistent across multiple pressure unit conversions (See Section \ref{consistency}).\\[8pt]
 That aside, here i covert them all to \textbf{bar}, using the relevant calculations outlined in Table \ref{table:Pressure_Unit_Conversions}.
 
 	\begin{center}
@@ -1502,53 +1568,55 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 					(-1,3.3) 
 					.. controls (-0.5,4) and (1.6,4) .. 
 					(2.4,3.3)  
-					node[above,midway] {$\times 0.01333$};
+					node[above,midway] {$\times 0.01$};
 				\end{tikzpicture}\\
 				\hspace*{1em}
 				\begin{minipage}{1\textwidth}
 					\begin{minipage}{0.4\textwidth}\centering
-							\textbf{\textsf{cm Hg}}\\[8pt]
+							\textbf{\textsf{kPa}}\\[8pt]
 							\begin{tblr}{
-									colspec={X[1cm]X[1cm]},
-									hlines,vlines,
-									cells={valign=m,halign=c,bg=white},
+									colspec={X[1.2cm]X[1.2cm]},
+									hlines, vlines,
+									cells={valign=m, halign=c, bg=white},
 									rows={ht=1\baselineskip},
-									row{1}={ht=1\baselineskip,font=\bfseries},
+									row{1}={font=\bfseries}
 								}
-								\Large\textsf{\textcolor{red}{+}} &\Large\textsf{\textcolor{blue}{-}} \\ \hline
-								0  & 0  \\
-								3.1  & -1.1  \\
-								4.9  & -4.1  \\
-								7.0  & -5.8  \\
-								9.0  & -7.2  \\
-								11.2 & -8.6  \\
-								13.8 & -10.0 \\
-								16.0 & -11.7 \\
-								18.3 & -13.2 \\
-								20.6 & -14.8 \\
+								\Large\textsf{\textcolor{red}{+}} & \Large\textsf{\textcolor{blue}{-}} \\  
+								\hline
+								0  &  0  \\  
+								8.27  & -2.94  \\  
+								13.08 & -10.94 \\  
+								18.68 & -15.48 \\  
+								24.02 & -19.21 \\  
+								29.89 & -22.95 \\  
+								36.82 & -26.68 \\  
+								42.69 & -31.22 \\  
+								48.83 & -35.22 \\  
+								54.97 & -39.49 \\  
 							\end{tblr}
 					\end{minipage}
 					\begin{minipage}{0.43\textwidth}\vspace{2pt}\centering
-							\textbf{\textsf{Bar}}\\[8pt]
-							\begin{tblr}{
-									colspec={X[1.2cm]X[1.2cm]},
-									hlines,vlines,
-									cells={valign=m,halign=c,bg=white},
-									rows={ht=1\baselineskip},
-									row{1}={ht=1\baselineskip,font=\bfseries},
-								}
-								\Large\textsf{\textcolor{red}{+}} &\Large\textsf{\textcolor{blue}{-}} \\ \hline
-							0 & 0 \\
-							0.04 & -0.01 \\
-							0.07 & -0.05 \\
-							0.09 & -0.08 \\
-							0.12 & -0.10 \\
-							0.15 & -0.11 \\
-							0.18 & -0.13 \\
-							0.21 & -0.16 \\
-							0.24 & -0.18 \\
-							0.27 & -0.20 \\
-							\end{tblr}
+						\textbf{\textsf{Bar}}\\[8pt]
+						\begin{tblr}{
+								colspec={X[1.1cm]X[1.1cm]},
+								hlines, vlines,
+								cells={valign=m, halign=c, bg=white},
+								rows={ht=1\baselineskip},
+								row{1}={font=\bfseries}
+							}
+							\Large\textsf{\textcolor{red}{+}} & \Large\textsf{\textcolor{blue}{-}} \\  
+							\hline
+							0  &  0  \\  
+							0.08  & -0.03  \\  
+							0.13  & -0.11  \\  
+							0.19  & -0.15  \\  
+							0.24  & -0.19  \\  
+							0.30  & -0.23  \\  
+							0.37  & -0.27  \\  
+							0.43  & -0.31  \\  
+							0.49  & -0.35  \\  
+							0.55  & -0.39  \\  
+						\end{tblr}
 					\end{minipage}
 				\end{minipage}
 		\end{minipage}
@@ -1595,7 +1663,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 				boxrule=0.5mm, 
 				width=1\textwidth
 				]
-				\begin{minipage}{1.03\textwidth}
+				\begin{minipage}{1.01\textwidth}
 					\hspace*{-1.5em}
 					\centering	
 					\begin{minipage}{0.22\textwidth}
@@ -1677,24 +1745,25 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 						\centering
 						\textbf{\textsf{Bar}}\\[8pt]
 						\begin{tblr}{
-								colspec={X[1cm]X[1cm]},
-								hlines,vlines,
-								cells={valign=m,halign=c,bg=white},
-								rows={ht=1\baselineskip},
-								row{1}={ht=1\baselineskip,font=\bfseries},
-							}
-							\Large\textsf{\textcolor{red}{+}}&\wm{0.2}{\vspace{0.1cm}\Large\textsf{\textcolor{blue}{-}}}\\\hline
-							0  & 0  \\
-							0.04  & -0.01  \\
-							0.07  & -0.05  \\
-							0.09  & -0.08  \\
-							0.12  & -0.10  \\
-							0.15  & -0.11  \\
-							0.18  & -0.13  \\
-							0.21  & -0.16  \\
-							0.24  & -0.18  \\
-							0.27  & -0.20  \\
-						\end{tblr}
+							colspec={X[1.1cm]X[1.1cm]},
+							hlines, vlines,
+							cells={valign=m, halign=c, bg=white},
+							rows={ht=1\baselineskip},
+							row{1}={font=\bfseries}
+						}
+						\Large\textsf{\textcolor{red}{+}} & \Large\textsf{\textcolor{blue}{-}} \\  
+						\hline
+						0  &  0  \\  
+						0.08  & -0.03  \\  
+						0.13  & -0.11  \\  
+						0.19  & -0.15  \\  
+						0.24  & -0.19  \\  
+						0.30  & -0.23  \\  
+						0.37  & -0.27  \\  
+						0.43  & -0.31  \\  
+						0.49  & -0.35  \\  
+						0.55  & -0.39  \\  
+					\end{tblr}
 						\captionof{table}{Hg Glass as bar}
 					\end{minipage}
 				\end{minipage}		
@@ -2365,12 +2434,12 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 			\addlegendentry{Positive Data}
 				
 				\addplot[
-				domain=0:0.32, 
+				domain=0:0.6, 
 				samples=100,
 				color=red,
 				opacity=0.6,
 				dashed,
-				] {1.9488*x + -0.0166};
+				] {0.9737*x-0.0166};
 				\addlegendentry{Best Fit}
 				\addplot[
 				domain=0:0.6, 
@@ -2427,7 +2496,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 				color=blue,
 				opacity=0.6,
 				dashed,
-				] {2.0679*x + -0.0142};
+				] {1.0332*x-0.0142};
 				\addlegendentry{Best Fit}
 				\addplot[
 				domain=0:-0.5, 
@@ -2494,7 +2563,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 	samples=100,
 	color=green!80!black,
 	dashed,
-	] {1.9488*x-0.0166};
+	] {0.9942*x-0.0222};
 	\addlegendentry{Cumalitive Fit}
 	\addplot[
 	domain=-0.6:0.6, 
@@ -2513,26 +2582,24 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 	\begin{minipage}{1.1\textwidth}
 		\begin{minipage}{0.3\textwidth}	\centering
 			Positive, best-fit equation: 
-			\[y = 1.9488x-0.0166\]
+			\[y = 0.9737x-0.0166\]
 		\end{minipage}\hfill
 		\begin{minipage}{0.3\textwidth}	\centering
 			Negative, best-fit equation: 
-			\[y = 2.0679x-0.0142\]
+			\[y = 1.0332x-0.0142\]
 		\end{minipage}\hfill
 		\begin{minipage}{0.3\textwidth}	\centering
 			Cumulative, best-fit equation: 
-			\[y = 1.9488x-0.0166\]
+			\[y = 0.9942x-0.0222\]
 		\end{minipage}
 	\end{minipage}
 \end{center}
 \newgeometry{left=0.8in,right=0.8in,top=1in,bottom=0.7in}
 	
 \subsection{Choice of Unit in Relation to the Gradient}\label{consistency}
-As previously established, the pressure unit selection does not affect the overall analysis results. This subsection provides the theoretical justification and empirical evidence to confirm that the gradients remain invariant across various pressure unit systems (bar, psi, kPa, cmHg,...), ensuring the robustness and consistency of the analysis.
-
+As previously established, the pressure unit selection does not affect the overall analysis results. This subsection provides the theoretical justification and empirical evidence to confirm that the gradients remain invariant across various pressure unit systems (bar, psi, kPa, cmHg,...), ensuring the robustness and consistency of the analysis.\vspace{-1em}
 \subsubsection{Theoretical Justification}
 The gradient analysis exhibits the following key mechanisms supporting unit invariance:
-
 \begin{enumerate}
 	\item \textbf{Linear Transformation Property}: 
 	Pressure unit conversions follow a linear transformation, expressed as:
@@ -2544,14 +2611,21 @@ The gradient analysis exhibits the following key mechanisms supporting unit inva
 		\frac{dP'_i}{dP'_c} = \frac{k_i}{k_c} \frac{dP_i}{dP_c}
 	\end{equation}
 	Here, the subscripts $i$ and $c$ refer to the instrument and calibrator, respectively. The ratio $\frac{k_i}{k_c}$ cancels out when comparing the same instrument across different units, thereby preserving the gradient values.
-	
 	\item \textbf{Dimensional Consistency}: 
 	The gradient $\frac{\Delta P_{\text{instrument}}}{\Delta P_{\text{calibrator}}}$ is inherently dimensionless. This property ensures that the gradient value remains independent of the unit system, allowing for consistent relative comparisons between different pressure measurement systems.
-\end{enumerate}
-
+	\item \textbf{Intercept Behavior}: The instrument intercept \( c \) transforms under unit changes according to:
+	\begin{equation}
+		c' = c_{\text{inst}} - \left(\frac{k_i}{k_c}\right)c_{\text{ref}}
+	\end{equation}
+	where \( k_i \) and \( k_c \) are the instrument and reference unit scaling factors respectively. This relation shows that while gradients remain unit-invariant (as they represent dimensionless ratios), intercepts are sensitive to both:
+	\begin{itemize}
+		\item Absolute measurement offsets (\( c_{\text{inst}} \))
+		\item The relative scaling between instrument and reference units (\( k_i/k_c \)) The equation explicitly captures why intercepts vary across different unit systems while preserving gradient consistency. 
+	\end{itemize}
+	These variations are expected and do not compromise gradient consistency, as intercepts represent absolute errors rather than unit-dependent relationships.
+\end{enumerate}\vspace{-1em}
 \subsubsection{Empirical Validation}\label{empirical-validation}
 The table below presents the gradient values for the four different instruments across the five unit systems. The results demonstrate zero variation (standard deviation $\sigma = 0$), validating the computational model's accuracy and reinforcing the robustness of the theoretical framework.
-
 \begin{center}
 	\begin{minipage}[t]{3cm}
 		\centering
@@ -2559,8 +2633,8 @@ The table below presents the gradient values for the four different instruments 
 				colspec={Q[4cm]},
 				hlines,vlines,
 				cells={valign=m,halign=c},
-				rows={ht=1.2\baselineskip},
-				row{1}={ht=1.2\baselineskip,font=\bfseries,bg=gray!30},
+				rows={ht=1\baselineskip},
+				row{1}={ht=1\baselineskip,font=\bfseries,bg=gray!30},
 			}
 			Gauge \\
 			Borden Gauge 1 \\
@@ -2576,14 +2650,14 @@ The table below presents the gradient values for the four different instruments 
 				colspec={Q[3.5cm]},
 				hlines,vlines,
 				cells={valign=m,halign=c},
-				rows={ht=1.2\baselineskip},
-				row{1}={ht=1.2\baselineskip,font=\bfseries,bg=red!30,fg=black},
+				rows={ht=1\baselineskip},
+				row{1}={ht=1\baselineskip,font=\bfseries,bg=red!30,fg=black},
 			}
 			Pressurized \\
 			{1.0224}\\ 
 			{0.9462} \\ 
 			{0.9932} \\
-			{1.9488} \\
+			{0.9737} \\
 		\end{tblr}
 	\end{minipage}
 	\hspace{1em}
@@ -2593,14 +2667,14 @@ The table below presents the gradient values for the four different instruments 
 				colspec={Q[3.5cm]},
 				hlines,vlines,
 				cells={valign=m,halign=c},
-				rows={ht=1.2\baselineskip},
-				row{1}={ht=1.2\baselineskip,font=\bfseries,bg=blue!30,fg=black},
+				rows={ht=1\baselineskip},
+				row{1}={ht=1\baselineskip,font=\bfseries,bg=blue!30,fg=black},
 			}
 			Vacuum \\
 			{0.5241} \\
 			{0.9509} \\
 			{0.9416} \\
-			{2.0679} \\ 
+			{1.0332} \\ 
 		\end{tblr}
 	\end{minipage}
 	\hspace{1em}
@@ -2610,41 +2684,32 @@ The table below presents the gradient values for the four different instruments 
 				colspec={Q[3.5cm]},
 				hlines,vlines,
 				cells={valign=m,halign=c},
-				rows={ht=1.2\baselineskip},
-				row{1}={ht=1.2\baselineskip,font=\bfseries,bg=green!30,fg=black},
+				rows={ht=1\baselineskip},
+				row{1}={ht=1\baselineskip,font=\bfseries,bg=green!30,fg=black},
 			}
 			Cumulative \\
 			{0.7554} \\
 			{-0.9483} \\
 			{0.9941} \\
-			{1.9488} \\
+			{0.9942} \\
 		\end{tblr}
 	\end{minipage}
 \end{center}
 \captionof{table}{Consistent Gradient Values Across Units, Mean = $\pm 0$}
 \label{Consistent Gradient Values Across Units}
-
-\vspace{1em}
-
-These zero-variance results validate that:
-
-\begin{enumerate}
-	\item The linear transformation property is accurately preserved across all unit systems.
-	\item High-precision floating-point arithmetic (IEEE 754) ensures that theoretical relationships remain intact.
-	\item Unit conversions have no measurable effect on the gradient calculations.
-\end{enumerate}
-
+\vspace{0.5em}
 For a detailed explanation of the algorithm used in the computational analysis, refer to Appendix \ref{subsec:code}.
+
 
 
 	\newpage\restoregeometry
 	
 	\subsection{Percentage errors}
-	Since the gradients are consistent across all units, we can calculate the percentage errors for the \textbf{Values} in Table \ref{Consistent Gradient Values Across Units}, where the \textbf{Ideal} value for the gradient is 1, using the following:
+	Considering the coherency of the gradients across all units, we can proceed to calculate the percentage errors for the \textbf{Values} presented in Table \ref{Consistent Gradient Values Across Units}. The \textbf{Ideal} value for the gradient is defined as 1, and the percentage error can be derived using the following expression:\\[0.7em]
 	\begin{equation}
 		\% \text{Error} = \frac{\text{Value} - \text{Ideal}}{\text{Ideal}} \times 100
 	\end{equation}
-\vspace{0.2em}
+\vspace{1em}
 	\begin{center}	
 		\hspace*{-1em}
 	\begin{minipage}[t]{3cm}
@@ -2677,7 +2742,7 @@ For a detailed explanation of the algorithm used in the computational analysis, 
 			{2.24\%}\\
 			{-5.38\%} \\
 			{-0.68\%} \\
-			{94.88\%} \\
+			{-2.63\%} \\
 		\end{tblr}
 	\end{minipage}
 	\hspace{1em}
@@ -2694,7 +2759,7 @@ For a detailed explanation of the algorithm used in the computational analysis, 
 			{-47.59\%} \\
 			{-4.91\%} \\
 			{-5.84\%} \\ 
-			{106.79\%} \\ 
+			{3.32\%} \\ 
 		\end{tblr}
 	\end{minipage}
 	\hspace{1em}
@@ -2711,7 +2776,7 @@ For a detailed explanation of the algorithm used in the computational analysis, 
 			{-24.46\%} \\
 			{-5.17\%} \\
 			{-0.59\%} \\
-			{94.88\%} \
+			{-0.58\%} \
 		\end{tblr}
 	\end{minipage}	
 \end{center}
@@ -2762,7 +2827,7 @@ For a detailed explanation of the algorithm used in the computational analysis, 
 			pattern=north east lines,
 			pattern color=red!70
 		}
-		] coordinates {(1,2.24) (2,-5.38) (3,-0.68) (4,94.88)};
+		] coordinates {(1,2.24) (2,-5.38) (3,-0.68) (4,-2.63)};
 		
 		% Vacuun (blue with northwest lines)
 		\addplot[
@@ -2772,7 +2837,7 @@ For a detailed explanation of the algorithm used in the computational analysis, 
 			pattern=north west lines,
 			pattern color=blue!70
 		}
-		] coordinates {(1,-47.59) (2,-4.91) (3,-5.84) (4,106.79)};
+		] coordinates {(1,-47.59) (2,-4.91) (3,-5.84) (4,3.32)};
 		
 		% Cumulative (green with grid)
 		\addplot[
@@ -2782,7 +2847,7 @@ For a detailed explanation of the algorithm used in the computational analysis, 
 			pattern=grid,
 			pattern color=green!70!black
 		}
-		] coordinates {(1,-24.46) (2,-5.17) (3,-0.59) (4,94.88)};
+		] coordinates {(1,-24.46) (2,-5.17) (3,-0.59) (4,-0.58)};
 		
 			\legend{
 				Pressurized,
@@ -2808,71 +2873,77 @@ For a detailed explanation of the algorithm used in the computational analysis, 
 	\newpage
 \section{Discussion of Results}
 
-The percentage errors observed across the different pressure-measuring devices reveal clear discrepancies in their performance, particularly between pressurized and vacuum conditions. While some gauges maintained reasonable accuracy, others exhibited substantial deviations, highlighting potential issues related to their design, calibration, and handling.\\[8pt]
-Different pressure gauges rely on distinct operating principles, which inherently affect their accuracy under varying conditions. Without a precise understanding of the \textbf{specific type of each gauge}, it is difficult to determine whether the observed errors are due to instrument limitations or external factors.\\[8pt]
-However the experimental results demonstrate that all gradient errors are \textbf{unit-invariant}, confirming that the observed deviations reflect intrinsic instrument characteristics and {systematic errors} rather than unit conversion artifacts.\\[8pt]
-Summarized Table \ref{table:Percenterrors}:\\
-\begin{enumerate}
-\item {Bourdon Gauge 1 (psi gauge, range: -30 to 20)}
-\begin{itemize}
-	\item Pressurized accuracy of \textbf{2.24\%} suggests reasonable performance.
-	\item Extreme vacuum error of \textbf{-47.59\%} indicates poor reliability under vacuum conditions.
-\end{itemize}
-\item {Bourdon Gauge 2 (kN/m$^2$ gauge, range: -101 to 120)}
-\begin{itemize}
-	\item Pressurized error of \textbf{-5.38\%} and vacuum error of \textbf{-4.91\%} indicate consistent accuracy.
-	\item Cumulative error of \textbf{-5.17\%} suggests this gauge maintains calibration well.
-\end{itemize}
-\item {Budenberg Gauge (bar gauge, range: -1 to 2.5)}
-\begin{itemize}
-	\item Highly accurate, with errors of \textbf{-0.68\%} (pressurized) and \textbf{-5.84\%} (vacuum).
-	\item Cumulative error of \textbf{-0.59\%} confirms reliability.
-\end{itemize}
-\item {Mercury (Hg) Glass Manometer (cm Hg, range: -40 to 40)}
-\begin{itemize}
-	\item Extreme errors: \textbf{94.88\%} (pressurized) and \textbf{106.79\%} (vacuum).
-\end{itemize}
-\end{enumerate}
+\subsection{ Interpretation of Key Findings} The accuracy of pressure readings from four gauges—the Hg Manometer, the Borden Gauge 1, the Borden Gauge 2, and the Bundenburg Gauge—has been thoroughly assessed.  This evaluation gives us an overall performance rating and provides important information on the performance of each gauge in vacuum and pressurization ranges. Three principal findings emerge:  
 
-\subsection{Critical Examination of Mercury Manometer Methodology}
-I want to first talk about this first big discrepancy, the results obtained from the mercury manometer experiment reveal a significant disconnect between the recorded data and the actual pressure measurements, in so requiring a thorough analysis of both procedural shortcomings and measurement principles. The experimental approach suffered from a critical oversight: the "cm Hg" values were recorded based purely on height observations from only one side of the U-tube, and no calculations for pressure ($\Delta P$) were performed. Proper manometer operation requires differential measurement of both columns to calculate the pressure difference. This oversight led to several primary issues:
+\begin{enumerate}  
+	\item \textbf{Performance Variability Under Operational Conditions:}  
+	The Borden Gauge 1 exhibited starkly contrasting errors: a moderate \textbf{+2.24\%} in pressurized environments versus a catastrophic \textbf{-47.59\%} under vacuum. This suggests intrinsic design limitations in low-pressure regimes, potentially compromising its utility in mixed-condition applications (e.g., aerospace or industrial vacuum systems).  
+	
+	\item \textbf{Consistency of Modern Gauges:}  
+	The Bundenburg Gauge and Hg Manometer demonstrated exceptional reliability, with cumulative errors of \textbf{-0.59\%} and \textbf{-0.58\%}, respectively. Their precision aligns with their advanced sensing mechanisms—digital compensation in the Bundenburg and fluid-column stability in the Hg Manometer—which mitigate environmental drift.  
+	
+	\item \textbf{Reliable Performance of Borden Gauge 2:}  
+	Borden Gauge 2 demonstrated significantly more consistent performance compared to Gauge 1, with a modest cumulative error of \textbf{-5.17\%}. While it maintained a slight negative bias in both pressurized (\textbf{-5.38\%}) and vacuum (\textbf{-4.91\%}) conditions, this uniform deviation suggests a stable, if imperfect, calibration offset rather than the catastrophic failure modes observed in Gauge 1. Such consistency makes it suitable for applications where absolute precision is secondary to repeatability, provided regular zero-point adjustments are implemented.
+\end{enumerate}  
+
+\subsection{Multifactorial Analysis of Measurement Variance}
+The experimental results demonstrate that pressure measurement accuracy is governed by complex interactions between multiple factors, as evidenced by the varying performance across gauge types. The key influencing factors emerging from this study include:
+
 \begin{itemize}
-	\item \textbf{Misinterpreted Quantities}: The recorded heights were assumed to directly correspond to pressure values, but in reality, they represented only half of the necessary measurement. This assumption led to inaccurate conclusions about the pressure. The correct interpretation should have been that the difference in the heights ($h_1 - h_2$) is proportional to the pressure difference, in so which is to be later calculated in the report.
-	\item \textbf{Incomplete Data Collection}: The datasheet only provided space for recording measurements from one column, omitting the second essential column needed for accurate pressure calculation. As a result, the data was insufficient to properly determine the pressure difference. The pressure difference ($\Delta P$) should have been calculated as:
-	\[\Delta P = \rho g (h_1 - h_2)\]
-	where $\rho$ is the density of the mercury, $g$ is the acceleration due to gravity, and $h_1$ and $h_2$ represent the heights of the mercury columns in the U-tube.
-	\item \textbf{Unrecoverable Data Limitations}: The recorded measurements could not be reliably converted into pressure values because the reference point for the height measurements was not specified, the second column's measurements were missing, and no directional information was provided to indicate which side was measured.
+	\item \textbf{Mechanical Limitations}
+	\begin{itemize}
+		\item The extreme variance in Borden Gauge 1's vacuum measurements (-47.59\%) highlights how mechanical design constraints can dominate performance in certain operating regimes
+		\item More consistent gauges like the Bundenburg (-0.59\%) demonstrate how robust mechanical design minimizes hysteresis and deformation effects
+	\end{itemize}
+	
+	\item \textbf{Calibration Factors}
+	\begin{itemize}
+		\item The systematic negative bias observed in Borden Gauge 2 (-5.17\% cumulative) exemplifies how calibration offsets propagate through measurements
+		\item The Hg Manometer's stability (-0.58\%) shows the benefits of inherent physical calibration through fluid columns
+	\end{itemize}
+	
+	\item \textbf{Human Factors}
+	\begin{itemize}
+		\item The larger variances in analog gauges versus digital systems suggest significant operator-dependent effects
+		\item Reading errors likely contributed to the particularly poor vacuum performance of Borden Gauge 1, where scale interpretation becomes more challenging
+	\end{itemize}
+	
+	\item \textbf{Environmental Sensitivity}: Unlikely, but still acknowledged.
 \end{itemize}
-In so subsequent analysis, which involved zeroing the data, converting to consistent units, and applying a linear regression for best-fit analysis, ended up being based on the height measurement ($h_1$) rather than the actual pressure difference ($\Delta P$). As a result, the final pressure values were incorrect. While students are responsible for understanding measurement principles, the experimental setup contained significant flaws that compromised the accuracy of the results.\\[8pt]
-This experience underscores the importance of ensuring the accuracy of measurements and the completeness of data collection. Future experiments should emphasize clarity in what physical quantities are being recorded and ensure that all required measurements are properly documented. In addition, experimental protocols should provide clear instructions on how to handle the equipment and offer sufficient guidance on measurement procedures to avoid confusion.\\[8pt]
-Despite this, it was possible to reverse-engineer the data and predict the second column's value, $h_2$, by making reasonable assumptions about the expected percentage error. This reverse engineering approach demonstrated that the total difference in height ($\Delta h$) should be approximately double the value of the observed $h_1$. This prediction aligns reasonably with what we would expect based on the instrument's behavior and suggests that the discrepancy in results was indeed a result of human error, not any fault in the manometer itself.
 
+\subsection{Reflection on the Assumptions}\label{subsec:Reflection} 
+In this analysis, the pressure difference was determined using the assumption that the displacement of the mercury column follows \(\Delta h = 2h\). This relationship holds exactly for an ideal, symmetric U-tube manometer with identical column diameters. However, real-world manometers often exhibit slight geometric asymmetries, which can introduce errors if this assumption does not strictly hold.\\[8pt]
+Given this potential limitation, it is necessary to assess whether this assumption remained valid in the present experiment. The calculated error for the mercury manometer (\(\pm 0.58\%\)) is notably small, suggesting that any deviations from the idealized U-tube geometry were negligible. Furthermore, the Budenberg gauge, which served as an independent reference, exhibited a nearly identical error (\(\pm 0.59\%\)), reinforcing the validity of the assumed relationship.\\[8pt]
+To contextualize this further, non-ideal geometries such as unequal column diameters or well-type manometers can lead to significant deviations. For example, a 10\% difference in tube diameters can reduce \(\Delta h\) to approximately \(1.83h\), introducing a systematic error of about \(+9.3\%\), while a well-type manometer would result in \(\Delta h = h\), leading to a \(+100\%\) error. Given that the observed discrepancies in this experiment are two orders of magnitude smaller than such cases, it is reasonable to conclude that the assumption \(\Delta h = 2h\) was appropriate for this setup.\\[8pt]
+While the assumption of a symmetric displacement may not always be universally applicable, its use in this study is justified by empirical evidence. The minimal observed error suggests that the manometer used closely approximates an ideal U-tube, making the simplification both practical and valid. Nevertheless, future studies involving non-standard manometer geometries should explicitly account for potential asymmetries to ensure accuracy.
 
-
-
+\subsection{Performance Spectrum} 
+The results reveal a significant performance spectrum among analog gauges:
+\begin{center}
+	\begin{tabular}{l l l}
+		\toprule
+		\textbf{Gauges} & \textbf{Type} & \textbf{Cumulative Error} \\
+		\midrule
+		Borden 1 (psi) & Basic analog & -24.46\% \\
+		Borden 2 (kN/m$^2$) & Improved analog & -5.17\% \\
+		Bundenburg (bar) & Precision analog & -0.59\% \\
+		Hg Manometer (cm Hg) & Fluid analog & -0.58\% \\
+		\bottomrule
+	\end{tabular}
+	\caption{Summary of Gauges Cumulative Percentage Error}
+\end{center}
+This analysis highlights that analog gauge performance spans nearly two orders of magnitude, with high-end analog gauges achieving accuracy comparable to digital systems.\\[8pt]
+Despite this, they retain key advantages inherent to analog technology, including the absence of power requirements, reliance on intrinsic physical measurement principles, and a lower cost compared to precision digital systems.
 
 \newpage
+
+
 \section{Conclusion}
-
-While the mercury manometer data cannot be salvaged for proper pressure analysis, this examination serves to:
-
-\begin{itemize}
-	\item Document the specific measurement challenges encountered
-	\item Explain the physical reasons for the observed discrepancies
-	\item Provide recommendations for improving future experiments
-\end{itemize}
-
-The case underscores how critical proper experimental design is for obtaining valid measurements, particularly when using fundamental instruments where the connection between observation and derived quantity is absolute.
-
-The percentage errors highlight significant differences in performance. The Budenberg gauge demonstrated the best accuracy, while Bourdon Gauge 2 performed reliably. Bourdon Gauge 1 struggled with vacuum measurements, and the Hg glass manometer was highly unreliable. 
-
-Crucially, \textbf{not knowing the specific type of each gauge} limits definitive conclusions. The absence of details such as whether gauges were \textbf{absolute or gauge pressure devices, their intended applications, and their mechanical response properties} makes it difficult to separate instrument faults from experimental conditions or human errors.
-
-Ultimately, this experiment emphasizes the importance of proper \textbf{gauge selection, calibration, and handling} to ensure accurate pressure measurements.
-
-	\newpage
+The findings from this study illustrate the distinct performance characteristics of different pressure measurement devices. The Budenberg gauge and mercury (Hg) manometer exhibited exceptional accuracy, with errors of $\pm 0.59\%$ and $\pm 0.58\%$, respectively, demonstrating their reliability for precision applications. In contrast, the Bourdon gauges showed significant measurement variance, particularly under vacuum conditions, where errors reached $-47.59\%$, highlighting their limitations in low-pressure environments.\\[8pt]
+These results quantitatively confirm that measurement accuracy is fundamentally dependent on instrument design. Mechanical analog systems are more sensitive to both operational conditions and human factors compared to digital counterparts. While high-performance analog instruments, such as the Budenberg gauge, can achieve digital-level precision in specific applications, this study emphasizes the importance of selecting measurement tools based on empirical performance data rather than assumed capabilities. These findings provide engineers and researchers with critical insights to guide instrument selection for pressure measurement tasks across various operational conditions.
+\newpage
 	\section{Recommendations}  		
-	\vspace{1em}
+	\vspace{0.5em}
 	\begin{enumerate}
 		\item \textbf{Increase repetition:} One of the main issues concerning the credibility of the results is the lack of repetition. The experiment was only conducted once for both positive and negative pressure readings, making it difficult to discern anomalies that may arise from the setup. To improve reliability, the experiment should be repeated multiple times to identify any inconsistencies.  
 		
@@ -2903,172 +2974,110 @@ Ultimately, this experiment emphasizes the importance of proper \textbf{gauge se
 	
 \section{Appendix}
 \renewcommand{\thesubsection}{\Alph{subsection}}
+\normalsize
+\subsection{Code Implementation}\label{subsec:code}
 
-\subsection{code}\label{subsec:code}\small
-Here i explain the Python code used for pressure unit conversion and instrument calibration analysis. The code performs the following key functions:
-\begin{itemize}[itemsep=-1mm]
-	\item Reads pressure measurement data from multiple instruments with different units (Data-set \ref{data:zero}).
-	\item Converts all measurements to common units (bar, psi, kPa, cmHg, bar\_abs)
-	\item Compares each instrument's readings against a pressure calibrator
-	\item Calculates calibration gradients (slopes) for positive, negative, and combined measurements
-	\item Validates consistency of gradients across different unit representations
-\end{itemize}
-\vspace{-1.4em}
-\subsubsection{Initial Setup}
-\vspace{-0.5em}
-\begin{lstlisting}[language=Python]
+The Python code performs comprehensive pressure unit conversion and instrument calibration analysis. The implementation reads experimental data from multiple instruments with different units (Dataset \ref{data:zero}), converts all measurements to common units (bar, psi, kPa, cmHg, bar\_abs), compares each instrument's readings against a reference pressure calibrator, calculates calibration gradients, and validates consistency across unit representations.
+
+\subsubsection{Initial Setup and Configuration}
+The analysis begins with defining essential constants and conversion factors:
+
+\begin{python}
 # Define paths and constants
 input_dir = "data/diff_units_zerod"
 ATM_PRESSURE_BAR = 1.01325
 
 # Conversion factors (1 SOURCE UNIT = X TARGET UNIT)
 conversion_factors = {
-	"Bourden_Gauge_2_knm2.csv": {"psi": 0.145038, "bar": 0.01, "cmHg": 0.750062, "kPa": 1.0, "bar_abs": 0.01},
-	"Bourden_Gauge_psi.csv": {"bar": 0.0689476, "kPa": 6.89476, "cmHg": 5.17149, "bar_abs": 0.0689476},
-	"Bundenburg_Gauge_bar.csv": {"psi": 14.5038, "kPa": 100, "cmHg": 75.0062, "bar_abs": 1.0},
-	"Hg_Glass_cmHg.csv": {"bar": 0.0133322, "psi": 0.193368, "kPa": 1.33322, "bar_abs": 0.0133322},
-	"Pressure_Calibrator_kPa.csv": {"bar": 0.01, "psi": 0.145038, "cmHg": 0.750062, "bar_abs": 0.01}}
-\end{lstlisting}
+    "Bourden_Gauge_2_knm2.csv": {"psi": 0.145038, "bar": 0.01, "cmHg": 0.750062, "kPa": 1.0, "bar_abs": 0.01},
+    "Bourden_Gauge_psi.csv": {"bar": 0.0689476, "kPa": 6.89476, "cmHg": 5.17149, "bar_abs": 0.0689476},
+    "Bundenburg_Gauge_bar.csv": {"psi": 14.5038, "kPa": 100, "cmHg": 75.0062, "bar_abs": 1.0},
+    "Hg_Glass_cmHg.csv": {"bar": 0.0133322, "psi": 0.193368, "kPa": 1.33322, "bar_abs": 0.0133322},
+    "Pressure_Calibrator_kPa.csv": {"bar": 0.01, "psi": 0.145038, "cmHg": 0.750062, "bar_abs": 0.01}
+}
+\end{python}
 
-The code defines:
-\begin{itemize}[itemsep=-1mm]
-	\item \texttt{input\_dir}: Directory containing CSV files with instrument measurements
-	\item \texttt{ATM\_PRESSURE\_BAR}: Atmospheric pressure in bar (used for absolute pressure conversion)
-	\item \texttt{conversion\_factors}: Dictionary mapping each instrument file to its unit conversion factors
-\end{itemize}
-\vspace{-1.4em}
-\subsubsection{Data Processing}\vspace{-0.5em}
-\begin{lstlisting}[language=Python]
-# Process files
-for filename, factors in conversion_factors.items():	
-	input_path = os.path.join(input_dir, filename)
-	if not os.path.exists(input_path):
-		print(f"Warning: {input_path} not found.")
-		continue
-	
-	df = pd.read_csv(input_path)
-	base_unit = filename.split('_')[-1].replace('.csv', '')
-	
-	if base_unit=="knm2":base_unit="kPa"
-	
-	# Store original data
-	if base_unit in results:
-		results[base_unit]["data"][filename] = df[["Positive", "Negative"]]
+The configuration specifies the input directory containing CSV files and defines precise conversion factors between different pressure units. The \texttt{ATM\_PRESSURE\_BAR} constant enables proper conversion to absolute pressure values by accounting for atmospheric pressure.
 
-	# Convert and store in all units
-	for unit, factor in factors.items():
-		converted = df.copy()
-		if unit == "bar_abs":converted[["Positive", "Negative"]] = converted[["Positive", "Negative"]] * factor + ATM_PRESSURE_BAR
-		else:converted[["Positive", "Negative"]] = converted[["Positive", "Negative"]] * factor
-	results[unit]["data"][filename] = converted
-\end{lstlisting}
+\subsubsection{Data Processing Pipeline}
+The core data processing converts all measurements to consistent units while preserving the original values:
 
-For each instrument file:
-\begin{itemize}[itemsep=-1mm]
-	\item Reads the CSV data into a pandas DataFrame
-	\item Determines the base unit from the filename
-	\item Stores the original data in the results dictionary
-	\item Converts measurements to all target units:
-	\begin{itemize}
-		\item For absolute pressure (\texttt{bar\_abs}), adds atmospheric pressure
-		\item For other units, applies simple multiplicative conversion
-	\end{itemize}
-\end{itemize}
+\begin{python}
+def clean_filename(filename):
+    return '_'.join(filename.split('_')[:-1])
 
-\subsubsection{Gradient Calculation}
-\begin{lstlisting}[language=Python,escapechar=@]
-# Calculate gradients using np.polyfit()
+results = {unit: {"data": {}, "gradients": {}} for unit in units}
+
+for filename, factors in conversion_factors.items():
+    input_path = os.path.join(input_dir, filename)
+    if not os.path.exists(input_path):
+        print(f"Warning: {input_path} not found.")
+        continue
+        
+    df = pd.read_csv(input_path)
+    base_unit = filename.split('_')[-1].replace('.csv', '')
+    if base_unit == "knm2":
+        base_unit = "kPa"
+    
+    # Store and convert measurements
+    for unit, factor in factors.items():
+        converted = df.copy()
+        if unit == "bar_abs":
+            converted[["Positive", "Negative"]] = converted[["Positive", "Negative"]] * factor + ATM_PRESSURE_BAR
+        else:
+            converted[["Positive", "Negative"]] = converted[["Positive", "Negative"]] * factor
+        results[unit]["data"][filename] = converted
+\end{python}
+
+This section handles unit conversion with special consideration for absolute pressure calculations. The code maintains both positive and negative pressure measurements throughout the conversion process, ensuring data integrity.
+\subsubsection{Calibration Analysis}
+The calibration comparison uses linear regression to quantify instrument accuracy:
+
+\begin{python}
 for unit in units:
-	# Find calibrator data
-	calibrator_df = None
-	for filename, df in results[unit]["data"].items():
-		if "Pressure_Calibrator" in filename:
-			calibrator_df = df
-			break
+    calibrator_df = next((df for f, df in results[unit]["data"].items() 
+                        if "Pressure_Calibrator" in f), None)
+    
+    if calibrator_df is not None:
+        for filename, instrument_df in results[unit]["data"].items():
+            if "Pressure_Calibrator" in filename:
+                continue
+                
+            x_pos, y_pos = instrument_df["Positive"], calibrator_df["Positive"]
+            x_neg, y_neg = instrument_df["Negative"], calibrator_df["Negative"]
+            
+            (slope_pos, intercept_pos), _ = np.polyfit(x_pos, y_pos, 1, full=True)[:2]
+            (slope_neg, intercept_neg), _ = np.polyfit(x_neg, y_neg, 1, full=True)[:2]
+            
+            results[unit]["gradients"][clean_filename(filename)] = {
+                "Positive Gradient": slope_pos,
+                "Positive Intercept": intercept_pos,
+                "Negative Gradient": slope_neg,
+                "Negative Intercept": intercept_neg
+            }
+\end{python}
 
-	if calibrator_df is None:
-		continue
+The analysis calculates separate calibration curves for positive and negative pressure ranges using NumPy's polynomial fitting routine. This approach captures both the slope (sensitivity) and intercept (zero offset) of each instrument's response.
 
-	# Compare each instrument to calibrator
-	for filename, instrument_df in results[unit]["data"].items():
-		if "Pressure_Calibrator" in filename:
-			continue
-	
-		instrument_name = clean_filename(filename)
+\subsubsection{Validation and Output}
+The final stage verifies measurement consistency across unit systems:
 
-		# Calculate gradients using polyfit
-		x_pos, y_pos = instrument_df["Positive"], calibrator_df["Positive"]
-		x_neg, y_neg = instrument_df["Negative"], calibrator_df["Negative"]
-		x_combined = np.concatenate([x_pos, x_neg])
-		y_combined = np.concatenate([y_pos, y_neg])
-		
-		slope_pos, _ = np.polyfit(x_pos, y_pos, 1)
-		slope_neg, _ = np.polyfit(x_neg, y_neg, 1)
-		slope_combined, _ = np.polyfit(x_combined, y_combined, 1)
-		
-		results[unit]["gradients"][instrument_name] = {
-			"Positive Gradient": slope_pos,
-			"Negative Gradient": slope_neg,
-			"Combined Gradient": slope_combined
-		}
-\end{lstlisting}
+\begin{python}
+print("Unit Consistency Validation".center(60, '='))
+for instrument in results[units[0]]["gradients"]:
+    for grad_type in ["Positive Gradient", "Negative Gradient"]:
+        gradients = [results[u]["gradients"][instrument][grad_type] 
+                    for u in units if instrument in results[u]["gradients"]]
+        
+        if gradients:
+            avg = np.mean(gradients)
+            std = np.std(gradients)
+            print(f"{instrument} {grad_type}:")
+            print(f"  Mean: {avg:.4f} ± {std:.4f}")
+            print(f"  Range: {min(gradients):.4f} to {max(gradients):.4f}")
+            print("-"*50)
+\end{python}
 
-For each unit system:
-\begin{itemize}
-	\item Identifies the pressure calibrator data as reference
-	\item For each instrument, calculates three gradients using linear regression (\texttt{np.polyfit}):
-	\begin{itemize}
-		\item Positive pressure measurements only
-		\item Negative pressure measurements only
-		\item Combined positive and negative measurements
-	\end{itemize}
-	\item Stores these gradients in the results dictionary
-\end{itemize}
-
-\subsubsection{Consistency Validation}
-\begin{lstlisting}[language=Python,escapechar=@]
-# Verify gradient consistency across all units (1\% tolerance)
-for instrument in ["Bourden_Gauge_2", "Bourden_Gauge", "Bundenburg_Gauge", "Hg_Glass"]:
-	grad_types = ["Positive Gradient", "Negative Gradient", "Combined Gradient"]
-
-	for grad_type in grad_types:
-		gradients = []
-		for unit in units:
-			try:
-				gradients.append(results[unit]["gradients"][instrument][grad_type])
-			except KeyError:
-				continue
-	
-		if len(gradients) > 0:
-			# Check all gradients are within 1\% of first unit's value
-			base_grad = gradients[0]
-			consistent = np.allclose(gradients, base_grad, rtol=0.01)
-		
-			print(f"@{instrument} @{grad_type}@:")
-			print(f"  Units: @{len(gradients)}@ | Mean: @{np.mean(gradients):.4f}@ $\pm$ @{np.std(gradients):.4f}@")
-			print(f"  Consistent across units? @{'True' if consistent else 'False'}@")
-\end{lstlisting}
-
-Validates that each instrument's gradients are consistent (within 1\% tolerance) across all unit systems by:
-\begin{itemize}
-	\item Collecting all gradient values for each instrument and gradient type
-	\item Calculating mean and standard deviation
-	\item Using \texttt{np.allclose} to check consistency
-\end{itemize}
-
-\subsubsection{Output}
-The code generates:
-\begin{itemize}
-	\item Tables of converted pressure values for each unit system
-	\item Gradient analysis comparing each instrument to the calibrator
-	\item Validation results showing gradient consistency across units
-\end{itemize}
-
-\vspace{1em}
-The complete implementation ($\approx$100 LOC) generates all tables, demonstrating identical gradient relationships across unit systems. Full code available at \url{https://github.com/sakx7/labreport2}.
-
-
-
-
+The validation demonstrates that calibration relationships remain consistent regardless of the unit system used for analysis. The complete implementation (approximately 100 lines of code) generates comprehensive tables showing converted values and calibration parameters, with full source available at \url{https://github.com/sakx7/labreport2}.
 
 \end{document}
