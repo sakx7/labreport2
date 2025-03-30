@@ -1,9 +1,9 @@
 \contentsline {section}{\numberline {1}Abstract}{4}{section.1}%
 \contentsline {section}{\numberline {2}Introduction}{5}{section.2}%
 \contentsline {section}{\numberline {3}Theory}{6}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Absolute Pressure}{6}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Gauge Pressure}{6}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Atmospheric Pressure}{6}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.1}Atmospheric Pressure}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Absolute Pressure}{6}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Gauge Pressure}{6}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Differential pressure}{7}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}Devices and Mechanisms}{8}{subsection.3.5}%
 \contentsline {subsubsection}{\numberline {3.5.1}Bourdon Gauges}{8}{subsubsection.3.5.1}%
