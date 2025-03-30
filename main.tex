@@ -488,9 +488,9 @@ When discussing pressure, the primary consideration is its physical definition. 
 \end{minipage}\end{center}\vspace{-1.5em}
 \subsection{Atmospheric Pressure}
 Atmospheric pressure ($P_{\text{atm}}$) is the pressure exerted by the weight of air in the Earth's atmosphere. At sea level, it is approximately:
-\begin{equation}
+\begin{equation*}
 	P_{\text{atm}} \approx 101.325 \text{ kPa} = 1 \text{ atm}
-\end{equation}
+\end{equation*}
 It decreases with altitude due to a reduction in air density. Atmospheric pressure serves as the reference for gauge pressure, which is defined as:
 \begin{equation}
 	P_{\text{gauge}} = P_{\text{absolute}} - P_{\text{atm}}
@@ -527,7 +527,7 @@ Any pressure below atmospheric pressure but above absolute zero pressure. Vacuum
 	P_{\text{vac}} = P_{\text{atm}} - P_{\text{absolute}}
 \end{equation}
 where higher vacuum pressure indicates a lower absolute pressure.\\[0.5em]
-The following diagram illustrates these pressure definitions more clearly.\\\vspace{-1em}
+The following diagram illustrates all these pressure definitions more clearly.\\\vspace{-1em}
 \begin{center}
 \begin{tikzpicture}[scale=2,transform shape]	
 	\def\floorx{5.5+2.5}
@@ -654,11 +654,13 @@ Key assumptions in classical manometry:
 	\item Temperature variations are minimal (affects $\rho$ by $\sim$0.1\%/\textdegree C for water)
 \end{enumerate}
 
+
+
 \paragraph{Manometer Types}\mbox{}\\[1em]
 \noindent
 \begin{minipage}{0.65\textwidth}
 	\small\textbf{1. Torricellian Barometer (Absolute Pressure)}\\[8pt]	
-	\large The mercury barometer illustrates the fundamental principle of atmospheric pressure measurement. It relies on the relationship between pressure, fluid density, and height, given by:  
+	\large The mercury barometer shows a basic measurement of atmospheric pressure. Simply put, the barometer uses the relationship between pressure, density, and height, as follows: 
 	\begin{equation}
 		P_{atm} = \rho_{\tiny \bm{Hg}}\, g  h
 	\end{equation}
@@ -667,7 +669,7 @@ Key assumptions in classical manometry:
 		\item $\rho_{\tiny \bm{Hg}}$ : Mercury density (kilogram per cubic meter, \si{\kg\per\m\cubed})
 		\item $h$ : Height (meter, \si{\m})
 	\end{itemize}
-	A key feature of this device is the creation of a sustained vacuum above the mercury column, where the pressure is approximately zero. The use of mercury is essential due to its high density, with a value of 13,534 kg/m$^3$ at 20\textdegree C.
+	 A notable function of the mercury barometer is the maintenance of an invention vacuum above the mercury column, where norm is essentially zero. The reason for mercury is its high density; mercury has a density of kg/m$^3$ at 20\textdegree C.
 \end{minipage}\hfill
 \begin{minipage}{0.3\textwidth}\centering
 	\begin{tikzpicture}[scale=1.3,transform shape]
@@ -712,18 +714,18 @@ Key assumptions in classical manometry:
 	\item $h$ : Measured height (meter, \si{\m})
 	\item $T$ : Temperature (degree Celsius, \si{\degreeCelsius})
 \end{itemize}
-This correction ensures accurate readings by accounting for thermal expansion effects.\\[1em]
+The correction presented here helps in reading accurately because of the effects of expansion of thermal energy.\\[1em]
 \begin{minipage}{0.65\textwidth}
 	\small\textbf{2. Open-Tube Manometer (Differential Pressure)}\\[8pt] \large 
-	The open-tube manometer, typically in a U-tube configuration, measures pressure differences by comparing the fluid levels in both arms of the tube. The pressure difference is given by:  
+	The open-tube manometer, which is usually in a U-tube configuration, measures pressure differences by comparing the fluid levels in both arms of the tube. The expression for the pressure difference is given by:
 	\begin{equation}
 		P_1 - P_2 = (\rho_m - \rho_f)gh
-	\end{equation}
-	For gases, where the fluid density $\rho_f$ is much smaller than the manometric fluid density $\rho_m$, this simplifies to:  
+	\end{equation}	
+	To formulate this expression in terms of compressible gases, the condition indicates for low-density gases, where the fluid density $\rho_f$ would be much smaller than that of the manometric fluid $\rho_m$:
 	\begin{equation}
 		\Delta P \approx \rho_mgh
 	\end{equation}
-	When one side of the manometer is open to the atmosphere, it directly measures gauge pressure, meaning that $P_2$ is simply the atmospheric pressure.
+	As one end of the manometer opens into the atmosphere, the manometer measures the gauge pressure directly, that is, $P_2$ is simply the atmospheric pressure.
 \end{minipage}\hfill
 \begin{minipage}{0.3\textwidth}\centering
 	\begin{tikzpicture}[scale=1.4,transform shape]
@@ -747,21 +749,21 @@ This correction ensures accurate readings by accounting for thermal expansion ef
 		\draw[dashed] (-\Rx,\hL) --++ (1.3*\Rx,0) (\Rx,\hR) --++ (-1.3*\Rx,0);
 		\draw[<->] (0,\hL) -- (0,\hR) node[midway,fill=white,inner sep=1] {$h$};
 	\end{tikzpicture}
-	\captionof{figure}{Open manometers (Izaak Neutelings, 2021)}
+	\captionof{figure}{Barometer (open-ended tube) to measure air pressure (Izaak Neutelings, 2021)}
 \end{minipage}\\[6pt]
-The sensitivity of the device can be enhanced in several ways. One approach is to use an \textbf{inclined tube}, where the pressure difference relates to the fluid displacement along the tube length $L$ at an angle $\theta$:  
+A sensitive device can sensitize in a number of ways. One way is by incorporating an \textbf{inclined tube}, which relates the pressure difference with the displacement of fluid along the length of tube $L$ at an angle $\theta$:
 \begin{equation}
 	\Delta P = \rho gL\sin\theta
 \end{equation}
-Another method is to use a lower-density fluid, such as water, which has a density of 998 kg/m$^3$. This allows for greater displacement per unit pressure difference, improving measurement precision.\\
+Another way is to use a less dense liquid such as water, which has a density of 998 kg/m$^3$. This allows for greater displacements per unit pressure difference, thus improving measurement accuracy.\\
 \begin{minipage}{0.65\textwidth}
 \small	\textbf{3. Sealed-Tube Manometer (Absolute Pressure)}\\[8pt]\large
-	The sealed-tube manometer is designed for absolute pressure measurement. Unlike open-tube configurations, it has one end closed, providing a fixed reference point—either a vacuum or a gas of known pressure. The pressure is determined by:  
+The sealed-tube manometer is intended for absolute pressure measurement. Unlike open-tube configurations, one end is sealed, thereby establishing a fixed reference point for either vacuum or a gas of known pressure; hence the pressure is defined as:  
 	\begin{equation}
 		P = \rho g h
 	\end{equation}
-	A key advantage of this setup is that it eliminates the influence of atmospheric pressure, making it particularly useful for measuring vacuum pressures.\\[8pt]
-	In some designs, well-type sealed manometers are used to enhance precision. These variants account for differences in the cross-sectional areas of the tube and the well.
+The setup has the added benefit of eliminating atmospheric pressure effects on the readings, which makes it especially important when measuring vacuum pressures.\\[8pt]
+In some configurations, well-type sealed manometers are used to increase accuracy. These types take into account the difference in cross-sectional areas of the tube and the well.
 \end{minipage}\hfill
 \begin{minipage}{0.3\textwidth}\centering
 	\begin{tikzpicture}[scale=1.4,transform shape]
@@ -787,13 +789,14 @@ Another method is to use a lower-density fluid, such as water, which has a densi
 		\draw[dashed] (-\Rx,\hL) --++ (1.3*\Rx,0) (\Rx,\hR) --++ (-1.3*\Rx,0);
 		\draw[<->] (0,\hL) -- (0,\hR) node[midway,fill=white,inner sep=1] {$h$};
 	\end{tikzpicture}
-	\captionof{figure}{Sealed manometers (Izaak Neutelings, 2021)}
+	\captionof{figure}{Manometer (closed tube) (Izaak Neutelings, 2021)}
 \end{minipage}\\[8pt]
 The corrected pressure is given by:  
 \begin{equation}
 	P = \rho g h \left(1 + \frac{A_{tube}}{A_{well}}\right)
 \end{equation}
-This correction factor ensures more accurate pressure readings by compensating for fluid displacement effects in the well.\\[8pt]
+Through its ability to compensate for fluid displacement effects in the well, this correction factor guarantees more accurate pressure readings.\\[1em]
+I believe that covers the types of manometers that fall under the purview of this paper.
 \noindent
 
 
@@ -910,11 +913,13 @@ This correction factor ensures more accurate pressure readings by compensating f
 			\caption{Form for recording pressure measurements} 
 			\label{fig:pressurestable} 
 	\end{figure}
-	\underline{The experiment \textbf{summary} is as follows:}\\[1em]
-	The instructor provided us with a comprehensive demonstration on how to operate the pressure calibrator, guiding us through the process of setting up the equipment and interpreting the corresponding gauge readings.\\[1em]
-	Prior to starting the experiment, we were given essential safety instructions, including precautions to prevent compromising our data and ensuring the safety of everyone involved.\\[1em]
-	As the experiment progressed, we worked as a team to carefully apply the required pressures, analyzing the gauge readings and reaching a consensus on the correct values, which were then recorded in the designated pressure measurement table (Figure \ref{fig:pressurestable}).\\[1em]
-	A detailed breakdown of the \textbf{exact steps} we followed is as follows:
+	\underline{The experiment \textbf{summary} reads:}\\[1em]
+	The instructor has given a very elaborative demonstration about the functioning of pressure calibrator and has taken us through setting up the entire apparatus and interpreting the corresponding gauge readings.\\[1em]
+	Before the onset of this experiment, safety drills were provided for everybody, including data compromising precautions and safety measures set for every participant involved in the experiment.\\[1em]
+	The gauge readings and pressures applied at very subtle levels were evaluated in a collaborative effort to obtain a consensus upon acceptable values to be entered in the predefined pressure measurement table (see Figure \ref{fig:pressurestable}).\\[1em]
+	The \textbf{exact steps} given to us are, in detail:
+
+
 \newpage\newgeometry{left=0.8in,right=0.8in,top=1.1in,bottom=0.6in}
 \begin{minipage}{0.52\textwidth}	
 	\subsection{Operating Procedure}
@@ -952,7 +957,7 @@ This correction factor ensures more accurate pressure readings by compensating f
 \begin{enumerate}[left=0in]
 \item[6.] The vent valve was closed and used to zero the instrument. It was concluded that this procedure should be carried out by the instructor due to the vent valve’s sensitivity.  
 \end{enumerate}\vspace{0.6em}\noindent
-Here Steps 1–6 primarily cover the setup phase and were mainly carried out by the instructor. It was now our role to conduct the rest of the experiment, which proceeded as follows:\\[-3pt]
+Here Steps 1-6 primarily cover the setup phase and were mainly carried out by the instructor. It was now our role to conduct the rest of the experiment, which proceeded as follows:\\[-3pt]
 \begin{enumerate}[left=0in]
 \item[7.] We used the hand pump to pressurize the system to the required value. To achieve precise control, we vented air using the vent valve and adjusted the pressure by pumping air as needed.
 \item[8.] Once the required incremental was observed on the pressure calibrator, we then observe and recorded the readings seen on the following gauges:\\[8pt]
@@ -977,7 +982,7 @@ Here Steps 1–6 primarily cover the setup phase and were mainly carried out by 
 			\item[10.] This procedure (Steps 7-9) is repeated, beginning with an \textbf{initial reading of 0 kPa} and continuing until the tenth increment, with each increment approximately $+5$ kPa.
 			\item[11.] Once we're done, we go back and repeat steps 6–10, except this time we do for the vacuum ($-5$kPa).
 		\end{enumerate}\noindent
-		This concludes everything that was done in the lab so that we may draw conclusions from the information in the tables.
+		Could of been more detailed, but this will suffice, this concludes everything that was done in the lab so that we may draw conclusions from the information in the drawn tables.
 	\end{minipage}
 	
 
@@ -2600,28 +2605,25 @@ As previously established, the pressure unit selection does not affect the overa
 \subsubsection{Theoretical Justification}
 The gradient analysis exhibits the following key mechanisms supporting unit invariance:
 \begin{enumerate}
-	\item \textbf{Linear Transformation Property}: 
-	Pressure unit conversions follow a linear transformation, expressed as:
-	\begin{equation}
-		P' = kP + c
-	\end{equation}
-	where $k$ represents the conversion factor and $c$ the offset (nonzero for absolute pressure conversions). In the context of linear regression, gradients transform as:
+	\item \textbf{Linear Transformation}: 
+	Pressure unit conversions follow $P' = kP + c$, where $k$ is the conversion factor and $c$ the offset. For gradient comparisons:
 	\begin{equation}
 		\frac{dP'_i}{dP'_c} = \frac{k_i}{k_c} \frac{dP_i}{dP_c}
 	\end{equation}
-	Here, the subscripts $i$ and $c$ refer to the instrument and calibrator, respectively. The ratio $\frac{k_i}{k_c}$ cancels out when comparing the same instrument across different units, thereby preserving the gradient values.
+	The ratio $k_i/k_c$ cancels when comparing the same instrument across units, preserving gradients.
 	\item \textbf{Dimensional Consistency}: 
-	The gradient $\frac{\Delta P_{\text{instrument}}}{\Delta P_{\text{calibrator}}}$ is inherently dimensionless. This property ensures that the gradient value remains independent of the unit system, allowing for consistent relative comparisons between different pressure measurement systems.
-	\item \textbf{Intercept Behavior}: The instrument intercept \( c \) transforms under unit changes according to:
+	The gradient $\frac{\Delta P_{\text{inst}}}{\Delta P_{\text{cal}}}$ is naturally dimensionless, making it invariant under unit changes.
+	\item \textbf{Intercept Behavior}: 
+	Under unit transformation:
 	\begin{equation}
 		c' = c_{\text{inst}} - \left(\frac{k_i}{k_c}\right)c_{\text{ref}}
 	\end{equation}
-	where \( k_i \) and \( k_c \) are the instrument and reference unit scaling factors respectively. This relation shows that while gradients remain unit-invariant (as they represent dimensionless ratios), intercepts are sensitive to both:
+	Unlike gradients, intercepts depend on both:
 	\begin{itemize}
-		\item Absolute measurement offsets (\( c_{\text{inst}} \))
-		\item The relative scaling between instrument and reference units (\( k_i/k_c \)) The equation explicitly captures why intercepts vary across different unit systems while preserving gradient consistency. 
+		\item The absolute offset ($c_{\text{inst}}$)
+		\item The relative scaling ($k_i/k_c$)
 	\end{itemize}
-	These variations are expected and do not compromise gradient consistency, as intercepts represent absolute errors rather than unit-dependent relationships.
+	This explains why intercepts vary across unit systems while gradients remain consistent.
 \end{enumerate}\vspace{-1em}
 \subsubsection{Empirical Validation}\label{empirical-validation}
 The table below presents the gradient values for the four different instruments across the five unit systems. The results demonstrate zero variation (standard deviation $\sigma = 0$), validating the computational model's accuracy and reinforcing the robustness of the theoretical framework.
