@@ -335,6 +335,7 @@ top color=watercol!90!black!90,bottom color=watercol!90!black!90,middle color=wa
 	}{\end{tcolorbox}}
 
 
+\usepackage{multirow}
 
 \begin{document}
 	
@@ -1147,7 +1148,7 @@ where \( \rho \) is the density of mercury (\(13,600 \, \text{kg/m}^3\)), \( g \
 	\begin{itemize}
 		\item A U-tube manometer measures pressure via symmetric fluid displacement. When one side rises by \( h \), the other falls by \( h \), yielding:
 		\[\Delta h = |h_1| + |h_2| = h + h = 2h\]
-		\item The pressure difference is derived from hydrostatics:
+		\item Plugging this in the pressure difference derived from hydrostatics:
 		\[\Delta P = \rho g \Delta h = 2 \rho g h\]
 		\item Substituting mercury density (\(\rho = 13,\!600\,\text{kg/m}^3\)) and gravity (\(g = 9.81\,\text{m/s}^2\)), with \( h \) in cm:
 			\[
@@ -1160,7 +1161,7 @@ This simplifies to:
 \[P = 2.668 \times h\]
 where \( P \) is in kPa. Assuming the sealed end is a vacuum (0 pressure), then \( P \) represents the absolute pressure. If the sealed end has a reference pressure \( P_{\text{ref}} \neq 0 \), then the pressure difference is:
 \[\Delta P = P - P_{\text{ref}}\]
-It is difficult to ascertain the precise parameters of the system due to the limited information provided regarding the initial setup. \\[4pt]
+However, given the circumstance, it is difficult to ascertain the precise parameters of the system due to the limited information provided regarding the initial setup. \\[4pt]
 \textbf{Assumptions:} 
 \begin{itemize}
 	\item Initial balance (zero pressure difference).
@@ -1366,7 +1367,7 @@ While important considerations are left out in terms of the conciseness of this,
 						}
 						\Large\textsf{\textcolor{red}{+}} & \Large\textsf{\textcolor{blue}{-}} \\  
 						\hline
-						0.00  &  0.00  \\  
+						0  &  0  \\  
 						8.27  & -2.94  \\  
 						13.08 & -10.94 \\  
 						18.68 & -15.48 \\  
@@ -2598,21 +2599,19 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 		\end{minipage}
 	\end{minipage}
 \end{center}
-\newgeometry{left=0.8in,right=0.8in,top=1in,bottom=0.7in}
 	
 \subsection{Choice of Unit in Relation to the Gradient}\label{consistency}
-As previously established, the pressure unit selection does not affect the overall analysis results. This subsection provides the theoretical justification and empirical evidence to confirm that the gradients remain invariant across various pressure unit systems (bar, psi, kPa, cmHg,...), ensuring the robustness and consistency of the analysis.\vspace{-1em}
+As previously established, the pressure unit selection does not affect the overall analysis results. This subsection provides the theoretical justification and empirical evidence to confirm that the gradients remain invariant across various pressure unit systems (bar, psi, kPa, cmHg,...) and intercepts are subject to vary, ensuring the robustness and consistency of the analysis. Note this will be a \textbf{brief explanation}, for a more in-depth and better explained version, Refer to Appendix A.\vspace{-1em}
 \subsubsection{Theoretical Justification}
-The gradient analysis exhibits the following key mechanisms supporting unit invariance:
+The gradient analysis exhibits the following key mechanisms supporting unit invariance:\\
 \begin{enumerate}
 	\item \textbf{Linear Transformation}: 
 	Pressure unit conversions follow $P' = kP + c$, where $k$ is the conversion factor and $c$ the offset. For gradient comparisons:
 	\begin{equation}
 		\frac{dP'_i}{dP'_c} = \frac{k_i}{k_c} \frac{dP_i}{dP_c}
 	\end{equation}
-	The ratio $k_i/k_c$ cancels when comparing the same instrument across units, preserving gradients.
-	\item \textbf{Dimensional Consistency}: 
-	The gradient $\frac{\Delta P_{\text{inst}}}{\Delta P_{\text{cal}}}$ is naturally dimensionless, making it invariant under unit changes.
+	The ratio $\frac{k_i}{k_c}$ cancels when comparing the same instrument across units, preserving gradients.\\
+	The gradient $\frac{d P_{\text{inst}}}{d P_{\text{cal}}}$ is naturally dimensionless, making it invariant under unit changes.
 	\item \textbf{Intercept Behavior}: 
 	Under unit transformation:
 	\begin{equation}
@@ -2621,94 +2620,152 @@ The gradient analysis exhibits the following key mechanisms supporting unit inva
 	Unlike gradients, intercepts depend on both:
 	\begin{itemize}
 		\item The absolute offset ($c_{\text{inst}}$)
-		\item The relative scaling ($k_i/k_c$)
+		\item The relative scaling ($\frac{k_i}{k_c}$)
 	\end{itemize}
 	This explains why intercepts vary across unit systems while gradients remain consistent.
 \end{enumerate}\vspace{-1em}
 \subsubsection{Empirical Validation}\label{empirical-validation}
-The table below presents the gradient values for the four different instruments across the five unit systems. The results demonstrate zero variation (standard deviation $\sigma = 0$), validating the computational model's accuracy and reinforcing the robustness of the theoretical framework.
-\begin{center}
-	\begin{minipage}[t]{3cm}
-		\centering
-		\begin{tblr}{
-				colspec={Q[4cm]},
-				hlines,vlines,
-				cells={valign=m,halign=c},
-				rows={ht=1\baselineskip},
-				row{1}={ht=1\baselineskip,font=\bfseries,bg=gray!30},
-			}
-			Gauge \\
-			Borden Gauge 1 \\
-			Borden Gauge 2 \\
-			Bundenburg Gauge \\
-			Hg Manometer \\
-		\end{tblr}
-	\end{minipage}
-	\hspace{3.5em}
-	\begin{minipage}[t]{3.5cm}
-		\centering
-		\begin{tblr}{
-				colspec={Q[3.5cm]},
-				hlines,vlines,
-				cells={valign=m,halign=c},
-				rows={ht=1\baselineskip},
-				row{1}={ht=1\baselineskip,font=\bfseries,bg=red!30,fg=black},
-			}
-			Pressurized \\
-			{1.0224}\\ 
-			{0.9462} \\ 
-			{0.9932} \\
-			{0.9737} \\
-		\end{tblr}
-	\end{minipage}
-	\hspace{1em}
-	\begin{minipage}[t]{3.5cm}
-		\centering
-		\begin{tblr}{
-				colspec={Q[3.5cm]},
-				hlines,vlines,
-				cells={valign=m,halign=c},
-				rows={ht=1\baselineskip},
-				row{1}={ht=1\baselineskip,font=\bfseries,bg=blue!30,fg=black},
-			}
-			Vacuum \\
-			{0.5241} \\
-			{0.9509} \\
-			{0.9416} \\
-			{1.0332} \\ 
-		\end{tblr}
-	\end{minipage}
-	\hspace{1em}
-	\begin{minipage}[t]{3.5cm}
-		\centering
-		\begin{tblr}{
-				colspec={Q[3.5cm]},
-				hlines,vlines,
-				cells={valign=m,halign=c},
-				rows={ht=1\baselineskip},
-				row{1}={ht=1\baselineskip,font=\bfseries,bg=green!30,fg=black},
-			}
-			Cumulative \\
-			{0.7554} \\
-			{-0.9483} \\
-			{0.9941} \\
-			{0.9942} \\
-		\end{tblr}
-	\end{minipage}
-\end{center}
-\captionof{table}{Consistent Gradient Values Across Units, Mean = $\pm 0$}
-\label{Consistent Gradient Values Across Units}
-\vspace{0.5em}
-For a detailed explanation of the algorithm used in the computational analysis, refer to Appendix \ref{subsec:code}.
 
+\begin{minipage}{0.45\textwidth}
+		\begin{minipage}[t]{0.4\textwidth}
+			\centering
+			\begin{tblr}{
+					colspec={Q[3cm]},
+					hlines,vlines,
+					cells={valign=m,halign=c},
+					rows={ht=0.6\baselineskip},
+					row{1}={ht=1\baselineskip,font=\bfseries},
+					row{2}={ht=2\baselineskip},
+				}
+				Gauge \\
+				\SetCell[r=2]{m} Name \\
+				\\[6pt]
+			\end{tblr}
+		\end{minipage}\hspace{0.7em}
+		\begin{minipage}[t]{0.4\textwidth}
+			\centering
+			\begin{tblr}{
+					colspec={Q[3cm]Q[3cm]},
+					hlines,vlines,
+					cells={valign=m,halign=c},
+					rows={ht=0.6\baselineskip},
+					row{1}={ht=1\baselineskip,font=\bfseries},
+					row{2}={ht=2\baselineskip},
+				}
+				\SetCell[c=2]{c} $\pm$pressure & \\
+				Gradient Mean & Gradient Std Dev \\
+				Intercept Range & Intercept Mean \\
+			\end{tblr}
+		\end{minipage}
+\end{minipage}\hspace{7em}
+\begin{minipage}{0.4\textwidth}
+	For a detailed explanation of the algorithm used in the computational analysis, refer to Appendix \ref{subsec:code}. Observations will be disclosed in the Discussion of Results.
+\end{minipage}\\[8pt]
 
+\hspace*{-4em}
+\begin{minipage}{1.1\textwidth}
+	\begin{center}
+		% First minipage - Gauge names
+		\begin{minipage}[t]{2cm}
+			\centering
+			\begin{tblr}{
+					colspec={Q[2cm]},
+					hlines,vlines,
+					cells={valign=m,halign=c},
+					rows={ht=1.1\baselineskip},
+					row{1}={ht=1.3\baselineskip,font=\bfseries,bg=gray!30},
+					row{2,4,6,8}={ht=2\baselineskip},
+				}
+				Gauge \\
+				\SetCell[r=2]{m}Bourden Gauge 1 \\
+				\\
+				\SetCell[r=2]{m}Bourden Gauge 2 \\
+				\\
+				\SetCell[r=2]{m}Bundenburg Gauge \\
+				\\
+				\SetCell[r=2]{m}Hg Manometer \\
+				\\[2pt]
+			\end{tblr}
+		\end{minipage}
+		\hspace{0.7em}
+		% Second minipage - Pressurized
+		\begin{minipage}[t]{4cm}
+			\centering
+			\begin{tblr}{
+					colspec={Q[2.3cm]Q[2.3cm]},
+					hlines,vlines,
+					cells={valign=m,halign=c},
+					rows={ht=1.1\baselineskip},
+					row{1}={ht=1.3\baselineskip,font=\bfseries,bg=red!30,fg=black},
+					row{2,4,6,8}={ht=2\baselineskip},
+				}
+				\SetCell[c=2]{c}Pressurised & \\
+				1.02 & 0 \\
+				(-0.74,-0.01) & -0.29 \\
+				0.95 & 0 \\
+				(-1.06,0.04) & -0.40 \\
+				0.99 & 0 \\
+				(0.01,0.81) & 0.31 \\
+				0.97 & 0 \\
+				(-1.66,0.01) & -0.63 \\
+			\end{tblr}
+		\end{minipage}
+		\hspace{3.2em}
+		% Third minipage - Vacuum
+		\begin{minipage}[t]{4cm}
+			\centering
+			\begin{tblr}{
+					colspec={Q[2.3cm]Q[2.3cm]},
+					hlines,vlines,
+					cells={valign=m,halign=c},
+					rows={ht=1.1\baselineskip},
+					row{1}={ht=1.3\baselineskip,font=\bfseries,bg=blue!30,fg=black},
+					row{2,4,6,8}={ht=2\baselineskip},
+				}
+				\SetCell[c=2]{c}Vacuum & \\
+				0.52 & 0 \\
+				(-4.23,0.44) & -1.52 \\
+				0.95 & 0 \\
+				(-1.07,0.04) & -0.40 \\
+				0.94 & 0 \\
+				(-0.85,0.05) & -0.32 \\
+				1.03 & 0 \\
+				(-1.42,-0.01) & -0.55 \\
+			\end{tblr}
+		\end{minipage}
+		\hspace{3.2em}
+		% Fourth minipage - Combined
+		\begin{minipage}[t]{4cm}
+			\centering
+			\begin{tblr}{
+					colspec={Q[2.3cm]Q[2.3cm]},
+					hlines,vlines,
+					cells={valign=m,halign=c},
+					rows={ht=1.1\baselineskip},
+					row{1}={ht=1.3\baselineskip,font=\bfseries,bg=green!30,fg=black},
+					row{2,4,6,8}={ht=2\baselineskip},
+				}
+				\SetCell[c=2]{c}Combined Intercepts & \\
+				0.76 & 0 \\
+				(0.05,4.96) & 1.95 \\
+				0.95 & 0 \\
+				(-1.12,0.04) & -0.42 \\
+				0.99 & 0 \\
+				(0.01,0.57) & 0.22 \\
+				0.99 & 0 \\
+				(-2.22,-0.02) & -0.85 \\
+			\end{tblr}
+		\end{minipage}
+	\end{center}\vspace{-1em}
+	\captionof{table}{Instrument Calibration Statistics Across Pressure Units}\label{Statistics}
+\end{minipage}
+\newpage\restoregeometry
 
-	\newpage\restoregeometry
 	
 	\subsection{Percentage errors}
-	Considering the coherency of the gradients across all units, we can proceed to calculate the percentage errors for the \textbf{Values} presented in Table \ref{Consistent Gradient Values Across Units}. The \textbf{Ideal} value for the gradient is defined as 1, and the percentage error can be derived using the following expression:\\[0.7em]
+	Considering the coherency of the {gradients} across all units $\left(\sigma=0\right)$, we can proceed to calculate the gradient percentage errors for the {values} $(V)$ presented in Table \ref{Statistics}. The {ideal} value $(V_i)$ for the gradient is defined as 1; in so the percentage error can be derived using the following expression:\\[0.7em]
 	\begin{equation}
-		\% \text{Error} = \frac{\text{Value} - \text{Ideal}}{\text{Ideal}} \times 100
+		\% \text{Error} = \frac{V - V_i}{V_i} \times 100
 	\end{equation}
 \vspace{1em}
 	\begin{center}	
@@ -2719,8 +2776,8 @@ For a detailed explanation of the algorithm used in the computational analysis, 
 				colspec={Q[4cm]},
 				hlines,vlines,
 				cells={valign=m,halign=c},
-				rows={ht=1.2\baselineskip},
-				row{1}={ht=1.2\baselineskip,font=\bfseries,bg=gray!30},
+				rows={ht=1.5\baselineskip},
+				row{1}={ht=1.5\baselineskip,font=\bfseries,bg=gray!30},
 			}
 			Gauge \\
 			Borden Gauge 1 \\
@@ -2736,8 +2793,8 @@ For a detailed explanation of the algorithm used in the computational analysis, 
 				colspec={Q[3.5cm]},
 				hlines,vlines,
 				cells={valign=m,halign=c},
-				rows={ht=1.2\baselineskip},
-				row{1}={ht=1.2\baselineskip,font=\bfseries,bg=red!30,fg=black},
+				rows={ht=1.5\baselineskip},
+				row{1}={ht=1.5\baselineskip,font=\bfseries,bg=red!30,fg=black},
 			}
 			Pressurized \\
 			{2.24\%}\\
@@ -2753,8 +2810,8 @@ For a detailed explanation of the algorithm used in the computational analysis, 
 				colspec={Q[3.5cm]},
 				hlines,vlines,
 				cells={valign=m,halign=c},
-				rows={ht=1.2\baselineskip},
-				row{1}={ht=1.2\baselineskip,font=\bfseries,bg=blue!30,fg=black},
+				rows={ht=1.5\baselineskip},
+				row{1}={ht=1.5\baselineskip,font=\bfseries,bg=blue!30,fg=black},
 			}
 			Vacuum \\
 			{-47.59\%} \\
@@ -2770,8 +2827,8 @@ For a detailed explanation of the algorithm used in the computational analysis, 
 				colspec={Q[3.5cm]},
 				hlines,vlines,
 				cells={valign=m,halign=c},
-				rows={ht=1.2\baselineskip},
-				row{1}={ht=1.2\baselineskip,font=\bfseries,bg=green!30,fg=black},
+				rows={ht=1.5\baselineskip},
+				row{1}={ht=1.5\baselineskip,font=\bfseries,bg=green!30,fg=black},
 			}
 			Cumulative \\
 			{-24.46\%} \\
@@ -2781,7 +2838,7 @@ For a detailed explanation of the algorithm used in the computational analysis, 
 		\end{tblr}
 	\end{minipage}	
 \end{center}
-\captionof{table}{Percent errors for Different Gauges across all units}\label{table:Percenterrors}
+\captionof{table}{Percent errors for Different Gauges Gradients Across All Units}\label{table:Percenterrors}
 \vspace{1em}
 
 \begin{figure}[H]
@@ -2866,7 +2923,7 @@ For a detailed explanation of the algorithm used in the computational analysis, 
 			}
 		\end{axis}
 	\end{tikzpicture}
-	\caption{Percentage errors bar chart for gauge measurements}
+	\caption{Percentage Errors Bar Chart For Gauge Measurements Gradients}
 	\label{fig:final_errors}
 \end{figure}
 
@@ -2874,14 +2931,14 @@ For a detailed explanation of the algorithm used in the computational analysis, 
 	\newpage
 \section{Discussion of Results}
 
-\subsection{ Interpretation of Key Findings} The accuracy of pressure readings from four gauges—the Hg Manometer, the Borden Gauge 1, the Borden Gauge 2, and the Bundenburg Gauge—has been thoroughly assessed.  This evaluation gives us an overall performance rating and provides important information on the performance of each gauge in vacuum and pressurization ranges. Three principal findings emerge:  
+\subsection{Interpretation of Key Findings } The accuracy of pressure readings from the four gauges---the Hg Manometer, the Borden Gauge 1, the Borden Gauge 2, and the Bundenburg Gauge---has been thoroughly assessed.  This evaluation gives us an overall performance rating and provides important information on the performance of each gauge in vacuum and pressurization ranges. Three principal findings emerge (Summarised Table \ref{table:Percenterrors}):  
 
 \begin{enumerate}  
 	\item \textbf{Performance Variability Under Operational Conditions:}  
 	The Borden Gauge 1 exhibited starkly contrasting errors: a moderate \textbf{+2.24\%} in pressurized environments versus a catastrophic \textbf{-47.59\%} under vacuum. This suggests intrinsic design limitations in low-pressure regimes, potentially compromising its utility in mixed-condition applications (e.g., aerospace or industrial vacuum systems).  
 	
 	\item \textbf{Consistency of Modern Gauges:}  
-	The Bundenburg Gauge and Hg Manometer demonstrated exceptional reliability, with cumulative errors of \textbf{-0.59\%} and \textbf{-0.58\%}, respectively. Their precision aligns with their advanced sensing mechanisms—digital compensation in the Bundenburg and fluid-column stability in the Hg Manometer—which mitigate environmental drift.  
+	The Bundenburg Gauge and Hg Manometer demonstrated exceptional reliability, with cumulative errors of \textbf{-0.59\%} and \textbf{-0.58\%}, respectively. Their precision aligns with their advanced sensing mechanisms---digital compensation in the Bundenburg and fluid-column stability in the Hg Manometer—which mitigate environmental drift.  
 	
 	\item \textbf{Reliable Performance of Borden Gauge 2:}  
 	Borden Gauge 2 demonstrated significantly more consistent performance compared to Gauge 1, with a modest cumulative error of \textbf{-5.17\%}. While it maintained a slight negative bias in both pressurized (\textbf{-5.38\%}) and vacuum (\textbf{-4.91\%}) conditions, this uniform deviation suggests a stable, if imperfect, calibration offset rather than the catastrophic failure modes observed in Gauge 1. Such consistency makes it suitable for applications where absolute precision is secondary to repeatability, provided regular zero-point adjustments are implemented.
@@ -2912,12 +2969,54 @@ The experimental results demonstrate that pressure measurement accuracy is gover
 	\item \textbf{Environmental Sensitivity}: Unlikely, but still acknowledged.
 \end{itemize}
 
-\subsection{Reflection on the Assumptions}\label{subsec:Reflection} 
-In this analysis, the pressure difference was determined using the assumption that the displacement of the mercury column follows \(\Delta h = 2h\). This relationship holds exactly for an ideal, symmetric U-tube manometer with identical column diameters. However, real-world manometers often exhibit slight geometric asymmetries, which can introduce errors if this assumption does not strictly hold.\\[8pt]
-Given this potential limitation, it is necessary to assess whether this assumption remained valid in the present experiment. The calculated error for the mercury manometer (\(\pm 0.58\%\)) is notably small, suggesting that any deviations from the idealized U-tube geometry were negligible. Furthermore, the Budenberg gauge, which served as an independent reference, exhibited a nearly identical error (\(\pm 0.59\%\)), reinforcing the validity of the assumed relationship.\\[8pt]
-To contextualize this further, non-ideal geometries such as unequal column diameters or well-type manometers can lead to significant deviations. For example, a 10\% difference in tube diameters can reduce \(\Delta h\) to approximately \(1.83h\), introducing a systematic error of about \(+9.3\%\), while a well-type manometer would result in \(\Delta h = h\), leading to a \(+100\%\) error. Given that the observed discrepancies in this experiment are two orders of magnitude smaller than such cases, it is reasonable to conclude that the assumption \(\Delta h = 2h\) was appropriate for this setup.\\[8pt]
-While the assumption of a symmetric displacement may not always be universally applicable, its use in this study is justified by empirical evidence. The minimal observed error suggests that the manometer used closely approximates an ideal U-tube, making the simplification both practical and valid. Nevertheless, future studies involving non-standard manometer geometries should explicitly account for potential asymmetries to ensure accuracy.
+\newpage
 
+\subsection{Intercept Analysis}
+The table below summarizes the intercepts from various instruments, highlighting the differences in measurements across gauges (Summarised Table \ref{Statistics}). We will briefly discuss the key observations and their implications.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lcccc}
+		\toprule
+		\textbf{Gauge} & \textbf{Mean} & \textbf{Min} & \textbf{Max} & \textbf{Range (Magnitude)} \\
+		\midrule
+		\multicolumn{5}{l}{\textbf{Bourden Gauge 2}} \\
+		Positive Intercept & -0.394968 & -1.059647 & 0.043892 & 1.103539 \\
+		Negative Intercept & -0.398824 & -1.067239 & 0.039080 & 1.106319 \\
+		Combined Intercept & -0.419189 & -1.121771 & 0.041142 & 1.162912 \\
+		\midrule
+		\multicolumn{5}{l}{\textbf{Bourden Gauge}} \\
+		Positive Intercept & -0.288530 & -0.741462 & -0.007415 & 0.734048 \\
+		Negative Intercept & -1.522515 & -4.226840 & 0.439977 & 4.666817 \\
+		Combined Intercept & 1.948091 & 0.049567 & 4.956728 & 4.907161 \\
+		\midrule
+		\multicolumn{5}{l}{\textbf{Bundenburg Gauge}} \\
+		Positive Intercept & 0.310979 & 0.008083 & 0.808308 & 0.800225 \\
+		Negative Intercept & -0.314835 & -0.852872 & 0.050631 & 0.903503 \\
+		Combined Intercept & 0.219518 & 0.005700 & 0.570007 & 0.564307 \\
+		\midrule
+		\multicolumn{5}{l}{\textbf{Hg Glass}} \\
+		Positive Intercept & -0.628809 & -1.655617 & 0.010072 & 1.665689 \\
+		Negative Intercept & -0.550439 & -1.419527 & -0.014195 & 1.405332 \\
+		Combined Intercept & -0.848958 & -2.219572 & -0.016285 & 2.203288 \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:intercept_analysis}
+\end{table}
+
+\subsection{Brief Discussion of Key Findings}
+
+\begin{itemize}
+	\item \textbf{Bourden Gauge 2}: The intercepts are relatively small, with a range of just over 1 bar\footnote{In this context, "bar" refers to the range magnitude in the statistical sense, which represents the difference between the maximum and minimum values observed in the data.}. This suggests that the instrument's calibration is reasonably consistent, but there are still slight discrepancies in the measurements.
+	
+	\item \textbf{Bourden Gauge}: The results show a larger range, especially for the negative intercept (-1.5225 to 4.6668 bar). This points to significant inconsistencies in the instrument's response, which could be due to calibration issues or physical factors affecting the measurements.
+	
+	\item \textbf{Bundenburg Gauge}: This gauge shows a smaller range, with intercepts close to zero. It appears more stable in terms of calibration compared to the other gauges, indicating fewer significant errors.
+	
+	\item \textbf{Hg Glass}: The Hg Glass gauge shows noticeable variations in its intercepts, with ranges reaching over 2 bar. This could be attributed to factors like thermal drift or mechanical imperfections in the setup.
+\end{itemize}
+Despite adjustments for unit conversion, the intercepts in all gauges are non-zero, suggesting that calibration errors and instrument-specific inconsistencies are present. These results imply that while calibration adjustments can help minimize errors, they cannot fully eliminate intrinsic limitations in the measurement systems. A more in-depth discussion on how and why this came about requires in depth knowledge on background refer to Appendix B.
+
+\newpage
 \subsection{Performance Spectrum} 
 The results reveal a significant performance spectrum among analog gauges:
 \begin{center}
@@ -3080,5 +3179,109 @@ for instrument in results[units[0]]["gradients"]:
 \end{python}
 
 The validation demonstrates that calibration relationships remain consistent regardless of the unit system used for analysis. The complete implementation (approximately 100 lines of code) generates comprehensive tables showing converted values and calibration parameters, with full source available at \url{https://github.com/sakx7/labreport2}.
+
+\newpage
+
+\section{Conceptual Analysis of Offset Adjustments in Unit Conversions}
+
+When converting between units of measurement, a common transformation is given by:
+
+\[
+P' = kP + c
+\]
+where:
+- \( P \) represents the original measurement,
+- \( P' \) is the converted value,
+- \( k \) is the scaling factor (which adjusts the magnitude of the value),
+- \( c \) is the offset (which shifts the value).
+
+This equation expresses how a measurement \( P \) in one unit system is converted to a measurement \( P' \) in another unit system by scaling it by \( k \) and adjusting it by an offset \( c \). The offset \( c \) accounts for any constant difference between the two unit systems (e.g., a temperature difference, zero-point shift, etc.).
+
+\subsection{Pre-Conversion Offset Adjustments}
+Adjusting offsets \textbf{before} performing a unit conversion ensures internal consistency across all data points, as the same transformation is applied uniformly. In this approach, the offset \( c \) is applied to the raw data first, so that each measurement is shifted before the scaling factor \( k \) is used to adjust its magnitude. This method maintains the relative differences between the measurements because the offset is applied uniformly, ensuring that the calibration structure of the measurement system is preserved.
+
+Mathematically, this can be expressed as:
+
+\[
+P_{\text{adjusted}} = P + c
+\]
+where \( P_{\text{adjusted}} \) is the measurement after the offset adjustment. The scaling factor \( k \) is then applied to this adjusted value:
+
+\[
+P' = k(P + c)
+\]
+
+In this case, we first adjust the measurement \( P \) by adding the offset \( c \). Afterward, we apply the scaling factor \( k \), which ensures the measurement is correctly transformed to the new unit system. This method helps maintain the integrity of the calibration, as the offset is accounted for in a linear manner before scaling.
+
+\subsection{Post-Conversion Offset Adjustments}
+In contrast, adjusting offsets \textbf{after} the conversion is mathematically and conceptually flawed. Unit conversion is not a commutative operation, meaning that the order in which transformations are applied matters. The fundamental reason is that the scaling factor \( k \) and the offset \( c \) do not distribute uniformly across different operations. Mathematically, this is captured by the following inequality:
+
+\[
+\text{transform}(P + c) \neq \text{transform}(P) + c'
+\]
+
+This equation indicates that applying the offset after performing the transformation does not yield the same result as first adjusting the value by the offset and then applying the scaling. This is because the scaling factor \( k \) affects the entire measurement range, and the offset \( c \) shifts the data. These two operations do not commute, leading to inconsistencies in the final result.
+
+When the offset is applied after the conversion, it introduces asymmetry in the measurements because the scaling factor \( k \) and the offset \( c \) interact in a non-linear way, especially when comparing instruments with different native units. This introduces artificial errors and inconsistencies that could distort the accuracy of measurements, particularly in calibration tasks. 
+
+\subsection{Mathematical Foundation: The Role of the Intercept}
+In linear regression, the intercept \( \beta \) of the equation \( y = \alpha x + \beta \) represents the point at which the line crosses the y-axis, or the offset in the transformation. For the calibration process, where the relationship between the measured value \( P_{\text{inst}} \) and the reference value \( P_{\text{ref}} \) is given by:
+
+\[
+P_{\text{inst}} = \alpha P_{\text{ref}} + \beta
+\]
+
+- \( P_{\text{inst}} \) is the measurement from the instrument,
+- \( P_{\text{ref}} \) is the reference value,
+- \( \alpha \) is the proportionality constant (scaling factor),
+- \( \beta \) is the intercept (offset).
+
+This equation shows that the instrument measurement \( P_{\text{inst}} \) is related to the reference value \( P_{\text{ref}} \) by a linear transformation, where \( \alpha \) is the scaling factor and \( \beta \) is the offset. The intercept \( \beta \) is the amount by which the measurement differs from the reference value when no scaling occurs.
+
+The intercept can be computed by:
+
+\[
+\beta = \bar{P_{\text{inst}}} - \alpha \bar{P_{\text{ref}}}
+\]
+
+- \( \bar{P_{\text{inst}}} \) is the average of the instrument measurements,
+- \( \bar{P_{\text{ref}}} \) is the average of the reference measurements.
+
+This formula shows how the intercept \( \beta \) is the difference between the average instrument measurement and the scaled reference measurement. In calibration, we want to minimize \( \beta \), as it represents a constant error in the measurement system.
+
+\subsection{Physical Origins of Residual Intercepts}
+The residual intercepts that remain after offset adjustments arise from various physical factors, which cannot be fully accounted for by simple data transformations. These factors include:
+
+\begin{itemize}
+	\item \textbf{Elastic hysteresis:} A common source of non-linearity in pressure measurements, where the pressure values during loading and unloading differ due to the material's elastic properties.
+	\item \textbf{Thermal drift:} Variations in the temperature of the measurement system can lead to changes in the sensor’s response, leading to a shift in the measured values.
+	\item \textbf{Mechanical backlash:} Imperfections in the mechanical system of the instrument can introduce errors that depend on the direction of motion and are hard to correct through simple offset adjustments.
+\end{itemize}
+
+These physical sources of error lead to residuals in the calibration data, even after adjusting offsets. For example, hysteresis might result in an offset that is proportional to the difference between the loading and unloading pressures, while thermal drift introduces a shift proportional to temperature changes. These phenomena cannot be fully corrected by offset adjustments alone.
+
+\subsection{Ideal Case Requirements for Zero Intercepts}
+For the calibration system to ideally produce zero intercepts (i.e., for the transformed measurements to exactly match the reference measurements), the following conditions must be satisfied:
+
+\begin{enumerate}
+	\item \textbf{Perfect linearity:} The relationship between the instrument's reading and the reference value must be exactly linear, meaning that the residuals \( \epsilon(x) \) must be zero for all measured values.
+	\item \textbf{Identical statistical distributions:} The mean values of the instrument and reference measurements must match exactly, meaning that the expected values \( \mathbb{E}[P_{\text{inst}}] \) and \( \mathbb{E}[P_{\text{ref}}] \) must satisfy the condition \( \mathbb{E}[P_{\text{inst}}] = \alpha \mathbb{E}[P_{\text{ref}}] \).
+	\item \textbf{Time-invariant response:} The calibration must be stable over time, meaning that the intercept \( \beta \) must not change with time, i.e., \( \frac{\partial \beta}{\partial t} = 0 \).
+\end{enumerate}
+
+These ideal requirements are difficult to achieve in practice due to the intrinsic complexities of measurement systems, including sensor nonlinearities, statistical variations, and time-dependent behaviors.
+
+\subsection{Implications of Observed Intercepts}
+The magnitude of the observed intercepts, such as those shown in the calibration data, often indicates significant deviations from ideal behavior. When the magnitude of the intercept \( \beta \) is large in comparison to the full-scale measurement, this suggests that the calibration system is subject to substantial errors. For example, when:
+
+\[
+\frac{|\beta|}{\alpha P_{\text{fullscale}}} \times 100 > 1\%
+\]
+
+This inequality compares the intercept \( \beta \) to the full-scale measurement, \( P_{\text{fullscale}} \), scaled by the factor \( \alpha \). If the intercept is greater than 1\% of the full-scale measurement, it indicates a significant deviation from the ideal calibration, and the system's accuracy may be compromised. This highlights the limitations of the offset adjustment process, particularly when dealing with instruments that are subject to intrinsic non-linearities, time-dependent variations, and mechanical imperfections.
+
+Thus, while pre-conversion offset adjustments are useful in ensuring that measurements are consistently transformed, they cannot fully correct for the real-world complexities and limitations of measurement systems. These residual intercepts must be considered when evaluating the accuracy and reliability of calibration systems and when comparing measurements across different instruments or environments.
+
+
 
 \end{document}

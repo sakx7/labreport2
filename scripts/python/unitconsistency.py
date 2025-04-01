@@ -108,12 +108,18 @@ for unit in units:
         print(grad_df.round(4))
 
 # Verify gradient consistency (unchanged from original)
+# Improved gradient consistency check
 print("\n\n" + "="*60)
-print("Unit Consistency Validation")
+print("GRADIENT CONSISTENCY REPORT".center(60))
 print("="*60)
+
+# Create a summary table
+gradient_summary = []
 
 for instrument in ["Bourden_Gauge_2", "Bourden_Gauge", "Bundenburg_Gauge", "Hg_Glass"]:
     grad_types = ["Positive Gradient", "Negative Gradient", "Combined Gradient"]
+    
+    instrument_data = []
     
     for grad_type in grad_types:
         gradients = []
@@ -126,10 +132,73 @@ for instrument in ["Bourden_Gauge_2", "Bourden_Gauge", "Bundenburg_Gauge", "Hg_G
         if len(gradients) > 0:
             base_grad = gradients[0]
             consistent = np.allclose(gradients, base_grad, rtol=0.01)
+            std_dev = np.std(gradients)
             
-            print(f"{instrument} {grad_type}:")
-            print(f"  Units: {len(gradients)} | Mean: {np.mean(gradients):.4f} ± {np.std(gradients):.4f}")
-            print(f"  Consistent across units? {'True' if consistent else 'False'}")
-            print("-"*50)
+            instrument_data.append({
+                "Type": grad_type.replace(" Gradient", ""),
+                "Mean": np.mean(gradients),
+                "Std Dev": std_dev,
+                "Min": np.min(gradients),
+                "Max": np.max(gradients),
+                "Range": np.ptp(gradients),
+                "Consistent": consistent,
+                "Units": len(gradients)
+            })
+    
+    gradient_summary.append((instrument, instrument_data))
+
+# Print the improved report
+for instrument, data in gradient_summary:
+    print(f"\n{instrument.replace('_', ' ').title():<25} {'='*35}")
+    print(f"{'Type':<15} {'Mean':>8} {'Std Dev':>8} {'Range':>8} {'Consistent':>12}")
+    print("-"*60)
+    
+    for row in data:
+        print(f"{row['Type']:<15} {row['Mean']:>8.4f} {row['Std Dev']:>8.4f} "
+              f"{row['Range']:>8.4f} {str(row['Consistent']):>12}")
+    
+    # Calculate and print overall consistency
+    overall_consistent = all(row['Consistent'] for row in data)
+    print("-"*60)
+    print(f"{'OVERALL':<15} {'':>8} {'':>8} {'':>8} {str(overall_consistent):>12}")
+    print(f"Units Tested: {data[0]['Units']} ({', '.join(units)})")
+
+# Add this section after the gradient consistency check
+print("\n\n" + "="*60)
+print("Intercept Consistency Analysis")
+print("="*60)
+
+intercept_types = ["Positive Intercept", "Negative Intercept", "Combined Intercept"]
+
+for instrument in ["Bourden_Gauge_2", "Bourden_Gauge", "Bundenburg_Gauge", "Hg_Glass"]:
+    print(f"\n{instrument} Intercept Analysis:")
+    
+    # Create a dictionary to store all intercept data
+    intercept_data = {it: [] for it in intercept_types}
+    
+    # Collect intercept values across all units
+    for unit in units:
+        try:
+            for it in intercept_types:
+                intercept_data[it].append(results[unit]["gradients"][instrument][it])
+        except KeyError:
+            continue
+    
+    # Create a DataFrame for beautiful display
+    analysis_df = pd.DataFrame(index=intercept_types, 
+                              columns=["Mean", "Min", "Max", "Range (Magnitude)"])
+    
+    # Calculate statistics for each intercept type
+    for it in intercept_types:
+        if intercept_data[it]:
+            vals = np.array(intercept_data[it])
+            analysis_df.loc[it, "Mean"] = np.mean(vals)
+            analysis_df.loc[it, "Min"] = np.min(vals)
+            analysis_df.loc[it, "Max"] = np.max(vals)
+            analysis_df.loc[it, "Range (Magnitude)"] = np.max(vals) - np.min(vals)
+    
+    # Display the results
+    print(analysis_df.round(4))
+    print("-"*60)
 
 print("\nProcessing complete.")
