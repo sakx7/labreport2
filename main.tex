@@ -413,8 +413,8 @@ top color=watercol!90!black!90,bottom color=watercol!90!black!90,middle color=wa
 	
 	\noindent
 	
-\section{Abstract}
-In this experiment, we calibrated and compared the performance of multiple pressure-measuring devices, including two Bourdon gauges, a Budenberg pressure gauge, and a Hg glass manometer, using a reference pressure calibrator (DPI-603 Portable Pressure Calibrator). This device served both as the baseline for pressure measurements and as the source of the applied pressure, allowing us to apply both positive and negative pressures in increments of approximately 5 kPa. Through this process, we were able to get an thorough dataset that demonstrated notable differences in the pressure-measuring devices' performances. Our results revealed significant performance variations, with the Budenberg gauge showing exceptional accuracy (±0.59\% error) comparable to the Hg manometer (±0.58\%), while the Bourdon gauges exhibited larger errors (up to -47.59\% under vacuum conditions). These results highlighted the importance of selecting appropriate devices based on precision requirements and operating conditions, as well as the potential impact of human error in reading analog instruments like the Bourdon gauges.
+	\section{Abstract}
+	In this experiment, we calibrated and compared the performance of multiple pressure-measuring devices, including two Bourdon gauges, a Budenberg pressure gauge, and a Hg glass manometer, using a reference pressure calibrator (DPI-603 Portable Pressure Calibrator). This device served both as the baseline for pressure measurements and as the source of the applied pressure, allowing us to apply both positive and negative pressures in increments of approximately 5 kPa. Through this process, we were able to get an thorough dataset that demonstrated notable differences in the pressure-measuring devices' performances. Our results revealed significant performance variations, with the Budenberg gauge showing exceptional accuracy (±0.59\% error) comparable to the Hg manometer (±0.58\%), while the Bourdon gauges exhibited larger errors (up to -47.59\% under vacuum conditions). These results highlighted the importance of selecting appropriate devices based on precision requirements and operating conditions, as well as the potential impact of human error in reading analog instruments like the Bourdon gauges.
 
 	
 	\newpage\vspace*{-20pt}
@@ -432,7 +432,7 @@ In this experiment, we calibrated and compared the performance of multiple press
 
 	\section{Theory}
 
-When discussing pressure, the primary consideration is its physical definition. It is fundamentally characterized as the force exerted per unit area on a surface, leading to measurable effects such as deformation or displacement, depending on the material and conditions of application.\vspace{-0.5em}
+When discussing pressure, the primary consideration is its physical definition. It is fundamentally characterized as the force exerted per unit area on a surface, leading to effects such as deformation or displacement (measurable depending on the material and conditions of application). It as defined as:\vspace{-0.5em}
 \begin{center}
 	\begin{minipage}{0.51\textwidth}
 		\centering
@@ -442,9 +442,9 @@ When discussing pressure, the primary consideration is its physical definition. 
 			\end{equation}
 		\hspace*{2em}\wm{0.9}{
 			\begin{itemize}[itemsep=-1mm]
-				\item \( P \) = Pressure (Pa, Pascal)
-				\item \( F \) = Force applied (N, Newton)
-				\item \( A \) = Surface area (m\(^2\))
+				\item \( P \) : Pressure (Pa, Pascal)
+				\item \( F \) : Force applied (N, Newton)
+				\item \( A \) : Surface area (m\(^2\))
 			\end{itemize}
 		}\\[9pt]
 		Average pressure $\left(P\right)$ assumes uniform distribution.\\[8pt]
@@ -492,7 +492,9 @@ Atmospheric pressure ($P_{\text{atm}}$) is the pressure exerted by the weight of
 \begin{equation*}
 	P_{\text{atm}} \approx 101.325 \text{ kPa} = 1 \text{ atm}
 \end{equation*}
-It decreases with altitude due to a reduction in air density. Atmospheric pressure serves as the reference for gauge pressure, which is defined as:
+It decreases with altitude due to a reduction in air density, (See section \ref{Pressure Units} for more detail on the unit)\\[-1em]
+\vspace{0.7em}\hrule\vspace{0.7em}\noindent
+Atmospheric Pressure serves as the reference for gauge pressure, which is defined as:
 \begin{equation}
 	P_{\text{gauge}} = P_{\text{absolute}} - P_{\text{atm}}
 \end{equation}
@@ -505,9 +507,9 @@ Key pressure classifications include:\\
 \vspace{-1em}
 \begin{itemize}
 	\item \textbf{Positive (or Gauge) Pressure ($P_{\text{gauge}} > 0$)}: Any pressure higher than local atmospheric pressure.
-	\item \textbf{Negative (or Suction) Pressure ($P_{\text{gauge}} < 0$)}: Any pressure lower than atmospheric pressure but not reaching absolute zero.
+	\item \textbf{Negative (or Vacuum) Pressure ($P_{\text{gauge}} < 0$)}: Any pressure lower than atmospheric pressure but not reaching absolute zero.
 \end{itemize}
-\begin{center}
+\begin{center}\vspace{-1.5em}
 \begin{formal}[(Farbod Tabesh, 2019)]{black!60!white}{white}\vspace{-0.7em}
 \begin{minipage}[t]{0.48\textwidth}
 	\subsection{Absolute Pressure}
@@ -527,7 +529,8 @@ Any pressure below atmospheric pressure but above absolute zero pressure. Vacuum
 \begin{equation}
 	P_{\text{vac}} = P_{\text{atm}} - P_{\text{absolute}}
 \end{equation}
-where higher vacuum pressure indicates a lower absolute pressure.\\[0.5em]
+where higher vacuum pressure indicates a lower absolute pressure.\\[-1em]
+\vspace{0.7em}\hrule\vspace{0.7em}\noindent
 The following diagram illustrates all these pressure definitions more clearly.\\\vspace{-1em}
 \begin{center}
 \begin{tikzpicture}[scale=2,transform shape]	
@@ -649,157 +652,56 @@ For incompressible fluids, this integrates to the basic manometric equation:
 \end{center}
 Key assumptions in classical manometry:
 \begin{enumerate}
-	\item Fluid density ($\rho$) remains constant (valid for liquids under moderate conditions)
-	\item Gravitational acceleration ($g$) is uniform (varies 0.5\% globally)
-	\item Capillary effects are negligible (requires tubes $>$10 mm diameter for water)
-	\item Temperature variations are minimal (affects $\rho$ by $\sim$0.1\%/\textdegree C for water)
+	\item \textbf{Constant fluid density ($\bm{\rho}$)}: Assumed invariant (valid for liquids under moderate pressure conditions)
+	\item \textbf{Uniform gravitational acceleration ($\bm{g}$)}: Taken as 9.81 m/s$^2$ (varies less than 0.5\% across Earth's surface)
+	\item \textbf{Negligible capillary effects}: Valid for tube diameters $>$10 mm (for water at standard conditions)
+	\item \textbf{Minimal temperature variations}: Density changes are small ($\sim$0.1\% per \textdegree C for water)
+	\item \textbf{Zero velocity condition}: Fluid is assumed stationary in the reference frame
 \end{enumerate}
 
-
-
 \paragraph{Manometer Types}\mbox{}\\[1em]
-\noindent
-\begin{minipage}{0.65\textwidth}
-	\small\textbf{1. Torricellian Barometer (Absolute Pressure)}\\[8pt]	
-	\large The mercury barometer shows a basic measurement of atmospheric pressure. Simply put, the barometer uses the relationship between pressure, density, and height, as follows: 
-	\begin{equation}
-		P_{atm} = \rho_{\tiny \bm{Hg}}\, g  h
-	\end{equation}
-	\begin{itemize}[itemsep=-1mm]
-		\item $P_{atm}$ : Atmospheric pressure (pascal, \si{\Pa})
-		\item $\rho_{\tiny \bm{Hg}}$ : Mercury density (kilogram per cubic meter, \si{\kg\per\m\cubed})
-		\item $h$ : Height (meter, \si{\m})
-	\end{itemize}
-	 A notable function of the mercury barometer is the maintenance of an invention vacuum above the mercury column, where norm is essentially zero. The reason for mercury is its high density; mercury has a density of kg/m$^3$ at 20\textdegree C.
-\end{minipage}\hfill
-\begin{minipage}{0.3\textwidth}\centering
-	\begin{tikzpicture}[scale=1.3,transform shape]
-		\def\Rx{1.0} \def\Ry{0.05*\Rx} \def\rx{0.18*\Rx} 
-		\def\ry{0.06*\rx} \def\H{1.0} \def\h{0.72*\H}
-		\def\th{2.7*\H} \def\ty{0.95*\th} \def\td{0.6*\h} \def\N{14}
-		
-		% WATER + CONTAINER
-		\draw[vertical water] (-\Rx,\h) --++ (0,-\h) arc(180:360:{\Rx} and {\Ry}) --++ (0,\h);
-		\draw[water] (0,\h) ellipse ({\Rx} and {\Ry});
-		\draw[thick] (0,\H) ellipse ({\Rx} and {\Ry});
-		
-		% TUBE
-		\draw[vertical water] (-\rx,\h) |-++ (2*\rx,\ty) --++ (0,-\ty);
-		\draw[water] (0,\h+\ty) ellipse ({\rx} and {\ry});
-		\draw[thick,line cap=round] (-\rx,\h) --++ (0,\th) coordinate (T) arc(180:0:\rx) --++ (0,-\th);
-		\draw[mydarkblue,line cap=round] (-1.09*\rx,\h-0.005) arc(180:360:{1.09*\rx} and 1.12*\ry);
-		\foreach \i [evaluate={\y=1.12*\H+0.84*\th*\i/\N}] in {0,...,\N}{
-			\draw[line cap=round] (\rx,\y) arc(0:-50:{\rx} and \ry);
-		}
-		\begin{scope}
-			\clip (-\Rx,\h) |-++ (2*\Rx,-\h) --++ (0,\h) arc(360:180:{\Rx} and {\Ry}) -- cycle;
-			\draw[thick,line cap=round] (-\rx,\h) --++ (0,-\td) (\rx,\h) --++ (0,-\td);
-			\draw[vertical water,opacity=0.5] (-\Rx,\h) --++ (0,-\h) arc(180:360:{\Rx} and {\Ry}) --++ (0,\h);
-		\end{scope}
-		\draw[mydarkblue] (-\Rx,\h) arc(180:360:{\Rx} and {\Ry});
-		\draw[<->] (0.6*\Rx,\h) --++ (0,\ty) node[midway,fill=white,inner sep=1] {$h$};
-		\draw[very thin,line cap=round] (T)++(130:\rx) node[anchor=-19,inner sep=1] {$P=0$} to[out=-50,in=170]++ (-30:1.5*\rx);
-		\node[above] at (-0.6*\Rx,\H) {$P_\mathrm{atm}$};
-		
-		% CONTAINER
-		\draw[thick] (-\Rx,\H) --++ (0,-\H) arc(180:360:{\Rx} and {\Ry}) --++ (0,\H) arc(360:180:{\Rx} and {\Ry}) -- cycle;
-	\end{tikzpicture}
-	\captionof{figure}{Torricelli's method (Izaak Neutelings, 2021)}
-\end{minipage}\\[6pt]
-	 Since the density of mercury is temperature-dependent, a correction factor must be applied to the measured height. The corrected height is determined by:  
-\begin{equation}
-	h_{corr} = h[1 - (1.82\times10^{-4})(T-20°C)]
-\end{equation}
-\begin{itemize}[itemsep=-1mm]
-	\item $h_{corr}$ : Corrected height (meter, \si{\m})
-	\item $h$ : Measured height (meter, \si{\m})
-	\item $T$ : Temperature (degree Celsius, \si{\degreeCelsius})
-\end{itemize}
-The correction presented here helps in reading accurately because of the effects of expansion of thermal energy.\\[1em]
-\begin{minipage}{0.65\textwidth}
-	\small\textbf{2. Open-Tube Manometer (Differential Pressure)}\\[8pt] \large 
-	The open-tube manometer, which is usually in a U-tube configuration, measures pressure differences by comparing the fluid levels in both arms of the tube. The expression for the pressure difference is given by:
-	\begin{equation}
-		P_1 - P_2 = (\rho_m - \rho_f)gh
-	\end{equation}	
-	To formulate this expression in terms of compressible gases, the condition indicates for low-density gases, where the fluid density $\rho_f$ would be much smaller than that of the manometric fluid $\rho_m$:
-	\begin{equation}
-		\Delta P \approx \rho_mgh
-	\end{equation}
-	As one end of the manometer opens into the atmosphere, the manometer measures the gauge pressure directly, that is, $P_2$ is simply the atmospheric pressure.
-\end{minipage}\hfill
-\begin{minipage}{0.3\textwidth}\centering
-	\begin{tikzpicture}[scale=1.4,transform shape]
-		\def\W{0.8} \def\H{0.7} \def\Rx{0.55} \def\Ry{0.2*\Rx}
-		\def\rx{0.28*\Rx} \def\ry{0.28*\Ry} \def\HL{1.3} \def\HR{2.2}
-		\def\hL{0.40*\HL} \def\hR{0.95*\HR} \def\N{14}
-		
-		% WATER + CONTAINER
-		\draw[water] (-\Rx,\hL) --++ (0,-\hL) arc(180:360:\Rx) --++ (0,\hR) --++ (2*\rx,0) --++
-		(0,-\hR) arc(360:180:\Rx+2*\rx) --++ (0,\hL);
-		\draw[water] (-\Rx-\rx,\hL) ellipse({\rx} and {\ry}) (\Rx+\rx,\hR) ellipse({\rx} and {\ry});
-		\draw[thick] (-\Rx,\HL) --++ (0,-\HL) arc(180:360:\Rx) --++ (0,\HR) coordinate (T) arc(180:0:\rx)
-		--++ (0,-\HR) arc(360:180:\Rx+2*\rx) --++ (0,\HL);
-		\draw[thick] (-\Rx-\rx,\HL) ellipse({\rx} and {\ry});
-		\foreach \i [evaluate={\y=(\hL+\hR)/2+0.8*\HR*(\i-\N/2)/\N;}] in {0,...,\N}{
-			\draw[line cap=round] (\Rx+2*\rx+0.007,\y) arc(0:-50:{\rx} and \ry);
-		}
-		\draw[line cap=round,myred] (-\Rx+0.007,\hL+\hR-\HR-\rx) arc(0:-70:{\rx} and \ry);
-		\node at (-\W/2-2*\rx-\Rx,\HL+1.7*\rx) {$P_\mathrm{atm}$};
-		\draw[very thin,line cap=round] (T)++(130:\rx) node[anchor=-19,inner sep=1] {$P=0$} to[out=-50,in=170]++ (-30:1.5*\rx);
-		\draw[dashed] (-\Rx,\hL) --++ (1.3*\Rx,0) (\Rx,\hR) --++ (-1.3*\Rx,0);
-		\draw[<->] (0,\hL) -- (0,\hR) node[midway,fill=white,inner sep=1] {$h$};
-	\end{tikzpicture}
-	\captionof{figure}{Barometer (open-ended tube) to measure air pressure (Izaak Neutelings, 2021)}
-\end{minipage}\\[6pt]
-A sensitive device can sensitize in a number of ways. One way is by incorporating an \textbf{inclined tube}, which relates the pressure difference with the displacement of fluid along the length of tube $L$ at an angle $\theta$:
-\begin{equation}
-	\Delta P = \rho gL\sin\theta
-\end{equation}
-Another way is to use a less dense liquid such as water, which has a density of 998 kg/m$^3$. This allows for greater displacements per unit pressure difference, thus improving measurement accuracy.\\
-\begin{minipage}{0.65\textwidth}
-\small	\textbf{3. Sealed-Tube Manometer (Absolute Pressure)}\\[8pt]\large
-The sealed-tube manometer is intended for absolute pressure measurement. Unlike open-tube configurations, one end is sealed, thereby establishing a fixed reference point for either vacuum or a gas of known pressure; hence the pressure is defined as:  
-	\begin{equation}
-		P = \rho g h
-	\end{equation}
-The setup has the added benefit of eliminating atmospheric pressure effects on the readings, which makes it especially important when measuring vacuum pressures.\\[8pt]
-In some configurations, well-type sealed manometers are used to increase accuracy. These types take into account the difference in cross-sectional areas of the tube and the well.
-\end{minipage}\hfill
-\begin{minipage}{0.3\textwidth}\centering
-	\begin{tikzpicture}[scale=1.4,transform shape]
-		\def\W{0.8} \def\H{0.7} \def\Rx{0.55} \def\Ry{0.2*\Rx}
-		\def\rx{0.28*\Rx} \def\ry{0.28*\Ry} \def\HL{1.3} \def\HR{2.2}
-		\def\hL{0.40*\HL} \def\hR{0.80*\HR} \def\N{14}
-		
-		\draw[water] (-\Rx,\hL) --++ (0,-\hL) arc(180:360:\Rx) --++ (0,\hR) --++ (2*\rx,0) --++
-		(0,-\hR) arc(360:180:\Rx+2*\rx) --++ (0,\hL);
-		\draw[water] (-\Rx-\rx,\hL) ellipse({\rx} and {\ry}) (\Rx+\rx,\hR) ellipse({\rx} and {\ry});
-		\draw[thick] (-\Rx,\HL) --++ (0,-\HL) arc(180:360:\Rx) --++ (0,\HR) arc(180:0:{\rx} and \ry)
-		--++ (0,-\HR) arc(360:180:\Rx+2*\rx) --++ (0,\HL)
-		arc(0:90:\rx) --++ (-\rx,0) --++ (0,0.7*\rx-\H/2) -|++ (-\W,\H) -|++ (\W,0.7*\rx-\H/2)
-		--++ (2*\rx,0) arc(90:0:2*\rx) -- cycle;
-		\draw[thick] (\Rx+\rx,\HR) ellipse({\rx} and \ry);
-		\foreach \i [evaluate={\y=(\hL+\hR)/2+0.8*\HR*(\i-\N/2)/\N;}] in {0,...,\N}{
-			\draw[line cap=round] (\Rx+2*\rx+0.007,\y) arc(0:-50:{\rx} and \ry);
-		}
-		\draw[line cap=round,myred] (\Rx+2*\rx+0.007,{(\hL+\hR)/2}) arc(0:-70:{\rx} and \ry);
-		\draw[line cap=round,myred] (-\Rx+0.007,{(\hL+\hR)/2}) arc(0:-70:{\rx} and \ry);
-		\node at (-\W/2-4*\rx-\Rx,\HL+1.7*\rx) {$P$};
-		\node[above=2] at (\Rx+\rx,\HR+\ry) {$P_\mathrm{atm}$};
-		\draw[dashed] (-\Rx,\hL) --++ (1.3*\Rx,0) (\Rx,\hR) --++ (-1.3*\Rx,0);
-		\draw[<->] (0,\hL) -- (0,\hR) node[midway,fill=white,inner sep=1] {$h$};
-	\end{tikzpicture}
-	\captionof{figure}{Manometer (closed tube) (Izaak Neutelings, 2021)}
-\end{minipage}\\[8pt]
-The corrected pressure is given by:  
-\begin{equation}
-	P = \rho g h \left(1 + \frac{A_{tube}}{A_{well}}\right)
-\end{equation}
-Through its ability to compensate for fluid displacement effects in the well, this correction factor guarantees more accurate pressure readings.\\[1em]
-I believe that covers the types of manometers that fall under the purview of this paper.
-\noindent
+\small\textbf{1. U-Tube Manometer (Pressure Measurement Cases)}\\[8pt] \large
+\noindent The U-tube manometer measures gas pressure by observing the displacement of a manometric fluid (typically mercury due to its high density). The pressure is determined by the height difference $h$ between the fluid levels in the two arms. Three common configurations are:\\[3pt]
+\includegraphics[width=1\textwidth]{images/CNX_Chem_09_01_Manometer1.jpg}
+\captionof{figure}{U-Shaped Manometers  (LumenLearning, n.d.)}
+\label{fig:cnxchem0901manometer1}
+\vspace{1em}
 
+\begin{center}
+\begin{minipage}[t]{0.32\textwidth}
+	\textbf{Closed-End:} \\
+	The sealed arm serves as a vacuum reference ($P_2 = 0$), meaning the gas pressure is:
+	\begin{equation}
+		P_{\text{gas}} = \rho g h
+	\end{equation}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.32\textwidth}
+	\textbf{Open-End:} \\
+	Sub-atmospheric pressure\\ ($P_{\text{gas}}<P_{\text{atm}}$) causes downward displacement in the open arm:
+	\begin{equation}
+		P_{\text{gas}} = P_{\text{atm}} - \rho g h
+	\end{equation}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.32\textwidth}
+	\textbf{Open-End:} \\
+	For gas pressure above atmospheric ($P_{\text{gas}} > P_{\text{atm}}$), the manometer fluid rises in the open arm.	\begin{equation}
+		P_{\text{gas}} = P_{\text{atm}} + \rho g h
+	\end{equation}
+\end{minipage}
+\end{center}\vspace{0.3em}
+For gases with negligible density ($\rho_f \ll \rho_m$), the fluid density $\rho$ simplifies to $\rho_m$ (e.g., mercury).\\[1em]
+\begin{minipage}{0.5\textwidth}
+	\small\textbf{2. Torricellian Barometer (Absolute Pressure)}\\[8pt]	
+	\large The mercury barometer shows a basic measurement of atmospheric pressure.\\[8pt]
+	The experiment uses a simple barometer to measure the pressure of air, filling it with mercury up until 75\% of the tube. Any air bubbles in the tube must be removed by inverting several times. After that, a clean mercury is filled once again until the tube is completely full. The barometer is then placed inverted on the dish full of mercury.  
+\end{minipage}\hfill
+\begin{minipage}{0.47\textwidth}\centering
+	\includegraphics[width=1\textwidth]{images/1204.jpg}
+	\captionof{figure}{Torricelli’s experiment. Simple barometer (PhysicMax, 2014)}
+	\label{fig:1204}
+\end{minipage}\\[6pt]
+This causes the mercury in the tube to fall down until the difference between mercury on the surface and in the tube is about 760 mm. Even when the tube is shaken or tilted, the difference between the surface and in the tube is not affected due to the influence of atmospheric pressure. (Wikipedia, 2021)\\[8pt]
+A notable function of the mercury barometer is the maintenance of an invention vacuum above the mercury column, where norm is essentially zero. The reason for mercury is its high density; mercury has a density of kg/m$^3$ at 20\textdegree C.
 
 \newpage\newgeometry{left=0.8in,right=0.8in,top=1.23in,bottom=0.69in}
 
@@ -878,7 +780,7 @@ I believe that covers the types of manometers that fall under the purview of thi
 		$$N m^{-2} = \text{Pa}$$
 	\end{minipage}\\[8pt]
 	Although mmHg is not an SI unit, it remains widely used in medicine (e.g., blood pressure readings of 120/80 mmHg) and laboratory sciences for its convenience in low-pressure measurements.
-\end{briefillus}\vspace{0em}\noindent\footnotesize{The \textbf{torr} (symbol: Torr) is a unit of pressure based on an absolute scale, defined as exactly 1/760 of a standard atmosphere (101325 Pa). Thus one torr is exactly 101325/760 pascals ($\approx$ 133.32 Pa) (Wikipedia, 2025). This is a redacted unit in the context of this study}
+\end{briefillus}		\vspace*{\fill}\noindent\footnotesize{The \textbf{torr} (symbol: Torr) is a unit of pressure based on an absolute scale, defined as exactly 1/760 of a standard atmosphere (101325 Pa). Thus one torr is exactly 101325/760 pascals ($\approx$ 133.32 Pa) (Wikipedia, 2025). This is a redacted unit in the context of this study}
 \tikzexternalenable
 
 	
@@ -1159,20 +1061,17 @@ where \( \rho \) is the density of mercury (\(13,600 \, \text{kg/m}^3\)), \( g \
 \begin{minipage}{0.55\textwidth}
 This simplifies to:
 \[P = 2.668 \times h\]
-where \( P \) is in kPa. Assuming the sealed end is a vacuum (0 pressure), then \( P \) represents the absolute pressure. If the sealed end has a reference pressure \( P_{\text{ref}} \neq 0 \), then the pressure difference is:
-\[\Delta P = P - P_{\text{ref}}\]
-However, given the circumstance, it is difficult to ascertain the precise parameters of the system due to the limited information provided regarding the initial setup. \\[4pt]
+where \( P \) is in kPa. Given the circumstance, it is difficult to ascertain the precise parameters of the system due to the limited information provided regarding the initial setup. \\[4pt]
 \textbf{Assumptions:} 
 \begin{itemize}
 	\item Initial balance (zero pressure difference).
 	\item Uniform tube cross-section (no capillary effects).
 	\item Negligible temperature effects on density.
 \end{itemize}\vspace{0.2em}
-Violations (e.g., asymmetric tubes or initial offsets) require corrections. 
+Violations (e.g., asymmetric tubes or initial offsets) require corrections. A more thorough examination of the conventions and data structuring will be covered in the later section of discussions of results \ref{subsec:Reflection}. Although significant considerations are omitted in terms of conciseness, this was a necessary assumption in order to proceed with the rest of the results.\\ 
 \end{minipage}\hspace{1em}
-\begin{minipage}{0.45\textwidth}
-\begin{center}
-	\begin{minipage}{1\textwidth}\centering		
+\begin{minipage}{0.45\textwidth}\centering\vspace{-1em}
+	\begin{minipage}{1\textwidth}\centering	
 		\hspace*{-1em}\begin{tikzpicture}
 			\begin{scope}		
 				\draw[thick,->] 
@@ -1232,11 +1131,8 @@ Violations (e.g., asymmetric tubes or initial offsets) require corrections.
 			\end{minipage}
 		\end{minipage}
 	\end{minipage}
-\end{center}
 \end{minipage}\\[1em]
-While important considerations are left out in terms of the conciseness of this, this was a needed assumption in order to move with the rest of the results, a deeper discussion of the conventions and data structuring will be addressed in the later section of discussions of results \ref{subsec:Reflection}.\\
-\vspace{1em}
-	
+Now that I've applied this modification, I calibrate all of the data using their original values, as follows:\\[1em]
 	\hspace*{-2.2em}	
 	\begin{minipage}{1.1\textwidth}	
 \begin{datasetbox}{Calibrated Data}{data:zero}
@@ -1387,7 +1283,7 @@ While important considerations are left out in terms of the conciseness of this,
 	\end{minipage}
 	
 \newpage\newgeometry{left=0.8in,right=0.8in,top=1in,bottom=0.6in}
-\subsection{Unit Consistency Analysis}
+\subsection{Unit Consistency}
 Now, we need to perform some unit conversions to ensure consistency across all measurements.\\[8pt]
 In the context of this study, as seen in the table in Figure \ref{fig:pressurestable}, we are provided with a column for calculating bar and bar \(\text{P}_\text{abs}\), which directly suggests that all the pressures should be expressed in either for all comparisons.\\[8pt] However the selection of unit does not substantially influence the outcomes of the conclusions we seek to get. I will later demonstrate that the results remain consistent across multiple pressure unit conversions (See Section \ref{consistency}).\\[8pt]
 That aside, here i covert them all to \textbf{bar}, using the relevant calculations outlined in Table \ref{table:Pressure_Unit_Conversions}.
@@ -2601,7 +2497,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 \end{center}
 	
 \subsection{Choice of Unit in Relation to the Gradient}\label{consistency}
-As previously established, the pressure unit selection does not affect the overall analysis results. This subsection provides the theoretical justification and empirical evidence to confirm that the gradients remain invariant across various pressure unit systems (bar, psi, kPa, cmHg,...) and intercepts are subject to vary, ensuring the robustness and consistency of the analysis. Note this will be a \textbf{brief explanation}, for a more in-depth and better explained version, Refer to Appendix A.\vspace{-1em}
+As previously established, the pressure unit selection does not affect the overall analysis results. This subsection provides a brief theoretical justification and then the empirical evidence to confirm that the gradients remain invariant across various pressure unit systems (bar, psi, kPa, cmHg,...) and intercepts are subject to vary, ensuring the robustness and consistency of the analysis. Note this will be a {brief explanation}, for a more in-depth and better explained version, Refer to Appendix A.\vspace{-1em}
 \subsubsection{Theoretical Justification}
 The gradient analysis exhibits the following key mechanisms supporting unit invariance:\\
 \begin{enumerate}
@@ -2687,7 +2583,7 @@ The gradient analysis exhibits the following key mechanisms supporting unit inva
 				\\[2pt]
 			\end{tblr}
 		\end{minipage}
-		\hspace{0.7em}
+		\hspace{0.8em}
 		% Second minipage - Pressurized
 		\begin{minipage}[t]{4cm}
 			\centering
@@ -2929,7 +2825,7 @@ The gradient analysis exhibits the following key mechanisms supporting unit inva
 
 
 	\newpage
-\section{Discussion of Results}
+\section{Discussion of Results}\label{Discussion of Results}
 
 \subsection{Interpretation of Key Findings } The accuracy of pressure readings from the four gauges---the Hg Manometer, the Borden Gauge 1, the Borden Gauge 2, and the Bundenburg Gauge---has been thoroughly assessed.  This evaluation gives us an overall performance rating and provides important information on the performance of each gauge in vacuum and pressurization ranges. Three principal findings emerge (Summarised Table \ref{table:Percenterrors}):  
 
@@ -3017,6 +2913,14 @@ The table below summarizes the intercepts from various instruments, highlighting
 Despite adjustments for unit conversion, the intercepts in all gauges are non-zero, suggesting that calibration errors and instrument-specific inconsistencies are present. These results imply that while calibration adjustments can help minimize errors, they cannot fully eliminate intrinsic limitations in the measurement systems. A more in-depth discussion on how and why this came about requires in depth knowledge on background refer to Appendix B.
 
 \newpage
+
+\subsection{Reflection on the Assumptions}\label{subsec:Reflection} 
+In this analysis, the pressure difference was determined using the assumption that the displacement of the mercury column follows \(\Delta h = 2h\). This relationship holds exactly for an ideal, symmetric U-tube manometer with identical column diameters. However, real-world manometers often exhibit slight geometric asymmetries, which can introduce errors if this assumption does not strictly hold.\\[8pt]
+Given this potential limitation, it is necessary to assess whether this assumption remained valid in the present experiment. The calculated error for the mercury manometer (\(\pm 0.58\%\)) is notably small, suggesting that any deviations from the idealized U-tube geometry were negligible. Furthermore, the Budenberg gauge, which served as an independent reference, exhibited a nearly identical error (\(\pm 0.59\%\)), reinforcing the validity of the assumed relationship.\\[8pt]
+To contextualize this further, non-ideal geometries such as unequal column diameters or well-type manometers can lead to significant deviations. For example, a 10\% difference in tube diameters can reduce \(\Delta h\) to approximately \(1.83h\), introducing a systematic error of about \(+9.3\%\), while a well-type manometer would result in \(\Delta h = h\), leading to a \(+100\%\) error. Given that the observed discrepancies in this experiment are two orders of magnitude smaller than such cases, it is reasonable to conclude that the assumption \(\Delta h = 2h\) was appropriate for this setup.\\[8pt]
+While the assumption of a symmetric displacement may not always be universally applicable, its use in this study is justified by empirical evidence. The minimal observed error suggests that the manometer used closely approximates an ideal U-tube, making the simplification both practical and valid. Nevertheless, future studies involving non-standard manometer geometries should explicitly account for potential asymmetries to ensure accuracy.
+
+
 \subsection{Performance Spectrum} 
 The results reveal a significant performance spectrum among analog gauges:
 \begin{center}
@@ -3068,6 +2972,17 @@ These results quantitatively confirm that measurement accuracy is fundamentally 
 		\item Izaak Neutelings (2021). \textit{Torricelli’s experiment \& barometers – TikZ.net}. [online] Tikz.net. Available at: \url{https://tikz.net/fluid_dynamics_barometer/} .[Accessed 29 Mar. 2025].
 		\item Renke (2024). \textit{Differential Pressure | What, How, Why - Renke}. [online] Available at: \url{https://www.renkeer.com/what-is-differential-pressure/}.[Accessed 29 Mar. 2025]
 		\item Farbod Tabesh (2019). \textit{Pressure Definition}. [online] Greenishco. Available at: \url{https://greenishco.com/PressureDefinition}.[Accessed 29 Mar. 2025].	‌
+		\item Wikipedia (2021). \textit{Hydrostatic equilibrium}. [online] Available at: \url{https://en.wikipedia.org/wiki/Hydrostatic_equilibrium}.
+		
+		\item Wikipedia (2021). \textit{Torricelli’s experiment}. [online] Wikipedia. Available at: \url{https://en.wikipedia.org/wiki/Torricelli%27s_experiment}.
+		‌
+		\item Physicsmax (2014). \textit{Torricelli’s experiment. Simple barometer Physics Homework Help, Physics Assignments and Projects Help, Assignments Tutors online}. [online] PhysicsMax.com. Available at: \url{https://physicsmax.com/torricellis-experiment-simple-barometer-6189}.
+		
+		‌\item LumenLearning (n.d.). \textit{9.1 Gas Pressure | Chemistry}. [online] Available at: \url{https://courses.lumenlearning.com/suny-albany-chemistry/chapter/gas-pressure-2/}.
+		
+		‌
+		
+		
 	\end{enumerate}
 	‌	
 	\newpage
