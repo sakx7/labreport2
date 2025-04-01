@@ -386,9 +386,9 @@ top color=watercol!90!black!90,bottom color=watercol!90!black!90,middle color=wa
 			row{8}={bg=red!10!white}
 		}
 		Student & Course & Contribution & Picture \\ 
-		Sakariye Abiikar & Mechanical Engineering & Formatter, Method \& Experimental Procedures, Introduction, Results & \includegraphics[width=2cm,valign=c]{images/image(7).jpeg} \\ 
+		Sakariye Abiikar & Mechanical Engineering & Formatter, Method \& Experimental Procedures, Introduction, Results & \includegraphics[width=2cm,valign=c]{images/image(7).jpg} \\ 
 		Alireza Alishahi & Mechanical Engineering  & Abstract, Method \& Experimental Procedures & \includegraphics[width=2cm,valign=c]{images/8_orgid_297f9608-cce6-40e3-adc2-86e161e7141f.jpg} \\ 
-		Varley, Freddie & Mechanical Engineering & Theory, Recommendations &  \includegraphics[width=2cm,valign=c]{images/profile.png}\\
+		Varley, Freddie & Mechanical Engineering & Theory, Recommendations &  \includegraphics[width=2cm,valign=c]{images/Media.jpg}\\
 		Abdul Mueed & Mechanical Engineering  & Theory & \includegraphics[width=2cm,valign=c]{images/profile.png} \\ 
 		Abdelrahman Shehata & Mechanical Engineering  & Discussion of results & \includegraphics[width=2cm,valign=c]{images/Image.jpg}\\
 		Naim Alrifai & Mechanical Engineering & Conclusion & \includegraphics[width=2cm,valign=c]{images/Image(9).jpeg} \\\hline
@@ -700,7 +700,7 @@ For gases with negligible density ($\rho_f \ll \rho_m$), the fluid density $\rho
 	\captionof{figure}{Torricelli’s experiment. Simple barometer (PhysicMax, 2014)}
 	\label{fig:1204}
 \end{minipage}\\[6pt]
-This causes the mercury in the tube to fall down until the difference between mercury on the surface and in the tube is about 760 mm. Even when the tube is shaken or tilted, the difference between the surface and in the tube is not affected due to the influence of atmospheric pressure. (Wikipedia, 2021)\\[8pt]
+This causes the mercury in the tube to fall down until the difference between mercury on the surface and in the tube is about 760 mm. Even when the tube is shaken or tilted, the difference between the surface and in the tube is not affected due to the influence of atmospheric pressure. (Wikipedia, 2021)\\[6pt]
 A notable function of the mercury barometer is the maintenance of an invention vacuum above the mercury column, where norm is essentially zero. The reason for mercury is its high density; mercury has a density of kg/m$^3$ at 20\textdegree C.
 
 \newpage\newgeometry{left=0.8in,right=0.8in,top=1.23in,bottom=0.69in}
@@ -1673,7 +1673,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 \end{datasetbox}
 	\end{minipage}\\
 
-\subsection{Gradient analysis}
+\subsection{Bar Gradients}
 \vspace{1em}
 
 	
@@ -2497,7 +2497,7 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 \end{center}
 	
 \subsection{Choice of Unit in Relation to the Gradient}\label{consistency}
-As previously established, the pressure unit selection does not affect the overall analysis results. This subsection provides a brief theoretical justification and then the empirical evidence to confirm that the gradients remain invariant across various pressure unit systems (bar, psi, kPa, cmHg,...) and intercepts are subject to vary, ensuring the robustness and consistency of the analysis. Note this will be a {brief explanation}, for a more in-depth and better explained version, Refer to Appendix A.\vspace{-1em}
+As previously established, the pressure unit selection does not affect the overall analysis results. This subsection provides a brief theoretical justification and then the empirical evidence to confirm that the gradients remain invariant across various pressure unit systems (bar, psi, kPa, cmHg,...) and intercepts are subject to vary, ensuring the robustness and consistency of the analysis. Note this will be a {brief explanation}, for a more in-depth and better explained version, Refer to Appendix \ref{Adjusting Offsets in Unit Conversions}.\vspace{-1em}
 \subsubsection{Theoretical Justification}
 The gradient analysis exhibits the following key mechanisms supporting unit invariance:\\
 \begin{enumerate}
@@ -2840,7 +2840,7 @@ The gradient analysis exhibits the following key mechanisms supporting unit inva
 	Borden Gauge 2 demonstrated significantly more consistent performance compared to Gauge 1, with a modest cumulative error of \textbf{-5.17\%}. While it maintained a slight negative bias in both pressurized (\textbf{-5.38\%}) and vacuum (\textbf{-4.91\%}) conditions, this uniform deviation suggests a stable, if imperfect, calibration offset rather than the catastrophic failure modes observed in Gauge 1. Such consistency makes it suitable for applications where absolute precision is secondary to repeatability, provided regular zero-point adjustments are implemented.
 \end{enumerate}  
 
-\subsection{Multifactorial Analysis of Measurement Variance}
+\subsection{Multivariate Variance Analysis}
 The experimental results demonstrate that pressure measurement accuracy is governed by complex interactions between multiple factors, as evidenced by the varying performance across gauge types. The key influencing factors emerging from this study include:
 
 \begin{itemize}
@@ -2875,15 +2875,15 @@ The table below summarizes the intercepts from various instruments, highlighting
 		\toprule
 		\textbf{Gauge} & \textbf{Mean} & \textbf{Min} & \textbf{Max} & \textbf{Range (Magnitude)} \\
 		\midrule
+		\multicolumn{5}{l}{\textbf{Bourden Gauge 1}} \\
+		Positive Intercept  & -0.288530 & -0.741462 & -0.007415 & 0.734048 \\
+		Negative Intercept & -1.522515 & -4.226840 & 0.439977 & 4.666817 \\
+		Combined Intercept & 1.948091 & 0.049567 & 4.956728 & 4.907161 \\
+		\midrule
 		\multicolumn{5}{l}{\textbf{Bourden Gauge 2}} \\
 		Positive Intercept & -0.394968 & -1.059647 & 0.043892 & 1.103539 \\
 		Negative Intercept & -0.398824 & -1.067239 & 0.039080 & 1.106319 \\
 		Combined Intercept & -0.419189 & -1.121771 & 0.041142 & 1.162912 \\
-		\midrule
-		\multicolumn{5}{l}{\textbf{Bourden Gauge}} \\
-		Positive Intercept & -0.288530 & -0.741462 & -0.007415 & 0.734048 \\
-		Negative Intercept & -1.522515 & -4.226840 & 0.439977 & 4.666817 \\
-		Combined Intercept & 1.948091 & 0.049567 & 4.956728 & 4.907161 \\
 		\midrule
 		\multicolumn{5}{l}{\textbf{Bundenburg Gauge}} \\
 		Positive Intercept & 0.310979 & 0.008083 & 0.808308 & 0.800225 \\
@@ -2898,19 +2898,13 @@ The table below summarizes the intercepts from various instruments, highlighting
 	\end{tabular}
 	\label{tab:intercept_analysis}
 \end{table}
-
-\subsection{Brief Discussion of Key Findings}
-
 \begin{itemize}
+	\item \textbf{Bourden Gauge 1}: The results show a larger range, especially for the negative intercept (-1.5225 to 4.6668 bar). This points to significant inconsistencies in the instrument's response, which could be due to calibration issues or physical factors affecting the measurements.
 	\item \textbf{Bourden Gauge 2}: The intercepts are relatively small, with a range of just over 1 bar\footnote{In this context, "bar" refers to the range magnitude in the statistical sense, which represents the difference between the maximum and minimum values observed in the data.}. This suggests that the instrument's calibration is reasonably consistent, but there are still slight discrepancies in the measurements.
-	
-	\item \textbf{Bourden Gauge}: The results show a larger range, especially for the negative intercept (-1.5225 to 4.6668 bar). This points to significant inconsistencies in the instrument's response, which could be due to calibration issues or physical factors affecting the measurements.
-	
-	\item \textbf{Bundenburg Gauge}: This gauge shows a smaller range, with intercepts close to zero. It appears more stable in terms of calibration compared to the other gauges, indicating fewer significant errors.
-	
+	\item \textbf{Bundenburg Gauge}: This gauge shows a smaller range, with intercepts close to zero. It appears more stable in terms of calibration compared to the other gauges, indicating fewer significant errors.	
 	\item \textbf{Hg Glass}: The Hg Glass gauge shows noticeable variations in its intercepts, with ranges reaching over 2 bar. This could be attributed to factors like thermal drift or mechanical imperfections in the setup.
 \end{itemize}
-Despite adjustments for unit conversion, the intercepts in all gauges are non-zero, suggesting that calibration errors and instrument-specific inconsistencies are present. These results imply that while calibration adjustments can help minimize errors, they cannot fully eliminate intrinsic limitations in the measurement systems. A more in-depth discussion on how and why this came about requires in depth knowledge on background refer to Appendix B.
+Despite adjustments for unit conversion, the intercepts in all gauges are non-zero, suggesting that calibration errors and instrument-specific inconsistencies are present. These results imply that while calibration adjustments can help minimize errors, they cannot fully eliminate intrinsic limitations in the measurement systems. A more in-depth discussion on how and why this came about requires in depth knowledge on background refer to Appendix \ref{Adjusting Offsets in Unit Conversions}.
 
 \newpage
 
@@ -2973,11 +2967,8 @@ These results quantitatively confirm that measurement accuracy is fundamentally 
 		\item Renke (2024). \textit{Differential Pressure | What, How, Why - Renke}. [online] Available at: \url{https://www.renkeer.com/what-is-differential-pressure/}.[Accessed 29 Mar. 2025]
 		\item Farbod Tabesh (2019). \textit{Pressure Definition}. [online] Greenishco. Available at: \url{https://greenishco.com/PressureDefinition}.[Accessed 29 Mar. 2025].	‌
 		\item Wikipedia (2021). \textit{Hydrostatic equilibrium}. [online] Available at: \url{https://en.wikipedia.org/wiki/Hydrostatic_equilibrium}.
-		
 		\item Wikipedia (2021). \textit{Torricelli’s experiment}. [online] Wikipedia. Available at: \url{https://en.wikipedia.org/wiki/Torricelli%27s_experiment}.
-		‌
 		\item Physicsmax (2014). \textit{Torricelli’s experiment. Simple barometer Physics Homework Help, Physics Assignments and Projects Help, Assignments Tutors online}. [online] PhysicsMax.com. Available at: \url{https://physicsmax.com/torricellis-experiment-simple-barometer-6189}.
-		
 		‌\item LumenLearning (n.d.). \textit{9.1 Gas Pressure | Chemistry}. [online] Available at: \url{https://courses.lumenlearning.com/suny-albany-chemistry/chapter/gas-pressure-2/}.
 		
 		‌
@@ -2990,30 +2981,77 @@ These results quantitatively confirm that measurement accuracy is fundamentally 
 \section{Appendix}
 \renewcommand{\thesubsection}{\Alph{subsection}}
 \normalsize
+\subsection{Adjusting Offsets in Unit Conversions}\label{Adjusting Offsets in Unit Conversions}
+When converting units, measurements often follow the transformation:
+\begin{equation}
+	P' = kP + c
+\end{equation}
+\begin{center}
+	\hspace{1em}\wm{0.4}{\begin{itemize}[itemsep=-1mm]
+			\item \(P\) : Original measurement
+			\item \(P'\) : Converted value
+			\item \(k\) : Scaling factor (adjusts the magnitude)
+			\item \(c\) : Offset (shifts the value)
+	\end{itemize}}
+\end{center}
+This equation expresses how a measurement in one unit system is mapped to another, with \( k \) adjusting the scale and \( c \) shifting the baseline. However, offsets also appear naturally in \textbf{linear regression models}, and understanding their origin is crucial for proper calibration. In a linear regression model:
+\[P_{\text{inst}} = \alpha P_{\text{ref}} + \beta\]
+the offset \( \beta \) does not necessarily originate from a pre-existing shift in the data but rather from the best-fit relationship between the two variables. This occurs because:
+\begin{itemize}
+	\item \textbf{Data distributions are not centered at zero:} Even if we subtract the mean from all measurements, regression still finds an intercept unless the two datasets are perfectly proportional.
+	\item \textbf{Minimization of residuals:} The regression algorithm finds \( \alpha \) and \( \beta \) by minimizing the sum of squared errors. If the best fit requires shifting the regression line up or down, a nonzero intercept will appear.
+	\item \textbf{Systematic instrument behavior:} Even with perfect pre-conversion adjustments, measurement devices may introduce biases that cannot be corrected by a simple subtraction.
+\end{itemize}
+One might assume that pre-adjusting measurements by subtracting an offset would eliminate the intercept in the regression model. However, this is incorrect because:
+
+\begin{enumerate}
+	\item If we subtract a constant offset from all data points, the \textbf{relative relationship} between \( P_{\text{inst}} \) and \( P_{\text{ref}} \) remains unchanged. Linear regression will still detect a best-fit line with a nonzero intercept unless the data points lie exactly on a scaled version of one another.
+	\item The regression process does not just capture raw shifts; it captures the \textbf{optimal relationship} between two variables based on least-squares minimization.
+	\item In practice, physical instruments exhibit deviations that vary based on external conditions, leading to persistent offsets that cannot be eliminated by a simple subtraction.
+\end{enumerate}
+The intercept \( \beta \) in regression can be expressed as:
+\begin{equation}
+	\beta = \bar{P_{\text{inst}}} - \alpha \bar{P_{\text{ref}}}
+\end{equation}
+where:
+\begin{itemize}
+	\item \( \bar{P_{\text{inst}}} \) is the mean of the instrument’s measurements.
+	\item \( \bar{P_{\text{ref}}} \) is the mean of the reference values.
+\end{itemize}
+This equation shows that the intercept arises due to differences in means, even if the scaling factor \( \alpha \) is correct.
+\subsubsection{Practical Implications}
+Offsets must be interpreted as an \textbf{inherent property of the regression model}, not merely as a removable data shift. A large intercept \( \beta \) may indicate:
+\begin{itemize}[itemsep=-1mm]
+	\item Poor calibration of measurement instruments.
+	\item A systematic bias in the instrument’s response.
+	\item External environmental factors influencing measurements.
+\end{itemize}
+
+Thus, offset adjustments are necessary for practical reasons, but they do not fundamentally remove the regression intercept.
+\newpage
+
+
+
 \subsection{Code Implementation}\label{subsec:code}
 
-The Python code performs comprehensive pressure unit conversion and instrument calibration analysis. The implementation reads experimental data from multiple instruments with different units (Dataset \ref{data:zero}), converts all measurements to common units (bar, psi, kPa, cmHg, bar\_abs), compares each instrument's readings against a reference pressure calibrator, calculates calibration gradients, and validates consistency across unit representations.
-
+The Python code performs comprehensive pressure unit conversion and instrument calibration analysis. The implementation reads experimental data from multiple instruments with different units (Dataset \ref{data:zero}), converts all measurements to common units (bar, psi, kPa, cmHg, $\text{bar}_{\text{abs}}$), compares each instrument's readings against a reference pressure calibrator, calculates calibration gradients and intercepts, and validates consistency across unit representations.\vspace{-1em}
 \subsubsection{Initial Setup and Configuration}
 The analysis begins with defining essential constants and conversion factors:
-
 \begin{python}
 # Define paths and constants
 input_dir = "data/diff_units_zerod"
 ATM_PRESSURE_BAR = 1.01325
 
-# Conversion factors (1 SOURCE UNIT = X TARGET UNIT)
+# Updated conversion factors (1 SOURCE UNIT = X TARGET UNIT)
 conversion_factors = {
     "Bourden_Gauge_2_knm2.csv": {"psi": 0.145038, "bar": 0.01, "cmHg": 0.750062, "kPa": 1.0, "bar_abs": 0.01},
     "Bourden_Gauge_psi.csv": {"bar": 0.0689476, "kPa": 6.89476, "cmHg": 5.17149, "bar_abs": 0.0689476},
     "Bundenburg_Gauge_bar.csv": {"psi": 14.5038, "kPa": 100, "cmHg": 75.0062, "bar_abs": 1.0},
-    "Hg_Glass_cmHg.csv": {"bar": 0.0133322, "psi": 0.193368, "kPa": 1.33322, "bar_abs": 0.0133322},
+    "Hg_Glass_cmHg.csv": {"bar": 0.01, "psi": 0.145038, "cmHg": 0.750062, "bar_abs": 0.01},
     "Pressure_Calibrator_kPa.csv": {"bar": 0.01, "psi": 0.145038, "cmHg": 0.750062, "bar_abs": 0.01}
 }
 \end{python}
-
-The configuration specifies the input directory containing CSV files and defines precise conversion factors between different pressure units. The \texttt{ATM\_PRESSURE\_BAR} constant enables proper conversion to absolute pressure values by accounting for atmospheric pressure.
-
+The configuration specifies the input directory containing CSV files and defines precise conversion factors between different pressure units. The \texttt{ATM\_PRESSURE\_BAR} constant enables proper conversion to absolute pressure values by accounting for atmospheric pressure.\vspace{-1em}
 \subsubsection{Data Processing Pipeline}
 The core data processing converts all measurements to consistent units while preserving the original values:
 
@@ -3021,6 +3059,7 @@ The core data processing converts all measurements to consistent units while pre
 def clean_filename(filename):
     return '_'.join(filename.split('_')[:-1])
 
+units = ["bar", "psi", "kPa", "cmHg", "bar_abs"]
 results = {unit: {"data": {}, "gradients": {}} for unit in units}
 
 for filename, factors in conversion_factors.items():
@@ -3034,7 +3073,11 @@ for filename, factors in conversion_factors.items():
     if base_unit == "knm2":
         base_unit = "kPa"
     
-    # Store and convert measurements
+    # Store original data
+    if base_unit in results:
+        results[base_unit]["data"][filename] = df[["Positive", "Negative"]]
+    
+    # Convert and store in all units
     for unit, factor in factors.items():
         converted = df.copy()
         if unit == "bar_abs":
@@ -3045,157 +3088,116 @@ for filename, factors in conversion_factors.items():
 \end{python}
 
 This section handles unit conversion with special consideration for absolute pressure calculations. The code maintains both positive and negative pressure measurements throughout the conversion process, ensuring data integrity.
-\subsubsection{Calibration Analysis}
-The calibration comparison uses linear regression to quantify instrument accuracy:
+
+\subsubsection{Comprehensive Calibration Analysis}
+The calibration comparison uses linear regression to quantify instrument accuracy across all pressure ranges:
 
 \begin{python}
 for unit in units:
-    calibrator_df = next((df for f, df in results[unit]["data"].items() 
-                        if "Pressure_Calibrator" in f), None)
+    # Find calibrator data
+    calibrator_df = None
+    for filename, df in results[unit]["data"].items():
+        if "Pressure_Calibrator" in filename:
+            calibrator_df = df
+            break
     
-    if calibrator_df is not None:
-        for filename, instrument_df in results[unit]["data"].items():
-            if "Pressure_Calibrator" in filename:
-                continue
-                
-            x_pos, y_pos = instrument_df["Positive"], calibrator_df["Positive"]
-            x_neg, y_neg = instrument_df["Negative"], calibrator_df["Negative"]
+    if calibrator_df is None:
+        continue
+    
+    # Compare each instrument to calibrator
+    for filename, instrument_df in results[unit]["data"].items():
+        if "Pressure_Calibrator" in filename:
+            continue
             
-            (slope_pos, intercept_pos), _ = np.polyfit(x_pos, y_pos, 1, full=True)[:2]
-            (slope_neg, intercept_neg), _ = np.polyfit(x_neg, y_neg, 1, full=True)[:2]
-            
-            results[unit]["gradients"][clean_filename(filename)] = {
-                "Positive Gradient": slope_pos,
-                "Positive Intercept": intercept_pos,
-                "Negative Gradient": slope_neg,
-                "Negative Intercept": intercept_neg
-            }
+        instrument_name = clean_filename(filename)
+        
+        # Calculate gradients and intercepts using polyfit
+        x_pos, y_pos = instrument_df["Positive"], calibrator_df["Positive"]
+        x_neg, y_neg = instrument_df["Negative"], calibrator_df["Negative"]
+        x_combined = np.concatenate([x_pos, x_neg])
+        y_combined = np.concatenate([y_pos, y_neg])
+        
+        (slope_pos, intercept_pos), _ = np.polyfit(x_pos, y_pos, 1, full=True)[:2]
+        (slope_neg, intercept_neg), _ = np.polyfit(x_neg, y_neg, 1, full=True)[:2]
+        (slope_combined, intercept_combined), _ = np.polyfit(x_combined, y_combined, 1, full=True)[:2]
+        
+        results[unit]["gradients"][instrument_name] = {
+            "Positive Gradient": slope_pos,
+            "Positive Intercept": intercept_pos,
+            "Negative Gradient": slope_neg,
+            "Negative Intercept": intercept_neg,
+            "Combined Gradient": slope_combined,
+            "Combined Intercept": intercept_combined
+        }
 \end{python}
 
-The analysis calculates separate calibration curves for positive and negative pressure ranges using NumPy's polynomial fitting routine. This approach captures both the slope (sensitivity) and intercept (zero offset) of each instrument's response.
+The analysis calculates separate calibration curves for positive, negative, and combined pressure ranges using NumPy's polynomial fitting routine. This enhanced approach captures both the slope (sensitivity) and intercept (zero offset) for each measurement range, providing a complete characterization of instrument performance.
 
-\subsubsection{Validation and Output}
-The final stage verifies measurement consistency across unit systems:
+\subsubsection{Validation and Statistical Reporting}
+The final stage performs comprehensive validation across unit systems and measurement ranges:
 
 \begin{python}
-print("Unit Consistency Validation".center(60, '='))
-for instrument in results[units[0]]["gradients"]:
-    for grad_type in ["Positive Gradient", "Negative Gradient"]:
-        gradients = [results[u]["gradients"][instrument][grad_type] 
-                    for u in units if instrument in results[u]["gradients"]]
+# Create a summary table
+gradient_summary = []
+
+for instrument in ["Bourden_Gauge_2", "Bourden_Gauge", "Bundenburg_Gauge", "Hg_Glass"]:
+    grad_types = ["Positive Gradient", "Negative Gradient", "Combined Gradient"]
+    
+    instrument_data = []
+    
+    for grad_type in grad_types:
+        gradients = []
+        for unit in units:
+            try:
+                gradients.append(results[unit]["gradients"][instrument][grad_type])
+            except KeyError:
+                continue
         
-        if gradients:
-            avg = np.mean(gradients)
-            std = np.std(gradients)
-            print(f"{instrument} {grad_type}:")
-            print(f"  Mean: {avg:.4f} ± {std:.4f}")
-            print(f"  Range: {min(gradients):.4f} to {max(gradients):.4f}")
-            print("-"*50)
+        if len(gradients) > 0:
+            base_grad = gradients[0]
+            consistent = np.allclose(gradients, base_grad, rtol=0.01)
+            std_dev = np.std(gradients)
+            
+            instrument_data.append({
+                "Type": grad_type.replace(" Gradient", ""),
+                "Mean": np.mean(gradients),
+                "Std Dev": std_dev,
+                "Min": np.min(gradients),
+                "Max": np.max(gradients),
+                "Range": np.ptp(gradients),
+                "Consistent": consistent,
+                "Units": len(gradients)
+            })
+    
+    gradient_summary.append((instrument, instrument_data))
+
+# Intercept analysis
+for instrument in ["Bourden_Gauge_2", "Bourden_Gauge", "Bundenburg_Gauge", "Hg_Glass"]:
+    intercept_types = ["Positive Intercept", "Negative Intercept", "Combined Intercept"]
+    intercept_data = {it: [] for it in intercept_types}
+    
+    for unit in units:
+        try:
+            for it in intercept_types:
+                intercept_data[it].append(results[unit]["gradients"][instrument][it])
+        except KeyError:
+            continue
+    
+    # Create statistical summary for intercepts
+    intercept_stats = pd.DataFrame(index=intercept_types, 
+                                 columns=["Mean", "Min", "Max", "Range"])
+    for it in intercept_types:
+        if intercept_data[it]:
+            vals = np.array(intercept_data[it])
+            intercept_stats.loc[it, "Mean"] = np.mean(vals)
+            intercept_stats.loc[it, "Min"] = np.min(vals)
+            intercept_stats.loc[it, "Max"] = np.max(vals)
+            intercept_stats.loc[it, "Range"] = np.ptp(vals)
 \end{python}
 
-The validation demonstrates that calibration relationships remain consistent regardless of the unit system used for analysis. The complete implementation (approximately 100 lines of code) generates comprehensive tables showing converted values and calibration parameters, with full source available at \url{https://github.com/sakx7/labreport2}.
+The validation demonstrates that calibration relationships remain consistent regardless of the unit system used for analysis, with comprehensive statistical reporting for both gradients and intercepts. The complete implementation (approximately 150 lines of code) generates detailed tables showing converted values, calibration parameters, and consistency metrics, with full source available at: \href{https://github.com/sakx7/labreport2/blob/4dd8dd074731e6d3836b0b4de715392487fdd1c8/scripts/python/unitconsistency.py}{https://github.com/sakx7/labreport2/scripts/python/unitconsistency.py}.
 
-\newpage
 
-\section{Conceptual Analysis of Offset Adjustments in Unit Conversions}
-
-When converting between units of measurement, a common transformation is given by:
-
-\[
-P' = kP + c
-\]
-where:
-- \( P \) represents the original measurement,
-- \( P' \) is the converted value,
-- \( k \) is the scaling factor (which adjusts the magnitude of the value),
-- \( c \) is the offset (which shifts the value).
-
-This equation expresses how a measurement \( P \) in one unit system is converted to a measurement \( P' \) in another unit system by scaling it by \( k \) and adjusting it by an offset \( c \). The offset \( c \) accounts for any constant difference between the two unit systems (e.g., a temperature difference, zero-point shift, etc.).
-
-\subsection{Pre-Conversion Offset Adjustments}
-Adjusting offsets \textbf{before} performing a unit conversion ensures internal consistency across all data points, as the same transformation is applied uniformly. In this approach, the offset \( c \) is applied to the raw data first, so that each measurement is shifted before the scaling factor \( k \) is used to adjust its magnitude. This method maintains the relative differences between the measurements because the offset is applied uniformly, ensuring that the calibration structure of the measurement system is preserved.
-
-Mathematically, this can be expressed as:
-
-\[
-P_{\text{adjusted}} = P + c
-\]
-where \( P_{\text{adjusted}} \) is the measurement after the offset adjustment. The scaling factor \( k \) is then applied to this adjusted value:
-
-\[
-P' = k(P + c)
-\]
-
-In this case, we first adjust the measurement \( P \) by adding the offset \( c \). Afterward, we apply the scaling factor \( k \), which ensures the measurement is correctly transformed to the new unit system. This method helps maintain the integrity of the calibration, as the offset is accounted for in a linear manner before scaling.
-
-\subsection{Post-Conversion Offset Adjustments}
-In contrast, adjusting offsets \textbf{after} the conversion is mathematically and conceptually flawed. Unit conversion is not a commutative operation, meaning that the order in which transformations are applied matters. The fundamental reason is that the scaling factor \( k \) and the offset \( c \) do not distribute uniformly across different operations. Mathematically, this is captured by the following inequality:
-
-\[
-\text{transform}(P + c) \neq \text{transform}(P) + c'
-\]
-
-This equation indicates that applying the offset after performing the transformation does not yield the same result as first adjusting the value by the offset and then applying the scaling. This is because the scaling factor \( k \) affects the entire measurement range, and the offset \( c \) shifts the data. These two operations do not commute, leading to inconsistencies in the final result.
-
-When the offset is applied after the conversion, it introduces asymmetry in the measurements because the scaling factor \( k \) and the offset \( c \) interact in a non-linear way, especially when comparing instruments with different native units. This introduces artificial errors and inconsistencies that could distort the accuracy of measurements, particularly in calibration tasks. 
-
-\subsection{Mathematical Foundation: The Role of the Intercept}
-In linear regression, the intercept \( \beta \) of the equation \( y = \alpha x + \beta \) represents the point at which the line crosses the y-axis, or the offset in the transformation. For the calibration process, where the relationship between the measured value \( P_{\text{inst}} \) and the reference value \( P_{\text{ref}} \) is given by:
-
-\[
-P_{\text{inst}} = \alpha P_{\text{ref}} + \beta
-\]
-
-- \( P_{\text{inst}} \) is the measurement from the instrument,
-- \( P_{\text{ref}} \) is the reference value,
-- \( \alpha \) is the proportionality constant (scaling factor),
-- \( \beta \) is the intercept (offset).
-
-This equation shows that the instrument measurement \( P_{\text{inst}} \) is related to the reference value \( P_{\text{ref}} \) by a linear transformation, where \( \alpha \) is the scaling factor and \( \beta \) is the offset. The intercept \( \beta \) is the amount by which the measurement differs from the reference value when no scaling occurs.
-
-The intercept can be computed by:
-
-\[
-\beta = \bar{P_{\text{inst}}} - \alpha \bar{P_{\text{ref}}}
-\]
-
-- \( \bar{P_{\text{inst}}} \) is the average of the instrument measurements,
-- \( \bar{P_{\text{ref}}} \) is the average of the reference measurements.
-
-This formula shows how the intercept \( \beta \) is the difference between the average instrument measurement and the scaled reference measurement. In calibration, we want to minimize \( \beta \), as it represents a constant error in the measurement system.
-
-\subsection{Physical Origins of Residual Intercepts}
-The residual intercepts that remain after offset adjustments arise from various physical factors, which cannot be fully accounted for by simple data transformations. These factors include:
-
-\begin{itemize}
-	\item \textbf{Elastic hysteresis:} A common source of non-linearity in pressure measurements, where the pressure values during loading and unloading differ due to the material's elastic properties.
-	\item \textbf{Thermal drift:} Variations in the temperature of the measurement system can lead to changes in the sensor’s response, leading to a shift in the measured values.
-	\item \textbf{Mechanical backlash:} Imperfections in the mechanical system of the instrument can introduce errors that depend on the direction of motion and are hard to correct through simple offset adjustments.
-\end{itemize}
-
-These physical sources of error lead to residuals in the calibration data, even after adjusting offsets. For example, hysteresis might result in an offset that is proportional to the difference between the loading and unloading pressures, while thermal drift introduces a shift proportional to temperature changes. These phenomena cannot be fully corrected by offset adjustments alone.
-
-\subsection{Ideal Case Requirements for Zero Intercepts}
-For the calibration system to ideally produce zero intercepts (i.e., for the transformed measurements to exactly match the reference measurements), the following conditions must be satisfied:
-
-\begin{enumerate}
-	\item \textbf{Perfect linearity:} The relationship between the instrument's reading and the reference value must be exactly linear, meaning that the residuals \( \epsilon(x) \) must be zero for all measured values.
-	\item \textbf{Identical statistical distributions:} The mean values of the instrument and reference measurements must match exactly, meaning that the expected values \( \mathbb{E}[P_{\text{inst}}] \) and \( \mathbb{E}[P_{\text{ref}}] \) must satisfy the condition \( \mathbb{E}[P_{\text{inst}}] = \alpha \mathbb{E}[P_{\text{ref}}] \).
-	\item \textbf{Time-invariant response:} The calibration must be stable over time, meaning that the intercept \( \beta \) must not change with time, i.e., \( \frac{\partial \beta}{\partial t} = 0 \).
-\end{enumerate}
-
-These ideal requirements are difficult to achieve in practice due to the intrinsic complexities of measurement systems, including sensor nonlinearities, statistical variations, and time-dependent behaviors.
-
-\subsection{Implications of Observed Intercepts}
-The magnitude of the observed intercepts, such as those shown in the calibration data, often indicates significant deviations from ideal behavior. When the magnitude of the intercept \( \beta \) is large in comparison to the full-scale measurement, this suggests that the calibration system is subject to substantial errors. For example, when:
-
-\[
-\frac{|\beta|}{\alpha P_{\text{fullscale}}} \times 100 > 1\%
-\]
-
-This inequality compares the intercept \( \beta \) to the full-scale measurement, \( P_{\text{fullscale}} \), scaled by the factor \( \alpha \). If the intercept is greater than 1\% of the full-scale measurement, it indicates a significant deviation from the ideal calibration, and the system's accuracy may be compromised. This highlights the limitations of the offset adjustment process, particularly when dealing with instruments that are subject to intrinsic non-linearities, time-dependent variations, and mechanical imperfections.
-
-Thus, while pre-conversion offset adjustments are useful in ensuring that measurements are consistently transformed, they cannot fully correct for the real-world complexities and limitations of measurement systems. These residual intercepts must be considered when evaluating the accuracy and reliability of calibration systems and when comparing measurements across different instruments or environments.
 
 
 
