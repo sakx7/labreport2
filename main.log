@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  2 APR 2025 00:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  2 APR 2025 20:45
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3957,7 +3957,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  79125 strings out of 473201
  1945155 string characters out of 5716126
- 3630887 words of memory out of 5000000
+ 3630889 words of memory out of 5000000
  100566 multiletter control sequences out of 15000+600000
  682519 words of font info for 532 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3985,7 +3985,7 @@ pe1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw
 /helvetic/uhvr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/
 utmb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (32 pages, 5700214 bytes).
+Output written on main.pdf (32 pages, 5700212 bytes).
 PDF statistics:
  1158 PDF objects out of 1200 (max. 8388607)
  940 compressed objects within 10 object streams
