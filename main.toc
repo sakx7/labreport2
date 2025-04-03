@@ -30,7 +30,7 @@
 \contentsline {subsection}{\numberline {6.2}Multivariate Variance Analysis}{23}{subsection.6.2}%
 \contentsline {subsection}{\numberline {6.3}Intercept Analysis}{24}{subsection.6.3}%
 \contentsline {subsection}{\numberline {6.4}Reflection on the Assumptions}{25}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Performance Spectrum}{25}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.5}Performance Spectrum vs. Industry Standards}{25}{subsection.6.5}%
 \contentsline {section}{\numberline {7}Conclusion}{26}{section.7}%
 \contentsline {section}{\numberline {8}Recommendations}{27}{section.8}%
 \contentsline {section}{\numberline {9}References}{28}{section.9}%

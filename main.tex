@@ -239,15 +239,15 @@ top color=watercol!90!black!90,bottom color=watercol!90!black!90,middle color=wa
 \newcounter{deadlineyear}\setcounter{deadlineyear}{2025}
 \newcounter{deadlinemonth}\setcounter{deadlinemonth}{4}
 \newcounter{deadlineday}\setcounter{deadlineday}{3}
-\newcounter{mydatenumber}  % Date conversion
-\newcounter{currentdate}   % Current date
-\newcounter{daysdiff}      % Days difference
-\newcounter{currenttime}   % Current minutes since midnight
-\newcounter{totalminutes}  % Total remaining minutes
-\newcounter{displaydays}   % Days to display
-\newcounter{remainingmins} % Remaining minutes after days
-\newcounter{displayhours}  % Hours to display
-\newcounter{displaymins}   % Minutes to display
+\newcounter{mydatenumber}
+\newcounter{currentdate}
+\newcounter{daysdiff}
+\newcounter{currenttime}
+\newcounter{totalminutes}
+\newcounter{displaydays}
+\newcounter{remainingmins}
+\newcounter{displayhours}
+\newcounter{displaymins}
 
 % Main calculation command
 \newcommand{\timeUntilDeadline}{%
@@ -362,9 +362,9 @@ top color=watercol!90!black!90,bottom color=watercol!90!black!90,middle color=wa
 	
 	\begin{tabular}{@{}l l@{}}
 		\textbf{Key Dates:} & Date of practical: Wednesday 19$^{\text{th}}$ March, 2025 \\
-		& Deadline: Tuesday 3$^{\text{rd}}$ April, 2025 \\
-		& Last Updated: \today\, \currenttime\\
-		& Days left until deadline: \timeUntilDeadline \\
+		& Deadline: Thursday 3$^{\text{rd}}$ April, 2025 \\
+		& Last Updated: \today\, \currenttime
+		%Days left until deadline: \timeUntilDeadline \\
 	\end{tabular}
 	\vspace*{\fill}
 	
@@ -386,13 +386,13 @@ top color=watercol!90!black!90,bottom color=watercol!90!black!90,middle color=wa
 			row{8}={bg=red!5!white}
 		}
 		Student & Course & Contribution & Picture \\ 
-		Sakariye Abiikar & Mechanical Engineering & Formatter, Method \& Experimental Procedures, Introduction, Results & \includegraphics[width=2cm,valign=c]{images/image(7).jpg} \\ 
+		Sakariye Abiikar & Mechanical Engineering & Formatter, Data Calculation and Results, Introduction, & \includegraphics[width=2cm,valign=c]{images/image(7).jpg} \\ 
 		Alireza Alishahi & Mechanical Engineering  & Abstract, Method \& Experimental Procedures & \includegraphics[width=2cm,valign=c]{images/8_orgid_297f9608-cce6-40e3-adc2-86e161e7141f.jpg} \\ 
 		Varley, Freddie & Mechanical Engineering & Theory, Recommendations &  \includegraphics[width=2cm,valign=c]{images/Media.jpg}\\
 		Abdul Mueed & Mechanical Engineering  & Theory & \includegraphics[width=2cm,valign=c]{images/image(1).jpg} \\ 
 		Abdelrahman Shehata & Mechanical Engineering  & Discussion of results & \includegraphics[width=2cm,valign=c]{images/Image.jpg}\\
 		Naim Alrifai & Mechanical Engineering & Conclusion & \includegraphics[width=2cm,valign=c]{images/Image(9).jpeg} \\\hline
-		Munachi J Atuegbu & Mechanical Engineering & No contact at all might not be real. Last seen 11/29/24 is crazy & \includegraphics[width=2cm,valign=c]{images/profile.png} \\\hline
+		Munachi J Atuegbu & Mechanical Engineering & Last seen 11/29/24 & \includegraphics[width=2cm,valign=c]{images/profile.png} \\\hline
 		Ehsan Haque & Mechanical Engineering & Approved Mitigation  & \includegraphics[width=2cm,valign=c]{images/profile.png} \\
 	\end{tblr}
 		\vspace*{\fill}
@@ -420,12 +420,13 @@ top color=watercol!90!black!90,bottom color=watercol!90!black!90,middle color=wa
 	\newpage\vspace*{-20pt}
 
 	\section{Introduction}
-	In engineering and scientific applications, pressure measurement is essential, playing a critical role in fields such as fluid dynamics, meteorology, and industrial control. Over time, pressure-measuring instruments have evolved, from early liquid column manometers to modern mechanical and digital gauges, each designed to provide accurate measurements under varying conditions.\\[1em]
+	In engineering and scientific applications, pressure measurement is essential, playing a critical role in fields such as fluid dynamics, meteorology, and industrial control. Over time, pressure-measuring instruments have evolved, from early liquid column manometers to modern mechanical and digital gauges, each designed to provide accurate measurements under varying conditions.\\[8pt]
 	A key distinction in pressure measurement is between \textbf{absolute} and \textbf{gauge} pressure.\\ 
-	Absolute pressure is measured relative to a vacuum, while gauge pressure is measured relative to atmospheric pressure. This distinction influences the design and function of pressure-measuring devices.\\[1em]
-	Historically, the invention of the Bourdon gauge by Eugène Bourdon in 1849 marked a significant advancement in pressure measurement. It provided a robust and reliable means of monitoring pressure in industrial settings, where durability and consistency were paramount. On the other hand, liquid column manometers, particularly those using mercury, have been essential in laboratory settings due to their precision in measuring small pressure differences.\\[1em]
-	Despite the advantages of different pressure-measuring devices, each has limitations, such as calibration errors and environmental influences.\\[1em]
-	Previous studies have highlighted various challenges and findings related to pressure measurement devices. For example, a study by Hodgkinson et al. (2020) found that the accuracy of home blood pressure monitors varied significantly, with validated monitors showing a higher pass rate in static pressure tests compared to unvalidated ones. This emphasizes the importance of validation and calibration in ensuring the accuracy of pressure-measuring devices.\\[1em]
+	Absolute pressure is measured relative to a vacuum, while gauge pressure is measured relative to atmospheric pressure. This distinction influences the design and function of pressure-measuring devices.\\[8pt]
+	Historically, the invention of the Bourdon gauge by Eugène Bourdon in 1849 marked a significant advancement in pressure measurement. It provided a robust and reliable means of monitoring pressure in industrial settings, where durability and consistency were paramount.\\[8pt] 
+	On the other hand, liquid column manometers, particularly those using mercury, have been essential in laboratory settings due to their precision in measuring small pressure differences.\\[1em]
+	Despite the advantages of different pressure-measuring devices, each has limitations, such as calibration errors and environmental influences.\\[8pt]
+	Previous studies have highlighted various challenges and findings related to pressure measurement devices. For example, a study by Hodgkinson et al. (2020) found that the accuracy of home blood pressure monitors varied significantly, with validated monitors showing a higher pass rate in static pressure tests compared to unvalidated ones. This emphasizes the importance of validation and calibration in ensuring the accuracy of pressure-measuring devices.\\[8pt]
 	In this experiment, we aimed to evaluate the performance and accuracy of various pressure-measuring devices under controlled conditions, comparing their responses to varying pressure levels.
 	
 	\newpage\newgeometry{left=0.8in,right=0.8in,top=1in,bottom=0.7in}
@@ -787,7 +788,7 @@ A notable function of the mercury barometer is the maintenance of an invention v
 	\newpage\vspace*{-20pt}\large
 	\section{Method \& Experimental Procedures}\label{Method_Experimental_Procedures}
 	%We are first given a table to record our findings as shown:\footnote{We started of in the lab by doing the refrigerator but this is redacted as its not a part of this lab report, following this we did the pressure lab experiment.}
-
+	\vspace*{\fill}
 	\begin{figure}[H] 
 			\centering 
 		    \begin{tikzpicture}[auto,
@@ -809,6 +810,8 @@ A notable function of the mercury barometer is the maintenance of an invention v
 		\caption{Pressure Measurement Bench} 
 		\label{fig:pressure_measurement_bench} 
 	\end{figure}
+	\vspace*{\fill}
+	\newpage
 	
 	\begin{figure}[H] 
 			\centering 
@@ -2499,7 +2502,6 @@ That aside, here i covert them all to \textbf{bar}, using the relevant calculati
 \subsection{Choice of Unit in Relation to the Gradient}\label{consistency}
 As previously established, the pressure unit selection does not affect the overall analysis results. This subsection provides a brief theoretical justification and then the empirical evidence to confirm that the gradients remain invariant across various pressure unit systems (bar, psi, kPa, cmHg,...) and intercepts are subject to vary, ensuring the robustness and consistency of the analysis. Note this will be a {brief explanation}, for a more in-depth and better explained version, Refer to Appendix \ref{Adjusting Offsets in Unit Conversions}.\vspace{-1em}
 \subsubsection{Theoretical Justification}
-The gradient analysis exhibits the following key mechanisms supporting unit invariance:\\
 \begin{enumerate}
 	\item \textbf{Linear Transformation}: 
 	Pressure unit conversions follow $P' = kP + c$, where $k$ is the conversion factor and $c$ the offset. For gradient comparisons:
@@ -2906,16 +2908,15 @@ The table below summarizes the intercepts from various instruments, highlighting
 \end{itemize}
 Despite adjustments for unit conversion, the intercepts in all gauges are non-zero, suggesting that calibration errors and instrument-specific inconsistencies are present. These results imply that while calibration adjustments can help minimize errors, they cannot fully eliminate intrinsic limitations in the measurement systems. A more in-depth discussion on how and why this came about requires in depth knowledge on background refer to Appendix \ref{Adjusting Offsets in Unit Conversions}.
 
-\newpage
+\newpage	\newgeometry{left=0.8in,right=0.8in,top=0.9in,bottom=0.54in}
 
 \subsection{Reflection on the Assumptions}\label{subsec:Reflection} 
 In this analysis, the pressure difference was determined using the assumption that the displacement of the mercury column follows \(\Delta h = 2h\). This relationship holds exactly for an ideal, symmetric U-tube manometer with identical column diameters. However, real-world manometers often exhibit slight geometric asymmetries, which can introduce errors if this assumption does not strictly hold.\\[8pt]
 Given this potential limitation, it is necessary to assess whether this assumption remained valid in the present experiment. The calculated error for the mercury manometer (\(\pm 0.58\%\)) is notably small, suggesting that any deviations from the idealized U-tube geometry were negligible. Furthermore, the Budenberg gauge, which served as an independent reference, exhibited a nearly identical error (\(\pm 0.59\%\)), reinforcing the validity of the assumed relationship.\\[8pt]
 To contextualize this further, non-ideal geometries such as unequal column diameters or well-type manometers can lead to significant deviations. For example, a 10\% difference in tube diameters can reduce \(\Delta h\) to approximately \(1.83h\), introducing a systematic error of about \(+9.3\%\), while a well-type manometer would result in \(\Delta h = h\), leading to a \(+100\%\) error. Given that the observed discrepancies in this experiment are two orders of magnitude smaller than such cases, it is reasonable to conclude that the assumption \(\Delta h = 2h\) was appropriate for this setup.\\[8pt]
 While the assumption of a symmetric displacement may not always be universally applicable, its use in this study is justified by empirical evidence. The minimal observed error suggests that the manometer used closely approximates an ideal U-tube, making the simplification both practical and valid. Nevertheless, future studies involving non-standard manometer geometries should explicitly account for potential asymmetries to ensure accuracy.
-
-
-\subsection{Performance Spectrum} 
+\vspace{-8pt}
+\subsection{Performance Spectrum vs. Industry Standards} 
 The results reveal a significant performance spectrum among analog gauges:
 \begin{center}
 	\begin{tabular}{l l l}
@@ -2930,10 +2931,24 @@ The results reveal a significant performance spectrum among analog gauges:
 	\end{tabular}
 	\caption{Summary of Gauges Cumulative Percentage Error}
 \end{center}
-This analysis highlights that analog gauge performance spans nearly two orders of magnitude, with high-end analog gauges achieving accuracy comparable to digital systems.\\[8pt]
-Despite this, they retain key advantages inherent to analog technology, including the absence of power requirements, reliance on intrinsic physical measurement principles, and a lower cost compared to precision digital systems.
+This analysis highlights that analog gauge performance spans nearly two orders of magnitude, with high-end analog gauges achieving accuracy comparable to digital systems retaining key advantages inherent to analog technology, including the absence of power requirements, reliance on intrinsic physical measurement principles, and a lower cost compared to precision digital systems.\\[8pt] 
+In industrial applications, pressure measurement accuracy is typically classified as follows:\vspace{-0.7em}
+\begin{formal}[(Brannan, 2021)(Instrumart, n.d.)(Dwyer, n.d.)]{black}{white}
+	\renewcommand{\arraystretch}{1.2}
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Type} & \textbf{Accuracy Range} & \textbf{Standards/Examples} \\ \hline
+		Basic industrial gauges & $\pm 1\%$ to $\pm 2\%$ FS & ASME B40.100: Grade A ($\pm 1\%$), Grade B ($\pm 2\%$) \\ \hline
+		Improved analog gauges & $\pm 0.5\%$ to $\pm 1\%$ FS & ASME B40.100: Grade 2A ($\pm 0.5\%$), Grade A ($\pm 1\%$) \\ \hline
+		Precision analog gauges & $\pm 0.1\%$ or better & ASME B40.100: Grade 3A ($\pm 0.25\%$), 4A ($\pm 0.1\%$) \\ \hline
+		Fluid manometers & $\pm 0.25\%$ to $\pm 0.5\%$ & Primary reference (e.g., Hg manometers) \\ \hline
+	\end{tabular}
+	\caption{Pressure Gauge Accuracy Comparison}
+\end{formal}\vspace{-0.7em}
+These industry standards align with the observed cumulative errors, reinforcing that while lower-end analog gauges exhibit substantial deviations, precision analog and fluid-based systems can meet stringent calibration requirements. In high-accuracy applications, digital calibrators typically offer $\pm$0.05\% to $\pm$0.1\% accuracy, further bridging the gap between analog and digital performance.
 
-\newpage
+
+\newpage\restoregeometry
 
 
 \section{Conclusion}
@@ -2970,6 +2985,10 @@ These results quantitatively confirm that measurement accuracy is fundamentally 
 		\item ScienceDirect (n.d.). \textit{Bourdon Gauge - an overview | ScienceDirect Topics}. [online] Available at: \url{https://www.sciencedirect.com/topics/engineering/bourdon-gauge}.
 		\item Wikipedia (2021). \textit{Hydrostatic equilibrium}. [online] Available at: \url{https://en.wikipedia.org/wiki/Hydrostatic_equilibrium}.
 		\item Wikipedia (2021). \textit{Torricelli's experiment}. [online] Wikipedia. Available at: \url{https://en.wikipedia.org/wiki/Torricelli%27s_experiment}.
+		\item Instrumart (n.d.). \textit{Pressure Gauge Accuracy Grades | Instrumart}. [online] Available at: \url{https://www.instrumart.com/pages/539/pressure-gauge-accuracy-grades}.
+		\item Brannan (2021). \textit{Pressure gauges - accuracy explained}. [online] Available at: \url{https://www.brannan.co.uk/knowledge_base/pressure-gauges-accuracy-explained/}.
+		\item Dwyer (n.d.). \textit{Measurement of Pressure with the Manometer}. [online] Available at: \url{https://dwyer-inst.com/en/list/post/measurement-of-pressure-with-the-manometer}.
+		‌
 	\end{enumerate}
 
 	‌	
@@ -3190,7 +3209,7 @@ for instrument in ["Bourden_Gauge_2", "Bourden_Gauge", "Bundenburg_Gauge", "Hg_G
             intercept_stats.loc[it, "Range"] = np.ptp(vals)
 \end{python}
 
-The validation demonstrates that calibration relationships remain consistent regardless of the unit system used for analysis, with comprehensive statistical reporting for both gradients and intercepts. The complete implementation (approximately 150 lines of code) generates detailed tables showing converted values, calibration parameters, and consistency metrics, with full source available at: \href{https://github.com/sakx7/labreport2/blob/4dd8dd074731e6d3836b0b4de715392487fdd1c8/scripts/python/unitconsistency.py}{https://github.com/sakx7/labreport2/scripts/python/unitconsistency.py}.
+The validation demonstrates that calibration relationships remain consistent regardless of the unit system used for analysis, with comprehensive statistical reporting for both gradients and intercepts. The complete implementation (approximately 150 lines of code) generates detailed tables showing converted values, calibration parameters, and consistency metrics, with full source available at: \href{https://github.com/sakx7/labreport2/blob/main/scripts/python/unitconsistency.py}{https://github.com/sakx7/labreport2/scripts/python/unitconsistency.py}.
 
 
 
